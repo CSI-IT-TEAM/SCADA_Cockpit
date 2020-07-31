@@ -980,7 +980,6 @@
         private DevExpress.XtraGauges.Win.Base.LabelComponent labelComponent1;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent arcScaleRangeBarComponent1;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent ascInv;
-        private UC.UC_Factory uC_Chart_Pie1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tblMenu;
         private System.Windows.Forms.Panel pnF3;

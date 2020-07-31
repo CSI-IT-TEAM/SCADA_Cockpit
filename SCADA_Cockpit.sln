@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComVar", "ComVar\ComVar.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAIN", "MAIN\MAIN.csproj", "{2E3943C9-7F91-4B71-8120-9F030749C327}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com", "COM\Com.csproj", "{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,14 @@ Global
 		{2E3943C9-7F91-4B71-8120-9F030749C327}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2E3943C9-7F91-4B71-8120-9F030749C327}.Release|x86.ActiveCfg = Release|x86
 		{2E3943C9-7F91-4B71-8120-9F030749C327}.Release|x86.Build.0 = Release|x86
+		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Debug|x86.ActiveCfg = Debug|x86
+		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Debug|x86.Build.0 = Debug|x86
+		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Release|x86.ActiveCfg = Release|x86
+		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

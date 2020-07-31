@@ -476,7 +476,6 @@ namespace FORM
         {
             
             DataTable dt = Data_Select("");
-            string linecd = "";
             
             //reset color line
             foreach (var item in _dicLine)

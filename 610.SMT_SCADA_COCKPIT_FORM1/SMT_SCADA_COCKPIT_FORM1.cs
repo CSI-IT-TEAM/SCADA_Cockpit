@@ -24,8 +24,6 @@ namespace FORM
         }
 
 
-
-
         int _iReload = 0;
         DataTable _dtMasterLine;
        // Dictionary<string, UC.UC_Chart_Donut> _dicLocation = new Dictionary<string, UC.UC_Chart_Donut>();

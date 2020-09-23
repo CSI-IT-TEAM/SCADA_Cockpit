@@ -429,7 +429,7 @@ namespace MAIN
         {
             COM.OraDB MyOraDB = new COM.OraDB();
             DataSet ds_ret;
-
+            MyOraDB.ShowErr = false;
             try
             {
                 string process_name = "SEPHIROTH.PROC_STB_GET_FORM";

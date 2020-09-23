@@ -7,17 +7,17 @@ using System.Windows.Forms;
 
 namespace FORM
 {
-    public partial class SMT_SCADA_COCKPIT_FORM2 : Form
+    public partial class SMT_SCADA_COCKPIT_FORM2_BAK : Form
     {
-        public SMT_SCADA_COCKPIT_FORM2()
+        public SMT_SCADA_COCKPIT_FORM2_BAK()
         {
             InitializeComponent();
             lblHeader.Text = _strHeader;
         }
+
         private readonly string _strHeader = "       Preventative Maintenance";
 
         string _strType = "D";
-        int _time = 0;
 
         private void SetData(string arg_type)
         {
@@ -68,7 +68,7 @@ namespace FORM
                     //    gridView1.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
 
                     if (i == 4)
-                        gridView1.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+                    gridView1.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
 
                     if (i == gridView1.Columns.Count - 1)
                         gridView1.Columns[i].AppearanceCell.Font = new Font("Calibri", 16, FontStyle.Bold);
@@ -79,7 +79,7 @@ namespace FORM
                 Debug.WriteLine(ex.ToString());
                 throw;
             }
-
+            
         }
 
 
@@ -88,7 +88,7 @@ namespace FORM
             switch (arg_type)
             {
                 case "D":
-                    lblHeader.Text = _strHeader + " (" + DateTime.Now.ToString("yyyy-MM-dd") + ")";
+                   lblHeader.Text = _strHeader + " (" + DateTime.Now.ToString("yyyy-MM-dd") + ")";
                     break;
                 case "W":
                     lblHeader.Text = _strHeader + " (" + DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd") + " ~ " + DateTime.Now.ToString("yyyy-MM-dd") + ")";
@@ -107,7 +107,7 @@ namespace FORM
                 case "D":
                     cmdDay.Enabled = false;
                     cmdWeek.Enabled = true;
-                    cmdMonth.Enabled = true;
+                    cmdMonth.Enabled = true;                  
                     break;
                 case "W":
                     cmdDay.Enabled = true;
@@ -141,7 +141,7 @@ namespace FORM
             MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
 
             MyOraDB.Parameter_Values[0] = argType;
-            MyOraDB.Parameter_Values[1] = argDate;
+            MyOraDB.Parameter_Values[1] = "";
             MyOraDB.Parameter_Values[2] = "";
             MyOraDB.Parameter_Values[3] = "";
 
@@ -185,13 +185,7 @@ namespace FORM
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
-            _time++;
-            if(_time >=30)
-            {
-                _time = 0;
-                SetData(_strType);
-            }
-            
+            SetData(_strType);
         }
 
         private void cmdPm1_Click(object sender, EventArgs e)
@@ -249,14 +243,13 @@ namespace FORM
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            // if (e.Column.Name != "MACHINE_CD") return;
-            if (e.Clicks <= 1) return;
+           // if (e.Column.Name != "MACHINE_CD") return;
             string strMachine = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns["MACHINE_CD"]).ToString();
             using (SMT_SCADA_COCKPIT_POPUP pop = new SMT_SCADA_COCKPIT_POPUP())
             {
                 pop._dtData = Data_Select_Machine(_strType, strMachine);
                 pop.ShowDialog();
-            }
+            }    
         }
 
         private void cmdExportDetail_Click(object sender, EventArgs e)
@@ -265,7 +258,7 @@ namespace FORM
             {
                 using (SaveFileDialog SaveDlg = new SaveFileDialog())
                 {
-
+                   
                     SaveDlg.RestoreDirectory = true;
                     SaveDlg.Filter = "Excel Files (*.xlsx)|*.xlsx";
                     if (SaveDlg.ShowDialog() == DialogResult.OK)
@@ -307,18 +300,18 @@ namespace FORM
                     SaveDlg.Filter = "Excel Files (*.xlsx)|*.xlsx";
                     if (SaveDlg.ShowDialog() == DialogResult.OK)
                     {
-                        gridControl3.DataSource = Data_Select(_strType, "1").Tables[0];
-                        gridView3.ExportToXlsx(SaveDlg.FileName);
+                        gridControl1.DataSource = Data_Select(_strType, "1");
+                        gridView1.ExportToXlsx(SaveDlg.FileName);
                         MessageBox.Show("Export Success!");
                     }
                 }
             }
-            catch (Exception ex)
+            catch {}
+            finally
             {
-                MessageBox.Show(ex.ToString());
+                SetData(_strType);
             }
-
-
+            
         }
     }
 }

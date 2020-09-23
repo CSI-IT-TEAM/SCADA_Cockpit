@@ -746,7 +746,10 @@ namespace FORM
             }
         }
 
-        
+        private void label1_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "minimized";
+        }
     }
 
 

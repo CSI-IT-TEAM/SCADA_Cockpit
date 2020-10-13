@@ -34,7 +34,7 @@ namespace FORM
             if (Visible)
             {
                 cmdBack.Visible = ComVar.Var._IsBack;
-                _iReload = 59;
+                _iReload = 29;
                 tmrTime.Start();
                 tmrBlink.Start();
             }
@@ -571,34 +571,34 @@ namespace FORM
             Control ctr = (Control)sender;
             string[] strArr = ctr.Name.Split('_');
             string path = @"vnc\" + strArr[1] + ".vnc";
-            
-            if(!System.IO.File.Exists(Application.StartupPath + "\\" + path)) return;
-            try
-            {
-                Process startVNC = new Process();
-                startVNC.StartInfo.FileName = path;
-                startVNC.Start();
-                //if (startVNC.Start())
-                //{
-                //    startVNC.WaitForInputIdle();
-                //    System.Threading.Thread.Sleep(100);
-                //    SendKeys.Send(@"Pop*2@19");
-                //    System.Threading.Thread.Sleep(100);
-                //    SendKeys.Send("{ENTER}");
 
-                //    //startVNC.WaitForInputIdle();
-                //    //SendKeys.Send("172.30.105.108:5995");
-                //    //SendKeys.Send("{ENTER}");
-                //    //startVNC.WaitForInputIdle();
-                //    //System.Threading.Thread.Sleep(1000);
-                //    //SendKeys.Send("Pop*2@19");
-                //   // SendKeys.Send("{ENTER}");
-                //}
-            }
-            catch (Exception ex)
+            if (strArr.Count() == 5 ) 
             {
-                ComVar.Var.writeToLog("Open VNC Error: " + ex.ToString());
+                if (ctr.BackColor.Name.ToUpper() == "GREEN") return; 
+                using (SMT_SCADA_COCKPIT_POPUP pop = new SMT_SCADA_COCKPIT_POPUP())
+                {
+                    DataTable dt = Data_Select_Machine("", strArr[1], strArr[2], strArr[3]);
+
+                    pop._dtData = Data_Select_Machine("", strArr[1], strArr[2], strArr[3]); 
+                    pop.ShowDialog();
+                }
             }
+            else
+            {
+                if (!System.IO.File.Exists(Application.StartupPath + "\\" + path)) return;
+                try
+                {
+                    Process startVNC = new Process();
+                    startVNC.StartInfo.FileName = path;
+                    startVNC.Start();
+                }
+                catch (Exception ex)
+                {
+                    ComVar.Var.writeToLog("Open VNC Error: " + ex.ToString());
+                }
+            }
+
+            
             
         }
         #endregion Button Line Click
@@ -651,6 +651,37 @@ namespace FORM
             return retDS.Tables[MyOraDB.Process_Name];
         }
 
+        private DataTable Data_Select_Machine(string argType, string argLine, string argMline, string argArea)
+        {
+            COM.OraDB MyOraDB = new COM.OraDB();
+          //  MyOraDB.ShowErr = true;
+            MyOraDB.ReDim_Parameter(5);
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.PM_SELECT_MACHINE_ALERT";
+
+            MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
+            MyOraDB.Parameter_Name[1] = "ARG_LINE";
+            MyOraDB.Parameter_Name[2] = "ARG_MLINE";
+            MyOraDB.Parameter_Name[3] = "ARG_AREA";
+            MyOraDB.Parameter_Name[4] = "OUT_CURSOR";
+
+            MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[2] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[3] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[4] = (int)OracleType.Cursor;
+
+            MyOraDB.Parameter_Values[0] = argType;
+            MyOraDB.Parameter_Values[1] = argLine;
+            MyOraDB.Parameter_Values[2] = argMline;
+            MyOraDB.Parameter_Values[3] = argArea;
+            MyOraDB.Parameter_Values[4] = "";
+
+            MyOraDB.Add_Select_Parameter(true);
+            DataSet retDS = MyOraDB.Exe_Select_Procedure();
+            if (retDS == null) return null;
+
+            return retDS.Tables[0];
+        }
 
         #endregion DB
 
@@ -660,7 +691,7 @@ namespace FORM
         {
             lblDate.Text= string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
             _iReload ++;
-            if (_iReload == 60)
+            if (_iReload >= 20)
             {
                 _iReload = 0;
                 setData();

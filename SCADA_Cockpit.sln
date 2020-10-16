@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30002.166
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "610.SMT_SCADA_COCKPIT_FORM1", "610.SMT_SCADA_COCKPIT_FORM1\610.SMT_SCADA_COCKPIT_FORM1.csproj", "{D57E420E-FAF5-4778-9F6B-F5B9E0868A3D}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAIN", "MAIN\MAIN.csproj", "{2E3943C9-7F91-4B71-8120-9F030749C327}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com", "COM\Com.csproj", "{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "680.SMT_SCADA_DOWNTIME", "680.SMT_SCADA_DOWNTIME\680.SMT_SCADA_DOWNTIME.csproj", "{2C7996EF-3F6A-4BA0-BD6B-4FA9A898D82C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,14 @@ Global
 		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Release|x86.ActiveCfg = Release|x86
 		{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}.Release|x86.Build.0 = Release|x86
+		{2C7996EF-3F6A-4BA0-BD6B-4FA9A898D82C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7996EF-3F6A-4BA0-BD6B-4FA9A898D82C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7996EF-3F6A-4BA0-BD6B-4FA9A898D82C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C7996EF-3F6A-4BA0-BD6B-4FA9A898D82C}.Debug|x86.Build.0 = Debug|Any CPU
+		{2C7996EF-3F6A-4BA0-BD6B-4FA9A898D82C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7996EF-3F6A-4BA0-BD6B-4FA9A898D82C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C7996EF-3F6A-4BA0-BD6B-4FA9A898D82C}.Release|x86.ActiveCfg = Release|Any CPU
+		{2C7996EF-3F6A-4BA0-BD6B-4FA9A898D82C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

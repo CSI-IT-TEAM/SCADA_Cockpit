@@ -781,6 +781,12 @@ namespace FORM
         {
             ComVar.Var.callForm = "minimized";
         }
+
+        private void cmdDowntime_Click(object sender, EventArgs e)
+        {
+            ComVar.Var._IsBack = true;
+            ComVar.Var.callForm = "680";
+        }
     }
 
 

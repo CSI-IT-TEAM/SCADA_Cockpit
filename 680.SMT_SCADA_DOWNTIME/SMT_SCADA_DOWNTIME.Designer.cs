@@ -53,6 +53,11 @@
             this.grdView = new DevExpress.XtraGrid.GridControl();
             this.gvwView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTxt2 = new System.Windows.Forms.Label();
+            this.lblTxt1 = new System.Windows.Forms.Label();
+            this.lblTxt3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnMid.SuspendLayout();
             this.tblChart.SuspendLayout();
@@ -69,6 +74,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -108,7 +114,7 @@
             this.tblChart.Location = new System.Drawing.Point(0, 0);
             this.tblChart.Name = "tblChart";
             this.tblChart.RowCount = 2;
-            this.tblChart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tblChart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tblChart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tblChart.Size = new System.Drawing.Size(1882, 811);
             this.tblChart.TabIndex = 0;
@@ -148,7 +154,7 @@
             this.chartControl1.Legend.Font = new System.Drawing.Font("Tahoma", 18F);
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.Location = new System.Drawing.Point(3, 56);
+            this.chartControl1.Location = new System.Drawing.Point(3, 97);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.PaletteName = "Marquee";
             sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
@@ -169,7 +175,7 @@
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2};
-            this.chartControl1.Size = new System.Drawing.Size(1876, 752);
+            this.chartControl1.Size = new System.Drawing.Size(1876, 711);
             this.chartControl1.TabIndex = 12;
             chartTitle1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartTitle1.Text = "Average Downtime & Calling Times by Line";
@@ -181,11 +187,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnDetail);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1876, 47);
+            this.panel1.Size = new System.Drawing.Size(1876, 88);
             this.panel1.TabIndex = 2;
             // 
             // btnDetail
@@ -311,6 +318,67 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblTxt2);
+            this.panel2.Controls.Add(this.lblTxt1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblTxt3);
+            this.panel2.Location = new System.Drawing.Point(1364, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(327, 87);
+            this.panel2.TabIndex = 15;
+            // 
+            // lblTxt2
+            // 
+            this.lblTxt2.AutoSize = true;
+            this.lblTxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt2.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxt2.ForeColor = System.Drawing.Color.White;
+            this.lblTxt2.Location = new System.Drawing.Point(3, 21);
+            this.lblTxt2.Name = "lblTxt2";
+            this.lblTxt2.Size = new System.Drawing.Size(262, 22);
+            this.lblTxt2.TabIndex = 12;
+            this.lblTxt2.Text = "From 10 min to 29:59 is yellow";
+            // 
+            // lblTxt1
+            // 
+            this.lblTxt1.AutoSize = true;
+            this.lblTxt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxt1.ForeColor = System.Drawing.Color.White;
+            this.lblTxt1.Location = new System.Drawing.Point(3, 0);
+            this.lblTxt1.Name = "lblTxt1";
+            this.lblTxt1.Size = new System.Drawing.Size(198, 22);
+            this.lblTxt1.TabIndex = 11;
+            this.lblTxt1.Text = "<= 10 minutes is green ";
+            // 
+            // lblTxt3
+            // 
+            this.lblTxt3.AutoSize = true;
+            this.lblTxt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt3.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxt3.ForeColor = System.Drawing.Color.White;
+            this.lblTxt3.Location = new System.Drawing.Point(3, 42);
+            this.lblTxt3.Name = "lblTxt3";
+            this.lblTxt3.Size = new System.Drawing.Size(304, 22);
+            this.lblTxt3.TabIndex = 13;
+            this.lblTxt3.Text = "From 30 min to 59:59 min is orange";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 22);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Then more than 1 hour is red";
+            // 
             // SMT_SCADA_DOWNTIME
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +404,8 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -356,5 +426,10 @@
         private System.Windows.Forms.Panel panel3;
         private DevExpress.XtraGrid.GridControl grdView;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView gvwView;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblTxt2;
+        private System.Windows.Forms.Label lblTxt1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTxt3;
     }
 }

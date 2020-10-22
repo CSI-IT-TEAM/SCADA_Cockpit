@@ -194,6 +194,138 @@ namespace FORM
             }
         }
 
+
+        private void BindingChartData2()
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                // chartControl1.Titles.Add(new ChartTitle { Text = "Real-Time Charting" });
+                dataPoints.Clear();
+                // _dtData = SEL_SMT_INST_SET_CHART("014", "001");
+
+
+                DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+                DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
+                DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
+                // DevExpress.XtraCharts.LineSeriesView lineSeriesView4 = new DevExpress.XtraCharts.LineSeriesView();
+                // DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel4 = new DevExpress.XtraCharts.PointSeriesLabel();
+
+                Series series = new Series("SV MIN", ViewType.Line);
+                series.ChangeView(ViewType.Line);
+                series.DataSource = dataPoints;
+                series.ArgumentDataMember = "sArgument";
+                series.ValueDataMembers.AddRange("SV_MIN");
+                series.CrosshairLabelPattern = "{V:#,#}";
+                //format
+                //lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+                lineSeriesView1.LineStyle.Thickness = 5;
+                lineSeriesView1.Color = Color.Blue;
+                series.View = lineSeriesView1;
+                Series series2 = new Series("SV MAX", ViewType.Line);
+                series2.ChangeView(ViewType.Line);
+                series2.DataSource = dataPoints;
+                series2.ArgumentDataMember = "sArgument";
+                series2.ValueDataMembers.AddRange("SV_MAX");
+                series2.CrosshairLabelPattern = "{V:#,#}";
+                //format
+                //  lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+                lineSeriesView2.Color = Color.Orange;
+                lineSeriesView2.LineStyle.Thickness = 5;
+                series2.View = lineSeriesView2;
+
+                Series series3 = new Series("FINAL PV", ViewType.Line);
+                series3.ChangeView(ViewType.Line);
+                series3.DataSource = dataPoints;
+                series3.ArgumentDataMember = "sArgument";
+                series3.ValueDataMembers.AddRange("FINAL_PV");
+                series3.CrosshairLabelPattern = "{V:#,#}";
+                //format
+                // lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+                lineSeriesView3.LineStyle.Thickness = 5;
+                lineSeriesView3.Color = Color.Green;
+                series3.View = lineSeriesView3;
+
+                //Series series4 = new Series("Set Ratio", ViewType.Line);
+                //series4.ChangeView(ViewType.Line);
+                //series4.DataSource = dataPoints;
+                //series4.ArgumentDataMember = "sArgument";
+                //series4.ValueDataMembers.AddRange("RATIO");
+                //series4.CrosshairLabelPattern = "{V:#.0}%";
+                ////pointSeriesLabel4.TextPattern = "{V:#.0}%";
+                //series4.LabelsVisibility = DefaultBoolean.True;
+                ////format
+                //lineSeriesView4.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+                //lineSeriesView4.LineStyle.Thickness = 4;
+                //lineSeriesView4.Color = Color.Orange;
+                //series4.View = lineSeriesView4;
+
+                XYDiagram diagram = (XYDiagram)chartControl1.Diagram;
+
+                diagram.AxisX.Label.ResolveOverlappingOptions.AllowRotate = false;
+                diagram.AxisX.Label.ResolveOverlappingOptions.AllowStagger = false;
+                diagram.AxisX.WholeRange.SideMarginsValue = 0;
+                diagram.AxisX.Title.Text = "Time";
+                diagram.EnableAxisXScrolling = true;
+                diagram.AxisX.Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                diagram.DependentAxesYRange = DefaultBoolean.True;
+                //diagram.AxisY.WholeRange.AlwaysShowZeroLevel = false;
+                diagram.AxisY.Title.Text = "Values";
+                diagram.AxisY.WholeRange.MinValue = _iMinChart - 3;
+                diagram.AxisY.WholeRange.MaxValue = _iMaxChart + 3;
+                diagram.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                diagram.AxisY.Title.TextColor = Color.Blue;
+                diagram.AxisY.Title.Visibility = DefaultBoolean.True;
+                diagram.AxisY.Color = Color.DodgerBlue;
+                diagram.AxisY.Label.TextPattern = "{V:#,#}";
+                diagram.AxisY.Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+                diagram.AxisY.Interlaced = false;
+                chartControl1.Series.Clear();
+                chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] { series, series2, series3 };
+
+                //ADD SECONDARY AXISY
+                // SecondaryAxisY myAxisY = new SecondaryAxisY("my X-Axis");
+                // ((XYDiagram)chartControl1.Diagram).SecondaryAxesY.Clear();
+                //((XYDiagram)chartControl1.Diagram).SecondaryAxesY.Add(myAxisY);
+                //((LineSeriesView)series4.View).AxisY = myAxisY;
+                //myAxisY.WholeRange.SideMarginsValue = 0;
+                //myAxisY.WholeRange.MinValue = 0;
+                //myAxisY.WholeRange.MaxValue = 100;
+                //myAxisY.Title.Text = "Set Ratio (%)";
+                //myAxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                //myAxisY.Title.TextColor = Color.Orange;
+                //myAxisY.Title.Visibility = DefaultBoolean.True;
+                //myAxisY.Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                //myAxisY.Color = Color.Orange;
+
+                //legend
+                chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
+                chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+                chartControl1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+                chartControl1.Legend.Name = "Default Legend";
+                chartControl1.Legend.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                chartControl1.Legend.Visibility = DefaultBoolean.True;
+
+                for (int i = 0; i < _dtData.Rows.Count; i++)
+                {
+                    string setTime1 = _dtData.Rows[i]["SET_TIME"].ToString();
+                    double SV_MIN = Convert.ToDouble(_dtData.Rows[i]["SV_MIN"]);
+                    double SV_MAX = Convert.ToDouble(_dtData.Rows[i]["SV_MAX"]);
+                    double FINAL_PV = Convert.ToDouble(_dtData.Rows[i]["FINAL_PV"]);
+                    // double RATIO1 = Convert.ToDouble(_dtData.Rows[i]["SET_RATIO"]);
+                    dataPoints.Add(new DataRealPoint(setTime1, SV_MIN, SV_MAX, FINAL_PV));
+                }
+                // timer1.Start();
+
+                this.Cursor = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
+
         #region DB
         private DataSet Data_Select(string argType)
         {

@@ -68,6 +68,7 @@ namespace FORM
             {
                 chartControl1.DataSource = null;
                 grdView.DataSource = null;
+                splashScreenManager1.ShowWaitForm();
                 DataSet ds = Data_Select(arg_type, dtpDate.DateTime.ToString("yyyyMMdd"));
                 if (ds == null || ds.Tables.Count == 0) return;
                 DataTable dtData = ds.Tables[0];
@@ -150,10 +151,11 @@ namespace FORM
 
                     grdView.DataSource = dtPivot;
                 }
-
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
+                splashScreenManager1.CloseWaitForm();
                 Debug.WriteLine(ex.ToString());
                 throw;
             }

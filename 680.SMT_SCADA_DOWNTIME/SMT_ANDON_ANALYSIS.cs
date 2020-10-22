@@ -135,76 +135,84 @@ namespace FORM
 
         private void BindingData()
         {
-            gridControl.Refresh();
-            string strdate_f = date_F.DateTime.ToString("yyyyMMdd"), strdate_t = date_T.DateTime.ToString("yyyyMMdd");
-            dtsource = SEL_DATA_ANDON("Q", strdate_f, strdate_t, sLine, cboMline.EditValue.ToString(), cboStation.EditValue == null ? "" : cboStation.EditValue.ToString(),
-                cboProcess.EditValue == null ? "" : cboProcess.EditValue.ToString(), chkDowntime.Checked == false ? "0" : "1", chkTop5.Checked == false ? "0" : "1"
-                   );
-            creat_mc_qty();
-            if (dtsource != null && dtsource.Rows.Count > 0)
+            try
             {
-                //axfpGrid.Enabled = false;
-                //axfpGrid.Visible = false;
-                //axfpGrid.MaxRows = 1;
-                //axfpGrid.MaxRows = dt.Rows.Count + 1;
-                //lblAct.Text = dt.Rows[0]["ACT"].ToString();
-                //lblMrh.Text = dt.Rows[0]["MRH"].ToString();
-                //lblCall.Text = dt.Rows.Count.ToString("#,#");
-                //for (int i_row = 0; i_row < dt.Rows.Count; i_row++)
-                //{
-                //    axfpGrid.SetText(1, i_row + 2, i_row + 1);
-                //    axfpGrid.set_RowHeight(i_row + 2, 25);
-                //    axfpGrid.Row = i_row + 2;
-                //    axfpGrid.Col = 1;                    
-                //    axfpGrid.CellType = FPUSpreadADO.CellTypeConstants.CellTypeStaticText;
-                //    axfpGrid.TypeHAlign = FPUSpreadADO.TypeHAlignConstants.TypeHAlignCenter;
-                //    axfpGrid.TypeVAlign = FPUSpreadADO.TypeVAlignConstants.TypeVAlignCenter;
-                //    axfpGrid.Font = new System.Drawing.Font("Calibri", 14, FontStyle.Regular);
-                //    for (int i_col = 0; i_col < dt.Columns.Count - 2; i_col++)
-                //    {
-                //        axfpGrid.SetText(i_col + 2, i_row + 2, dt.Rows[i_row][i_col].ToString());
-                //        axfpGrid.Row = i_row + 2;
-                //        axfpGrid.Col = i_col + 2;                        
-                //        axfpGrid.CellType = FPUSpreadADO.CellTypeConstants.CellTypeStaticText;
-                //        axfpGrid.TypeHAlign = FPUSpreadADO.TypeHAlignConstants.TypeHAlignCenter;
-                //        axfpGrid.TypeVAlign = FPUSpreadADO.TypeVAlignConstants.TypeVAlignCenter;
-                //        axfpGrid.Font = new System.Drawing.Font("Calibri", 14, FontStyle.Regular);
-                //    }
-                //}
-                //axfpGrid.Enabled = true;
-                //axfpGrid.Visible = true;
-
-                lblAct.Text = dtsource.Rows[0]["ACT"].ToString();
-                lblMrh.Text = dtsource.Rows[0]["MRH"].ToString();
-                lblCall.Text = dtsource.Rows.Count.ToString("#,#");
-                gridControl.DataSource = dtsource;
-                for (int i = 0; i < gridView.Columns.Count; i++)
+                splashScreenManager1.ShowWaitForm();
+                gridControl.Refresh();
+                string strdate_f = date_F.DateTime.ToString("yyyyMMdd"), strdate_t = date_T.DateTime.ToString("yyyyMMdd");
+                dtsource = SEL_DATA_ANDON("Q", strdate_f, strdate_t, sLine, cboMline.EditValue.ToString(), cboStation.EditValue == null ? "" : cboStation.EditValue.ToString(),
+                    cboProcess.EditValue == null ? "" : cboProcess.EditValue.ToString(), chkDowntime.Checked == false ? "0" : "1", chkTop5.Checked == false ? "0" : "1"
+                       );
+                creat_mc_qty();
+                if (dtsource != null && dtsource.Rows.Count > 0)
                 {
-                    gridView.Columns[i].OptionsColumn.ReadOnly = true;
-                    gridView.Columns[i].OptionsColumn.AllowEdit = false;
-                    gridView.Columns[i].OptionsFilter.AllowFilter = false;
-                    gridView.Columns[i].OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-                    gridView.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                    gridView.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+                    //axfpGrid.Enabled = false;
+                    //axfpGrid.Visible = false;
+                    //axfpGrid.MaxRows = 1;
+                    //axfpGrid.MaxRows = dt.Rows.Count + 1;
+                    //lblAct.Text = dt.Rows[0]["ACT"].ToString();
+                    //lblMrh.Text = dt.Rows[0]["MRH"].ToString();
+                    //lblCall.Text = dt.Rows.Count.ToString("#,#");
+                    //for (int i_row = 0; i_row < dt.Rows.Count; i_row++)
+                    //{
+                    //    axfpGrid.SetText(1, i_row + 2, i_row + 1);
+                    //    axfpGrid.set_RowHeight(i_row + 2, 25);
+                    //    axfpGrid.Row = i_row + 2;
+                    //    axfpGrid.Col = 1;                    
+                    //    axfpGrid.CellType = FPUSpreadADO.CellTypeConstants.CellTypeStaticText;
+                    //    axfpGrid.TypeHAlign = FPUSpreadADO.TypeHAlignConstants.TypeHAlignCenter;
+                    //    axfpGrid.TypeVAlign = FPUSpreadADO.TypeVAlignConstants.TypeVAlignCenter;
+                    //    axfpGrid.Font = new System.Drawing.Font("Calibri", 14, FontStyle.Regular);
+                    //    for (int i_col = 0; i_col < dt.Columns.Count - 2; i_col++)
+                    //    {
+                    //        axfpGrid.SetText(i_col + 2, i_row + 2, dt.Rows[i_row][i_col].ToString());
+                    //        axfpGrid.Row = i_row + 2;
+                    //        axfpGrid.Col = i_col + 2;                        
+                    //        axfpGrid.CellType = FPUSpreadADO.CellTypeConstants.CellTypeStaticText;
+                    //        axfpGrid.TypeHAlign = FPUSpreadADO.TypeHAlignConstants.TypeHAlignCenter;
+                    //        axfpGrid.TypeVAlign = FPUSpreadADO.TypeVAlignConstants.TypeVAlignCenter;
+                    //        axfpGrid.Font = new System.Drawing.Font("Calibri", 14, FontStyle.Regular);
+                    //    }
+                    //}
+                    //axfpGrid.Enabled = true;
+                    //axfpGrid.Visible = true;
+
+                    lblAct.Text = dtsource.Rows[0]["ACT"].ToString();
+                    lblMrh.Text = dtsource.Rows[0]["MRH"].ToString();
+                    lblCall.Text = dtsource.Rows.Count.ToString("#,#");
+                    gridControl.DataSource = dtsource;
+                    for (int i = 0; i < gridView.Columns.Count; i++)
+                    {
+                        gridView.Columns[i].OptionsColumn.ReadOnly = true;
+                        gridView.Columns[i].OptionsColumn.AllowEdit = false;
+                        gridView.Columns[i].OptionsFilter.AllowFilter = false;
+                        gridView.Columns[i].OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+                        gridView.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                        gridView.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+                    }
                 }
+                else
+                {
+                    lblAct.Text = "00:00:00";
+                    lblMrh.Text = "00:00:00";
+                    lblCall.Text = "0";
+                    gridControl.DataSource = dtsource;
+                    //for (int i = 0; i < gridView.Columns.Count; i++)
+                    //{
+                    //    gridView.Columns[i].OptionsColumn.ReadOnly = true;
+                    //    gridView.Columns[i].OptionsColumn.AllowEdit = false;
+                    //    gridView.Columns[i].OptionsFilter.AllowFilter = false;
+                    //    gridView.Columns[i].OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+                    //    gridView.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                    //    gridView.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+                    //}
+                }
+                splashScreenManager1.CloseWaitForm();
             }
-            else
+            catch
             {
-                lblAct.Text = "00:00:00";
-                lblMrh.Text = "00:00:00";
-                lblCall.Text = "0";
-                gridControl.DataSource = dtsource;
-                //for (int i = 0; i < gridView.Columns.Count; i++)
-                //{
-                //    gridView.Columns[i].OptionsColumn.ReadOnly = true;
-                //    gridView.Columns[i].OptionsColumn.AllowEdit = false;
-                //    gridView.Columns[i].OptionsFilter.AllowFilter = false;
-                //    gridView.Columns[i].OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-                //    gridView.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                //    gridView.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                //}
+                splashScreenManager1.CloseWaitForm();
             }
-            
         }
 
         private void creat_plant()

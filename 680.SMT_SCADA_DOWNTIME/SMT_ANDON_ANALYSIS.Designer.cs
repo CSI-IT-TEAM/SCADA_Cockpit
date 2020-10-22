@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_ANDON_ANALYSIS));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
@@ -52,8 +51,8 @@
             this.ovalShape22 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.cmdPm1 = new System.Windows.Forms.Button();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
-            this.tmrCount = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
+            this.tmrCount = new System.Windows.Forms.Timer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxEx18 = new FORM.GroupBoxEx();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -183,6 +182,7 @@
             this.ovalShape25 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.ovalShape26 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.ovalShape27 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.pnHeader.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -2176,6 +2176,10 @@
             this.ovalShape27.Name = "ovalShape1";
             this.ovalShape27.Size = new System.Drawing.Size(36, 36);
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // SMT_ANDON_ANALYSIS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2380,5 +2384,6 @@
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape28;
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape29;
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape30;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

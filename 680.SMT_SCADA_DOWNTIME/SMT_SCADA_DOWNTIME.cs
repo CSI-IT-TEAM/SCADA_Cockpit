@@ -97,6 +97,7 @@ namespace FORM
                     gridBand1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
                     gridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
                     gridBand1.VisibleIndex = 0;
+                    gridBand1.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
 
                     //column_Band1.Caption = "FACTORY";
                     //column_Band1.FieldName = "FACTORY";
@@ -307,19 +308,19 @@ namespace FORM
             // Get the value at the current series point.
             double val = e.SeriesPoint[0];
 
-            if (val > 3600)
+            if (val >= 3660)
             {
                 options.Color2 = Color.Red;
                 drawOptions.Color = Color.Red;
                 //drawOptions.Border.Color = Color.FromArgb(100, 39, 91, 1);
             }
-            else if (val > 1740)
+            else if (val >= 1800)
             {
                 options.Color2 = Color.Orange;
                 drawOptions.Color = Color.Orange;
                 //drawOptions.Border.Color = Color.FromArgb(60, 165, 73, 5);
             }
-            else if (val > 540)
+            else if (val >= 600)
             {
                 options.Color2 = Color.Yellow;
                 drawOptions.Color = Color.Yellow;

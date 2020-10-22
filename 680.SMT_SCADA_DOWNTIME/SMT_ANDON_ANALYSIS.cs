@@ -96,8 +96,7 @@ namespace FORM
             InitializeComponent();
             indexScreen = _indexScreen;
             sMline = _Mline;
-            sLine = _Line;
-            lblTitle.Text = Title;            
+            sLine = _Line;                    
         }
 
         string[] _str_uc = { "UC1", "UC2", "UC3", "UC4", "UC5", "UC6",
@@ -323,7 +322,7 @@ namespace FORM
         {
             if (this.Visible)
             {
-                cmdBack.Tag = ComVar.Var._Frm_Back;
+                //cmdBack.Tag = ComVar.Var._Frm_Back;
                 initForm();
                 cCount = 29;
                 tmrDate.Start();
@@ -452,6 +451,11 @@ namespace FORM
             if (flag == true) BindingData(); 
         }
 
+        private void cmdPm1_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "back";
+        }
+
         private void FRM_ANDON_GATHERING_Shown(object sender, EventArgs e)
         {
             cboProcess.Focus();
@@ -463,23 +467,23 @@ namespace FORM
             sMline = ComVar.Var._strValue2;
             // Lang = ComVar.Var._strValue3;
 
-            switch (ComVar.Var._strValue3)
-            {
-                case "Vn":
-                    //btnDay.Text = "Ngày";
-                    //btnMonth.Text = "Tháng";
-                    //btnWeek.Text = "Tuần";
-                    //btnYear.Text = "Năm";
-                    lblTitle.Text = "Phân tích dữ liệu andon";
-                    break;
-                case "En":
-                    //btnDay.Text = "Day";
-                    //btnMonth.Text = "Month";
-                    //btnWeek.Text = "Week";
-                    //btnYear.Text = "Year";
-                    lblTitle.Text = "Andon Data Analysis";
-                    break;
-            }
+            //switch (ComVar.Var._strValue3)
+            //{
+            //    case "Vn":
+            //        //btnDay.Text = "Ngày";
+            //        //btnMonth.Text = "Tháng";
+            //        //btnWeek.Text = "Tuần";
+            //        //btnYear.Text = "Năm";
+            //        lblTitle.Text = "Phân tích dữ liệu andon";
+            //        break;
+            //    case "En":
+            //        //btnDay.Text = "Day";
+            //        //btnMonth.Text = "Month";
+            //        //btnWeek.Text = "Week";
+            //        //btnYear.Text = "Year";
+            //        lblTitle.Text = "Andon Data Analysis";
+            //        break;
+            //}
 
         }
 

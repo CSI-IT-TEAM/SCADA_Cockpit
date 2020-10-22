@@ -36,14 +36,34 @@
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYSeriesUnwindAnimation xySeriesUnwindAnimation1 = new DevExpress.XtraCharts.XYSeriesUnwindAnimation();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation1 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
+            DevExpress.XtraCharts.ExponentialEasingFunction exponentialEasingFunction1 = new DevExpress.XtraCharts.ExponentialEasingFunction();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_DOWNTIME));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnMid = new System.Windows.Forms.Panel();
             this.tblChart = new System.Windows.Forms.TableLayoutPanel();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpDate = new DevExpress.XtraEditors.DateEdit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTxt2 = new System.Windows.Forms.Label();
+            this.lblTxt1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTxt3 = new System.Windows.Forms.Label();
             this.btnDetail = new System.Windows.Forms.Button();
             this.pnTop = new System.Windows.Forms.Panel();
             this.cmdPm1 = new System.Windows.Forms.Button();
@@ -53,11 +73,6 @@
             this.grdView = new DevExpress.XtraGrid.GridControl();
             this.gvwView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTxt2 = new System.Windows.Forms.Label();
-            this.lblTxt1 = new System.Windows.Forms.Label();
-            this.lblTxt3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnMid.SuspendLayout();
             this.tblChart.SuspendLayout();
@@ -70,11 +85,13 @@
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).BeginInit();
+            this.panel2.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -121,7 +138,7 @@
             // 
             // chartControl1
             // 
-            this.chartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnLoad;
+            this.chartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartControl1.AppearanceNameSerializable = "Chameleon";
             this.chartControl1.DataBindings = null;
             xyDiagram1.AxisX.Label.Angle = -45;
@@ -130,13 +147,15 @@
             xyDiagram1.AxisX.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("Tahoma", 20F);
+            xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("Tahoma", 14F);
+            xyDiagram1.AxisY.Label.TextPattern = "{V:#,#}";
             xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             xyDiagram1.AxisY.Title.Text = "Downtime (Second)";
             xyDiagram1.AxisY.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             secondaryAxisY1.AxisID = 0;
+            secondaryAxisY1.Label.Font = new System.Drawing.Font("Tahoma", 14F);
             secondaryAxisY1.Name = "Secondary AxisY 1";
             secondaryAxisY1.Title.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             secondaryAxisY1.Title.Text = "Calling Times (Count)";
@@ -171,6 +190,12 @@
             lineSeriesView1.LineMarkerOptions.Color = System.Drawing.Color.Yellow;
             lineSeriesView1.LineStyle.Thickness = 3;
             lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xySeriesUnwindAnimation1.BeginTime = System.TimeSpan.Parse("00:00:02");
+            xySeriesUnwindAnimation1.Duration = System.TimeSpan.Parse("00:00:03.2000000");
+            lineSeriesView1.SeriesAnimation = xySeriesUnwindAnimation1;
+            xyMarkerSlideAnimation1.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
+            xyMarkerSlideAnimation1.EasingFunction = exponentialEasingFunction1;
+            lineSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation1;
             series2.View = lineSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
@@ -187,6 +212,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.dtpDate);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnDetail);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -194,6 +221,202 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1876, 88);
             this.panel1.TabIndex = 2;
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dtpDate.EditValue = new System.DateTime(2017, 12, 15, 16, 0, 56, 917);
+            this.dtpDate.Location = new System.Drawing.Point(119, 7);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dtpDate.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 22F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.dtpDate.Properties.Appearance.Options.UseFont = true;
+            this.dtpDate.Properties.Appearance.Options.UseForeColor = true;
+            this.dtpDate.Properties.AppearanceCalendar.Button.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
+            this.dtpDate.Properties.AppearanceCalendar.Button.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.ButtonHighlighted.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.ButtonHighlighted.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.ButtonPressed.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.ButtonPressed.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.CalendarHeader.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.CalendarHeader.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCell.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCell.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellDisabled.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellDisabled.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellHighlighted.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellHighlighted.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellHoliday.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellHoliday.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellInactive.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellInactive.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellPressed.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellPressed.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellSelected.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellSelected.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellSpecial.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellSpecial.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellSpecialHighlighted.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellSpecialHighlighted.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellSpecialPressed.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellSpecialPressed.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellSpecialSelected.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellSpecialSelected.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.DayCellToday.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.DayCellToday.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.Header.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.Header.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.HeaderHighlighted.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.HeaderHighlighted.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.HeaderPressed.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.HeaderPressed.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.WeekDay.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.WeekDay.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceCalendar.WeekNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.dtpDate.Properties.AppearanceCalendar.WeekNumber.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dtpDate.Properties.AppearanceCalendar.WeekNumber.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceCalendar.WeekNumber.Options.UseBackColor = true;
+            this.dtpDate.Properties.AppearanceCalendar.WeekNumber.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceDisabled.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceFocused.Font = new System.Drawing.Font("Calibri", 17F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceFocused.Options.UseFont = true;
+            this.dtpDate.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.AppearanceReadOnly.Options.UseFont = true;
+            this.dtpDate.Properties.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            serializableAppearanceObject1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject1.Options.UseFont = true;
+            serializableAppearanceObject2.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            serializableAppearanceObject2.Options.UseFont = true;
+            serializableAppearanceObject3.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            serializableAppearanceObject3.Options.UseFont = true;
+            serializableAppearanceObject4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            serializableAppearanceObject4.Options.UseFont = true;
+            this.dtpDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 50, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null)});
+            this.dtpDate.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.dtpDate.Properties.CalendarTimeProperties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dtpDate.Properties.CalendarTimeProperties.Appearance.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.CalendarTimeProperties.Appearance.Options.UseFont = true;
+            this.dtpDate.Properties.CalendarTimeProperties.AppearanceDisabled.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.CalendarTimeProperties.AppearanceDisabled.Options.UseFont = true;
+            this.dtpDate.Properties.CalendarTimeProperties.AppearanceFocused.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.CalendarTimeProperties.AppearanceFocused.Options.UseFont = true;
+            this.dtpDate.Properties.CalendarTimeProperties.AppearanceReadOnly.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            this.dtpDate.Properties.CalendarTimeProperties.AppearanceReadOnly.Options.UseFont = true;
+            this.dtpDate.Properties.CalendarTimeProperties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions2.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            serializableAppearanceObject5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject5.Options.UseFont = true;
+            serializableAppearanceObject6.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject6.Options.UseFont = true;
+            serializableAppearanceObject7.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject7.Options.UseFont = true;
+            serializableAppearanceObject8.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject8.Options.UseFont = true;
+            this.dtpDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close, "", 50, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null)});
+            this.dtpDate.Properties.CalendarTimeProperties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.dtpDate.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "d";
+            this.dtpDate.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpDate.Properties.CalendarTimeProperties.PopupBorderStyle = DevExpress.XtraEditors.Controls.PopupBorderStyles.NoBorder;
+            this.dtpDate.Properties.CalendarTimeProperties.ReadOnly = true;
+            this.dtpDate.Properties.CellSize = new System.Drawing.Size(80, 60);
+            this.dtpDate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.dtpDate.Properties.ContextImageOptions.SvgImageSize = new System.Drawing.Size(1, 10);
+            this.dtpDate.Properties.ShowMonthNavigationButtons = DevExpress.Utils.DefaultBoolean.True;
+            this.dtpDate.Properties.ShowNullValuePromptWhenFocused = true;
+            this.dtpDate.Properties.ShowOk = DevExpress.Utils.DefaultBoolean.False;
+            this.dtpDate.Properties.ShowPopupShadow = false;
+            this.dtpDate.Properties.TimeEditWidth = 50;
+            this.dtpDate.Properties.TodayDate = new System.DateTime(2019, 7, 8, 13, 15, 21, 0);
+            this.dtpDate.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.MonthView;
+            this.dtpDate.Size = new System.Drawing.Size(254, 42);
+            this.dtpDate.TabIndex = 301;
+            this.dtpDate.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.dtpDate.ToolTipTitle = "Click vào để chọn ngày";
+            //this.dtpDate.EditValueChanged += new System.EventHandler(this.dtpDate_EditValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.DimGray;
+            this.label3.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(6, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 42);
+            this.label3.TabIndex = 300;
+            this.label3.Text = "Date";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblTxt2);
+            this.panel2.Controls.Add(this.lblTxt1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblTxt3);
+            this.panel2.Location = new System.Drawing.Point(1364, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(327, 87);
+            this.panel2.TabIndex = 15;
+            // 
+            // lblTxt2
+            // 
+            this.lblTxt2.AutoSize = true;
+            this.lblTxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt2.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxt2.ForeColor = System.Drawing.Color.White;
+            this.lblTxt2.Location = new System.Drawing.Point(3, 21);
+            this.lblTxt2.Name = "lblTxt2";
+            this.lblTxt2.Size = new System.Drawing.Size(262, 22);
+            this.lblTxt2.TabIndex = 12;
+            this.lblTxt2.Text = "From 10 min to 29:59 is yellow";
+            // 
+            // lblTxt1
+            // 
+            this.lblTxt1.AutoSize = true;
+            this.lblTxt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxt1.ForeColor = System.Drawing.Color.White;
+            this.lblTxt1.Location = new System.Drawing.Point(3, 0);
+            this.lblTxt1.Name = "lblTxt1";
+            this.lblTxt1.Size = new System.Drawing.Size(198, 22);
+            this.lblTxt1.TabIndex = 11;
+            this.lblTxt1.Text = "<= 10 minutes is green ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 22);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Then more than 1 hour is red";
+            // 
+            // lblTxt3
+            // 
+            this.lblTxt3.AutoSize = true;
+            this.lblTxt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt3.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxt3.ForeColor = System.Drawing.Color.White;
+            this.lblTxt3.Location = new System.Drawing.Point(3, 42);
+            this.lblTxt3.Name = "lblTxt3";
+            this.lblTxt3.Size = new System.Drawing.Size(304, 22);
+            this.lblTxt3.TabIndex = 13;
+            this.lblTxt3.Text = "From 30 min to 59:59 min is orange";
             // 
             // btnDetail
             // 
@@ -257,7 +480,7 @@
             this.lblHeader.LineVisible = true;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1895, 76);
+            this.lblHeader.Size = new System.Drawing.Size(1675, 76);
             this.lblHeader.TabIndex = 3;
             this.lblHeader.Text = "        Andon Information Downtime";
             // 
@@ -318,67 +541,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblTxt2);
-            this.panel2.Controls.Add(this.lblTxt1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.lblTxt3);
-            this.panel2.Location = new System.Drawing.Point(1364, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(327, 87);
-            this.panel2.TabIndex = 15;
-            // 
-            // lblTxt2
-            // 
-            this.lblTxt2.AutoSize = true;
-            this.lblTxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
-            this.lblTxt2.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxt2.ForeColor = System.Drawing.Color.White;
-            this.lblTxt2.Location = new System.Drawing.Point(3, 21);
-            this.lblTxt2.Name = "lblTxt2";
-            this.lblTxt2.Size = new System.Drawing.Size(262, 22);
-            this.lblTxt2.TabIndex = 12;
-            this.lblTxt2.Text = "From 10 min to 29:59 is yellow";
-            // 
-            // lblTxt1
-            // 
-            this.lblTxt1.AutoSize = true;
-            this.lblTxt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
-            this.lblTxt1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxt1.ForeColor = System.Drawing.Color.White;
-            this.lblTxt1.Location = new System.Drawing.Point(3, 0);
-            this.lblTxt1.Name = "lblTxt1";
-            this.lblTxt1.Size = new System.Drawing.Size(198, 22);
-            this.lblTxt1.TabIndex = 11;
-            this.lblTxt1.Text = "<= 10 minutes is green ";
-            // 
-            // lblTxt3
-            // 
-            this.lblTxt3.AutoSize = true;
-            this.lblTxt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
-            this.lblTxt3.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxt3.ForeColor = System.Drawing.Color.White;
-            this.lblTxt3.Location = new System.Drawing.Point(3, 42);
-            this.lblTxt3.Name = "lblTxt3";
-            this.lblTxt3.Size = new System.Drawing.Size(304, 22);
-            this.lblTxt3.TabIndex = 13;
-            this.lblTxt3.Text = "From 30 min to 59:59 min is orange";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 22);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Then more than 1 hour is red";
-            // 
             // SMT_SCADA_DOWNTIME
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +549,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "SMT_SCADA_DOWNTIME";
             this.Text = "SMT_SCADA_COCKPIT_FORM2";
+            this.Load += new System.EventHandler(this.SMT_SCADA_DOWNTIME_Load);
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_COCKPIT_FORM2_VisibleChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnMid.ResumeLayout(false);
@@ -400,12 +563,14 @@
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.pnTop.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -431,5 +596,7 @@
         private System.Windows.Forms.Label lblTxt1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTxt3;
+        private DevExpress.XtraEditors.DateEdit dtpDate;
+        private System.Windows.Forms.Label label3;
     }
 }

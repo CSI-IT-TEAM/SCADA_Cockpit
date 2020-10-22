@@ -67,7 +67,8 @@ namespace FORM
             try
             {
                 chartControl1.DataSource = null;
-                DataSet ds = Data_Select(arg_type);
+                grdView.DataSource = null;
+                DataSet ds = Data_Select(arg_type, dtpDate.DateTime.ToString("yyyyMMdd"));
                 if (ds == null || ds.Tables.Count == 0) return;
                 DataTable dtData = ds.Tables[0];
                 DataTable dtData2 = ds.Tables[1];
@@ -84,7 +85,7 @@ namespace FORM
                
 
                 //DataTable dt = null;
-                grdView.DataSource = null;
+               
                 if (dtData2.Rows.Count > 0)
                 {
                     gvwView.Bands.Clear();
@@ -177,7 +178,7 @@ namespace FORM
         }
 
         #region DB
-        private DataSet Data_Select(string argType, string argDate = "")
+        private DataSet Data_Select(string argType, string argDate)
         {
             COM.OraDB MyOraDB = new COM.OraDB();
 
@@ -393,6 +394,17 @@ namespace FORM
                 e.Appearance.BackColor = Color.Red;
                 e.Appearance.ForeColor = Color.White;
             }
+        }
+
+        private void SMT_SCADA_DOWNTIME_Load(object sender, EventArgs e)
+        {
+            dtpDate.EditValue = DateTime.Now;
+            dtpDate.EditValueChanged += new System.EventHandler(this.dtpDate_EditValueChanged);
+        }
+
+        private void dtpDate_EditValueChanged(object sender, EventArgs e)
+        {
+            SetData(_strType);
         }
     }
 }

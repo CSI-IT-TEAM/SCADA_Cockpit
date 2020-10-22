@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_ANDON_ANALYSIS));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
@@ -36,16 +37,21 @@
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.cmdBack = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.shapeContainer10 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.ovalShape28 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
+            this.ovalShape29 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
+            this.ovalShape30 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
+            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.lblDate = new System.Windows.Forms.Label();
-            this.lblTitle = new DevExpress.XtraEditors.LabelControl();
             this.shapeContainer8 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.ovalShape24 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.ovalShape23 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.ovalShape22 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
+            this.lblHeader = new DevExpress.XtraEditors.LabelControl();
+            this.cmdPm1 = new System.Windows.Forms.Button();
             this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.tmrCount = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -178,6 +184,7 @@
             this.ovalShape26 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.ovalShape27 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.pnHeader.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBoxEx18.SuspendLayout();
             this.groupBoxEx10.SuspendLayout();
@@ -206,144 +213,156 @@
             // 
             // pnHeader
             // 
-            this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pnHeader.Controls.Add(this.labelControl10);
-            this.pnHeader.Controls.Add(this.labelControl9);
-            this.pnHeader.Controls.Add(this.labelControl8);
-            this.pnHeader.Controls.Add(this.cmdBack);
+            this.pnHeader.BackColor = System.Drawing.SystemColors.Control;
+            this.pnHeader.Controls.Add(this.panel2);
+            this.pnHeader.Controls.Add(this.labelControl22);
+            this.pnHeader.Controls.Add(this.labelControl23);
+            this.pnHeader.Controls.Add(this.labelControl24);
             this.pnHeader.Controls.Add(this.lblDate);
-            this.pnHeader.Controls.Add(this.lblTitle);
             this.pnHeader.Controls.Add(this.shapeContainer8);
+            this.pnHeader.Controls.Add(this.lblHeader);
+            this.pnHeader.Controls.Add(this.cmdPm1);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(1920, 110);
+            this.pnHeader.Size = new System.Drawing.Size(1920, 82);
             this.pnHeader.TabIndex = 13;
             // 
-            // labelControl10
+            // panel2
             // 
-            this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel2.Controls.Add(this.shapeContainer10);
+            this.panel2.Location = new System.Drawing.Point(1404, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(31, 73);
+            this.panel2.TabIndex = 93;
+            // 
+            // shapeContainer10
+            // 
+            this.shapeContainer10.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer10.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer10.Name = "shapeContainer10";
+            this.shapeContainer10.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.ovalShape28,
+            this.ovalShape29,
+            this.ovalShape30});
+            this.shapeContainer10.Size = new System.Drawing.Size(31, 73);
+            this.shapeContainer10.TabIndex = 0;
+            this.shapeContainer10.TabStop = false;
+            // 
+            // ovalShape28
+            // 
+            this.ovalShape28.BackColor = System.Drawing.Color.Yellow;
+            this.ovalShape28.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.ovalShape28.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ovalShape28.Location = new System.Drawing.Point(4, 49);
+            this.ovalShape28.Name = "ovalShape24";
+            this.ovalShape28.Size = new System.Drawing.Size(23, 22);
+            // 
+            // ovalShape29
+            // 
+            this.ovalShape29.BackColor = System.Drawing.Color.Red;
+            this.ovalShape29.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.ovalShape29.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ovalShape29.Location = new System.Drawing.Point(4, 25);
+            this.ovalShape29.Name = "ovalShape23";
+            this.ovalShape29.Size = new System.Drawing.Size(23, 22);
+            // 
+            // ovalShape30
+            // 
+            this.ovalShape30.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ovalShape30.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.ovalShape30.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ovalShape30.Location = new System.Drawing.Point(4, 1);
+            this.ovalShape30.Name = "ovalShape22";
+            this.ovalShape30.Size = new System.Drawing.Size(23, 22);
+            // 
+            // labelControl22
+            // 
+            this.labelControl22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl10.Appearance.BackColor = System.Drawing.Color.Yellow;
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Appearance.Options.UseBackColor = true;
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Appearance.Options.UseTextOptions = true;
-            this.labelControl10.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.labelControl10.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl10.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl10.Location = new System.Drawing.Point(1377, 75);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(247, 32);
-            this.labelControl10.TabIndex = 52;
-            this.labelControl10.Text = " QUAN LY (Management)";
+            this.labelControl22.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.labelControl22.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl22.Appearance.Options.UseBackColor = true;
+            this.labelControl22.Appearance.Options.UseFont = true;
+            this.labelControl22.Appearance.Options.UseTextOptions = true;
+            this.labelControl22.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.labelControl22.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.labelControl22.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl22.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl22.Location = new System.Drawing.Point(1435, 53);
+            this.labelControl22.Name = "labelControl22";
+            this.labelControl22.Size = new System.Drawing.Size(238, 24);
+            this.labelControl22.TabIndex = 90;
+            this.labelControl22.Text = " QUAN LY (Management)";
             // 
-            // labelControl9
+            // labelControl23
             // 
-            this.labelControl9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelControl23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl9.Appearance.BackColor = System.Drawing.Color.Red;
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl9.Appearance.Options.UseBackColor = true;
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Appearance.Options.UseForeColor = true;
-            this.labelControl9.Appearance.Options.UseTextOptions = true;
-            this.labelControl9.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.labelControl9.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl9.Location = new System.Drawing.Point(1377, 40);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(247, 32);
-            this.labelControl9.TabIndex = 52;
-            this.labelControl9.Text = " BAO TRI (M&&A Team)";
+            this.labelControl23.Appearance.BackColor = System.Drawing.Color.Red;
+            this.labelControl23.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl23.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl23.Appearance.Options.UseBackColor = true;
+            this.labelControl23.Appearance.Options.UseFont = true;
+            this.labelControl23.Appearance.Options.UseForeColor = true;
+            this.labelControl23.Appearance.Options.UseTextOptions = true;
+            this.labelControl23.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.labelControl23.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.labelControl23.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl23.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl23.Location = new System.Drawing.Point(1435, 28);
+            this.labelControl23.Name = "labelControl23";
+            this.labelControl23.Size = new System.Drawing.Size(238, 24);
+            this.labelControl23.TabIndex = 91;
+            this.labelControl23.Text = " BAO TRI (M&&A Team)";
             // 
-            // labelControl8
+            // labelControl24
             // 
-            this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelControl24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl8.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl8.Appearance.Options.UseBackColor = true;
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Appearance.Options.UseTextOptions = true;
-            this.labelControl8.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.labelControl8.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl8.Location = new System.Drawing.Point(1377, 5);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(247, 32);
-            this.labelControl8.TabIndex = 52;
-            this.labelControl8.Text = " CHAY CHUYEN (MTL. Handler)";
-            // 
-            // cmdBack
-            // 
-            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
-            this.cmdBack.BackgroundImage = global::FORM.Properties.Resources.Back_Icon;
-            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdBack.FlatAppearance.BorderSize = 0;
-            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBack.Location = new System.Drawing.Point(1171, 6);
-            this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(108, 101);
-            this.cmdBack.TabIndex = 50;
-            this.cmdBack.Tag = "140";
-            this.cmdBack.UseVisualStyleBackColor = false;
-            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
+            this.labelControl24.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
+            this.labelControl24.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl24.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl24.Appearance.Options.UseBackColor = true;
+            this.labelControl24.Appearance.Options.UseFont = true;
+            this.labelControl24.Appearance.Options.UseForeColor = true;
+            this.labelControl24.Appearance.Options.UseTextOptions = true;
+            this.labelControl24.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.labelControl24.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.labelControl24.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl24.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl24.Location = new System.Drawing.Point(1435, 3);
+            this.labelControl24.Name = "labelControl24";
+            this.labelControl24.Size = new System.Drawing.Size(238, 24);
+            this.labelControl24.TabIndex = 92;
+            this.labelControl24.Text = " CHAY CHUYEN (MTL. Handler)";
             // 
             // lblDate
             // 
-            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold);
-            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.BackColor = System.Drawing.SystemColors.Control;
+            this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblDate.Font = new System.Drawing.Font("Calibri", 24.75F, System.Drawing.FontStyle.Bold);
+            this.lblDate.ForeColor = System.Drawing.Color.Black;
             this.lblDate.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblDate.Location = new System.Drawing.Point(1660, 0);
+            this.lblDate.Location = new System.Drawing.Point(1679, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(269, 106);
+            this.lblDate.Size = new System.Drawing.Size(241, 82);
             this.lblDate.TabIndex = 49;
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Appearance.Font = new System.Drawing.Font("Calibri", 62F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Appearance.Options.UseBackColor = true;
-            this.lblTitle.Appearance.Options.UseFont = true;
-            this.lblTitle.Appearance.Options.UseForeColor = true;
-            this.lblTitle.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTitle.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lblTitle.LineVisible = true;
-            this.lblTitle.Location = new System.Drawing.Point(12, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1153, 107);
-            this.lblTitle.TabIndex = 2;
-            this.lblTitle.Tag = "Minimized";
-            this.lblTitle.Text = "Andon Data Analysis";
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
-            this.lblTitle.DoubleClick += new System.EventHandler(this.menu_Click);
-            // 
             // shapeContainer8
             // 
-            this.shapeContainer8.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer8.Location = new System.Drawing.Point(882, 0);
             this.shapeContainer8.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer8.Name = "shapeContainer8";
             this.shapeContainer8.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.ovalShape24,
             this.ovalShape23,
             this.ovalShape22});
-            this.shapeContainer8.Size = new System.Drawing.Size(1920, 110);
+            this.shapeContainer8.Size = new System.Drawing.Size(1038, 82);
             this.shapeContainer8.TabIndex = 51;
             this.shapeContainer8.TabStop = false;
             // 
@@ -373,6 +392,38 @@
             this.ovalShape22.Location = new System.Drawing.Point(1339, 8);
             this.ovalShape22.Name = "ovalShape22";
             this.ovalShape22.Size = new System.Drawing.Size(31, 27);
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Appearance.Options.UseFont = true;
+            this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblHeader.LineVisible = true;
+            this.lblHeader.Location = new System.Drawing.Point(90, 0);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(792, 82);
+            this.lblHeader.TabIndex = 53;
+            this.lblHeader.Text = "  Andon Data Analysis";
+            // 
+            // cmdPm1
+            // 
+            this.cmdPm1.BackColor = System.Drawing.Color.Transparent;
+            this.cmdPm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdPm1.BackgroundImage")));
+            this.cmdPm1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdPm1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmdPm1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdPm1.FlatAppearance.BorderSize = 0;
+            this.cmdPm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdPm1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdPm1.ForeColor = System.Drawing.Color.Navy;
+            this.cmdPm1.Location = new System.Drawing.Point(0, 0);
+            this.cmdPm1.Name = "cmdPm1";
+            this.cmdPm1.Size = new System.Drawing.Size(90, 82);
+            this.cmdPm1.TabIndex = 89;
+            this.cmdPm1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdPm1.UseVisualStyleBackColor = false;
+            this.cmdPm1.Click += new System.EventHandler(this.cmdPm1_Click);
             // 
             // tmrDate
             // 
@@ -405,7 +456,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 110);
+            this.panel1.Location = new System.Drawing.Point(0, 82);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1920, 186);
             this.panel1.TabIndex = 14;
@@ -1766,10 +1817,10 @@
             // gridControl
             // 
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 296);
+            this.gridControl.Location = new System.Drawing.Point(0, 268);
             this.gridControl.MainView = this.gridView;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(1920, 784);
+            this.gridControl.Size = new System.Drawing.Size(1920, 812);
             this.gridControl.TabIndex = 16;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -2132,8 +2183,8 @@
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnHeader);
             this.Controls.Add(this.txtQty);
+            this.Controls.Add(this.pnHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SMT_ANDON_ANALYSIS";
             this.Text = "FRM_ANDON_GATHERING";
@@ -2141,6 +2192,7 @@
             this.Shown += new System.EventHandler(this.FRM_ANDON_GATHERING_Shown);
             this.VisibleChanged += new System.EventHandler(this.FRM_ANDON_GATHERING_VisibleChanged);
             this.pnHeader.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBoxEx18.ResumeLayout(false);
@@ -2173,9 +2225,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnHeader;
-        private System.Windows.Forms.Button cmdBack;
         private System.Windows.Forms.Label lblDate;
-        private DevExpress.XtraEditors.LabelControl lblTitle;
         private System.Windows.Forms.Timer tmrDate;
         private System.Windows.Forms.Timer tmrCount;
         private System.Windows.Forms.Panel panel1;
@@ -2273,9 +2323,6 @@
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape24;
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape23;
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape22;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
         private GroupBoxEx groupBoxEx10;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer9;
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape25;
@@ -2323,5 +2370,15 @@
         private UC.UC_Factory UC10;
         private DevExpress.XtraEditors.LookUpEdit cboPlant;
         private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.LabelControl lblHeader;
+        public System.Windows.Forms.Button cmdPm1;
+        private DevExpress.XtraEditors.LabelControl labelControl22;
+        private DevExpress.XtraEditors.LabelControl labelControl23;
+        private DevExpress.XtraEditors.LabelControl labelControl24;
+        private System.Windows.Forms.Panel panel2;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer10;
+        private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape28;
+        private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape29;
+        private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape30;
     }
 }

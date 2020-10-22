@@ -58,6 +58,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmdPm1 = new System.Windows.Forms.Button();
             this.cmdDowntime = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tmrBlink = new System.Windows.Forms.Timer(this.components);
             this.gpExF1 = new FORM.GroupBoxEx();
             this.aPn1 = new FORM.AdvancedPanel();
@@ -378,6 +379,7 @@
             this.tableLayoutPanel3.Controls.Add(this.pnVJ2, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.cmdPm1, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.cmdDowntime, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button1, 5, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -491,6 +493,23 @@
             this.cmdDowntime.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdDowntime.UseVisualStyleBackColor = false;
             this.cmdDowntime.Click += new System.EventHandler(this.cmdDowntime_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Navy;
+            this.button1.Location = new System.Drawing.Point(1198, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(233, 128);
+            this.button1.TabIndex = 89;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // tmrBlink
             // 
@@ -882,5 +901,6 @@
         private System.Windows.Forms.Timer tmrBlink;
         public System.Windows.Forms.Button cmdPm1;
         public System.Windows.Forms.Button cmdDowntime;
+        public System.Windows.Forms.Button button1;
     }
 }

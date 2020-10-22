@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_COCKPIT_FORM1));
             this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdF1 = new System.Windows.Forms.Button();
             this.cmdF2 = new System.Windows.Forms.Button();
@@ -42,27 +41,17 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.circularGauge1 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
+            this.labelComponent1 = new DevExpress.XtraGauges.Win.Base.LabelComponent();
+            this.arcScaleRangeBarComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent();
+            this.ascInv = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tblMenu = new System.Windows.Forms.TableLayoutPanel();
             this.pnF2 = new System.Windows.Forms.Panel();
-            this.pnF3 = new System.Windows.Forms.Panel();
-            this.pnF5 = new System.Windows.Forms.Panel();
-            this.pnF4 = new System.Windows.Forms.Panel();
-            this.pnF1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnVJ3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pnVJ = new System.Windows.Forms.Panel();
-            this.lblVinhCuu = new System.Windows.Forms.Label();
-            this.pnVJ2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmdPm1 = new System.Windows.Forms.Button();
-            this.cmdDowntime = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tmrBlink = new System.Windows.Forms.Timer(this.components);
             this.gpExF1 = new FORM.GroupBoxEx();
             this.aPn1 = new FORM.AdvancedPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pnF3 = new System.Windows.Forms.Panel();
+            this.pnF5 = new System.Windows.Forms.Panel();
             this.gpExF2 = new FORM.GroupBoxEx();
             this.advancedPanel1 = new FORM.AdvancedPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,17 +64,26 @@
             this.gpExF5 = new FORM.GroupBoxEx();
             this.advancedPanel4 = new FORM.AdvancedPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.labelComponent1 = new DevExpress.XtraGauges.Win.Base.LabelComponent();
-            this.arcScaleRangeBarComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent();
-            this.ascInv = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
+            this.pnF4 = new System.Windows.Forms.Panel();
+            this.pnF1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnVJ3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pnVJ = new System.Windows.Forms.Panel();
+            this.lblVinhCuu = new System.Windows.Forms.Label();
+            this.pnVJ2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmdPm1 = new System.Windows.Forms.Button();
+            this.cmdDowntime = new System.Windows.Forms.Button();
+            this.btnEnergy = new System.Windows.Forms.Button();
+            this.tmrBlink = new System.Windows.Forms.Timer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tblMenu.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.pnVJ3.SuspendLayout();
-            this.pnVJ.SuspendLayout();
-            this.pnVJ2.SuspendLayout();
             this.gpExF1.SuspendLayout();
             this.aPn1.SuspendLayout();
             this.gpExF2.SuspendLayout();
@@ -96,9 +94,10 @@
             this.advancedPanel3.SuspendLayout();
             this.gpExF5.SuspendLayout();
             this.advancedPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.pnVJ3.SuspendLayout();
+            this.pnVJ.SuspendLayout();
+            this.pnVJ2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridBand12
@@ -275,6 +274,46 @@
             this.circularGauge1.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
             this.ascInv});
             // 
+            // labelComponent1
+            // 
+            this.labelComponent1.AppearanceText.Font = new System.Drawing.Font("DS-Digital", 44F);
+            this.labelComponent1.AppearanceText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:DarkOrange");
+            this.labelComponent1.Name = "circularGauge1_Label1";
+            this.labelComponent1.Size = new System.Drawing.SizeF(140F, 60F);
+            this.labelComponent1.Text = "0";
+            this.labelComponent1.ZOrder = -1001;
+            // 
+            // arcScaleRangeBarComponent1
+            // 
+            this.arcScaleRangeBarComponent1.EndOffset = 4F;
+            this.arcScaleRangeBarComponent1.Name = "circularGauge1_RangeBar2";
+            this.arcScaleRangeBarComponent1.RoundedCaps = true;
+            this.arcScaleRangeBarComponent1.ShowBackground = true;
+            this.arcScaleRangeBarComponent1.StartOffset = 80F;
+            this.arcScaleRangeBarComponent1.ZOrder = -10;
+            // 
+            // ascInv
+            // 
+            this.ascInv.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceTickmarkText.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.ascInv.AppearanceTickmarkText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#484E5A");
+            this.ascInv.Center = new DevExpress.XtraGauges.Core.Base.PointF2D(125F, 125F);
+            this.ascInv.EndAngle = 90F;
+            this.ascInv.MajorTickCount = 0;
+            this.ascInv.MajorTickmark.FormatString = "{0:F0}";
+            this.ascInv.MajorTickmark.ShapeOffset = -14F;
+            this.ascInv.MajorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_1;
+            this.ascInv.MajorTickmark.TextOrientation = DevExpress.XtraGauges.Core.Model.LabelOrientation.LeftToRight;
+            this.ascInv.MaxValue = 2.5F;
+            this.ascInv.MinorTickCount = 0;
+            this.ascInv.MinorTickmark.ShapeOffset = -7F;
+            this.ascInv.MinorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_2;
+            this.ascInv.Name = "scale1";
+            this.ascInv.StartAngle = -270F;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -331,191 +370,6 @@
             this.pnF2.Size = new System.Drawing.Size(360, 675);
             this.pnF2.TabIndex = 10;
             // 
-            // pnF3
-            // 
-            this.pnF3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF3.Location = new System.Drawing.Point(775, 146);
-            this.pnF3.Name = "pnF3";
-            this.pnF3.Size = new System.Drawing.Size(360, 675);
-            this.pnF3.TabIndex = 11;
-            // 
-            // pnF5
-            // 
-            this.pnF5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF5.Location = new System.Drawing.Point(1547, 146);
-            this.pnF5.Name = "pnF5";
-            this.pnF5.Size = new System.Drawing.Size(364, 675);
-            this.pnF5.TabIndex = 13;
-            // 
-            // pnF4
-            // 
-            this.pnF4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF4.Location = new System.Drawing.Point(1161, 146);
-            this.pnF4.Name = "pnF4";
-            this.pnF4.Size = new System.Drawing.Size(360, 675);
-            this.pnF4.TabIndex = 12;
-            // 
-            // pnF1
-            // 
-            this.pnF1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF1.Location = new System.Drawing.Point(3, 146);
-            this.pnF1.Name = "pnF1";
-            this.pnF1.Size = new System.Drawing.Size(360, 675);
-            this.pnF1.TabIndex = 9;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 8;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.Controls.Add(this.pnVJ3, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pnVJ, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pnVJ2, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cmdPm1, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cmdDowntime, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button1, 5, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1914, 134);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // pnVJ3
-            // 
-            this.pnVJ3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ3.BackgroundImage")));
-            this.pnVJ3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnVJ3.Controls.Add(this.label4);
-            this.pnVJ3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnVJ3.Location = new System.Drawing.Point(481, 3);
-            this.pnVJ3.Name = "pnVJ3";
-            this.pnVJ3.Size = new System.Drawing.Size(233, 128);
-            this.pnVJ3.TabIndex = 81;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(120, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 26);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Tan Phu";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnVJ
-            // 
-            this.pnVJ.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ.BackgroundImage")));
-            this.pnVJ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnVJ.Controls.Add(this.lblVinhCuu);
-            this.pnVJ.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnVJ.Location = new System.Drawing.Point(3, 3);
-            this.pnVJ.Name = "pnVJ";
-            this.pnVJ.Size = new System.Drawing.Size(233, 128);
-            this.pnVJ.TabIndex = 79;
-            // 
-            // lblVinhCuu
-            // 
-            this.lblVinhCuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.lblVinhCuu.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVinhCuu.ForeColor = System.Drawing.Color.White;
-            this.lblVinhCuu.Location = new System.Drawing.Point(120, 0);
-            this.lblVinhCuu.Name = "lblVinhCuu";
-            this.lblVinhCuu.Size = new System.Drawing.Size(113, 26);
-            this.lblVinhCuu.TabIndex = 6;
-            this.lblVinhCuu.Text = "Vinh Cuu";
-            this.lblVinhCuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnVJ2
-            // 
-            this.pnVJ2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ2.BackgroundImage")));
-            this.pnVJ2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnVJ2.Controls.Add(this.label3);
-            this.pnVJ2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnVJ2.Location = new System.Drawing.Point(242, 3);
-            this.pnVJ2.Name = "pnVJ2";
-            this.pnVJ2.Size = new System.Drawing.Size(233, 128);
-            this.pnVJ2.TabIndex = 80;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(120, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 26);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Long Thanh";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmdPm1
-            // 
-            this.cmdPm1.BackColor = System.Drawing.Color.White;
-            this.cmdPm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdPm1.BackgroundImage")));
-            this.cmdPm1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdPm1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmdPm1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdPm1.FlatAppearance.BorderSize = 0;
-            this.cmdPm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdPm1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdPm1.ForeColor = System.Drawing.Color.Navy;
-            this.cmdPm1.Location = new System.Drawing.Point(720, 3);
-            this.cmdPm1.Name = "cmdPm1";
-            this.cmdPm1.Size = new System.Drawing.Size(233, 128);
-            this.cmdPm1.TabIndex = 87;
-            this.cmdPm1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdPm1.UseVisualStyleBackColor = false;
-            this.cmdPm1.Click += new System.EventHandler(this.cmdPm1_Click);
-            // 
-            // cmdDowntime
-            // 
-            this.cmdDowntime.BackColor = System.Drawing.Color.Transparent;
-            this.cmdDowntime.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdDowntime.BackgroundImage")));
-            this.cmdDowntime.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdDowntime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmdDowntime.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.cmdDowntime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdDowntime.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdDowntime.ForeColor = System.Drawing.Color.Navy;
-            this.cmdDowntime.Location = new System.Drawing.Point(959, 3);
-            this.cmdDowntime.Name = "cmdDowntime";
-            this.cmdDowntime.Size = new System.Drawing.Size(233, 128);
-            this.cmdDowntime.TabIndex = 88;
-            this.cmdDowntime.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdDowntime.UseVisualStyleBackColor = false;
-            this.cmdDowntime.Click += new System.EventHandler(this.cmdDowntime_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Location = new System.Drawing.Point(1198, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 128);
-            this.button1.TabIndex = 89;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // tmrBlink
-            // 
-            this.tmrBlink.Interval = 500;
-            this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
-            // 
             // gpExF1
             // 
             this.gpExF1.BackgroundPanelImage = null;
@@ -567,6 +421,22 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Factory 1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pnF3
+            // 
+            this.pnF3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF3.Location = new System.Drawing.Point(775, 146);
+            this.pnF3.Name = "pnF3";
+            this.pnF3.Size = new System.Drawing.Size(360, 675);
+            this.pnF3.TabIndex = 11;
+            // 
+            // pnF5
+            // 
+            this.pnF5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF5.Location = new System.Drawing.Point(1547, 146);
+            this.pnF5.Name = "pnF5";
+            this.pnF5.Size = new System.Drawing.Size(364, 675);
+            this.pnF5.TabIndex = 13;
             // 
             // gpExF2
             // 
@@ -776,45 +646,175 @@
             this.label8.Text = "Factory 5";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // labelComponent1
+            // pnF4
             // 
-            this.labelComponent1.AppearanceText.Font = new System.Drawing.Font("DS-Digital", 44F);
-            this.labelComponent1.AppearanceText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:DarkOrange");
-            this.labelComponent1.Name = "circularGauge1_Label1";
-            this.labelComponent1.Size = new System.Drawing.SizeF(140F, 60F);
-            this.labelComponent1.Text = "0";
-            this.labelComponent1.ZOrder = -1001;
+            this.pnF4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF4.Location = new System.Drawing.Point(1161, 146);
+            this.pnF4.Name = "pnF4";
+            this.pnF4.Size = new System.Drawing.Size(360, 675);
+            this.pnF4.TabIndex = 12;
             // 
-            // arcScaleRangeBarComponent1
+            // pnF1
             // 
-            this.arcScaleRangeBarComponent1.EndOffset = 4F;
-            this.arcScaleRangeBarComponent1.Name = "circularGauge1_RangeBar2";
-            this.arcScaleRangeBarComponent1.RoundedCaps = true;
-            this.arcScaleRangeBarComponent1.ShowBackground = true;
-            this.arcScaleRangeBarComponent1.StartOffset = 80F;
-            this.arcScaleRangeBarComponent1.ZOrder = -10;
+            this.pnF1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF1.Location = new System.Drawing.Point(3, 146);
+            this.pnF1.Name = "pnF1";
+            this.pnF1.Size = new System.Drawing.Size(360, 675);
+            this.pnF1.TabIndex = 9;
             // 
-            // ascInv
+            // tableLayoutPanel3
             // 
-            this.ascInv.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceTickmarkText.Font = new System.Drawing.Font("Tahoma", 8.5F);
-            this.ascInv.AppearanceTickmarkText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#484E5A");
-            this.ascInv.Center = new DevExpress.XtraGauges.Core.Base.PointF2D(125F, 125F);
-            this.ascInv.EndAngle = 90F;
-            this.ascInv.MajorTickCount = 0;
-            this.ascInv.MajorTickmark.FormatString = "{0:F0}";
-            this.ascInv.MajorTickmark.ShapeOffset = -14F;
-            this.ascInv.MajorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_1;
-            this.ascInv.MajorTickmark.TextOrientation = DevExpress.XtraGauges.Core.Model.LabelOrientation.LeftToRight;
-            this.ascInv.MaxValue = 2.5F;
-            this.ascInv.MinorTickCount = 0;
-            this.ascInv.MinorTickmark.ShapeOffset = -7F;
-            this.ascInv.MinorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_2;
-            this.ascInv.Name = "scale1";
-            this.ascInv.StartAngle = -270F;
+            this.tableLayoutPanel3.ColumnCount = 8;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.Controls.Add(this.pnVJ3, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pnVJ, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pnVJ2, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cmdPm1, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cmdDowntime, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnEnergy, 5, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1914, 134);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // pnVJ3
+            // 
+            this.pnVJ3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ3.BackgroundImage")));
+            this.pnVJ3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnVJ3.Controls.Add(this.label4);
+            this.pnVJ3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnVJ3.Location = new System.Drawing.Point(481, 3);
+            this.pnVJ3.Name = "pnVJ3";
+            this.pnVJ3.Size = new System.Drawing.Size(233, 128);
+            this.pnVJ3.TabIndex = 81;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(120, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 26);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Tan Phu";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnVJ
+            // 
+            this.pnVJ.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ.BackgroundImage")));
+            this.pnVJ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnVJ.Controls.Add(this.lblVinhCuu);
+            this.pnVJ.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnVJ.Location = new System.Drawing.Point(3, 3);
+            this.pnVJ.Name = "pnVJ";
+            this.pnVJ.Size = new System.Drawing.Size(233, 128);
+            this.pnVJ.TabIndex = 79;
+            // 
+            // lblVinhCuu
+            // 
+            this.lblVinhCuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.lblVinhCuu.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVinhCuu.ForeColor = System.Drawing.Color.White;
+            this.lblVinhCuu.Location = new System.Drawing.Point(120, 0);
+            this.lblVinhCuu.Name = "lblVinhCuu";
+            this.lblVinhCuu.Size = new System.Drawing.Size(113, 26);
+            this.lblVinhCuu.TabIndex = 6;
+            this.lblVinhCuu.Text = "Vinh Cuu";
+            this.lblVinhCuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnVJ2
+            // 
+            this.pnVJ2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ2.BackgroundImage")));
+            this.pnVJ2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnVJ2.Controls.Add(this.label3);
+            this.pnVJ2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnVJ2.Location = new System.Drawing.Point(242, 3);
+            this.pnVJ2.Name = "pnVJ2";
+            this.pnVJ2.Size = new System.Drawing.Size(233, 128);
+            this.pnVJ2.TabIndex = 80;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(120, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 26);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Long Thanh";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmdPm1
+            // 
+            this.cmdPm1.BackColor = System.Drawing.Color.White;
+            this.cmdPm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdPm1.BackgroundImage")));
+            this.cmdPm1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdPm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmdPm1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdPm1.FlatAppearance.BorderSize = 0;
+            this.cmdPm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdPm1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdPm1.ForeColor = System.Drawing.Color.Navy;
+            this.cmdPm1.Location = new System.Drawing.Point(720, 3);
+            this.cmdPm1.Name = "cmdPm1";
+            this.cmdPm1.Size = new System.Drawing.Size(233, 128);
+            this.cmdPm1.TabIndex = 87;
+            this.cmdPm1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdPm1.UseVisualStyleBackColor = false;
+            this.cmdPm1.Click += new System.EventHandler(this.cmdPm1_Click);
+            // 
+            // cmdDowntime
+            // 
+            this.cmdDowntime.BackColor = System.Drawing.Color.Transparent;
+            this.cmdDowntime.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdDowntime.BackgroundImage")));
+            this.cmdDowntime.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdDowntime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmdDowntime.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.cmdDowntime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdDowntime.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdDowntime.ForeColor = System.Drawing.Color.Navy;
+            this.cmdDowntime.Location = new System.Drawing.Point(959, 3);
+            this.cmdDowntime.Name = "cmdDowntime";
+            this.cmdDowntime.Size = new System.Drawing.Size(233, 128);
+            this.cmdDowntime.TabIndex = 88;
+            this.cmdDowntime.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdDowntime.UseVisualStyleBackColor = false;
+            this.cmdDowntime.Click += new System.EventHandler(this.cmdDowntime_Click);
+            // 
+            // btnEnergy
+            // 
+            this.btnEnergy.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnergy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEnergy.BackgroundImage")));
+            this.btnEnergy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEnergy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEnergy.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEnergy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnergy.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.btnEnergy.ForeColor = System.Drawing.Color.Navy;
+            this.btnEnergy.Location = new System.Drawing.Point(1198, 3);
+            this.btnEnergy.Name = "btnEnergy";
+            this.btnEnergy.Size = new System.Drawing.Size(233, 128);
+            this.btnEnergy.TabIndex = 89;
+            this.btnEnergy.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEnergy.UseVisualStyleBackColor = false;
+            this.btnEnergy.Click += new System.EventHandler(this.btnEnergy_Click);
+            // 
+            // tmrBlink
+            // 
+            this.tmrBlink.Interval = 500;
+            this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
             // 
             // SMT_SCADA_COCKPIT_FORM1
             // 
@@ -829,12 +829,11 @@
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_COCKPIT_MENU_VisibleChanged);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tblMenu.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.pnVJ3.ResumeLayout(false);
-            this.pnVJ.ResumeLayout(false);
-            this.pnVJ2.ResumeLayout(false);
             this.gpExF1.ResumeLayout(false);
             this.aPn1.ResumeLayout(false);
             this.gpExF2.ResumeLayout(false);
@@ -845,9 +844,10 @@
             this.advancedPanel3.ResumeLayout(false);
             this.gpExF5.ResumeLayout(false);
             this.advancedPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.pnVJ3.ResumeLayout(false);
+            this.pnVJ.ResumeLayout(false);
+            this.pnVJ2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -901,6 +901,6 @@
         private System.Windows.Forms.Timer tmrBlink;
         public System.Windows.Forms.Button cmdPm1;
         public System.Windows.Forms.Button cmdDowntime;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnEnergy;
     }
 }

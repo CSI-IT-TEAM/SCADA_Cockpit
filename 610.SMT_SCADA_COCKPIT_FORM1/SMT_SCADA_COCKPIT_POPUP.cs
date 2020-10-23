@@ -17,6 +17,7 @@ namespace FORM
             InitializeComponent();
         }
         public DataTable _dtData = null;
+        public DataTable _dtDataPage = null;
         bool isLoop = false;
         const int ViewportPointCount = 30;
         int _iCurPage, _iMaxPage;
@@ -28,7 +29,7 @@ namespace FORM
         {
             try
             {
-                //gridControl1.DataSource = _dtData;
+                //gridControl1.DataSource = _dtDataPage;
 
                 //for (int i = 0; i < gridView1.Columns.Count; i++)
                 //{
@@ -60,8 +61,10 @@ namespace FORM
                 this.Cursor = Cursors.WaitCursor;
                 // chartControl1.Titles.Add(new ChartTitle { Text = "Real-Time Charting" });
                 dataPoints.Clear();
-               // _dtData = SEL_SMT_INST_SET_CHART("014", "001");
-
+                // _dtDataPage = SEL_SMT_INST_SET_CHART("014", "001");
+                isLoop = true;
+                timer1.Stop();
+                
 
                 DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
                 DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
@@ -165,15 +168,15 @@ namespace FORM
                 chartControl1.Legend.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 chartControl1.Legend.Visibility = DefaultBoolean.True;
 
-                if (_dtData != null && _dtData.Rows.Count <= ViewportPointCount)
+                if (_dtDataPage != null && _dtDataPage.Rows.Count <= ViewportPointCount)
                 {
-                    for (int i = 0; i < _dtData.Rows.Count; i++)
+                    for (int i = 0; i < _dtDataPage.Rows.Count; i++)
                     {
-                        string setTime1 = _dtData.Rows[i]["SET_TIME"].ToString();
-                        double SV_MIN = Convert.ToDouble(_dtData.Rows[i]["SV_MIN"]);
-                        double SV_MAX = Convert.ToDouble(_dtData.Rows[i]["SV_MAX"]);
-                        double FINAL_PV = Convert.ToDouble(_dtData.Rows[i]["FINAL_PV"]);
-                        // double RATIO1 = Convert.ToDouble(_dtData.Rows[i]["SET_RATIO"]);
+                        string setTime1 = _dtDataPage.Rows[i]["SET_TIME"].ToString();
+                        double SV_MIN = Convert.ToDouble(_dtDataPage.Rows[i]["SV_MIN"]);
+                        double SV_MAX = Convert.ToDouble(_dtDataPage.Rows[i]["SV_MAX"]);
+                        double FINAL_PV = Convert.ToDouble(_dtDataPage.Rows[i]["FINAL_PV"]);
+                        // double RATIO1 = Convert.ToDouble(_dtDataPage.Rows[i]["SET_RATIO"]);
                         dataPoints.Add(new DataRealPoint(setTime1, SV_MIN, SV_MAX, FINAL_PV));
                     }
                     isLoop = true;
@@ -202,7 +205,7 @@ namespace FORM
                 this.Cursor = Cursors.WaitCursor;
                 // chartControl1.Titles.Add(new ChartTitle { Text = "Real-Time Charting" });
                 dataPoints.Clear();
-                // _dtData = SEL_SMT_INST_SET_CHART("014", "001");
+                // _dtDataPage = SEL_SMT_INST_SET_CHART("014", "001");
 
 
                 DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
@@ -307,13 +310,13 @@ namespace FORM
                 chartControl1.Legend.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 chartControl1.Legend.Visibility = DefaultBoolean.True;
 
-                for (int i = 0; i < _dtData.Rows.Count; i++)
+                for (int i = 0; i < _dtDataPage.Rows.Count; i++)
                 {
-                    string setTime1 = _dtData.Rows[i]["SET_TIME"].ToString();
-                    double SV_MIN = Convert.ToDouble(_dtData.Rows[i]["SV_MIN"]);
-                    double SV_MAX = Convert.ToDouble(_dtData.Rows[i]["SV_MAX"]);
-                    double FINAL_PV = Convert.ToDouble(_dtData.Rows[i]["FINAL_PV"]);
-                    // double RATIO1 = Convert.ToDouble(_dtData.Rows[i]["SET_RATIO"]);
+                    string setTime1 = _dtDataPage.Rows[i]["SET_TIME"].ToString();
+                    double SV_MIN = Convert.ToDouble(_dtDataPage.Rows[i]["SV_MIN"]);
+                    double SV_MAX = Convert.ToDouble(_dtDataPage.Rows[i]["SV_MAX"]);
+                    double FINAL_PV = Convert.ToDouble(_dtDataPage.Rows[i]["FINAL_PV"]);
+                    // double RATIO1 = Convert.ToDouble(_dtDataPage.Rows[i]["SET_RATIO"]);
                     dataPoints.Add(new DataRealPoint(setTime1, SV_MIN, SV_MAX, FINAL_PV));
                 }
                 // timer1.Start();
@@ -426,7 +429,7 @@ namespace FORM
                 cmdNext.Enabled = true;
             }
 
-            lblPage.Text = _iMaxPage.ToString() + "/" + _iMaxPage.ToString();
+            lblPage.Text = _iCurPage.ToString() + "/" + _iMaxPage.ToString();
         }
 
         private void GetMinMaxChart(DataTable argDt)
@@ -465,18 +468,17 @@ namespace FORM
                     SetButtonClick("D");
                     //SetData();
                     if (_dtData == null || _dtData.Rows.Count == 0) return;
-    
-                    _dtData = _dtData.Select("RN = '1'", _dtData.Rows[0]["ORD"].ToString()).CopyToDataTable();
-                    lblTxt1.Text = _dtData.Rows[0]["TXT1"].ToString();
-                    lblTxt2.Text = _dtData.Rows[0]["TXT2"].ToString();
-                    lblTxt3.Text = _dtData.Rows[0]["TXT3"].ToString();
+
                     int.TryParse(_dtData.Compute("min([RN])", "").ToString(), out _iCurPage);
                     int.TryParse(_dtData.Compute("max([RN])", "").ToString(), out _iMaxPage);
-                    GetMinMaxChart(_dtData);
 
-
-                    //  object aa = _dtData.Compute("max([SV_MIN]), max([SV_MAX]), max([FINAL_PV]), min([SV_MIN]), min([SV_MAX]), min([FINAL_PV])", "");
                     setClick("");
+                    setData();
+
+
+
+                    //  object aa = _dtDataPage.Compute("max([SV_MIN]), max([SV_MAX]), max([FINAL_PV]), min([SV_MIN]), min([SV_MAX]), min([FINAL_PV])", "");
+
                     BindingChartData();
                 }
                 else
@@ -489,6 +491,17 @@ namespace FORM
             {}
             
             
+        }
+
+        private void setData()
+        {
+            
+            _dtDataPage = _dtData.Select("RN = '"+ _iCurPage + "'", _dtData.Rows[0]["ORD"].ToString()).CopyToDataTable();
+            lblTxt1.Text = _dtDataPage.Rows[0]["TXT1"].ToString();
+            lblTxt2.Text = _dtDataPage.Rows[0]["TXT2"].ToString();
+            lblTxt3.Text = _dtDataPage.Rows[0]["TXT3"].ToString();
+            
+            GetMinMaxChart(_dtDataPage);
         }
 
         private void gridView1_MouseDown(object sender, MouseEventArgs e)
@@ -563,60 +576,76 @@ namespace FORM
 
         private void cmdNext_Click(object sender, EventArgs e)
         {
+            setClick("NEXT");
+            setData();
+            BindingChartData();
+        }
 
+        private void cmdPrev_Click(object sender, EventArgs e)
+        {
+            setClick("PREV");
+            setData();
+            BindingChartData();
         }
 
         int iCount = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (_dtData == null) return;
+            try
+            {
+                if (_dtDataPage == null) return;
 
-            if (iCount >= _dtData.Rows.Count)
-            {
-                iCount = 0;
-            }
-            if (dataPoints.Count < ViewportPointCount)
-            {
-                for (int i = 0; i < ViewportPointCount; i++)
+                if (iCount >= _dtDataPage.Rows.Count)
                 {
-                    string setTime1 = _dtData.Rows[i]["SET_TIME"].ToString();
-                    double SV_MINF = Convert.ToDouble(_dtData.Rows[i]["SV_MIN"]);
-                    double SV_MAXF = Convert.ToDouble(_dtData.Rows[i]["SV_MAX"]);
-                    double FINAL_PVF = Convert.ToDouble(_dtData.Rows[i]["FINAL_PV"]);
-                 //   double RATIO1 = Convert.ToDouble(_dtData.Rows[i]["SET_RATIO"]);
-                    dataPoints.Add(new DataRealPoint(setTime1, SV_MINF, SV_MAXF, FINAL_PVF));
+                    iCount = 0;
                 }
-                iCount = ViewportPointCount;
-            }
+                if (dataPoints.Count < ViewportPointCount)
+                {
+                    for (int i = 0; i < ViewportPointCount; i++)
+                    {
+                        string setTime1 = _dtDataPage.Rows[i]["SET_TIME"].ToString();
+                        double SV_MINF = Convert.ToDouble(_dtDataPage.Rows[i]["SV_MIN"]);
+                        double SV_MAXF = Convert.ToDouble(_dtDataPage.Rows[i]["SV_MAX"]);
+                        double FINAL_PVF = Convert.ToDouble(_dtDataPage.Rows[i]["FINAL_PV"]);
+                        //   double RATIO1 = Convert.ToDouble(_dtDataPage.Rows[i]["SET_RATIO"]);
+                        dataPoints.Add(new DataRealPoint(setTime1, SV_MINF, SV_MAXF, FINAL_PVF));
+                    }
+                    iCount = ViewportPointCount;
+                }
 
+
+                string setTime = _dtDataPage.Rows[iCount]["SET_TIME"].ToString();
+                double SV_MIN = Convert.ToDouble(_dtDataPage.Rows[iCount]["SV_MIN"]);
+                double SV_MAX = Convert.ToDouble(_dtDataPage.Rows[iCount]["SV_MAX"]);
+                double FINAL_PV = Convert.ToDouble(_dtDataPage.Rows[iCount]["FINAL_PV"]);
+                //   double RATIO = Convert.ToDouble(_dtDataPage.Rows[iCount]["SET_RATIO"]);
+                if (iCount > 10 && iCount < 30)
+                {
+                    dataPoints.Add(new DataRealPoint(setTime, null, null, null));
+                }
+                else
+                {
+                    dataPoints.Add(new DataRealPoint(setTime, SV_MIN, SV_MAX, FINAL_PV));
+                }
+
+                iCount++;
+                if (dataPoints.Count > ViewportPointCount)
+                {
+                    dataPoints.RemoveAt(0);
+                }
+                if (iCount >= _dtDataPage.Rows.Count)
+                {
+                    isLoop = false;
+                    iCount = 0;
+                    timer1.Stop();
+                    // BindingChartData();
+                    // tmrDelay.Start();
+                }
+            }
+            catch 
+            {
+            }
             
-            string setTime = _dtData.Rows[iCount]["SET_TIME"].ToString();
-            double SV_MIN = Convert.ToDouble(_dtData.Rows[iCount]["SV_MIN"]);
-            double SV_MAX = Convert.ToDouble(_dtData.Rows[iCount]["SV_MAX"]);
-            double FINAL_PV = Convert.ToDouble(_dtData.Rows[iCount]["FINAL_PV"]);
-            //   double RATIO = Convert.ToDouble(_dtData.Rows[iCount]["SET_RATIO"]);
-            if (iCount > 10 && iCount < 30)
-            {
-                dataPoints.Add(new DataRealPoint(setTime, null, null, null));
-            }
-            else
-            {
-                dataPoints.Add(new DataRealPoint(setTime, SV_MIN, SV_MAX, FINAL_PV));
-            }
-                
-            iCount++;
-            if (dataPoints.Count > ViewportPointCount)
-            {
-                dataPoints.RemoveAt(0);
-            }
-            if (iCount >= _dtData.Rows.Count)
-            {
-                isLoop = false;
-                iCount = 0;
-                timer1.Stop();
-               // BindingChartData();
-                // tmrDelay.Start();
-            }
         }
     }
 

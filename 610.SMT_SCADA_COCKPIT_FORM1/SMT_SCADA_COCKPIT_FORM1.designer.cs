@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_COCKPIT_FORM1));
             this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,11 +38,15 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tblMenu = new System.Windows.Forms.TableLayoutPanel();
             this.pnF2 = new System.Windows.Forms.Panel();
+            this.pnF3 = new System.Windows.Forms.Panel();
+            this.pnF5 = new System.Windows.Forms.Panel();
+            this.pnF4 = new System.Windows.Forms.Panel();
+            this.pnF1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tmrBlink = new System.Windows.Forms.Timer();
             this.gpExF1 = new FORM.GroupBoxEx();
             this.aPn1 = new FORM.AdvancedPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pnF3 = new System.Windows.Forms.Panel();
-            this.pnF5 = new System.Windows.Forms.Panel();
             this.gpExF2 = new FORM.GroupBoxEx();
             this.advancedPanel1 = new FORM.AdvancedPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,10 +59,6 @@
             this.gpExF5 = new FORM.GroupBoxEx();
             this.advancedPanel4 = new FORM.AdvancedPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pnF4 = new System.Windows.Forms.Panel();
-            this.pnF1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tmrBlink = new System.Windows.Forms.Timer(this.components);
             this.pnVJ3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pnVJ = new System.Windows.Forms.Panel();
@@ -82,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tblMenu.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.gpExF1.SuspendLayout();
             this.aPn1.SuspendLayout();
             this.gpExF2.SuspendLayout();
@@ -92,7 +92,6 @@
             this.advancedPanel3.SuspendLayout();
             this.gpExF5.SuspendLayout();
             this.advancedPanel4.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.pnVJ3.SuspendLayout();
             this.pnVJ.SuspendLayout();
             this.pnVJ2.SuspendLayout();
@@ -221,6 +220,68 @@
             this.pnF2.Size = new System.Drawing.Size(360, 675);
             this.pnF2.TabIndex = 10;
             // 
+            // pnF3
+            // 
+            this.pnF3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF3.Location = new System.Drawing.Point(775, 146);
+            this.pnF3.Name = "pnF3";
+            this.pnF3.Size = new System.Drawing.Size(360, 675);
+            this.pnF3.TabIndex = 11;
+            // 
+            // pnF5
+            // 
+            this.pnF5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF5.Location = new System.Drawing.Point(1547, 146);
+            this.pnF5.Name = "pnF5";
+            this.pnF5.Size = new System.Drawing.Size(364, 675);
+            this.pnF5.TabIndex = 13;
+            // 
+            // pnF4
+            // 
+            this.pnF4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF4.Location = new System.Drawing.Point(1161, 146);
+            this.pnF4.Name = "pnF4";
+            this.pnF4.Size = new System.Drawing.Size(360, 675);
+            this.pnF4.TabIndex = 12;
+            // 
+            // pnF1
+            // 
+            this.pnF1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF1.Location = new System.Drawing.Point(3, 146);
+            this.pnF1.Name = "pnF1";
+            this.pnF1.Size = new System.Drawing.Size(360, 675);
+            this.pnF1.TabIndex = 9;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 8;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel3.Controls.Add(this.pnVJ3, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pnVJ, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pnVJ2, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cmdPm1, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cmdDowntime, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnEnergy, 5, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1914, 134);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // tmrBlink
+            // 
+            this.tmrBlink.Interval = 500;
+            this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
+            // 
             // gpExF1
             // 
             this.gpExF1.BackgroundPanelImage = null;
@@ -272,22 +333,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Factory 1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pnF3
-            // 
-            this.pnF3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF3.Location = new System.Drawing.Point(775, 146);
-            this.pnF3.Name = "pnF3";
-            this.pnF3.Size = new System.Drawing.Size(360, 675);
-            this.pnF3.TabIndex = 11;
-            // 
-            // pnF5
-            // 
-            this.pnF5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF5.Location = new System.Drawing.Point(1547, 146);
-            this.pnF5.Name = "pnF5";
-            this.pnF5.Size = new System.Drawing.Size(364, 675);
-            this.pnF5.TabIndex = 13;
             // 
             // gpExF2
             // 
@@ -497,52 +542,6 @@
             this.label8.Text = "Factory 5";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pnF4
-            // 
-            this.pnF4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF4.Location = new System.Drawing.Point(1161, 146);
-            this.pnF4.Name = "pnF4";
-            this.pnF4.Size = new System.Drawing.Size(360, 675);
-            this.pnF4.TabIndex = 12;
-            // 
-            // pnF1
-            // 
-            this.pnF1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF1.Location = new System.Drawing.Point(3, 146);
-            this.pnF1.Name = "pnF1";
-            this.pnF1.Size = new System.Drawing.Size(360, 675);
-            this.pnF1.TabIndex = 9;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 8;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel3.Controls.Add(this.pnVJ3, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pnVJ, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pnVJ2, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cmdPm1, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cmdDowntime, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnEnergy, 5, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1914, 134);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // tmrBlink
-            // 
-            this.tmrBlink.Interval = 500;
-            this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
-            // 
             // pnVJ3
             // 
             this.pnVJ3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ3.BackgroundImage")));
@@ -634,8 +633,8 @@
             // cmdDowntime
             // 
             this.cmdDowntime.BackColor = System.Drawing.Color.Transparent;
-            this.cmdDowntime.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdDowntime.BackgroundImage")));
-            this.cmdDowntime.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdDowntime.BackgroundImage = global::FORM.Properties.Resources.ANDON2;
+            this.cmdDowntime.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cmdDowntime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmdDowntime.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.cmdDowntime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -832,6 +831,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tblMenu.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.gpExF1.ResumeLayout(false);
             this.aPn1.ResumeLayout(false);
             this.gpExF2.ResumeLayout(false);
@@ -842,7 +842,6 @@
             this.advancedPanel3.ResumeLayout(false);
             this.gpExF5.ResumeLayout(false);
             this.advancedPanel4.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.pnVJ3.ResumeLayout(false);
             this.pnVJ.ResumeLayout(false);
             this.pnVJ2.ResumeLayout(false);

@@ -211,7 +211,7 @@
             this.lblTotalProd.Name = "lblTotalProd";
             this.lblTotalProd.Size = new System.Drawing.Size(529, 55);
             this.lblTotalProd.TabIndex = 0;
-            this.lblTotalProd.Text = "120,000 Prs";
+            this.lblTotalProd.Text = "0 Prs";
             this.lblTotalProd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelControl3
@@ -256,7 +256,7 @@
             this.lblAVG.Name = "lblAVG";
             this.lblAVG.Size = new System.Drawing.Size(529, 55);
             this.lblAVG.TabIndex = 0;
-            this.lblAVG.Text = "50 kWh/Prs";
+            this.lblAVG.Text = "0 kWh/Prs";
             this.lblAVG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelControl2
@@ -301,7 +301,7 @@
             this.lblTotalKw.Name = "lblTotalKw";
             this.lblTotalKw.Size = new System.Drawing.Size(529, 55);
             this.lblTotalKw.TabIndex = 0;
-            this.lblTotalKw.Text = "10,218,039 kWh";
+            this.lblTotalKw.Text = "0 kWh";
             this.lblTotalKw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTotalKw.DoubleClick += new System.EventHandler(this.label1_DoubleClick);
             // 
@@ -342,7 +342,7 @@
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.GridLines.Visible = false;
             xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram1.AxisY.Label.TextPattern = "{V:#,#}";
+            xyDiagram1.AxisY.Label.TextPattern = "{V:0.00}";
             xyDiagram1.AxisY.Title.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             xyDiagram1.AxisY.Title.Text = "kWh/Prs";
@@ -362,8 +362,8 @@
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
-            series1.CrosshairLabelPattern = "{V:#,#}";
-            pointSeriesLabel1.TextPattern = "{V:#,#}";
+            series1.CrosshairLabelPattern = "{V:0.00}";
+            pointSeriesLabel1.TextPattern = "{V:0.00}";
             series1.Label = pointSeriesLabel1;
             series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series1.Name = "Day";
@@ -376,8 +376,8 @@
             splineSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation1;
             splineSeriesView1.Shadow.Visible = true;
             series1.View = splineSeriesView1;
-            series2.CrosshairLabelPattern = "{V:#,#}";
-            pointSeriesLabel2.TextPattern = "{V:#,#}";
+            series2.CrosshairLabelPattern = "{V:0.00}";
+            pointSeriesLabel2.TextPattern = "{V:0.00}";
             series2.Label = pointSeriesLabel2;
             series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series2.Name = "Week";
@@ -390,8 +390,8 @@
             splineSeriesView2.SeriesPointAnimation = xyMarkerSlideAnimation2;
             splineSeriesView2.Shadow.Visible = true;
             series2.View = splineSeriesView2;
-            series3.CrosshairLabelPattern = "{V:#,#}";
-            pointSeriesLabel3.TextPattern = "{V:#,#}";
+            series3.CrosshairLabelPattern = "{V:0.00}";
+            pointSeriesLabel3.TextPattern = "{V:0.00}";
             series3.Label = pointSeriesLabel3;
             series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series3.Name = "Month";

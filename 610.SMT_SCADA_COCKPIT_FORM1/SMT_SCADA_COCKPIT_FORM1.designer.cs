@@ -28,22 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_COCKPIT_FORM1));
             this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.tmrTime = new System.Windows.Forms.Timer();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmdF1 = new System.Windows.Forms.Button();
-            this.cmdF2 = new System.Windows.Forms.Button();
-            this.cmdF3 = new System.Windows.Forms.Button();
-            this.cmdF5 = new System.Windows.Forms.Button();
-            this.cmdF4 = new System.Windows.Forms.Button();
-            this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.circularGauge1 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
-            this.labelComponent1 = new DevExpress.XtraGauges.Win.Base.LabelComponent();
-            this.arcScaleRangeBarComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent();
-            this.ascInv = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tblMenu = new System.Windows.Forms.TableLayoutPanel();
             this.pnF2 = new System.Windows.Forms.Panel();
@@ -67,6 +59,7 @@
             this.pnF4 = new System.Windows.Forms.Panel();
             this.pnF1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tmrBlink = new System.Windows.Forms.Timer(this.components);
             this.pnVJ3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pnVJ = new System.Windows.Forms.Panel();
@@ -76,12 +69,17 @@
             this.cmdPm1 = new System.Windows.Forms.Button();
             this.cmdDowntime = new System.Windows.Forms.Button();
             this.btnEnergy = new System.Windows.Forms.Button();
-            this.tmrBlink = new System.Windows.Forms.Timer();
+            this.cmdF1 = new System.Windows.Forms.Button();
+            this.cmdF2 = new System.Windows.Forms.Button();
+            this.cmdF3 = new System.Windows.Forms.Button();
+            this.cmdF5 = new System.Windows.Forms.Button();
+            this.cmdF4 = new System.Windows.Forms.Button();
+            this.cmdBack = new System.Windows.Forms.Button();
+            this.labelComponent1 = new DevExpress.XtraGauges.Win.Base.LabelComponent();
+            this.arcScaleRangeBarComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent();
+            this.ascInv = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tblMenu.SuspendLayout();
             this.gpExF1.SuspendLayout();
@@ -98,6 +96,9 @@
             this.pnVJ3.SuspendLayout();
             this.pnVJ.SuspendLayout();
             this.pnVJ2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).BeginInit();
             this.SuspendLayout();
             // 
             // gridBand12
@@ -126,116 +127,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1920, 110);
             this.panel1.TabIndex = 21;
-            // 
-            // cmdF1
-            // 
-            this.cmdF1.BackColor = System.Drawing.Color.Transparent;
-            this.cmdF1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF1.BackgroundImage")));
-            this.cmdF1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdF1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdF1.FlatAppearance.BorderSize = 0;
-            this.cmdF1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdF1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdF1.ForeColor = System.Drawing.Color.Navy;
-            this.cmdF1.Location = new System.Drawing.Point(833, 8);
-            this.cmdF1.Name = "cmdF1";
-            this.cmdF1.Size = new System.Drawing.Size(111, 101);
-            this.cmdF1.TabIndex = 72;
-            this.cmdF1.Text = "F1";
-            this.cmdF1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdF1.UseVisualStyleBackColor = false;
-            this.cmdF1.Visible = false;
-            // 
-            // cmdF2
-            // 
-            this.cmdF2.BackColor = System.Drawing.Color.Transparent;
-            this.cmdF2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF2.BackgroundImage")));
-            this.cmdF2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdF2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdF2.FlatAppearance.BorderSize = 0;
-            this.cmdF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdF2.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdF2.ForeColor = System.Drawing.Color.Navy;
-            this.cmdF2.Location = new System.Drawing.Point(943, 6);
-            this.cmdF2.Name = "cmdF2";
-            this.cmdF2.Size = new System.Drawing.Size(111, 101);
-            this.cmdF2.TabIndex = 71;
-            this.cmdF2.Text = "F2";
-            this.cmdF2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdF2.UseVisualStyleBackColor = false;
-            this.cmdF2.Visible = false;
-            // 
-            // cmdF3
-            // 
-            this.cmdF3.BackColor = System.Drawing.Color.Transparent;
-            this.cmdF3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF3.BackgroundImage")));
-            this.cmdF3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdF3.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdF3.FlatAppearance.BorderSize = 0;
-            this.cmdF3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdF3.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdF3.ForeColor = System.Drawing.Color.Navy;
-            this.cmdF3.Location = new System.Drawing.Point(1052, 6);
-            this.cmdF3.Name = "cmdF3";
-            this.cmdF3.Size = new System.Drawing.Size(111, 101);
-            this.cmdF3.TabIndex = 70;
-            this.cmdF3.Text = "F3";
-            this.cmdF3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdF3.UseVisualStyleBackColor = false;
-            this.cmdF3.Visible = false;
-            // 
-            // cmdF5
-            // 
-            this.cmdF5.BackColor = System.Drawing.Color.Transparent;
-            this.cmdF5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF5.BackgroundImage")));
-            this.cmdF5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdF5.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdF5.FlatAppearance.BorderSize = 0;
-            this.cmdF5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdF5.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdF5.ForeColor = System.Drawing.Color.Navy;
-            this.cmdF5.Location = new System.Drawing.Point(1268, 3);
-            this.cmdF5.Name = "cmdF5";
-            this.cmdF5.Size = new System.Drawing.Size(111, 101);
-            this.cmdF5.TabIndex = 69;
-            this.cmdF5.Text = "F5";
-            this.cmdF5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdF5.UseVisualStyleBackColor = false;
-            this.cmdF5.Visible = false;
-            // 
-            // cmdF4
-            // 
-            this.cmdF4.BackColor = System.Drawing.Color.Transparent;
-            this.cmdF4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF4.BackgroundImage")));
-            this.cmdF4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdF4.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdF4.FlatAppearance.BorderSize = 0;
-            this.cmdF4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdF4.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdF4.ForeColor = System.Drawing.Color.Navy;
-            this.cmdF4.Location = new System.Drawing.Point(1160, 6);
-            this.cmdF4.Name = "cmdF4";
-            this.cmdF4.Size = new System.Drawing.Size(111, 101);
-            this.cmdF4.TabIndex = 68;
-            this.cmdF4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdF4.UseVisualStyleBackColor = false;
-            this.cmdF4.Visible = false;
-            this.cmdF4.Click += new System.EventHandler(this.cmdF4_Click);
-            // 
-            // cmdBack
-            // 
-            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
-            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
-            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdBack.FlatAppearance.BorderSize = 0;
-            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBack.Location = new System.Drawing.Point(1388, 5);
-            this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(108, 101);
-            this.cmdBack.TabIndex = 67;
-            this.cmdBack.UseVisualStyleBackColor = false;
-            this.cmdBack.Visible = false;
             // 
             // lblDate
             // 
@@ -273,46 +164,6 @@
             this.arcScaleRangeBarComponent1});
             this.circularGauge1.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
             this.ascInv});
-            // 
-            // labelComponent1
-            // 
-            this.labelComponent1.AppearanceText.Font = new System.Drawing.Font("DS-Digital", 44F);
-            this.labelComponent1.AppearanceText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:DarkOrange");
-            this.labelComponent1.Name = "circularGauge1_Label1";
-            this.labelComponent1.Size = new System.Drawing.SizeF(140F, 60F);
-            this.labelComponent1.Text = "0";
-            this.labelComponent1.ZOrder = -1001;
-            // 
-            // arcScaleRangeBarComponent1
-            // 
-            this.arcScaleRangeBarComponent1.EndOffset = 4F;
-            this.arcScaleRangeBarComponent1.Name = "circularGauge1_RangeBar2";
-            this.arcScaleRangeBarComponent1.RoundedCaps = true;
-            this.arcScaleRangeBarComponent1.ShowBackground = true;
-            this.arcScaleRangeBarComponent1.StartOffset = 80F;
-            this.arcScaleRangeBarComponent1.ZOrder = -10;
-            // 
-            // ascInv
-            // 
-            this.ascInv.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceTickmarkText.Font = new System.Drawing.Font("Tahoma", 8.5F);
-            this.ascInv.AppearanceTickmarkText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#484E5A");
-            this.ascInv.Center = new DevExpress.XtraGauges.Core.Base.PointF2D(125F, 125F);
-            this.ascInv.EndAngle = 90F;
-            this.ascInv.MajorTickCount = 0;
-            this.ascInv.MajorTickmark.FormatString = "{0:F0}";
-            this.ascInv.MajorTickmark.ShapeOffset = -14F;
-            this.ascInv.MajorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_1;
-            this.ascInv.MajorTickmark.TextOrientation = DevExpress.XtraGauges.Core.Model.LabelOrientation.LeftToRight;
-            this.ascInv.MaxValue = 2.5F;
-            this.ascInv.MinorTickCount = 0;
-            this.ascInv.MinorTickmark.ShapeOffset = -7F;
-            this.ascInv.MinorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_2;
-            this.ascInv.Name = "scale1";
-            this.ascInv.StartAngle = -270F;
             // 
             // tableLayoutPanel2
             // 
@@ -687,6 +538,11 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1914, 134);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
+            // tmrBlink
+            // 
+            this.tmrBlink.Interval = 500;
+            this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
+            // 
             // pnVJ3
             // 
             this.pnVJ3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ3.BackgroundImage")));
@@ -796,8 +652,8 @@
             // btnEnergy
             // 
             this.btnEnergy.BackColor = System.Drawing.Color.Transparent;
-            this.btnEnergy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEnergy.BackgroundImage")));
-            this.btnEnergy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEnergy.BackgroundImage = global::FORM.Properties.Resources.energy;
+            this.btnEnergy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEnergy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEnergy.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEnergy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -811,10 +667,155 @@
             this.btnEnergy.UseVisualStyleBackColor = false;
             this.btnEnergy.Click += new System.EventHandler(this.btnEnergy_Click);
             // 
-            // tmrBlink
+            // cmdF1
             // 
-            this.tmrBlink.Interval = 500;
-            this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
+            this.cmdF1.BackColor = System.Drawing.Color.Transparent;
+            this.cmdF1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF1.BackgroundImage")));
+            this.cmdF1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdF1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdF1.FlatAppearance.BorderSize = 0;
+            this.cmdF1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdF1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdF1.ForeColor = System.Drawing.Color.Navy;
+            this.cmdF1.Location = new System.Drawing.Point(833, 8);
+            this.cmdF1.Name = "cmdF1";
+            this.cmdF1.Size = new System.Drawing.Size(111, 101);
+            this.cmdF1.TabIndex = 72;
+            this.cmdF1.Text = "F1";
+            this.cmdF1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdF1.UseVisualStyleBackColor = false;
+            this.cmdF1.Visible = false;
+            // 
+            // cmdF2
+            // 
+            this.cmdF2.BackColor = System.Drawing.Color.Transparent;
+            this.cmdF2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF2.BackgroundImage")));
+            this.cmdF2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdF2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdF2.FlatAppearance.BorderSize = 0;
+            this.cmdF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdF2.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdF2.ForeColor = System.Drawing.Color.Navy;
+            this.cmdF2.Location = new System.Drawing.Point(943, 6);
+            this.cmdF2.Name = "cmdF2";
+            this.cmdF2.Size = new System.Drawing.Size(111, 101);
+            this.cmdF2.TabIndex = 71;
+            this.cmdF2.Text = "F2";
+            this.cmdF2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdF2.UseVisualStyleBackColor = false;
+            this.cmdF2.Visible = false;
+            // 
+            // cmdF3
+            // 
+            this.cmdF3.BackColor = System.Drawing.Color.Transparent;
+            this.cmdF3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF3.BackgroundImage")));
+            this.cmdF3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdF3.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdF3.FlatAppearance.BorderSize = 0;
+            this.cmdF3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdF3.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdF3.ForeColor = System.Drawing.Color.Navy;
+            this.cmdF3.Location = new System.Drawing.Point(1052, 6);
+            this.cmdF3.Name = "cmdF3";
+            this.cmdF3.Size = new System.Drawing.Size(111, 101);
+            this.cmdF3.TabIndex = 70;
+            this.cmdF3.Text = "F3";
+            this.cmdF3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdF3.UseVisualStyleBackColor = false;
+            this.cmdF3.Visible = false;
+            // 
+            // cmdF5
+            // 
+            this.cmdF5.BackColor = System.Drawing.Color.Transparent;
+            this.cmdF5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF5.BackgroundImage")));
+            this.cmdF5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdF5.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdF5.FlatAppearance.BorderSize = 0;
+            this.cmdF5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdF5.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdF5.ForeColor = System.Drawing.Color.Navy;
+            this.cmdF5.Location = new System.Drawing.Point(1268, 3);
+            this.cmdF5.Name = "cmdF5";
+            this.cmdF5.Size = new System.Drawing.Size(111, 101);
+            this.cmdF5.TabIndex = 69;
+            this.cmdF5.Text = "F5";
+            this.cmdF5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdF5.UseVisualStyleBackColor = false;
+            this.cmdF5.Visible = false;
+            // 
+            // cmdF4
+            // 
+            this.cmdF4.BackColor = System.Drawing.Color.Transparent;
+            this.cmdF4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF4.BackgroundImage")));
+            this.cmdF4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdF4.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdF4.FlatAppearance.BorderSize = 0;
+            this.cmdF4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdF4.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdF4.ForeColor = System.Drawing.Color.Navy;
+            this.cmdF4.Location = new System.Drawing.Point(1160, 6);
+            this.cmdF4.Name = "cmdF4";
+            this.cmdF4.Size = new System.Drawing.Size(111, 101);
+            this.cmdF4.TabIndex = 68;
+            this.cmdF4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdF4.UseVisualStyleBackColor = false;
+            this.cmdF4.Visible = false;
+            this.cmdF4.Click += new System.EventHandler(this.cmdF4_Click);
+            // 
+            // cmdBack
+            // 
+            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
+            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdBack.FlatAppearance.BorderSize = 0;
+            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBack.Location = new System.Drawing.Point(1388, 5);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(108, 101);
+            this.cmdBack.TabIndex = 67;
+            this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Visible = false;
+            // 
+            // labelComponent1
+            // 
+            this.labelComponent1.AppearanceText.Font = new System.Drawing.Font("DS-Digital", 44F);
+            this.labelComponent1.AppearanceText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:DarkOrange");
+            this.labelComponent1.Name = "circularGauge1_Label1";
+            this.labelComponent1.Size = new System.Drawing.SizeF(140F, 60F);
+            this.labelComponent1.Text = "0";
+            this.labelComponent1.ZOrder = -1001;
+            // 
+            // arcScaleRangeBarComponent1
+            // 
+            this.arcScaleRangeBarComponent1.EndOffset = 4F;
+            this.arcScaleRangeBarComponent1.Name = "circularGauge1_RangeBar2";
+            this.arcScaleRangeBarComponent1.RoundedCaps = true;
+            this.arcScaleRangeBarComponent1.ShowBackground = true;
+            this.arcScaleRangeBarComponent1.StartOffset = 80F;
+            this.arcScaleRangeBarComponent1.ZOrder = -10;
+            // 
+            // ascInv
+            // 
+            this.ascInv.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceTickmarkText.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.ascInv.AppearanceTickmarkText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#484E5A");
+            this.ascInv.Center = new DevExpress.XtraGauges.Core.Base.PointF2D(125F, 125F);
+            this.ascInv.EndAngle = 90F;
+            this.ascInv.MajorTickCount = 0;
+            this.ascInv.MajorTickmark.FormatString = "{0:F0}";
+            this.ascInv.MajorTickmark.ShapeOffset = -14F;
+            this.ascInv.MajorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_1;
+            this.ascInv.MajorTickmark.TextOrientation = DevExpress.XtraGauges.Core.Model.LabelOrientation.LeftToRight;
+            this.ascInv.MaxValue = 2.5F;
+            this.ascInv.MinorTickCount = 0;
+            this.ascInv.MinorTickmark.ShapeOffset = -7F;
+            this.ascInv.MinorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_2;
+            this.ascInv.Name = "scale1";
+            this.ascInv.StartAngle = -270F;
             // 
             // SMT_SCADA_COCKPIT_FORM1
             // 
@@ -829,9 +830,6 @@
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_COCKPIT_MENU_VisibleChanged);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tblMenu.ResumeLayout(false);
             this.gpExF1.ResumeLayout(false);
@@ -848,6 +846,9 @@
             this.pnVJ3.ResumeLayout(false);
             this.pnVJ.ResumeLayout(false);
             this.pnVJ2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).EndInit();
             this.ResumeLayout(false);
 
         }

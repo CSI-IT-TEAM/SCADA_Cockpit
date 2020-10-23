@@ -32,21 +32,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_SMT_SCADA_ENERGY));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel1 = new DevExpress.XtraCharts.PointSeriesLabel();
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView1 = new DevExpress.XtraCharts.SplineSeriesView();
             DevExpress.XtraCharts.XYSeriesUnwindAnimation xySeriesUnwindAnimation1 = new DevExpress.XtraCharts.XYSeriesUnwindAnimation();
             DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation1 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             DevExpress.XtraCharts.SineEasingFunction sineEasingFunction1 = new DevExpress.XtraCharts.SineEasingFunction();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel2 = new DevExpress.XtraCharts.PointSeriesLabel();
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView2 = new DevExpress.XtraCharts.SplineSeriesView();
             DevExpress.XtraCharts.XYSeriesUnwindAnimation xySeriesUnwindAnimation2 = new DevExpress.XtraCharts.XYSeriesUnwindAnimation();
             DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation2 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             DevExpress.XtraCharts.SineEasingFunction sineEasingFunction2 = new DevExpress.XtraCharts.SineEasingFunction();
             DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel3 = new DevExpress.XtraCharts.PointSeriesLabel();
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView3 = new DevExpress.XtraCharts.SplineSeriesView();
             DevExpress.XtraCharts.XYSeriesUnwindAnimation xySeriesUnwindAnimation3 = new DevExpress.XtraCharts.XYSeriesUnwindAnimation();
             DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation3 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             DevExpress.XtraCharts.SineEasingFunction sineEasingFunction3 = new DevExpress.XtraCharts.SineEasingFunction();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnHeader = new System.Windows.Forms.Panel();
@@ -54,12 +56,15 @@
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.btnBack = new System.Windows.Forms.Button();
             this.pnInfoTotal = new System.Windows.Forms.Panel();
+            this.advancedPanel3 = new FORM.AdvancedPanel();
+            this.lblTotalProd = new System.Windows.Forms.Label();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.advancedPanel2 = new FORM.AdvancedPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblAVG = new System.Windows.Forms.Label();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.advancedPanel1 = new FORM.AdvancedPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalKw = new System.Windows.Forms.Label();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pnChart = new System.Windows.Forms.Panel();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.pnGrid = new System.Windows.Forms.Panel();
@@ -69,16 +74,20 @@
             this.tblMain.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.pnInfoTotal.SuspendLayout();
+            this.advancedPanel3.SuspendLayout();
             this.advancedPanel2.SuspendLayout();
             this.advancedPanel1.SuspendLayout();
             this.pnChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView3)).BeginInit();
             this.pnGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdView)).BeginInit();
@@ -103,8 +112,8 @@
             this.tblMain.RowCount = 4;
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 122F));
-            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.99274F));
+            this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.00726F));
             this.tblMain.Size = new System.Drawing.Size(1904, 1041);
             this.tblMain.TabIndex = 0;
             // 
@@ -140,7 +149,7 @@
             this.lblHeader.LineVisible = true;
             this.lblHeader.Location = new System.Drawing.Point(89, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1231, 86);
+            this.lblHeader.Size = new System.Drawing.Size(1543, 86);
             this.lblHeader.TabIndex = 4;
             this.lblHeader.Text = "Power Management Systems";
             // 
@@ -165,8 +174,9 @@
             // 
             // pnInfoTotal
             // 
+            this.pnInfoTotal.BackColor = System.Drawing.Color.White;
+            this.pnInfoTotal.Controls.Add(this.advancedPanel3);
             this.pnInfoTotal.Controls.Add(this.advancedPanel2);
-            this.pnInfoTotal.Controls.Add(this.labelControl1);
             this.pnInfoTotal.Controls.Add(this.advancedPanel1);
             this.pnInfoTotal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnInfoTotal.Location = new System.Drawing.Point(3, 95);
@@ -174,39 +184,84 @@
             this.pnInfoTotal.Size = new System.Drawing.Size(1898, 116);
             this.pnInfoTotal.TabIndex = 1;
             // 
+            // advancedPanel3
+            // 
+            this.advancedPanel3.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
+            this.advancedPanel3.Controls.Add(this.lblTotalProd);
+            this.advancedPanel3.Controls.Add(this.labelControl3);
+            this.advancedPanel3.EdgeWidth = 2;
+            this.advancedPanel3.EndColor = System.Drawing.Color.White;
+            this.advancedPanel3.FlatBorderColor = System.Drawing.Color.Cyan;
+            this.advancedPanel3.Location = new System.Drawing.Point(684, 6);
+            this.advancedPanel3.Name = "advancedPanel3";
+            this.advancedPanel3.RectRadius = 0;
+            this.advancedPanel3.ShadowColor = System.Drawing.Color.Silver;
+            this.advancedPanel3.ShadowShift = 4;
+            this.advancedPanel3.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
+            this.advancedPanel3.Size = new System.Drawing.Size(535, 110);
+            this.advancedPanel3.StartColor = System.Drawing.Color.White;
+            this.advancedPanel3.Style = FORM.AdvancedPanel.BevelStyle.Flat;
+            this.advancedPanel3.TabIndex = 6;
+            // 
+            // lblTotalProd
+            // 
+            this.lblTotalProd.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalProd.Font = new System.Drawing.Font("Times New Roman", 40F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblTotalProd.Location = new System.Drawing.Point(3, 38);
+            this.lblTotalProd.Name = "lblTotalProd";
+            this.lblTotalProd.Size = new System.Drawing.Size(529, 55);
+            this.lblTotalProd.TabIndex = 0;
+            this.lblTotalProd.Text = "120,000 Prs";
+            this.lblTotalProd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelControl3.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Appearance.Options.UseBackColor = true;
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl3.LineVisible = true;
+            this.labelControl3.Location = new System.Drawing.Point(3, 3);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(529, 32);
+            this.labelControl3.TabIndex = 5;
+            this.labelControl3.Text = "Production Total";
+            // 
             // advancedPanel2
             // 
             this.advancedPanel2.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
-            this.advancedPanel2.Controls.Add(this.label2);
+            this.advancedPanel2.Controls.Add(this.lblAVG);
             this.advancedPanel2.Controls.Add(this.labelControl2);
             this.advancedPanel2.EdgeWidth = 2;
             this.advancedPanel2.EndColor = System.Drawing.Color.White;
-            this.advancedPanel2.FlatBorderColor = System.Drawing.Color.Cyan;
-            this.advancedPanel2.Location = new System.Drawing.Point(533, 3);
+            this.advancedPanel2.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.advancedPanel2.Location = new System.Drawing.Point(1249, 6);
             this.advancedPanel2.Name = "advancedPanel2";
             this.advancedPanel2.RectRadius = 0;
             this.advancedPanel2.ShadowColor = System.Drawing.Color.Silver;
             this.advancedPanel2.ShadowShift = 4;
             this.advancedPanel2.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
-            this.advancedPanel2.Size = new System.Drawing.Size(500, 110);
+            this.advancedPanel2.Size = new System.Drawing.Size(535, 110);
             this.advancedPanel2.StartColor = System.Drawing.Color.White;
             this.advancedPanel2.Style = FORM.AdvancedPanel.BevelStyle.Flat;
             this.advancedPanel2.TabIndex = 6;
             // 
-            // label2
+            // lblAVG
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 40F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.Location = new System.Drawing.Point(3, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(494, 55);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "50 kWh/Prs";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAVG.BackColor = System.Drawing.Color.Transparent;
+            this.lblAVG.Font = new System.Drawing.Font("Times New Roman", 40F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblAVG.Location = new System.Drawing.Point(3, 38);
+            this.lblAVG.Name = "lblAVG";
+            this.lblAVG.Size = new System.Drawing.Size(529, 55);
+            this.lblAVG.TabIndex = 0;
+            this.lblAVG.Text = "50 kWh/Prs";
+            this.lblAVG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.labelControl2.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseBackColor = true;
@@ -215,9 +270,40 @@
             this.labelControl2.LineVisible = true;
             this.labelControl2.Location = new System.Drawing.Point(3, 3);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(494, 32);
+            this.labelControl2.Size = new System.Drawing.Size(529, 32);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Average Electric consumption/Prs";
+            // 
+            // advancedPanel1
+            // 
+            this.advancedPanel1.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
+            this.advancedPanel1.Controls.Add(this.lblTotalKw);
+            this.advancedPanel1.Controls.Add(this.labelControl1);
+            this.advancedPanel1.EdgeWidth = 2;
+            this.advancedPanel1.EndColor = System.Drawing.Color.White;
+            this.advancedPanel1.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.advancedPanel1.Location = new System.Drawing.Point(122, 6);
+            this.advancedPanel1.Name = "advancedPanel1";
+            this.advancedPanel1.RectRadius = 0;
+            this.advancedPanel1.ShadowColor = System.Drawing.Color.Silver;
+            this.advancedPanel1.ShadowShift = 4;
+            this.advancedPanel1.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
+            this.advancedPanel1.Size = new System.Drawing.Size(535, 110);
+            this.advancedPanel1.StartColor = System.Drawing.Color.White;
+            this.advancedPanel1.Style = FORM.AdvancedPanel.BevelStyle.Flat;
+            this.advancedPanel1.TabIndex = 0;
+            // 
+            // lblTotalKw
+            // 
+            this.lblTotalKw.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalKw.Font = new System.Drawing.Font("Times New Roman", 40F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblTotalKw.Location = new System.Drawing.Point(3, 38);
+            this.lblTotalKw.Name = "lblTotalKw";
+            this.lblTotalKw.Size = new System.Drawing.Size(529, 55);
+            this.lblTotalKw.TabIndex = 0;
+            this.lblTotalKw.Text = "10,218,039 kWh";
+            this.lblTotalKw.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTotalKw.DoubleClick += new System.EventHandler(this.label1_DoubleClick);
             // 
             // labelControl1
             // 
@@ -228,41 +314,11 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.LineVisible = true;
-            this.labelControl1.Location = new System.Drawing.Point(12, 6);
+            this.labelControl1.Location = new System.Drawing.Point(3, 3);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(494, 32);
+            this.labelControl1.Size = new System.Drawing.Size(529, 32);
             this.labelControl1.TabIndex = 5;
-            this.labelControl1.Text = "Electric consumption on today";
-            // 
-            // advancedPanel1
-            // 
-            this.advancedPanel1.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
-            this.advancedPanel1.Controls.Add(this.label1);
-            this.advancedPanel1.EdgeWidth = 2;
-            this.advancedPanel1.EndColor = System.Drawing.Color.White;
-            this.advancedPanel1.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.advancedPanel1.Location = new System.Drawing.Point(9, 3);
-            this.advancedPanel1.Name = "advancedPanel1";
-            this.advancedPanel1.RectRadius = 0;
-            this.advancedPanel1.ShadowColor = System.Drawing.Color.Silver;
-            this.advancedPanel1.ShadowShift = 4;
-            this.advancedPanel1.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
-            this.advancedPanel1.Size = new System.Drawing.Size(500, 110);
-            this.advancedPanel1.StartColor = System.Drawing.Color.White;
-            this.advancedPanel1.Style = FORM.AdvancedPanel.BevelStyle.Flat;
-            this.advancedPanel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 40F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.Location = new System.Drawing.Point(3, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(494, 55);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "10,218,039 kWh";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.DoubleClick += new System.EventHandler(this.label1_DoubleClick);
+            this.labelControl1.Text = "Electric consumption on yesterday";
             // 
             // pnChart
             // 
@@ -270,26 +326,47 @@
             this.pnChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnChart.Location = new System.Drawing.Point(3, 217);
             this.pnChart.Name = "pnChart";
-            this.pnChart.Size = new System.Drawing.Size(1898, 407);
+            this.pnChart.Size = new System.Drawing.Size(1898, 638);
             this.pnChart.TabIndex = 2;
             // 
             // chartControl1
             // 
             this.chartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.DataBindings = null;
+            xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("Calibri", 12F);
+            xyDiagram1.AxisX.Title.Font = new System.Drawing.Font("Calibri", 14.25F);
+            xyDiagram1.AxisX.Title.Text = "Plant";
+            xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.GridLines.Visible = false;
+            xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             xyDiagram1.AxisY.Label.TextPattern = "{V:#,#}";
             xyDiagram1.AxisY.Title.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             xyDiagram1.AxisY.Title.Text = "kWh/Prs";
             xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.DefaultPane.BorderVisible = false;
+            xyDiagram1.DefaultPane.Shadow.Color = System.Drawing.Color.Silver;
+            xyDiagram1.DefaultPane.Shadow.Size = 3;
+            xyDiagram1.PaneDistance = 1;
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Right;
+            this.chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+            this.chartControl1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+            this.chartControl1.Legend.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartControl1.Legend.MarkerMode = DevExpress.XtraCharts.LegendMarkerMode.CheckBoxAndMarker;
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
-            series1.Name = "Series 1";
+            series1.CrosshairLabelPattern = "{V:#,#}";
+            pointSeriesLabel1.TextPattern = "{V:#,#}";
+            series1.Label = pointSeriesLabel1;
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Day";
             splineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
             xySeriesUnwindAnimation1.BeginTime = System.TimeSpan.Parse("00:00:02");
             xySeriesUnwindAnimation1.Duration = System.TimeSpan.Parse("00:00:02.5000000");
@@ -297,8 +374,13 @@
             xyMarkerSlideAnimation1.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromRightBottomCorner;
             xyMarkerSlideAnimation1.EasingFunction = sineEasingFunction1;
             splineSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation1;
+            splineSeriesView1.Shadow.Visible = true;
             series1.View = splineSeriesView1;
-            series2.Name = "Series 2";
+            series2.CrosshairLabelPattern = "{V:#,#}";
+            pointSeriesLabel2.TextPattern = "{V:#,#}";
+            series2.Label = pointSeriesLabel2;
+            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series2.Name = "Week";
             splineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
             xySeriesUnwindAnimation2.BeginTime = System.TimeSpan.Parse("00:00:03");
             xySeriesUnwindAnimation2.Duration = System.TimeSpan.Parse("00:00:02.5000000");
@@ -306,8 +388,13 @@
             xyMarkerSlideAnimation2.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromTopCenter;
             xyMarkerSlideAnimation2.EasingFunction = sineEasingFunction2;
             splineSeriesView2.SeriesPointAnimation = xyMarkerSlideAnimation2;
+            splineSeriesView2.Shadow.Visible = true;
             series2.View = splineSeriesView2;
-            series3.Name = "Series 3";
+            series3.CrosshairLabelPattern = "{V:#,#}";
+            pointSeriesLabel3.TextPattern = "{V:#,#}";
+            series3.Label = pointSeriesLabel3;
+            series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series3.Name = "Month";
             splineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
             xySeriesUnwindAnimation3.BeginTime = System.TimeSpan.Parse("00:00:01");
             xySeriesUnwindAnimation3.Duration = System.TimeSpan.Parse("00:00:02.5000000");
@@ -315,34 +402,32 @@
             xyMarkerSlideAnimation3.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromLeftBottomCorner;
             xyMarkerSlideAnimation3.EasingFunction = sineEasingFunction3;
             splineSeriesView3.SeriesPointAnimation = xyMarkerSlideAnimation3;
+            splineSeriesView3.Shadow.Visible = true;
             series3.View = splineSeriesView3;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2,
         series3};
-            this.chartControl1.Size = new System.Drawing.Size(1898, 407);
+            this.chartControl1.Size = new System.Drawing.Size(1898, 638);
             this.chartControl1.TabIndex = 0;
             // 
             // pnGrid
             // 
             this.pnGrid.Controls.Add(this.grdView);
             this.pnGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnGrid.Location = new System.Drawing.Point(3, 630);
+            this.pnGrid.Location = new System.Drawing.Point(3, 861);
             this.pnGrid.Name = "pnGrid";
-            this.pnGrid.Size = new System.Drawing.Size(1898, 408);
+            this.pnGrid.Size = new System.Drawing.Size(1898, 177);
             this.pnGrid.TabIndex = 3;
             // 
             // grdView
             // 
             this.grdView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdView.Font = new System.Drawing.Font("Calibri", 12.75F);
-            gridLevelNode1.RelationName = "Level1";
-            this.grdView.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
             this.grdView.Location = new System.Drawing.Point(0, 0);
             this.grdView.MainView = this.gvwView;
             this.grdView.Name = "grdView";
-            this.grdView.Size = new System.Drawing.Size(1898, 408);
+            this.grdView.Size = new System.Drawing.Size(1898, 177);
             this.grdView.TabIndex = 5;
             this.grdView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwView});
@@ -360,6 +445,7 @@
             this.gvwView.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gvwView.Appearance.Row.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gvwView.BandPanelRowHeight = 40;
+            this.gvwView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gvwView.ColumnPanelRowHeight = 40;
             this.gvwView.GridControl = this.grdView;
             this.gvwView.Name = "gvwView";
@@ -393,14 +479,18 @@
             this.tblMain.ResumeLayout(false);
             this.pnHeader.ResumeLayout(false);
             this.pnInfoTotal.ResumeLayout(false);
+            this.advancedPanel3.ResumeLayout(false);
             this.advancedPanel2.ResumeLayout(false);
             this.advancedPanel1.ResumeLayout(false);
             this.pnChart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(splineSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
@@ -420,9 +510,9 @@
         private System.Windows.Forms.Panel pnInfoTotal;
         private AdvancedPanel advancedPanel1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalKw;
         private AdvancedPanel advancedPanel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAVG;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.Panel pnChart;
         private DevExpress.XtraCharts.ChartControl chartControl1;
@@ -432,5 +522,8 @@
         public System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Timer tmr;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private AdvancedPanel advancedPanel3;
+        private System.Windows.Forms.Label lblTotalProd;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

@@ -31,21 +31,24 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_SMT_SCADA_ENERGY));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
+            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY2 = new DevExpress.XtraCharts.SecondaryAxisY();
+            DevExpress.XtraCharts.HatchFillOptions hatchFillOptions1 = new DevExpress.XtraCharts.HatchFillOptions();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel1 = new DevExpress.XtraCharts.PointSeriesLabel();
-            DevExpress.XtraCharts.SplineSeriesView splineSeriesView1 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.AreaSeriesView areaSeriesView1 = new DevExpress.XtraCharts.AreaSeriesView();
             DevExpress.XtraCharts.XYSeriesUnwindAnimation xySeriesUnwindAnimation1 = new DevExpress.XtraCharts.XYSeriesUnwindAnimation();
             DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation1 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             DevExpress.XtraCharts.SineEasingFunction sineEasingFunction1 = new DevExpress.XtraCharts.SineEasingFunction();
             DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel2 = new DevExpress.XtraCharts.PointSeriesLabel();
-            DevExpress.XtraCharts.SplineSeriesView splineSeriesView2 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.AreaSeriesView areaSeriesView2 = new DevExpress.XtraCharts.AreaSeriesView();
             DevExpress.XtraCharts.XYSeriesUnwindAnimation xySeriesUnwindAnimation2 = new DevExpress.XtraCharts.XYSeriesUnwindAnimation();
             DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation2 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             DevExpress.XtraCharts.SineEasingFunction sineEasingFunction2 = new DevExpress.XtraCharts.SineEasingFunction();
             DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel3 = new DevExpress.XtraCharts.PointSeriesLabel();
-            DevExpress.XtraCharts.SplineSeriesView splineSeriesView3 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.SplineSeriesView splineSeriesView1 = new DevExpress.XtraCharts.SplineSeriesView();
             DevExpress.XtraCharts.XYSeriesUnwindAnimation xySeriesUnwindAnimation3 = new DevExpress.XtraCharts.XYSeriesUnwindAnimation();
             DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation3 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             DevExpress.XtraCharts.SineEasingFunction sineEasingFunction3 = new DevExpress.XtraCharts.SineEasingFunction();
@@ -80,15 +83,17 @@
             this.pnChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(areaSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(areaSeriesView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).BeginInit();
             this.pnGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwView)).BeginInit();
@@ -191,7 +196,7 @@
             this.advancedPanel3.Controls.Add(this.labelControl3);
             this.advancedPanel3.EdgeWidth = 2;
             this.advancedPanel3.EndColor = System.Drawing.Color.White;
-            this.advancedPanel3.FlatBorderColor = System.Drawing.Color.Cyan;
+            this.advancedPanel3.FlatBorderColor = System.Drawing.Color.CornflowerBlue;
             this.advancedPanel3.Location = new System.Drawing.Point(684, 6);
             this.advancedPanel3.Name = "advancedPanel3";
             this.advancedPanel3.RectRadius = 0;
@@ -216,7 +221,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelControl3.Appearance.BackColor = System.Drawing.Color.CornflowerBlue;
             this.labelControl3.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseBackColor = true;
@@ -236,7 +241,7 @@
             this.advancedPanel2.Controls.Add(this.labelControl2);
             this.advancedPanel2.EdgeWidth = 2;
             this.advancedPanel2.EndColor = System.Drawing.Color.White;
-            this.advancedPanel2.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.advancedPanel2.FlatBorderColor = System.Drawing.Color.DeepSkyBlue;
             this.advancedPanel2.Location = new System.Drawing.Point(1249, 6);
             this.advancedPanel2.Name = "advancedPanel2";
             this.advancedPanel2.RectRadius = 0;
@@ -261,7 +266,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.labelControl2.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
             this.labelControl2.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseBackColor = true;
@@ -281,7 +286,7 @@
             this.advancedPanel1.Controls.Add(this.labelControl1);
             this.advancedPanel1.EdgeWidth = 2;
             this.advancedPanel1.EndColor = System.Drawing.Color.White;
-            this.advancedPanel1.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.advancedPanel1.FlatBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.advancedPanel1.Location = new System.Drawing.Point(122, 6);
             this.advancedPanel1.Name = "advancedPanel1";
             this.advancedPanel1.RectRadius = 0;
@@ -307,7 +312,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.labelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.labelControl1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseBackColor = true;
@@ -336,74 +341,105 @@
             this.chartControl1.DataBindings = null;
             xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("Calibri", 12F);
             xyDiagram1.AxisX.Title.Font = new System.Drawing.Font("Calibri", 14.25F);
-            xyDiagram1.AxisX.Title.Text = "Plant";
+            xyDiagram1.AxisX.Title.Text = "Date";
             xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.GridLines.Visible = false;
             xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram1.AxisY.Label.TextPattern = "{V:0.00}";
+            xyDiagram1.AxisY.Label.TextPattern = "{V:#,#}";
             xyDiagram1.AxisY.Title.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram1.AxisY.Title.Text = "kWh/Prs";
-            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram1.AxisY.Title.Text = "Production (Prs)";
+            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram1.DefaultPane.BorderVisible = false;
             xyDiagram1.DefaultPane.Shadow.Color = System.Drawing.Color.Silver;
             xyDiagram1.DefaultPane.Shadow.Size = 3;
             xyDiagram1.PaneDistance = 1;
+            secondaryAxisY1.AxisID = 0;
+            secondaryAxisY1.Label.Font = new System.Drawing.Font("Calibri", 12F);
+            secondaryAxisY1.Label.TextPattern = "{V:0.00}";
+            secondaryAxisY1.Name = "Secondary AxisY 1";
+            secondaryAxisY1.Title.Font = new System.Drawing.Font("Calibri", 14.25F);
+            secondaryAxisY1.Title.Text = "kWh/Prs";
+            secondaryAxisY1.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            secondaryAxisY1.VisibleInPanesSerializable = "-1";
+            secondaryAxisY2.AxisID = 1;
+            secondaryAxisY2.Label.Font = new System.Drawing.Font("Calibri", 12F);
+            secondaryAxisY2.Label.TextPattern = "{V:#,#}";
+            secondaryAxisY2.Name = "Secondary AxisY 2";
+            secondaryAxisY2.Title.Font = new System.Drawing.Font("Calibri", 14.25F);
+            secondaryAxisY2.Title.Text = "Electric Comsumsion (kWh)";
+            secondaryAxisY2.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            secondaryAxisY2.VisibleInPanesSerializable = "-1";
+            xyDiagram1.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
+            secondaryAxisY1,
+            secondaryAxisY2});
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Right;
+            this.chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+            this.chartControl1.Legend.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+            this.chartControl1.Legend.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Hatch;
+            hatchFillOptions1.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            hatchFillOptions1.HatchStyle = System.Drawing.Drawing2D.HatchStyle.WideDownwardDiagonal;
+            this.chartControl1.Legend.FillStyle.Options = hatchFillOptions1;
             this.chartControl1.Legend.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chartControl1.Legend.MarkerMode = DevExpress.XtraCharts.LegendMarkerMode.CheckBoxAndMarker;
+            this.chartControl1.Legend.MarkerSize = new System.Drawing.Size(50, 45);
             this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Legend.Shadow.Visible = true;
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
-            series1.CrosshairLabelPattern = "{V:0.00}";
-            pointSeriesLabel1.TextPattern = "{V:0.00}";
+            series1.CrosshairLabelPattern = "{V:#,#}";
+            pointSeriesLabel1.TextPattern = "{V:#,#}";
             series1.Label = pointSeriesLabel1;
-            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series1.Name = "Day";
-            splineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            xySeriesUnwindAnimation1.BeginTime = System.TimeSpan.Parse("00:00:02");
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+            series1.Name = "Production";
+            areaSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xySeriesUnwindAnimation1.BeginTime = System.TimeSpan.Parse("00:00:01");
+            xySeriesUnwindAnimation1.Direction = DevExpress.XtraCharts.AnimationDirection.FromRight;
             xySeriesUnwindAnimation1.Duration = System.TimeSpan.Parse("00:00:02.5000000");
-            splineSeriesView1.SeriesAnimation = xySeriesUnwindAnimation1;
+            areaSeriesView1.SeriesAnimation = xySeriesUnwindAnimation1;
             xyMarkerSlideAnimation1.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromRightBottomCorner;
             xyMarkerSlideAnimation1.EasingFunction = sineEasingFunction1;
-            splineSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation1;
-            splineSeriesView1.Shadow.Visible = true;
-            series1.View = splineSeriesView1;
-            series2.CrosshairLabelPattern = "{V:0.00}";
-            pointSeriesLabel2.TextPattern = "{V:0.00}";
+            areaSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation1;
+            series1.View = areaSeriesView1;
+            series2.CrosshairLabelPattern = "{V:#,#}";
+            pointSeriesLabel2.TextPattern = "{V:#,#}";
             series2.Label = pointSeriesLabel2;
-            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series2.Name = "Week";
-            splineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            xySeriesUnwindAnimation2.BeginTime = System.TimeSpan.Parse("00:00:03");
+            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+            series2.Name = "Electric Comsumsion";
+            areaSeriesView2.AxisYName = "Secondary AxisY 2";
+            areaSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xySeriesUnwindAnimation2.BeginTime = System.TimeSpan.Parse("00:00:02");
             xySeriesUnwindAnimation2.Duration = System.TimeSpan.Parse("00:00:02.5000000");
-            splineSeriesView2.SeriesAnimation = xySeriesUnwindAnimation2;
+            areaSeriesView2.SeriesAnimation = xySeriesUnwindAnimation2;
             xyMarkerSlideAnimation2.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromTopCenter;
             xyMarkerSlideAnimation2.EasingFunction = sineEasingFunction2;
-            splineSeriesView2.SeriesPointAnimation = xyMarkerSlideAnimation2;
-            splineSeriesView2.Shadow.Visible = true;
-            series2.View = splineSeriesView2;
+            areaSeriesView2.SeriesPointAnimation = xyMarkerSlideAnimation2;
+            series2.View = areaSeriesView2;
             series3.CrosshairLabelPattern = "{V:0.00}";
             pointSeriesLabel3.TextPattern = "{V:0.00}";
             series3.Label = pointSeriesLabel3;
             series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series3.Name = "Month";
-            splineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series3.Name = "kWh/Prs";
+            splineSeriesView1.AxisYName = "Secondary AxisY 1";
+            splineSeriesView1.Color = System.Drawing.Color.Blue;
+            splineSeriesView1.ColorEach = true;
+            splineSeriesView1.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
+            splineSeriesView1.LineStyle.Thickness = 3;
+            splineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
             xySeriesUnwindAnimation3.BeginTime = System.TimeSpan.Parse("00:00:01");
             xySeriesUnwindAnimation3.Duration = System.TimeSpan.Parse("00:00:02.5000000");
-            splineSeriesView3.SeriesAnimation = xySeriesUnwindAnimation3;
+            splineSeriesView1.SeriesAnimation = xySeriesUnwindAnimation3;
             xyMarkerSlideAnimation3.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromLeftBottomCorner;
             xyMarkerSlideAnimation3.EasingFunction = sineEasingFunction3;
-            splineSeriesView3.SeriesPointAnimation = xyMarkerSlideAnimation3;
-            splineSeriesView3.Shadow.Visible = true;
-            series3.View = splineSeriesView3;
+            splineSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation3;
+            splineSeriesView1.Shadow.Visible = true;
+            series3.View = splineSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2,
@@ -448,6 +484,7 @@
             this.gvwView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gvwView.ColumnPanelRowHeight = 40;
             this.gvwView.GridControl = this.grdView;
+            this.gvwView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gvwView.Name = "gvwView";
             this.gvwView.OptionsBehavior.Editable = false;
             this.gvwView.OptionsBehavior.ReadOnly = true;
@@ -459,6 +496,7 @@
             this.gvwView.OptionsView.ShowGroupPanel = false;
             this.gvwView.OptionsView.ShowIndicator = false;
             this.gvwView.RowHeight = 40;
+            this.gvwView.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvwView_RowCellStyle);
             // 
             // tmr
             // 
@@ -483,15 +521,17 @@
             this.advancedPanel2.ResumeLayout(false);
             this.advancedPanel1.ResumeLayout(false);
             this.pnChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(areaSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(areaSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.pnGrid.ResumeLayout(false);

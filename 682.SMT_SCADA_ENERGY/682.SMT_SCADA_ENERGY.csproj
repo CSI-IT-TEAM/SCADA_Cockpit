@@ -121,6 +121,12 @@
     <Compile Include="FRM_SMT_SCADA_ENERGY.Designer.cs">
       <DependentUpon>FRM_SMT_SCADA_ENERGY.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_SMT_SCADA_ENERGY_V1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SMT_SCADA_ENERGY_V1.Designer.cs">
+      <DependentUpon>FRM_SMT_SCADA_ENERGY_V1.cs</DependentUpon>
+    </Compile>
     <Compile Include="SMT_ANDON_ANALYSIS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FRM_SMT_SCADA_ENERGY.resx">
       <DependentUpon>FRM_SMT_SCADA_ENERGY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SMT_SCADA_ENERGY_V1.resx">
+      <DependentUpon>FRM_SMT_SCADA_ENERGY_V1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_ANDON_ANALYSIS.resx">
       <DependentUpon>SMT_ANDON_ANALYSIS.cs</DependentUpon>

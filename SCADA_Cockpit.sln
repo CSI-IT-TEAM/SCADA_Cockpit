@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "610.SMT_SCADA_COCKPIT_FORM1", "610.SMT_SCADA_COCKPIT_FORM1\610.SMT_SCADA_COCKPIT_FORM1.csproj", "{D57E420E-FAF5-4778-9F6B-F5B9E0868A3D}"
 EndProject
@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComVar", "ComVar\ComVar.csproj", "{1FDD4C55-6914-47C9-89F0-682D023AC3A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAIN", "MAIN\MAIN.csproj", "{2E3943C9-7F91-4B71-8120-9F030749C327}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D57E420E-FAF5-4778-9F6B-F5B9E0868A3D} = {D57E420E-FAF5-4778-9F6B-F5B9E0868A3D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Com", "COM\Com.csproj", "{992378C3-66A1-4E98-96F5-CE2B26E0CAB2}"
 EndProject

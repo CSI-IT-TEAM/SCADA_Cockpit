@@ -22,6 +22,7 @@ namespace FORM
         const int ViewportPointCount = 30;
         int _iCurPage, _iMaxPage;
         double _iMinChart=0, _iMaxChart=0;
+        string _strMachineCode = "";
         string _strType = "D";
         ObservableCollection<DataRealPoint> dataPoints = new ObservableCollection<DataRealPoint>();
 
@@ -269,7 +270,7 @@ namespace FORM
                 diagram.AxisX.Label.ResolveOverlappingOptions.AllowStagger = false;
                 diagram.AxisX.WholeRange.SideMarginsValue = 0;
                 diagram.AxisX.Title.Text = "Time";
-                diagram.EnableAxisXScrolling = true;
+                
                 diagram.AxisX.Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 diagram.DependentAxesYRange = DefaultBoolean.True;
                 //diagram.AxisY.WholeRange.AlwaysShowZeroLevel = false;
@@ -284,6 +285,11 @@ namespace FORM
                 diagram.AxisY.Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
                 diagram.AxisY.Interlaced = false;
+
+                diagram.EnableAxisXScrolling = true;
+                diagram.EnableAxisYScrolling = true;
+                
+
                 chartControl1.Series.Clear();
                 chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] { series, series2, series3 };
 
@@ -310,6 +316,9 @@ namespace FORM
                 chartControl1.Legend.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 chartControl1.Legend.Visibility = DefaultBoolean.True;
 
+                diagram.AxisX.VisualRange.Auto = false;
+                diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[0]["SET_TIME"], _dtDataPage.Rows[20]["SET_TIME"]);
+
                 for (int i = 0; i < _dtDataPage.Rows.Count; i++)
                 {
                     string setTime1 = _dtDataPage.Rows[i]["SET_TIME"].ToString();
@@ -330,33 +339,31 @@ namespace FORM
         }
 
         #region DB
-        private DataSet Data_Select(string argType)
+        private DataTable Data_PM_Select(string argType)
         {
             COM.OraDB MyOraDB = new COM.OraDB();
 
-            MyOraDB.ReDim_Parameter(4);
-            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.PM_SELECT";
+            MyOraDB.ReDim_Parameter(3);
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.MACHINE_PM_SELECT";
 
             MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
-            MyOraDB.Parameter_Name[1] = "ARG_DATE";
+            MyOraDB.Parameter_Name[1] = "ARG_MACHINE";
             MyOraDB.Parameter_Name[2] = "OUT_CURSOR";
-            MyOraDB.Parameter_Name[3] = "OUT_CURSOR2";
+
 
             MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
             MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
             MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
-            MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
 
             MyOraDB.Parameter_Values[0] = argType;
-            MyOraDB.Parameter_Values[1] = "";
+            MyOraDB.Parameter_Values[1] = _strMachineCode;
             MyOraDB.Parameter_Values[2] = "";
-            MyOraDB.Parameter_Values[3] = "";
 
             MyOraDB.Add_Select_Parameter(true);
             DataSet retDS = MyOraDB.Exe_Select_Procedure();
             if (retDS == null) return null;
 
-            return retDS;
+            return retDS.Tables[0];
         }
 
         public DataTable SEL_SMT_INST_SET_CHART(string ARG_LINE_CD, string ARG_MLINE_CD)
@@ -456,12 +463,29 @@ namespace FORM
             }         
         }
 
+
+        private void PM_Detail_Check(bool arg_check)
+        {
+            if (arg_check)
+            {
+                gridControl1.Visible = true;
+                DataTable dt = Data_PM_Select("Q");
+                gridControl1.DataSource = dt;
+            }
+            else
+            {
+                gridControl1.Visible = false;
+            }
+
+        }
+
         private void SMT_SCADA_COCKPIT_FORM2_VisibleChanged(object sender, EventArgs e)
         {
             try
             {
                 if (Visible)
                 {
+                    gridControl1.Visible = false;
                     lblTxt1.Text = "";
                     lblTxt2.Text = "";
                     lblTxt3.Text = "";
@@ -473,6 +497,7 @@ namespace FORM
                     int.TryParse(_dtData.Compute("max([RN])", "").ToString(), out _iMaxPage);
 
                     setClick("");
+
                     setData();
 
 
@@ -497,20 +522,12 @@ namespace FORM
         {
             
             _dtDataPage = _dtData.Select("RN = '"+ _iCurPage + "'", _dtData.Rows[0]["ORD"].ToString()).CopyToDataTable();
+            _strMachineCode = _dtDataPage.Rows[0]["MC_CODE"].ToString();
             lblTxt1.Text = _dtDataPage.Rows[0]["TXT1"].ToString();
             lblTxt2.Text = _dtDataPage.Rows[0]["TXT2"].ToString();
             lblTxt3.Text = _dtDataPage.Rows[0]["TXT3"].ToString();
             
             GetMinMaxChart(_dtDataPage);
-        }
-
-        private void gridView1_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                
-            }    
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -588,6 +605,12 @@ namespace FORM
             BindingChartData();
         }
 
+        private void chkPm_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            PM_Detail_Check(chkPm.Checked);
+        }
+
         int iCount = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -638,7 +661,7 @@ namespace FORM
                     isLoop = false;
                     iCount = 0;
                     timer1.Stop();
-                    // BindingChartData();
+                     BindingChartData2();
                     // tmrDelay.Start();
                 }
             }
@@ -649,7 +672,9 @@ namespace FORM
         }
     }
 
-    
+ 
+
+
 
     public class DataRealPoint
     {

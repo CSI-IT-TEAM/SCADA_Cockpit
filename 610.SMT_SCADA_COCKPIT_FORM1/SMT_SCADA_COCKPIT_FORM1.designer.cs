@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_COCKPIT_FORM1));
             this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdF1 = new System.Windows.Forms.Button();
             this.cmdF2 = new System.Windows.Forms.Button();
@@ -77,7 +76,7 @@
             this.cmdPm1 = new System.Windows.Forms.Button();
             this.cmdDowntime = new System.Windows.Forms.Button();
             this.btnEnergy = new System.Windows.Forms.Button();
-            this.tmrBlink = new System.Windows.Forms.Timer(this.components);
+            this.tmrBlink = new System.Windows.Forms.Timer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).BeginInit();
@@ -779,7 +778,7 @@
             // cmdDowntime
             // 
             this.cmdDowntime.BackColor = System.Drawing.Color.Transparent;
-            this.cmdDowntime.BackgroundImage = global::FORM.Properties.Resources.ANDON2;
+            this.cmdDowntime.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdDowntime.BackgroundImage")));
             this.cmdDowntime.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cmdDowntime.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmdDowntime.FlatAppearance.BorderColor = System.Drawing.Color.Black;

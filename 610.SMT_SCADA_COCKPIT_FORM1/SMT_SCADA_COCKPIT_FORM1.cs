@@ -33,6 +33,7 @@ namespace FORM
         {
             if (Visible)
             {
+                
                 cmdBack.Visible = ComVar.Var._IsBack;
                 _iReload = 29;
                 tmrTime.Start();
@@ -604,6 +605,9 @@ namespace FORM
         #endregion Button Line Click
 
         #region DB
+
+        
+
 
         private DataTable Master_Select(string argType)
         {

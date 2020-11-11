@@ -147,6 +147,12 @@
     <Compile Include="SMT_SCADA_COCKPIT_POPUP.Designer.cs">
       <DependentUpon>SMT_SCADA_COCKPIT_POPUP.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_Chart_Bar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Chart_Bar.designer.cs">
+      <DependentUpon>UC_Chart_Bar.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC_Factory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_COCKPIT_POPUP.resx">
       <DependentUpon>SMT_SCADA_COCKPIT_POPUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Chart_Bar.resx">
+      <DependentUpon>UC_Chart_Bar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Chart_Pie.resx">
       <DependentUpon>UC_Factory.cs</DependentUpon>

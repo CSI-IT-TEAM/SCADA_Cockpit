@@ -136,6 +136,18 @@
     <Compile Include="SMT_SCADA_COCKPIT_FORM2.Designer.cs">
       <DependentUpon>SMT_SCADA_COCKPIT_FORM2.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_COMPARE_DAY_MONTH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_COMPARE_DAY_MONTH.designer.cs">
+      <DependentUpon>UC_COMPARE_DAY_MONTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_COMPARE_WEEK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_COMPARE_WEEK.designer.cs">
+      <DependentUpon>UC_COMPARE_WEEK.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC_Machine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -175,6 +187,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_COCKPIT_FORM2.resx">
       <DependentUpon>SMT_SCADA_COCKPIT_FORM2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_COMPARE_DAY_MONTH.resx">
+      <DependentUpon>UC_COMPARE_DAY_MONTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_COMPARE_WEEK.resx">
+      <DependentUpon>UC_COMPARE_WEEK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Machine.resx">
       <DependentUpon>UC_Machine.cs</DependentUpon>

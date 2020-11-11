@@ -15,7 +15,7 @@ namespace FORM
             lblHeader.Text = _strHeader;
         }
         private readonly string _strHeader = "       Preventative Maintenance";
-
+        private UC.UC_COMPARE_WEEK uc_compare_week = new UC.UC_COMPARE_WEEK();
         string _strType = "D";
         int _time = 0;
 
@@ -29,18 +29,18 @@ namespace FORM
                 DataTable dtData = ds.Tables[0];
                 DataTable dtDate = ds.Tables[1];
 
-                switch (arg_type)
-                {
-                    case "D":
-                        lblHeader.Text = _strHeader + " (" + dtDate.Rows[0]["SDATE"].ToString() + ")";
-                        break;
-                    case "W":
-                        lblHeader.Text = _strHeader + " (" + dtDate.Rows[0]["SDATE"].ToString() + " ~ " + dtDate.Rows[0]["EDATE"].ToString() + ")";
-                        break;
-                    case "M":
-                        lblHeader.Text = _strHeader + " (" + dtDate.Rows[0]["SDATE"].ToString() + " ~ " + dtDate.Rows[0]["EDATE"].ToString() + ")";
-                        break;
-                }
+                //switch (arg_type)
+                //{
+                //    case "D":
+                //        lblHeader.Text = _strHeader + " (" + dtDate.Rows[0]["SDATE"].ToString() + ")";
+                //        break;
+                //    case "W":
+                //        lblHeader.Text = _strHeader + " (" + dtDate.Rows[0]["SDATE"].ToString() + " ~ " + dtDate.Rows[0]["EDATE"].ToString() + ")";
+                //        break;
+                //    case "M":
+                //        lblHeader.Text = _strHeader + " (" + dtDate.Rows[0]["SDATE"].ToString() + " ~ " + dtDate.Rows[0]["EDATE"].ToString() + ")";
+                //        break;
+                //}
 
 
                 chartControl1.DataSource = dtData;
@@ -85,18 +85,66 @@ namespace FORM
 
         private void SetHeader(string arg_type)
         {
+            rdTop20.Text = "Issue By Machine";
             switch (arg_type)
             {
                 case "D":
-                    lblHeader.Text = _strHeader + " (" + DateTime.Now.ToString("yyyy-MM-dd") + ")";
+                    
+                    rdByDay.Text = "Issue By Day";
                     break;
                 case "W":
-                    lblHeader.Text = _strHeader + " (" + DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd") + " ~ " + DateTime.Now.ToString("yyyy-MM-dd") + ")";
+                  
+                    rdByDay.Text = "Issue By Week";
                     break;
                 case "M":
-                    lblHeader.Text = _strHeader + " (" + DateTime.Now.AddDays(-30).ToString("yyyy-MM-dd") + " ~ " + DateTime.Now.ToString("yyyy-MM-dd") + ")";
+                   
+                    rdByDay.Text = "Issue By Month";
                     break;
             }
+
+            if (rdTop20.Checked)
+            {
+                switch (arg_type)
+                {
+                    case "D":
+                        lblHeader.Text = _strHeader + " (" + DateTime.Now.ToString("yyyy-MM-dd") + ")";
+                        break;
+                    case "W":
+                        lblHeader.Text = _strHeader + " (" + DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd") + " ~ " + DateTime.Now.ToString("yyyy-MM-dd") + ")";
+                        break;
+                    case "M":
+                        lblHeader.Text = _strHeader + " (" + DateTime.Now.AddDays(-30).ToString("yyyy-MM-dd") + " ~ " + DateTime.Now.ToString("yyyy-MM-dd") + ")";
+                        break;
+                    default:
+                        lblHeader.Text = _strHeader;
+                        break;
+                }
+            }
+            else
+            {
+                lblHeader.Text = _strHeader;              
+            }
+            
+        }
+
+        private void LoadForm()
+        {
+            
+            SetButtonClick(_strType);
+            SetHeader(_strType);
+            if (rdTop20.Checked)
+            {
+                SetData(_strType);
+            }
+            else
+            {
+                uc_compare_week._strType = _strType;
+                
+                uc_compare_week.InitUc();
+                uc_compare_week.SetData();
+                
+            }
+            
         }
 
 
@@ -121,6 +169,17 @@ namespace FORM
                     break;
             }
         }
+
+        private void InitCompare()
+        {
+            pnBody2.Visible = false;
+            pnBody2.Dock = DockStyle.Fill;
+            uc_compare_week.Dock = DockStyle.Fill;
+            pnBody2.Controls.Add(uc_compare_week);
+        }
+
+
+
 
         #region DB
         private DataSet Data_Select(string argType, string argDate = "")
@@ -178,6 +237,35 @@ namespace FORM
             return retDS.Tables[0];
         }
 
+        private DataSet Data_Select_Compare(string argType, string argDate = "")
+        {
+            COM.OraDB MyOraDB = new COM.OraDB();
+
+            MyOraDB.ReDim_Parameter(4);
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.PM_SELECT_COMPARE";
+
+            MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
+            MyOraDB.Parameter_Name[1] = "ARG_DATE";
+            MyOraDB.Parameter_Name[2] = "OUT_CURSOR";
+            MyOraDB.Parameter_Name[3] = "OUT_CURSOR2";
+
+            MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
+            MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
+
+            MyOraDB.Parameter_Values[0] = argType;
+            MyOraDB.Parameter_Values[1] = argDate;
+            MyOraDB.Parameter_Values[2] = "";
+            MyOraDB.Parameter_Values[3] = "";
+
+            MyOraDB.Add_Select_Parameter(true);
+            DataSet retDS = MyOraDB.Exe_Select_Procedure();
+            if (retDS == null) return null;
+
+            return retDS;
+        }
+
         #endregion DB
 
 
@@ -203,11 +291,10 @@ namespace FORM
         {
             if (Visible)
             {
+                InitCompare();
                 timer1.Start();
                 _strType = "D";
-                SetHeader("D");
-                SetButtonClick("D");
-                SetData("D");
+                LoadForm();
             }
             else
             {
@@ -226,25 +313,19 @@ namespace FORM
         private void cmDay_Click(object sender, EventArgs e)
         {
             _strType = "D";
-            SetHeader("D");
-            SetButtonClick("D");
-            SetData("D");
+            LoadForm();
         }
 
         private void cmdWeek_Click(object sender, EventArgs e)
         {
             _strType = "W";
-            SetHeader("W");
-            SetButtonClick("W");
-            SetData("W");
+            LoadForm();
         }
 
         private void cmdMonth_Click(object sender, EventArgs e)
         {
             _strType = "M";
-            SetHeader("M");
-            SetButtonClick("M");
-            SetData("M");
+            LoadForm();
         }
 
         private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
@@ -270,23 +351,23 @@ namespace FORM
                     SaveDlg.Filter = "Excel Files (*.xlsx)|*.xlsx";
                     if (SaveDlg.ShowDialog() == DialogResult.OK)
                     {
-                        gridControl2.DataSource = Data_Select_Machine(_strType, "");
+                        grdExportDetail.DataSource = Data_Select_Machine(_strType, "");
 
-                        for (int i = 0; i < gridView2.Columns.Count; i++)
+                        for (int i = 0; i < grvExportDetail.Columns.Count; i++)
                         {
 
-                            gridView2.Columns[i].OptionsColumn.ReadOnly = true;
-                            gridView2.Columns[i].OptionsColumn.AllowEdit = false;
+                            grvExportDetail.Columns[i].OptionsColumn.ReadOnly = true;
+                            grvExportDetail.Columns[i].OptionsColumn.AllowEdit = false;
                             if (i <= 4)
                             {
-                                gridView2.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                                gridView2.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+                                grvExportDetail.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                                grvExportDetail.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
                             }
                             if (i == 4)
-                                gridView2.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+                                grvExportDetail.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
                         }
 
-                        gridView2.ExportToXlsx(SaveDlg.FileName);
+                        grvExportDetail.ExportToXlsx(SaveDlg.FileName);
                         MessageBox.Show("Export Success!");
                     }
                 }
@@ -307,8 +388,8 @@ namespace FORM
                     SaveDlg.Filter = "Excel Files (*.xlsx)|*.xlsx";
                     if (SaveDlg.ShowDialog() == DialogResult.OK)
                     {
-                        gridControl3.DataSource = Data_Select(_strType, "1").Tables[0];
-                        gridView3.ExportToXlsx(SaveDlg.FileName);
+                        grdExportIssue.DataSource = Data_Select(_strType, "1").Tables[0];
+                        grvExportIssue.ExportToXlsx(SaveDlg.FileName);
                         MessageBox.Show("Export Success!");
                     }
                 }
@@ -319,6 +400,26 @@ namespace FORM
             }
 
 
+        }
+
+
+        private void rdTop20_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdTop20.Checked)
+            {
+                pnBody2.Visible = false;
+                pnBody1.Visible = true;
+                LoadForm();
+            }
+            else
+            {
+                uc_compare_week._strType = _strType;
+                SetHeader("");
+                pnBody2.Visible = true;
+                pnBody1.Visible = false;
+
+                
+            }
         }
     }
 }

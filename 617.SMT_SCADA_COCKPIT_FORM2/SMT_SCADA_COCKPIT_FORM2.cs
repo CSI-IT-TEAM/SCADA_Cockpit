@@ -19,10 +19,19 @@ namespace FORM
         string _strType = "D";
         int _time = 0;
 
-        private void SetData(string arg_type)
+        private void SetData(string arg_type, bool arg_load = true)
         {
             try
             {
+                if(arg_load)
+                {
+                    rdTop20.Checked = true;
+                    pnBody2.Visible = false;
+                    pnBody1.Visible = true;
+                }
+                
+                
+
                 chartControl1.DataSource = null;
                 DataSet ds = Data_Select(arg_type);
                 if (ds == null || ds.Tables.Count == 0) return;
@@ -90,7 +99,7 @@ namespace FORM
             {
                 case "D":
                     
-                    rdByDay.Text = "Issue By Day";
+                    rdByDay.Text = "Issue Average By Day";
                     break;
                 case "W":
                   
@@ -132,19 +141,22 @@ namespace FORM
             
             SetButtonClick(_strType);
             SetHeader(_strType);
-            if (rdTop20.Checked)
-            {
-                SetData(_strType);
-            }
-            else
-            {
-                uc_compare_week._strType = _strType;
-                
-                uc_compare_week.InitUc();
-                uc_compare_week.SetData();
-                
-            }
             
+            SetData(_strType);
+
+            //if (rdTop20.Checked)
+            //{
+            //    SetData(_strType);
+            //}
+            //else
+            //{
+            //    uc_compare_week._strType = _strType;
+
+            //    uc_compare_week.InitUc();
+            //    uc_compare_week.SetData();
+
+            //}
+
         }
 
 
@@ -156,16 +168,22 @@ namespace FORM
                     cmdDay.Enabled = false;
                     cmdWeek.Enabled = true;
                     cmdMonth.Enabled = true;
+                    rdByDay.Visible = true;
+                    rdTop20.Visible = true;
                     break;
                 case "W":
                     cmdDay.Enabled = true;
                     cmdWeek.Enabled = false;
                     cmdMonth.Enabled = true;
+                    rdByDay.Visible = false;
+                    rdTop20.Visible = false;
                     break;
                 case "M":
                     cmdDay.Enabled = true;
                     cmdWeek.Enabled = true;
                     cmdMonth.Enabled = false;
+                    rdByDay.Visible = false;
+                    rdTop20.Visible = false;
                     break;
             }
         }
@@ -277,7 +295,7 @@ namespace FORM
             if(_time >=30)
             {
                 _time = 0;
-                SetData(_strType);
+                SetData(_strType, false);
             }
             
         }
@@ -402,24 +420,29 @@ namespace FORM
 
         }
 
-
-        private void rdTop20_CheckedChanged(object sender, EventArgs e)
+        private void rdByDay_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdTop20.Checked)
-            {
-                pnBody2.Visible = false;
-                pnBody1.Visible = true;
-                LoadForm();
-            }
-            else
+            if (rdByDay.Checked)
             {
                 uc_compare_week._strType = _strType;
                 SetHeader("");
                 pnBody2.Visible = true;
                 pnBody1.Visible = false;
+                cmdDay.Visible = false;
+                cmdWeek.Visible = false;
+                cmdMonth.Visible = false;
 
-                
+                //uc_compare_week.InitUc();
+                // uc_compare_week.SetData();
             }
+            else
+            {
+                cmdDay.Visible = true;
+                cmdWeek.Visible = true;
+                cmdMonth.Visible = true;
+                LoadForm();
+            }
+            
         }
     }
 }

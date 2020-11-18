@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series7 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel4 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView4 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
-            DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView4 = new DevExpress.XtraCharts.LineSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle4 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_COCKPIT_FORM2));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.pnControl = new System.Windows.Forms.Panel();
+            this.rdTop20 = new System.Windows.Forms.RadioButton();
+            this.rdByDay = new System.Windows.Forms.RadioButton();
             this.chkCompare = new System.Windows.Forms.CheckBox();
             this.cmdWeek = new System.Windows.Forms.Button();
             this.cmdMonth = new System.Windows.Forms.Button();
@@ -55,7 +56,7 @@
             this.pnExport = new System.Windows.Forms.Panel();
             this.cmdExportDetail = new System.Windows.Forms.Button();
             this.cmdExportIssue = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.pnBody1 = new System.Windows.Forms.Panel();
             this.pnGrid = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -91,15 +92,13 @@
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnC = new System.Windows.Forms.Panel();
             this.pnBody2 = new System.Windows.Forms.Panel();
-            this.rdByDay = new System.Windows.Forms.RadioButton();
-            this.rdTop20 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
             this.pnControl.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnExport.SuspendLayout();
@@ -119,19 +118,19 @@
             this.chartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnLoad;
             this.chartControl1.AppearanceNameSerializable = "Chameleon";
             this.chartControl1.DataBindings = null;
-            xyDiagram4.AxisX.Label.Angle = -45;
-            xyDiagram4.AxisX.Title.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram4.AxisX.Title.Text = "Machine";
-            xyDiagram4.AxisX.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            xyDiagram4.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram4.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram4.AxisY.Label.Font = new System.Drawing.Font("Tahoma", 20F);
-            xyDiagram4.AxisY.Title.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram4.AxisY.Title.Text = "Issue Times (Count)";
-            xyDiagram4.AxisY.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            xyDiagram4.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram4.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram4;
+            xyDiagram1.AxisX.Label.Angle = -45;
+            xyDiagram1.AxisX.Title.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisX.Title.Text = "Machine";
+            xyDiagram1.AxisX.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("Tahoma", 20F);
+            xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisY.Title.Text = "Issue Times (Count)";
+            xyDiagram1.AxisY.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Left;
             this.chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
@@ -143,28 +142,28 @@
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.PaletteName = "Marquee";
-            sideBySideBarSeriesLabel4.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            series7.Label = sideBySideBarSeriesLabel4;
-            series7.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series7.Name = "Stitching 2";
-            sideBySideBarSeriesView4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(240)))));
-            sideBySideBarSeriesView4.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Solid;
-            series7.View = sideBySideBarSeriesView4;
-            series8.Name = "Target";
-            lineSeriesView4.Color = System.Drawing.Color.LimeGreen;
-            lineSeriesView4.LineMarkerOptions.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(208)))), ((int)(((byte)(80)))));
-            lineSeriesView4.LineStyle.Thickness = 3;
-            lineSeriesView4.MarkerVisibility = DevExpress.Utils.DefaultBoolean.False;
-            series8.View = lineSeriesView4;
+            sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
+            series1.Label = sideBySideBarSeriesLabel1;
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Stitching 2";
+            sideBySideBarSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(240)))));
+            sideBySideBarSeriesView1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Solid;
+            series1.View = sideBySideBarSeriesView1;
+            series2.Name = "Target";
+            lineSeriesView1.Color = System.Drawing.Color.LimeGreen;
+            lineSeriesView1.LineMarkerOptions.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(208)))), ((int)(((byte)(80)))));
+            lineSeriesView1.LineStyle.Thickness = 3;
+            lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.False;
+            series2.View = lineSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series7,
-        series8};
+        series1,
+        series2};
             this.chartControl1.Size = new System.Drawing.Size(1888, 548);
             this.chartControl1.TabIndex = 12;
-            chartTitle4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle4.Text = "Top 20 Machine Have Many Issue";
+            chartTitle1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartTitle1.Text = "Top 20 Machine Have Many Issue";
             this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle4});
+            chartTitle1});
             // 
             // pnControl
             // 
@@ -182,6 +181,31 @@
             this.pnControl.Name = "pnControl";
             this.pnControl.Size = new System.Drawing.Size(1888, 50);
             this.pnControl.TabIndex = 2;
+            // 
+            // rdTop20
+            // 
+            this.rdTop20.AutoSize = true;
+            this.rdTop20.Checked = true;
+            this.rdTop20.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.rdTop20.Location = new System.Drawing.Point(9, 7);
+            this.rdTop20.Name = "rdTop20";
+            this.rdTop20.Size = new System.Drawing.Size(203, 33);
+            this.rdTop20.TabIndex = 18;
+            this.rdTop20.TabStop = true;
+            this.rdTop20.Text = "Issue By Machine";
+            this.rdTop20.UseVisualStyleBackColor = true;
+            // 
+            // rdByDay
+            // 
+            this.rdByDay.AutoSize = true;
+            this.rdByDay.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.rdByDay.Location = new System.Drawing.Point(241, 7);
+            this.rdByDay.Name = "rdByDay";
+            this.rdByDay.Size = new System.Drawing.Size(239, 33);
+            this.rdByDay.TabIndex = 17;
+            this.rdByDay.Text = "Issue Average By Day";
+            this.rdByDay.UseVisualStyleBackColor = true;
+            this.rdByDay.CheckedChanged += new System.EventHandler(this.rdByDay_CheckedChanged);
             // 
             // chkCompare
             // 
@@ -376,9 +400,9 @@
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -519,9 +543,9 @@
             // grdExportDetail
             // 
             this.grdExportDetail.Font = new System.Drawing.Font("Calibri", 12.75F);
-            gridLevelNode3.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.grdExportDetail.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
+            gridLevelNode2});
             this.grdExportDetail.Location = new System.Drawing.Point(35, 6);
             this.grdExportDetail.MainView = this.grvExportDetail;
             this.grdExportDetail.Name = "grdExportDetail";
@@ -730,9 +754,9 @@
             // grdExportIssue
             // 
             this.grdExportIssue.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.grdExportIssue.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
+            gridLevelNode3});
             this.grdExportIssue.Location = new System.Drawing.Point(306, 0);
             this.grdExportIssue.MainView = this.grvExportIssue;
             this.grdExportIssue.Name = "grdExportIssue";
@@ -887,35 +911,9 @@
             this.pnBody2.TabIndex = 4;
             this.pnBody2.Visible = false;
             // 
-            // rdByDay
-            // 
-            this.rdByDay.AutoSize = true;
-            this.rdByDay.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.rdByDay.Location = new System.Drawing.Point(241, 7);
-            this.rdByDay.Name = "rdByDay";
-            this.rdByDay.Size = new System.Drawing.Size(154, 33);
-            this.rdByDay.TabIndex = 17;
-            this.rdByDay.Text = "Issue By Day";
-            this.rdByDay.UseVisualStyleBackColor = true;
-            // 
-            // rdTop20
-            // 
-            this.rdTop20.AutoSize = true;
-            this.rdTop20.Checked = true;
-            this.rdTop20.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.rdTop20.Location = new System.Drawing.Point(9, 7);
-            this.rdTop20.Name = "rdTop20";
-            this.rdTop20.Size = new System.Drawing.Size(203, 33);
-            this.rdTop20.TabIndex = 18;
-            this.rdTop20.TabStop = true;
-            this.rdTop20.Text = "Issue By Machine";
-            this.rdTop20.UseVisualStyleBackColor = true;
-            this.rdTop20.CheckedChanged += new System.EventHandler(this.rdTop20_CheckedChanged);
-            // 
             // SMT_SCADA_COCKPIT_FORM2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1888, 1042);
             this.Controls.Add(this.pnBody2);
             this.Controls.Add(this.pnBody1);
@@ -924,12 +922,12 @@
             this.Name = "SMT_SCADA_COCKPIT_FORM2";
             this.Text = "SMT_SCADA_COCKPIT_FORM2";
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_COCKPIT_FORM2_VisibleChanged);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.pnControl.ResumeLayout(false);
             this.pnControl.PerformLayout();

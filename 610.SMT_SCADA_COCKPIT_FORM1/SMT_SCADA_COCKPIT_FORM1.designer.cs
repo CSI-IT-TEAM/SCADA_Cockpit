@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_COCKPIT_FORM1));
             this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.tmrTime = new System.Windows.Forms.Timer();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdF1 = new System.Windows.Forms.Button();
             this.cmdF2 = new System.Windows.Forms.Button();
@@ -76,7 +77,7 @@
             this.cmdPm1 = new System.Windows.Forms.Button();
             this.cmdDowntime = new System.Windows.Forms.Button();
             this.btnEnergy = new System.Windows.Forms.Button();
-            this.tmrBlink = new System.Windows.Forms.Timer();
+            this.tmrBlink = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).BeginInit();
@@ -796,8 +797,8 @@
             // btnEnergy
             // 
             this.btnEnergy.BackColor = System.Drawing.Color.Transparent;
-            this.btnEnergy.BackgroundImage = global::FORM.Properties.Resources.energy;
-            this.btnEnergy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEnergy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEnergy.BackgroundImage")));
+            this.btnEnergy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEnergy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEnergy.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEnergy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -809,8 +810,6 @@
             this.btnEnergy.TabIndex = 89;
             this.btnEnergy.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEnergy.UseVisualStyleBackColor = false;
-            this.btnEnergy.Visible = false;
-            this.btnEnergy.Click += new System.EventHandler(this.btnEnergy_Click);
             // 
             // tmrBlink
             // 

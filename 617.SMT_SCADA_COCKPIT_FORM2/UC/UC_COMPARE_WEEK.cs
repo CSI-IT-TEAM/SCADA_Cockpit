@@ -26,7 +26,9 @@ namespace FORM.UC
         {
             try
             {
+                
                 Cursor.Current = Cursors.WaitCursor;
+                InitUc();
                 DataSet ds = Data_Select_Compare(_strType);
                 if (ds == null) return;
                 DataTable dt = ds.Tables[0];
@@ -62,12 +64,16 @@ namespace FORM.UC
             else if (_strType == "D")
             {
                 pnGrid.Visible = false;
-                setChartTitle("Issue Machine By Day");
+                XYDiagram diagram = (XYDiagram)chartControl1.Diagram;
+                diagram.AxisX.Title.Text = "Days";
+                setChartTitle("Issue Machine Average By Day");
 
             }
             else
             {
                 pnGrid.Visible = false;
+                XYDiagram diagram = (XYDiagram)chartControl1.Diagram;
+                diagram.AxisX.Title.Text = "Days";
                 setChartTitle("Issue Machine By Month");
             }
         }
@@ -143,7 +149,7 @@ namespace FORM.UC
         {
             if(Visible)
             {
-                _iReload = 58;
+                _iReload = 59;
                 InitUc();
                 tmrLoad.Start();
             }

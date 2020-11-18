@@ -82,7 +82,7 @@ namespace FORM
                 //format
                 //lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
                 lineSeriesView1.LineStyle.Thickness = 5;
-                lineSeriesView1.Color = Color.Blue;
+                lineSeriesView1.Color = Color.Red;
                 series.View = lineSeriesView1;
                 Series series2 = new Series("SV MAX", ViewType.Line);
                 series2.ChangeView(ViewType.Line);
@@ -92,7 +92,7 @@ namespace FORM
                 series2.CrosshairLabelPattern = "{V:#,#}";
                 //format
                 //  lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-                lineSeriesView2.Color = Color.Orange;
+                lineSeriesView2.Color = Color.Red;
                 lineSeriesView2.LineStyle.Thickness = 5;
                 series2.View = lineSeriesView2;
 
@@ -255,9 +255,9 @@ namespace FORM
                 //series4.DataSource = dataPoints;
                 //series4.ArgumentDataMember = "sArgument";
                 //series4.ValueDataMembers.AddRange("RATIO");
-                //series4.CrosshairLabelPattern = "{V:#.0}%";
+                //seri.es4.CrosshairLabelPattern = "{V:#.0}%";
                 ////pointSeriesLabel4.TextPattern = "{V:#.0}%";
-                //series4.LabelsVisibility = DefaultBoolean.True;
+                //series4LabelsVisibility = DefaultBoolean.True;
                 ////format
                 //lineSeriesView4.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
                 //lineSeriesView4.LineStyle.Thickness = 4;
@@ -464,16 +464,23 @@ namespace FORM
         }
 
 
-        private void PM_Detail_Check(bool arg_check)
+        private void PM_Detail_Check()
         {
-            if (arg_check)
+            if (rdPmHis.Checked)
             {
+                cmdDay.Visible = false;
+                cmdWeek.Visible = false;
+                cmdMonth.Visible = false;
                 gridControl1.Visible = true;
                 DataTable dt = Data_PM_Select("Q");
                 gridControl1.DataSource = dt;
             }
             else
             {
+                cmdDay.Visible = true;
+                cmdWeek.Visible = true;
+                cmdMonth.Visible = true;
+                
                 gridControl1.Visible = false;
             }
 
@@ -605,10 +612,10 @@ namespace FORM
             BindingChartData();
         }
 
-        private void chkPm_CheckedChanged(object sender, EventArgs e)
+        private void chkMachine_CheckedChanged(object sender, EventArgs e)
         {
             
-            PM_Detail_Check(chkPm.Checked);
+            PM_Detail_Check();
         }
 
         int iCount = 0;

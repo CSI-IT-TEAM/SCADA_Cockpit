@@ -40,7 +40,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chkPm = new System.Windows.Forms.CheckBox();
+            this.rdMachine = new System.Windows.Forms.RadioButton();
+            this.rdPmHis = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTxt2 = new System.Windows.Forms.Label();
             this.lblTxt1 = new System.Windows.Forms.Label();
@@ -58,7 +59,10 @@
             this.WO_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.WO_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PM_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DEFE_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SOLU_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PM_PIC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PM_STATUS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
@@ -132,7 +136,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.chkPm);
+            this.panel1.Controls.Add(this.rdMachine);
+            this.panel1.Controls.Add(this.rdPmHis);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cmdWeek);
             this.panel1.Controls.Add(this.cmdMonth);
@@ -145,18 +150,30 @@
             this.panel1.Size = new System.Drawing.Size(1422, 87);
             this.panel1.TabIndex = 4;
             // 
-            // chkPm
+            // rdMachine
             // 
-            this.chkPm.AutoSize = true;
-            this.chkPm.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPm.Location = new System.Drawing.Point(1010, 51);
-            this.chkPm.Name = "chkPm";
-            this.chkPm.Size = new System.Drawing.Size(108, 27);
-            this.chkPm.TabIndex = 15;
-            this.chkPm.Text = "PM Detail";
-            this.chkPm.UseVisualStyleBackColor = true;
-            this.chkPm.Visible = false;
-            this.chkPm.CheckedChanged += new System.EventHandler(this.chkPm_CheckedChanged);
+            this.rdMachine.AutoSize = true;
+            this.rdMachine.Checked = true;
+            this.rdMachine.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.rdMachine.Location = new System.Drawing.Point(1013, 46);
+            this.rdMachine.Name = "rdMachine";
+            this.rdMachine.Size = new System.Drawing.Size(185, 33);
+            this.rdMachine.TabIndex = 20;
+            this.rdMachine.TabStop = true;
+            this.rdMachine.Text = "Machine Status";
+            this.rdMachine.UseVisualStyleBackColor = true;
+            this.rdMachine.CheckedChanged += new System.EventHandler(this.chkMachine_CheckedChanged);
+            // 
+            // rdPmHis
+            // 
+            this.rdPmHis.AutoSize = true;
+            this.rdPmHis.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.rdPmHis.Location = new System.Drawing.Point(1245, 46);
+            this.rdPmHis.Name = "rdPmHis";
+            this.rdPmHis.Size = new System.Drawing.Size(65, 33);
+            this.rdPmHis.TabIndex = 19;
+            this.rdPmHis.Text = "PM";
+            this.rdPmHis.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -312,7 +329,10 @@
             this.WO_ID,
             this.WO_DATE,
             this.PM_DATE,
-            this.PM_PIC});
+            this.DEFE_DATE,
+            this.SOLU_DATE,
+            this.PM_PIC,
+            this.PM_STATUS});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -337,7 +357,7 @@
             this.SEQ.Name = "SEQ";
             this.SEQ.Visible = true;
             this.SEQ.VisibleIndex = 0;
-            this.SEQ.Width = 89;
+            this.SEQ.Width = 55;
             // 
             // WO_ID
             // 
@@ -355,10 +375,12 @@
             this.WO_ID.Name = "WO_ID";
             this.WO_ID.Visible = true;
             this.WO_ID.VisibleIndex = 1;
-            this.WO_ID.Width = 389;
+            this.WO_ID.Width = 249;
             // 
             // WO_DATE
             // 
+            this.WO_DATE.AppearanceCell.Options.UseTextOptions = true;
+            this.WO_DATE.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.WO_DATE.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.WO_DATE.AppearanceHeader.Options.UseFont = true;
             this.WO_DATE.AppearanceHeader.Options.UseTextOptions = true;
@@ -370,10 +392,12 @@
             this.WO_DATE.Name = "WO_DATE";
             this.WO_DATE.Visible = true;
             this.WO_DATE.VisibleIndex = 2;
-            this.WO_DATE.Width = 309;
+            this.WO_DATE.Width = 150;
             // 
             // PM_DATE
             // 
+            this.PM_DATE.AppearanceCell.Options.UseTextOptions = true;
+            this.PM_DATE.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.PM_DATE.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.PM_DATE.AppearanceHeader.Options.UseFont = true;
             this.PM_DATE.AppearanceHeader.Options.UseTextOptions = true;
@@ -384,8 +408,38 @@
             this.PM_DATE.FieldNameSortGroup = "PM_DATE";
             this.PM_DATE.Name = "PM_DATE";
             this.PM_DATE.Visible = true;
-            this.PM_DATE.VisibleIndex = 3;
-            this.PM_DATE.Width = 377;
+            this.PM_DATE.VisibleIndex = 5;
+            this.PM_DATE.Width = 150;
+            // 
+            // DEFE_DATE
+            // 
+            this.DEFE_DATE.AppearanceCell.Options.UseTextOptions = true;
+            this.DEFE_DATE.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DEFE_DATE.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.DEFE_DATE.AppearanceHeader.Options.UseFont = true;
+            this.DEFE_DATE.AppearanceHeader.Options.UseTextOptions = true;
+            this.DEFE_DATE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DEFE_DATE.Caption = "Start PM";
+            this.DEFE_DATE.FieldName = "DEFE_DATE";
+            this.DEFE_DATE.Name = "DEFE_DATE";
+            this.DEFE_DATE.Visible = true;
+            this.DEFE_DATE.VisibleIndex = 3;
+            this.DEFE_DATE.Width = 155;
+            // 
+            // SOLU_DATE
+            // 
+            this.SOLU_DATE.AppearanceCell.Options.UseTextOptions = true;
+            this.SOLU_DATE.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.SOLU_DATE.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.SOLU_DATE.AppearanceHeader.Options.UseFont = true;
+            this.SOLU_DATE.AppearanceHeader.Options.UseTextOptions = true;
+            this.SOLU_DATE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.SOLU_DATE.Caption = "End PM";
+            this.SOLU_DATE.FieldName = "SOLU_DATE";
+            this.SOLU_DATE.Name = "SOLU_DATE";
+            this.SOLU_DATE.Visible = true;
+            this.SOLU_DATE.VisibleIndex = 4;
+            this.SOLU_DATE.Width = 150;
             // 
             // PM_PIC
             // 
@@ -401,8 +455,21 @@
             this.PM_PIC.FieldNameSortGroup = "PM_PIC";
             this.PM_PIC.Name = "PM_PIC";
             this.PM_PIC.Visible = true;
-            this.PM_PIC.VisibleIndex = 4;
-            this.PM_PIC.Width = 456;
+            this.PM_PIC.VisibleIndex = 6;
+            this.PM_PIC.Width = 330;
+            // 
+            // PM_STATUS
+            // 
+            this.PM_STATUS.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.PM_STATUS.AppearanceHeader.Options.UseFont = true;
+            this.PM_STATUS.AppearanceHeader.Options.UseTextOptions = true;
+            this.PM_STATUS.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PM_STATUS.Caption = "PM Status";
+            this.PM_STATUS.FieldName = "PM_STATUS";
+            this.PM_STATUS.Name = "PM_STATUS";
+            this.PM_STATUS.Visible = true;
+            this.PM_STATUS.VisibleIndex = 7;
+            this.PM_STATUS.Width = 181;
             // 
             // chartControl1
             // 
@@ -491,7 +558,6 @@
         private System.Windows.Forms.Label lblTxt3;
         private System.Windows.Forms.Label lblTxt2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.CheckBox chkPm;
         private System.Windows.Forms.Panel pn_body;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -500,5 +566,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn WO_ID;
         private DevExpress.XtraGrid.Columns.GridColumn PM_DATE;
         private DevExpress.XtraGrid.Columns.GridColumn PM_PIC;
+        private System.Windows.Forms.RadioButton rdMachine;
+        private System.Windows.Forms.RadioButton rdPmHis;
+        private DevExpress.XtraGrid.Columns.GridColumn DEFE_DATE;
+        private DevExpress.XtraGrid.Columns.GridColumn SOLU_DATE;
+        private DevExpress.XtraGrid.Columns.GridColumn PM_STATUS;
     }
 }

@@ -82,7 +82,7 @@ namespace FORM
                 //format
                 //lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
                 lineSeriesView1.LineStyle.Thickness = 5;
-                lineSeriesView1.Color = Color.Red;
+                lineSeriesView1.Color = Color.Green;
                 series.View = lineSeriesView1;
                 Series series2 = new Series("SV MAX", ViewType.Line);
                 series2.ChangeView(ViewType.Line);
@@ -92,7 +92,7 @@ namespace FORM
                 series2.CrosshairLabelPattern = "{V:#,#}";
                 //format
                 //  lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-                lineSeriesView2.Color = Color.Red;
+                lineSeriesView2.Color = Color.Green;
                 lineSeriesView2.LineStyle.Thickness = 5;
                 series2.View = lineSeriesView2;
 
@@ -105,7 +105,7 @@ namespace FORM
                 //format
                 // lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
                 lineSeriesView3.LineStyle.Thickness = 5;
-                lineSeriesView3.Color = Color.Green;
+                lineSeriesView3.Color = Color.Red;
                 series3.View = lineSeriesView3;
 
                 //Series series4 = new Series("Set Ratio", ViewType.Line);
@@ -224,7 +224,7 @@ namespace FORM
                 //format
                 //lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
                 lineSeriesView1.LineStyle.Thickness = 5;
-                lineSeriesView1.Color = Color.Blue;
+                lineSeriesView1.Color = Color.Green;
                 series.View = lineSeriesView1;
                 Series series2 = new Series("SV MAX", ViewType.Line);
                 series2.ChangeView(ViewType.Line);
@@ -234,7 +234,7 @@ namespace FORM
                 series2.CrosshairLabelPattern = "{V:#,#}";
                 //format
                 //  lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-                lineSeriesView2.Color = Color.Orange;
+                lineSeriesView2.Color = Color.Green;
                 lineSeriesView2.LineStyle.Thickness = 5;
                 series2.View = lineSeriesView2;
 
@@ -247,7 +247,7 @@ namespace FORM
                 //format
                 // lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
                 lineSeriesView3.LineStyle.Thickness = 5;
-                lineSeriesView3.Color = Color.Green;
+                lineSeriesView3.Color = Color.Red;
                 series3.View = lineSeriesView3;
 
                 //Series series4 = new Series("Set Ratio", ViewType.Line);
@@ -309,12 +309,12 @@ namespace FORM
                 //myAxisY.Color = Color.Orange;
 
                 //legend
-                chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-                chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-                chartControl1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
-                chartControl1.Legend.Name = "Default Legend";
-                chartControl1.Legend.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                chartControl1.Legend.Visibility = DefaultBoolean.True;
+                //chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
+                //chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+                //chartControl1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+                //chartControl1.Legend.Name = "Default Legend";
+                //chartControl1.Legend.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                //chartControl1.Legend.Visibility = DefaultBoolean.True;
 
                 diagram.AxisX.VisualRange.Auto = false;
                 diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[0]["SET_TIME"], _dtDataPage.Rows[20]["SET_TIME"]);

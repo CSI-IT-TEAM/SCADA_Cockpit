@@ -580,7 +580,7 @@ namespace FORM
                 {
                     DataTable dt = Data_Select_Machine("", strArr[1], strArr[2], strArr[3]);
 
-                    pop._dtData = Data_Select_Machine("", strArr[1], strArr[2], strArr[3]); 
+                    pop._dtData = dt; 
                     pop.ShowDialog();
                 }
             }

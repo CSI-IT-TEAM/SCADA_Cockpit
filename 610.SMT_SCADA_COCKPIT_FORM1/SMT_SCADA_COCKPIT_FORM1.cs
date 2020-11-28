@@ -12,7 +12,7 @@ using System.Data.OleDb;
 using System.Diagnostics;
 //using JPlatform.Client.Controls;
 
-
+        
 namespace FORM
 {
     public partial class SMT_SCADA_COCKPIT_FORM1 : Form

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
@@ -56,7 +57,7 @@
             this.pnExport = new System.Windows.Forms.Panel();
             this.cmdExportDetail = new System.Windows.Forms.Button();
             this.cmdExportIssue = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnBody1 = new System.Windows.Forms.Panel();
             this.pnGrid = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -315,9 +316,9 @@
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblDate.Font = new System.Drawing.Font("Calibri", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(1628, 0);
+            this.lblDate.Location = new System.Drawing.Point(1653, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(260, 76);
+            this.lblDate.Size = new System.Drawing.Size(235, 76);
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "2020-07-22\r\n10:00:00";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -332,7 +333,7 @@
             this.lblHeader.LineVisible = true;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1895, 76);
+            this.lblHeader.Size = new System.Drawing.Size(1622, 76);
             this.lblHeader.TabIndex = 3;
             this.lblHeader.Text = "        Preventative Maintenance";
             // 

@@ -75,12 +75,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auto_Download.cs" />
-    <Compile Include="DBLog.cs" />
     <Compile Include="FormFlash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormFlash.Designer.cs">
       <DependentUpon>FormFlash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Small.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Small.Designer.cs">
+      <DependentUpon>Main_Small.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -92,6 +97,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormFlash.resx">
       <DependentUpon>FormFlash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Small.resx">
+      <DependentUpon>Main_Small.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

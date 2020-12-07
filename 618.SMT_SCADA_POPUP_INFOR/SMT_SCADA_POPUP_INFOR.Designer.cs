@@ -1,4 +1,6 @@
-﻿namespace FORM
+﻿using System.Threading.Tasks;
+
+namespace FORM
 {
     partial class SMT_SCADA_POPUP_INFOR
     {
@@ -225,7 +227,7 @@
             this.PM.Controls.Add(this.gridPM);
             this.PM.Name = "PM";
             this.PM.Size = new System.Drawing.Size(1376, 421);
-            this.PM.Text = "    PM Schedule      ";
+            this.PM.Text = "   Smart Machine Check Schedule     ";
             // 
             // gridPM
             // 
@@ -758,7 +760,6 @@
             this.MinimizeBox = false;
             this.Name = "SMT_SCADA_POPUP_INFOR";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Load += new System.EventHandler(this.SMT_SCADA_POPUP_INFOR_Load);
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_COCKPIT_FORM2_VisibleChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnTop.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Data.OracleClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FORM
@@ -22,17 +23,18 @@ namespace FORM
         int iCount = 0;
         
         #region Function
-        private void SetData()
+        private async void SetData()
         {
             try
             {
-                DataSet ds = Data_Select();               
+                DataSet ds = await Data_Select_Sync();
                 Grid.DataSource = ds.Tables[0];
                 SetText(ds.Tables[1]);
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.ToString());
+                
             }
         }
 
@@ -89,38 +91,38 @@ namespace FORM
         #endregion
 
         #region DB
-        private DataSet Data_Select()
+
+        private async Task<DataSet>  Data_Select_Sync()
         {
-            COM.OraDB MyOraDB = new COM.OraDB();
+            return await Task.Run(() =>{
+                COM.OraDB MyOraDB = new COM.OraDB();
 
-            MyOraDB.ShowErr = true;
+                MyOraDB.ReDim_Parameter(4);
+                MyOraDB.Process_Name = "MES.P_SCADA_MACHINE_INFOR";
 
-            MyOraDB.ReDim_Parameter(4);
-            MyOraDB.Process_Name = "MES.P_SCADA_MACHINE_INFOR";
+                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
+                MyOraDB.Parameter_Name[1] = "ARG_MACHINE";
+                MyOraDB.Parameter_Name[2] = "OUT_CURSOR";
+                MyOraDB.Parameter_Name[3] = "OUT_CURSOR2";
 
-            MyOraDB.Parameter_Name[0] = "ARG_TYPE";
-            MyOraDB.Parameter_Name[1] = "ARG_MACHINE";
-            MyOraDB.Parameter_Name[2] = "OUT_CURSOR";
-            MyOraDB.Parameter_Name[3] = "OUT_CURSOR2";
+                MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
+                MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
 
-            MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
-            MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
-            MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
-            MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
+                MyOraDB.Parameter_Values[0] = _type;
+                MyOraDB.Parameter_Values[1] = _machine;
+                MyOraDB.Parameter_Values[2] = "";
+                MyOraDB.Parameter_Values[3] = "";
 
-            MyOraDB.Parameter_Values[0] = _type;
-            MyOraDB.Parameter_Values[1] = _machine;
-            MyOraDB.Parameter_Values[2] = "";
-            MyOraDB.Parameter_Values[3] = "";
+                MyOraDB.Add_Select_Parameter(true);
+                DataSet retDS = MyOraDB.Exe_Select_Procedure();
+                if (retDS == null) return null;
 
-            MyOraDB.Add_Select_Parameter(true);
-            DataSet retDS = MyOraDB.Exe_Select_Procedure();
-            if (retDS == null) return null;
-
-            return retDS;
+                return retDS;
+            });
+            
         }
-
-
         #endregion DB
 
         #region Event
@@ -131,10 +133,11 @@ namespace FORM
             {
                 if (Visible)
                 {
-                    iCount = 58;
+                    iCount = 59;
                     tabControl.SelectedTabPageIndex = 0;
                     _machine = System.IO.File.ReadAllText(ComVar.Var._strValue5);
-                    timer1.Start();
+                    SetData();
+                    //timer1.Start();
                 }
                 else
                 {
@@ -155,7 +158,7 @@ namespace FORM
                 if (iCount == 60)
                 {
                     iCount = 0;
-                    SetData();
+                    
                 }
             }
             catch (Exception ex)
@@ -168,16 +171,12 @@ namespace FORM
 
         #endregion
 
-        private void SMT_SCADA_POPUP_INFOR_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void tabControl_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
             _type = tabControl.SelectedTabPage.Name;
-            SetData();
             iCount = 0;
+            SetData();
+            
         }
     }
 

@@ -795,7 +795,7 @@ namespace FORM
         private void btnEnergy_Click(object sender, EventArgs e)
         {
             ComVar.Var._IsBack = true;
-            ComVar.Var.callForm = "682";
+            ComVar.Var.callForm = "684";
         }
     }
 

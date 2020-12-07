@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DEB12E47-06F8-4395-A2F0-77184DBCF446}</ProjectGuid>
+    <ProjectGuid>{65A2A3E4-5250-40BB-9F2C-361C178DBC68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FORM</RootNamespace>
-    <AssemblyName>SMT_SCADA_POPUP_INFOR</AssemblyName>
+    <AssemblyName>SMT_SCADA_ANALYSIS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -39,39 +39,44 @@
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MAIN\bin\Debug\References\DevExpress.Charts.v17.1.Core.dll</HintPath>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Charts.v17.1.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MAIN\bin\Debug\References\DevExpress.Data.v17.1.dll</HintPath>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Data.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Printing.v17.1.Core.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MAIN\bin\Debug\References\DevExpress.Utils.v17.1.dll</HintPath>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.Utils.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraCharts.v17.1.dll</HintPath>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraCharts.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraCharts.v17.1.UI.dll</HintPath>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraCharts.v17.1.UI.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraEditors.v17.1.dll</HintPath>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraEditors.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraGauges.v17.1.Core.dll</HintPath>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraGauges.v17.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v17.1.Win, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraGauges.v17.1.Win.dll</HintPath>
-    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v17.1.Win, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraGrid.v17.1.dll</HintPath>
+      <HintPath>..\MAIN\bin\Debug\DevExpress.XtraGrid.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\99.Other\SCADA_POPUP_INFOR\SCADA_POPUP_INFOR\bin\Debug\References\DevExpress.XtraTreeList.v17.1.dll</HintPath>
     </Reference>
     <Reference Include="msdatasrc, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <SpecificVersion>False</SpecificVersion>
@@ -80,11 +85,12 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -101,6 +107,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ClassLib\RoundedRectangle.cs" />
+    <Compile Include="ClassLib\Var.cs" />
     <Compile Include="ClassLib\Globals.cs" />
     <Compile Include="ClassLib\GroupboxEx.cs">
       <SubType>Component</SubType>
@@ -111,41 +118,48 @@
     <Compile Include="ClassLib\TransparentPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="init.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SMT_SCADA_POPUP_INFOR.cs">
+    <Compile Include="SMT_SCADA_ANALYSIS_MENU.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SMT_SCADA_POPUP_INFOR.Designer.cs">
-      <DependentUpon>SMT_SCADA_POPUP_INFOR.cs</DependentUpon>
+    <Compile Include="SMT_SCADA_ANALYSIS_MENU.Designer.cs">
+      <DependentUpon>SMT_SCADA_ANALYSIS_MENU.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UC_Chart_Bar.cs">
+    <Compile Include="SMT_SCADA_ANALYSIS_MACHINE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_ANALYSIS_MACHINE.Designer.cs">
+      <DependentUpon>SMT_SCADA_ANALYSIS_MACHINE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_COMPARE_DAY_MONTH.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UC_Chart_Bar.designer.cs">
-      <DependentUpon>UC_Chart_Bar.cs</DependentUpon>
+    <Compile Include="UC\UC_COMPARE_DAY_MONTH.designer.cs">
+      <DependentUpon>UC_COMPARE_DAY_MONTH.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UC_Factory.cs">
+    <Compile Include="UC\UC_COMPARE_WEEK.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UC_Chart_Pie.designer.cs">
-      <DependentUpon>UC_Factory.cs</DependentUpon>
+    <Compile Include="UC\UC_COMPARE_WEEK.designer.cs">
+      <DependentUpon>UC_COMPARE_WEEK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Machine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Machine.designer.cs">
+      <DependentUpon>UC_Machine.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UC_DWMY.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UC_DWMY.designer.cs">
       <DependentUpon>UC_DWMY.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\UC_Chart_Donut.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC_Chart_Donut.designer.cs">
-      <DependentUpon>UC_Chart_Donut.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UC_MONTH_SELECTION.cs">
       <SubType>UserControl</SubType>
@@ -166,20 +180,23 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SMT_SCADA_POPUP_INFOR.resx">
-      <DependentUpon>SMT_SCADA_POPUP_INFOR.cs</DependentUpon>
+    <EmbeddedResource Include="SMT_SCADA_ANALYSIS_MENU.resx">
+      <DependentUpon>SMT_SCADA_ANALYSIS_MENU.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC_Chart_Bar.resx">
-      <DependentUpon>UC_Chart_Bar.cs</DependentUpon>
+    <EmbeddedResource Include="SMT_SCADA_ANALYSIS_MACHINE.resx">
+      <DependentUpon>SMT_SCADA_ANALYSIS_MACHINE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC_Chart_Pie.resx">
-      <DependentUpon>UC_Factory.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UC_COMPARE_DAY_MONTH.resx">
+      <DependentUpon>UC_COMPARE_DAY_MONTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_COMPARE_WEEK.resx">
+      <DependentUpon>UC_COMPARE_WEEK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Machine.resx">
+      <DependentUpon>UC_Machine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_DWMY.resx">
       <DependentUpon>UC_DWMY.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC_Chart_Donut.resx">
-      <DependentUpon>UC_Chart_Donut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_MONTH_SELECTION.resx">
       <DependentUpon>UC_MONTH_SELECTION.cs</DependentUpon>
@@ -211,12 +228,6 @@
       <Project>{992378c3-66a1-4e98-96f5-ce2b26e0cab2}</Project>
       <Name>Com</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\energy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ANDON2.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

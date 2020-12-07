@@ -15,7 +15,7 @@ namespace MAIN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-          //  Application.Run(new Main_Small());  
+         //   Application.Run(new Main_Small());  
             Application.Run(new Main());
         }
     }

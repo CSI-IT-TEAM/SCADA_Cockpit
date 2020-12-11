@@ -328,7 +328,7 @@
   <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA9kAAAN2CAYAAADt/krRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAADFNSURBVHhe7d1PiFX1//jx2QRBG1cRtDie6mslRlokSlIp
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAADFNSURBVHhe7d1PiFX1//jx2QRBG1cRtDie6mslRlokSlIp
         hdI/JAjnXO03YUQiCFIEQyAMSBiBGEUYRE0kIZZ37nfn0mVLly5d+t312dnqM7/7uvecmVHPpOnL+XPv
         4wWPT5/RmTtz79yRed7zfp8zYUzbdA8WO3oHi9fCXFVMd6tyJsx1ykt9l//B9b55AABYD/q/4/7V/2/b
         77ULup3yVPP7cHey2Nf8njw7VTxc//psjDHDkL5YFfsH8VyVs4N/RKryRv+/rf8AAQAALaryz/5/e/F7
@@ -545,7 +545,7 @@
   <data name="cmdMachine.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA9kAAAN2CAYAAADt/krRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAE8iSURBVHhe7d1NjBzneS96Lr3U0rtm61vWF7O6WgVenIWB
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAE8iSURBVHhe7d1NjBzneS96Lr3U0rtm61vWF7O6WgVenIWB
         bJSFYfZQEUX4S7AsWLJgmYZ9cXQXgXEQBEICBL7IIgQC5BpQOBzZECRDMCRDcCRDRz6EbPjwOAJMKIbA
         Iyg3cuz4Uk4cze2np4ocDt8hp99+qru6+/cAP8sznK7uruqP+tf7dUipUm0eG9y3dWzw8XBmNDi5ORo+
         Fc5sDF8Ye/kaLoxtAwDAMhif474//m/pvPaSzY3hN9vz4c2jg0+058mnjg8+0pw+K6XUTpA+PRrcPwnP
@@ -889,7 +889,7 @@
   <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA9kAAAN2CAYAAADt/krRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAFB7SURBVHhe7d1NjGTleS9wlixZsmTJkiW7mh4wXzbDADYe
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAFB7SURBVHhe7d1NjGTleS9wlixZsmTJkiW7mh4wXzbDADYe
         fDdsroSy6arJgA0yGmzxFRAZy8QMdFXTQcHCOAQchBgEIRjZeCxEGIJluLlxAolluDgf2E5iiGPRt5+q
         U9M9M2/PdJ16q+qtU79H+glmpuutz1N9/uf9OkupVLU6Kxe2lru7+trdryx1urf3tXtHljq9l7fV7n6w
         8d91AACYD92PNv6bPret7O707h6eD7c63cuOnycfXDu7On1WSqlhkO7tHXxhrK71v0Ta3Y83/pv48gEA

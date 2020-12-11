@@ -18,16 +18,12 @@ namespace FORM
             InitializeComponent();
             lblHeader.Text = _strHeader;
         }
-        private readonly string _strHeader = "       Analysis";
+        private readonly string _strHeader = "      Analysis Data      ";
         int _time = 0;
         
         DataTable _dtChart = null;
 
         #region Procedure( Name is begin with Po_)
-        private void LoadForm()
-        {
-            
-        }
 
         #endregion
 

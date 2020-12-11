@@ -131,7 +131,7 @@ namespace FORM
                 diagram.EnableAxisXScrolling = true;
                 diagram.AxisX.Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 diagram.DependentAxesYRange = DefaultBoolean.True;
-                //diagram.AxisY.WholeRange.AlwaysShowZeroLevel = false;
+                diagram.AxisY.WholeRange.AlwaysShowZeroLevel = true;
                 diagram.AxisY.Title.Text = "Values";
                 diagram.AxisY.WholeRange.MinValue = _iMinChart - 3;
                 diagram.AxisY.WholeRange.MaxValue = _iMaxChart + 3;
@@ -144,7 +144,7 @@ namespace FORM
                 
                 diagram.AxisY.Interlaced = false;
                 chartControl1.Series.Clear();
-                chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] { series, series2, series3 };
+                chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] { series3, series2, series };
 
                 //ADD SECONDARY AXISY
                // SecondaryAxisY myAxisY = new SecondaryAxisY("my X-Axis");
@@ -160,7 +160,7 @@ namespace FORM
                 //myAxisY.Title.Visibility = DefaultBoolean.True;
                 //myAxisY.Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 //myAxisY.Color = Color.Orange;
-
+                
                 //legend
                 chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
                 chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
@@ -221,6 +221,7 @@ namespace FORM
                 series.ArgumentDataMember = "sArgument";
                 series.ValueDataMembers.AddRange("SV_MIN");
                 series.CrosshairLabelPattern = "{V:#,#}";
+              //  series.ArgumentScaleType = ScaleType.Numerical;
                 //format
                 //lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
                 lineSeriesView1.LineStyle.Thickness = 5;
@@ -232,6 +233,7 @@ namespace FORM
                 series2.ArgumentDataMember = "sArgument";
                 series2.ValueDataMembers.AddRange("SV_MAX");
                 series2.CrosshairLabelPattern = "{V:#,#}";
+               // series2.ArgumentScaleType = ScaleType.Numerical;
                 //format
                 //  lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
                 lineSeriesView2.Color = Color.Green;
@@ -244,6 +246,7 @@ namespace FORM
                 series3.ArgumentDataMember = "sArgument";
                 series3.ValueDataMembers.AddRange("FINAL_PV");
                 series3.CrosshairLabelPattern = "{V:#,#}";
+               // series3.ArgumentScaleType = ScaleType.Numerical;
                 //format
                 // lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
                 lineSeriesView3.LineStyle.Thickness = 5;
@@ -268,30 +271,32 @@ namespace FORM
 
                 diagram.AxisX.Label.ResolveOverlappingOptions.AllowRotate = false;
                 diagram.AxisX.Label.ResolveOverlappingOptions.AllowStagger = false;
-                diagram.AxisX.WholeRange.SideMarginsValue = 0;
                 diagram.AxisX.Title.Text = "Time";
-                
                 diagram.AxisX.Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                diagram.DependentAxesYRange = DefaultBoolean.True;
-                //diagram.AxisY.WholeRange.AlwaysShowZeroLevel = false;
+                diagram.EnableAxisXScrolling = true;
+                diagram.AxisX.WholeRange.AlwaysShowZeroLevel = false;
+                diagram.AxisX.WholeRange.SideMarginsValue = 0;
+
+                
+                diagram.DependentAxesYRange = DefaultBoolean.True;                
                 diagram.AxisY.Title.Text = "Values";
+                diagram.AxisY.WholeRange.SideMarginsValue = 0;
                 diagram.AxisY.WholeRange.MinValue = _iMinChart - 3;
-                diagram.AxisY.WholeRange.MaxValue = _iMaxChart + 3;
-                diagram.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                diagram.AxisY.WholeRange.MaxValue = _iMaxChart + 3;               
                 diagram.AxisY.Title.TextColor = Color.Blue;
                 diagram.AxisY.Title.Visibility = DefaultBoolean.True;
                 diagram.AxisY.Color = Color.DodgerBlue;
                 diagram.AxisY.Label.TextPattern = "{V:#,#}";
+
+                diagram.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 diagram.AxisY.Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
                 diagram.AxisY.Interlaced = false;
-
-                diagram.EnableAxisXScrolling = true;
-                diagram.EnableAxisYScrolling = true;
+                
                 
 
                 chartControl1.Series.Clear();
-                chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] { series, series2, series3 };
+                chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] { series2, series3, series };
 
                 //ADD SECONDARY AXISY
                 // SecondaryAxisY myAxisY = new SecondaryAxisY("my X-Axis");
@@ -317,7 +322,15 @@ namespace FORM
                 //chartControl1.Legend.Visibility = DefaultBoolean.True;
 
                 diagram.AxisX.VisualRange.Auto = false;
-                diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[0]["SET_TIME"], _dtDataPage.Rows[20]["SET_TIME"]);
+                int iDataRow = _dtDataPage.Rows.Count;
+                if (iDataRow >=15)
+                {
+                    diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[0]["SET_TIME"], _dtDataPage.Rows[15]["SET_TIME"]);
+                }
+                else
+                {
+                    diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[0]["SET_TIME"], _dtDataPage.Rows[iDataRow -1]["SET_TIME"]);
+                }
 
                 for (int i = 0; i < _dtDataPage.Rows.Count; i++)
                 {
@@ -511,7 +524,7 @@ namespace FORM
 
                     //  object aa = _dtDataPage.Compute("max([SV_MIN]), max([SV_MAX]), max([FINAL_PV]), min([SV_MIN]), min([SV_MAX]), min([FINAL_PV])", "");
 
-                    BindingChartData();
+                    BindingChartData2();
                 }
                 else
                 {
@@ -602,14 +615,14 @@ namespace FORM
         {
             setClick("NEXT");
             setData();
-            BindingChartData();
+            BindingChartData2();
         }
 
         private void cmdPrev_Click(object sender, EventArgs e)
         {
             setClick("PREV");
             setData();
-            BindingChartData();
+            BindingChartData2();
         }
 
         private void chkMachine_CheckedChanged(object sender, EventArgs e)

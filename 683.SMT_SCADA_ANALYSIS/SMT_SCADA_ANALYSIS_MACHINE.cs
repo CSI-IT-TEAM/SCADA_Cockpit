@@ -18,7 +18,7 @@ namespace FORM
             InitializeComponent();
             lblHeader.Text = _strHeader;
         }
-        private readonly string _strHeader = "       Analysis Machine";
+        private readonly string _strHeader = "       Data Analysis Machine";
        // private UC.UC_COMPARE_WEEK uc_compare_week = new UC.UC_COMPARE_WEEK();
         string _strType = "D";
         int _time = 0;

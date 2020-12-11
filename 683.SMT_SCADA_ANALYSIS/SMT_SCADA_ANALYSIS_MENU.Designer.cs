@@ -33,7 +33,6 @@
             this.pnTop = new System.Windows.Forms.Panel();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
-            this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnBody1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,15 +40,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmdMachine = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblHeader = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.pnTop.SuspendLayout();
             this.pnBody1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnTop
             // 
+            this.pnTop.Controls.Add(this.labelControl2);
+            this.pnTop.Controls.Add(this.labelControl1);
+            this.pnTop.Controls.Add(this.lblHeader);
             this.pnTop.Controls.Add(this.cmdBack);
             this.pnTop.Controls.Add(this.lblDate);
-            this.pnTop.Controls.Add(this.lblHeader);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
@@ -61,14 +65,15 @@
             this.cmdBack.BackColor = System.Drawing.Color.Transparent;
             this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
             this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdBack.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.cmdBack.FlatAppearance.BorderSize = 0;
             this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
             this.cmdBack.ForeColor = System.Drawing.Color.Navy;
-            this.cmdBack.Location = new System.Drawing.Point(3, 3);
+            this.cmdBack.Location = new System.Drawing.Point(0, 0);
             this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(77, 70);
+            this.cmdBack.Size = new System.Drawing.Size(77, 76);
             this.cmdBack.TabIndex = 88;
             this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdBack.UseVisualStyleBackColor = false;
@@ -79,26 +84,13 @@
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblDate.Font = new System.Drawing.Font("Calibri", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(1653, 0);
+            this.lblDate.Location = new System.Drawing.Point(1693, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(235, 76);
+            this.lblDate.Size = new System.Drawing.Size(195, 76);
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "2020-07-22\r\n10:00:00";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblDate.DoubleClick += new System.EventHandler(this.lblDate_DoubleClick);
-            // 
-            // lblHeader
-            // 
-            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Appearance.Options.UseFont = true;
-            this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblHeader.LineVisible = true;
-            this.lblHeader.Location = new System.Drawing.Point(0, 0);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1622, 76);
-            this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "        Preventative Maintenance";
             // 
             // timer1
             // 
@@ -125,19 +117,20 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1392, 226);
+            this.button2.Location = new System.Drawing.Point(917, 129);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(325, 310);
             this.button2.TabIndex = 4;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.MouseHover += new System.EventHandler(this.Cmd_MouseHover);
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(767, 575);
+            this.label2.Location = new System.Drawing.Point(397, 279);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 160);
+            this.label2.Size = new System.Drawing.Size(222, 160);
             this.label2.TabIndex = 3;
             this.label2.Text = "Smart Machine Check Schedule";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -145,7 +138,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 575);
+            this.label1.Location = new System.Drawing.Point(12, 279);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 160);
             this.label1.TabIndex = 2;
@@ -159,9 +152,9 @@
             this.cmdMachine.FlatAppearance.BorderSize = 0;
             this.cmdMachine.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.cmdMachine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdMachine.Location = new System.Drawing.Point(733, 226);
+            this.cmdMachine.Location = new System.Drawing.Point(404, 60);
             this.cmdMachine.Name = "cmdMachine";
-            this.cmdMachine.Size = new System.Drawing.Size(325, 310);
+            this.cmdMachine.Size = new System.Drawing.Size(200, 200);
             this.cmdMachine.TabIndex = 1;
             this.cmdMachine.UseVisualStyleBackColor = true;
             this.cmdMachine.Click += new System.EventHandler(this.cmdMachine_Click);
@@ -174,12 +167,60 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(122, 226);
+            this.button1.Location = new System.Drawing.Point(32, 60);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 310);
+            this.button1.Size = new System.Drawing.Size(200, 200);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.MouseHover += new System.EventHandler(this.Cmd_MouseHover);
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Appearance.Options.UseFont = true;
+            this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblHeader.Location = new System.Drawing.Point(77, 0);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(478, 76);
+            this.lblHeader.TabIndex = 5;
+            this.lblHeader.Text = "    Data Analysis";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelControl1.LineColor = System.Drawing.Color.Black;
+            this.labelControl1.LineLocation = DevExpress.XtraEditors.LineLocation.Left;
+            this.labelControl1.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Vertical;
+            this.labelControl1.LineVisible = true;
+            this.labelControl1.Location = new System.Drawing.Point(555, 0);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(26, 76);
+            this.labelControl1.TabIndex = 6;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 20F);
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl2.Appearance.Options.UseBackColor = true;
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelControl2.LineColor = System.Drawing.Color.Silver;
+            this.labelControl2.LineLocation = DevExpress.XtraEditors.LineLocation.Left;
+            this.labelControl2.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Vertical;
+            this.labelControl2.Location = new System.Drawing.Point(581, 0);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(1118, 76);
+            this.labelControl2.TabIndex = 7;
+            this.labelControl2.Text = "SCADA basic notion is predictive and prescriptive maintenance\r\nso we’re trying to" +
+    " present new depth information through information comunication technology (ICT)" +
+    "";
             // 
             // SMT_SCADA_ANALYSIS_MENU
             // 
@@ -200,7 +241,6 @@
         private System.Windows.Forms.Panel pnTop;
         public System.Windows.Forms.Button cmdBack;
         private System.Windows.Forms.Label lblDate;
-        private DevExpress.XtraEditors.LabelControl lblHeader;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel pnBody1;
         private System.Windows.Forms.Label label2;
@@ -208,5 +248,8 @@
         private System.Windows.Forms.Button cmdMachine;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private DevExpress.XtraEditors.LabelControl lblHeader;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }

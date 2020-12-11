@@ -31,9 +31,9 @@ namespace FORM
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnTop = new System.Windows.Forms.Panel();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
@@ -233,9 +233,9 @@ namespace FORM
             // 
             this.gridPM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridPM.Font = new System.Drawing.Font("Calibri", 12.75F);
-            gridLevelNode3.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridPM.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
+            gridLevelNode1});
             this.gridPM.Location = new System.Drawing.Point(0, 0);
             this.gridPM.MainView = this.gridView2;
             this.gridPM.Name = "gridPM";
@@ -282,7 +282,7 @@ namespace FORM
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 55;
+            this.gridColumn1.Width = 53;
             // 
             // gridColumn2
             // 
@@ -294,13 +294,13 @@ namespace FORM
             this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn2.Caption = "W/O ID";
+            this.gridColumn2.Caption = "Work Order Id";
             this.gridColumn2.FieldName = "WO_ID";
             this.gridColumn2.FieldNameSortGroup = "WO_ID";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 249;
+            this.gridColumn2.Width = 240;
             // 
             // gridColumn3
             // 
@@ -311,13 +311,13 @@ namespace FORM
             this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn3.Caption = "W/O Date";
+            this.gridColumn3.Caption = "Work Order Date";
             this.gridColumn3.FieldName = "WO_DATE";
             this.gridColumn3.FieldNameSortGroup = "WO_DATE";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 150;
+            this.gridColumn3.Width = 196;
             // 
             // PM_DATE
             // 
@@ -334,7 +334,7 @@ namespace FORM
             this.PM_DATE.Name = "PM_DATE";
             this.PM_DATE.Visible = true;
             this.PM_DATE.VisibleIndex = 5;
-            this.PM_DATE.Width = 150;
+            this.PM_DATE.Width = 159;
             // 
             // gridColumn4
             // 
@@ -349,7 +349,7 @@ namespace FORM
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 155;
+            this.gridColumn4.Width = 140;
             // 
             // gridColumn5
             // 
@@ -364,7 +364,7 @@ namespace FORM
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 150;
+            this.gridColumn5.Width = 136;
             // 
             // PM_PIC
             // 
@@ -381,7 +381,7 @@ namespace FORM
             this.PM_PIC.Name = "PM_PIC";
             this.PM_PIC.Visible = true;
             this.PM_PIC.VisibleIndex = 6;
-            this.PM_PIC.Width = 330;
+            this.PM_PIC.Width = 286;
             // 
             // PM_STATUS
             // 
@@ -394,7 +394,7 @@ namespace FORM
             this.PM_STATUS.Name = "PM_STATUS";
             this.PM_STATUS.Visible = true;
             this.PM_STATUS.VisibleIndex = 7;
-            this.PM_STATUS.Width = 181;
+            this.PM_STATUS.Width = 164;
             // 
             // REPAIR
             // 
@@ -407,9 +407,9 @@ namespace FORM
             // 
             this.gridRepair.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridRepair.Font = new System.Drawing.Font("Calibri", 12.75F);
-            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridRepair.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
+            gridLevelNode2});
             this.gridRepair.Location = new System.Drawing.Point(0, 0);
             this.gridRepair.MainView = this.gridView1;
             this.gridRepair.Name = "gridRepair";
@@ -468,7 +468,7 @@ namespace FORM
             this.WO_ID.AppearanceHeader.Options.UseTextOptions = true;
             this.WO_ID.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.WO_ID.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.WO_ID.Caption = "W/O ID";
+            this.WO_ID.Caption = "Work Order Id";
             this.WO_ID.FieldName = "WO_ID";
             this.WO_ID.FieldNameSortGroup = "WO_ID";
             this.WO_ID.Name = "WO_ID";
@@ -582,9 +582,9 @@ namespace FORM
             // 
             this.gridMove.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridMove.Font = new System.Drawing.Font("Calibri", 12.75F);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.gridMove.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode3});
             this.gridMove.Location = new System.Drawing.Point(0, 0);
             this.gridMove.MainView = this.gridView3;
             this.gridMove.Name = "gridMove";

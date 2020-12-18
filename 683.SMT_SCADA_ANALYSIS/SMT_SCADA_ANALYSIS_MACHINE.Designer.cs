@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
@@ -60,7 +59,7 @@
             this.tlsLoction = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.ID_NAME = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.pnBody1 = new System.Windows.Forms.Panel();
             this.pnChart = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
@@ -86,7 +85,7 @@
             // chartControl1
             // 
             this.chartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartControl1.AppearanceNameSerializable = "Chameleon";
+            this.chartControl1.AppearanceNameSerializable = "Light";
             this.chartControl1.DataBindings = null;
             xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             xyDiagram1.AxisX.Title.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,35 +114,31 @@
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
-            this.chartControl1.PaletteName = "Marquee";
+            this.chartControl1.PaletteName = "Mixed";
+            this.chartControl1.PaletteRepository.Add("Palette 2", new DevExpress.XtraCharts.Palette("Palette 2", DevExpress.XtraCharts.PaletteScaleMode.Extrapolate, new DevExpress.XtraCharts.PaletteEntry[] {
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(129)))), ((int)(((byte)(189))))), System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(90)))), ((int)(((byte)(136)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(80)))), ((int)(((byte)(77))))), System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(52)))), ((int)(((byte)(49)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(187)))), ((int)(((byte)(89))))), System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(137)))), ((int)(((byte)(56)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(100)))), ((int)(((byte)(162))))), System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(69)))), ((int)(((byte)(115)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(150)))), ((int)(((byte)(70))))), System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(101)))), ((int)(((byte)(9))))))}));
             series1.CheckableInLegend = false;
             series1.CheckedInLegend = false;
-            series1.CrosshairEnabled = DevExpress.Utils.DefaultBoolean.False;
             series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series1.Name = "Series 1";
-            series1.ShowInLegend = false;
             sideBySideBarSeriesView1.ColorEach = true;
             series1.View = sideBySideBarSeriesView1;
-            series2.CheckableInLegend = false;
-            series2.CheckedInLegend = false;
-            series2.CrosshairEnabled = DevExpress.Utils.DefaultBoolean.False;
             series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series2.Name = "Series 2";
             sideBySideBarSeriesView2.ColorEach = true;
             series2.View = sideBySideBarSeriesView2;
-            series3.CrosshairEnabled = DevExpress.Utils.DefaultBoolean.False;
             series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series3.Name = "Series 3";
-            sideBySideBarSeriesView3.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             sideBySideBarSeriesView3.ColorEach = true;
-            sideBySideBarSeriesView3.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Solid;
             series3.View = sideBySideBarSeriesView3;
-            series4.CrosshairEnabled = DevExpress.Utils.DefaultBoolean.False;
             series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series4.Name = "Series 4";
             sideBySideBarSeriesView4.ColorEach = true;
             series4.View = sideBySideBarSeriesView4;
-            series5.CrosshairEnabled = DevExpress.Utils.DefaultBoolean.False;
             series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             series5.Name = "Series 5";
             sideBySideBarSeriesView5.ColorEach = true;
@@ -161,7 +156,7 @@
             chartTitle1.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});
-            this.chartControl1.CustomDrawSeriesPoint += new DevExpress.XtraCharts.CustomDrawSeriesPointEventHandler(this.chartControl1_CustomDrawSeriesPoint);
+            this.chartControl1.CustomDrawCrosshair += new DevExpress.XtraCharts.CustomDrawCrosshairEventHandler(this.chartControl1_CustomDrawCrosshair);
             // 
             // pnControl
             // 
@@ -421,14 +416,14 @@
             this.pnChart.Size = new System.Drawing.Size(1645, 916);
             this.pnChart.TabIndex = 78;
             // 
-            // SMT_SCADA_ANALYSIS
+            // SMT_SCADA_ANALYSIS_MACHINE
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1888, 1042);
             this.Controls.Add(this.pnBody1);
             this.Controls.Add(this.pnControl);
             this.Controls.Add(this.pnTop);
-            this.Name = "SMT_SCADA_ANALYSIS";
+            this.Name = "SMT_SCADA_ANALYSIS_MACHINE";
             this.Text = "SMT_SCADA_COCKPIT_FORM2";
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_COCKPIT_FORM2_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();

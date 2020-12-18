@@ -243,7 +243,6 @@
             this.dptDate.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
             this.dptDate.Size = new System.Drawing.Size(136, 36);
             this.dptDate.TabIndex = 7;
-            
             // 
             // advancedPanel3
             // 
@@ -334,7 +333,7 @@
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(461, 32);
             this.labelControl4.TabIndex = 5;
-            this.labelControl4.Text = "Cost by Month";
+            this.labelControl4.Text = "Cost by Month (Cost/Kwh: 0.07 USD)";
             // 
             // advancedPanel2
             // 

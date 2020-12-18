@@ -25,32 +25,70 @@ namespace FORM
         
         DataTable _dtChart = null;
 
-        #region Procedure( Name is begin with Po_)
+        #region Procedure
         private void LoadForm()
         {
-            Po_SetButtonClick(_strType);
-            Po_SetHeader(_strType);
+            SetButtonClick(_strType);
+            SetHeader(_strType);
             _dtChart = Data_Select(_strType, "2").Tables[0];
-            Po_SetChartWhenClickTree();
+            SetChartWhenClickTree();
             
             // Po_SetDefaultCheck();
             // Po_SetDataChart();
             //Po_SetData(_strType);
         }
-        private void Po_SetDataChart(DataTable argDt)
+        private void SetDataChart(DataTable argDt)
         {
             try
             {
-                
-                chartControl1.DataSource = argDt;
-                for(int i =0; i<5; i++)
+
+
+                /*
+                foreach (string line in lineCd)
                 {
+                    DataRow[] drRow = _dtChart.Select($"line_cd = '{line}'");
+                    if (drRow.Length > 0)
+                    {
+                        DataRow row = dtData.NewRow();
+                        foreach (DataRow dtRow in drRow)
+                        {
+                            string col = dtRow["RN"].ToString();
+                            row["LABEL"] = dtRow["PLANT_NM"].ToString();
+                            row["MACHINE_CD" + col] = dtRow["MACHINE_CD"].ToString();
+                            row["DAY" + col] = dtRow["OCR_TIME"];
+                        }
+                        dtData.Rows.Add(row);
+                    }
+                    else
+                    {
+
+                    }
+                }
+                */
+
+
+                  chartControl1.DataSource = argDt;
+                /*
+                chartControl1.SeriesDataMember = "MACHINE_CD";
+                chartControl1.SeriesTemplate.ArgumentDataMember = "LABEL";
+                //chartControl1.SeriesTemplate.View.
+                chartControl1.SeriesTemplate.ValueDataMembers.AddRange(new string[] { "DAY" });
+                //int a = chartControl1.Series.Count;
+
+
+                // chartControl1.SeriesDataMember = "LABEL";
+
+                */
+
+                for (int i =0; i<5; i++)
+                {
+                    //chartControl1.Series[i].;
                     
-                    //chartControl1.Series[i].Points[1].Color = Color.Green;
                     chartControl1.Series[i].ArgumentDataMember = "LABEL";
                     chartControl1.Series[i].ValueDataMembers.AddRange(new string[] { "DAY" + (i+1).ToString() });
-                    
+
                 }
+                
 
             }
             catch (Exception ex)
@@ -60,7 +98,7 @@ namespace FORM
 
         }
 
-        private void Po_SetHeader(string arg_type)
+        private void SetHeader(string arg_type)
         {
             switch (arg_type)
             {
@@ -79,7 +117,7 @@ namespace FORM
             }
         }
 
-        private void Po_SetButtonClick(string arg_type)
+        private void SetButtonClick(string arg_type)
         {
             switch (arg_type)
             {
@@ -102,7 +140,7 @@ namespace FORM
             }
         }
 
-        private void Po_SetSeries()
+        private void SetSeries()
         {
            
             foreach (TreeListNode node in tlsLoction.Nodes)
@@ -134,7 +172,7 @@ namespace FORM
 
         }
 
-        private void Po_SetTreelist()
+        private void SetTreelist()
         {
             try
             {
@@ -158,24 +196,21 @@ namespace FORM
                     node.Expanded = true;
                     foreach (TreeListNode node1 in node.RootNode.Nodes)
                     {
-                        
-                        if (nodeId == "F4" )
-                            node1.Checked = true;
-                        else
-                            node1.Checked = false;
+
+                        node1.Checked = true;
                     }
                 }
             }
             catch { }
         }
 
-        private void Po_SetCheckedChildNodes(TreeListNodes nodes)
+        private void SetCheckedChildNodes(TreeListNodes nodes)
         {
             foreach (TreeListNode node in nodes)
                 node.Checked = node.ParentNode.Checked;
         }
 
-        private bool Po_IsAllChecked(TreeListNodes nodes)
+        private bool IsAllChecked(TreeListNodes nodes)
         {
             bool value = true;
             foreach (TreeListNode node in nodes)
@@ -189,7 +224,7 @@ namespace FORM
             return value;
         }
 
-        private void Po_SetChartWhenClickTree()
+        private void SetChartWhenClickTree()
         {
             string lineCd = "";
             foreach (TreeListNode node in tlsLoction.Nodes)
@@ -207,10 +242,10 @@ namespace FORM
                 }
             }
             lineCd = lineCd.TrimEnd(',');
-            Po_SetDataChart(GetDataChart(lineCd));
+            SetDataChart(GetDataChart(lineCd));
         }
 
-        private void Po_SetDefaultCheck()
+        private void SetDefaultCheck()
         {
             foreach (TreeListNode node in tlsLoction.Nodes)
             {
@@ -289,7 +324,7 @@ namespace FORM
                                  "FGA", "UPS",
                                  "007", "008", "010",
                                  "011", "012", "099",
-                                 "013", "014", "015", "016", "009",
+                                 "013", "014", "015", "016", "017",
                                  "018_1", "018_2"
                                };
             string[] menuNm = { "Factory 1", "Factory 2", "Factory 3", "Factory 4", "Factory 5",
@@ -327,12 +362,26 @@ namespace FORM
                 
 
                 DataTable dtData = new DataTable();
+
+                
                 dtData.Columns.Add("LABEL");
+                dtData.Columns.Add("MACHINE_CD1");
                 dtData.Columns.Add("DAY1", typeof(int));
+                dtData.Columns.Add("MACHINE_CD2");
                 dtData.Columns.Add("DAY2", typeof(int));
+                dtData.Columns.Add("MACHINE_CD3");
                 dtData.Columns.Add("DAY3", typeof(int));
+                dtData.Columns.Add("MACHINE_CD4");
                 dtData.Columns.Add("DAY4", typeof(int));
+                dtData.Columns.Add("MACHINE_CD5");
                 dtData.Columns.Add("DAY5", typeof(int));
+
+                /*
+                dtData.Columns.Add("LABEL");
+                dtData.Columns.Add("MACHINE_CD");
+                dtData.Columns.Add("DAY", typeof(int));
+                */
+
 
                 if (argLineCd =="ALL")
                 {
@@ -348,8 +397,10 @@ namespace FORM
                             DataRow row = dtData.NewRow();
                             foreach (DataRow dtRow in drRow)
                             {
+                                string col = dtRow["RN"].ToString();
                                 row["LABEL"] = dtRow["PLANT_NM"].ToString();
-                                row["DAY" + dtRow["RN"].ToString()] = dtRow["OCR_TIME"];
+                                row["MACHINE_CD" + col] = dtRow["MACHINE_CD"].ToString();
+                                row["DAY" + col] = dtRow["OCR_TIME"];
                             }
                             dtData.Rows.Add(row);
                         }
@@ -357,6 +408,31 @@ namespace FORM
                 }
                 else
                 {
+
+                    /*
+                    foreach (string line in lineCd)
+                    {
+                        DataRow[] drRow = _dtChart.Select($"line_cd = '{line}'", "line_cd");
+                        if (drRow.Length > 0)
+                        {
+                            
+                            foreach (DataRow dtRow in drRow)
+                            {
+                                DataRow row = dtData.NewRow();
+                                string col = dtRow["RN"].ToString();
+                                row["LABEL"] = dtRow["PLANT_NM"].ToString();
+                                row["MACHINE_CD"] = dtRow["MACHINE_CD"].ToString();
+                                row["DAY"] = dtRow["OCR_TIME"];
+                                dtData.Rows.Add(row);
+                            }
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    */
+
                     foreach (string line in lineCd)
                     {
                         DataRow[] drRow = _dtChart.Select($"line_cd = '{line}'");
@@ -365,12 +441,20 @@ namespace FORM
                             DataRow row = dtData.NewRow();
                             foreach (DataRow dtRow in drRow)
                             {
+                                string col = dtRow["RN"].ToString();
                                 row["LABEL"] = dtRow["PLANT_NM"].ToString();
-                                row["DAY" + dtRow["RN"].ToString()] = dtRow["OCR_TIME"];
+                                row["MACHINE_CD" + col] = dtRow["MACHINE_CD"].ToString();
+                                row["DAY" + col] = dtRow["OCR_TIME"];
                             }
                             dtData.Rows.Add(row);
                         }
+                        else
+                        {
+
+                        }
                     }
+                    
+
                 }
 
                 
@@ -430,7 +514,7 @@ namespace FORM
             {
                 _time = 29;
                 _strType = "D";
-                Po_SetTreelist();
+                SetTreelist();
                 timer1.Start();
                 
                 
@@ -488,11 +572,11 @@ namespace FORM
         private void tlsLoction_AfterCheckNode(object sender, DevExpress.XtraTreeList.NodeEventArgs e)
         {
             if (e.Node.ParentNode != null)
-                e.Node.ParentNode.Checked = Po_IsAllChecked(e.Node.ParentNode.Nodes);
+                e.Node.ParentNode.Checked = IsAllChecked(e.Node.ParentNode.Nodes);
             else
-                Po_SetCheckedChildNodes(e.Node.Nodes);
+                SetCheckedChildNodes(e.Node.Nodes);
 
-            Po_SetChartWhenClickTree();
+            SetChartWhenClickTree();
         }
 
         private void tlsLoction_NodeCellStyle(object sender, DevExpress.XtraTreeList.GetCustomNodeCellStyleEventArgs e)
@@ -539,6 +623,66 @@ namespace FORM
                 drawOptions.FillStyle.FillMode = FillMode.Solid;
             }
             */
+        }
+
+        private void chartControl1_CustomDrawCrosshair(object sender, CustomDrawCrosshairEventArgs e)
+        {
+            // Specify the crosshair argument line color, dash style and thickness.
+           // e.CrosshairLineElement.Color = Color.Green;
+           // e.CrosshairLineElement.LineStyle.DashStyle = DashStyle.DashDot;
+           // e.CrosshairLineElement.LineStyle.Thickness = 3;
+
+            // Specify the back color for the crosshair argument axis label. 
+         //   foreach (CrosshairAxisLabelElement axisLabelElement in e.CrosshairAxisLabelElements)
+            //    axisLabelElement.BackColor = Color.Blue;
+
+            foreach (CrosshairElementGroup group in e.CrosshairElementGroups)
+            {
+                CrosshairGroupHeaderElement groupHeaderElement = group.HeaderElement;
+
+                // Specify the text, text color and font for the crosshair group header element. 
+              //  groupHeaderElement.Text = "Machine Name";
+             //   groupHeaderElement.TextColor = Color.Green;
+                groupHeaderElement.Font = new Font("Calibri", 12F, FontStyle.Bold);
+
+                SetTextCrosshair(group,0);
+                SetTextCrosshair(group,1);
+                SetTextCrosshair(group,2);
+                SetTextCrosshair(group,3);
+                SetTextCrosshair(group,4);
+            }
+        }
+
+        private void SetTextCrosshair(CrosshairElementGroup argGroup,int argSeries)
+        {
+            // Obtain a crosshair element for the first series.
+            CrosshairElement element = argGroup.CrosshairElements[argSeries];
+
+            // Specify the color, dash style and thickness for the crosshair value lines. 
+            //  element.LineElement.Color = Color.DarkViolet;
+            //  element.LineElement.LineStyle.DashStyle = DashStyle.Dash;
+            //  element.LineElement.LineStyle.Thickness = 2;
+
+            // Specify the text color and back color for the crosshair value labels.
+            //  element.AxisLabelElement.TextColor = Color.Red;
+            //  element.AxisLabelElement.BackColor = Color.Yellow;
+            
+            // Format the text shown for the series in the crosshair cursor label. Specify the text color and marker size. 
+            DataRow[] dr = _dtChart.Select($"PLANT_NM = '{element.SeriesPoint.Argument}' and RN = {argSeries + 1}");
+           // string machine_nm = "";
+            if (dr != null && dr.Count() > 0)
+            {
+                element.LabelElement.Text = $"{argSeries + 1} - {dr[0]["MACHINE_CD"]} ({dr[0]["MACHINE_NM"]}): {element.SeriesPoint.Values[0]}"; //string.Format("{0}: {1}", dr[0]["MACHINE_CD"].ToString(), element.SeriesPoint.Values[0]);
+            }
+            else
+            {
+                element.LabelElement.Text = "";
+            }
+           // element.SeriesPoint.Argument
+         //   element.LabelElement.TextColor = Color.Red;
+          //  element.LabelElement.MarkerSize = new Size(15, 15);
+          
+            
         }
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_COCKPIT_POPUP));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.CustomLegendItem customLegendItem1 = new DevExpress.XtraCharts.CustomLegendItem();
             DevExpress.XtraCharts.CustomLegendItem customLegendItem2 = new DevExpress.XtraCharts.CustomLegendItem();
@@ -43,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rdRepair = new System.Windows.Forms.RadioButton();
             this.rdMachine = new System.Windows.Forms.RadioButton();
             this.rdPmHis = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -56,16 +58,18 @@
             this.cmdNext = new System.Windows.Forms.Button();
             this.cmdPrev = new System.Windows.Forms.Button();
             this.pn_body = new System.Windows.Forms.Panel();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.SEQ = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.WO_ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.WO_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PM_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DEFE_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SOLU_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PM_PIC = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PM_STATUS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdRepair = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.REQUEST_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DEFE_CD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PIC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdPm = new DevExpress.XtraGrid.GridControl();
+            this.gvwView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
@@ -73,8 +77,10 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pn_body.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdRepair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvwView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -139,6 +145,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.rdRepair);
             this.panel1.Controls.Add(this.rdMachine);
             this.panel1.Controls.Add(this.rdPmHis);
             this.panel1.Controls.Add(this.panel2);
@@ -152,6 +159,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1422, 87);
             this.panel1.TabIndex = 4;
+            // 
+            // rdRepair
+            // 
+            this.rdRepair.AutoSize = true;
+            this.rdRepair.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.rdRepair.Location = new System.Drawing.Point(1309, 48);
+            this.rdRepair.Name = "rdRepair";
+            this.rdRepair.Size = new System.Drawing.Size(97, 33);
+            this.rdRepair.TabIndex = 21;
+            this.rdRepair.Text = "Repair";
+            this.rdRepair.UseVisualStyleBackColor = true;
+            this.rdRepair.Visible = false;
+            this.rdRepair.CheckedChanged += new System.EventHandler(this.rdRepair_CheckedChanged);
             // 
             // rdMachine
             // 
@@ -171,12 +191,13 @@
             // 
             this.rdPmHis.AutoSize = true;
             this.rdPmHis.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.rdPmHis.Location = new System.Drawing.Point(1245, 46);
+            this.rdPmHis.Location = new System.Drawing.Point(1219, 48);
             this.rdPmHis.Name = "rdPmHis";
-            this.rdPmHis.Size = new System.Drawing.Size(65, 33);
+            this.rdPmHis.Size = new System.Drawing.Size(158, 33);
             this.rdPmHis.TabIndex = 19;
-            this.rdPmHis.Text = "PM";
+            this.rdPmHis.Text = "PM && Repair";
             this.rdPmHis.UseVisualStyleBackColor = true;
+            this.rdPmHis.CheckedChanged += new System.EventHandler(this.rdPmHis_CheckedChanged);
             // 
             // panel2
             // 
@@ -298,7 +319,8 @@
             // 
             // pn_body
             // 
-            this.pn_body.Controls.Add(this.gridControl1);
+            this.pn_body.Controls.Add(this.grdRepair);
+            this.pn_body.Controls.Add(this.grdPm);
             this.pn_body.Controls.Add(this.chartControl1);
             this.pn_body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_body.Location = new System.Drawing.Point(3, 175);
@@ -306,172 +328,206 @@
             this.pn_body.Size = new System.Drawing.Size(1422, 579);
             this.pn_body.TabIndex = 5;
             // 
-            // gridControl1
+            // grdRepair
             // 
-            this.gridControl1.Font = new System.Drawing.Font("Calibri", 12.75F);
+            this.grdRepair.Font = new System.Drawing.Font("Calibri", 12.75F);
             gridLevelNode1.RelationName = "Level1";
-            this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            this.grdRepair.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1227, 579);
-            this.gridControl1.TabIndex = 4;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.gridControl1.Visible = false;
+            this.grdRepair.Location = new System.Drawing.Point(0, 0);
+            this.grdRepair.MainView = this.gridView2;
+            this.grdRepair.Name = "grdRepair";
+            this.grdRepair.Size = new System.Drawing.Size(1422, 579);
+            this.grdRepair.TabIndex = 6;
+            this.grdRepair.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            this.grdRepair.Visible = false;
             // 
-            // gridView1
+            // gridView2
             // 
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.ColumnPanelRowHeight = 50;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.SEQ,
-            this.WO_ID,
-            this.WO_DATE,
-            this.PM_DATE,
-            this.DEFE_DATE,
-            this.SOLU_DATE,
-            this.PM_PIC,
-            this.PM_STATUS});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsBehavior.ReadOnly = true;
-            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
-            this.gridView1.OptionsCustomization.AllowFilter = false;
-            this.gridView1.OptionsCustomization.AllowGroup = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowIndicator = false;
-            this.gridView1.RowHeight = 50;
+            this.gridView2.Appearance.Row.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.gridView2.Appearance.Row.Options.UseFont = true;
+            this.gridView2.ColumnPanelRowHeight = 50;
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.REQUEST_DATE,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.DEFE_CD,
+            this.PIC});
+            this.gridView2.GridControl = this.grdRepair;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsBehavior.ReadOnly = true;
+            this.gridView2.OptionsCustomization.AllowColumnMoving = false;
+            this.gridView2.OptionsCustomization.AllowFilter = false;
+            this.gridView2.OptionsCustomization.AllowGroup = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.OptionsView.ShowIndicator = false;
+            this.gridView2.RowHeight = 50;
             // 
-            // SEQ
+            // gridColumn1
             // 
-            this.SEQ.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.SEQ.AppearanceHeader.Options.UseFont = true;
-            this.SEQ.AppearanceHeader.Options.UseTextOptions = true;
-            this.SEQ.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.SEQ.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.SEQ.Caption = "No";
-            this.SEQ.FieldName = "SEQ";
-            this.SEQ.FieldNameSortGroup = "SEQ";
-            this.SEQ.Name = "SEQ";
-            this.SEQ.Visible = true;
-            this.SEQ.VisibleIndex = 0;
-            this.SEQ.Width = 55;
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn1.Caption = "No";
+            this.gridColumn1.FieldName = "SEQ";
+            this.gridColumn1.FieldNameSortGroup = "SEQ";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 41;
             // 
-            // WO_ID
+            // gridColumn2
             // 
-            this.WO_ID.AppearanceCell.Options.UseTextOptions = true;
-            this.WO_ID.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.WO_ID.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.WO_ID.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.WO_ID.AppearanceHeader.Options.UseFont = true;
-            this.WO_ID.AppearanceHeader.Options.UseTextOptions = true;
-            this.WO_ID.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.WO_ID.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.WO_ID.Caption = "W/O ID";
-            this.WO_ID.FieldName = "WO_ID";
-            this.WO_ID.FieldNameSortGroup = "WO_ID";
-            this.WO_ID.Name = "WO_ID";
-            this.WO_ID.Visible = true;
-            this.WO_ID.VisibleIndex = 1;
-            this.WO_ID.Width = 249;
+            this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn2.Caption = "Work Order Id";
+            this.gridColumn2.FieldName = "WO_ID";
+            this.gridColumn2.FieldNameSortGroup = "WO_ID";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 230;
             // 
-            // WO_DATE
+            // gridColumn3
             // 
-            this.WO_DATE.AppearanceCell.Options.UseTextOptions = true;
-            this.WO_DATE.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.WO_DATE.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.WO_DATE.AppearanceHeader.Options.UseFont = true;
-            this.WO_DATE.AppearanceHeader.Options.UseTextOptions = true;
-            this.WO_DATE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.WO_DATE.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.WO_DATE.Caption = "W/O Date";
-            this.WO_DATE.FieldName = "WO_DATE";
-            this.WO_DATE.FieldNameSortGroup = "WO_DATE";
-            this.WO_DATE.Name = "WO_DATE";
-            this.WO_DATE.Visible = true;
-            this.WO_DATE.VisibleIndex = 2;
-            this.WO_DATE.Width = 150;
+            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn3.Caption = "W/O Date";
+            this.gridColumn3.FieldName = "WO_DATE";
+            this.gridColumn3.FieldNameSortGroup = "WO_DATE";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Width = 160;
             // 
-            // PM_DATE
+            // REQUEST_DATE
             // 
-            this.PM_DATE.AppearanceCell.Options.UseTextOptions = true;
-            this.PM_DATE.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.PM_DATE.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.PM_DATE.AppearanceHeader.Options.UseFont = true;
-            this.PM_DATE.AppearanceHeader.Options.UseTextOptions = true;
-            this.PM_DATE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.PM_DATE.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.PM_DATE.Caption = "PM Plan Date";
-            this.PM_DATE.FieldName = "PM_DATE";
-            this.PM_DATE.FieldNameSortGroup = "PM_DATE";
-            this.PM_DATE.Name = "PM_DATE";
-            this.PM_DATE.Visible = true;
-            this.PM_DATE.VisibleIndex = 5;
-            this.PM_DATE.Width = 150;
+            this.REQUEST_DATE.AppearanceCell.Options.UseTextOptions = true;
+            this.REQUEST_DATE.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.REQUEST_DATE.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.REQUEST_DATE.AppearanceHeader.Options.UseFont = true;
+            this.REQUEST_DATE.AppearanceHeader.Options.UseTextOptions = true;
+            this.REQUEST_DATE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.REQUEST_DATE.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.REQUEST_DATE.Caption = "Request Date";
+            this.REQUEST_DATE.FieldName = "REQUEST_DATE";
+            this.REQUEST_DATE.FieldNameSortGroup = "PM_DATE";
+            this.REQUEST_DATE.Name = "REQUEST_DATE";
+            this.REQUEST_DATE.Visible = true;
+            this.REQUEST_DATE.VisibleIndex = 2;
+            this.REQUEST_DATE.Width = 209;
             // 
-            // DEFE_DATE
+            // gridColumn4
             // 
-            this.DEFE_DATE.AppearanceCell.Options.UseTextOptions = true;
-            this.DEFE_DATE.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.DEFE_DATE.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.DEFE_DATE.AppearanceHeader.Options.UseFont = true;
-            this.DEFE_DATE.AppearanceHeader.Options.UseTextOptions = true;
-            this.DEFE_DATE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.DEFE_DATE.Caption = "Start PM";
-            this.DEFE_DATE.FieldName = "DEFE_DATE";
-            this.DEFE_DATE.Name = "DEFE_DATE";
-            this.DEFE_DATE.Visible = true;
-            this.DEFE_DATE.VisibleIndex = 3;
-            this.DEFE_DATE.Width = 155;
+            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.Caption = "Start Repair";
+            this.gridColumn4.FieldName = "DEFE_DATE";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 215;
             // 
-            // SOLU_DATE
+            // gridColumn5
             // 
-            this.SOLU_DATE.AppearanceCell.Options.UseTextOptions = true;
-            this.SOLU_DATE.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.SOLU_DATE.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.SOLU_DATE.AppearanceHeader.Options.UseFont = true;
-            this.SOLU_DATE.AppearanceHeader.Options.UseTextOptions = true;
-            this.SOLU_DATE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.SOLU_DATE.Caption = "End PM";
-            this.SOLU_DATE.FieldName = "SOLU_DATE";
-            this.SOLU_DATE.Name = "SOLU_DATE";
-            this.SOLU_DATE.Visible = true;
-            this.SOLU_DATE.VisibleIndex = 4;
-            this.SOLU_DATE.Width = 150;
+            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.gridColumn5.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn5.Caption = "End Repair";
+            this.gridColumn5.FieldName = "SOLU_DATE";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 214;
             // 
-            // PM_PIC
+            // DEFE_CD
             // 
-            this.PM_PIC.AppearanceCell.Options.UseTextOptions = true;
-            this.PM_PIC.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.PM_PIC.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.PM_PIC.AppearanceHeader.Options.UseFont = true;
-            this.PM_PIC.AppearanceHeader.Options.UseTextOptions = true;
-            this.PM_PIC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.PM_PIC.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.PM_PIC.Caption = "PM Pic";
-            this.PM_PIC.FieldName = "PM_PIC";
-            this.PM_PIC.FieldNameSortGroup = "PM_PIC";
-            this.PM_PIC.Name = "PM_PIC";
-            this.PM_PIC.Visible = true;
-            this.PM_PIC.VisibleIndex = 6;
-            this.PM_PIC.Width = 330;
+            this.DEFE_CD.AppearanceCell.Options.UseTextOptions = true;
+            this.DEFE_CD.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.DEFE_CD.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.DEFE_CD.AppearanceHeader.Options.UseFont = true;
+            this.DEFE_CD.AppearanceHeader.Options.UseTextOptions = true;
+            this.DEFE_CD.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DEFE_CD.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.DEFE_CD.Caption = "Broken";
+            this.DEFE_CD.FieldName = "DEFE_CD";
+            this.DEFE_CD.Name = "DEFE_CD";
+            this.DEFE_CD.Visible = true;
+            this.DEFE_CD.VisibleIndex = 5;
+            this.DEFE_CD.Width = 206;
             // 
-            // PM_STATUS
+            // PIC
             // 
-            this.PM_STATUS.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.PM_STATUS.AppearanceHeader.Options.UseFont = true;
-            this.PM_STATUS.AppearanceHeader.Options.UseTextOptions = true;
-            this.PM_STATUS.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.PM_STATUS.Caption = "PM Status";
-            this.PM_STATUS.FieldName = "PM_STATUS";
-            this.PM_STATUS.Name = "PM_STATUS";
-            this.PM_STATUS.Visible = true;
-            this.PM_STATUS.VisibleIndex = 7;
-            this.PM_STATUS.Width = 181;
+            this.PIC.AppearanceCell.Options.UseTextOptions = true;
+            this.PIC.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.PIC.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.PIC.AppearanceHeader.Options.UseFont = true;
+            this.PIC.AppearanceHeader.Options.UseTextOptions = true;
+            this.PIC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.PIC.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.PIC.Caption = "PIC";
+            this.PIC.FieldName = "PIC";
+            this.PIC.FieldNameSortGroup = "PIC";
+            this.PIC.Name = "PIC";
+            this.PIC.Visible = true;
+            this.PIC.VisibleIndex = 6;
+            this.PIC.Width = 259;
+            // 
+            // grdPm
+            // 
+            this.grdPm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdPm.Font = new System.Drawing.Font("Calibri", 12.75F);
+            gridLevelNode2.RelationName = "Level1";
+            this.grdPm.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode2});
+            this.grdPm.Location = new System.Drawing.Point(0, 0);
+            this.grdPm.MainView = this.gvwView;
+            this.grdPm.Name = "grdPm";
+            this.grdPm.Size = new System.Drawing.Size(1422, 579);
+            this.grdPm.TabIndex = 4;
+            this.grdPm.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvwView});
+            this.grdPm.Visible = false;
+            // 
+            // gvwView
+            // 
+            this.gvwView.Appearance.Row.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.gvwView.Appearance.Row.Options.UseFont = true;
+            this.gvwView.ColumnPanelRowHeight = 50;
+            this.gvwView.GridControl = this.grdPm;
+            this.gvwView.Name = "gvwView";
+            this.gvwView.OptionsBehavior.Editable = false;
+            this.gvwView.OptionsBehavior.ReadOnly = true;
+            this.gvwView.OptionsCustomization.AllowColumnMoving = false;
+            this.gvwView.OptionsCustomization.AllowFilter = false;
+            this.gvwView.OptionsCustomization.AllowGroup = false;
+            this.gvwView.OptionsView.ColumnAutoWidth = false;
+            this.gvwView.OptionsView.ShowGroupPanel = false;
+            this.gvwView.OptionsView.ShowIndicator = false;
+            this.gvwView.RowHeight = 50;
             // 
             // chartControl1
             // 
@@ -543,8 +599,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pn_body.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdRepair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvwView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
@@ -574,17 +632,20 @@
         private System.Windows.Forms.Label lblTxt2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pn_body;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn SEQ;
-        private DevExpress.XtraGrid.Columns.GridColumn WO_DATE;
-        private DevExpress.XtraGrid.Columns.GridColumn WO_ID;
-        private DevExpress.XtraGrid.Columns.GridColumn PM_DATE;
-        private DevExpress.XtraGrid.Columns.GridColumn PM_PIC;
+        private DevExpress.XtraGrid.GridControl grdPm;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvwView;
         private System.Windows.Forms.RadioButton rdMachine;
         private System.Windows.Forms.RadioButton rdPmHis;
-        private DevExpress.XtraGrid.Columns.GridColumn DEFE_DATE;
-        private DevExpress.XtraGrid.Columns.GridColumn SOLU_DATE;
-        private DevExpress.XtraGrid.Columns.GridColumn PM_STATUS;
+        private System.Windows.Forms.RadioButton rdRepair;
+        private DevExpress.XtraGrid.GridControl grdRepair;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn REQUEST_DATE;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn DEFE_CD;
+        private DevExpress.XtraGrid.Columns.GridColumn PIC;
     }
 }

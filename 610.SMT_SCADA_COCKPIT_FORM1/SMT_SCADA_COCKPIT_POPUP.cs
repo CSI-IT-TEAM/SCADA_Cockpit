@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.OracleClient;
 using System.Diagnostics;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FORM
@@ -30,7 +31,7 @@ namespace FORM
         {
             try
             {
-                //gridControl1.DataSource = _dtDataPage;
+                //grdPm.DataSource = _dtDataPage;
 
                 //for (int i = 0; i < gridView1.Columns.Count; i++)
                 //{
@@ -43,10 +44,10 @@ namespace FORM
                 //        gridView1.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
                 //    }
                 //    if (i == 4)
-                //    gridView1.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+                //        gridView1.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
 
-                    
-              //  }
+
+                //}
             }
             catch (Exception ex)
             {
@@ -220,7 +221,7 @@ namespace FORM
                 series.DataSource = dataPoints;
                 series.ArgumentDataMember = "sArgument";
                 series.ValueDataMembers.AddRange("SV_MIN");
-                series.CrosshairLabelPattern = "{V:#,#}";
+                series.CrosshairLabelPattern = "{V:#,#.#}";
               //  series.ArgumentScaleType = ScaleType.Numerical;
                 //format
                 //lineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -232,7 +233,7 @@ namespace FORM
                 series2.DataSource = dataPoints;
                 series2.ArgumentDataMember = "sArgument";
                 series2.ValueDataMembers.AddRange("SV_MAX");
-                series2.CrosshairLabelPattern = "{V:#,#}";
+                series2.CrosshairLabelPattern = "{V:#,#.#}";
                // series2.ArgumentScaleType = ScaleType.Numerical;
                 //format
                 //  lineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -245,7 +246,7 @@ namespace FORM
                 series3.DataSource = dataPoints;
                 series3.ArgumentDataMember = "sArgument";
                 series3.ValueDataMembers.AddRange("FINAL_PV");
-                series3.CrosshairLabelPattern = "{V:#,#}";
+                series3.CrosshairLabelPattern = "{V:#,#.#}";
                // series3.ArgumentScaleType = ScaleType.Numerical;
                 //format
                 // lineSeriesView3.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -288,12 +289,13 @@ namespace FORM
                 diagram.AxisY.Color = Color.DodgerBlue;
                 diagram.AxisY.Label.TextPattern = "{V:#,#}";
 
-                diagram.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                diagram.AxisY.Title.Font = new System.Drawing.Font("Cal +ibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 diagram.AxisY.Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
                 diagram.AxisY.Interlaced = false;
-                
-                
+               
+
+
 
                 chartControl1.Series.Clear();
                 chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] { series2, series3, series };
@@ -322,10 +324,13 @@ namespace FORM
                 //chartControl1.Legend.Visibility = DefaultBoolean.True;
 
                 diagram.AxisX.VisualRange.Auto = false;
+                
                 int iDataRow = _dtDataPage.Rows.Count;
-                if (iDataRow >=15)
+                if (iDataRow >=25)
                 {
-                    diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[0]["SET_TIME"], _dtDataPage.Rows[15]["SET_TIME"]);
+                    diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[0]["SET_TIME"], _dtDataPage.Rows[20]["SET_TIME"]);
+                    
+                    //diagram.AxisX.VisualRange.max
                 }
                 else
                 {
@@ -342,7 +347,7 @@ namespace FORM
                     dataPoints.Add(new DataRealPoint(setTime1, SV_MIN, SV_MAX, FINAL_PV));
                 }
                 // timer1.Start();
-
+               // chartControl1.AutoScrollOffset = new Point(12, 32);
                 this.Cursor = Cursors.Default;
             }
             catch (Exception ex)
@@ -357,7 +362,7 @@ namespace FORM
             COM.OraDB MyOraDB = new COM.OraDB();
 
             MyOraDB.ReDim_Parameter(3);
-            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.MACHINE_PM_SELECT";
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.MACHINE_WOF_SELECT";
 
             MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
             MyOraDB.Parameter_Name[1] = "ARG_MACHINE";
@@ -414,6 +419,38 @@ namespace FORM
             {
                 return null;
             }
+        }
+
+        private async Task<DataSet> Data_Select_Sync(string argMachine)
+        {
+            return await Task.Run(() => {
+                COM.OraDB MyOraDB = new COM.OraDB();
+
+                MyOraDB.ReDim_Parameter(4);
+                MyOraDB.Process_Name = "MES.P_SCADA_MACHINE_INFOR";
+
+                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
+                MyOraDB.Parameter_Name[1] = "ARG_MACHINE";
+                MyOraDB.Parameter_Name[2] = "OUT_CURSOR";
+                MyOraDB.Parameter_Name[3] = "OUT_CURSOR2";
+
+                MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
+                MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
+
+                MyOraDB.Parameter_Values[0] = "REPAIR";
+                MyOraDB.Parameter_Values[1] = argMachine;
+                MyOraDB.Parameter_Values[2] = "";
+                MyOraDB.Parameter_Values[3] = "";
+
+                MyOraDB.Add_Select_Parameter(true);
+                DataSet retDS = MyOraDB.Exe_Select_Procedure();
+                if (retDS == null) return null;
+
+                return retDS;
+            });
+
         }
 
         #endregion DB
@@ -476,27 +513,81 @@ namespace FORM
             }         
         }
 
+        private void setDataGridPm()
+        {
+            DataTable dt = Data_PM_Select("Q");
+            gvwView.BeginUpdate();
+
+            grdPm.DataSource = dt;
+
+            gvwView.Appearance.Row.Font = new System.Drawing.Font("Calibri", 14, FontStyle.Regular);
+            gvwView.ColumnPanelRowHeight = 50;
+            gvwView.RowHeight = 50;
+            for (int i = 0; i < gvwView.Columns.Count; i++)
+            {
+
+                gvwView.Columns[i].AppearanceHeader.Font = new Font("Calibri", 16, FontStyle.Bold);
+
+
+                gvwView.Columns[i].AppearanceCell.Options.UseTextOptions = true;
+
+                gvwView.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+
+                gvwView.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+                gvwView.Columns[i].OptionsFilter.AllowFilter = false;
+                gvwView.Columns[i].OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+                gvwView.Columns[i].OptionsColumn.AllowEdit = false;
+                gvwView.Columns[i].OptionsColumn.ReadOnly = true;
+                
+                gvwView.Columns[i].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                //gvwView.Columns[i].AppearanceHeader.Fonts
+
+                gvwView.Columns[i].OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+                //  
+
+               // gvwView.Columns[i].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+              //  gvwView.Columns[i].DisplayFormat.FormatString = "#,###.##";
+            }
+
+            
+            gvwView.BestFitColumns();
+
+            gvwView.EndUpdate();
+
+        }
 
         private void PM_Detail_Check()
         {
-            if (rdPmHis.Checked)
-            {
-                cmdDay.Visible = false;
-                cmdWeek.Visible = false;
-                cmdMonth.Visible = false;
-                gridControl1.Visible = true;
-                DataTable dt = Data_PM_Select("Q");
-                gridControl1.DataSource = dt;
-            }
-            else
+            if (rdMachine.Checked)
             {
                 cmdDay.Visible = true;
                 cmdWeek.Visible = true;
                 cmdMonth.Visible = true;
-                
-                gridControl1.Visible = false;
-            }
+                chartControl1.Visible = true;
 
+                grdPm.Visible = false;
+                grdRepair.Visible = false;
+            }          
+            else if (rdPmHis.Checked)
+            {
+                cmdDay.Visible = false;
+                cmdWeek.Visible = false;
+                cmdMonth.Visible = false;
+                grdPm.Visible = true;
+                setDataGridPm();
+                chartControl1.Visible = false;
+            }
+            else if (rdRepair.Checked)
+            {
+                cmdDay.Visible = false;
+                cmdWeek.Visible = false;
+                cmdMonth.Visible = false;
+                chartControl1.Visible = false;
+                grdPm.Visible = false;
+
+                grdRepair.Visible = true;
+
+            }    
         }
 
         private void SMT_SCADA_COCKPIT_FORM2_VisibleChanged(object sender, EventArgs e)
@@ -505,7 +596,7 @@ namespace FORM
             {
                 if (Visible)
                 {
-                    gridControl1.Visible = false;
+                    grdPm.Visible = false;
                     lblTxt1.Text = "";
                     lblTxt2.Text = "";
                     lblTxt3.Text = "";
@@ -627,8 +718,20 @@ namespace FORM
 
         private void chkMachine_CheckedChanged(object sender, EventArgs e)
         {
-            
-            PM_Detail_Check();
+            if (rdMachine.Checked)
+                PM_Detail_Check();
+        }
+
+        private void rdPmHis_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdPmHis.Checked)
+                PM_Detail_Check();
+        }
+
+        private void rdRepair_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdRepair.Checked)
+                PM_Detail_Check();
         }
 
         int iCount = 0;

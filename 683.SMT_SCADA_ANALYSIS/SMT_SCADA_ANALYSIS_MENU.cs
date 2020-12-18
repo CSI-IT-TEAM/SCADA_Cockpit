@@ -88,5 +88,11 @@ namespace FORM
             Button cmd = ((Button)sender);
             cmd.FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
+
+        private void cmdFems_Click(object sender, EventArgs e)
+        {
+            ComVar.Var._IsBack = true;
+            ComVar.Var.callForm = "682";
+        }
     }
 }

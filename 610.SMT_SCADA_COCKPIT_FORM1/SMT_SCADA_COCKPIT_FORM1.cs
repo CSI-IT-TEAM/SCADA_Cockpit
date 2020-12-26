@@ -26,6 +26,7 @@ namespace FORM
 
         int _iReload = 0;
         DataTable _dtMasterLine;
+        DataTable _dtAlert;
        // Dictionary<string, UC.UC_Chart_Donut> _dicLocation = new Dictionary<string, UC.UC_Chart_Donut>();
         Dictionary<string, Button_Status> _dicLine = new Dictionary<string, Button_Status>();
         Dictionary<string, UC.UC_Factory> _dicFac = new Dictionary<string, UC.UC_Factory>();
@@ -332,6 +333,7 @@ namespace FORM
                 lineCd = row["LINE_CD"].ToString();
 
                 int iStart = lineCd == "018_1" ? 4 : 0;
+                lineCd = lineCd == "018_1" ? "018" : lineCd;
                 //lineCd = lineCd.Replace("_1", "");
                 for (int iLine = iStart + 1; iLine <= iStart + iNumLine; iLine++)
                 {
@@ -475,9 +477,29 @@ namespace FORM
 
         private void setData()
         {
-            
-            DataTable dt = Data_Select("");
-            
+            DataSet ds = Data_Select("");
+
+            DataTable dt = ds.Tables[0];
+            _dtAlert = ds.Tables[1];
+            //DataTable dt2 = Data_Select("");
+
+            //DataTable dt4 = dt.AsEnumerable()
+            //                .GroupBy(r => new { lineCd = r["LINE_CD"], mlineCd = r["MLINE_CD"], opcd = r["OP_CD"], nameControl = r["NAME_CONTROL"] })
+            //                .Select(g =>
+            //                {
+            //                    var row = dt.NewRow();
+
+            //                    row["STATUS_CD"] = g.Max(r => r.Field<int>("STATUS_CD"));
+            //                    row["LINE_CD"] = g.Key.lineCd;
+            //                    row["MLINE_CD"] = g.Key.mlineCd;
+            //                    row["OP_CD"] = g.Key.opcd;
+            //                    row["NAME_CONTROL"] = g.Key.nameControl;
+            //                    return row;
+            //                })
+            //                .CopyToDataTable();
+
+            // var max = dt.AsEnumerable().Max(row => row["STATUS_CD"]);
+
             //reset color line
             foreach (var item in _dicLine)
             {
@@ -506,11 +528,9 @@ namespace FORM
             {
                 try
                 {
-                     dr = _dtMasterLine.Select("LINE_CD = '" + row["LINE_CD"].ToString()  + "'");
+                    dr = _dtMasterLine.Select("LINE_CD = '" + row["LINE_CD"].ToString()  + "'");
                     
                     location = dr[0][0] + "_" + row["OP_CD"];
-
-                    
 
                     //Set color Line
                     if (_dicLine.ContainsKey(row["NAME_CONTROL"].ToString()))
@@ -539,31 +559,13 @@ namespace FORM
                     //    dicStatus[location] = row["STATUS"].ToString();
                     //}
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    throw;
+                    Debug.WriteLine(ex);
                 }
             }
-
-            
-
-            
-
-            //_dicFac["F4_UPN"].setColor("YELLOW");
-            //_dicFac["F4_FSS"].setColor("YELLOW");
-            //_dicFac["F4_FGA"].setColor("YELLOW");
-
-         //   _dicFac["F5_FSS"].setColor("YELLOW");
-            
-            
-
         }
         #endregion Set Data
-
-        private void readFile()
-        {
-
-        }
 
         #region Button Line Click
 
@@ -578,7 +580,7 @@ namespace FORM
                 if (ctr.BackColor.Name.ToUpper() == "GREEN") return; 
                 using (SMT_SCADA_COCKPIT_POPUP pop = new SMT_SCADA_COCKPIT_POPUP())
                 {
-                    DataTable dt = Data_Select_Machine("", strArr[1], strArr[2], strArr[3]);
+                    DataTable dt = _dtAlert.Select($"LINE_CD = '{strArr[1]}' and MLINE_CD = '{strArr[2]}' and OP_CD = '{strArr[3]}'").CopyToDataTable(); //Data_Select_Machine("", strArr[1], strArr[2], strArr[3]);
 
                     pop._dtData = dt; 
                     pop.ShowDialog();
@@ -632,27 +634,30 @@ namespace FORM
             return retDS.Tables[MyOraDB.Process_Name];
         }
 
-        private DataTable Data_Select(string argType)
+        private DataSet Data_Select(string argType)
         {
             COM.OraDB MyOraDB = new COM.OraDB();
-
-            MyOraDB.ReDim_Parameter(2);
-            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.MAIN_SELECT";
+            MyOraDB.ShowErr = true;
+            MyOraDB.ReDim_Parameter(3);
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.MAIN_SELECT_V2";
 
             MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
             MyOraDB.Parameter_Name[1] = "OUT_CURSOR";
+            MyOraDB.Parameter_Name[2] = "OUT_CURSOR2";
 
             MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
             MyOraDB.Parameter_Type[1] = (int)OracleType.Cursor;
+            MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
 
             MyOraDB.Parameter_Values[0] = argType;
             MyOraDB.Parameter_Values[1] = "";
+            MyOraDB.Parameter_Values[2] = "";
 
             MyOraDB.Add_Select_Parameter(true);
             DataSet retDS = MyOraDB.Exe_Select_Procedure();
             if (retDS == null) return null;
 
-            return retDS.Tables[MyOraDB.Process_Name];
+            return retDS;
         }
 
         private DataTable Data_Select_Machine(string argType, string argLine, string argMline, string argArea)

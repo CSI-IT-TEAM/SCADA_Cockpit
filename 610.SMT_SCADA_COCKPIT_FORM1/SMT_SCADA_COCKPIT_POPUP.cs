@@ -27,34 +27,6 @@ namespace FORM
         string _strType = "D";
         ObservableCollection<DataRealPoint> dataPoints = new ObservableCollection<DataRealPoint>();
 
-        private void SetData()
-        {
-            try
-            {
-                //grdPm.DataSource = _dtDataPage;
-
-                //for (int i = 0; i < gridView1.Columns.Count; i++)
-                //{
-
-                //    gridView1.Columns[i].OptionsColumn.ReadOnly = true;
-                //    gridView1.Columns[i].OptionsColumn.AllowEdit = false;
-                //    if (i <= 4)
-                //    {
-                //        gridView1.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                //        gridView1.Columns[i].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                //    }
-                //    if (i == 4)
-                //        gridView1.Columns[i].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-
-
-                //}
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.ToString());
-                throw;
-            }           
-        }
 
         private void BindingChartData()
         {
@@ -326,15 +298,15 @@ namespace FORM
                 diagram.AxisX.VisualRange.Auto = false;
                 
                 int iDataRow = _dtDataPage.Rows.Count;
-                if (iDataRow >=25)
+                if (iDataRow >=20)
                 {
-                    diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[0]["SET_TIME"], _dtDataPage.Rows[20]["SET_TIME"]);
+                    diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[iDataRow - 21]["SET_TIME"], _dtDataPage.Rows[iDataRow - 1]["SET_TIME"]);
                     
                     //diagram.AxisX.VisualRange.max
                 }
                 else
                 {
-                    diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[0]["SET_TIME"], _dtDataPage.Rows[iDataRow -1]["SET_TIME"]);
+                    diagram.AxisX.VisualRange.SetMinMaxValues(_dtDataPage.Rows[0]["SET_TIME"], _dtDataPage.Rows[iDataRow - 1]["SET_TIME"]);
                 }
 
                 for (int i = 0; i < _dtDataPage.Rows.Count; i++)
@@ -421,36 +393,36 @@ namespace FORM
             }
         }
 
-        private async Task<DataSet> Data_Select_Sync(string argMachine)
+        private DataTable Data_Select_Machine(string argType, string argMachineCd, string argMachineId, string argHm)
         {
-            return await Task.Run(() => {
-                COM.OraDB MyOraDB = new COM.OraDB();
+            COM.OraDB MyOraDB = new COM.OraDB();
+            //  MyOraDB.ShowErr = true;
+            MyOraDB.ReDim_Parameter(5);
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.PM_SELECT_MACHINE_ALERT_V2";
 
-                MyOraDB.ReDim_Parameter(4);
-                MyOraDB.Process_Name = "MES.P_SCADA_MACHINE_INFOR";
+            MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
+            MyOraDB.Parameter_Name[1] = "ARG_MACHINE_CD";
+            MyOraDB.Parameter_Name[2] = "ARG_MACHINE_ID";
+            MyOraDB.Parameter_Name[3] = "ARG_HM";
+            MyOraDB.Parameter_Name[4] = "OUT_CURSOR";
 
-                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
-                MyOraDB.Parameter_Name[1] = "ARG_MACHINE";
-                MyOraDB.Parameter_Name[2] = "OUT_CURSOR";
-                MyOraDB.Parameter_Name[3] = "OUT_CURSOR2";
+            MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[2] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[3] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[4] = (int)OracleType.Cursor;
 
-                MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
-                MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
-                MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
-                MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
+            MyOraDB.Parameter_Values[0] = argType;
+            MyOraDB.Parameter_Values[1] = argMachineCd;
+            MyOraDB.Parameter_Values[2] = argMachineId;
+            MyOraDB.Parameter_Values[3] = argHm;
+            MyOraDB.Parameter_Values[4] = "";
 
-                MyOraDB.Parameter_Values[0] = "REPAIR";
-                MyOraDB.Parameter_Values[1] = argMachine;
-                MyOraDB.Parameter_Values[2] = "";
-                MyOraDB.Parameter_Values[3] = "";
+            MyOraDB.Add_Select_Parameter(true);
+            DataSet retDS = MyOraDB.Exe_Select_Procedure();
+            if (retDS == null) return null;
 
-                MyOraDB.Add_Select_Parameter(true);
-                DataSet retDS = MyOraDB.Exe_Select_Procedure();
-                if (retDS == null) return null;
-
-                return retDS;
-            });
-
+            return retDS.Tables[0];
         }
 
         #endregion DB
@@ -604,8 +576,8 @@ namespace FORM
                     //SetData();
                     if (_dtData == null || _dtData.Rows.Count == 0) return;
 
-                    int.TryParse(_dtData.Compute("min([RN])", "").ToString(), out _iCurPage);
-                    int.TryParse(_dtData.Compute("max([RN])", "").ToString(), out _iMaxPage);
+                    _iCurPage = 1;
+                    _iMaxPage = _dtData.Rows.Count;
 
                     setClick("");
 
@@ -631,8 +603,10 @@ namespace FORM
 
         private void setData()
         {
-            
-            _dtDataPage = _dtData.Select("RN = '"+ _iCurPage + "'", _dtData.Rows[0]["ORD"].ToString()).CopyToDataTable();
+            string machineCd = _dtData.Rows[_iCurPage - 1]["MACHINE_CD"].ToString();
+            string machineId = _dtData.Rows[_iCurPage - 1]["MC_ID"].ToString();
+            string hm = _dtData.Rows[_iCurPage - 1]["HM"].ToString();
+            _dtDataPage = Data_Select_Machine(_strType, machineCd, machineId, hm);
             _strMachineCode = _dtDataPage.Rows[0]["MC_CODE"].ToString();
             lblTxt1.Text = _dtDataPage.Rows[0]["TXT1"].ToString();
             lblTxt2.Text = _dtDataPage.Rows[0]["TXT2"].ToString();

@@ -189,10 +189,7 @@ namespace FORM
                     var dataRow = tlsLoction.GetDataRecordByNode(node);
                     node.Tag = dataRow;
                     string nodeId = node.GetValue("ID").ToString();
-                    if (nodeId == "F4")
-                        node.Checked = true;
-                    else
-                        node.Checked = false;
+                    node.Checked = true;
                     node.Expanded = true;
                     foreach (TreeListNode node1 in node.RootNode.Nodes)
                     {
@@ -252,14 +249,7 @@ namespace FORM
                 foreach (TreeListNode node1 in node.RootNode.Nodes)
                 {
                     string lineCd = node1.GetValue("ID").ToString();
-                    if (lineCd == "013" || lineCd == "014" || lineCd == "015" || lineCd == "016" || lineCd == "017")
-                    {
-                        node1.Checked = true;
-                    }
-                    else
-                    {
-                        node1.Checked = false;
-                    }
+                    node1.Checked = true;
                     //if (!node1.Checked)
                     //{
                     //    lineCd.Replace(node1.GetValue("ID").ToString() + ",", "");

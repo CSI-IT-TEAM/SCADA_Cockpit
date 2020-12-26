@@ -337,7 +337,7 @@
             this.grdRepair.Location = new System.Drawing.Point(0, 0);
             this.grdRepair.MainView = this.gridView2;
             this.grdRepair.Name = "grdRepair";
-            this.grdRepair.Size = new System.Drawing.Size(1422, 579);
+            this.grdRepair.Size = new System.Drawing.Size(1345, 579);
             this.grdRepair.TabIndex = 6;
             this.grdRepair.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -498,7 +498,6 @@
             // 
             // grdPm
             // 
-            this.grdPm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdPm.Font = new System.Drawing.Font("Calibri", 12.75F);
             gridLevelNode2.RelationName = "Level1";
             this.grdPm.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
@@ -506,7 +505,7 @@
             this.grdPm.Location = new System.Drawing.Point(0, 0);
             this.grdPm.MainView = this.gvwView;
             this.grdPm.Name = "grdPm";
-            this.grdPm.Size = new System.Drawing.Size(1422, 579);
+            this.grdPm.Size = new System.Drawing.Size(1377, 579);
             this.grdPm.TabIndex = 4;
             this.grdPm.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwView});

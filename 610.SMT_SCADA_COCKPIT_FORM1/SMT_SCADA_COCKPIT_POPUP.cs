@@ -181,7 +181,7 @@ namespace FORM
                 dataPoints.Clear();
                 // _dtDataPage = SEL_SMT_INST_SET_CHART("014", "001");
 
-
+                
                 DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
                 DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
                 DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
@@ -226,6 +226,9 @@ namespace FORM
                 lineSeriesView3.Color = Color.Red;
                 series3.View = lineSeriesView3;
 
+                chartControl1.Series.Clear();
+                chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] { series2, series3, series };
+
                 //Series series4 = new Series("Set Ratio", ViewType.Line);
                 //series4.ChangeView(ViewType.Line);
                 //series4.DataSource = dataPoints;
@@ -251,7 +254,7 @@ namespace FORM
                 diagram.AxisX.WholeRange.SideMarginsValue = 0;
 
                 
-                diagram.DependentAxesYRange = DefaultBoolean.True;                
+                diagram.DependentAxesYRange = DefaultBoolean.True;             
                 diagram.AxisY.Title.Text = "Values";
                 diagram.AxisY.WholeRange.SideMarginsValue = 0;
                 diagram.AxisY.WholeRange.MinValue = _iMinChart - 3;
@@ -269,8 +272,7 @@ namespace FORM
 
 
 
-                chartControl1.Series.Clear();
-                chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] { series2, series3, series };
+                
 
                 //ADD SECONDARY AXISY
                 // SecondaryAxisY myAxisY = new SecondaryAxisY("my X-Axis");

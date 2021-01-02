@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_COCKPIT_POPUP));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
@@ -71,7 +70,7 @@
             this.grdPm = new DevExpress.XtraGrid.GridControl();
             this.gvwView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -337,7 +336,7 @@
             this.grdRepair.Location = new System.Drawing.Point(0, 0);
             this.grdRepair.MainView = this.gridView2;
             this.grdRepair.Name = "grdRepair";
-            this.grdRepair.Size = new System.Drawing.Size(1345, 579);
+            this.grdRepair.Size = new System.Drawing.Size(1425, 579);
             this.grdRepair.TabIndex = 6;
             this.grdRepair.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -505,7 +504,7 @@
             this.grdPm.Location = new System.Drawing.Point(0, 0);
             this.grdPm.MainView = this.gvwView;
             this.grdPm.Name = "grdPm";
-            this.grdPm.Size = new System.Drawing.Size(1377, 579);
+            this.grdPm.Size = new System.Drawing.Size(1425, 579);
             this.grdPm.TabIndex = 4;
             this.grdPm.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwView});

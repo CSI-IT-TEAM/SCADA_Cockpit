@@ -129,6 +129,7 @@
     <Reference Include="System.Data.OracleClient">
       <Name>System.Data.OracleClient</Name>
     </Reference>
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web">
       <Name>System.Web</Name>
     </Reference>
@@ -202,10 +203,10 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>COM_WebSvcLMES_OraPKG</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="http://211.54.128.6/Sephiroth_WebSvc/OraPKG.asmx">
+    <WebReferenceUrl Include="http://172.30.10.7/Sephiroth_WebSvc/OraPKG.asmx">
       <RelPath>Web References\WebSvc\</RelPath>
       <UrlBehavior>Static</UrlBehavior>
-      <UpdateFromURL>http://211.54.128.6/Sephiroth_WebSvc/OraPKG.asmx</UpdateFromURL>
+      <UpdateFromURL>http://172.30.10.7/Sephiroth_WebSvc/OraPKG.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

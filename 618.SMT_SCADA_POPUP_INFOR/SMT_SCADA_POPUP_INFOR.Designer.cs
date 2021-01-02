@@ -31,13 +31,25 @@ namespace FORM
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_POPUP_INFOR));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.CustomLegendItem customLegendItem1 = new DevExpress.XtraCharts.CustomLegendItem();
+            DevExpress.XtraCharts.CustomLegendItem customLegendItem2 = new DevExpress.XtraCharts.CustomLegendItem();
+            DevExpress.XtraCharts.CustomLegendItem customLegendItem3 = new DevExpress.XtraCharts.CustomLegendItem();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel1 = new DevExpress.XtraCharts.PointSeriesLabel();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnTop = new System.Windows.Forms.Panel();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnMcId = new System.Windows.Forms.Panel();
+            this.lblPage = new System.Windows.Forms.Label();
+            this.cmdNext = new System.Windows.Forms.Button();
+            this.cmdPrev = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTxt2 = new System.Windows.Forms.Label();
             this.lblTxt1 = new System.Windows.Forms.Label();
@@ -77,10 +89,13 @@ namespace FORM
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TREND = new DevExpress.XtraTab.XtraTabPage();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnMcId.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pn_body.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
@@ -94,6 +109,12 @@ namespace FORM
             this.MOVE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            this.TREND.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -138,11 +159,59 @@ namespace FORM
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pnMcId);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(3, 81);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1378, 86);
             this.panel1.TabIndex = 4;
+            // 
+            // pnMcId
+            // 
+            this.pnMcId.Controls.Add(this.lblPage);
+            this.pnMcId.Controls.Add(this.cmdNext);
+            this.pnMcId.Controls.Add(this.cmdPrev);
+            this.pnMcId.Location = new System.Drawing.Point(1175, 10);
+            this.pnMcId.Name = "pnMcId";
+            this.pnMcId.Size = new System.Drawing.Size(200, 74);
+            this.pnMcId.TabIndex = 15;
+            // 
+            // lblPage
+            // 
+            this.lblPage.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPage.Location = new System.Drawing.Point(69, 22);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(59, 31);
+            this.lblPage.TabIndex = 10;
+            this.lblPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmdNext
+            // 
+            this.cmdNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdNext.BackgroundImage")));
+            this.cmdNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdNext.FlatAppearance.BorderSize = 0;
+            this.cmdNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdNext.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
+            this.cmdNext.Location = new System.Drawing.Point(136, 7);
+            this.cmdNext.Name = "cmdNext";
+            this.cmdNext.Size = new System.Drawing.Size(60, 60);
+            this.cmdNext.TabIndex = 9;
+            this.cmdNext.UseVisualStyleBackColor = true;
+            this.cmdNext.Click += new System.EventHandler(this.cmdNext_Click);
+            // 
+            // cmdPrev
+            // 
+            this.cmdPrev.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdPrev.BackgroundImage")));
+            this.cmdPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdPrev.FlatAppearance.BorderSize = 0;
+            this.cmdPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdPrev.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
+            this.cmdPrev.Location = new System.Drawing.Point(4, 7);
+            this.cmdPrev.Name = "cmdPrev";
+            this.cmdPrev.Size = new System.Drawing.Size(60, 60);
+            this.cmdPrev.TabIndex = 8;
+            this.cmdPrev.UseVisualStyleBackColor = true;
+            this.cmdPrev.Click += new System.EventHandler(this.cmdPrev_Click);
             // 
             // panel2
             // 
@@ -219,7 +288,8 @@ namespace FORM
             this.tabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.REPAIR,
             this.PM,
-            this.MOVE});
+            this.MOVE,
+            this.TREND});
             this.tabControl.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.tabControl_SelectedPageChanged);
             // 
             // PM
@@ -746,6 +816,60 @@ namespace FORM
             this.gridColumn13.VisibleIndex = 6;
             this.gridColumn13.Width = 259;
             // 
+            // TREND
+            // 
+            this.TREND.Controls.Add(this.chartControl1);
+            this.TREND.Name = "TREND";
+            this.TREND.Size = new System.Drawing.Size(1376, 421);
+            this.TREND.Text = "   Trend    ";
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.DataBindings = null;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisX.VisualRange.Auto = false;
+            xyDiagram1.AxisX.VisualRange.MaxValueSerializable = "9";
+            xyDiagram1.AxisX.VisualRange.MinValueSerializable = "0";
+            xyDiagram1.AxisY.GridLines.Visible = false;
+            xyDiagram1.AxisY.Label.TextPattern = "{V:#,#}";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.DefaultPane.BackColor = System.Drawing.Color.White;
+            xyDiagram1.EnableAxisXScrolling = true;
+            this.chartControl1.Diagram = xyDiagram1;
+            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
+            this.chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+            customLegendItem1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            customLegendItem1.MarkerColor = System.Drawing.Color.Green;
+            customLegendItem1.Name = "SV_MIN";
+            customLegendItem1.Text = "SV MIN";
+            customLegendItem2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            customLegendItem2.MarkerColor = System.Drawing.Color.Green;
+            customLegendItem2.Name = "SV_MAX";
+            customLegendItem2.Text = "SV MAX";
+            customLegendItem3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            customLegendItem3.Name = "FINAL_PV";
+            customLegendItem3.Text = "FINAL PV";
+            this.chartControl1.Legend.CustomItems.AddRange(new DevExpress.XtraCharts.CustomLegendItem[] {
+            customLegendItem1,
+            customLegendItem2,
+            customLegendItem3});
+            this.chartControl1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+            this.chartControl1.Legend.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Location = new System.Drawing.Point(0, 0);
+            this.chartControl1.Name = "chartControl1";
+            series1.CrosshairLabelPattern = "{V:#,#}";
+            pointSeriesLabel1.TextPattern = "{V:#.0}";
+            series1.Label = pointSeriesLabel1;
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Series 1";
+            series1.View = lineSeriesView1;
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl1.Size = new System.Drawing.Size(1376, 421);
+            this.chartControl1.TabIndex = 4;
+            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
@@ -760,10 +884,12 @@ namespace FORM
             this.MinimizeBox = false;
             this.Name = "SMT_SCADA_POPUP_INFOR";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.SMT_SCADA_POPUP_INFOR_Load);
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_COCKPIT_FORM2_VisibleChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnTop.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.pnMcId.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pn_body.ResumeLayout(false);
@@ -778,6 +904,12 @@ namespace FORM
             this.MOVE.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridMove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            this.TREND.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -828,5 +960,11 @@ namespace FORM
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraTab.XtraTabPage TREND;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private System.Windows.Forms.Panel pnMcId;
+        private System.Windows.Forms.Label lblPage;
+        private System.Windows.Forms.Button cmdNext;
+        private System.Windows.Forms.Button cmdPrev;
     }
 }

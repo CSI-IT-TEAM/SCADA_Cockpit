@@ -553,7 +553,6 @@
             splineSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation2;
             splineSeriesView1.Shadow.Visible = true;
             series3.View = splineSeriesView1;
-            series4.CheckedInLegend = false;
             series4.CrosshairLabelPattern = "{V:#,#}";
             pointSeriesLabel3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             pointSeriesLabel3.LineVisibility = DevExpress.Utils.DefaultBoolean.True;

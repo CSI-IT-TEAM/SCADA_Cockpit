@@ -327,13 +327,13 @@ namespace FORM
             cmdLine = createButton(dicValue, buttonLoc, lineTextButtonSize, lineTextButtonFont);
             pnControl.Controls.Add(cmdLine);
 
-            
+            string line = "";
 
             foreach (DataRow row in argDt.Rows)
             {
                 int.TryParse(row["NUM_FGA"].ToString(), out iNumLine);
                 lineCd = row["LINE_CD"].ToString();
-
+                line = lineCd;
                 int iStart = lineCd == "018_1" ? 4 : 0;
                 lineCd = lineCd == "018_1" ? "018" : lineCd;
                 //lineCd = lineCd.Replace("_1", "");
@@ -386,7 +386,7 @@ namespace FORM
 
                 buttonLoc = new Point(3, locStartY);
                 buttonSize = new System.Drawing.Size(65, locY - locStartY - 5);
-                dicValue["NAME"] = "cmd_" + lineCd + "_" + "LNM"; ;
+                dicValue["NAME"] = "cmd_" + line + "_" + "LNM"; ;
                 dicValue["TEXT"] = row["LINE_NM"].ToString();
                 dicValue["BACK_COLOR"] = "NAVY";
                 dicValue["FORE_COLOR"] = "WHITE";
@@ -561,7 +561,11 @@ namespace FORM
             {
                 Control ctr = (Control)sender;
                 string[] strArr = ctr.Name.Split('_');
-                string path = @"vnc\" + strArr[1] + ".vnc";
+                string path = @"vnc\";
+                if (strArr.Count() == 4 && strArr[3] == "LNM")
+                    path += strArr[1] + "_" + strArr[2] + ".vnc";
+                else
+                    path += strArr[1] + ".vnc";
 
                 if (strArr.Count() == 5)
                 {
@@ -632,7 +636,7 @@ namespace FORM
         {
             return await Task.Run(() => {
                 COM.OraDB MyOraDB = new COM.OraDB();
-                MyOraDB.ShowErr = true;
+               // MyOraDB.ShowErr = true;
                 MyOraDB.ReDim_Parameter(3);
                 MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.MAIN_SELECT_V2";
 
@@ -798,6 +802,11 @@ namespace FORM
         {
             ComVar.Var._IsBack = true;
             ComVar.Var.callForm = "684";
+        }
+
+        private void cmdBack_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "back";
         }
     }
 

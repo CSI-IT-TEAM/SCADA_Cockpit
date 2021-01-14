@@ -662,7 +662,7 @@ namespace FORM
            // string machine_nm = "";
             if (dr != null && dr.Count() > 0)
             {
-                element.LabelElement.Text = $"{argSeries + 1} - {dr[0]["MACHINE_CD"]} ({dr[0]["MACHINE_NM"]}): {element.SeriesPoint.Values[0]}"; //string.Format("{0}: {1}", dr[0]["MACHINE_CD"].ToString(), element.SeriesPoint.Values[0]);
+                element.LabelElement.Text = $"Line: {dr[0]["LINE_NM"].ToString().Substring(2,1)} Area: {dr[0]["AREA"]} - Machine: {dr[0]["MACHINE_CD"]} ({dr[0]["MACHINE_NM"]}): {element.SeriesPoint.Values[0]}"; //string.Format("{0}: {1}", dr[0]["MACHINE_CD"].ToString(), element.SeriesPoint.Values[0]);
             }
             else
             {

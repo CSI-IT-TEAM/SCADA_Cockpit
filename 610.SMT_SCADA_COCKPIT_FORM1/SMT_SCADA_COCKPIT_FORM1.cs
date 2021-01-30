@@ -564,9 +564,10 @@ namespace FORM
                 string path = @"vnc\";
                 if (strArr.Count() == 4 && strArr[3] == "LNM")
                     path += strArr[1] + "_" + strArr[2] + ".vnc";
-                else
+                else if (strArr.Count() == 3 && strArr[2] == "LNM")
                     path += strArr[1] + ".vnc";
-
+                else
+                    path = "";
                 if (strArr.Count() == 5)
                 {
                     if (ctr.BackColor.Name.ToUpper() == "GREEN") return;
@@ -580,6 +581,7 @@ namespace FORM
                 }
                 else
                 {
+                    if (path == "") return;
                     if (!System.IO.File.Exists(Application.StartupPath + "\\" + path)) return;
                     try
                     {

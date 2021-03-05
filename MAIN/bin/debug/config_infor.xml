@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Base>
+	<MAIN>
+		<grpForm>SCADA_POP_INFOR</grpForm>
+		<FlashScreen>false</FlashScreen>
+		<Auto_Download>false</Auto_Download>
+		<AREA>NOS</AREA>
+		<Path>D:\MC_CODE.TXT</Path>
+
+	</MAIN>
+  
+	<Auto_Download>
+		<grpForm>SCADA_COCKPIT</grpForm>
+	</Auto_Download>
+	
+</Base>

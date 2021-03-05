@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Base>
+	<MAIN>
+		<grpForm>SCADA_COCKPIT</grpForm>
+		<FlashScreen>true</FlashScreen>
+		<Auto_Download>false</Auto_Download>
+		<AREA>NOS</AREA>
+		<Type>2</Type>
+		<SCREEN>2</SCREEN>
+		<SLEEP_VNC>100</SLEEP_VNC>
+	</MAIN>
+  
+	<Auto_Download>
+		<grpForm>SCADA_COCKPIT</grpForm>
+	</Auto_Download>
+	
+</Base>

@@ -828,6 +828,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SMT_SCADA_COCKPIT_FORM1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.SMT_SCADA_COCKPIT_FORM1_Load);
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_COCKPIT_MENU_VisibleChanged);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).EndInit();

@@ -26,6 +26,7 @@ namespace FORM
 
 
         int _iReload = 0;
+        bool isBack = false;
         DataTable _dtMasterLine;
         DataTable _dtAlert;
         DataTable _dtData;
@@ -37,7 +38,7 @@ namespace FORM
             if (Visible)
             {
                 
-                cmdBack.Visible = ComVar.Var._IsBack;
+                cmdBack.Visible = isBack;
                 _iReload = 29;
                 tmrTime.Start();
                 tmrBlink.Start();
@@ -803,12 +804,19 @@ namespace FORM
         private void btnEnergy_Click(object sender, EventArgs e)
         {
             ComVar.Var._IsBack = true;
-            ComVar.Var.callForm = "684";
+            // ComVar.Var.callForm = "684";
+            ComVar.Var.callForm = "10352";
         }
 
         private void cmdBack_Click(object sender, EventArgs e)
         {
             ComVar.Var.callForm = "back";
+        }
+
+        private void SMT_SCADA_COCKPIT_FORM1_Load(object sender, EventArgs e)
+        {
+            isBack = ComVar.Var._IsBack;
+            
         }
     }
 

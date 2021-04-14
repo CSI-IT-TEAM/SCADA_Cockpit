@@ -466,14 +466,13 @@
             this.tmr.Interval = 1000;
             this.tmr.Tick += new System.EventHandler(this.tmr_Tick);
             // 
-            // FRM_SMT_SCADA_ENERGY
+            // FRM_SMT_SCADA_ENERGY_V1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.tblMain);
-            this.Name = "FRM_SMT_SCADA_ENERGY";
+            this.Name = "FRM_SMT_SCADA_ENERGY_V1";
             this.Load += new System.EventHandler(this.FRM_SMT_SCADA_ENERGY_Load);
             this.VisibleChanged += new System.EventHandler(this.FRM_SMT_SCADA_ENERGY_VisibleChanged);
             this.tblMain.ResumeLayout(false);

@@ -84,17 +84,22 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>C:\Windows\assembly\GAC\MSDATASRC\7.0.3300.0__b03f5f7f11d50a3a\msdatasrc.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChartModel.cs" />
@@ -122,6 +127,12 @@
     </Compile>
     <Compile Include="ClassLib\TransparentPanel.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_SCADA_ELECTRIC_DETAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_SCADA_ELECTRIC_DETAIL.Designer.cs">
+      <DependentUpon>FORM_SCADA_ELECTRIC_DETAIL.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM_SCADA_ENHANCEMENT.cs">
       <SubType>Form</SubType>
@@ -186,6 +197,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FORM_SCADA_ELECTRIC_DETAIL.resx">
+      <DependentUpon>FORM_SCADA_ELECTRIC_DETAIL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM_SCADA_ENHANCEMENT.resx">
       <DependentUpon>FORM_SCADA_ENHANCEMENT.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +248,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\10352.SMT_SCADA_ENHANCEMENT\10352.SMT_SCADA_ENHANCEMENT.csproj">
+      <Project>{D438B69C-303D-4AF1-A40A-B25C0B4EA0AA}</Project>
+      <Name>10352.SMT_SCADA_ENHANCEMENT</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ComVar\ComVar.csproj">
       <Project>{1fdd4c55-6914-47c9-89f0-682d023ac3a9}</Project>
       <Name>ComVar</Name>

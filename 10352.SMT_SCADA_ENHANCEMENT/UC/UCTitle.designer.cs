@@ -46,8 +46,8 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.09434F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.90566F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.51887F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.48113F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.cmdTitle, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
@@ -67,9 +67,9 @@
             this.panel1.Controls.Add(this.btnNextYear);
             this.panel1.Controls.Add(this.btnPrevYear);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(328, 3);
+            this.panel1.Location = new System.Drawing.Point(351, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(143, 47);
+            this.panel1.Size = new System.Drawing.Size(120, 47);
             this.panel1.TabIndex = 4;
             // 
             // lblYear
@@ -78,9 +78,9 @@
             this.lblYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblYear.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
             this.lblYear.ForeColor = System.Drawing.Color.Black;
-            this.lblYear.Location = new System.Drawing.Point(39, 4);
+            this.lblYear.Location = new System.Drawing.Point(34, 4);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(67, 39);
+            this.lblYear.Size = new System.Drawing.Size(55, 39);
             this.lblYear.TabIndex = 7;
             this.lblYear.Text = "2018";
             this.lblYear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,9 +89,9 @@
             // btnNextYear
             // 
             this.btnNextYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextYear.Location = new System.Drawing.Point(108, 2);
+            this.btnNextYear.Location = new System.Drawing.Point(89, 2);
             this.btnNextYear.Name = "btnNextYear";
-            this.btnNextYear.Size = new System.Drawing.Size(30, 42);
+            this.btnNextYear.Size = new System.Drawing.Size(29, 42);
             this.btnNextYear.TabIndex = 6;
             this.btnNextYear.Text = ">>";
             this.btnNextYear.UseVisualStyleBackColor = true;
@@ -100,9 +100,9 @@
             // btnPrevYear
             // 
             this.btnPrevYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevYear.Location = new System.Drawing.Point(6, 4);
+            this.btnPrevYear.Location = new System.Drawing.Point(4, 2);
             this.btnPrevYear.Name = "btnPrevYear";
-            this.btnPrevYear.Size = new System.Drawing.Size(30, 39);
+            this.btnPrevYear.Size = new System.Drawing.Size(30, 42);
             this.btnPrevYear.TabIndex = 4;
             this.btnPrevYear.Text = "<<";
             this.btnPrevYear.UseVisualStyleBackColor = true;
@@ -110,15 +110,14 @@
             // 
             // cmdTitle
             // 
-            this.cmdTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmdTitle.FlatAppearance.BorderSize = 0;
             this.cmdTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdTitle.Font = new System.Drawing.Font("Times New Roman", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cmdTitle.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cmdTitle.Location = new System.Drawing.Point(53, 3);
             this.cmdTitle.Name = "cmdTitle";
-            this.cmdTitle.Size = new System.Drawing.Size(269, 47);
+            this.cmdTitle.Size = new System.Drawing.Size(292, 47);
             this.cmdTitle.TabIndex = 2;
-            this.cmdTitle.Text = "1.Rework && Machine Occur";
+            this.cmdTitle.Text = "Rework && Equipment malfunction";
             this.cmdTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdTitle.UseVisualStyleBackColor = true;
             // 

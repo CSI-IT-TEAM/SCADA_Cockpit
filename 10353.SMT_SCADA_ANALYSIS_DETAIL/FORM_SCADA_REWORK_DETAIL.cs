@@ -141,7 +141,7 @@ namespace FORM
             {
                 DataSet ds1 = Data_Select("D");
                 if (ds1 == null || ds1.Tables.Count == 0) return;
-                DataTable dtData = ds1.Tables[0];
+                DataTable dtData = ds1.Tables[0].Select("", "OCR_TIME ASC").CopyToDataTable();
 
                 chart3.DataSource = dtData;
                 chart3.Series[0].ArgumentScaleType = ScaleType.Qualitative;

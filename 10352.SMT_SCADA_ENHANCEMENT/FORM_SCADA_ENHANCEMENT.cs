@@ -86,14 +86,14 @@ namespace FORM
         #endregion
         private void InitModels()
         {
-            models.Add(new ChartModel { Title = "1.Rework && Machine Occur", Code = "RW", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "SEASON_LABEL", ValueColumnName = "QTY", formCall = "10353", AxisYTitle = "Prs", axisXTitle = "Season", valuePatten = "{V:#,#}" });
-            models.Add(new ChartModel { Title = "2.Absent Rate", Code = "AB_RATE", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10322", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
-            models.Add(new ChartModel { Title = "3.Andon DownTime", Code = "DOWNTIME", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10321", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
-            models.Add(new ChartModel { Title = "4.PM", Code = "PM", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10346", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
-            models.Add(new ChartModel { Title = "5.WOF", Code = "WOF", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "PROCESS", ValueColumnName = "QTY", formCall = "10339", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
-            models.Add(new ChartModel { Title = "6.Production Quantity", Code = "PROD", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "POD", formCall = "10318", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
-            models.Add(new ChartModel { Title = "7.PPSM", Code = "PPSM", ChartType = "PPSM", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10348", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
-            models.Add(new ChartModel { Title = "8.Electric by pair", Code = "ELEC", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10348", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
+            models.Add(new ChartModel { Title = "Rework && Equipment malfunction", Code = "RW", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "SEASON_LABEL", ValueColumnName = "QTY", formCall = "10353", AxisYTitle = "Prs", axisXTitle = "Season", valuePatten = "{V:#,#}" });
+            models.Add(new ChartModel { Title = "Absent Rate", Code = "AB_RATE", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10322", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
+            models.Add(new ChartModel { Title = "Andon DownTime", Code = "DOWNTIME", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10321", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
+            models.Add(new ChartModel { Title = "PM", Code = "PM", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10346", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
+            models.Add(new ChartModel { Title = "WOF", Code = "WOF", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "PROCESS", ValueColumnName = "QTY", formCall = "10339", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
+            models.Add(new ChartModel { Title = "Production Quantity", Code = "PROD", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "POD", formCall = "10318", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
+            models.Add(new ChartModel { Title = "PPSM", Code = "PPSM", ChartType = "PPSM", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10348", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
+            models.Add(new ChartModel { Title = "Electric by pair", Code = "ELEC", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10354", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
         }
         private void initUCHeader()
         {
@@ -272,14 +272,12 @@ namespace FORM
                         }
                         break;
                     case "ELEC": //8
-                        chartElec.DataSource = dt;
-                        chartElec.Series[0].ArgumentDataMember = "MONTH";
-                        chartElec.Series[0].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
+                        chartElec.DataSource = dtReal;
+                        chartElec.Series[0].ArgumentDataMember = "YMD";
+                        chartElec.Series[0].ValueDataMembers.AddRange(new string[] { "MC_OCR" });
+                        chartElec.Series[1].ArgumentDataMember = "YMD";
+                        chartElec.Series[1].ValueDataMembers.AddRange(new string[] { "KWH" });
                         ((DevExpress.XtraCharts.XYDiagram)chartElec.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
-                        if (dt.Rows.Count >= 5)
-                        {
-                            ((XYDiagram)chartElec.Diagram).AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["MONTH"], dt.Rows[5]["MONTH"]);
-                        }
                         break;
 
 
@@ -351,15 +349,15 @@ namespace FORM
         private void tmrAnimationText_Tick(object sender, EventArgs e)
         {
             cCountPnCell1++;
-            BindingLabelRData(lblCell1_RW, 1, 1001);
-            BindingLabelRData(lblCell1_Occur, 1, 3001);
+            BindingLabelRData(lblCell1_RW, 1, 101);
+            BindingLabelRData(lblCell1_Occur, 1, 101);
             if (cCountPnCell1 >= 15)
             {
                 
                 cCountPnCell1 = 0;
                 tmrAnimationText.Stop();
-                lblCell1_RW.Text = string.Format("{0:n0}", dtCell1.Rows[0][1]);
-                lblCell1_Occur.Text = string.Format("{0:n0}", dtCell1.Rows[1][1]);
+                lblCell1_RW.Text = string.Format("{0:n1}", dtCell1.Rows[0]["REW_RATE"]);
+                lblCell1_Occur.Text = string.Format("{0:n1}", dtCell1.Rows[0]["OCR_RATE"]);
             }
         }
     }

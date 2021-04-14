@@ -87,7 +87,7 @@ namespace FORM.UC
             _model = model;
 
             if (
-                model.Code.Equals("RW")
+                model.Code.Equals("RW") || model.Code.Equals("ELEC")
                )
                 panel1.Visible = false;
             else

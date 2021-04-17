@@ -106,7 +106,7 @@ namespace FORM
                 COM.OraDB MyOraDB = new COM.OraDB();
 
                 MyOraDB.ReDim_Parameter(4);
-                MyOraDB.Process_Name = "MES.P_SCADA_MACHINE_INFOR";
+                MyOraDB.Process_Name = "MES.P_SCADA_MACHINE_INFOR2";
 
                 MyOraDB.Parameter_Name[0] = "ARG_TYPE";
                 MyOraDB.Parameter_Name[1] = "ARG_MACHINE";

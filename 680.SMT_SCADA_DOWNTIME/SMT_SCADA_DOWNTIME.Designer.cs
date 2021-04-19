@@ -105,7 +105,7 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.20834F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.79167F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1888, 1042);
@@ -115,9 +115,9 @@
             // 
             this.pnMid.Controls.Add(this.tblChart);
             this.pnMid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMid.Location = new System.Drawing.Point(3, 85);
+            this.pnMid.Location = new System.Drawing.Point(3, 90);
             this.pnMid.Name = "pnMid";
-            this.pnMid.Size = new System.Drawing.Size(1882, 811);
+            this.pnMid.Size = new System.Drawing.Size(1882, 807);
             this.pnMid.TabIndex = 0;
             // 
             // tblChart
@@ -133,7 +133,7 @@
             this.tblChart.RowCount = 2;
             this.tblChart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tblChart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblChart.Size = new System.Drawing.Size(1882, 811);
+            this.tblChart.Size = new System.Drawing.Size(1882, 807);
             this.tblChart.TabIndex = 0;
             // 
             // chartControl1
@@ -200,7 +200,7 @@
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2};
-            this.chartControl1.Size = new System.Drawing.Size(1876, 749);
+            this.chartControl1.Size = new System.Drawing.Size(1876, 745);
             this.chartControl1.TabIndex = 12;
             chartTitle1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartTitle1.Text = "Average Downtime & Calling Times by Line";
@@ -375,7 +375,7 @@
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnTop.Location = new System.Drawing.Point(3, 3);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1882, 76);
+            this.pnTop.Size = new System.Drawing.Size(1882, 81);
             this.pnTop.TabIndex = 2;
             // 
             // panel2
@@ -386,9 +386,10 @@
             this.panel2.Controls.Add(this.lblTxt1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblTxt3);
-            this.panel2.Location = new System.Drawing.Point(1275, -2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1295, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(327, 91);
+            this.panel2.Size = new System.Drawing.Size(327, 81);
             this.panel2.TabIndex = 15;
             // 
             // lblTxt2
@@ -464,7 +465,7 @@
             this.lblDate.ForeColor = System.Drawing.Color.Black;
             this.lblDate.Location = new System.Drawing.Point(1622, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(260, 76);
+            this.lblDate.Size = new System.Drawing.Size(260, 81);
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "2020-07-22\r\n10:00:00";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -479,7 +480,7 @@
             this.lblHeader.LineVisible = true;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1252, 76);
+            this.lblHeader.Size = new System.Drawing.Size(1252, 81);
             this.lblHeader.TabIndex = 3;
             this.lblHeader.Text = "        Andon Information Downtime";
             // 
@@ -487,9 +488,9 @@
             // 
             this.panel3.Controls.Add(this.grdView);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 902);
+            this.panel3.Location = new System.Drawing.Point(3, 903);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1882, 137);
+            this.panel3.Size = new System.Drawing.Size(1882, 136);
             this.panel3.TabIndex = 7;
             // 
             // grdView
@@ -502,7 +503,7 @@
             this.grdView.Location = new System.Drawing.Point(0, 0);
             this.grdView.MainView = this.gvwView;
             this.grdView.Name = "grdView";
-            this.grdView.Size = new System.Drawing.Size(1882, 137);
+            this.grdView.Size = new System.Drawing.Size(1882, 136);
             this.grdView.TabIndex = 4;
             this.grdView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwView});

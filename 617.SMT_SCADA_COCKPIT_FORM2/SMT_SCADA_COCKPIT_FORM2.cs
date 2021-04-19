@@ -271,7 +271,7 @@ namespace FORM
             MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
             MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
             MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
-
+               
             MyOraDB.Parameter_Values[0] = argType;
             MyOraDB.Parameter_Values[1] = argDate;
             MyOraDB.Parameter_Values[2] = "";

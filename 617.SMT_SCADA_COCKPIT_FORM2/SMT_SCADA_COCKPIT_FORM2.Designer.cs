@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
@@ -46,6 +47,7 @@
             this.chkCompare = new System.Windows.Forms.CheckBox();
             this.cmdWeek = new System.Windows.Forms.Button();
             this.cmdMonth = new System.Windows.Forms.Button();
+            this.cmdDay = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnTop = new System.Windows.Forms.Panel();
@@ -55,7 +57,7 @@
             this.pnExport = new System.Windows.Forms.Panel();
             this.cmdExportDetail = new System.Windows.Forms.Button();
             this.cmdExportIssue = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnBody1 = new System.Windows.Forms.Panel();
             this.pnGrid = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -91,7 +93,6 @@
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnC = new System.Windows.Forms.Panel();
             this.pnBody2 = new System.Windows.Forms.Panel();
-            this.cmdDay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -168,12 +169,12 @@
             // pnControl
             // 
             this.pnControl.BackColor = System.Drawing.Color.Transparent;
-            this.pnControl.Controls.Add(this.cmdDay);
             this.pnControl.Controls.Add(this.rdTop20);
             this.pnControl.Controls.Add(this.rdByDay);
             this.pnControl.Controls.Add(this.chkCompare);
             this.pnControl.Controls.Add(this.cmdWeek);
             this.pnControl.Controls.Add(this.cmdMonth);
+            this.pnControl.Controls.Add(this.cmdDay);
             this.pnControl.Controls.Add(this.comboBox1);
             this.pnControl.Controls.Add(this.label1);
             this.pnControl.Dock = System.Windows.Forms.DockStyle.Top;
@@ -221,11 +222,10 @@
             // 
             // cmdWeek
             // 
-            this.cmdWeek.Dock = System.Windows.Forms.DockStyle.Right;
             this.cmdWeek.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdWeek.Location = new System.Drawing.Point(1614, 0);
+            this.cmdWeek.Location = new System.Drawing.Point(1600, 4);
             this.cmdWeek.Name = "cmdWeek";
-            this.cmdWeek.Size = new System.Drawing.Size(137, 50);
+            this.cmdWeek.Size = new System.Drawing.Size(137, 44);
             this.cmdWeek.TabIndex = 7;
             this.cmdWeek.Text = "Weekly";
             this.cmdWeek.UseVisualStyleBackColor = true;
@@ -233,15 +233,25 @@
             // 
             // cmdMonth
             // 
-            this.cmdMonth.Dock = System.Windows.Forms.DockStyle.Right;
             this.cmdMonth.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdMonth.Location = new System.Drawing.Point(1751, 0);
+            this.cmdMonth.Location = new System.Drawing.Point(1736, 4);
             this.cmdMonth.Name = "cmdMonth";
-            this.cmdMonth.Size = new System.Drawing.Size(137, 50);
+            this.cmdMonth.Size = new System.Drawing.Size(137, 44);
             this.cmdMonth.TabIndex = 6;
             this.cmdMonth.Text = "Monthly";
             this.cmdMonth.UseVisualStyleBackColor = true;
             this.cmdMonth.Click += new System.EventHandler(this.cmdMonth_Click);
+            // 
+            // cmdDay
+            // 
+            this.cmdDay.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdDay.Location = new System.Drawing.Point(1464, 4);
+            this.cmdDay.Name = "cmdDay";
+            this.cmdDay.Size = new System.Drawing.Size(137, 44);
+            this.cmdDay.TabIndex = 5;
+            this.cmdDay.Text = "Daily";
+            this.cmdDay.UseVisualStyleBackColor = true;
+            this.cmdDay.Click += new System.EventHandler(this.cmDay_Click);
             // 
             // comboBox1
             // 
@@ -902,17 +912,6 @@
             this.pnBody2.TabIndex = 4;
             this.pnBody2.Visible = false;
             // 
-            // cmdDay
-            // 
-            this.cmdDay.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cmdDay.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdDay.Location = new System.Drawing.Point(1477, 0);
-            this.cmdDay.Name = "cmdDay";
-            this.cmdDay.Size = new System.Drawing.Size(137, 50);
-            this.cmdDay.TabIndex = 19;
-            this.cmdDay.Text = "Daily";
-            this.cmdDay.UseVisualStyleBackColor = true;
-            // 
             // SMT_SCADA_COCKPIT_FORM2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -952,6 +951,7 @@
         private System.Windows.Forms.Panel pnControl;
         private System.Windows.Forms.Button cmdWeek;
         private System.Windows.Forms.Button cmdMonth;
+        private System.Windows.Forms.Button cmdDay;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnTop;
@@ -1001,6 +1001,5 @@
         private System.Windows.Forms.Panel pnBody2;
         private System.Windows.Forms.RadioButton rdTop20;
         private System.Windows.Forms.RadioButton rdByDay;
-        private System.Windows.Forms.Button cmdDay;
     }
 }

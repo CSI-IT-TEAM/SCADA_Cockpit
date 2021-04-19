@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
@@ -72,7 +71,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.grdView = new DevExpress.XtraGrid.GridControl();
             this.gvwView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.tableLayoutPanel1.SuspendLayout();
             this.pnMid.SuspendLayout();
@@ -387,10 +386,9 @@
             this.panel2.Controls.Add(this.lblTxt1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblTxt3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1295, 0);
+            this.panel2.Location = new System.Drawing.Point(1275, -2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(327, 76);
+            this.panel2.Size = new System.Drawing.Size(327, 91);
             this.panel2.TabIndex = 15;
             // 
             // lblTxt2

@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraCharts;
+using DevExpress.XtraGauges.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,7 @@ namespace FORM
         }
         #region Var
         DataTable dtCell1 = new DataTable();
+        DataTable dtCell2 = new DataTable();
         List<ChartModel> models = new List<ChartModel>();
         string[] YearValues = new string[8];
         Random r = new Random();
@@ -87,7 +89,7 @@ namespace FORM
         private void InitModels()
         {
             models.Add(new ChartModel { Title = "Rework && Equipment malfunction", Code = "RW", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "SEASON_LABEL", ValueColumnName = "QTY", formCall = "10353", AxisYTitle = "Prs", axisXTitle = "Season", valuePatten = "{V:#,#}" });
-            models.Add(new ChartModel { Title = "Absent Rate", Code = "AB_RATE", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10322", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
+            models.Add(new ChartModel { Title = "Absent Rate", Code = "ABSENT", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10365", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
             models.Add(new ChartModel { Title = "Andon DownTime", Code = "DOWNTIME", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10321", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
             models.Add(new ChartModel { Title = "PM", Code = "PM", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10346", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
             models.Add(new ChartModel { Title = "WOF", Code = "WOF", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "PROCESS", ValueColumnName = "QTY", formCall = "10339", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
@@ -211,15 +213,15 @@ namespace FORM
                         //    ((XYDiagram)chartRework.Diagram).AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["MONTH"], dt.Rows[5]["MONTH"]);
                         //}
                         break;
-                    case "AB_RATE": //2
-                        chartAbsent.DataSource = dt;
-                        chartAbsent.Series[0].ArgumentDataMember = "MONTH";
-                        chartAbsent.Series[0].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
-                        ((DevExpress.XtraCharts.XYDiagram)chartAbsent.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
-                        if (dt.Rows.Count >= 5)
-                        {
-                            ((XYDiagram)chartAbsent.Diagram).AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["MONTH"], dt.Rows[5]["MONTH"]);
-                        }
+                    case "ABSENT": //2
+                        arcScaleBestAbsent.Value = 0;
+                        arcScaleBestAlarm.Value = 0;
+                        arcScaleWorstAbsent.Value = 0;
+                        arcScaleWorstAlarm.Value = 0;
+
+                       dtCell2 = dtReal.Copy();
+                        tmrAnimationText.Start();
+
                         break;
                     case "DOWNTIME": //3
                         chartDownTime.DataSource = dt;
@@ -274,13 +276,11 @@ namespace FORM
                     case "ELEC": //8
                         chartElec.DataSource = dtReal;
                         chartElec.Series[0].ArgumentDataMember = "YMD";
-                        chartElec.Series[0].ValueDataMembers.AddRange(new string[] { "MC_OCR" });
+                        chartElec.Series[0].ValueDataMembers.AddRange(new string[] { "KWH" });
                         chartElec.Series[1].ArgumentDataMember = "YMD";
-                        chartElec.Series[1].ValueDataMembers.AddRange(new string[] { "KWH" });
+                        chartElec.Series[1].ValueDataMembers.AddRange(new string[] { "MC_OCR" });
                         ((DevExpress.XtraCharts.XYDiagram)chartElec.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
                         break;
-
-
                 }
                 return 1;
 
@@ -293,7 +293,7 @@ namespace FORM
             }
         }
 
-        private void BindingLabelRData(Label lbl, int min,int max)
+        private void BindingLabelRData(RoundLabel lbl, int min,int max)
         {
             lbl.Text = string.Format("{0:n0}", r.Next(min, max));
         }
@@ -306,7 +306,25 @@ namespace FORM
                 lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
                 InitModels();
                 initUCHeader();
-              //  BindingData();
+
+                //Best Absent
+                arcScaleBestAbsent.EnableAnimation = true;
+                arcScaleBestAbsent.EasingMode = DevExpress.XtraGauges.Core.Model.EasingMode.EaseInOut;
+                arcScaleBestAbsent.EasingFunction = new BackEase();
+
+                //Best Alarm
+                arcScaleBestAlarm.EnableAnimation = true;
+                arcScaleBestAlarm.EasingMode = DevExpress.XtraGauges.Core.Model.EasingMode.EaseInOut;
+                arcScaleBestAlarm.EasingFunction = new BackEase();
+
+                arcScaleWorstAbsent.EnableAnimation = true;
+                arcScaleWorstAbsent.EasingMode = DevExpress.XtraGauges.Core.Model.EasingMode.EaseInOut;
+                arcScaleWorstAbsent.EasingFunction = new BackEase();
+
+                arcScaleWorstAlarm.EnableAnimation = true;
+                arcScaleWorstAlarm.EasingMode = DevExpress.XtraGauges.Core.Model.EasingMode.EaseInOut;
+                arcScaleWorstAlarm.EasingFunction = new BackEase();
+                //  BindingData();
             }
             catch 
             {
@@ -332,6 +350,7 @@ namespace FORM
             {
                 cCount = 0;
                 BindingData();
+
             }
         }
 
@@ -351,14 +370,62 @@ namespace FORM
             cCountPnCell1++;
             BindingLabelRData(lblCell1_RW, 1, 101);
             BindingLabelRData(lblCell1_Occur, 1, 101);
+            BindingLabelRData(lblCell2_AbsentBest,1,101);
+            BindingLabelRData(lblCell2_AbsentWorst, 1, 101);
+
+            BindingLabelRData(lblCell2_AlarmBest, 1, 101);
+            BindingLabelRData(lblCell2_AlarmWorst, 1, 101);
             if (cCountPnCell1 >= 15)
             {
                 
                 cCountPnCell1 = 0;
                 tmrAnimationText.Stop();
-                lblCell1_RW.Text = string.Format("{0:n1}", dtCell1.Rows[0]["REW_RATE"]);
-                lblCell1_Occur.Text = string.Format("{0:n1}", dtCell1.Rows[0]["OCR_RATE"]);
+                try
+                {
+                    lblCell1_RW.Text = string.Format("{0:n1}", dtCell1.Rows[0]["REW_RATE"]);
+                    lblCell1_Occur.Text = string.Format("{0:n2}", dtCell1.Rows[0]["OCR_RATE"]);
+                    //Binding Data for Absent Here!!!
+
+                    if (dtCell2.Select("FLAG='Best'").Count() > 0)
+                    {
+                        //Best Absent
+                        arcScaleBestAbsent.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_MIN"]);
+                        arcScaleBestAbsent.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_MAX"]);
+                        arcScaleBestAbsent.Value = float.Parse(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString());
+                        lblCell2_AbsentBest.Text = string.Concat(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString(),"%");
+                        //Best Alarm
+                        arcScaleBestAlarm.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_MIN"]);
+                        arcScaleBestAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
+                        arcScaleBestAlarm.Value = float.Parse(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString());
+                        lblCell2_AlarmBest.Text = string.Concat(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(),"%");
+                    }
+
+                    if (dtCell2.Select("FLAG='Worst'").Count() > 0)
+                    {
+                        //Best Absent
+                        arcScaleWorstAbsent.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MIN"]);
+                        arcScaleWorstAbsent.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MAX"]);
+                        arcScaleWorstAbsent.Value = float.Parse(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString());
+                        lblCell2_AbsentWorst.Text = string.Concat(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString(),"%");
+
+                        //Best Alarm
+                        arcScaleWorstAlarm.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MIN"]);
+                        arcScaleWorstAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
+                        arcScaleWorstAlarm.Value = float.Parse(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString());
+                        lblCell2_AlarmWorst.Text = string.Concat(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(),"%");
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+               
             }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace FORM
 {
-    public partial class FORM_SCADA_ABSENT_DETAIL : Form
+    public partial class FORM_SCADA_DOWNTIME_DETAIL : Form
     {
-        public FORM_SCADA_ABSENT_DETAIL()
+        public FORM_SCADA_DOWNTIME_DETAIL()
         {
             InitializeComponent();
             tmrDate.Stop();
@@ -29,7 +29,7 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_SMT_SCADA_COCKPIT.SP_GET_ANALYSIS_ABSENT_DETAIL";
+                string process_name = "MES.PKG_SMT_SCADA_COCKPIT.SP_GET_ANALYSIS_ANDON_DETAIL";
 
                 MyOraDB.ReDim_Parameter(4);
                 MyOraDB.Process_Name = process_name;
@@ -61,18 +61,40 @@ namespace FORM
             }
         }
         #endregion
-        private void BindingChart1(DataTable dt)
+        private void BindingAndonChart(DataTable dt)
         {
             try
             {
+                //Quality Chart
                 chart1.DataSource = dt;
-
-                chart1.Series[0].ArgumentDataMember = "YMD";
-                chart1.Series[0].ValueDataMembers.AddRange(new string[] { "ALARM_RATIO" });
-
-                chart1.Series[1].ArgumentDataMember = "YMD";
-                chart1.Series[1].ValueDataMembers.AddRange(new string[] { "ABSENT_RATIO" });
+                chart1.Series[0].ArgumentScaleType = ScaleType.Qualitative;
+                chart1.Series[0].ArgumentDataMember = "LINE_NM";
+                chart1.Series[0].ValueDataMembers.AddRange(new string[] { "LA" });
                 ((DevExpress.XtraCharts.XYDiagram)chart1.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
+
+                //Matenance Chart
+                chart2.DataSource = dt;
+                chart2.Series[0].ArgumentScaleType = ScaleType.Qualitative;
+                chart2.Series[0].ArgumentDataMember = "LINE_NM";
+                chart2.Series[0].ValueDataMembers.AddRange(new string[] { "LB" });
+                ((DevExpress.XtraCharts.XYDiagram)chart2.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
+
+                //Management Chart
+                chart3.DataSource = dt;
+                chart3.Series[0].ArgumentScaleType = ScaleType.Qualitative;
+                chart3.Series[0].ArgumentDataMember = "LINE_NM";
+                chart3.Series[0].ValueDataMembers.AddRange(new string[] { "LC" });
+                ((DevExpress.XtraCharts.XYDiagram)chart3.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
+
+                //Total Chart
+                chart4.DataSource = dt;
+                chart4.Series[0].ArgumentScaleType = ScaleType.Qualitative;
+                chart4.Series[0].ArgumentDataMember = "LINE_NM";
+                chart4.Series[0].ValueDataMembers.AddRange(new string[] { "ANDON_AVG_TIME_TOTAL" });
+                chart4.Series[1].ArgumentScaleType = ScaleType.Qualitative;
+                chart4.Series[1].ArgumentDataMember = "LINE_NM";
+                chart4.Series[1].ValueDataMembers.AddRange(new string[] { "ALARM_TIME" });
+                ((DevExpress.XtraCharts.XYDiagram)chart4.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
 
             }
             catch (Exception ex)
@@ -114,7 +136,6 @@ namespace FORM
                     this.Cursor = Cursors.WaitCursor;
                     string sYM = string.Concat(point.Argument);
                     DataSet ds = sbGetData("PLANT", sYM, null);
-                    chart2.Titles[0].Text = "Equipment malfunction Ratio & Absent Ratio Within "+ sYM + " by Plant";
                     BindingChart2(ds.Tables[0]);
                     this.Cursor = Cursors.Default;
                 }
@@ -134,10 +155,10 @@ namespace FORM
                 {
                     splashScreenManager1.ShowWaitForm();
                     DataSet ds = sbGetData("Q", DateTime.Now.ToString("yyyyMM"), null);
-                    BindingChart1(ds.Tables[0]);
+                    BindingAndonChart(ds.Tables[0]);
 
-                    DataSet ds2 = sbGetData("PLANT", DateTime.Now.ToString("yyyyMMdd"), null);
-                    BindingChart2(ds2.Tables[0]);
+                    // DataSet ds2 = sbGetData("PLANT", DateTime.Now.ToString("yyyyMMdd"), null);
+                    //BindingChart2(ds2.Tables[0]);
                     splashScreenManager1.CloseWaitForm();
                 }
                 catch

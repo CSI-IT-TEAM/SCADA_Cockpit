@@ -90,7 +90,7 @@ namespace FORM
         {
             models.Add(new ChartModel { Title = "Rework && Equipment malfunction", Code = "RW", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "SEASON_LABEL", ValueColumnName = "QTY", formCall = "10353", AxisYTitle = "Prs", axisXTitle = "Season", valuePatten = "{V:#,#}" });
             models.Add(new ChartModel { Title = "Absent Rate", Code = "ABSENT", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10365", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
-            models.Add(new ChartModel { Title = "Andon DownTime", Code = "DOWNTIME", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10321", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
+            models.Add(new ChartModel { Title = "Andon DownTime", Code = "DOWNTIME", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10366", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
             models.Add(new ChartModel { Title = "PM", Code = "PM", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10346", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
             models.Add(new ChartModel { Title = "WOF", Code = "WOF", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "PROCESS", ValueColumnName = "QTY", formCall = "10339", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
             models.Add(new ChartModel { Title = "Production Quantity", Code = "PROD", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "POD", formCall = "10318", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
@@ -224,14 +224,14 @@ namespace FORM
 
                         break;
                     case "DOWNTIME": //3
-                        chartDownTime.DataSource = dt;
-                        chartDownTime.Series[0].ArgumentDataMember = "MONTH";
-                        chartDownTime.Series[0].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
+                        chartDownTime.DataSource = dtReal;
+                        chartDownTime.Series[0].ArgumentDataMember = "LINE_NM";
+                        chartDownTime.Series[0].ValueDataMembers.AddRange(new string[] { "ANDON_AVG_TIME" });
+
+                        chartDownTime.Series[1].ArgumentDataMember = "LINE_NM";
+                        chartDownTime.Series[1].ValueDataMembers.AddRange(new string[] { "ALARM_TIME" });
                         ((DevExpress.XtraCharts.XYDiagram)chartDownTime.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
-                        if (dt.Rows.Count >= 5)
-                        {
-                            ((XYDiagram)chartDownTime.Diagram).AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["MONTH"], dt.Rows[5]["MONTH"]);
-                        }
+                      
                         break;
                     case "PM": //4
                         chartPM.DataSource = dt;
@@ -390,14 +390,16 @@ namespace FORM
                     {
                         //Best Absent
                         arcScaleBestAbsent.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_MIN"]);
-                        arcScaleBestAbsent.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_MAX"]);
+                        arcScaleBestAbsent.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MAX"]);
                         arcScaleBestAbsent.Value = float.Parse(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString());
                         lblCell2_AbsentBest.Text = string.Concat(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString(),"%");
+                        lblBestAbsent.Text = string.Concat(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString(), "%"); 
                         //Best Alarm
                         arcScaleBestAlarm.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_MIN"]);
-                        arcScaleBestAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
+                        arcScaleBestAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
                         arcScaleBestAlarm.Value = float.Parse(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString());
                         lblCell2_AlarmBest.Text = string.Concat(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(),"%");
+                        lblBestAlarm.Text = string.Concat(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(), "%");
                     }
 
                     if (dtCell2.Select("FLAG='Worst'").Count() > 0)
@@ -405,14 +407,16 @@ namespace FORM
                         //Best Absent
                         arcScaleWorstAbsent.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MIN"]);
                         arcScaleWorstAbsent.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MAX"]);
+
                         arcScaleWorstAbsent.Value = float.Parse(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString());
-                        lblCell2_AbsentWorst.Text = string.Concat(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString(),"%");
+
+                        lblCell2_AbsentWorst.Text = lblWorstAbsent.Text = string.Concat(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString(),"%");
 
                         //Best Alarm
                         arcScaleWorstAlarm.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MIN"]);
                         arcScaleWorstAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
                         arcScaleWorstAlarm.Value = float.Parse(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString());
-                        lblCell2_AlarmWorst.Text = string.Concat(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(),"%");
+                        lblCell2_AlarmWorst.Text = lblWorstAlarm.Text = string.Concat(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(),"%");
                     }
                 }
                 catch(Exception ex)

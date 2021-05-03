@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace FORM
 {
-    public partial class FORM_SCADA_ABSENT_DETAIL : Form
+    public partial class FORM_SCADA_PROD_DETAIL : Form
     {
-        public FORM_SCADA_ABSENT_DETAIL()
+        public FORM_SCADA_PROD_DETAIL()
         {
             InitializeComponent();
             tmrDate.Stop();
@@ -29,7 +29,7 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_SMT_SCADA_COCKPIT.SP_GET_ANALYSIS_ABSENT_DETAIL";
+                string process_name = "MES.PKG_SMT_SCADA_COCKPIT.SP_GET_ANALYSIS_PROD_DETAIL";
 
                 MyOraDB.ReDim_Parameter(4);
                 MyOraDB.Process_Name = process_name;
@@ -68,7 +68,7 @@ namespace FORM
                 chart1.DataSource = dt;
 
                 chart1.Series[0].ArgumentDataMember = "YMD";
-                chart1.Series[0].ValueDataMembers.AddRange(new string[] { "ABSENT_RATIO" });
+                chart1.Series[0].ValueDataMembers.AddRange(new string[] { "RATIO" });
 
                 chart1.Series[1].ArgumentDataMember = "YMD";
                 chart1.Series[1].ValueDataMembers.AddRange(new string[] { "ALARM_RATIO" });
@@ -77,7 +77,6 @@ namespace FORM
             }
             catch (Exception ex)
             {
-
                 throw;
             }
         }
@@ -88,7 +87,7 @@ namespace FORM
             {
                 chart2.DataSource = dt;
                 chart2.Series[0].ArgumentDataMember = "LINE_NM";
-                chart2.Series[0].ValueDataMembers.AddRange(new string[] { "ABSENT_RATIO" });
+                chart2.Series[0].ValueDataMembers.AddRange(new string[] { "RATIO" });
                 chart2.Series[1].ArgumentDataMember = "LINE_NM";
                 chart2.Series[1].ValueDataMembers.AddRange(new string[] { "ALARM_RATIO" });
                 ((DevExpress.XtraCharts.XYDiagram)chart1.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
@@ -114,7 +113,7 @@ namespace FORM
                     this.Cursor = Cursors.WaitCursor;
                     string sYM = string.Concat(point.Argument);
                     DataSet ds = sbGetData("PLANT", sYM, null);
-                    chart2.Titles[0].Text = "Equipment malfunction Ratio & Absent Ratio Within "+ sYM + " by Plant";
+                    chart2.Titles[0].Text = "Equipment malfunction Ratio & Producton Ratio Within "+ sYM + " by Plant";
                     BindingChart2(ds.Tables[0]);
                     this.Cursor = Cursors.Default;
                 }

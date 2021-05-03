@@ -84,13 +84,13 @@ namespace FORM.UC
             cmdTitle.Text = model.Title;
             this.Tag = model.Code;
             _model = model;
-
-            if (
-                model.Code.Equals("RW") || model.Code.Equals("ELEC") ||model.Code.Equals("ABSENT") || model.Code.Equals("DOWNTIME") || model.Code.Equals("PM")
-               )
-                panel1.Visible = false;
-            else
-                panel1.Visible = true;
+            panel1.Visible = false;
+            //if (
+            //    model.Code.Equals("RW") || model.Code.Equals("ELEC") ||model.Code.Equals("ABSENT") || model.Code.Equals("DOWNTIME") || model.Code.Equals("PM")
+            //   )
+            //    panel1.Visible = false;
+            //else
+            //    panel1.Visible = true;
 
         }
 

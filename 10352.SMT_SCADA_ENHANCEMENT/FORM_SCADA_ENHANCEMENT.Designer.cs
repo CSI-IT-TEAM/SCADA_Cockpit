@@ -52,12 +52,6 @@
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView3 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             DevExpress.XtraCharts.BarSlideAnimation barSlideAnimation2 = new DevExpress.XtraCharts.BarSlideAnimation();
             DevExpress.XtraCharts.ChartTitle chartTitle3 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel4 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView4 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
-            DevExpress.XtraCharts.BarSlideAnimation barSlideAnimation3 = new DevExpress.XtraCharts.BarSlideAnimation();
-            DevExpress.XtraCharts.ChartTitle chartTitle4 = new DevExpress.XtraCharts.ChartTitle();
             this.pnHeader = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -169,8 +163,30 @@
             this.label7 = new System.Windows.Forms.Label();
             this.chartPPSM = new DevExpress.XtraCharts.ChartControl();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.pnCell6 = new System.Windows.Forms.Panel();
+            this.lblCell6_ProdWorstPlant3 = new RoundLabel();
+            this.lblCell6_ProdWorstPlant2 = new RoundLabel();
+            this.lblCell6_ProdWorstPlant1 = new RoundLabel();
+            this.lblCell6_AlarmWorstTop3 = new RoundLabel();
+            this.lblCell6_ProdWorstTop3 = new RoundLabel();
+            this.lblCell6_AlarmBestTop3 = new RoundLabel();
+            this.lblCell6_ProdBestTop3 = new RoundLabel();
+            this.lblCell6_AlarmWorstTop2 = new RoundLabel();
+            this.lblCell6_AlarmWorstTop1 = new RoundLabel();
+            this.lblCell6_ProdWorstTop2 = new RoundLabel();
+            this.lblCell6_AlarmBestTop2 = new RoundLabel();
+            this.lblCell6_ProdWorstTop1 = new RoundLabel();
+            this.lblCell6_AlarmBestTop1 = new RoundLabel();
+            this.lblCell6_ProdBestTop2 = new RoundLabel();
+            this.lblCell6_ProdBestTop1 = new RoundLabel();
+            this.lblCell6_ProdBestPlant3 = new RoundLabel();
+            this.lblCell6_ProdBestPlant2 = new RoundLabel();
+            this.lblCell6_ProdBestPlant1 = new RoundLabel();
             this.label6 = new System.Windows.Forms.Label();
-            this.chartProd = new DevExpress.XtraCharts.ChartControl();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.label5 = new System.Windows.Forms.Label();
             this.chartWOF = new DevExpress.XtraCharts.ChartControl();
@@ -235,19 +251,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartProd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView3)).BeginInit();
+            this.pnCell6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
             this.splitContainer8.Panel2.SuspendLayout();
             this.splitContainer8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartWOF)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnHeader
@@ -1062,7 +1074,7 @@
             // 
             // lblPlant3
             // 
-            this.lblPlant3._BackColor = System.Drawing.Color.Coral;
+            this.lblPlant3._BackColor = System.Drawing.Color.Gray;
             this.lblPlant3.BackColor = System.Drawing.Color.Transparent;
             this.lblPlant3.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlant3.ForeColor = System.Drawing.Color.White;
@@ -1073,7 +1085,7 @@
             // 
             // lblPlant2
             // 
-            this.lblPlant2._BackColor = System.Drawing.Color.Tomato;
+            this.lblPlant2._BackColor = System.Drawing.Color.Gray;
             this.lblPlant2.BackColor = System.Drawing.Color.Transparent;
             this.lblPlant2.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlant2.ForeColor = System.Drawing.Color.White;
@@ -1084,7 +1096,7 @@
             // 
             // lblPlant1
             // 
-            this.lblPlant1._BackColor = System.Drawing.Color.Red;
+            this.lblPlant1._BackColor = System.Drawing.Color.Gray;
             this.lblPlant1.BackColor = System.Drawing.Color.Transparent;
             this.lblPlant1.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlant1.ForeColor = System.Drawing.Color.White;
@@ -1186,6 +1198,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Black;
             this.label29.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Red;
             this.label29.Location = new System.Drawing.Point(249, 61);
@@ -1309,6 +1322,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Black;
             this.label35.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Red;
             this.label35.Location = new System.Drawing.Point(257, 48);
@@ -1323,15 +1337,16 @@
             this.lblCell4_PMTop1.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PMTop1.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell4_PMTop1.ForeColor = System.Drawing.Color.White;
-            this.lblCell4_PMTop1.Location = new System.Drawing.Point(314, 89);
+            this.lblCell4_PMTop1.Location = new System.Drawing.Point(297, 89);
             this.lblCell4_PMTop1.Name = "lblCell4_PMTop1";
-            this.lblCell4_PMTop1.Size = new System.Drawing.Size(139, 56);
+            this.lblCell4_PMTop1.Size = new System.Drawing.Size(158, 56);
             this.lblCell4_PMTop1.TabIndex = 2;
             this.lblCell4_PMTop1.Text = "0";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Black;
             this.label31.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.Red;
             this.label31.Location = new System.Drawing.Point(14, 48);
@@ -1346,9 +1361,9 @@
             this.lblCell4_PMTop4.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PMTop4.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell4_PMTop4.ForeColor = System.Drawing.Color.White;
-            this.lblCell4_PMTop4.Location = new System.Drawing.Point(314, 286);
+            this.lblCell4_PMTop4.Location = new System.Drawing.Point(297, 286);
             this.lblCell4_PMTop4.Name = "lblCell4_PMTop4";
-            this.lblCell4_PMTop4.Size = new System.Drawing.Size(139, 56);
+            this.lblCell4_PMTop4.Size = new System.Drawing.Size(158, 56);
             this.lblCell4_PMTop4.TabIndex = 2;
             this.lblCell4_PMTop4.Text = "0";
             // 
@@ -1360,7 +1375,7 @@
             this.lblCell4_AlarmTop1.ForeColor = System.Drawing.Color.White;
             this.lblCell4_AlarmTop1.Location = new System.Drawing.Point(71, 89);
             this.lblCell4_AlarmTop1.Name = "lblCell4_AlarmTop1";
-            this.lblCell4_AlarmTop1.Size = new System.Drawing.Size(139, 56);
+            this.lblCell4_AlarmTop1.Size = new System.Drawing.Size(158, 56);
             this.lblCell4_AlarmTop1.TabIndex = 2;
             this.lblCell4_AlarmTop1.Text = "0";
             // 
@@ -1370,9 +1385,9 @@
             this.lblCell4_PMTop2.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PMTop2.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell4_PMTop2.ForeColor = System.Drawing.Color.White;
-            this.lblCell4_PMTop2.Location = new System.Drawing.Point(314, 156);
+            this.lblCell4_PMTop2.Location = new System.Drawing.Point(297, 156);
             this.lblCell4_PMTop2.Name = "lblCell4_PMTop2";
-            this.lblCell4_PMTop2.Size = new System.Drawing.Size(139, 56);
+            this.lblCell4_PMTop2.Size = new System.Drawing.Size(158, 56);
             this.lblCell4_PMTop2.TabIndex = 2;
             this.lblCell4_PMTop2.Text = "0";
             // 
@@ -1384,17 +1399,17 @@
             this.lblCell4_AlarmTop4.ForeColor = System.Drawing.Color.White;
             this.lblCell4_AlarmTop4.Location = new System.Drawing.Point(71, 286);
             this.lblCell4_AlarmTop4.Name = "lblCell4_AlarmTop4";
-            this.lblCell4_AlarmTop4.Size = new System.Drawing.Size(139, 56);
+            this.lblCell4_AlarmTop4.Size = new System.Drawing.Size(158, 56);
             this.lblCell4_AlarmTop4.TabIndex = 2;
             this.lblCell4_AlarmTop4.Text = "0";
             // 
             // lblCell4_PlantPMTop5
             // 
-            this.lblCell4_PlantPMTop5._BackColor = System.Drawing.Color.LightCoral;
+            this.lblCell4_PlantPMTop5._BackColor = System.Drawing.Color.Gray;
             this.lblCell4_PlantPMTop5.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PlantPMTop5.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell4_PlantPMTop5.ForeColor = System.Drawing.Color.White;
-            this.lblCell4_PlantPMTop5.Location = new System.Drawing.Point(264, 352);
+            this.lblCell4_PlantPMTop5.Location = new System.Drawing.Point(247, 352);
             this.lblCell4_PlantPMTop5.Name = "lblCell4_PlantPMTop5";
             this.lblCell4_PlantPMTop5.Size = new System.Drawing.Size(44, 56);
             this.lblCell4_PlantPMTop5.TabIndex = 2;
@@ -1407,24 +1422,24 @@
             this.lblCell4_AlarmTop2.ForeColor = System.Drawing.Color.White;
             this.lblCell4_AlarmTop2.Location = new System.Drawing.Point(71, 156);
             this.lblCell4_AlarmTop2.Name = "lblCell4_AlarmTop2";
-            this.lblCell4_AlarmTop2.Size = new System.Drawing.Size(139, 56);
+            this.lblCell4_AlarmTop2.Size = new System.Drawing.Size(158, 56);
             this.lblCell4_AlarmTop2.TabIndex = 2;
             this.lblCell4_AlarmTop2.Text = "0";
             // 
             // lblCell4_PlantPMTop3
             // 
-            this.lblCell4_PlantPMTop3._BackColor = System.Drawing.Color.Coral;
+            this.lblCell4_PlantPMTop3._BackColor = System.Drawing.Color.Gray;
             this.lblCell4_PlantPMTop3.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PlantPMTop3.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell4_PlantPMTop3.ForeColor = System.Drawing.Color.White;
-            this.lblCell4_PlantPMTop3.Location = new System.Drawing.Point(264, 222);
+            this.lblCell4_PlantPMTop3.Location = new System.Drawing.Point(247, 222);
             this.lblCell4_PlantPMTop3.Name = "lblCell4_PlantPMTop3";
             this.lblCell4_PlantPMTop3.Size = new System.Drawing.Size(44, 56);
             this.lblCell4_PlantPMTop3.TabIndex = 2;
             // 
             // lblCell4_PlantAlarmTop5
             // 
-            this.lblCell4_PlantAlarmTop5._BackColor = System.Drawing.Color.LightCoral;
+            this.lblCell4_PlantAlarmTop5._BackColor = System.Drawing.Color.Gray;
             this.lblCell4_PlantAlarmTop5.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PlantAlarmTop5.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell4_PlantAlarmTop5.ForeColor = System.Drawing.Color.White;
@@ -1439,15 +1454,15 @@
             this.lblCell4_PMTop5.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PMTop5.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell4_PMTop5.ForeColor = System.Drawing.Color.White;
-            this.lblCell4_PMTop5.Location = new System.Drawing.Point(314, 352);
+            this.lblCell4_PMTop5.Location = new System.Drawing.Point(297, 352);
             this.lblCell4_PMTop5.Name = "lblCell4_PMTop5";
-            this.lblCell4_PMTop5.Size = new System.Drawing.Size(139, 56);
+            this.lblCell4_PMTop5.Size = new System.Drawing.Size(158, 56);
             this.lblCell4_PMTop5.TabIndex = 2;
             this.lblCell4_PMTop5.Text = "0";
             // 
             // lblCell4_PlantAlarmTop3
             // 
-            this.lblCell4_PlantAlarmTop3._BackColor = System.Drawing.Color.Coral;
+            this.lblCell4_PlantAlarmTop3._BackColor = System.Drawing.Color.Gray;
             this.lblCell4_PlantAlarmTop3.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PlantAlarmTop3.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell4_PlantAlarmTop3.ForeColor = System.Drawing.Color.White;
@@ -1458,11 +1473,11 @@
             // 
             // lblCell4_PlantPMTop4
             // 
-            this.lblCell4_PlantPMTop4._BackColor = System.Drawing.Color.DarkSalmon;
+            this.lblCell4_PlantPMTop4._BackColor = System.Drawing.Color.Gray;
             this.lblCell4_PlantPMTop4.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PlantPMTop4.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell4_PlantPMTop4.ForeColor = System.Drawing.Color.White;
-            this.lblCell4_PlantPMTop4.Location = new System.Drawing.Point(264, 286);
+            this.lblCell4_PlantPMTop4.Location = new System.Drawing.Point(247, 286);
             this.lblCell4_PlantPMTop4.Name = "lblCell4_PlantPMTop4";
             this.lblCell4_PlantPMTop4.Size = new System.Drawing.Size(44, 56);
             this.lblCell4_PlantPMTop4.TabIndex = 2;
@@ -1475,7 +1490,7 @@
             this.lblCell4_AlarmTop5.ForeColor = System.Drawing.Color.White;
             this.lblCell4_AlarmTop5.Location = new System.Drawing.Point(71, 352);
             this.lblCell4_AlarmTop5.Name = "lblCell4_AlarmTop5";
-            this.lblCell4_AlarmTop5.Size = new System.Drawing.Size(139, 56);
+            this.lblCell4_AlarmTop5.Size = new System.Drawing.Size(158, 56);
             this.lblCell4_AlarmTop5.TabIndex = 2;
             this.lblCell4_AlarmTop5.Text = "0";
             // 
@@ -1485,15 +1500,15 @@
             this.lblCell4_PMTop3.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PMTop3.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell4_PMTop3.ForeColor = System.Drawing.Color.White;
-            this.lblCell4_PMTop3.Location = new System.Drawing.Point(314, 222);
+            this.lblCell4_PMTop3.Location = new System.Drawing.Point(297, 222);
             this.lblCell4_PMTop3.Name = "lblCell4_PMTop3";
-            this.lblCell4_PMTop3.Size = new System.Drawing.Size(139, 56);
+            this.lblCell4_PMTop3.Size = new System.Drawing.Size(158, 56);
             this.lblCell4_PMTop3.TabIndex = 2;
             this.lblCell4_PMTop3.Text = "0";
             // 
             // lblCell4_PlantAlarmTop4
             // 
-            this.lblCell4_PlantAlarmTop4._BackColor = System.Drawing.Color.DarkSalmon;
+            this.lblCell4_PlantAlarmTop4._BackColor = System.Drawing.Color.Gray;
             this.lblCell4_PlantAlarmTop4.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PlantAlarmTop4.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell4_PlantAlarmTop4.ForeColor = System.Drawing.Color.White;
@@ -1504,11 +1519,11 @@
             // 
             // lblCell4_PlantPMTop2
             // 
-            this.lblCell4_PlantPMTop2._BackColor = System.Drawing.Color.Tomato;
+            this.lblCell4_PlantPMTop2._BackColor = System.Drawing.Color.Gray;
             this.lblCell4_PlantPMTop2.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PlantPMTop2.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell4_PlantPMTop2.ForeColor = System.Drawing.Color.White;
-            this.lblCell4_PlantPMTop2.Location = new System.Drawing.Point(264, 156);
+            this.lblCell4_PlantPMTop2.Location = new System.Drawing.Point(247, 156);
             this.lblCell4_PlantPMTop2.Name = "lblCell4_PlantPMTop2";
             this.lblCell4_PlantPMTop2.Size = new System.Drawing.Size(44, 56);
             this.lblCell4_PlantPMTop2.TabIndex = 2;
@@ -1521,24 +1536,24 @@
             this.lblCell4_AlarmTop3.ForeColor = System.Drawing.Color.White;
             this.lblCell4_AlarmTop3.Location = new System.Drawing.Point(71, 222);
             this.lblCell4_AlarmTop3.Name = "lblCell4_AlarmTop3";
-            this.lblCell4_AlarmTop3.Size = new System.Drawing.Size(139, 56);
+            this.lblCell4_AlarmTop3.Size = new System.Drawing.Size(158, 56);
             this.lblCell4_AlarmTop3.TabIndex = 2;
             this.lblCell4_AlarmTop3.Text = "0";
             // 
             // lblCell4_PlantPMTop1
             // 
-            this.lblCell4_PlantPMTop1._BackColor = System.Drawing.Color.Red;
+            this.lblCell4_PlantPMTop1._BackColor = System.Drawing.Color.Gray;
             this.lblCell4_PlantPMTop1.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PlantPMTop1.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell4_PlantPMTop1.ForeColor = System.Drawing.Color.White;
-            this.lblCell4_PlantPMTop1.Location = new System.Drawing.Point(264, 89);
+            this.lblCell4_PlantPMTop1.Location = new System.Drawing.Point(247, 89);
             this.lblCell4_PlantPMTop1.Name = "lblCell4_PlantPMTop1";
             this.lblCell4_PlantPMTop1.Size = new System.Drawing.Size(44, 56);
             this.lblCell4_PlantPMTop1.TabIndex = 2;
             // 
             // lblCell4_PlantAlarmTop2
             // 
-            this.lblCell4_PlantAlarmTop2._BackColor = System.Drawing.Color.Tomato;
+            this.lblCell4_PlantAlarmTop2._BackColor = System.Drawing.Color.Gray;
             this.lblCell4_PlantAlarmTop2.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PlantAlarmTop2.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell4_PlantAlarmTop2.ForeColor = System.Drawing.Color.White;
@@ -1559,7 +1574,7 @@
             // 
             // lblCell4_PlantAlarmTop1
             // 
-            this.lblCell4_PlantAlarmTop1._BackColor = System.Drawing.Color.Red;
+            this.lblCell4_PlantAlarmTop1._BackColor = System.Drawing.Color.Gray;
             this.lblCell4_PlantAlarmTop1.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PlantAlarmTop1.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell4_PlantAlarmTop1.ForeColor = System.Drawing.Color.White;
@@ -1750,65 +1765,321 @@
             // splitContainer7.Panel2
             // 
             this.splitContainer7.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer7.Panel2.Controls.Add(this.label6);
-            this.splitContainer7.Panel2.Controls.Add(this.chartProd);
+            this.splitContainer7.Panel2.Controls.Add(this.pnCell6);
             this.splitContainer7.Size = new System.Drawing.Size(474, 492);
             this.splitContainer7.SplitterDistance = 58;
             this.splitContainer7.SplitterWidth = 1;
             this.splitContainer7.TabIndex = 1;
             // 
+            // pnCell6
+            // 
+            this.pnCell6.BackColor = System.Drawing.Color.White;
+            this.pnCell6.Controls.Add(this.lblCell6_ProdWorstPlant3);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdWorstPlant2);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdWorstPlant1);
+            this.pnCell6.Controls.Add(this.lblCell6_AlarmWorstTop3);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdWorstTop3);
+            this.pnCell6.Controls.Add(this.lblCell6_AlarmBestTop3);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdBestTop3);
+            this.pnCell6.Controls.Add(this.lblCell6_AlarmWorstTop2);
+            this.pnCell6.Controls.Add(this.lblCell6_AlarmWorstTop1);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdWorstTop2);
+            this.pnCell6.Controls.Add(this.lblCell6_AlarmBestTop2);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdWorstTop1);
+            this.pnCell6.Controls.Add(this.lblCell6_AlarmBestTop1);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdBestTop2);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdBestTop1);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdBestPlant3);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdBestPlant2);
+            this.pnCell6.Controls.Add(this.lblCell6_ProdBestPlant1);
+            this.pnCell6.Controls.Add(this.label6);
+            this.pnCell6.Controls.Add(this.label39);
+            this.pnCell6.Controls.Add(this.label38);
+            this.pnCell6.Controls.Add(this.label36);
+            this.pnCell6.Controls.Add(this.label37);
+            this.pnCell6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnCell6.Location = new System.Drawing.Point(0, 0);
+            this.pnCell6.Name = "pnCell6";
+            this.pnCell6.Size = new System.Drawing.Size(474, 433);
+            this.pnCell6.TabIndex = 25;
+            // 
+            // lblCell6_ProdWorstPlant3
+            // 
+            this.lblCell6_ProdWorstPlant3._BackColor = System.Drawing.Color.Gray;
+            this.lblCell6_ProdWorstPlant3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdWorstPlant3.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdWorstPlant3.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdWorstPlant3.Location = new System.Drawing.Point(14, 376);
+            this.lblCell6_ProdWorstPlant3.Name = "lblCell6_ProdWorstPlant3";
+            this.lblCell6_ProdWorstPlant3.Size = new System.Drawing.Size(48, 49);
+            this.lblCell6_ProdWorstPlant3.TabIndex = 24;
+            this.lblCell6_ProdWorstPlant3.Text = "--";
+            // 
+            // lblCell6_ProdWorstPlant2
+            // 
+            this.lblCell6_ProdWorstPlant2._BackColor = System.Drawing.Color.Gray;
+            this.lblCell6_ProdWorstPlant2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdWorstPlant2.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdWorstPlant2.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdWorstPlant2.Location = new System.Drawing.Point(14, 320);
+            this.lblCell6_ProdWorstPlant2.Name = "lblCell6_ProdWorstPlant2";
+            this.lblCell6_ProdWorstPlant2.Size = new System.Drawing.Size(48, 49);
+            this.lblCell6_ProdWorstPlant2.TabIndex = 24;
+            this.lblCell6_ProdWorstPlant2.Text = "--";
+            // 
+            // lblCell6_ProdWorstPlant1
+            // 
+            this.lblCell6_ProdWorstPlant1._BackColor = System.Drawing.Color.Gray;
+            this.lblCell6_ProdWorstPlant1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdWorstPlant1.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdWorstPlant1.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdWorstPlant1.Location = new System.Drawing.Point(14, 264);
+            this.lblCell6_ProdWorstPlant1.Name = "lblCell6_ProdWorstPlant1";
+            this.lblCell6_ProdWorstPlant1.Size = new System.Drawing.Size(48, 49);
+            this.lblCell6_ProdWorstPlant1.TabIndex = 24;
+            this.lblCell6_ProdWorstPlant1.Text = "--";
+            // 
+            // lblCell6_AlarmWorstTop3
+            // 
+            this.lblCell6_AlarmWorstTop3._BackColor = System.Drawing.Color.Red;
+            this.lblCell6_AlarmWorstTop3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_AlarmWorstTop3.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_AlarmWorstTop3.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_AlarmWorstTop3.Location = new System.Drawing.Point(269, 374);
+            this.lblCell6_AlarmWorstTop3.Name = "lblCell6_AlarmWorstTop3";
+            this.lblCell6_AlarmWorstTop3.Size = new System.Drawing.Size(193, 49);
+            this.lblCell6_AlarmWorstTop3.TabIndex = 24;
+            this.lblCell6_AlarmWorstTop3.Text = "0%";
+            // 
+            // lblCell6_ProdWorstTop3
+            // 
+            this.lblCell6_ProdWorstTop3._BackColor = System.Drawing.Color.Red;
+            this.lblCell6_ProdWorstTop3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdWorstTop3.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdWorstTop3.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdWorstTop3.Location = new System.Drawing.Point(68, 377);
+            this.lblCell6_ProdWorstTop3.Name = "lblCell6_ProdWorstTop3";
+            this.lblCell6_ProdWorstTop3.Size = new System.Drawing.Size(186, 49);
+            this.lblCell6_ProdWorstTop3.TabIndex = 24;
+            this.lblCell6_ProdWorstTop3.Text = "0%";
+            // 
+            // lblCell6_AlarmBestTop3
+            // 
+            this.lblCell6_AlarmBestTop3._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell6_AlarmBestTop3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_AlarmBestTop3.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_AlarmBestTop3.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_AlarmBestTop3.Location = new System.Drawing.Point(269, 183);
+            this.lblCell6_AlarmBestTop3.Name = "lblCell6_AlarmBestTop3";
+            this.lblCell6_AlarmBestTop3.Size = new System.Drawing.Size(193, 49);
+            this.lblCell6_AlarmBestTop3.TabIndex = 24;
+            this.lblCell6_AlarmBestTop3.Text = "0%";
+            // 
+            // lblCell6_ProdBestTop3
+            // 
+            this.lblCell6_ProdBestTop3._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell6_ProdBestTop3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdBestTop3.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdBestTop3.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdBestTop3.Location = new System.Drawing.Point(68, 183);
+            this.lblCell6_ProdBestTop3.Name = "lblCell6_ProdBestTop3";
+            this.lblCell6_ProdBestTop3.Size = new System.Drawing.Size(186, 49);
+            this.lblCell6_ProdBestTop3.TabIndex = 24;
+            this.lblCell6_ProdBestTop3.Text = "0%";
+            // 
+            // lblCell6_AlarmWorstTop2
+            // 
+            this.lblCell6_AlarmWorstTop2._BackColor = System.Drawing.Color.Red;
+            this.lblCell6_AlarmWorstTop2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_AlarmWorstTop2.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_AlarmWorstTop2.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_AlarmWorstTop2.Location = new System.Drawing.Point(269, 317);
+            this.lblCell6_AlarmWorstTop2.Name = "lblCell6_AlarmWorstTop2";
+            this.lblCell6_AlarmWorstTop2.Size = new System.Drawing.Size(193, 49);
+            this.lblCell6_AlarmWorstTop2.TabIndex = 24;
+            this.lblCell6_AlarmWorstTop2.Text = "0%";
+            // 
+            // lblCell6_AlarmWorstTop1
+            // 
+            this.lblCell6_AlarmWorstTop1._BackColor = System.Drawing.Color.Red;
+            this.lblCell6_AlarmWorstTop1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_AlarmWorstTop1.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_AlarmWorstTop1.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_AlarmWorstTop1.Location = new System.Drawing.Point(269, 261);
+            this.lblCell6_AlarmWorstTop1.Name = "lblCell6_AlarmWorstTop1";
+            this.lblCell6_AlarmWorstTop1.Size = new System.Drawing.Size(193, 49);
+            this.lblCell6_AlarmWorstTop1.TabIndex = 24;
+            this.lblCell6_AlarmWorstTop1.Text = "0%";
+            // 
+            // lblCell6_ProdWorstTop2
+            // 
+            this.lblCell6_ProdWorstTop2._BackColor = System.Drawing.Color.Red;
+            this.lblCell6_ProdWorstTop2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdWorstTop2.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdWorstTop2.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdWorstTop2.Location = new System.Drawing.Point(68, 320);
+            this.lblCell6_ProdWorstTop2.Name = "lblCell6_ProdWorstTop2";
+            this.lblCell6_ProdWorstTop2.Size = new System.Drawing.Size(186, 49);
+            this.lblCell6_ProdWorstTop2.TabIndex = 24;
+            this.lblCell6_ProdWorstTop2.Text = "0%";
+            // 
+            // lblCell6_AlarmBestTop2
+            // 
+            this.lblCell6_AlarmBestTop2._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell6_AlarmBestTop2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_AlarmBestTop2.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_AlarmBestTop2.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_AlarmBestTop2.Location = new System.Drawing.Point(269, 126);
+            this.lblCell6_AlarmBestTop2.Name = "lblCell6_AlarmBestTop2";
+            this.lblCell6_AlarmBestTop2.Size = new System.Drawing.Size(193, 49);
+            this.lblCell6_AlarmBestTop2.TabIndex = 24;
+            this.lblCell6_AlarmBestTop2.Text = "0%";
+            // 
+            // lblCell6_ProdWorstTop1
+            // 
+            this.lblCell6_ProdWorstTop1._BackColor = System.Drawing.Color.Red;
+            this.lblCell6_ProdWorstTop1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdWorstTop1.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdWorstTop1.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdWorstTop1.Location = new System.Drawing.Point(68, 264);
+            this.lblCell6_ProdWorstTop1.Name = "lblCell6_ProdWorstTop1";
+            this.lblCell6_ProdWorstTop1.Size = new System.Drawing.Size(186, 49);
+            this.lblCell6_ProdWorstTop1.TabIndex = 24;
+            this.lblCell6_ProdWorstTop1.Text = "0%";
+            // 
+            // lblCell6_AlarmBestTop1
+            // 
+            this.lblCell6_AlarmBestTop1._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell6_AlarmBestTop1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_AlarmBestTop1.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_AlarmBestTop1.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_AlarmBestTop1.Location = new System.Drawing.Point(269, 70);
+            this.lblCell6_AlarmBestTop1.Name = "lblCell6_AlarmBestTop1";
+            this.lblCell6_AlarmBestTop1.Size = new System.Drawing.Size(193, 49);
+            this.lblCell6_AlarmBestTop1.TabIndex = 24;
+            this.lblCell6_AlarmBestTop1.Text = "0%";
+            // 
+            // lblCell6_ProdBestTop2
+            // 
+            this.lblCell6_ProdBestTop2._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell6_ProdBestTop2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdBestTop2.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdBestTop2.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdBestTop2.Location = new System.Drawing.Point(68, 126);
+            this.lblCell6_ProdBestTop2.Name = "lblCell6_ProdBestTop2";
+            this.lblCell6_ProdBestTop2.Size = new System.Drawing.Size(186, 49);
+            this.lblCell6_ProdBestTop2.TabIndex = 24;
+            this.lblCell6_ProdBestTop2.Text = "0%";
+            // 
+            // lblCell6_ProdBestTop1
+            // 
+            this.lblCell6_ProdBestTop1._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell6_ProdBestTop1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdBestTop1.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdBestTop1.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdBestTop1.Location = new System.Drawing.Point(68, 70);
+            this.lblCell6_ProdBestTop1.Name = "lblCell6_ProdBestTop1";
+            this.lblCell6_ProdBestTop1.Size = new System.Drawing.Size(186, 49);
+            this.lblCell6_ProdBestTop1.TabIndex = 24;
+            this.lblCell6_ProdBestTop1.Text = "0%";
+            // 
+            // lblCell6_ProdBestPlant3
+            // 
+            this.lblCell6_ProdBestPlant3._BackColor = System.Drawing.Color.Gray;
+            this.lblCell6_ProdBestPlant3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdBestPlant3.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdBestPlant3.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdBestPlant3.Location = new System.Drawing.Point(14, 183);
+            this.lblCell6_ProdBestPlant3.Name = "lblCell6_ProdBestPlant3";
+            this.lblCell6_ProdBestPlant3.Size = new System.Drawing.Size(48, 49);
+            this.lblCell6_ProdBestPlant3.TabIndex = 24;
+            this.lblCell6_ProdBestPlant3.Text = "--";
+            this.lblCell6_ProdBestPlant3.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
+            // 
+            // lblCell6_ProdBestPlant2
+            // 
+            this.lblCell6_ProdBestPlant2._BackColor = System.Drawing.Color.Gray;
+            this.lblCell6_ProdBestPlant2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdBestPlant2.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdBestPlant2.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdBestPlant2.Location = new System.Drawing.Point(14, 126);
+            this.lblCell6_ProdBestPlant2.Name = "lblCell6_ProdBestPlant2";
+            this.lblCell6_ProdBestPlant2.Size = new System.Drawing.Size(48, 49);
+            this.lblCell6_ProdBestPlant2.TabIndex = 24;
+            this.lblCell6_ProdBestPlant2.Text = "--";
+            this.lblCell6_ProdBestPlant2.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
+            // 
+            // lblCell6_ProdBestPlant1
+            // 
+            this.lblCell6_ProdBestPlant1._BackColor = System.Drawing.Color.Gray;
+            this.lblCell6_ProdBestPlant1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell6_ProdBestPlant1.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell6_ProdBestPlant1.ForeColor = System.Drawing.Color.White;
+            this.lblCell6_ProdBestPlant1.Location = new System.Drawing.Point(14, 70);
+            this.lblCell6_ProdBestPlant1.Name = "lblCell6_ProdBestPlant1";
+            this.lblCell6_ProdBestPlant1.Size = new System.Drawing.Size(48, 49);
+            this.lblCell6_ProdBestPlant1.TabIndex = 24;
+            this.lblCell6_ProdBestPlant1.Text = "--";
+            this.lblCell6_ProdBestPlant1.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
+            // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(374, 4);
+            this.label6.BackColor = System.Drawing.Color.SlateGray;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 21);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Unit : Pairs";
+            this.label6.Size = new System.Drawing.Size(474, 34);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Production Ratio && Equipment malfunction alert Ratio";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Visible = false;
             // 
-            // chartProd
+            // label39
             // 
-            this.chartProd.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartProd.BorderOptions.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.chartProd.DataBindings = null;
-            xyDiagram3.AxisX.Title.Text = "Month";
-            xyDiagram3.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram3.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisY.GridLines.Visible = false;
-            xyDiagram3.AxisY.Label.TextPattern = "{V:#,#}";
-            xyDiagram3.AxisY.Title.Text = "Production Quantity";
-            xyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram3.DefaultPane.BorderVisible = false;
-            xyDiagram3.EnableAxisXScrolling = true;
-            this.chartProd.Diagram = xyDiagram3;
-            this.chartProd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartProd.Legend.Name = "Default Legend";
-            this.chartProd.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartProd.Location = new System.Drawing.Point(0, 0);
-            this.chartProd.Name = "chartProd";
-            series4.CrosshairLabelPattern = "{V:#,#}";
-            sideBySideBarSeriesLabel3.TextPattern = "{V:#,#}";
-            series4.Label = sideBySideBarSeriesLabel3;
-            series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series4.Name = "Season";
-            barSlideAnimation2.BeginTime = System.TimeSpan.Parse("00:00:00.6000000");
-            barSlideAnimation2.Direction = DevExpress.XtraCharts.AnimationDirection.FromRight;
-            barSlideAnimation2.PointDelay = System.TimeSpan.Parse("00:00:00.1000000");
-            sideBySideBarSeriesView3.Animation = barSlideAnimation2;
-            sideBySideBarSeriesView3.Color = System.Drawing.Color.LimeGreen;
-            series4.View = sideBySideBarSeriesView3;
-            this.chartProd.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series4};
-            this.chartProd.Size = new System.Drawing.Size(474, 433);
-            this.chartProd.TabIndex = 2;
-            chartTitle3.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartProd.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle3});
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.SystemColors.WindowText;
+            this.label39.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Red;
+            this.label39.Location = new System.Drawing.Point(257, 237);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(211, 22);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "Top 3 Highest Alert Ratio";
+            // 
+            // label38
+            // 
+            this.label38.BackColor = System.Drawing.SystemColors.WindowText;
+            this.label38.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.Red;
+            this.label38.Location = new System.Drawing.Point(14, 237);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(240, 22);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "Top 3 Lowest Production";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.SystemColors.WindowText;
+            this.label36.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label36.Location = new System.Drawing.Point(257, 46);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(205, 22);
+            this.label36.TabIndex = 1;
+            this.label36.Text = "Top 3 Lowest Alert Ratio";
+            // 
+            // label37
+            // 
+            this.label37.BackColor = System.Drawing.SystemColors.WindowText;
+            this.label37.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label37.Location = new System.Drawing.Point(14, 46);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(240, 22);
+            this.label37.TabIndex = 1;
+            this.label37.Text = "Top 3 Highest Production";
             // 
             // splitContainer8
             // 
@@ -1845,41 +2116,41 @@
             this.chartWOF.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartWOF.BorderOptions.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.chartWOF.DataBindings = null;
-            xyDiagram4.AxisX.Title.Text = "Month";
-            xyDiagram4.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram4.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram4.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram4.AxisY.GridLines.Visible = false;
-            xyDiagram4.AxisY.Label.TextPattern = "{V:#,#}";
-            xyDiagram4.AxisY.Title.Text = "Work Order";
-            xyDiagram4.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram4.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram4.DefaultPane.BorderVisible = false;
-            xyDiagram4.EnableAxisXScrolling = true;
-            this.chartWOF.Diagram = xyDiagram4;
+            xyDiagram3.AxisX.Title.Text = "Month";
+            xyDiagram3.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram3.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram3.AxisY.GridLines.Visible = false;
+            xyDiagram3.AxisY.Label.TextPattern = "{V:#,#}";
+            xyDiagram3.AxisY.Title.Text = "Work Order";
+            xyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
+            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram3.DefaultPane.BorderVisible = false;
+            xyDiagram3.EnableAxisXScrolling = true;
+            this.chartWOF.Diagram = xyDiagram3;
             this.chartWOF.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartWOF.Legend.Name = "Default Legend";
             this.chartWOF.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartWOF.Location = new System.Drawing.Point(0, 0);
             this.chartWOF.Name = "chartWOF";
-            series5.CrosshairLabelPattern = "{V:#,#}";
-            sideBySideBarSeriesLabel4.TextPattern = "{V:#,#}";
-            series5.Label = sideBySideBarSeriesLabel4;
-            series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series5.Name = "Season";
-            barSlideAnimation3.BeginTime = System.TimeSpan.Parse("00:00:00.5000000");
-            barSlideAnimation3.Direction = DevExpress.XtraCharts.AnimationDirection.FromRight;
-            barSlideAnimation3.PointDelay = System.TimeSpan.Parse("00:00:00.1000000");
-            sideBySideBarSeriesView4.Animation = barSlideAnimation3;
-            sideBySideBarSeriesView4.Color = System.Drawing.Color.MediumVioletRed;
-            series5.View = sideBySideBarSeriesView4;
+            series4.CrosshairLabelPattern = "{V:#,#}";
+            sideBySideBarSeriesLabel3.TextPattern = "{V:#,#}";
+            series4.Label = sideBySideBarSeriesLabel3;
+            series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series4.Name = "Season";
+            barSlideAnimation2.BeginTime = System.TimeSpan.Parse("00:00:00.5000000");
+            barSlideAnimation2.Direction = DevExpress.XtraCharts.AnimationDirection.FromRight;
+            barSlideAnimation2.PointDelay = System.TimeSpan.Parse("00:00:00.1000000");
+            sideBySideBarSeriesView3.Animation = barSlideAnimation2;
+            sideBySideBarSeriesView3.Color = System.Drawing.Color.MediumVioletRed;
+            series4.View = sideBySideBarSeriesView3;
             this.chartWOF.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series5};
+        series4};
             this.chartWOF.Size = new System.Drawing.Size(474, 433);
             this.chartWOF.TabIndex = 2;
-            chartTitle4.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            chartTitle3.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartWOF.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle4});
+            chartTitle3});
             // 
             // splashScreenManager1
             // 
@@ -1972,18 +2243,15 @@
             this.splitContainer7.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
+            this.pnCell6.ResumeLayout(false);
+            this.pnCell6.PerformLayout();
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
+            this.splitContainer8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartProd)).EndInit();
-            this.splitContainer8.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
-            this.splitContainer8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartWOF)).EndInit();
             this.ResumeLayout(false);
 
@@ -2005,12 +2273,10 @@
         private System.Windows.Forms.SplitContainer splitContainer6;
         private DevExpress.XtraCharts.ChartControl chartPPSM;
         private System.Windows.Forms.SplitContainer splitContainer7;
-        private DevExpress.XtraCharts.ChartControl chartProd;
         private System.Windows.Forms.SplitContainer splitContainer8;
         private DevExpress.XtraCharts.ChartControl chartWOF;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Timer tmrLoad;
         private System.Windows.Forms.Label label10;
@@ -2110,5 +2376,29 @@
         private RoundLabel lblCell4_PlantPMTop2;
         private RoundLabel lblCell4_PlantPMTop1;
         private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Panel pnCell6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private RoundLabel lblCell6_ProdWorstPlant1;
+        private RoundLabel lblCell6_ProdBestTop1;
+        private RoundLabel lblCell6_ProdBestPlant1;
+        private RoundLabel lblCell6_ProdBestTop3;
+        private RoundLabel lblCell6_ProdBestTop2;
+        private RoundLabel lblCell6_ProdWorstTop3;
+        private RoundLabel lblCell6_ProdWorstTop2;
+        private RoundLabel lblCell6_ProdWorstTop1;
+        private RoundLabel lblCell6_AlarmWorstTop3;
+        private RoundLabel lblCell6_AlarmBestTop3;
+        private RoundLabel lblCell6_AlarmWorstTop2;
+        private RoundLabel lblCell6_AlarmWorstTop1;
+        private RoundLabel lblCell6_AlarmBestTop2;
+        private RoundLabel lblCell6_AlarmBestTop1;
+        private RoundLabel lblCell6_ProdBestPlant2;
+        private RoundLabel lblCell6_ProdWorstPlant3;
+        private RoundLabel lblCell6_ProdWorstPlant2;
+        private RoundLabel lblCell6_ProdBestPlant3;
     }
 }

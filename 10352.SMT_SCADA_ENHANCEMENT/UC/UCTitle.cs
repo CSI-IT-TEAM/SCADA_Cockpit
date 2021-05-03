@@ -16,7 +16,6 @@ namespace FORM.UC
         {
             InitializeComponent();
             setDisplay();
-            
         }
         public delegate void ButtonDetailClick(ChartModel model,string YearValue);
         public ButtonDetailClick OnButtonDetailClick = null;
@@ -87,7 +86,7 @@ namespace FORM.UC
             _model = model;
 
             if (
-                model.Code.Equals("RW") || model.Code.Equals("ELEC") ||model.Code.Equals("ABSENT") || model.Code.Equals("DOWNTIME")
+                model.Code.Equals("RW") || model.Code.Equals("ELEC") ||model.Code.Equals("ABSENT") || model.Code.Equals("DOWNTIME") || model.Code.Equals("PM")
                )
                 panel1.Visible = false;
             else

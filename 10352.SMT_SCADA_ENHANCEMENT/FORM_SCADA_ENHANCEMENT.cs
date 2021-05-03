@@ -24,6 +24,8 @@ namespace FORM
         #region Var
         DataTable dtCell1 = new DataTable();
         DataTable dtCell2 = new DataTable();
+        DataTable dtCell3 = new DataTable();
+        DataTable dtCell4 = new DataTable();
         List<ChartModel> models = new List<ChartModel>();
         string[] YearValues = new string[8];
         Random r = new Random();
@@ -70,7 +72,7 @@ namespace FORM
                 DataTable dt = new DataTable();
                 dt.Columns.Add("MONTH", typeof(string));
                 dt.Columns.Add("PROD_QTY", typeof(int));
-              
+
                 for (int i = 0; i < 12; i++)
                 {
                     DataRow dr = dt.NewRow();
@@ -90,7 +92,7 @@ namespace FORM
         {
             models.Add(new ChartModel { Title = "Rework && Equipment malfunction", Code = "RW", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "SEASON_LABEL", ValueColumnName = "QTY", formCall = "10353", AxisYTitle = "Prs", axisXTitle = "Season", valuePatten = "{V:#,#}" });
             models.Add(new ChartModel { Title = "Absent Rate", Code = "ABSENT", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10365", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
-            models.Add(new ChartModel { Title = "Andon DownTime", Code = "DOWNTIME", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10366", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
+            models.Add(new ChartModel { Title = "Andon DownTime", Code = "DOWNTIME", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10366", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" }); //10366
             models.Add(new ChartModel { Title = "PM", Code = "PM", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10346", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
             models.Add(new ChartModel { Title = "WOF", Code = "WOF", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "PROCESS", ValueColumnName = "QTY", formCall = "10339", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
             models.Add(new ChartModel { Title = "Production Quantity", Code = "PROD", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "POD", formCall = "10318", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
@@ -124,7 +126,8 @@ namespace FORM
                     }
                 }
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
 
@@ -218,30 +221,56 @@ namespace FORM
                         arcScaleBestAlarm.Value = 0;
                         arcScaleWorstAbsent.Value = 0;
                         arcScaleWorstAlarm.Value = 0;
-
-                       dtCell2 = dtReal.Copy();
+                        dtCell2 = dtReal.Copy();
                         tmrAnimationText.Start();
-
                         break;
                     case "DOWNTIME": //3
-                        chartDownTime.DataSource = dtReal;
-                        chartDownTime.Series[0].ArgumentDataMember = "LINE_NM";
-                        chartDownTime.Series[0].ValueDataMembers.AddRange(new string[] { "ANDON_AVG_TIME" });
+                        //chartDownTime1.DataSource = dtReal;
+                        //chartDownTime1.Series[0].ArgumentDataMember = "LINE_NM";
+                        //chartDownTime1.Series[0].ValueDataMembers.AddRange(new string[] { "ALARM_TIME" });
 
-                        chartDownTime.Series[1].ArgumentDataMember = "LINE_NM";
-                        chartDownTime.Series[1].ValueDataMembers.AddRange(new string[] { "ALARM_TIME" });
-                        ((DevExpress.XtraCharts.XYDiagram)chartDownTime.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
-                      
+                        //chartDownTime1.Series[1].ArgumentDataMember = "LINE_NM";
+                        //chartDownTime1.Series[1].ValueDataMembers.AddRange(new string[] { "ANDON_AVG_TIME" });
+                        //((DevExpress.XtraCharts.XYDiagram)chartDownTime1.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
+                        dtCell3 = dtReal.Copy();
+                        lblCell3_AlarmTop1.Text = "0";
+                        lblCell3_AlarmTop2.Text = "0";
+                        lblCell3_AlarmTop3.Text = "0";
+                        lblCell3_MA.Text = "0";
+                        lblCell3_TL.Text = "0";
+                        lblCell3_Management.Text = "0";
+                        tmrAnimationText.Start();
+                        //chartDownTime1.Series[0].ArgumentDataMember = "MONTH";
+                        //chartDownTime1.Series[0].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
+                        //((DevExpress.XtraCharts.XYDiagram)chartDownTime1.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
+                        //if (dt.Rows.Count >= 5)
+                        //{
+                        //    ((XYDiagram)chartDownTime1.Diagram).AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["MONTH"], dt.Rows[5]["MONTH"]);
+                        //}
                         break;
                     case "PM": //4
-                        chartPM.DataSource = dt;
-                        chartPM.Series[0].ArgumentDataMember = "MONTH";
-                        chartPM.Series[0].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
-                        ((DevExpress.XtraCharts.XYDiagram)chartPM.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
-                        if (dt.Rows.Count >= 5)
-                        {
-                            ((XYDiagram)chartPM.Diagram).AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["MONTH"], dt.Rows[5]["MONTH"]);
-                        }
+                        dtCell4 = dtReal.Copy();
+                        lblCell4_AlarmTop1.Text = "0";
+                        lblCell4_AlarmTop2.Text = "0";
+                        lblCell4_AlarmTop3.Text = "0";
+                        lblCell4_AlarmTop4.Text = "0";
+                        lblCell4_AlarmTop5.Text = "0";
+
+                        lblCell4_PMTop1.Text = "0";
+                        lblCell4_PMTop2.Text = "0";
+                        lblCell4_PMTop3.Text = "0";
+                        lblCell4_PMTop4.Text = "0";
+                        lblCell4_PMTop5.Text = "0";
+
+                        tmrAnimationText.Start();
+                        //chartPM.DataSource = dt;
+                        //chartPM.Series[0].ArgumentDataMember = "MONTH";
+                        //chartPM.Series[0].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
+                        //((DevExpress.XtraCharts.XYDiagram)chartPM.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
+                        //if (dt.Rows.Count >= 5)
+                        //{
+                        //    ((XYDiagram)chartPM.Diagram).AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["MONTH"], dt.Rows[5]["MONTH"]);
+                        //}
                         break;
                     case "WOF": //5
                         chartWOF.DataSource = dt;
@@ -293,7 +322,7 @@ namespace FORM
             }
         }
 
-        private void BindingLabelRData(RoundLabel lbl, int min,int max)
+        private void BindingLabelRData(RoundLabel lbl, int min, int max)
         {
             lbl.Text = string.Format("{0:n0}", r.Next(min, max));
         }
@@ -326,10 +355,10 @@ namespace FORM
                 arcScaleWorstAlarm.EasingFunction = new BackEase();
                 //  BindingData();
             }
-            catch 
+            catch
             {
 
-                
+
             }
         }
 
@@ -346,7 +375,8 @@ namespace FORM
         private void tmrLoad_Tick(object sender, EventArgs e)
         {
             cCount++;
-            if (cCount >= 10)
+            lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
+            if (cCount >= 60)
             {
                 cCount = 0;
                 BindingData();
@@ -358,7 +388,7 @@ namespace FORM
         {
             if (this.Visible)
             {
-                cCount = 10;
+                cCount = 60;
                 tmrLoad.Start();
             }
             else
@@ -370,60 +400,187 @@ namespace FORM
             cCountPnCell1++;
             BindingLabelRData(lblCell1_RW, 1, 101);
             BindingLabelRData(lblCell1_Occur, 1, 101);
-            BindingLabelRData(lblCell2_AbsentBest,1,101);
+            BindingLabelRData(lblCell2_AbsentBest, 1, 101);
             BindingLabelRData(lblCell2_AbsentWorst, 1, 101);
 
             BindingLabelRData(lblCell2_AlarmBest, 1, 101);
             BindingLabelRData(lblCell2_AlarmWorst, 1, 101);
+
+            BindingLabelRData(lblCell3_AlarmTop1, 1, 1001);
+            BindingLabelRData(lblCell3_AlarmTop2, 1, 1001);
+            BindingLabelRData(lblCell3_AlarmTop3, 1, 1001);
+            BindingLabelRData(lblCell3_MA, 1, 1001);
+            BindingLabelRData(lblCell3_TL, 1, 1001);
+            BindingLabelRData(lblCell3_Management, 1, 1001);
+
+            BindingLabelRData(lblCell4_AlarmTop1, 1, 101);
+            BindingLabelRData(lblCell4_AlarmTop2, 1, 101);
+            BindingLabelRData(lblCell4_AlarmTop3, 1, 101);
+            BindingLabelRData(lblCell4_AlarmTop4, 1, 101);
+            BindingLabelRData(lblCell4_AlarmTop5, 1, 101);
+
+            BindingLabelRData(lblCell4_PMTop1, 1, 101);
+            BindingLabelRData(lblCell4_PMTop2, 1, 101);
+            BindingLabelRData(lblCell4_PMTop3, 1, 101);
+            BindingLabelRData(lblCell4_PMTop4, 1, 101);
+            BindingLabelRData(lblCell4_PMTop5, 1, 101);
+
             if (cCountPnCell1 >= 15)
             {
-                
                 cCountPnCell1 = 0;
+                arcScaleBestAbsent.Value = 0;
+                arcScaleBestAlarm.Value = 0;
+                arcScaleWorstAbsent.Value = 0;
+                arcScaleWorstAlarm.Value = 0;
+
+                lblCell3_AlarmTop1.Text = "0";
+                lblCell3_AlarmTop2.Text = "0";
+                lblCell3_AlarmTop3.Text = "0";
+                lblCell3_MA.Text = "0";
+                lblCell3_TL.Text = "0";
+                lblCell3_Management.Text = "0";
+
+                lblCell4_AlarmTop1.Text = "0";
+                lblCell4_AlarmTop2.Text = "0";
+                lblCell4_AlarmTop3.Text = "0";
+                lblCell4_AlarmTop4.Text = "0";
+                lblCell4_AlarmTop5.Text = "0";
+
+                lblCell4_PMTop1.Text = "0";
+                lblCell4_PMTop2.Text = "0";
+                lblCell4_PMTop3.Text = "0";
+                lblCell4_PMTop4.Text = "0";
+                lblCell4_PMTop5.Text = "0";
+
                 tmrAnimationText.Stop();
                 try
                 {
                     lblCell1_RW.Text = string.Format("{0:n1}", dtCell1.Rows[0]["REW_RATE"]);
                     lblCell1_Occur.Text = string.Format("{0:n2}", dtCell1.Rows[0]["OCR_RATE"]);
                     //Binding Data for Absent Here!!!
-
-                    if (dtCell2.Select("FLAG='Best'").Count() > 0)
+                   
+                    if (dtCell2.Select("ABSENT_FLAG='Best'").Count() > 0)
                     {
                         //Best Absent
-                        arcScaleBestAbsent.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_MIN"]);
-                        arcScaleBestAbsent.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MAX"]);
-                        arcScaleBestAbsent.Value = float.Parse(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString());
-                        lblCell2_AbsentBest.Text = string.Concat(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString(),"%");
-                        lblBestAbsent.Text = string.Concat(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString(), "%"); 
+                        arcScaleBestAbsent.MinValue = Convert.ToInt32(dtCell2.Select("ABSENT_FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_MIN"]);
+                        arcScaleBestAbsent.MaxValue = Convert.ToInt32(dtCell2.Select("ABSENT_FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MAX"]);
+                        arcScaleBestAbsent.Value = float.Parse(string.Format("{0:n1}", dtCell2.Select("ABSENT_FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString()));
+                        lblCell2_AbsentBest.Text = string.Concat(string.Format("{0:n1}", dtCell2.Select("ABSENT_FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString()), "%");
+                        lblCell2_AbsentBestPlant.Text = dtCell2.Select("ABSENT_FLAG='Best'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        lblBestAbsent.Text = string.Concat(string.Format("{0:n1}", dtCell2.Select("ABSENT_FLAG='Best'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString()), "%");
+
                         //Best Alarm
-                        arcScaleBestAlarm.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_MIN"]);
-                        arcScaleBestAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
-                        arcScaleBestAlarm.Value = float.Parse(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString());
-                        lblCell2_AlarmBest.Text = string.Concat(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(),"%");
-                        lblBestAlarm.Text = string.Concat(dtCell2.Select("FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(), "%");
+                        arcScaleBestAlarm.MinValue = Convert.ToInt32(dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_MIN"]);
+                        arcScaleBestAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
+                        arcScaleBestAlarm.Value = float.Parse(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()));
+                        lblCell2_AlarmBest.Text = string.Concat(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()), "%");
+                        lblCell2_AlarmBestPlant.Text = dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        lblBestAlarm.Text = string.Concat(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()), "%");
+
                     }
 
-                    if (dtCell2.Select("FLAG='Worst'").Count() > 0)
+                    if (dtCell2.Select("ABSENT_FLAG='Worst'").Count() > 0)
                     {
                         //Best Absent
-                        arcScaleWorstAbsent.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MIN"]);
-                        arcScaleWorstAbsent.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MAX"]);
+                        arcScaleWorstAbsent.MinValue = Convert.ToInt32(dtCell2.Select("ABSENT_FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MIN"]);
+                        arcScaleWorstAbsent.MaxValue = Convert.ToInt32(dtCell2.Select("ABSENT_FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_MAX"]);
 
-                        arcScaleWorstAbsent.Value = float.Parse(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString());
+                        arcScaleWorstAbsent.Value = float.Parse(string.Format("{0:n1}", dtCell2.Select("ABSENT_FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString()));
 
-                        lblCell2_AbsentWorst.Text = lblWorstAbsent.Text = string.Concat(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString(),"%");
-
+                        lblCell2_AbsentWorst.Text = lblWorstAbsent.Text = string.Concat(string.Format("{0:n1}", dtCell2.Select("ABSENT_FLAG='Worst'").CopyToDataTable().Rows[0]["ABSENT_RATIO"].ToString()), "%");
+                        lblCell2_AbsentWorstPlant.Text = dtCell2.Select("ABSENT_FLAG='Worst'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
                         //Best Alarm
-                        arcScaleWorstAlarm.MinValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MIN"]);
-                        arcScaleWorstAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
-                        arcScaleWorstAlarm.Value = float.Parse(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString());
-                        lblCell2_AlarmWorst.Text = lblWorstAlarm.Text = string.Concat(dtCell2.Select("FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(),"%");
+                        arcScaleWorstAlarm.MinValue = Convert.ToInt32(dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MIN"]);
+                        arcScaleWorstAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
+                        arcScaleWorstAlarm.Value = float.Parse(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()));
+                        lblCell2_AlarmWorst.Text = lblWorstAlarm.Text = string.Concat(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()), "%");
+                        lblCell2_AlarmWorstPlant.Text = dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                    }
+
+
+                    
+                    if (dtCell3.Rows.Count>0 && dtCell3 != null)
+                    {
+                        lblCell3_MA.Text = string.Format("{0:n0}", dtCell3.Select("PROCESS_CD = 'LB'").CopyToDataTable().Rows[0]["QTY"]);
+                        lblCell3_Management.Text = string.Format("{0:n0}", dtCell3.Select("PROCESS_CD = 'LA'").CopyToDataTable().Rows[0]["QTY"]);
+                        lblCell3_TL.Text = string.Format("{0:n0}", dtCell3.Select("PROCESS_CD = 'LC'").CopyToDataTable().Rows[0]["QTY"]);
+                        if (dtCell3.Rows[3] != null)
+                        {
+                            lblPlant1.Text = dtCell3.Rows[3]["PROCESS_CD"].ToString() ;
+                            lblCell3_AlarmTop1.Text = string.Format("{0:n0}", dtCell3.Rows[3]["QTY"]);
+                        }
+                        if (dtCell3.Rows[4] != null)
+                        {
+                            lblPlant2.Text = dtCell3.Rows[4]["PROCESS_CD"].ToString();
+                            lblCell3_AlarmTop2.Text = string.Format("{0:n0}", dtCell3.Rows[4]["QTY"]);
+                        }
+                        if (dtCell3.Rows[5] != null)
+                        {
+                            lblPlant3.Text = dtCell3.Rows[5]["PROCESS_CD"].ToString();
+                            lblCell3_AlarmTop3.Text = string.Format("{0:n0}", dtCell3.Rows[5]["QTY"]);
+                        }
+                    }
+
+                    if (dtCell4.Rows.Count > 0 && dtCell4 != null)
+                    {
+                        if (dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '1'").Count() > 0)
+                        {
+                            lblCell4_AlarmTop1.Text = dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '1'").CopyToDataTable().Rows[0]["RATE"].ToString();
+                            lblCell4_PlantAlarmTop1.Text = dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '1'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        }
+                        if (dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '2'").Count() > 0)
+                        {
+                            lblCell4_AlarmTop2.Text = dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '2'").CopyToDataTable().Rows[0]["RATE"].ToString();
+                            lblCell4_PlantAlarmTop2.Text = dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '2'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        }
+                        if (dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '3'").Count() > 0)
+                        {
+                            lblCell4_AlarmTop3.Text = dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '3'").CopyToDataTable().Rows[0]["RATE"].ToString();
+                            lblCell4_PlantAlarmTop3.Text = dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '3'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        }
+                        if (dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '4'").Count() > 0)
+                        {
+                            lblCell4_AlarmTop4.Text = dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '4'").CopyToDataTable().Rows[0]["RATE"].ToString();
+                            lblCell4_PlantAlarmTop4.Text = dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '4'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        }
+                        if (dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '5'").Count() > 0)
+                        {
+                            lblCell4_AlarmTop5.Text = dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '5'").CopyToDataTable().Rows[0]["RATE"].ToString();
+                            lblCell4_PlantAlarmTop5.Text = dtCell4.Select("ITEMS = 'ALARM' AND SEQ = '5'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        }
+
+                        if (dtCell4.Select("ITEMS = 'PM' AND SEQ = '1'").Count() > 0)
+                        {
+                            lblCell4_PMTop1.Text = dtCell4.Select("ITEMS = 'PM' AND SEQ = '1'").CopyToDataTable().Rows[0]["RATE"].ToString();
+                            lblCell4_PlantPMTop1.Text = dtCell4.Select("ITEMS = 'PM' AND SEQ = '1'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        }
+                        if (dtCell4.Select("ITEMS = 'PM' AND SEQ = '2'").Count() > 0)
+                        {
+                            lblCell4_PMTop2.Text = dtCell4.Select("ITEMS = 'PM' AND SEQ = '2'").CopyToDataTable().Rows[0]["RATE"].ToString();
+                            lblCell4_PlantPMTop2.Text = dtCell4.Select("ITEMS = 'PM' AND SEQ = '2'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        }
+                        if (dtCell4.Select("ITEMS = 'PM' AND SEQ = '3'").Count() > 0)
+                        {
+                            lblCell4_PMTop3.Text = dtCell4.Select("ITEMS = 'PM' AND SEQ = '3'").CopyToDataTable().Rows[0]["RATE"].ToString();
+                            lblCell4_PlantPMTop3.Text = dtCell4.Select("ITEMS = 'PM' AND SEQ = '3'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        }
+                        if (dtCell4.Select("ITEMS = 'PM' AND SEQ = '4'").Count() > 0)
+                        {
+                            lblCell4_PMTop4.Text = dtCell4.Select("ITEMS = 'PM' AND SEQ = '4'").CopyToDataTable().Rows[0]["RATE"].ToString();
+                            lblCell4_PlantPMTop4.Text = dtCell4.Select("ITEMS = 'PM' AND SEQ = '4'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        }
+                        if (dtCell4.Select("ITEMS = 'PM' AND SEQ = '5'").Count() > 0)
+                        {
+                            lblCell4_PMTop5.Text = dtCell4.Select("ITEMS = 'PM' AND SEQ = '5'").CopyToDataTable().Rows[0]["RATE"].ToString();
+                            lblCell4_PlantPMTop5.Text = dtCell4.Select("ITEMS = 'PM' AND SEQ = '5'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
+                        }
                     }
                 }
-                catch(Exception ex)
+                catch //(Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                   // MessageBox.Show(ex.Message);
                 }
-               
+
             }
         }
 

@@ -158,6 +158,12 @@
     <Compile Include="FORM_SCADA_ENHANCEMENT.Designer.cs">
       <DependentUpon>FORM_SCADA_ENHANCEMENT.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM_SCADA_WOF_DETAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_SCADA_WOF_DETAIL.Designer.cs">
+      <DependentUpon>FORM_SCADA_WOF_DETAIL.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM_SCADA_REWORK_DETAIL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM_SCADA_ENHANCEMENT.resx">
       <DependentUpon>FORM_SCADA_ENHANCEMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_SCADA_WOF_DETAIL.resx">
+      <DependentUpon>FORM_SCADA_WOF_DETAIL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM_SCADA_REWORK_DETAIL.resx">
       <DependentUpon>FORM_SCADA_REWORK_DETAIL.cs</DependentUpon>

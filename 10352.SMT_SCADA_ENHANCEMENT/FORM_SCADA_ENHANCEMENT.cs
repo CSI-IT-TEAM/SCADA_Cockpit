@@ -26,6 +26,7 @@ namespace FORM
         DataTable dtCell2 = new DataTable();
         DataTable dtCell3 = new DataTable();
         DataTable dtCell4 = new DataTable();
+        DataTable dtCell5 = new DataTable();
         DataTable dtCell6 = new DataTable();
         List<ChartModel> models = new List<ChartModel>();
         string[] YearValues = new string[8];
@@ -95,7 +96,7 @@ namespace FORM
             models.Add(new ChartModel { Title = "Absent Rate", Code = "ABSENT", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10365", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
             models.Add(new ChartModel { Title = "Andon DownTime", Code = "DOWNTIME", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10366", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" }); //10366
             models.Add(new ChartModel { Title = "PM", Code = "PM", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10346", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
-            models.Add(new ChartModel { Title = "WOF", Code = "WOF", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "PROCESS", ValueColumnName = "QTY", formCall = "10339", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
+            models.Add(new ChartModel { Title = "WOF", Code = "WOF", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "PROCESS", ValueColumnName = "QTY", formCall = "10370", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
             models.Add(new ChartModel { Title = "Production Quantity", Code = "PROD", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "POD", formCall = "10369", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
             models.Add(new ChartModel { Title = "PPSM", Code = "PPSM", ChartType = "PPSM", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10348", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
             models.Add(new ChartModel { Title = "Electric by pair", Code = "ELEC", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10354", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
@@ -274,14 +275,10 @@ namespace FORM
                         //}
                         break;
                     case "WOF": //5
-                        chartWOF.DataSource = dt;
-                        chartWOF.Series[0].ArgumentDataMember = "MONTH";
-                        chartWOF.Series[0].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
-                        ((DevExpress.XtraCharts.XYDiagram)chartWOF.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
-                        if (dt.Rows.Count >= 5)
-                        {
-                            ((XYDiagram)chartWOF.Diagram).AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["MONTH"], dt.Rows[5]["MONTH"]);
-                        }
+                        dtCell5 = dtReal.Copy();
+
+
+                        tmrAnimationText.Start();
                         break;
                     case "PROD": //6
                         dtCell6 = dtReal.Copy();
@@ -400,6 +397,7 @@ namespace FORM
 
         private void tmrAnimationText_Tick(object sender, EventArgs e)
         {
+           
             cCountPnCell1++;
             BindingLabelRData(lblCell1_RW, 1, 101);
             BindingLabelRData(lblCell1_Occur, 1, 101);
@@ -433,6 +431,9 @@ namespace FORM
             BindingLabelRData(lblCell6_AlarmBestTop1, 1, 101); BindingLabelRData(lblCell6_AlarmBestTop2, 1, 101); BindingLabelRData(lblCell6_AlarmBestTop3, 1, 101);
             BindingLabelRData(lblCell6_AlarmWorstTop1, 1, 101); BindingLabelRData(lblCell6_AlarmWorstTop2, 1, 101); BindingLabelRData(lblCell6_AlarmWorstTop3, 1, 101);
 
+
+            BindingLabelRData(lblCell5_AM, 1, 1001); BindingLabelRData(lblCell5_RM, 1, 1001); BindingLabelRData(lblCell5_PM, 1, 1001);
+            BindingLabelRData(lblCell5_RC, 1, 1001); BindingLabelRData(lblCell5_UC, 1, 1001); BindingLabelRData(lblCell5_RATIO, 1, 101);
             if (cCountPnCell1 >= 15)
             {
                 cCountPnCell1 = 0;
@@ -464,6 +465,14 @@ namespace FORM
                 lblCell6_ProdWorstTop1.Text = "0%"; lblCell6_ProdWorstTop2.Text = "0%"; lblCell6_ProdWorstTop3.Text = "0%";
                 lblCell6_AlarmBestTop1.Text = "0%"; lblCell6_AlarmBestTop2.Text = "0%"; lblCell6_AlarmBestTop3.Text = "0%";
                 lblCell6_AlarmWorstTop1.Text = "0%"; lblCell6_AlarmWorstTop2.Text = "0%"; lblCell6_AlarmWorstTop3.Text = "0%";
+
+                lblCell5_AM.Text = "0";
+                lblCell5_RM.Text = "0";
+                lblCell5_PM.Text = "0";
+                lblCell5_RC.Text = "0";
+                lblCell5_UC.Text = "0";
+                lblCell5_RATIO.Text = "0";
+
 
                 tmrAnimationText.Stop();
                 try
@@ -631,10 +640,46 @@ namespace FORM
                             lblCell6_AlarmWorstTop3.Text = dtCell6.Select("FLAG = 'Worst' AND SEQ = '3'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString();
                         }
 
+                        if (dtCell5.Rows.Count > 0 && dtCell5 != null)
+                        {
+                            lblCell5_AM.Text = string.Format("{0:n0}", dtCell5.Rows[0]["WOF_COUNT"].ToString());
+                            lblCell5_RM.Text = string.Format("{0:n0}", dtCell5.Rows[1]["WOF_COUNT"].ToString());
+                            lblCell5_PM.Text = string.Format("{0:n0}", dtCell5.Rows[2]["WOF_COUNT"].ToString());
+
+                            lblCell5_RC.Text = string.Format("{0:n0}", dtCell5.Rows[3]["WOF_COUNT"].ToString());
+                            lblCell5_UC.Text = string.Format("{0:n0}", dtCell5.Rows[4]["WOF_COUNT"].ToString());
+                            lblCell5_RATIO.Text = string.Format("{0:n0}", dtCell5.Rows[5]["WOF_COUNT"].ToString());
+
+                            DataTable dt = GET_VALUE_ANALYSIS("WOF1", null, null); //get data thêm 1 lần
+                            if (dt == null) return;
 
 
-
-
+                            if (dt.Select("RN = '1'").Count() > 0)
+                            {
+                                lblCell5_MC1.Text = dt.Select("RN = '1'").CopyToDataTable().Rows[0]["MC_NAME"].ToString();
+                                lblCell5_MC_ALARM1.Text = string.Format("{0:n0}", dt.Select("RN = '1'").CopyToDataTable().Rows[0]["ALARM_TIME"]);
+                            }
+                            if (dt.Select("RN = '2'").Count() > 0)
+                            {
+                                lblCell5_MC2.Text = dt.Select("RN = '2'").CopyToDataTable().Rows[0]["MC_NAME"].ToString();
+                                lblCell5_MC_ALARM2.Text = string.Format("{0:n0}", dt.Select("RN = '2'").CopyToDataTable().Rows[0]["ALARM_TIME"]);
+                            }
+                            if (dt.Select("RN = '3'").Count() > 0)
+                            {
+                                lblCell5_MC3.Text = dt.Select("RN = '3'").CopyToDataTable().Rows[0]["MC_NAME"].ToString();
+                                lblCell5_MC_ALARM3.Text = string.Format("{0:n0}", dt.Select("RN = '3'").CopyToDataTable().Rows[0]["ALARM_TIME"]);
+                            }
+                            if (dt.Select("RN = '4'").Count() > 0)
+                            {
+                                lblCell5_MC4.Text = dt.Select("RN = '4'").CopyToDataTable().Rows[0]["MC_NAME"].ToString();
+                                lblCell5_MC_ALARM4.Text = string.Format("{0:n0}", dt.Select("RN = '4'").CopyToDataTable().Rows[0]["ALARM_TIME"]);
+                            }
+                            if (dt.Select("RN = '5'").Count() > 0)
+                            {
+                                lblCell5_MC5.Text = dt.Select("RN = '5'").CopyToDataTable().Rows[0]["MC_NAME"].ToString();
+                                lblCell5_MC_ALARM5.Text = string.Format("{0:n0}", dt.Select("RN = '5'").CopyToDataTable().Rows[0]["ALARM_TIME"]);
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)

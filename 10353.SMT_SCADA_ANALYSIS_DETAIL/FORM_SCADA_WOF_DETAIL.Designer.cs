@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORM_SCADA_WOF_DETAIL));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
@@ -70,7 +71,7 @@
             this.chart1 = new DevExpress.XtraCharts.ChartControl();
             this.chart2 = new DevExpress.XtraCharts.ChartControl();
             this.chart3 = new DevExpress.XtraCharts.ChartControl();
-            this.tmrDate = new System.Windows.Forms.Timer();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
@@ -132,7 +133,7 @@
             this.lblHeader.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblHeader.Size = new System.Drawing.Size(1622, 76);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "WorkOrder && Equipment malfunction by Month";
+            this.lblHeader.Text = "Work Order && Equipment malfunction by Month";
             // 
             // btnBack
             // 
@@ -213,7 +214,7 @@
             xyDiagram1.AxisY.GridLines.Visible = false;
             xyDiagram1.AxisY.Label.TextPattern = "{V:#,#}";
             xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram1.AxisY.Title.Text = "WorkOrder";
+            xyDiagram1.AxisY.Title.Text = "Work Order";
             xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram1.DefaultPane.BackColor = System.Drawing.Color.White;
@@ -268,7 +269,7 @@
             this.chart1.Size = new System.Drawing.Size(1350, 483);
             this.chart1.TabIndex = 0;
             chartTitle1.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle1.Text = "WorkOrder & Equipment malfunction";
+            chartTitle1.Text = "Work Order & Equipment malfunction";
             this.chart1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});
             this.chart1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chart1_MouseClick);
@@ -286,7 +287,7 @@
             xyDiagram2.AxisY.GridLines.Visible = false;
             xyDiagram2.AxisY.Label.TextPattern = "{V:#,#}";
             xyDiagram2.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram2.AxisY.Title.Text = "Workorder";
+            xyDiagram2.AxisY.Title.Text = "Work order";
             xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
             xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram2.DefaultPane.BackColor = System.Drawing.Color.White;
@@ -357,7 +358,7 @@
             this.chart2.Size = new System.Drawing.Size(1350, 478);
             this.chart2.TabIndex = 1;
             chartTitle2.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle2.Text = "WorkOrder & Equipment malfunction";
+            chartTitle2.Text = "Work Order & Equipment malfunction";
             this.chart2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle2});
             // 

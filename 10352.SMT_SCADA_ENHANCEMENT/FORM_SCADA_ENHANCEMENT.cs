@@ -603,41 +603,41 @@ namespace FORM
                         if (dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").Count() > 0)
                         {
                             lblCell6_ProdBestPlant1.Text = dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
-                            lblCell6_ProdBestTop1.Text = dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").CopyToDataTable().Rows[0]["RATIO"].ToString();
-                            lblCell6_AlarmBestTop1.Text = dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString();
+                            lblCell6_ProdBestTop1.Text = string.Concat( dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").CopyToDataTable().Rows[0]["RATIO"].ToString(),"%");
+                            lblCell6_AlarmBestTop1.Text = string.Concat(dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(), "%");
                         }
                         if (dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '2'").Count() > 0)
                         {
                             lblCell6_ProdBestPlant2.Text = dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '2'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
-                            lblCell6_ProdBestTop2.Text = dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '2'").CopyToDataTable().Rows[0]["RATIO"].ToString();
-                            lblCell6_AlarmBestTop2.Text = dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '2'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString();
+                            lblCell6_ProdBestTop2.Text = string.Concat(dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '2'").CopyToDataTable().Rows[0]["RATIO"].ToString(), "%");
+                            lblCell6_AlarmBestTop2.Text = string.Concat(dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '2'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(), "%");
                         }
                         if (dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '3'").Count() > 0)
                         {
                             lblCell6_ProdBestPlant3.Text = dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '3'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
-                            lblCell6_ProdBestTop3.Text = dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '3'").CopyToDataTable().Rows[0]["RATIO"].ToString();
-                            lblCell6_AlarmBestTop3.Text = dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '3'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString();
+                            lblCell6_ProdBestTop3.Text = string.Concat(dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '3'").CopyToDataTable().Rows[0]["RATIO"].ToString(), "%");
+                            lblCell6_AlarmBestTop3.Text = string.Concat(dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '3'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(), "%");
                         }
 
                         if (dtCell6.Select("FLAG = 'Worst' AND SEQ = '1'").Count() > 0)
                         {
                             lblCell6_ProdWorstPlant1.Text = dtCell6.Select("FLAG = 'Worst' AND SEQ = '1'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
-                            lblCell6_ProdWorstTop1.Text = dtCell6.Select("FLAG = 'Worst' AND SEQ = '1'").CopyToDataTable().Rows[0]["RATIO"].ToString();
+                            lblCell6_ProdWorstTop1.Text = string.Concat(dtCell6.Select("FLAG = 'Worst' AND SEQ = '1'").CopyToDataTable().Rows[0]["RATIO"].ToString(), "%");
 
-                            lblCell6_AlarmWorstTop1.Text = dtCell6.Select("FLAG = 'Worst' AND SEQ = '1'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString();
+                            lblCell6_AlarmWorstTop1.Text = string.Concat(dtCell6.Select("FLAG = 'Worst' AND SEQ = '1'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(), "%");
                         }
 
                         if (dtCell6.Select("FLAG = 'Worst' AND SEQ = '2'").Count() > 0)
                         {
                             lblCell6_ProdWorstPlant2.Text = dtCell6.Select("FLAG = 'Worst' AND SEQ = '2'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
-                            lblCell6_ProdWorstTop2.Text = dtCell6.Select("FLAG = 'Worst' AND SEQ = '2'").CopyToDataTable().Rows[0]["RATIO"].ToString();
-                            lblCell6_AlarmWorstTop2.Text = dtCell6.Select("FLAG = 'Worst' AND SEQ = '2'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString();
+                            lblCell6_ProdWorstTop2.Text = string.Concat(dtCell6.Select("FLAG = 'Worst' AND SEQ = '2'").CopyToDataTable().Rows[0]["RATIO"].ToString(), "%");
+                            lblCell6_AlarmWorstTop2.Text = string.Concat(dtCell6.Select("FLAG = 'Worst' AND SEQ = '2'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(), "%");
                         }
                         if (dtCell6.Select("FLAG = 'Worst' AND SEQ = '3'").Count() > 0)
                         {
                             lblCell6_ProdWorstPlant3.Text = dtCell6.Select("FLAG = 'Worst' AND SEQ = '3'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
-                            lblCell6_ProdWorstTop3.Text = dtCell6.Select("FLAG = 'Worst' AND SEQ = '3'").CopyToDataTable().Rows[0]["RATIO"].ToString();
-                            lblCell6_AlarmWorstTop3.Text = dtCell6.Select("FLAG = 'Worst' AND SEQ = '3'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString();
+                            lblCell6_ProdWorstTop3.Text = string.Concat(dtCell6.Select("FLAG = 'Worst' AND SEQ = '3'").CopyToDataTable().Rows[0]["RATIO"].ToString(), "%");
+                            lblCell6_AlarmWorstTop3.Text = string.Concat(dtCell6.Select("FLAG = 'Worst' AND SEQ = '3'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(), "%");
                         }
 
                         if (dtCell5.Rows.Count > 0 && dtCell5 != null)

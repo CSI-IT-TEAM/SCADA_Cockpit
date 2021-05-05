@@ -2209,7 +2209,7 @@
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(474, 34);
             this.label41.TabIndex = 1;
-            this.label41.Text = "WorkOrder Form && Equipment malfunction in this month";
+            this.label41.Text = "Work Order Form && Equipment malfunction in this month";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label44

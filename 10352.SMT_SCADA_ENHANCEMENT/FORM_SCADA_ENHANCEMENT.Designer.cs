@@ -46,6 +46,10 @@
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView2 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             DevExpress.XtraCharts.BarSlideAnimation barSlideAnimation1 = new DevExpress.XtraCharts.BarSlideAnimation();
             DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.SimpleDiagram simpleDiagram1 = new DevExpress.XtraCharts.SimpleDiagram();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel1 = new DevExpress.XtraCharts.PieSeriesLabel();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             this.pnHeader = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -183,25 +187,16 @@
             this.label37 = new System.Windows.Forms.Label();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.pnCell5 = new System.Windows.Forms.Panel();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.chartWOF = new DevExpress.XtraCharts.ChartControl();
             this.separatorControl2 = new DevExpress.XtraEditors.SeparatorControl();
             this.label41 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblCell5_RATIO = new RoundLabel();
-            this.lblCell5_UC = new RoundLabel();
-            this.lblCell5_RM = new RoundLabel();
-            this.lblCell5_PM = new RoundLabel();
-            this.lblCell5_AM = new RoundLabel();
-            this.lblCell5_RC = new RoundLabel();
             this.lblCell5_MC_ALARM5 = new RoundLabel();
             this.lblCell5_MC_ALARM4 = new RoundLabel();
             this.lblCell5_MC_ALARM3 = new RoundLabel();
             this.lblCell5_MC_ALARM2 = new RoundLabel();
+            this.lblCell5_CompletedRate = new RoundLabel();
+            this.lblCell5_Total = new RoundLabel();
             this.lblCell5_MC_ALARM1 = new RoundLabel();
             this.lblCell5_MC5 = new RoundLabel();
             this.lblCell5_MC4 = new RoundLabel();
@@ -213,7 +208,9 @@
             this.roundLabel11 = new RoundLabel();
             this.roundLabel10 = new RoundLabel();
             this.roundLabel9 = new RoundLabel();
+            this.label40 = new System.Windows.Forms.Label();
             this.roundLabel6 = new RoundLabel();
+            this.label5 = new System.Windows.Forms.Label();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.tmrLoad = new System.Windows.Forms.Timer(this.components);
             this.tmrAnimationText = new System.Windows.Forms.Timer(this.components);
@@ -280,6 +277,11 @@
             this.splitContainer8.Panel2.SuspendLayout();
             this.splitContainer8.SuspendLayout();
             this.pnCell5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartWOF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(simpleDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -2122,25 +2124,16 @@
             // pnCell5
             // 
             this.pnCell5.BackColor = System.Drawing.Color.White;
-            this.pnCell5.Controls.Add(this.labelControl3);
-            this.pnCell5.Controls.Add(this.labelControl2);
-            this.pnCell5.Controls.Add(this.labelControl1);
+            this.pnCell5.Controls.Add(this.chartWOF);
             this.pnCell5.Controls.Add(this.separatorControl2);
             this.pnCell5.Controls.Add(this.label41);
             this.pnCell5.Controls.Add(this.label44);
-            this.pnCell5.Controls.Add(this.label42);
-            this.pnCell5.Controls.Add(this.label40);
-            this.pnCell5.Controls.Add(this.label5);
-            this.pnCell5.Controls.Add(this.lblCell5_RATIO);
-            this.pnCell5.Controls.Add(this.lblCell5_UC);
-            this.pnCell5.Controls.Add(this.lblCell5_RM);
-            this.pnCell5.Controls.Add(this.lblCell5_PM);
-            this.pnCell5.Controls.Add(this.lblCell5_AM);
-            this.pnCell5.Controls.Add(this.lblCell5_RC);
             this.pnCell5.Controls.Add(this.lblCell5_MC_ALARM5);
             this.pnCell5.Controls.Add(this.lblCell5_MC_ALARM4);
             this.pnCell5.Controls.Add(this.lblCell5_MC_ALARM3);
             this.pnCell5.Controls.Add(this.lblCell5_MC_ALARM2);
+            this.pnCell5.Controls.Add(this.lblCell5_CompletedRate);
+            this.pnCell5.Controls.Add(this.lblCell5_Total);
             this.pnCell5.Controls.Add(this.lblCell5_MC_ALARM1);
             this.pnCell5.Controls.Add(this.lblCell5_MC5);
             this.pnCell5.Controls.Add(this.lblCell5_MC4);
@@ -2152,49 +2145,44 @@
             this.pnCell5.Controls.Add(this.roundLabel11);
             this.pnCell5.Controls.Add(this.roundLabel10);
             this.pnCell5.Controls.Add(this.roundLabel9);
+            this.pnCell5.Controls.Add(this.label40);
             this.pnCell5.Controls.Add(this.roundLabel6);
+            this.pnCell5.Controls.Add(this.label5);
             this.pnCell5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCell5.Location = new System.Drawing.Point(0, 0);
             this.pnCell5.Name = "pnCell5";
             this.pnCell5.Size = new System.Drawing.Size(474, 433);
             this.pnCell5.TabIndex = 1;
             // 
-            // labelControl3
+            // chartWOF
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl3.Location = new System.Drawing.Point(296, 158);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(133, 19);
-            this.labelControl3.TabIndex = 3;
-            this.labelControl3.Text = "Completed Rate (%)";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(181, 158);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(92, 19);
-            this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "Uncompleted";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(55, 158);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(87, 19);
-            this.labelControl1.TabIndex = 3;
-            this.labelControl1.Text = "Completed";
+            this.chartWOF.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartWOF.DataBindings = null;
+            simpleDiagram1.LabelsResolveOverlappingMinIndent = 20;
+            this.chartWOF.Diagram = simpleDiagram1;
+            this.chartWOF.Legend.Name = "Default Legend";
+            this.chartWOF.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartWOF.Location = new System.Drawing.Point(4, 37);
+            this.chartWOF.Name = "chartWOF";
+            this.chartWOF.Padding.Bottom = 0;
+            this.chartWOF.Padding.Left = 0;
+            this.chartWOF.Padding.Right = 0;
+            this.chartWOF.Padding.Top = 0;
+            pieSeriesLabel1.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
+            pieSeriesLabel1.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.Default;
+            pieSeriesLabel1.TextPattern = "{A} {V:#,#} ({VP:0.0%})";
+            series4.Label = pieSeriesLabel1;
+            series4.Name = "Work Order";
+            pieSeriesView1.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Clockwise;
+            series4.View = pieSeriesView1;
+            this.chartWOF.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series4};
+            this.chartWOF.Size = new System.Drawing.Size(354, 193);
+            this.chartWOF.TabIndex = 25;
             // 
             // separatorControl2
             // 
-            this.separatorControl2.Location = new System.Drawing.Point(9, 222);
+            this.separatorControl2.Location = new System.Drawing.Point(9, 224);
             this.separatorControl2.Name = "separatorControl2";
             this.separatorControl2.Size = new System.Drawing.Size(444, 18);
             this.separatorControl2.TabIndex = 2;
@@ -2223,114 +2211,6 @@
             this.label44.TabIndex = 1;
             this.label44.Text = "Alert Time";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label42
-            // 
-            this.label42.BackColor = System.Drawing.SystemColors.WindowText;
-            this.label42.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label42.Location = new System.Drawing.Point(183, 46);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(95, 22);
-            this.label42.TabIndex = 1;
-            this.label42.Text = "RM";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label40
-            // 
-            this.label40.BackColor = System.Drawing.SystemColors.WindowText;
-            this.label40.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label40.Location = new System.Drawing.Point(307, 46);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(95, 22);
-            this.label40.TabIndex = 1;
-            this.label40.Text = "PM";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.WindowText;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label5.Location = new System.Drawing.Point(62, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 22);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "AM";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCell5_RATIO
-            // 
-            this.lblCell5_RATIO._BackColor = System.Drawing.Color.Orange;
-            this.lblCell5_RATIO.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell5_RATIO.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.lblCell5_RATIO.ForeColor = System.Drawing.Color.White;
-            this.lblCell5_RATIO.Location = new System.Drawing.Point(311, 180);
-            this.lblCell5_RATIO.Name = "lblCell5_RATIO";
-            this.lblCell5_RATIO.Size = new System.Drawing.Size(92, 39);
-            this.lblCell5_RATIO.TabIndex = 24;
-            this.lblCell5_RATIO.Text = "1,000";
-            // 
-            // lblCell5_UC
-            // 
-            this.lblCell5_UC._BackColor = System.Drawing.Color.Red;
-            this.lblCell5_UC.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell5_UC.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.lblCell5_UC.ForeColor = System.Drawing.Color.White;
-            this.lblCell5_UC.Location = new System.Drawing.Point(181, 180);
-            this.lblCell5_UC.Name = "lblCell5_UC";
-            this.lblCell5_UC.Size = new System.Drawing.Size(92, 39);
-            this.lblCell5_UC.TabIndex = 24;
-            this.lblCell5_UC.Text = "1,000";
-            // 
-            // lblCell5_RM
-            // 
-            this.lblCell5_RM._BackColor = System.Drawing.Color.Gray;
-            this.lblCell5_RM.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell5_RM.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.lblCell5_RM.ForeColor = System.Drawing.Color.White;
-            this.lblCell5_RM.Location = new System.Drawing.Point(184, 70);
-            this.lblCell5_RM.Name = "lblCell5_RM";
-            this.lblCell5_RM.Size = new System.Drawing.Size(92, 74);
-            this.lblCell5_RM.TabIndex = 24;
-            this.lblCell5_RM.Text = "0";
-            // 
-            // lblCell5_PM
-            // 
-            this.lblCell5_PM._BackColor = System.Drawing.Color.Gray;
-            this.lblCell5_PM.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell5_PM.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.lblCell5_PM.ForeColor = System.Drawing.Color.White;
-            this.lblCell5_PM.Location = new System.Drawing.Point(309, 70);
-            this.lblCell5_PM.Name = "lblCell5_PM";
-            this.lblCell5_PM.Size = new System.Drawing.Size(92, 74);
-            this.lblCell5_PM.TabIndex = 24;
-            this.lblCell5_PM.Text = "0";
-            // 
-            // lblCell5_AM
-            // 
-            this.lblCell5_AM._BackColor = System.Drawing.Color.Gray;
-            this.lblCell5_AM.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell5_AM.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.lblCell5_AM.ForeColor = System.Drawing.Color.White;
-            this.lblCell5_AM.Location = new System.Drawing.Point(64, 70);
-            this.lblCell5_AM.Name = "lblCell5_AM";
-            this.lblCell5_AM.Size = new System.Drawing.Size(92, 74);
-            this.lblCell5_AM.TabIndex = 24;
-            this.lblCell5_AM.Text = "0";
-            // 
-            // lblCell5_RC
-            // 
-            this.lblCell5_RC._BackColor = System.Drawing.Color.LimeGreen;
-            this.lblCell5_RC.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell5_RC.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.lblCell5_RC.ForeColor = System.Drawing.Color.White;
-            this.lblCell5_RC.Location = new System.Drawing.Point(50, 180);
-            this.lblCell5_RC.Name = "lblCell5_RC";
-            this.lblCell5_RC.Size = new System.Drawing.Size(92, 39);
-            this.lblCell5_RC.TabIndex = 24;
-            this.lblCell5_RC.Text = "1,000";
             // 
             // lblCell5_MC_ALARM5
             // 
@@ -2379,6 +2259,30 @@
             this.lblCell5_MC_ALARM2.Size = new System.Drawing.Size(104, 30);
             this.lblCell5_MC_ALARM2.TabIndex = 24;
             this.lblCell5_MC_ALARM2.Text = "0";
+            // 
+            // lblCell5_CompletedRate
+            // 
+            this.lblCell5_CompletedRate._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell5_CompletedRate.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell5_CompletedRate.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblCell5_CompletedRate.ForeColor = System.Drawing.Color.White;
+            this.lblCell5_CompletedRate.Location = new System.Drawing.Point(364, 165);
+            this.lblCell5_CompletedRate.Name = "lblCell5_CompletedRate";
+            this.lblCell5_CompletedRate.Size = new System.Drawing.Size(100, 57);
+            this.lblCell5_CompletedRate.TabIndex = 24;
+            this.lblCell5_CompletedRate.Text = "0";
+            // 
+            // lblCell5_Total
+            // 
+            this.lblCell5_Total._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell5_Total.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell5_Total.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblCell5_Total.ForeColor = System.Drawing.Color.White;
+            this.lblCell5_Total.Location = new System.Drawing.Point(365, 75);
+            this.lblCell5_Total.Name = "lblCell5_Total";
+            this.lblCell5_Total.Size = new System.Drawing.Size(100, 57);
+            this.lblCell5_Total.TabIndex = 24;
+            this.lblCell5_Total.Text = "0";
             // 
             // lblCell5_MC_ALARM1
             // 
@@ -2516,6 +2420,18 @@
             this.roundLabel9.Text = "2";
             this.roundLabel9.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
             // 
+            // label40
+            // 
+            this.label40.BackColor = System.Drawing.SystemColors.WindowText;
+            this.label40.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label40.Location = new System.Drawing.Point(364, 141);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(100, 22);
+            this.label40.TabIndex = 1;
+            this.label40.Text = "Completed";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // roundLabel6
             // 
             this.roundLabel6._BackColor = System.Drawing.Color.Gray;
@@ -2528,6 +2444,18 @@
             this.roundLabel6.TabIndex = 24;
             this.roundLabel6.Text = "1";
             this.roundLabel6.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.WindowText;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label5.Location = new System.Drawing.Point(365, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 22);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Total";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splashScreenManager1
             // 
@@ -2627,6 +2555,11 @@
             this.splitContainer8.ResumeLayout(false);
             this.pnCell5.ResumeLayout(false);
             this.pnCell5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(simpleDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartWOF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
             this.ResumeLayout(false);
 
@@ -2776,18 +2709,6 @@
         private System.Windows.Forms.Panel pnCell5;
         private DevExpress.XtraEditors.SeparatorControl separatorControl2;
         private System.Windows.Forms.Label label41;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private RoundLabel lblCell5_RATIO;
-        private RoundLabel lblCell5_UC;
-        private RoundLabel lblCell5_RC;
-        private RoundLabel lblCell5_RM;
-        private RoundLabel lblCell5_PM;
-        private RoundLabel lblCell5_AM;
         private System.Windows.Forms.Label label43;
         private RoundLabel roundLabel12;
         private RoundLabel roundLabel11;
@@ -2805,5 +2726,10 @@
         private RoundLabel lblCell5_MC_ALARM3;
         private RoundLabel lblCell5_MC_ALARM2;
         private RoundLabel lblCell5_MC_ALARM1;
+        private DevExpress.XtraCharts.ChartControl chartWOF;
+        private System.Windows.Forms.Label label5;
+        private RoundLabel lblCell5_Total;
+        private RoundLabel lblCell5_CompletedRate;
+        private System.Windows.Forms.Label label40;
     }
 }

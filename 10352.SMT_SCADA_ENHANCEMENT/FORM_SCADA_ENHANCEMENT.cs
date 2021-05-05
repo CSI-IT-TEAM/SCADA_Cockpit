@@ -276,10 +276,23 @@ namespace FORM
                         break;
                     case "WOF": //5
                         dtCell5 = dtReal.Copy();
+                        if (dtReal.Select("WO_TYPE IN ('RC','UC')").Count() > 0)
+                        {
+                            chartWOF.DataSource = dtReal.Select("WO_TYPE IN ('RC','UC')").CopyToDataTable();
+                            chartWOF.Series[0].ArgumentDataMember = "COMM_NM";
+                            chartWOF.Series[0].ValueDataMembers.AddRange(new string[] { "WOF_COUNT" });
+                        }
 
-
+                        if (dtReal.Select("WO_TYPE IN ('WO')").Count() > 0)
+                        {
+                            lblCell5_Total.Text = string.Format("{0:n0}", dtReal.Select("WO_TYPE IN ('WO')").CopyToDataTable().Rows[0]["WOF_COUNT"]);
+                        }
+                        if (dtReal.Select("WO_TYPE IN ('RATIO')").Count() > 0)
+                        {
+                            lblCell5_CompletedRate.Text = string.Concat(string.Format("{0:n1}", dtReal.Select("WO_TYPE IN ('RATIO')").CopyToDataTable().Rows[0]["WOF_COUNT"]),"%");
+                        }
                         tmrAnimationText.Start();
-                        break;
+                            break;
                     case "PROD": //6
                         dtCell6 = dtReal.Copy();
                         //chartProd.DataSource = dt;
@@ -432,8 +445,8 @@ namespace FORM
             BindingLabelRData(lblCell6_AlarmWorstTop1, 1, 101); BindingLabelRData(lblCell6_AlarmWorstTop2, 1, 101); BindingLabelRData(lblCell6_AlarmWorstTop3, 1, 101);
 
 
-            BindingLabelRData(lblCell5_AM, 1, 1001); BindingLabelRData(lblCell5_RM, 1, 1001); BindingLabelRData(lblCell5_PM, 1, 1001);
-            BindingLabelRData(lblCell5_RC, 1, 1001); BindingLabelRData(lblCell5_UC, 1, 1001); BindingLabelRData(lblCell5_RATIO, 1, 101);
+            //BindingLabelRData(lblCell5_AM, 1, 1001); BindingLabelRData(lblCell5_RM, 1, 1001); BindingLabelRData(lblCell5_PM, 1, 1001);
+            //BindingLabelRData(lblCell5_RC, 1, 1001); BindingLabelRData(lblCell5_UC, 1, 1001); BindingLabelRData(lblCell5_RATIO, 1, 101);
             if (cCountPnCell1 >= 15)
             {
                 cCountPnCell1 = 0;
@@ -466,12 +479,12 @@ namespace FORM
                 lblCell6_AlarmBestTop1.Text = "0%"; lblCell6_AlarmBestTop2.Text = "0%"; lblCell6_AlarmBestTop3.Text = "0%";
                 lblCell6_AlarmWorstTop1.Text = "0%"; lblCell6_AlarmWorstTop2.Text = "0%"; lblCell6_AlarmWorstTop3.Text = "0%";
 
-                lblCell5_AM.Text = "0";
-                lblCell5_RM.Text = "0";
-                lblCell5_PM.Text = "0";
-                lblCell5_RC.Text = "0";
-                lblCell5_UC.Text = "0";
-                lblCell5_RATIO.Text = "0";
+                //lblCell5_AM.Text = "0";
+                //lblCell5_RM.Text = "0";
+                //lblCell5_PM.Text = "0";
+                //lblCell5_RC.Text = "0";
+                //lblCell5_UC.Text = "0";
+                //lblCell5_RATIO.Text = "0";
 
 
                 tmrAnimationText.Stop();
@@ -642,13 +655,13 @@ namespace FORM
 
                         if (dtCell5.Rows.Count > 0 && dtCell5 != null)
                         {
-                            lblCell5_AM.Text = string.Format("{0:n0}", dtCell5.Rows[0]["WOF_COUNT"].ToString());
-                            lblCell5_RM.Text = string.Format("{0:n0}", dtCell5.Rows[1]["WOF_COUNT"].ToString());
-                            lblCell5_PM.Text = string.Format("{0:n0}", dtCell5.Rows[2]["WOF_COUNT"].ToString());
+                            //lblCell5_AM.Text = string.Format("{0:n0}", dtCell5.Rows[0]["WOF_COUNT"].ToString());
+                            //lblCell5_RM.Text = string.Format("{0:n0}", dtCell5.Rows[1]["WOF_COUNT"].ToString());
+                            //lblCell5_PM.Text = string.Format("{0:n0}", dtCell5.Rows[2]["WOF_COUNT"].ToString());
 
-                            lblCell5_RC.Text = string.Format("{0:n0}", dtCell5.Rows[3]["WOF_COUNT"].ToString());
-                            lblCell5_UC.Text = string.Format("{0:n0}", dtCell5.Rows[4]["WOF_COUNT"].ToString());
-                            lblCell5_RATIO.Text = string.Format("{0:n0}", dtCell5.Rows[5]["WOF_COUNT"].ToString());
+                            //lblCell5_RC.Text = string.Format("{0:n0}", dtCell5.Rows[3]["WOF_COUNT"].ToString());
+                            //lblCell5_UC.Text = string.Format("{0:n0}", dtCell5.Rows[4]["WOF_COUNT"].ToString());
+                            //lblCell5_RATIO.Text = string.Format("{0:n0}", dtCell5.Rows[5]["WOF_COUNT"].ToString());
 
                             DataTable dt = GET_VALUE_ANALYSIS("WOF1", null, null); //get data thêm 1 lần
                             if (dt == null) return;

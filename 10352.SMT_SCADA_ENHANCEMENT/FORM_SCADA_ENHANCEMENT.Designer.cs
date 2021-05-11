@@ -30,31 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORM_SCADA_ENHANCEMENT));
-            DevExpress.XtraCharts.SimpleDiagram simpleDiagram1 = new DevExpress.XtraCharts.SimpleDiagram();
-            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel1 = new DevExpress.XtraCharts.PieSeriesLabel();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.PieFanAnimation pieFanAnimation1 = new DevExpress.XtraCharts.PieFanAnimation();
-            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.SimpleDiagram simpleDiagram2 = new DevExpress.XtraCharts.SimpleDiagram();
+            DevExpress.XtraCharts.SimpleDiagram simpleDiagram4 = new DevExpress.XtraCharts.SimpleDiagram();
             DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel2 = new DevExpress.XtraCharts.PieSeriesLabel();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView2 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.PieFanAnimation pieFanAnimation2 = new DevExpress.XtraCharts.PieFanAnimation();
+            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel4 = new DevExpress.XtraCharts.PieSeriesLabel();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView4 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.PieFanAnimation pieFanAnimation3 = new DevExpress.XtraCharts.PieFanAnimation();
             DevExpress.XtraCharts.ChartTitle chartTitle3 = new DevExpress.XtraCharts.ChartTitle();
-            DevExpress.XtraCharts.SimpleDiagram simpleDiagram3 = new DevExpress.XtraCharts.SimpleDiagram();
+            DevExpress.XtraCharts.SimpleDiagram simpleDiagram5 = new DevExpress.XtraCharts.SimpleDiagram();
             DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel3 = new DevExpress.XtraCharts.PieSeriesLabel();
-            DevExpress.XtraCharts.PieSeriesView pieSeriesView3 = new DevExpress.XtraCharts.PieSeriesView();
-            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel1 = new DevExpress.XtraCharts.PointSeriesLabel();
-            DevExpress.XtraCharts.AreaSeriesView areaSeriesView1 = new DevExpress.XtraCharts.AreaSeriesView();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.PointSeriesLabel pointSeriesLabel2 = new DevExpress.XtraCharts.PointSeriesLabel();
-            DevExpress.XtraCharts.AreaSeriesView areaSeriesView2 = new DevExpress.XtraCharts.AreaSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel5 = new DevExpress.XtraCharts.PieSeriesLabel();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView5 = new DevExpress.XtraCharts.PieSeriesView();
+            DevExpress.XtraCharts.PieFanAnimation pieFanAnimation4 = new DevExpress.XtraCharts.PieFanAnimation();
+            DevExpress.XtraCharts.ChartTitle chartTitle4 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.SimpleDiagram simpleDiagram6 = new DevExpress.XtraCharts.SimpleDiagram();
+            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel6 = new DevExpress.XtraCharts.PieSeriesLabel();
+            DevExpress.XtraCharts.PieSeriesView pieSeriesView6 = new DevExpress.XtraCharts.PieSeriesView();
             this.pnHeader = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -161,6 +152,8 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.pnCell8 = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.pnCell7 = new System.Windows.Forms.Panel();
             this.chartAlarm = new DevExpress.XtraCharts.ChartControl();
@@ -220,9 +213,26 @@
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.tmrLoad = new System.Windows.Forms.Timer(this.components);
             this.tmrAnimationText = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label42 = new System.Windows.Forms.Label();
-            this.chartElec = new DevExpress.XtraCharts.ChartControl();
+            this.label45 = new System.Windows.Forms.Label();
+            this.lblCell8_ElecTop1 = new RoundLabel();
+            this.lblCell8_ElecTop4 = new RoundLabel();
+            this.lblCell8_ElecTop2 = new RoundLabel();
+            this.lblCell8_Date5 = new RoundLabel();
+            this.lblCell8_Date3 = new RoundLabel();
+            this.lblCell8_ElecTop5 = new RoundLabel();
+            this.lblCell8_Date4 = new RoundLabel();
+            this.lblCell8_ElecTop3 = new RoundLabel();
+            this.lblCell8_Date2 = new RoundLabel();
+            this.lblCell8_Date1 = new RoundLabel();
+            this.label46 = new System.Windows.Forms.Label();
+            this.lblCell8_MalTop3 = new RoundLabel();
+            this.lblCell8_MalTop5 = new RoundLabel();
+            this.lblCell8_MalTop2 = new RoundLabel();
+            this.lblCell8_MalTop4 = new RoundLabel();
+            this.lblCell8_MalTop1 = new RoundLabel();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             this.tblMain.SuspendLayout();
@@ -261,20 +271,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
+            this.pnCell8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
             this.pnCell7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartAlarm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPPSM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(simpleDiagram4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPPSM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(simpleDiagram5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
@@ -284,21 +295,11 @@
             this.splitContainer8.SuspendLayout();
             this.pnCell5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartWOF)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(simpleDiagram6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartElec)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(areaSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(areaSeriesView2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnHeader
@@ -1655,11 +1656,54 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer5.Panel2.Controls.Add(this.panel1);
+            this.splitContainer5.Panel2.Controls.Add(this.pnCell8);
             this.splitContainer5.Size = new System.Drawing.Size(474, 492);
             this.splitContainer5.SplitterDistance = 58;
             this.splitContainer5.SplitterWidth = 1;
             this.splitContainer5.TabIndex = 1;
+            // 
+            // pnCell8
+            // 
+            this.pnCell8.BackColor = System.Drawing.Color.White;
+            this.pnCell8.Controls.Add(this.label49);
+            this.pnCell8.Controls.Add(this.label48);
+            this.pnCell8.Controls.Add(this.label47);
+            this.pnCell8.Controls.Add(this.label45);
+            this.pnCell8.Controls.Add(this.lblCell8_MalTop1);
+            this.pnCell8.Controls.Add(this.lblCell8_ElecTop1);
+            this.pnCell8.Controls.Add(this.lblCell8_MalTop4);
+            this.pnCell8.Controls.Add(this.lblCell8_ElecTop4);
+            this.pnCell8.Controls.Add(this.lblCell8_MalTop2);
+            this.pnCell8.Controls.Add(this.lblCell8_ElecTop2);
+            this.pnCell8.Controls.Add(this.lblCell8_Date5);
+            this.pnCell8.Controls.Add(this.lblCell8_Date3);
+            this.pnCell8.Controls.Add(this.lblCell8_MalTop5);
+            this.pnCell8.Controls.Add(this.lblCell8_ElecTop5);
+            this.pnCell8.Controls.Add(this.lblCell8_MalTop3);
+            this.pnCell8.Controls.Add(this.lblCell8_Date4);
+            this.pnCell8.Controls.Add(this.lblCell8_ElecTop3);
+            this.pnCell8.Controls.Add(this.lblCell8_Date2);
+            this.pnCell8.Controls.Add(this.lblCell8_Date1);
+            this.pnCell8.Controls.Add(this.label46);
+            this.pnCell8.Controls.Add(this.label42);
+            this.pnCell8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnCell8.Location = new System.Drawing.Point(0, 0);
+            this.pnCell8.Name = "pnCell8";
+            this.pnCell8.Size = new System.Drawing.Size(474, 433);
+            this.pnCell8.TabIndex = 25;
+            // 
+            // label42
+            // 
+            this.label42.BackColor = System.Drawing.Color.SlateGray;
+            this.label42.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label42.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label42.ForeColor = System.Drawing.Color.White;
+            this.label42.Location = new System.Drawing.Point(0, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(474, 34);
+            this.label42.TabIndex = 24;
+            this.label42.Text = "Equiment malfunction && Electric consumption in this month";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splitContainer6
             // 
@@ -1694,8 +1738,8 @@
             // 
             this.chartAlarm.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartAlarm.DataBindings = null;
-            simpleDiagram1.LabelsResolveOverlappingMinIndent = 20;
-            this.chartAlarm.Diagram = simpleDiagram1;
+            simpleDiagram4.LabelsResolveOverlappingMinIndent = 20;
+            this.chartAlarm.Diagram = simpleDiagram4;
             this.chartAlarm.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartAlarm.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
             this.chartAlarm.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
@@ -1707,29 +1751,29 @@
             this.chartAlarm.Padding.Left = 0;
             this.chartAlarm.Padding.Right = 0;
             this.chartAlarm.Padding.Top = 0;
-            pieSeriesLabel1.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
-            pieSeriesLabel1.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.Default;
-            pieSeriesLabel1.TextPattern = "{A} ({VP:0.0%})";
-            series3.Label = pieSeriesLabel1;
-            series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-            series3.Name = "Work Order";
-            pieSeriesView1.Animation = pieFanAnimation1;
-            series3.View = pieSeriesView1;
+            pieSeriesLabel4.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
+            pieSeriesLabel4.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.Default;
+            pieSeriesLabel4.TextPattern = "{A} ({VP:0.0%})";
+            series4.Label = pieSeriesLabel4;
+            series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+            series4.Name = "Work Order";
+            pieSeriesView4.Animation = pieFanAnimation3;
+            series4.View = pieSeriesView4;
             this.chartAlarm.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series3};
+        series4};
             this.chartAlarm.Size = new System.Drawing.Size(468, 193);
             this.chartAlarm.TabIndex = 27;
-            chartTitle2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            chartTitle2.Text = "Alert Ratio";
+            chartTitle3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            chartTitle3.Text = "Alert Ratio";
             this.chartAlarm.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle2});
+            chartTitle3});
             // 
             // chartPPSM
             // 
             this.chartPPSM.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartPPSM.DataBindings = null;
-            simpleDiagram2.LabelsResolveOverlappingMinIndent = 20;
-            this.chartPPSM.Diagram = simpleDiagram2;
+            simpleDiagram5.LabelsResolveOverlappingMinIndent = 20;
+            this.chartPPSM.Diagram = simpleDiagram5;
             this.chartPPSM.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartPPSM.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
             this.chartPPSM.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
@@ -1741,23 +1785,23 @@
             this.chartPPSM.Padding.Left = 0;
             this.chartPPSM.Padding.Right = 0;
             this.chartPPSM.Padding.Top = 0;
-            pieSeriesLabel2.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
-            pieSeriesLabel2.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.Default;
-            pieSeriesLabel2.TextPattern = "{A} ({VP:0.0%})";
-            series4.Label = pieSeriesLabel2;
-            series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-            series4.Name = "Work Order";
-            pieSeriesView2.Animation = pieFanAnimation2;
-            pieSeriesView2.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Clockwise;
-            series4.View = pieSeriesView2;
+            pieSeriesLabel5.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
+            pieSeriesLabel5.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.Default;
+            pieSeriesLabel5.TextPattern = "{A} ({VP:0.0%})";
+            series5.Label = pieSeriesLabel5;
+            series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+            series5.Name = "Work Order";
+            pieSeriesView5.Animation = pieFanAnimation4;
+            pieSeriesView5.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Clockwise;
+            series5.View = pieSeriesView5;
             this.chartPPSM.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series4};
+        series5};
             this.chartPPSM.Size = new System.Drawing.Size(468, 193);
             this.chartPPSM.TabIndex = 26;
-            chartTitle3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle3.Text = "PPSM Ratio";
+            chartTitle4.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartTitle4.Text = "PPSM Ratio";
             this.chartPPSM.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle3});
+            chartTitle4});
             // 
             // label7
             // 
@@ -2153,8 +2197,8 @@
             // 
             this.chartWOF.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartWOF.DataBindings = null;
-            simpleDiagram3.LabelsResolveOverlappingMinIndent = 20;
-            this.chartWOF.Diagram = simpleDiagram3;
+            simpleDiagram6.LabelsResolveOverlappingMinIndent = 20;
+            this.chartWOF.Diagram = simpleDiagram6;
             this.chartWOF.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
             this.chartWOF.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
             this.chartWOF.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
@@ -2166,16 +2210,16 @@
             this.chartWOF.Padding.Left = 0;
             this.chartWOF.Padding.Right = 0;
             this.chartWOF.Padding.Top = 0;
-            pieSeriesLabel3.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
-            pieSeriesLabel3.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.Default;
-            pieSeriesLabel3.TextPattern = "{A} {V:#,#} ({VP:0.0%})";
-            series5.Label = pieSeriesLabel3;
-            series5.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
-            series5.Name = "Work Order";
-            pieSeriesView3.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Clockwise;
-            series5.View = pieSeriesView3;
+            pieSeriesLabel6.Position = DevExpress.XtraCharts.PieSeriesLabelPosition.TwoColumns;
+            pieSeriesLabel6.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.Default;
+            pieSeriesLabel6.TextPattern = "{A} {V:#,#} ({VP:0.0%})";
+            series6.Label = pieSeriesLabel6;
+            series6.LabelsVisibility = DevExpress.Utils.DefaultBoolean.False;
+            series6.Name = "Work Order";
+            pieSeriesView6.SweepDirection = DevExpress.XtraCharts.PieSweepDirection.Clockwise;
+            series6.View = pieSeriesView6;
             this.chartWOF.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series5};
+        series6};
             this.chartWOF.Size = new System.Drawing.Size(354, 193);
             this.chartWOF.TabIndex = 25;
             // 
@@ -2471,90 +2515,237 @@
             this.tmrAnimationText.Enabled = true;
             this.tmrAnimationText.Tick += new System.EventHandler(this.tmrAnimationText_Tick);
             // 
-            // panel1
+            // label45
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.chartElec);
-            this.panel1.Controls.Add(this.label42);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(474, 433);
-            this.panel1.TabIndex = 25;
+            this.label45.BackColor = System.Drawing.Color.Black;
+            this.label45.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.Red;
+            this.label45.Location = new System.Drawing.Point(-4, 37);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(471, 45);
+            this.label45.TabIndex = 25;
+            this.label45.Text = "Top 5 highest electric consumtion && equipment malfunction";
             // 
-            // label42
+            // lblCell8_ElecTop1
             // 
-            this.label42.BackColor = System.Drawing.Color.SlateGray;
-            this.label42.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label42.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label42.ForeColor = System.Drawing.Color.White;
-            this.label42.Location = new System.Drawing.Point(0, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(474, 34);
-            this.label42.TabIndex = 24;
-            this.label42.Text = "Equiment malfunction & Electric consumption within 1 week";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCell8_ElecTop1._BackColor = System.Drawing.Color.Red;
+            this.lblCell8_ElecTop1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_ElecTop1.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_ElecTop1.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_ElecTop1.Location = new System.Drawing.Point(133, 108);
+            this.lblCell8_ElecTop1.Name = "lblCell8_ElecTop1";
+            this.lblCell8_ElecTop1.Size = new System.Drawing.Size(158, 56);
+            this.lblCell8_ElecTop1.TabIndex = 27;
+            this.lblCell8_ElecTop1.Text = "0";
             // 
-            // chartElec
+            // lblCell8_ElecTop4
             // 
-            this.chartElec.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartElec.BorderOptions.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.chartElec.DataBindings = null;
-            xyDiagram1.AxisX.Title.Text = "Day";
-            xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisX.WholeRange.AutoSideMargins = false;
-            xyDiagram1.AxisX.WholeRange.SideMarginsValue = 0D;
-            xyDiagram1.AxisY.GridLines.Visible = false;
-            xyDiagram1.AxisY.Label.TextPattern = "{V:#,#}";
-            xyDiagram1.AxisY.Title.Text = "Electric Consumption/Pair (kWh/Pair)";
-            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram1.DefaultPane.BorderVisible = false;
-            xyDiagram1.EnableAxisXScrolling = true;
-            secondaryAxisY1.AxisID = 0;
-            secondaryAxisY1.Name = "Secondary AxisY 1";
-            secondaryAxisY1.Title.Text = "Equipment malfunction (Count Times)";
-            secondaryAxisY1.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            secondaryAxisY1.VisibleInPanesSerializable = "-1";
-            xyDiagram1.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
-            secondaryAxisY1});
-            this.chartElec.Diagram = xyDiagram1;
-            this.chartElec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartElec.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-            this.chartElec.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-            this.chartElec.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
-            this.chartElec.Legend.Name = "Default Legend";
-            this.chartElec.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            this.chartElec.Location = new System.Drawing.Point(0, 34);
-            this.chartElec.Name = "chartElec";
-            pointSeriesLabel1.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.Default;
-            series1.Label = pointSeriesLabel1;
-            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series1.Name = "Electric Consumsion";
-            areaSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            areaSeriesView1.Transparency = ((byte)(0));
-            series1.View = areaSeriesView1;
-            series2.CrosshairLabelPattern = "{V:#,#}";
-            pointSeriesLabel2.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.Default;
-            series2.Label = pointSeriesLabel2;
-            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series2.Name = "Machine malfunction";
-            areaSeriesView2.AxisYName = "Secondary AxisY 1";
-            areaSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            areaSeriesView2.Transparency = ((byte)(150));
-            series2.View = areaSeriesView2;
-            this.chartElec.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1,
-        series2};
-            this.chartElec.Size = new System.Drawing.Size(474, 399);
-            this.chartElec.TabIndex = 25;
-            chartTitle1.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            chartTitle1.Text = "Equiment malfunction & Electric consumption 1 week";
-            chartTitle1.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartElec.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle1});
+            this.lblCell8_ElecTop4._BackColor = System.Drawing.Color.DarkSalmon;
+            this.lblCell8_ElecTop4.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_ElecTop4.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_ElecTop4.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_ElecTop4.Location = new System.Drawing.Point(133, 305);
+            this.lblCell8_ElecTop4.Name = "lblCell8_ElecTop4";
+            this.lblCell8_ElecTop4.Size = new System.Drawing.Size(158, 56);
+            this.lblCell8_ElecTop4.TabIndex = 28;
+            this.lblCell8_ElecTop4.Text = "0";
+            // 
+            // lblCell8_ElecTop2
+            // 
+            this.lblCell8_ElecTop2._BackColor = System.Drawing.Color.Tomato;
+            this.lblCell8_ElecTop2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_ElecTop2.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_ElecTop2.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_ElecTop2.Location = new System.Drawing.Point(133, 175);
+            this.lblCell8_ElecTop2.Name = "lblCell8_ElecTop2";
+            this.lblCell8_ElecTop2.Size = new System.Drawing.Size(158, 56);
+            this.lblCell8_ElecTop2.TabIndex = 29;
+            this.lblCell8_ElecTop2.Text = "0";
+            // 
+            // lblCell8_Date5
+            // 
+            this.lblCell8_Date5._BackColor = System.Drawing.Color.Gray;
+            this.lblCell8_Date5.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_Date5.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell8_Date5.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_Date5.Location = new System.Drawing.Point(21, 371);
+            this.lblCell8_Date5.Name = "lblCell8_Date5";
+            this.lblCell8_Date5.Size = new System.Drawing.Size(101, 56);
+            this.lblCell8_Date5.TabIndex = 30;
+            // 
+            // lblCell8_Date3
+            // 
+            this.lblCell8_Date3._BackColor = System.Drawing.Color.Gray;
+            this.lblCell8_Date3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_Date3.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell8_Date3.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_Date3.Location = new System.Drawing.Point(21, 241);
+            this.lblCell8_Date3.Name = "lblCell8_Date3";
+            this.lblCell8_Date3.Size = new System.Drawing.Size(101, 56);
+            this.lblCell8_Date3.TabIndex = 31;
+            // 
+            // lblCell8_ElecTop5
+            // 
+            this.lblCell8_ElecTop5._BackColor = System.Drawing.Color.LightCoral;
+            this.lblCell8_ElecTop5.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_ElecTop5.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_ElecTop5.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_ElecTop5.Location = new System.Drawing.Point(133, 371);
+            this.lblCell8_ElecTop5.Name = "lblCell8_ElecTop5";
+            this.lblCell8_ElecTop5.Size = new System.Drawing.Size(158, 56);
+            this.lblCell8_ElecTop5.TabIndex = 32;
+            this.lblCell8_ElecTop5.Text = "0";
+            // 
+            // lblCell8_Date4
+            // 
+            this.lblCell8_Date4._BackColor = System.Drawing.Color.Gray;
+            this.lblCell8_Date4.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_Date4.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell8_Date4.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_Date4.Location = new System.Drawing.Point(21, 305);
+            this.lblCell8_Date4.Name = "lblCell8_Date4";
+            this.lblCell8_Date4.Size = new System.Drawing.Size(101, 56);
+            this.lblCell8_Date4.TabIndex = 33;
+            // 
+            // lblCell8_ElecTop3
+            // 
+            this.lblCell8_ElecTop3._BackColor = System.Drawing.Color.Coral;
+            this.lblCell8_ElecTop3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_ElecTop3.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_ElecTop3.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_ElecTop3.Location = new System.Drawing.Point(133, 241);
+            this.lblCell8_ElecTop3.Name = "lblCell8_ElecTop3";
+            this.lblCell8_ElecTop3.Size = new System.Drawing.Size(158, 56);
+            this.lblCell8_ElecTop3.TabIndex = 34;
+            this.lblCell8_ElecTop3.Text = "0";
+            // 
+            // lblCell8_Date2
+            // 
+            this.lblCell8_Date2._BackColor = System.Drawing.Color.Gray;
+            this.lblCell8_Date2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_Date2.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell8_Date2.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_Date2.Location = new System.Drawing.Point(21, 175);
+            this.lblCell8_Date2.Name = "lblCell8_Date2";
+            this.lblCell8_Date2.Size = new System.Drawing.Size(101, 56);
+            this.lblCell8_Date2.TabIndex = 35;
+            // 
+            // lblCell8_Date1
+            // 
+            this.lblCell8_Date1._BackColor = System.Drawing.Color.Gray;
+            this.lblCell8_Date1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_Date1.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCell8_Date1.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_Date1.Location = new System.Drawing.Point(21, 108);
+            this.lblCell8_Date1.Name = "lblCell8_Date1";
+            this.lblCell8_Date1.Size = new System.Drawing.Size(101, 56);
+            this.lblCell8_Date1.TabIndex = 36;
+            // 
+            // label46
+            // 
+            this.label46.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label46.Location = new System.Drawing.Point(173, 48);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(112, 34);
+            this.label46.TabIndex = 26;
+            this.label46.Text = "Ratio (%)";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblCell8_MalTop3
+            // 
+            this.lblCell8_MalTop3._BackColor = System.Drawing.Color.Coral;
+            this.lblCell8_MalTop3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_MalTop3.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_MalTop3.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_MalTop3.Location = new System.Drawing.Point(302, 241);
+            this.lblCell8_MalTop3.Name = "lblCell8_MalTop3";
+            this.lblCell8_MalTop3.Size = new System.Drawing.Size(158, 56);
+            this.lblCell8_MalTop3.TabIndex = 34;
+            this.lblCell8_MalTop3.Text = "0";
+            // 
+            // lblCell8_MalTop5
+            // 
+            this.lblCell8_MalTop5._BackColor = System.Drawing.Color.LightCoral;
+            this.lblCell8_MalTop5.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_MalTop5.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_MalTop5.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_MalTop5.Location = new System.Drawing.Point(302, 371);
+            this.lblCell8_MalTop5.Name = "lblCell8_MalTop5";
+            this.lblCell8_MalTop5.Size = new System.Drawing.Size(158, 56);
+            this.lblCell8_MalTop5.TabIndex = 32;
+            this.lblCell8_MalTop5.Text = "0";
+            // 
+            // lblCell8_MalTop2
+            // 
+            this.lblCell8_MalTop2._BackColor = System.Drawing.Color.Tomato;
+            this.lblCell8_MalTop2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_MalTop2.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_MalTop2.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_MalTop2.Location = new System.Drawing.Point(302, 175);
+            this.lblCell8_MalTop2.Name = "lblCell8_MalTop2";
+            this.lblCell8_MalTop2.Size = new System.Drawing.Size(158, 56);
+            this.lblCell8_MalTop2.TabIndex = 29;
+            this.lblCell8_MalTop2.Text = "0";
+            // 
+            // lblCell8_MalTop4
+            // 
+            this.lblCell8_MalTop4._BackColor = System.Drawing.Color.DarkSalmon;
+            this.lblCell8_MalTop4.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_MalTop4.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_MalTop4.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_MalTop4.Location = new System.Drawing.Point(302, 305);
+            this.lblCell8_MalTop4.Name = "lblCell8_MalTop4";
+            this.lblCell8_MalTop4.Size = new System.Drawing.Size(158, 56);
+            this.lblCell8_MalTop4.TabIndex = 28;
+            this.lblCell8_MalTop4.Text = "0";
+            // 
+            // lblCell8_MalTop1
+            // 
+            this.lblCell8_MalTop1._BackColor = System.Drawing.Color.Red;
+            this.lblCell8_MalTop1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCell8_MalTop1.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_MalTop1.ForeColor = System.Drawing.Color.White;
+            this.lblCell8_MalTop1.Location = new System.Drawing.Point(302, 108);
+            this.lblCell8_MalTop1.Name = "lblCell8_MalTop1";
+            this.lblCell8_MalTop1.Size = new System.Drawing.Size(158, 56);
+            this.lblCell8_MalTop1.TabIndex = 27;
+            this.lblCell8_MalTop1.Text = "0";
+            // 
+            // label47
+            // 
+            this.label47.BackColor = System.Drawing.SystemColors.WindowText;
+            this.label47.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label47.Location = new System.Drawing.Point(22, 84);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(100, 22);
+            this.label47.TabIndex = 37;
+            this.label47.Text = "Date";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label48
+            // 
+            this.label48.BackColor = System.Drawing.SystemColors.WindowText;
+            this.label48.Font = new System.Drawing.Font("Times New Roman", 12.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label48.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label48.Location = new System.Drawing.Point(135, 84);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(155, 22);
+            this.label48.TabIndex = 37;
+            this.label48.Text = "Electric Consumtion";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label49
+            // 
+            this.label49.BackColor = System.Drawing.SystemColors.WindowText;
+            this.label49.Font = new System.Drawing.Font("Times New Roman", 12.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label49.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label49.Location = new System.Drawing.Point(301, 84);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(155, 22);
+            this.label49.TabIndex = 37;
+            this.label49.Text = "Malfunction";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FORM_SCADA_ENHANCEMENT
             // 
@@ -2612,19 +2803,20 @@
             this.splitContainer5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            this.pnCell8.ResumeLayout(false);
             this.splitContainer6.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
             this.pnCell7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartAlarm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(simpleDiagram4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartAlarm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(simpleDiagram5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartPPSM)).EndInit();
             this.splitContainer7.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
@@ -2636,22 +2828,12 @@
             this.splitContainer8.ResumeLayout(false);
             this.pnCell5.ResumeLayout(false);
             this.pnCell5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(simpleDiagram3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pieSeriesView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(simpleDiagram6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(pieSeriesView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartWOF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(secondaryAxisY1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(areaSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(areaSeriesView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartElec)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2823,8 +3005,27 @@
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraCharts.ChartControl chartAlarm;
         private DevExpress.XtraCharts.ChartControl chartPPSM;
-        private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraCharts.ChartControl chartElec;
+        private System.Windows.Forms.Panel pnCell8;
         private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label45;
+        private RoundLabel lblCell8_MalTop1;
+        private RoundLabel lblCell8_ElecTop1;
+        private RoundLabel lblCell8_MalTop4;
+        private RoundLabel lblCell8_ElecTop4;
+        private RoundLabel lblCell8_MalTop2;
+        private RoundLabel lblCell8_ElecTop2;
+        private RoundLabel lblCell8_Date5;
+        private RoundLabel lblCell8_Date3;
+        private RoundLabel lblCell8_MalTop5;
+        private RoundLabel lblCell8_ElecTop5;
+        private RoundLabel lblCell8_MalTop3;
+        private RoundLabel lblCell8_Date4;
+        private RoundLabel lblCell8_ElecTop3;
+        private RoundLabel lblCell8_Date2;
+        private RoundLabel lblCell8_Date1;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
     }
 }

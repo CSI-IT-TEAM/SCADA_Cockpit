@@ -28,6 +28,7 @@ namespace FORM
         DataTable dtCell4 = new DataTable();
         DataTable dtCell5 = new DataTable();
         DataTable dtCell6 = new DataTable();
+        DataTable dtCell8 = new DataTable();
         List<ChartModel> models = new List<ChartModel>();
         string[] YearValues = new string[8];
         Random r = new Random();
@@ -315,12 +316,14 @@ namespace FORM
                         chartAlarm.Series[0].ValueDataMembers.AddRange(new string[] { "ALARM" });
                         break;
                     case "ELEC": //8
-                        chartElec.DataSource = dtReal;
-                        chartElec.Series[0].ArgumentDataMember = "YMD";
-                        chartElec.Series[0].ValueDataMembers.AddRange(new string[] { "KWH" });
-                        chartElec.Series[1].ArgumentDataMember = "YMD";
-                        chartElec.Series[1].ValueDataMembers.AddRange(new string[] { "MC_OCR" });
-                        ((DevExpress.XtraCharts.XYDiagram)chartElec.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
+                        dtCell8 = dtReal.Copy();
+                        tmrAnimationText.Start();
+                        //chartElec.DataSource = dtReal;
+                        //chartElec.Series[0].ArgumentDataMember = "YMD";
+                        //chartElec.Series[0].ValueDataMembers.AddRange(new string[] { "KWH" });
+                        //chartElec.Series[1].ArgumentDataMember = "YMD";
+                        //chartElec.Series[1].ValueDataMembers.AddRange(new string[] { "MC_OCR" });
+                        //((DevExpress.XtraCharts.XYDiagram)chartElec.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
                         break;
                 }
                 return 1;
@@ -446,6 +449,19 @@ namespace FORM
 
             //BindingLabelRData(lblCell5_AM, 1, 1001); BindingLabelRData(lblCell5_RM, 1, 1001); BindingLabelRData(lblCell5_PM, 1, 1001);
             //BindingLabelRData(lblCell5_RC, 1, 1001); BindingLabelRData(lblCell5_UC, 1, 1001); BindingLabelRData(lblCell5_RATIO, 1, 101);
+
+            BindingLabelRData(lblCell8_ElecTop1, 1, 10001);
+            BindingLabelRData(lblCell8_ElecTop2, 1, 10001);
+            BindingLabelRData(lblCell8_ElecTop3, 1, 10001);
+            BindingLabelRData(lblCell8_ElecTop4, 1, 10001);
+            BindingLabelRData(lblCell8_ElecTop5, 1, 10001);
+
+            BindingLabelRData(lblCell8_MalTop1, 1, 10001);
+            BindingLabelRData(lblCell8_MalTop2, 1, 10001);
+            BindingLabelRData(lblCell8_MalTop3, 1, 10001);
+            BindingLabelRData(lblCell8_MalTop4, 1, 10001);
+            BindingLabelRData(lblCell8_MalTop5, 1, 10001);
+
             if (cCountPnCell1 >= 15)
             {
                 cCountPnCell1 = 0;
@@ -478,13 +494,17 @@ namespace FORM
                 lblCell6_AlarmBestTop1.Text = "0%"; lblCell6_AlarmBestTop2.Text = "0%"; lblCell6_AlarmBestTop3.Text = "0%";
                 lblCell6_AlarmWorstTop1.Text = "0%"; lblCell6_AlarmWorstTop2.Text = "0%"; lblCell6_AlarmWorstTop3.Text = "0%";
 
-                //lblCell5_AM.Text = "0";
-                //lblCell5_RM.Text = "0";
-                //lblCell5_PM.Text = "0";
-                //lblCell5_RC.Text = "0";
-                //lblCell5_UC.Text = "0";
-                //lblCell5_RATIO.Text = "0";
+                lblCell8_ElecTop1.Text = "0";
+                lblCell8_ElecTop2.Text = "0";
+                lblCell8_ElecTop3.Text = "0";
+                lblCell8_ElecTop4.Text = "0";
+                lblCell8_ElecTop5.Text = "0";
 
+                lblCell8_MalTop1.Text = "0";
+                lblCell8_MalTop2.Text = "0";
+                lblCell8_MalTop3.Text = "0";
+                lblCell8_MalTop4.Text = "0";
+                lblCell8_MalTop5.Text = "0";
 
                 tmrAnimationText.Stop();
                 try
@@ -507,7 +527,7 @@ namespace FORM
                         arcScaleBestAlarm.MinValue = Convert.ToInt32(dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_MIN"]);
                         arcScaleBestAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
                         arcScaleBestAlarm.Value = float.Parse(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()));
-                        lblCell2_AlarmBest.Text =  string.Concat(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()), "%");
+                        lblCell2_AlarmBest.Text = string.Concat(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()), "%");
                         lblCell2_AlarmBestPlant.Text = dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
                         lblBestAlarm.Text = string.Concat(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Best'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()), "%");
 
@@ -527,7 +547,7 @@ namespace FORM
                         arcScaleWorstAlarm.MinValue = Convert.ToInt32(dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MIN"]);
                         arcScaleWorstAlarm.MaxValue = Convert.ToInt32(dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_MAX"]);
                         arcScaleWorstAlarm.Value = float.Parse(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()));
-                        lblCell2_AlarmWorst.Text = lblWorstAlarm.Text =  string.Concat(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()), "%");
+                        lblCell2_AlarmWorst.Text = lblWorstAlarm.Text = string.Concat(string.Format("{0:n1}", dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString()), "%");
                         lblCell2_AlarmWorstPlant.Text = dtCell2.Select("ALARM_FLAG='Worst'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
                     }
 
@@ -615,7 +635,7 @@ namespace FORM
                         if (dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").Count() > 0)
                         {
                             lblCell6_ProdBestPlant1.Text = dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").CopyToDataTable().Rows[0]["LINE_NM"].ToString();
-                            lblCell6_ProdBestTop1.Text = string.Concat( dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").CopyToDataTable().Rows[0]["RATIO"].ToString(),"%");
+                            lblCell6_ProdBestTop1.Text = string.Concat(dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").CopyToDataTable().Rows[0]["RATIO"].ToString(), "%");
                             lblCell6_AlarmBestTop1.Text = string.Concat(dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '1'").CopyToDataTable().Rows[0]["ALARM_RATIO"].ToString(), "%");
                         }
                         if (dtCell6.Select("FLAG = 'Best' AND SEQ_1 = '2'").Count() > 0)
@@ -690,6 +710,46 @@ namespace FORM
                             {
                                 lblCell5_MC5.Text = dt.Select("RN = '5'").CopyToDataTable().Rows[0]["MC_NAME"].ToString();
                                 lblCell5_MC_ALARM5.Text = string.Format("{0:n0}", dt.Select("RN = '5'").CopyToDataTable().Rows[0]["ALARM_TIME"]);
+                            }
+                        }
+
+                        //cELL 8
+                        if (dtCell8.Rows.Count > 0 && dtCell8 != null)
+                        {
+
+                            if (dtCell8.Select("SEQ = '1'").Count() > 0)
+                            {
+                                lblCell8_Date1.Text = dtCell8.Select("SEQ = '1'").CopyToDataTable().Rows[0]["YMD"].ToString();
+                                lblCell8_ElecTop1.Text = string.Concat(string.Format("{0:n0}",dtCell8.Select("SEQ = '1'").CopyToDataTable().Rows[0]["ELEC_VAILD"], "KW"));
+                                lblCell8_MalTop1.Text = dtCell8.Select("SEQ = '1'").CopyToDataTable().Rows[0]["MC_OCR"].ToString();
+                            }
+
+                            if (dtCell8.Select("SEQ = '2'").Count() > 0)
+                            {
+                                lblCell8_Date2.Text = dtCell8.Select("SEQ = '2'").CopyToDataTable().Rows[0]["YMD"].ToString();
+                                lblCell8_ElecTop2.Text = string.Concat(string.Format("{0:n0}", dtCell8.Select("SEQ = '2'").CopyToDataTable().Rows[0]["ELEC_VAILD"], "KW"));
+                                lblCell8_MalTop2.Text = dtCell8.Select("SEQ = '2'").CopyToDataTable().Rows[0]["MC_OCR"].ToString();
+                            }
+
+                            if (dtCell8.Select("SEQ = '3'").Count() > 0)
+                            {
+                                lblCell8_Date3.Text = dtCell8.Select("SEQ = '3'").CopyToDataTable().Rows[0]["YMD"].ToString();
+                                lblCell8_ElecTop3.Text = string.Concat(string.Format("{0:n0}", dtCell8.Select("SEQ = '3'").CopyToDataTable().Rows[0]["ELEC_VAILD"], "KW"));
+                                lblCell8_MalTop3.Text = dtCell8.Select("SEQ = '3'").CopyToDataTable().Rows[0]["MC_OCR"].ToString();
+                            }
+
+                            if (dtCell8.Select("SEQ = '4'").Count() > 0)
+                            {
+                                lblCell8_Date4.Text = dtCell8.Select("SEQ = '4'").CopyToDataTable().Rows[0]["YMD"].ToString();
+                                lblCell8_ElecTop4.Text = string.Concat(string.Format("{0:n0}", dtCell8.Select("SEQ = '4'").CopyToDataTable().Rows[0]["ELEC_VAILD"], "KW"));
+                                lblCell8_MalTop4.Text = dtCell8.Select("SEQ = '4'").CopyToDataTable().Rows[0]["MC_OCR"].ToString();
+                            }
+
+                            if (dtCell8.Select("SEQ = '5'").Count() > 0)
+                            {
+                                lblCell8_Date5.Text = dtCell8.Select("SEQ = '5'").CopyToDataTable().Rows[0]["YMD"].ToString();
+                                lblCell8_ElecTop5.Text = string.Concat(string.Format("{0:n0}", dtCell8.Select("SEQ = '5'").CopyToDataTable().Rows[0]["ELEC_VAILD"], "KW"));
+                                lblCell8_MalTop5.Text = dtCell8.Select("SEQ = '5'").CopyToDataTable().Rows[0]["MC_OCR"].ToString();
                             }
                         }
                     }

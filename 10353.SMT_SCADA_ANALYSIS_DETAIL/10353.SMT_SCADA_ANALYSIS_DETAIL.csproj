@@ -128,6 +128,12 @@
     <Compile Include="ClassLib\TransparentPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FORM_SCADA_PM_DETAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_SCADA_PM_DETAIL.Designer.cs">
+      <DependentUpon>FORM_SCADA_PM_DETAIL.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM_SCADA_PROD_DETAIL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FORM_SCADA_PM_DETAIL.resx">
+      <DependentUpon>FORM_SCADA_PM_DETAIL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM_SCADA_PROD_DETAIL.resx">
       <DependentUpon>FORM_SCADA_PROD_DETAIL.cs</DependentUpon>
     </EmbeddedResource>

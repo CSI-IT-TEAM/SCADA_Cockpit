@@ -1,6 +1,6 @@
 ﻿namespace FORM
 {
-    partial class FORM_SCADA_PROD_DETAIL
+    partial class FORM_SCADA_PM_DETAIL
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORM_SCADA_PROD_DETAIL));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORM_SCADA_PM_DETAIL));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
@@ -56,15 +56,8 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
-            this.splMain = new System.Windows.Forms.SplitContainer();
-            this.chart1 = new DevExpress.XtraCharts.ChartControl();
-            this.chart2 = new DevExpress.XtraCharts.ChartControl();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.pnTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
-            this.splMain.Panel1.SuspendLayout();
-            this.splMain.Panel2.SuspendLayout();
-            this.splMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -73,7 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
@@ -106,7 +99,7 @@
             this.lblHeader.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblHeader.Size = new System.Drawing.Size(1622, 76);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "Production Ratio && Equipment malfunction by day";
+            this.lblHeader.Text = "PM Ratio && Equipment malfunction by day";
             // 
             // btnBack
             // 
@@ -149,101 +142,11 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
-            // splMain
+            // chartControl1
             // 
-            this.splMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splMain.Location = new System.Drawing.Point(0, 76);
-            this.splMain.Name = "splMain";
-            this.splMain.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splMain.Panel1
-            // 
-            this.splMain.Panel1.Controls.Add(this.chart1);
-            // 
-            // splMain.Panel2
-            // 
-            this.splMain.Panel2.Controls.Add(this.chart2);
-            this.splMain.Size = new System.Drawing.Size(1904, 965);
-            this.splMain.SplitterDistance = 473;
-            this.splMain.TabIndex = 5;
-            // 
-            // chart1
-            // 
-            this.chart1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chart1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chart1.DataBindings = null;
-            xyDiagram1.AxisX.Title.Font = new System.Drawing.Font("Calibri", 14.25F);
-            xyDiagram1.AxisX.Title.Text = "Month";
-            xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.GridLines.Visible = false;
-            xyDiagram1.AxisY.Label.TextPattern = "{V:#,#}";
-            xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F);
-            xyDiagram1.AxisY.Title.Text = "Alert Time  Sumarry / Working Time (%)";
-            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram1.DefaultPane.BorderVisible = false;
-            secondaryAxisY1.AxisID = 0;
-            secondaryAxisY1.Name = "Secondary AxisY 1";
-            secondaryAxisY1.Title.Font = new System.Drawing.Font("Calibri", 14.25F);
-            secondaryAxisY1.Title.Text = "Production Ratio (%)";
-            secondaryAxisY1.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            secondaryAxisY1.VisibleInPanesSerializable = "-1";
-            xyDiagram1.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
-            secondaryAxisY1});
-            this.chart1.Diagram = xyDiagram1;
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chart1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-            this.chart1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-            this.chart1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
-            this.chart1.Legend.Name = "Default Legend";
-            this.chart1.Location = new System.Drawing.Point(0, 0);
-            this.chart1.Name = "chart1";
-            this.chart1.RuntimeHitTesting = true;
-            pointSeriesLabel1.TextPattern = "{V}%";
-            series1.Label = pointSeriesLabel1;
-            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series1.Name = "Production Ratio";
-            areaSeriesView1.AxisYName = "Secondary AxisY 1";
-            areaSeriesView1.Color = System.Drawing.Color.SteelBlue;
-            areaSeriesView1.MarkerOptions.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            areaSeriesView1.MarkerOptions.Kind = DevExpress.XtraCharts.MarkerKind.Hexagon;
-            areaSeriesView1.MarkerOptions.Size = 15;
-            areaSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            xyMarkerSlideAnimation1.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromTopCenter;
-            xyMarkerSlideAnimation1.PointDelay = System.TimeSpan.Parse("00:00:00.1000000");
-            areaSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation1;
-            areaSeriesView1.Shadow.Visible = true;
-            areaSeriesView1.Transparency = ((byte)(0));
-            series1.View = areaSeriesView1;
-            sideBySideBarSeriesLabel1.TextPattern = "{V}%";
-            series2.Label = sideBySideBarSeriesLabel1;
-            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series2.Name = "Equipment Malfunction Ratio";
-            sideBySideBarSeriesView1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(32)))), ((int)(((byte)(96)))));
-            sideBySideBarSeriesView1.Border.Thickness = 3;
-            sideBySideBarSeriesView1.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            sideBySideBarSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            sideBySideBarSeriesView1.Shadow.Visible = true;
-            series2.View = sideBySideBarSeriesView1;
-            this.chart1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1,
-        series2};
-            this.chart1.Size = new System.Drawing.Size(1904, 473);
-            this.chart1.TabIndex = 6;
-            chartTitle1.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle1.Text = "Equipment malfunction Ratio & Production Ratio by day";
-            chartTitle1.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            this.chart1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle1});
-            this.chart1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chartControl1_MouseClick);
-            // 
-            // chart2
-            // 
-            this.chart2.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chart2.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chart2.DataBindings = null;
+            this.chartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl1.DataBindings = null;
             xyDiagram2.AxisX.Title.Font = new System.Drawing.Font("Calibri", 14.25F);
             xyDiagram2.AxisX.Title.Text = "Month";
             xyDiagram2.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
@@ -259,24 +162,24 @@
             secondaryAxisY2.AxisID = 0;
             secondaryAxisY2.Name = "Secondary AxisY 1";
             secondaryAxisY2.Title.Font = new System.Drawing.Font("Calibri", 14.25F);
-            secondaryAxisY2.Title.Text = "Production Ratio (%)";
+            secondaryAxisY2.Title.Text = "PM Ratio (%)";
             secondaryAxisY2.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             secondaryAxisY2.VisibleInPanesSerializable = "-1";
             xyDiagram2.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
             secondaryAxisY2});
-            this.chart2.Diagram = xyDiagram2;
-            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chart2.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-            this.chart2.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-            this.chart2.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
-            this.chart2.Legend.Name = "Default Legend";
-            this.chart2.Location = new System.Drawing.Point(0, 0);
-            this.chart2.Name = "chart2";
-            this.chart2.RuntimeHitTesting = true;
+            this.chartControl1.Diagram = xyDiagram2;
+            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
+            this.chartControl1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+            this.chartControl1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Location = new System.Drawing.Point(0, 76);
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.RuntimeHitTesting = true;
             pointSeriesLabel2.TextPattern = "{V}%";
             series3.Label = pointSeriesLabel2;
             series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series3.Name = "Production Ratio";
+            series3.Name = "PM Ratio";
             areaSeriesView2.AxisYName = "Secondary AxisY 1";
             areaSeriesView2.Color = System.Drawing.Color.SteelBlue;
             areaSeriesView2.MarkerOptions.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -299,31 +202,27 @@
             sideBySideBarSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             sideBySideBarSeriesView2.Shadow.Visible = true;
             series4.View = sideBySideBarSeriesView2;
-            this.chart2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series3,
         series4};
-            this.chart2.Size = new System.Drawing.Size(1904, 488);
-            this.chart2.TabIndex = 7;
+            this.chartControl1.Size = new System.Drawing.Size(1904, 965);
+            this.chartControl1.TabIndex = 7;
             chartTitle2.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle2.Text = "Equipment malfunction Ratio & Production Ratio Within Yesterday by Plant";
+            chartTitle2.Text = "Equipment malfunction Ratio & PM Ratio by day";
             chartTitle2.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            this.chart2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle2});
             // 
-            // FORM_SCADA_PROD_DETAIL
+            // FORM_SCADA_PM_DETAIL
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.splMain);
+            this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.pnTop);
-            this.Name = "FORM_SCADA_PROD_DETAIL";
+            this.Name = "FORM_SCADA_PM_DETAIL";
             this.Text = "FORM_SCADA_ABSENT_DETAIL";
             this.VisibleChanged += new System.EventHandler(this.FORM_SCADA_ABSENT_DETAIL_VisibleChanged);
             this.pnTop.ResumeLayout(false);
-            this.splMain.Panel1.ResumeLayout(false);
-            this.splMain.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splMain)).EndInit();
-            this.splMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel1)).EndInit();
@@ -332,7 +231,6 @@
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(secondaryAxisY2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesLabel2)).EndInit();
@@ -341,7 +239,7 @@
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,8 +252,6 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Timer tmrDate;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
-        private System.Windows.Forms.SplitContainer splMain;
-        private DevExpress.XtraCharts.ChartControl chart1;
-        private DevExpress.XtraCharts.ChartControl chart2;
+        private DevExpress.XtraCharts.ChartControl chartControl1;
     }
 }

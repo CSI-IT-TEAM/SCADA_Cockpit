@@ -212,7 +212,7 @@ namespace FORM
                     this.Cursor = Cursors.WaitCursor;
                     string sYM = string.Concat(point.Argument);
                     DataSet ds = sbGetData("Q2", sYM, null);
-                    chart2.Titles[0].Text = "Work Order & Equipment malfunction on " + sYM;
+                    chart2.Titles[0].Text = "Work Order Current Situation on " + sYM;
                     BindingChart2(ds.Tables[0]);
                     this.Cursor = Cursors.Default;
                 }

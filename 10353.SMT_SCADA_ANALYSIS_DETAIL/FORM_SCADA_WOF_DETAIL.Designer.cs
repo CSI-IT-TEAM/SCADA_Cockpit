@@ -269,7 +269,7 @@
             this.chart1.Size = new System.Drawing.Size(1350, 483);
             this.chart1.TabIndex = 0;
             chartTitle1.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle1.Text = "Work Order & Equipment malfunction";
+            chartTitle1.Text = "Work Order Current Situation & Equipment malfunction";
             this.chart1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});
             this.chart1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chart1_MouseClick);
@@ -358,7 +358,7 @@
             this.chart2.Size = new System.Drawing.Size(1350, 478);
             this.chart2.TabIndex = 1;
             chartTitle2.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle2.Text = "Work Order & Equipment malfunction";
+            chartTitle2.Text = "Work Order Current Situation";
             this.chart2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle2});
             // 

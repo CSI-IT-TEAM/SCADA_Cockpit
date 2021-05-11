@@ -95,7 +95,7 @@ namespace FORM
             models.Add(new ChartModel { Title = "Rework && Equipment malfunction", Code = "RW", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "SEASON_LABEL", ValueColumnName = "QTY", formCall = "10353", AxisYTitle = "Prs", axisXTitle = "Season", valuePatten = "{V:#,#}" });
             models.Add(new ChartModel { Title = "Absent Rate", Code = "ABSENT", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10365", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
             models.Add(new ChartModel { Title = "Andon DownTime", Code = "DOWNTIME", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10366", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" }); //10366
-            models.Add(new ChartModel { Title = "PM", Code = "PM", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10346", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
+            models.Add(new ChartModel { Title = "PM", Code = "PM", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10373", AxisYTitle = "Prs", axisXTitle = "Month", valuePatten = "{V:#,#}" });
             models.Add(new ChartModel { Title = "WOF", Code = "WOF", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "PROCESS", ValueColumnName = "QTY", formCall = "10370", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
             models.Add(new ChartModel { Title = "Production Quantity", Code = "PROD", ChartType = "LINE", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "POD", formCall = "10369", AxisYTitle = "%", axisXTitle = "Month", valuePatten = "{V}" });
             models.Add(new ChartModel { Title = "PPSM", Code = "PPSM", ChartType = "PPSM", NumberOfSeries = 1, AxisLabelColumnName = "YM_LABEL", ValueColumnName = "QTY", formCall = "10348", AxisYTitle = "", axisXTitle = "", valuePatten = "" });
@@ -306,14 +306,13 @@ namespace FORM
                         tmrAnimationText.Start();
                         break;
                     case "PPSM": //7
-                        chartPPSM.DataSource = dt;
-                        chartPPSM.Series[0].ArgumentDataMember = "MONTH";
-                        chartPPSM.Series[0].ValueDataMembers.AddRange(new string[] { "PROD_QTY" });
-                        ((DevExpress.XtraCharts.XYDiagram)chartPPSM.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
-                        if (dt.Rows.Count >= 5)
-                        {
-                            ((XYDiagram)chartPPSM.Diagram).AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["MONTH"], dt.Rows[5]["MONTH"]);
-                        }
+                        chartPPSM.DataSource = dtReal;
+                        chartPPSM.Series[0].ArgumentDataMember = "FACTORY";
+                        chartPPSM.Series[0].ValueDataMembers.AddRange(new string[] { "PPSM" });
+
+                        chartAlarm.DataSource = dtReal;
+                        chartAlarm.Series[0].ArgumentDataMember = "FACTORY";
+                        chartAlarm.Series[0].ValueDataMembers.AddRange(new string[] { "ALARM" });
                         break;
                     case "ELEC": //8
                         chartElec.DataSource = dtReal;

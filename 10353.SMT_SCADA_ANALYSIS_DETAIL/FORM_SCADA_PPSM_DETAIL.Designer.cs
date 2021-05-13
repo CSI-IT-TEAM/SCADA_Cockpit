@@ -1,6 +1,6 @@
 ﻿namespace FORM
 {
-    partial class FORM_SCADA_PM_DETAIL
+    partial class FORM_SCADA_PPSM_DETAIL
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORM_SCADA_PM_DETAIL));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORM_SCADA_PPSM_DETAIL));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
@@ -80,7 +80,7 @@
             this.lblHeader.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblHeader.Size = new System.Drawing.Size(1622, 76);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "PM Ratio && Equipment malfunction by Plant";
+            this.lblHeader.Text = "PPSM && Equipment malfunction by Factory";
             // 
             // btnBack
             // 
@@ -143,7 +143,7 @@
             secondaryAxisY1.AxisID = 0;
             secondaryAxisY1.Name = "Secondary AxisY 1";
             secondaryAxisY1.Title.Font = new System.Drawing.Font("Calibri", 14.25F);
-            secondaryAxisY1.Title.Text = "PM Ratio (%)";
+            secondaryAxisY1.Title.Text = "PPSM";
             secondaryAxisY1.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             secondaryAxisY1.VisibleInPanesSerializable = "-1";
             xyDiagram1.SecondaryAxesY.AddRange(new DevExpress.XtraCharts.SecondaryAxisY[] {
@@ -170,7 +170,7 @@
             sideBySideBarSeriesLabel2.TextPattern = "{V}%";
             series2.Label = sideBySideBarSeriesLabel2;
             series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series2.Name = "PM Ratio";
+            series2.Name = "PPSM";
             sideBySideBarSeriesView2.AxisYName = "Secondary AxisY 1";
             sideBySideBarSeriesView2.Color = System.Drawing.Color.SteelBlue;
             sideBySideBarSeriesView2.Shadow.Visible = true;
@@ -181,18 +181,18 @@
             this.chartControl1.Size = new System.Drawing.Size(1904, 965);
             this.chartControl1.TabIndex = 7;
             chartTitle1.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle1.Text = "Equipment malfunction Ratio & PM Ratio by plant";
+            chartTitle1.Text = "Equipment malfunction Ratio & PPSM Ratio by Factory";
             chartTitle1.Visibility = DevExpress.Utils.DefaultBoolean.True;
             this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});
             // 
-            // FORM_SCADA_PM_DETAIL
+            // FORM_SCADA_PPSM_DETAIL
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.pnTop);
-            this.Name = "FORM_SCADA_PM_DETAIL";
+            this.Name = "FORM_SCADA_PPSM_DETAIL";
             this.Text = "FORM_SCADA_ABSENT_DETAIL";
             this.VisibleChanged += new System.EventHandler(this.FORM_SCADA_ABSENT_DETAIL_VisibleChanged);
             this.pnTop.ResumeLayout(false);

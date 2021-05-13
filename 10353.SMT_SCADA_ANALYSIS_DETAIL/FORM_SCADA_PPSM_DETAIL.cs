@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace FORM
 {
-    public partial class FORM_SCADA_PM_DETAIL : Form
+    public partial class FORM_SCADA_PPSM_DETAIL : Form
     {
-        public FORM_SCADA_PM_DETAIL()
+        public FORM_SCADA_PPSM_DETAIL()
         {
             InitializeComponent();
             tmrDate.Stop();
@@ -29,7 +29,7 @@ namespace FORM
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_SMT_SCADA_COCKPIT.SP_GET_ANALYSIS_PM_DETAIL";
+                string process_name = "MES.PKG_SMT_SCADA_COCKPIT.SP_GET_ANALYSIS_PPSM_DETAIL";
 
                 MyOraDB.ReDim_Parameter(4);
                 MyOraDB.Process_Name = process_name;
@@ -67,10 +67,10 @@ namespace FORM
             {
                 chartControl1.DataSource = dt;
 
-                chartControl1.Series[1].ArgumentDataMember = "LINE_NM";
-                chartControl1.Series[1].ValueDataMembers.AddRange(new string[] { "PM" });
+                chartControl1.Series[1].ArgumentDataMember = "FACTORY";
+                chartControl1.Series[1].ValueDataMembers.AddRange(new string[] { "PPSM" });
 
-                chartControl1.Series[0].ArgumentDataMember = "LINE_NM";
+                chartControl1.Series[0].ArgumentDataMember = "FACTORY";
                 chartControl1.Series[0].ValueDataMembers.AddRange(new string[] { "ALARM" });
                 ((DevExpress.XtraCharts.XYDiagram)chartControl1.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
 

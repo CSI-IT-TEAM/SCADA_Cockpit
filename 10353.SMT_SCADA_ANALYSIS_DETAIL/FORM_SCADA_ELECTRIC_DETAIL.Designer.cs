@@ -296,7 +296,7 @@
             this.chart1.Size = new System.Drawing.Size(1374, 852);
             this.chart1.TabIndex = 1;
             chartTitle1.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartTitle1.Text = "Equipment malfunction & Electric Consumption by Month";
+            chartTitle1.Text = "Equipment malfunction & Electric Consumption by Day";
             chartTitle1.Visibility = DevExpress.Utils.DefaultBoolean.True;
             this.chart1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
             chartTitle1});

@@ -818,6 +818,13 @@ namespace FORM
             isBack = ComVar.Var._IsBack;
             
         }
+
+        private void cmdScadaBottom_Click(object sender, EventArgs e)
+        {
+            ComVar.Var._IsBack = true;
+            // ComVar.Var.callForm = "684";
+            ComVar.Var.callForm = "10389";
+        }
     }
 
 

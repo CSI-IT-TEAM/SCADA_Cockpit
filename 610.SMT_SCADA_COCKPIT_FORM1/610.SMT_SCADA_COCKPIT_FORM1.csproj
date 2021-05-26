@@ -108,6 +108,9 @@
     <Compile Include="ClassLib\LabelGradient.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ClassLib\RoundLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ClassLib\TransparentPanel.cs">
       <SubType>Component</SubType>
     </Compile>

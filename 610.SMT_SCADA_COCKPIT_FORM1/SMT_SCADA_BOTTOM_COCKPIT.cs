@@ -35,7 +35,7 @@ namespace FORM
                     UC.UC_BOTTOM_SCADA ucBottom = new UC.UC_BOTTOM_SCADA();
                     tblB1.Controls.Add(ucBottom, i, 0);
                     ucBottom.Dock = DockStyle.Fill;
-                    ucBottom.Name = string.Concat("UC_B1_", (i + 1));
+                    ucBottom.Name = string.Concat("UC_B1_", i);
                     ucList.Add(ucBottom);
                     //Doing Stb
                     ucBottom.InitTable();
@@ -49,7 +49,7 @@ namespace FORM
                     UC.UC_BOTTOM_SCADA ucBottom = new UC.UC_BOTTOM_SCADA();
                     tblB2.Controls.Add(ucBottom, i, 0);
                     ucBottom.Dock = DockStyle.Fill;
-                    ucBottom.Name = string.Concat("UC_B2_", (i + 1));
+                    ucBottom.Name = string.Concat("UC_B2_", i);
                     ucList.Add(ucBottom);
                     //Đăng ký sự kiện trao quyền
                     //Doing Stb
@@ -85,6 +85,7 @@ namespace FORM
 
         private void SMT_SCADA_BOTTOM_COCKPIT_Load(object sender, EventArgs e)
         {
+            tmrBlinking_Info.Stop();
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
             InitUC();
         }
@@ -112,6 +113,14 @@ namespace FORM
             }
             else
                 tmrTime.Stop();
+        }
+
+        private void tmrBlinking_Info_Tick(object sender, EventArgs e)
+        {
+            if (rlblNormal._BackColor == Color.Green)
+                rlblNormal._BackColor = Color.White;
+            else
+                rlblNormal._BackColor = Color.Green;
         }
     }
 }

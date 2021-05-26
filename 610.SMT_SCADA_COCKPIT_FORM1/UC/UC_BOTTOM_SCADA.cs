@@ -33,10 +33,10 @@ namespace FORM.UC
                 btn1.FlatAppearance.BorderSize = 0;
                 btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 btn1.Location = new System.Drawing.Point(24, LocY);
-                btn1.Name = string.Concat("btn1_", this.Name, i );
+                btn1.Name = string.Concat("btn1_", this.Name,"_btn_", i );
                 btn1.Size = new System.Drawing.Size(206, 40);
                 btn1.TabIndex = 0;
-                btn1.Text = string.Concat("btn1_", this.Name, i );
+                btn1.Text = string.Concat("Machine_", this.Name, "_",i );
                 btn1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 btn1.UseVisualStyleBackColor = true;
                 xtraScrollableControl1.Controls.Add(btn1);
@@ -47,7 +47,7 @@ namespace FORM.UC
                 btn2.FlatAppearance.BorderSize = 0;
                 btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 btn2.Location = new System.Drawing.Point(234, LocY);
-                btn2.Name = string.Concat("btn2_", this.Name, i );
+                btn2.Name = string.Concat("btn2_", this.Name, "_btn_", i );
                 btn2.Size = new System.Drawing.Size(203, 40);
                 btn2.TabIndex = 0;
                 btn2.Text = string.Empty;// string.Concat("btn2_", this.Name, (i + 1));

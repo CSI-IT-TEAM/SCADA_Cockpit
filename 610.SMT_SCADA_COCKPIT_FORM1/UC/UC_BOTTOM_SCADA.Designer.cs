@@ -60,20 +60,24 @@
             // 
             // btnMal
             // 
+            this.btnMal.BackColor = System.Drawing.Color.Yellow;
+            this.btnMal.FlatAppearance.BorderSize = 0;
+            this.btnMal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMal.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMal.Location = new System.Drawing.Point(338, 15);
+            this.btnMal.Location = new System.Drawing.Point(338, 5);
             this.btnMal.Name = "btnMal";
-            this.btnMal.Size = new System.Drawing.Size(120, 33);
+            this.btnMal.Size = new System.Drawing.Size(120, 43);
             this.btnMal.TabIndex = 0;
             this.btnMal.Text = "Malfunction";
-            this.btnMal.UseVisualStyleBackColor = true;
+            this.btnMal.UseVisualStyleBackColor = false;
             this.btnMal.Click += new System.EventHandler(this.btnMal_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(248, 57);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(248, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 24);
             this.label3.TabIndex = 2;
@@ -83,7 +87,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 57);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(49, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 24);
             this.label2.TabIndex = 3;
@@ -100,7 +105,7 @@
             // 
             this.lblTitle.BackColor = System.Drawing.Color.White;
             this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Blue;
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lblTitle.Location = new System.Drawing.Point(1, 5);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(461, 47);

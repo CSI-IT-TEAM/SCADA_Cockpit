@@ -77,15 +77,15 @@ namespace FORM
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (var item in ucList)
-            {
-                item.SetColorStatus();
-            }
+            //foreach (var item in ucList)
+            //{
+            //    item.SetColorStatus();
+            //}
+           
         }
 
         private void SMT_SCADA_BOTTOM_COCKPIT_Load(object sender, EventArgs e)
         {
-            tmrBlinking_Info.Stop();
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
             InitUC();
         }
@@ -96,10 +96,21 @@ namespace FORM
             cCount++;
             if (cCount >= 30)
             {
-                cCount = 0;
-                foreach (var item in ucList)
+                try
                 {
-                    item.SetColorStatus();
+                    splashScreenManager1.ShowWaitForm();
+
+                    cCount = 0;
+                    foreach (var item in ucList)
+                    {
+                        item.SetColorStatus();
+                    }
+                    splashScreenManager1.CloseWaitForm();
+                }
+                catch (Exception ex) //Nếu có lỗi ...
+                {
+                    splashScreenManager1.CloseWaitForm();
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
@@ -113,14 +124,6 @@ namespace FORM
             }
             else
                 tmrTime.Stop();
-        }
-
-        private void tmrBlinking_Info_Tick(object sender, EventArgs e)
-        {
-            if (rlblNormal._BackColor == Color.Green)
-                rlblNormal._BackColor = Color.White;
-            else
-                rlblNormal._BackColor = Color.Green;
         }
     }
 }

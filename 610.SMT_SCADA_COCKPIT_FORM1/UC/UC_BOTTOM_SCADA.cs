@@ -18,6 +18,7 @@ namespace FORM.UC
         }
         public delegate void ButtonClickHandler(string btnCode);
         public ButtonClickHandler OnButtonclick = null;
+        Color[] ColorRange = new Color[3] { Color.Red, Color.Green,Color.Black };
         Random r = new Random();
         List<Button> btnList = new List<Button>();
         int GapY = 46, LocY = 3;
@@ -73,7 +74,8 @@ namespace FORM.UC
         {
             foreach (var item in btnList)
             {
-                item.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), 0);
+                //item.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), 0);
+                item.BackColor = ColorRange[r.Next(0, 3)];
             }
         }
 

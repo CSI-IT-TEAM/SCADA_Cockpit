@@ -23,6 +23,10 @@ namespace FORM.UC
         List<Button> btnList = new List<Button>();
         int GapY = 46, LocY = 3;
         bool isMalClick = false;
+        private void Init_COMPOUND_Table()
+        {
+
+        }
         public void InitTable()
         {
             for (int i = 0; i < r.Next(10, 100); i++)
@@ -86,11 +90,7 @@ namespace FORM.UC
 
         private void btnMal_Click(object sender, EventArgs e)
         {
-            if (!isMalClick)
-                btnMal.Text = "Show All";
-            else
-                btnMal.Text = "Malfunction";
-            isMalClick = !isMalClick;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

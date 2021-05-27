@@ -90,6 +90,7 @@
             this.a1Panel1.RoundCornerRadius = 10;
             this.a1Panel1.Size = new System.Drawing.Size(388, 70);
             this.a1Panel1.TabIndex = 89;
+            this.a1Panel1.Visible = false;
             // 
             // label5
             // 

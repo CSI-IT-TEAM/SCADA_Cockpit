@@ -59,8 +59,10 @@
             this.cmdPm1 = new System.Windows.Forms.Button();
             this.cmdDowntime = new System.Windows.Forms.Button();
             this.btnEnergy = new System.Windows.Forms.Button();
-            this.cmdScadaBottom = new System.Windows.Forms.Button();
             this.tmrBlink = new System.Windows.Forms.Timer(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cmdScadaBottom = new System.Windows.Forms.Button();
             this.gpExF1 = new FORM.GroupBoxEx();
             this.aPn1 = new FORM.AdvancedPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -87,6 +89,7 @@
             this.pnVJ3.SuspendLayout();
             this.pnVJ.SuspendLayout();
             this.pnVJ2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.gpExF1.SuspendLayout();
             this.aPn1.SuspendLayout();
             this.gpExF2.SuspendLayout();
@@ -382,7 +385,7 @@
             this.tableLayoutPanel3.Controls.Add(this.cmdPm1, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.cmdDowntime, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnEnergy, 6, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cmdScadaBottom, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel2, 3, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -515,6 +518,33 @@
             this.btnEnergy.UseVisualStyleBackColor = false;
             this.btnEnergy.Click += new System.EventHandler(this.btnEnergy_Click);
             // 
+            // tmrBlink
+            // 
+            this.tmrBlink.Interval = 500;
+            this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.label9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(120, -1);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 26);
+            this.label9.TabIndex = 73;
+            this.label9.Text = "Bottom";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.cmdScadaBottom);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(720, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(233, 128);
+            this.panel2.TabIndex = 90;
+            // 
             // cmdScadaBottom
             // 
             this.cmdScadaBottom.BackColor = System.Drawing.Color.White;
@@ -526,18 +556,13 @@
             this.cmdScadaBottom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdScadaBottom.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
             this.cmdScadaBottom.ForeColor = System.Drawing.Color.Navy;
-            this.cmdScadaBottom.Location = new System.Drawing.Point(720, 3);
+            this.cmdScadaBottom.Location = new System.Drawing.Point(0, 0);
             this.cmdScadaBottom.Name = "cmdScadaBottom";
             this.cmdScadaBottom.Size = new System.Drawing.Size(233, 128);
-            this.cmdScadaBottom.TabIndex = 87;
+            this.cmdScadaBottom.TabIndex = 88;
             this.cmdScadaBottom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdScadaBottom.UseVisualStyleBackColor = false;
             this.cmdScadaBottom.Click += new System.EventHandler(this.cmdScadaBottom_Click);
-            // 
-            // tmrBlink
-            // 
-            this.tmrBlink.Interval = 500;
-            this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
             // 
             // gpExF1
             // 
@@ -859,6 +884,7 @@
             this.pnVJ3.ResumeLayout(false);
             this.pnVJ.ResumeLayout(false);
             this.pnVJ2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.gpExF1.ResumeLayout(false);
             this.aPn1.ResumeLayout(false);
             this.gpExF2.ResumeLayout(false);
@@ -926,6 +952,8 @@
         public System.Windows.Forms.Button cmdPm1;
         public System.Windows.Forms.Button cmdDowntime;
         public System.Windows.Forms.Button btnEnergy;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button cmdScadaBottom;
     }
 }

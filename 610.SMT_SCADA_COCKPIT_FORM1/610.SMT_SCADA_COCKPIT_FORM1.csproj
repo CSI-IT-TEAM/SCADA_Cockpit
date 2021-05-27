@@ -138,6 +138,30 @@
     <Compile Include="SMT_SCADA_COCKPIT_POPUP.Designer.cs">
       <DependentUpon>SMT_SCADA_COCKPIT_POPUP.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_3COL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_3COL.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_3COL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_2COL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_2COL.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_2COL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_OTH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_OTH.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_OTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_4COL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_4COL.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_4COL.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UC_BOTTOM_SCADA.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +225,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_COCKPIT_POPUP.resx">
       <DependentUpon>SMT_SCADA_COCKPIT_POPUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_3COL.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_3COL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_2COL.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_2COL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_OTH.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_OTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_4COL.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_4COL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_BOTTOM_SCADA.resx">
       <DependentUpon>UC_BOTTOM_SCADA.cs</DependentUpon>

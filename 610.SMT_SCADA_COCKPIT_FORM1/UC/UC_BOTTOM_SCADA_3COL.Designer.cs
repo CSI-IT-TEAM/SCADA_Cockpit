@@ -1,6 +1,6 @@
 ﻿namespace FORM.UC
 {
-    partial class UC_BOTTOM_SCADA
+    partial class UC_BOTTOM_SCADA_3COL
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,20 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_BOTTOM_SCADA));
             this.a1Panel1 = new OS_DSF.A1Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.a1Panel1.SuspendLayout();
-            this.xtraScrollableControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // a1Panel1
             // 
             this.a1Panel1.BackColor = System.Drawing.Color.White;
             this.a1Panel1.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.a1Panel1.Controls.Add(this.label1);
+            this.a1Panel1.Controls.Add(this.label5);
+            this.a1Panel1.Controls.Add(this.label4);
+            this.a1Panel1.Controls.Add(this.label2);
             this.a1Panel1.Controls.Add(this.xtraScrollableControl1);
             this.a1Panel1.Controls.Add(this.lblTitle);
             this.a1Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -56,9 +60,52 @@
             this.a1Panel1.Size = new System.Drawing.Size(470, 445);
             this.a1Panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(337, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Hose";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(234, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 24);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Oil";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(119, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 24);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Material";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(4, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 24);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Machine";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // xtraScrollableControl1
             // 
-            this.xtraScrollableControl1.Controls.Add(this.pictureBox1);
             this.xtraScrollableControl1.Location = new System.Drawing.Point(3, 84);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
             this.xtraScrollableControl1.Size = new System.Drawing.Size(457, 349);
@@ -77,26 +124,14 @@
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.Click += new System.EventHandler(this.label1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(76, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(292, 263);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // UC_BOTTOM_SCADA
+            // UC_BOTTOM_SCADA_3COL
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.a1Panel1);
-            this.Name = "UC_BOTTOM_SCADA";
+            this.Name = "UC_BOTTOM_SCADA_3COL";
             this.Size = new System.Drawing.Size(470, 445);
             this.a1Panel1.ResumeLayout(false);
-            this.xtraScrollableControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,6 +141,9 @@
         private OS_DSF.A1Panel a1Panel1;
         private System.Windows.Forms.Label lblTitle;
         private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
     }
 }

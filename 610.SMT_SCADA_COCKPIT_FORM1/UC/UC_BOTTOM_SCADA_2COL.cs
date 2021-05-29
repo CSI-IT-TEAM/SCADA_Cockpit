@@ -19,6 +19,7 @@ namespace FORM.UC
         public delegate void ButtonClickHandler(string btnCode);
         public ButtonClickHandler OnButtonclick = null;
         Color[] ColorRange = new Color[3] { Color.Red, Color.Green, Color.Yellow };
+        Color[] ForeColorRange = new Color[3] { Color.White, Color.White, Color.Black };
         Random r = new Random();
         List<Button> btnList = new List<Button>();
         int GapY = 43, LocY = 3;
@@ -45,7 +46,8 @@ namespace FORM.UC
                             btn1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                             btn1.FlatAppearance.BorderSize = 0;
                             btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                            btn1.BackColor = Color.Silver;
+                            btn1.BackColor = Color.Black;
+                            btn1.ForeColor = Color.White;
                             btn1.Location = new System.Drawing.Point(5, LocY);
                             btn1.Name = string.Concat("btnMC_", this.Name, "_btn_", i);
                             btn1.Size = new System.Drawing.Size(108, 37);
@@ -95,7 +97,8 @@ namespace FORM.UC
                             btn1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                             btn1.FlatAppearance.BorderSize = 0;
                             btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                            btn1.BackColor = Color.Silver;
+                            btn1.BackColor = Color.Black;
+                            btn1.ForeColor = Color.White;
                             btn1.Location = new System.Drawing.Point(5, LocY);
                             btn1.Name = string.Concat("btnMC_", this.Name, "_", i);
                             btn1.Size = new System.Drawing.Size(108, BtnHeight);
@@ -204,7 +207,12 @@ namespace FORM.UC
         {
             lblTitle.Text = Title;
         }
-
+        public void SetColorTitle()
+        {
+            int rand = r.Next(0, 3);
+            lblTitle.BackColor = ColorRange[rand];
+            lblTitle.ForeColor = ForeColorRange[rand];
+        }
         private void btnMal_Click(object sender, EventArgs e)
         {
             

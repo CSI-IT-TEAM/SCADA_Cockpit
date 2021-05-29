@@ -1356,7 +1356,7 @@
             // 
             // lblCell4_PMTop1
             // 
-            this.lblCell4_PMTop1._BackColor = System.Drawing.Color.Red;
+            this.lblCell4_PMTop1._BackColor = System.Drawing.Color.LimeGreen;
             this.lblCell4_PMTop1.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PMTop1.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell4_PMTop1.ForeColor = System.Drawing.Color.White;
@@ -1380,7 +1380,7 @@
             // 
             // lblCell4_PMTop4
             // 
-            this.lblCell4_PMTop4._BackColor = System.Drawing.Color.DarkSalmon;
+            this.lblCell4_PMTop4._BackColor = System.Drawing.Color.LimeGreen;
             this.lblCell4_PMTop4.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PMTop4.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell4_PMTop4.ForeColor = System.Drawing.Color.White;
@@ -1404,7 +1404,7 @@
             // 
             // lblCell4_PMTop2
             // 
-            this.lblCell4_PMTop2._BackColor = System.Drawing.Color.Tomato;
+            this.lblCell4_PMTop2._BackColor = System.Drawing.Color.LimeGreen;
             this.lblCell4_PMTop2.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PMTop2.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell4_PMTop2.ForeColor = System.Drawing.Color.White;
@@ -1473,7 +1473,7 @@
             // 
             // lblCell4_PMTop5
             // 
-            this.lblCell4_PMTop5._BackColor = System.Drawing.Color.LightCoral;
+            this.lblCell4_PMTop5._BackColor = System.Drawing.Color.LimeGreen;
             this.lblCell4_PMTop5.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PMTop5.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell4_PMTop5.ForeColor = System.Drawing.Color.White;
@@ -1519,7 +1519,7 @@
             // 
             // lblCell4_PMTop3
             // 
-            this.lblCell4_PMTop3._BackColor = System.Drawing.Color.Coral;
+            this.lblCell4_PMTop3._BackColor = System.Drawing.Color.LimeGreen;
             this.lblCell4_PMTop3.BackColor = System.Drawing.Color.Transparent;
             this.lblCell4_PMTop3.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell4_PMTop3.ForeColor = System.Drawing.Color.White;
@@ -1724,7 +1724,7 @@
             // 
             // lblCell8_MalTop1
             // 
-            this.lblCell8_MalTop1._BackColor = System.Drawing.Color.Red;
+            this.lblCell8_MalTop1._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell8_MalTop1.BackColor = System.Drawing.Color.Transparent;
             this.lblCell8_MalTop1.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell8_MalTop1.ForeColor = System.Drawing.Color.White;
@@ -1736,7 +1736,7 @@
             // 
             // lblCell8_ElecTop1
             // 
-            this.lblCell8_ElecTop1._BackColor = System.Drawing.Color.Red;
+            this.lblCell8_ElecTop1._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell8_ElecTop1.BackColor = System.Drawing.Color.Transparent;
             this.lblCell8_ElecTop1.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
             this.lblCell8_ElecTop1.ForeColor = System.Drawing.Color.White;
@@ -1748,9 +1748,9 @@
             // 
             // lblCell8_MalTop4
             // 
-            this.lblCell8_MalTop4._BackColor = System.Drawing.Color.DarkSalmon;
+            this.lblCell8_MalTop4._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell8_MalTop4.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell8_MalTop4.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_MalTop4.Font = new System.Drawing.Font("DS-Digital", 24F, System.Drawing.FontStyle.Bold);
             this.lblCell8_MalTop4.ForeColor = System.Drawing.Color.White;
             this.lblCell8_MalTop4.Location = new System.Drawing.Point(302, 305);
             this.lblCell8_MalTop4.Name = "lblCell8_MalTop4";
@@ -1760,9 +1760,9 @@
             // 
             // lblCell8_ElecTop4
             // 
-            this.lblCell8_ElecTop4._BackColor = System.Drawing.Color.DarkSalmon;
+            this.lblCell8_ElecTop4._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell8_ElecTop4.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell8_ElecTop4.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_ElecTop4.Font = new System.Drawing.Font("DS-Digital", 24F, System.Drawing.FontStyle.Bold);
             this.lblCell8_ElecTop4.ForeColor = System.Drawing.Color.White;
             this.lblCell8_ElecTop4.Location = new System.Drawing.Point(133, 305);
             this.lblCell8_ElecTop4.Name = "lblCell8_ElecTop4";
@@ -1772,9 +1772,9 @@
             // 
             // lblCell8_MalTop2
             // 
-            this.lblCell8_MalTop2._BackColor = System.Drawing.Color.Tomato;
+            this.lblCell8_MalTop2._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell8_MalTop2.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell8_MalTop2.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_MalTop2.Font = new System.Drawing.Font("DS-Digital", 28F, System.Drawing.FontStyle.Bold);
             this.lblCell8_MalTop2.ForeColor = System.Drawing.Color.White;
             this.lblCell8_MalTop2.Location = new System.Drawing.Point(302, 175);
             this.lblCell8_MalTop2.Name = "lblCell8_MalTop2";
@@ -1784,9 +1784,9 @@
             // 
             // lblCell8_ElecTop2
             // 
-            this.lblCell8_ElecTop2._BackColor = System.Drawing.Color.Tomato;
+            this.lblCell8_ElecTop2._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell8_ElecTop2.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell8_ElecTop2.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_ElecTop2.Font = new System.Drawing.Font("DS-Digital", 28F, System.Drawing.FontStyle.Bold);
             this.lblCell8_ElecTop2.ForeColor = System.Drawing.Color.White;
             this.lblCell8_ElecTop2.Location = new System.Drawing.Point(133, 175);
             this.lblCell8_ElecTop2.Name = "lblCell8_ElecTop2";
@@ -1818,9 +1818,9 @@
             // 
             // lblCell8_MalTop5
             // 
-            this.lblCell8_MalTop5._BackColor = System.Drawing.Color.LightCoral;
+            this.lblCell8_MalTop5._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell8_MalTop5.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell8_MalTop5.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_MalTop5.Font = new System.Drawing.Font("DS-Digital", 22F, System.Drawing.FontStyle.Bold);
             this.lblCell8_MalTop5.ForeColor = System.Drawing.Color.White;
             this.lblCell8_MalTop5.Location = new System.Drawing.Point(302, 371);
             this.lblCell8_MalTop5.Name = "lblCell8_MalTop5";
@@ -1830,9 +1830,9 @@
             // 
             // lblCell8_ElecTop5
             // 
-            this.lblCell8_ElecTop5._BackColor = System.Drawing.Color.LightCoral;
+            this.lblCell8_ElecTop5._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell8_ElecTop5.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell8_ElecTop5.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_ElecTop5.Font = new System.Drawing.Font("DS-Digital", 22F, System.Drawing.FontStyle.Bold);
             this.lblCell8_ElecTop5.ForeColor = System.Drawing.Color.White;
             this.lblCell8_ElecTop5.Location = new System.Drawing.Point(133, 371);
             this.lblCell8_ElecTop5.Name = "lblCell8_ElecTop5";
@@ -1842,9 +1842,9 @@
             // 
             // lblCell8_MalTop3
             // 
-            this.lblCell8_MalTop3._BackColor = System.Drawing.Color.Coral;
+            this.lblCell8_MalTop3._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell8_MalTop3.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell8_MalTop3.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_MalTop3.Font = new System.Drawing.Font("DS-Digital", 26F, System.Drawing.FontStyle.Bold);
             this.lblCell8_MalTop3.ForeColor = System.Drawing.Color.White;
             this.lblCell8_MalTop3.Location = new System.Drawing.Point(302, 241);
             this.lblCell8_MalTop3.Name = "lblCell8_MalTop3";
@@ -1865,9 +1865,9 @@
             // 
             // lblCell8_ElecTop3
             // 
-            this.lblCell8_ElecTop3._BackColor = System.Drawing.Color.Coral;
+            this.lblCell8_ElecTop3._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell8_ElecTop3.BackColor = System.Drawing.Color.Transparent;
-            this.lblCell8_ElecTop3.Font = new System.Drawing.Font("DS-Digital", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCell8_ElecTop3.Font = new System.Drawing.Font("DS-Digital", 26F, System.Drawing.FontStyle.Bold);
             this.lblCell8_ElecTop3.ForeColor = System.Drawing.Color.White;
             this.lblCell8_ElecTop3.Location = new System.Drawing.Point(133, 241);
             this.lblCell8_ElecTop3.Name = "lblCell8_ElecTop3";
@@ -2132,7 +2132,7 @@
             // 
             // lblCell6_AlarmWorstTop3
             // 
-            this.lblCell6_AlarmWorstTop3._BackColor = System.Drawing.Color.Red;
+            this.lblCell6_AlarmWorstTop3._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell6_AlarmWorstTop3.BackColor = System.Drawing.Color.Transparent;
             this.lblCell6_AlarmWorstTop3.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell6_AlarmWorstTop3.ForeColor = System.Drawing.Color.White;
@@ -2156,7 +2156,7 @@
             // 
             // lblCell6_AlarmBestTop3
             // 
-            this.lblCell6_AlarmBestTop3._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell6_AlarmBestTop3._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell6_AlarmBestTop3.BackColor = System.Drawing.Color.Transparent;
             this.lblCell6_AlarmBestTop3.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell6_AlarmBestTop3.ForeColor = System.Drawing.Color.White;
@@ -2180,7 +2180,7 @@
             // 
             // lblCell6_AlarmWorstTop2
             // 
-            this.lblCell6_AlarmWorstTop2._BackColor = System.Drawing.Color.Red;
+            this.lblCell6_AlarmWorstTop2._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell6_AlarmWorstTop2.BackColor = System.Drawing.Color.Transparent;
             this.lblCell6_AlarmWorstTop2.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell6_AlarmWorstTop2.ForeColor = System.Drawing.Color.White;
@@ -2192,7 +2192,7 @@
             // 
             // lblCell6_AlarmWorstTop1
             // 
-            this.lblCell6_AlarmWorstTop1._BackColor = System.Drawing.Color.Red;
+            this.lblCell6_AlarmWorstTop1._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell6_AlarmWorstTop1.BackColor = System.Drawing.Color.Transparent;
             this.lblCell6_AlarmWorstTop1.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell6_AlarmWorstTop1.ForeColor = System.Drawing.Color.White;
@@ -2216,7 +2216,7 @@
             // 
             // lblCell6_AlarmBestTop2
             // 
-            this.lblCell6_AlarmBestTop2._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell6_AlarmBestTop2._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell6_AlarmBestTop2.BackColor = System.Drawing.Color.Transparent;
             this.lblCell6_AlarmBestTop2.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell6_AlarmBestTop2.ForeColor = System.Drawing.Color.White;
@@ -2240,7 +2240,7 @@
             // 
             // lblCell6_AlarmBestTop1
             // 
-            this.lblCell6_AlarmBestTop1._BackColor = System.Drawing.Color.LimeGreen;
+            this.lblCell6_AlarmBestTop1._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(213)))));
             this.lblCell6_AlarmBestTop1.BackColor = System.Drawing.Color.Transparent;
             this.lblCell6_AlarmBestTop1.Font = new System.Drawing.Font("DS-Digital", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCell6_AlarmBestTop1.ForeColor = System.Drawing.Color.White;
@@ -2332,11 +2332,11 @@
             this.label39.BackColor = System.Drawing.SystemColors.WindowText;
             this.label39.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.Red;
-            this.label39.Location = new System.Drawing.Point(257, 237);
+            this.label39.Location = new System.Drawing.Point(314, 237);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(211, 22);
+            this.label39.Size = new System.Drawing.Size(97, 22);
             this.label39.TabIndex = 1;
-            this.label39.Text = "Top 3 Highest Alert Ratio";
+            this.label39.Text = "Alert Ratio";
             // 
             // label38
             // 
@@ -2355,11 +2355,11 @@
             this.label36.BackColor = System.Drawing.SystemColors.WindowText;
             this.label36.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label36.Location = new System.Drawing.Point(257, 46);
+            this.label36.Location = new System.Drawing.Point(314, 46);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(205, 22);
+            this.label36.Size = new System.Drawing.Size(97, 22);
             this.label36.TabIndex = 1;
-            this.label36.Text = "Top 3 Lowest Alert Ratio";
+            this.label36.Text = "Alert Ratio";
             // 
             // label37
             // 

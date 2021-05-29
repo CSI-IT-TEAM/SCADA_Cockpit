@@ -170,29 +170,36 @@ namespace FORM
         {
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
             cCount++;
-            if (cCount >= 30)
+            if (cCount >= 1)
             {
                 try
                 {
                     splashScreenManager1.ShowWaitForm();
 
                     cCount = 0;
+
+
+
                     //=========================================
                     foreach (var item in uc2ColumnsList)
                     {
                         item.SetColorStatus();
+                        item.SetColorTitle();
                     }
                     foreach (var item in uc3ColumnsList)
                     {
                         item.SetColorStatus();
+                        item.SetColorTitle();
                     }
                     foreach (var item in uc4ColumnsList)
                     {
                         item.SetColorStatus();
+                        item.SetColorTitle();
                     }
                     foreach (var item in ucOTHList)
                     {
                         item.SetColorStatus();
+                        item.SetColorTitle();
                     }
                     //=========================================
                     splashScreenManager1.CloseWaitForm();

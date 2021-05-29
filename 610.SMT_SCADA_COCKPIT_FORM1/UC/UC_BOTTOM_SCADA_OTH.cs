@@ -19,6 +19,7 @@ namespace FORM.UC
         public delegate void ButtonClickHandler(string btnCode);
         public ButtonClickHandler OnButtonclick = null;
         Color[] ColorRange = new Color[3] { Color.Red, Color.Green, Color.Yellow };
+        Color[] ForeColorRange = new Color[3] { Color.White, Color.White, Color.Black };
         Random r = new Random();
         List<Button> btnList = new List<Button>();
         int GapY = 35, LocY = 3, buttonHeight = 30;
@@ -195,7 +196,12 @@ namespace FORM.UC
         {
             lblTitle.Text = Title;
         }
-
+        public void SetColorTitle()
+        {
+            int rand = r.Next(0, 3);
+            lblTitle.BackColor = ColorRange[rand];
+            lblTitle.ForeColor = ForeColorRange[rand];
+        }
         private void btnMal_Click(object sender, EventArgs e)
         {
 

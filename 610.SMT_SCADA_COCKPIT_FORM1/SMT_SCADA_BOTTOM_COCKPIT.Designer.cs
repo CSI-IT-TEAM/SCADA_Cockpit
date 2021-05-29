@@ -187,9 +187,9 @@
             this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(751, 76);
+            this.lblHeader.Size = new System.Drawing.Size(537, 76);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "        Scada Bottom Cockpit";
+            this.lblHeader.Text = "        SCADA Bottom";
             // 
             // button1
             // 

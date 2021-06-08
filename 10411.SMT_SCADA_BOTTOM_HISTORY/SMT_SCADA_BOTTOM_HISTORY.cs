@@ -43,7 +43,7 @@ namespace FORM
             if (_time >= 25)
             {
                 _time = 0;
-
+                LoadingData();
             }
         }
 

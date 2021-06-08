@@ -22,7 +22,7 @@ namespace FORM
         Color[] ColorRange = new Color[3] { Color.Red, Color.Green, Color.Yellow };
         bool isClick = false;
         List<Label> lblList = new List<Label>();
-
+        List<Label> lblGrpList = new List<Label>();
         #region DB
         private DataTable SEL_F_CALL(string argType,string argHeadCode, string arglabelCode)
         {
@@ -282,11 +282,20 @@ namespace FORM
                 lblList.Add(lbl_PU_SPRAY_9);
                 lblList.Add(lbl_PU_SPRAY_10);
 
+                //GROUP
+                lblGrpList.Add(lbl_OS_GRP_RUBBER);
+
                 foreach (var item in lblList)
                 {
                     item.Tag = item.Name;
                     item.BackColor = Color.Silver;
                     item.Click += Item_Click;
+                }
+
+                foreach (var item in lblGrpList)
+                {
+                    item.Tag = item.Name;
+                    item.Click += Item_Click1; ;
                 }
             }
             catch (Exception)
@@ -295,11 +304,21 @@ namespace FORM
             }
         }
 
+        private void Item_Click1(object sender, EventArgs e)
+        {
+            //group click
+
+            ComVar.Var._IsBack = true;
+            Label lbl = ((Label)sender);
+            ComVar.Var.callForm = SEL_F_CALL("Q", "2", lbl.Name.ToString()).Rows[0]["FORM_CALL_SEQ"].ToString();
+        }
+        
         private void Item_Click(object sender, EventArgs e)
         {
             ComVar.Var._IsBack = true;
             Label lbl = ((Label)sender);
             MessageBox.Show(lbl.Name.ToString());
+
             ComVar.Var.callForm = SEL_F_CALL("Q","1", lbl.Name.ToString()).Rows[0]["FORM_CALL_SEQ"].ToString();
         }
         #endregion

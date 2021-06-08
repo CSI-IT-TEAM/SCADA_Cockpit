@@ -50,8 +50,19 @@ namespace FORM
                 {
                     iPage = ComVar.Var._iValue1;
                     iPageTmp = ComVar.Var._iValue1;
-                }
 
+                    switch (iPage)
+                    {
+                        case 1:
+                            sbtnRub.Enabled = false;
+                            navigationFrame1.SelectedPage = navigationPage1;
+                            break;
+                        case 2:
+                            sBtnEVA.Enabled = false;
+                            navigationFrame1.SelectedPage = navigationPage2;
+                            break;
+                    }
+                }
                 switch (iPage)
                 {
                     case 1:
@@ -152,12 +163,12 @@ namespace FORM
                 switch (sbtn.Tag.ToString())
                 {
                     case "Rubber":
-                        iPage = ComVar.Var._iValue1 = 1;
+                        iPage = iPageTmp = ComVar.Var._iValue1 = 1;
                         navigationFrame1.SelectedPage = navigationPage1;
                         BindingPage1Data();
                         break;
                     case "EVA":
-                        iPage = ComVar.Var._iValue1 = 2;
+                        iPage = iPageTmp = ComVar.Var._iValue1 = 2;
                         navigationFrame1.SelectedPage = navigationPage2;
                         BindingPage2Data();
                         break;

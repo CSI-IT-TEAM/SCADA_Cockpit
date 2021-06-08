@@ -1,6 +1,6 @@
 ﻿namespace FORM
 {
-    partial class SMT_SCADA_BOTTOM_OS_TEMPER_V2
+    partial class SMT_SCADA_B1RUBBER_TEMPER
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_OS_TEMPER_V2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B1RUBBER_TEMPER));
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange1 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange2 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange3 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
@@ -88,42 +88,42 @@
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.tmrDate = new System.Windows.Forms.Timer();
             this.a1Panel7 = new OS_DSF.A1Panel();
-            this.roundLabel25 = new RoundLabel();
+            this.lblCalendarLine2MCMax = new RoundLabel();
             this.roundLabel26 = new RoundLabel();
-            this.roundLabel27 = new RoundLabel();
-            this.roundLabel28 = new RoundLabel();
+            this.lblCalendarLine2MC = new RoundLabel();
+            this.lblCalendarLine2MCMin = new RoundLabel();
             this.gaugeControl7 = new DevExpress.XtraGauges.Win.GaugeControl();
-            this.linearGauge4 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge();
+            this.lnCalendarMC2 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge();
             this.linearScaleBackgroundLayerComponent5 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleBackgroundLayerComponent();
             this.linearScaleComponent5 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent();
             this.linearScaleLevelComponent5 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent();
             this.a1Panel8 = new OS_DSF.A1Panel();
             this.gaugeControl8 = new DevExpress.XtraGauges.Win.GaugeControl();
-            this.circularGauge3 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
+            this.cirCalendarMat2 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
             this.arcScaleBackgroundLayerComponent3 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent();
             this.arcScaleComponent3 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
             this.arcScaleNeedleComponent3 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent();
-            this.roundLabel29 = new RoundLabel();
+            this.lblCalendarLine2MatMax = new RoundLabel();
             this.roundLabel30 = new RoundLabel();
-            this.roundLabel31 = new RoundLabel();
-            this.roundLabel32 = new RoundLabel();
+            this.lblCalendarLine2Mat = new RoundLabel();
+            this.lblCalendarLine2MatMin = new RoundLabel();
             this.a1Panel9 = new OS_DSF.A1Panel();
             this.gaugeControl9 = new DevExpress.XtraGauges.Win.GaugeControl();
-            this.circularGauge4 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
+            this.cirCalendarMat1 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
             this.arcScaleBackgroundLayerComponent4 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent();
             this.arcScaleComponent4 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
             this.arcScaleNeedleComponent4 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent();
-            this.roundLabel33 = new RoundLabel();
+            this.lblCalendarLine1MatMax = new RoundLabel();
             this.roundLabel34 = new RoundLabel();
-            this.roundLabel35 = new RoundLabel();
-            this.roundLabel36 = new RoundLabel();
+            this.lblCalendarLine1Mat = new RoundLabel();
+            this.lblCalendarLine1MatMin = new RoundLabel();
             this.a1Panel10 = new OS_DSF.A1Panel();
-            this.roundLabel37 = new RoundLabel();
+            this.lblCalendarLine1MCMax = new RoundLabel();
             this.roundLabel38 = new RoundLabel();
-            this.roundLabel39 = new RoundLabel();
-            this.roundLabel40 = new RoundLabel();
+            this.lblCalendarLine1MC = new RoundLabel();
+            this.lblCalendarLine1MCMin = new RoundLabel();
             this.gaugeControl10 = new DevExpress.XtraGauges.Win.GaugeControl();
-            this.linearGauge5 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge();
+            this.lnCalendarMC1 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge();
             this.linearScaleBackgroundLayerComponent6 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleBackgroundLayerComponent();
             this.linearScaleComponent6 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent();
             this.linearScaleLevelComponent6 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent();
@@ -221,22 +221,22 @@
             this.a1Panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartCalendar)).BeginInit();
             this.a1Panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.linearGauge4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnCalendarMC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleBackgroundLayerComponent5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleComponent5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleLevelComponent5)).BeginInit();
             this.a1Panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularGauge3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cirCalendarMat2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent3)).BeginInit();
             this.a1Panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularGauge4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cirCalendarMat1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent4)).BeginInit();
             this.a1Panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.linearGauge5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnCalendarMC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleBackgroundLayerComponent6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleComponent6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleLevelComponent6)).BeginInit();
@@ -548,10 +548,10 @@
             // 
             this.a1Panel7.BackColor = System.Drawing.Color.Transparent;
             this.a1Panel7.BorderColor = System.Drawing.Color.Gray;
-            this.a1Panel7.Controls.Add(this.roundLabel25);
+            this.a1Panel7.Controls.Add(this.lblCalendarLine2MCMax);
             this.a1Panel7.Controls.Add(this.roundLabel26);
-            this.a1Panel7.Controls.Add(this.roundLabel27);
-            this.a1Panel7.Controls.Add(this.roundLabel28);
+            this.a1Panel7.Controls.Add(this.lblCalendarLine2MC);
+            this.a1Panel7.Controls.Add(this.lblCalendarLine2MCMin);
             this.a1Panel7.Controls.Add(this.gaugeControl7);
             this.a1Panel7.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.a1Panel7.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
@@ -563,15 +563,15 @@
             this.a1Panel7.Size = new System.Drawing.Size(267, 293);
             this.a1Panel7.TabIndex = 11;
             // 
-            // roundLabel25
+            // lblCalendarLine2MCMax
             // 
-            this.roundLabel25._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel25.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel25.Location = new System.Drawing.Point(157, 216);
-            this.roundLabel25.Name = "roundLabel25";
-            this.roundLabel25.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel25.TabIndex = 8;
-            this.roundLabel25.Text = "Max: 100";
+            this.lblCalendarLine2MCMax._BackColor = System.Drawing.Color.Silver;
+            this.lblCalendarLine2MCMax.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine2MCMax.Location = new System.Drawing.Point(157, 216);
+            this.lblCalendarLine2MCMax.Name = "lblCalendarLine2MCMax";
+            this.lblCalendarLine2MCMax.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine2MCMax.TabIndex = 8;
+            this.lblCalendarLine2MCMax.Text = "Max: 0°C";
             // 
             // roundLabel26
             // 
@@ -583,47 +583,47 @@
             this.roundLabel26.TabIndex = 8;
             this.roundLabel26.Text = "2nd Machine";
             // 
-            // roundLabel27
+            // lblCalendarLine2MC
             // 
-            this.roundLabel27._BackColor = System.Drawing.Color.SkyBlue;
-            this.roundLabel27.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel27.Location = new System.Drawing.Point(157, 251);
-            this.roundLabel27.Name = "roundLabel27";
-            this.roundLabel27.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel27.TabIndex = 8;
-            this.roundLabel27.Text = "PV: 55";
+            this.lblCalendarLine2MC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblCalendarLine2MC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine2MC.Location = new System.Drawing.Point(157, 251);
+            this.lblCalendarLine2MC.Name = "lblCalendarLine2MC";
+            this.lblCalendarLine2MC.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine2MC.TabIndex = 8;
+            this.lblCalendarLine2MC.Text = "Temp: 0°C";
             // 
-            // roundLabel28
+            // lblCalendarLine2MCMin
             // 
-            this.roundLabel28._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel28.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel28.Location = new System.Drawing.Point(157, 189);
-            this.roundLabel28.Name = "roundLabel28";
-            this.roundLabel28.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel28.TabIndex = 8;
-            this.roundLabel28.Text = "Min: 50";
+            this.lblCalendarLine2MCMin._BackColor = System.Drawing.Color.Silver;
+            this.lblCalendarLine2MCMin.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine2MCMin.Location = new System.Drawing.Point(157, 189);
+            this.lblCalendarLine2MCMin.Name = "lblCalendarLine2MCMin";
+            this.lblCalendarLine2MCMin.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine2MCMin.TabIndex = 8;
+            this.lblCalendarLine2MCMin.Text = "Min: 0°C";
             // 
             // gaugeControl7
             // 
             this.gaugeControl7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.gaugeControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gaugeControl7.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
-            this.linearGauge4});
+            this.lnCalendarMC2});
             this.gaugeControl7.Location = new System.Drawing.Point(5, 5);
             this.gaugeControl7.Name = "gaugeControl7";
             this.gaugeControl7.Size = new System.Drawing.Size(146, 276);
             this.gaugeControl7.TabIndex = 8;
             // 
-            // linearGauge4
+            // lnCalendarMC2
             // 
-            this.linearGauge4.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleBackgroundLayerComponent[] {
+            this.lnCalendarMC2.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleBackgroundLayerComponent[] {
             this.linearScaleBackgroundLayerComponent5});
-            this.linearGauge4.Bounds = new System.Drawing.Rectangle(6, 6, 134, 264);
-            this.linearGauge4.Levels.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent[] {
+            this.lnCalendarMC2.Bounds = new System.Drawing.Rectangle(6, 6, 134, 264);
+            this.lnCalendarMC2.Levels.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent[] {
             this.linearScaleLevelComponent5});
-            this.linearGauge4.Name = "linearGauge4";
-            this.linearGauge4.OptionsToolTip.TooltipTitleFormat = "{0}";
-            this.linearGauge4.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent[] {
+            this.lnCalendarMC2.Name = "lnCalendarMC2";
+            this.lnCalendarMC2.OptionsToolTip.TooltipTitleFormat = "{0}";
+            this.lnCalendarMC2.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent[] {
             this.linearScaleComponent5});
             // 
             // linearScaleBackgroundLayerComponent5
@@ -692,10 +692,10 @@
             this.a1Panel8.BackColor = System.Drawing.Color.Transparent;
             this.a1Panel8.BorderColor = System.Drawing.Color.Gray;
             this.a1Panel8.Controls.Add(this.gaugeControl8);
-            this.a1Panel8.Controls.Add(this.roundLabel29);
+            this.a1Panel8.Controls.Add(this.lblCalendarLine2MatMax);
             this.a1Panel8.Controls.Add(this.roundLabel30);
-            this.a1Panel8.Controls.Add(this.roundLabel31);
-            this.a1Panel8.Controls.Add(this.roundLabel32);
+            this.a1Panel8.Controls.Add(this.lblCalendarLine2Mat);
+            this.a1Panel8.Controls.Add(this.lblCalendarLine2MatMin);
             this.a1Panel8.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.a1Panel8.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.a1Panel8.Image = null;
@@ -711,21 +711,21 @@
             this.gaugeControl8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.gaugeControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gaugeControl8.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
-            this.circularGauge3});
+            this.cirCalendarMat2});
             this.gaugeControl8.Location = new System.Drawing.Point(5, 5);
             this.gaugeControl8.Name = "gaugeControl8";
             this.gaugeControl8.Size = new System.Drawing.Size(146, 151);
             this.gaugeControl8.TabIndex = 9;
             // 
-            // circularGauge3
+            // cirCalendarMat2
             // 
-            this.circularGauge3.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
+            this.cirCalendarMat2.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
             this.arcScaleBackgroundLayerComponent3});
-            this.circularGauge3.Bounds = new System.Drawing.Rectangle(6, 6, 134, 139);
-            this.circularGauge3.Name = "circularGauge3";
-            this.circularGauge3.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
+            this.cirCalendarMat2.Bounds = new System.Drawing.Rectangle(6, 6, 134, 139);
+            this.cirCalendarMat2.Name = "cirCalendarMat2";
+            this.cirCalendarMat2.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
             this.arcScaleNeedleComponent3});
-            this.circularGauge3.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
+            this.cirCalendarMat2.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
             this.arcScaleComponent3});
             // 
             // arcScaleBackgroundLayerComponent3
@@ -790,15 +790,15 @@
             this.arcScaleNeedleComponent3.StartOffset = -27F;
             this.arcScaleNeedleComponent3.ZOrder = -50;
             // 
-            // roundLabel29
+            // lblCalendarLine2MatMax
             // 
-            this.roundLabel29._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel29.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel29.Location = new System.Drawing.Point(157, 101);
-            this.roundLabel29.Name = "roundLabel29";
-            this.roundLabel29.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel29.TabIndex = 8;
-            this.roundLabel29.Text = "Max: 100";
+            this.lblCalendarLine2MatMax._BackColor = System.Drawing.Color.Silver;
+            this.lblCalendarLine2MatMax.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine2MatMax.Location = new System.Drawing.Point(157, 101);
+            this.lblCalendarLine2MatMax.Name = "lblCalendarLine2MatMax";
+            this.lblCalendarLine2MatMax.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine2MatMax.TabIndex = 8;
+            this.lblCalendarLine2MatMax.Text = "Max: 0°C";
             // 
             // roundLabel30
             // 
@@ -810,35 +810,35 @@
             this.roundLabel30.TabIndex = 8;
             this.roundLabel30.Text = "2nd Material";
             // 
-            // roundLabel31
+            // lblCalendarLine2Mat
             // 
-            this.roundLabel31._BackColor = System.Drawing.Color.SkyBlue;
-            this.roundLabel31.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel31.Location = new System.Drawing.Point(157, 133);
-            this.roundLabel31.Name = "roundLabel31";
-            this.roundLabel31.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel31.TabIndex = 8;
-            this.roundLabel31.Text = "PV: 55";
+            this.lblCalendarLine2Mat._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblCalendarLine2Mat.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine2Mat.Location = new System.Drawing.Point(157, 133);
+            this.lblCalendarLine2Mat.Name = "lblCalendarLine2Mat";
+            this.lblCalendarLine2Mat.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine2Mat.TabIndex = 8;
+            this.lblCalendarLine2Mat.Text = "Temp: 0°C";
             // 
-            // roundLabel32
+            // lblCalendarLine2MatMin
             // 
-            this.roundLabel32._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel32.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel32.Location = new System.Drawing.Point(157, 74);
-            this.roundLabel32.Name = "roundLabel32";
-            this.roundLabel32.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel32.TabIndex = 8;
-            this.roundLabel32.Text = "Min: 50";
+            this.lblCalendarLine2MatMin._BackColor = System.Drawing.Color.Silver;
+            this.lblCalendarLine2MatMin.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine2MatMin.Location = new System.Drawing.Point(157, 74);
+            this.lblCalendarLine2MatMin.Name = "lblCalendarLine2MatMin";
+            this.lblCalendarLine2MatMin.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine2MatMin.TabIndex = 8;
+            this.lblCalendarLine2MatMin.Text = "Min: 0°C";
             // 
             // a1Panel9
             // 
             this.a1Panel9.BackColor = System.Drawing.Color.Transparent;
             this.a1Panel9.BorderColor = System.Drawing.Color.Gray;
             this.a1Panel9.Controls.Add(this.gaugeControl9);
-            this.a1Panel9.Controls.Add(this.roundLabel33);
+            this.a1Panel9.Controls.Add(this.lblCalendarLine1MatMax);
             this.a1Panel9.Controls.Add(this.roundLabel34);
-            this.a1Panel9.Controls.Add(this.roundLabel35);
-            this.a1Panel9.Controls.Add(this.roundLabel36);
+            this.a1Panel9.Controls.Add(this.lblCalendarLine1Mat);
+            this.a1Panel9.Controls.Add(this.lblCalendarLine1MatMin);
             this.a1Panel9.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.a1Panel9.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.a1Panel9.Image = null;
@@ -854,21 +854,21 @@
             this.gaugeControl9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.gaugeControl9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gaugeControl9.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
-            this.circularGauge4});
+            this.cirCalendarMat1});
             this.gaugeControl9.Location = new System.Drawing.Point(5, 5);
             this.gaugeControl9.Name = "gaugeControl9";
             this.gaugeControl9.Size = new System.Drawing.Size(146, 151);
             this.gaugeControl9.TabIndex = 9;
             // 
-            // circularGauge4
+            // cirCalendarMat1
             // 
-            this.circularGauge4.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
+            this.cirCalendarMat1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent[] {
             this.arcScaleBackgroundLayerComponent4});
-            this.circularGauge4.Bounds = new System.Drawing.Rectangle(6, 6, 134, 139);
-            this.circularGauge4.Name = "circularGauge4";
-            this.circularGauge4.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
+            this.cirCalendarMat1.Bounds = new System.Drawing.Rectangle(6, 6, 134, 139);
+            this.cirCalendarMat1.Name = "cirCalendarMat1";
+            this.cirCalendarMat1.Needles.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent[] {
             this.arcScaleNeedleComponent4});
-            this.circularGauge4.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
+            this.cirCalendarMat1.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
             this.arcScaleComponent4});
             // 
             // arcScaleBackgroundLayerComponent4
@@ -933,15 +933,15 @@
             this.arcScaleNeedleComponent4.StartOffset = -27F;
             this.arcScaleNeedleComponent4.ZOrder = -50;
             // 
-            // roundLabel33
+            // lblCalendarLine1MatMax
             // 
-            this.roundLabel33._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel33.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel33.Location = new System.Drawing.Point(157, 101);
-            this.roundLabel33.Name = "roundLabel33";
-            this.roundLabel33.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel33.TabIndex = 8;
-            this.roundLabel33.Text = "Max: 100";
+            this.lblCalendarLine1MatMax._BackColor = System.Drawing.Color.Silver;
+            this.lblCalendarLine1MatMax.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine1MatMax.Location = new System.Drawing.Point(157, 101);
+            this.lblCalendarLine1MatMax.Name = "lblCalendarLine1MatMax";
+            this.lblCalendarLine1MatMax.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine1MatMax.TabIndex = 8;
+            this.lblCalendarLine1MatMax.Text = "Max: 0°C";
             // 
             // roundLabel34
             // 
@@ -953,34 +953,34 @@
             this.roundLabel34.TabIndex = 8;
             this.roundLabel34.Text = "1st Material";
             // 
-            // roundLabel35
+            // lblCalendarLine1Mat
             // 
-            this.roundLabel35._BackColor = System.Drawing.Color.SkyBlue;
-            this.roundLabel35.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel35.Location = new System.Drawing.Point(157, 133);
-            this.roundLabel35.Name = "roundLabel35";
-            this.roundLabel35.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel35.TabIndex = 8;
-            this.roundLabel35.Text = "PV: 55";
+            this.lblCalendarLine1Mat._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblCalendarLine1Mat.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine1Mat.Location = new System.Drawing.Point(157, 133);
+            this.lblCalendarLine1Mat.Name = "lblCalendarLine1Mat";
+            this.lblCalendarLine1Mat.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine1Mat.TabIndex = 8;
+            this.lblCalendarLine1Mat.Text = "Temp: 0°C";
             // 
-            // roundLabel36
+            // lblCalendarLine1MatMin
             // 
-            this.roundLabel36._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel36.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel36.Location = new System.Drawing.Point(157, 74);
-            this.roundLabel36.Name = "roundLabel36";
-            this.roundLabel36.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel36.TabIndex = 8;
-            this.roundLabel36.Text = "Min: 50";
+            this.lblCalendarLine1MatMin._BackColor = System.Drawing.Color.Silver;
+            this.lblCalendarLine1MatMin.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine1MatMin.Location = new System.Drawing.Point(157, 74);
+            this.lblCalendarLine1MatMin.Name = "lblCalendarLine1MatMin";
+            this.lblCalendarLine1MatMin.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine1MatMin.TabIndex = 8;
+            this.lblCalendarLine1MatMin.Text = "Min: 0°C";
             // 
             // a1Panel10
             // 
             this.a1Panel10.BackColor = System.Drawing.Color.Transparent;
             this.a1Panel10.BorderColor = System.Drawing.Color.Gray;
-            this.a1Panel10.Controls.Add(this.roundLabel37);
+            this.a1Panel10.Controls.Add(this.lblCalendarLine1MCMax);
             this.a1Panel10.Controls.Add(this.roundLabel38);
-            this.a1Panel10.Controls.Add(this.roundLabel39);
-            this.a1Panel10.Controls.Add(this.roundLabel40);
+            this.a1Panel10.Controls.Add(this.lblCalendarLine1MC);
+            this.a1Panel10.Controls.Add(this.lblCalendarLine1MCMin);
             this.a1Panel10.Controls.Add(this.gaugeControl10);
             this.a1Panel10.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.a1Panel10.GradientStartColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
@@ -992,15 +992,15 @@
             this.a1Panel10.Size = new System.Drawing.Size(267, 293);
             this.a1Panel10.TabIndex = 14;
             // 
-            // roundLabel37
+            // lblCalendarLine1MCMax
             // 
-            this.roundLabel37._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel37.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel37.Location = new System.Drawing.Point(157, 216);
-            this.roundLabel37.Name = "roundLabel37";
-            this.roundLabel37.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel37.TabIndex = 8;
-            this.roundLabel37.Text = "Max: 100";
+            this.lblCalendarLine1MCMax._BackColor = System.Drawing.Color.Silver;
+            this.lblCalendarLine1MCMax.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine1MCMax.Location = new System.Drawing.Point(157, 216);
+            this.lblCalendarLine1MCMax.Name = "lblCalendarLine1MCMax";
+            this.lblCalendarLine1MCMax.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine1MCMax.TabIndex = 8;
+            this.lblCalendarLine1MCMax.Text = "Max: 0°C";
             // 
             // roundLabel38
             // 
@@ -1012,47 +1012,47 @@
             this.roundLabel38.TabIndex = 8;
             this.roundLabel38.Text = "1st Machine";
             // 
-            // roundLabel39
+            // lblCalendarLine1MC
             // 
-            this.roundLabel39._BackColor = System.Drawing.Color.SkyBlue;
-            this.roundLabel39.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel39.Location = new System.Drawing.Point(157, 251);
-            this.roundLabel39.Name = "roundLabel39";
-            this.roundLabel39.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel39.TabIndex = 8;
-            this.roundLabel39.Text = "PV: 55";
+            this.lblCalendarLine1MC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblCalendarLine1MC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine1MC.Location = new System.Drawing.Point(157, 251);
+            this.lblCalendarLine1MC.Name = "lblCalendarLine1MC";
+            this.lblCalendarLine1MC.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine1MC.TabIndex = 8;
+            this.lblCalendarLine1MC.Text = "Temp: 0°C";
             // 
-            // roundLabel40
+            // lblCalendarLine1MCMin
             // 
-            this.roundLabel40._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel40.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel40.Location = new System.Drawing.Point(157, 189);
-            this.roundLabel40.Name = "roundLabel40";
-            this.roundLabel40.Size = new System.Drawing.Size(100, 23);
-            this.roundLabel40.TabIndex = 8;
-            this.roundLabel40.Text = "Min: 50";
+            this.lblCalendarLine1MCMin._BackColor = System.Drawing.Color.Silver;
+            this.lblCalendarLine1MCMin.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalendarLine1MCMin.Location = new System.Drawing.Point(157, 189);
+            this.lblCalendarLine1MCMin.Name = "lblCalendarLine1MCMin";
+            this.lblCalendarLine1MCMin.Size = new System.Drawing.Size(100, 23);
+            this.lblCalendarLine1MCMin.TabIndex = 8;
+            this.lblCalendarLine1MCMin.Text = "Min: 0°C";
             // 
             // gaugeControl10
             // 
             this.gaugeControl10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.gaugeControl10.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gaugeControl10.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
-            this.linearGauge5});
+            this.lnCalendarMC1});
             this.gaugeControl10.Location = new System.Drawing.Point(5, 5);
             this.gaugeControl10.Name = "gaugeControl10";
             this.gaugeControl10.Size = new System.Drawing.Size(146, 276);
             this.gaugeControl10.TabIndex = 8;
             // 
-            // linearGauge5
+            // lnCalendarMC1
             // 
-            this.linearGauge5.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleBackgroundLayerComponent[] {
+            this.lnCalendarMC1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleBackgroundLayerComponent[] {
             this.linearScaleBackgroundLayerComponent6});
-            this.linearGauge5.Bounds = new System.Drawing.Rectangle(6, 6, 134, 264);
-            this.linearGauge5.Levels.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent[] {
+            this.lnCalendarMC1.Bounds = new System.Drawing.Rectangle(6, 6, 134, 264);
+            this.lnCalendarMC1.Levels.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent[] {
             this.linearScaleLevelComponent6});
-            this.linearGauge5.Name = "linearGauge5";
-            this.linearGauge5.OptionsToolTip.TooltipTitleFormat = "{0}";
-            this.linearGauge5.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent[] {
+            this.lnCalendarMC1.Name = "lnCalendarMC1";
+            this.lnCalendarMC1.OptionsToolTip.TooltipTitleFormat = "{0}";
+            this.lnCalendarMC1.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent[] {
             this.linearScaleComponent6});
             // 
             // linearScaleBackgroundLayerComponent6
@@ -1143,7 +1143,7 @@
             this.lblBanburyLine2MCMax.Name = "lblBanburyLine2MCMax";
             this.lblBanburyLine2MCMax.Size = new System.Drawing.Size(100, 23);
             this.lblBanburyLine2MCMax.TabIndex = 8;
-            this.lblBanburyLine2MCMax.Text = "Max: 100";
+            this.lblBanburyLine2MCMax.Text = "Max: 0°C";
             // 
             // roundLabel6
             // 
@@ -1173,7 +1173,7 @@
             this.lblBanburyLine2MCMin.Name = "lblBanburyLine2MCMin";
             this.lblBanburyLine2MCMin.Size = new System.Drawing.Size(100, 23);
             this.lblBanburyLine2MCMin.TabIndex = 8;
-            this.lblBanburyLine2MCMin.Text = "Min: 50";
+            this.lblBanburyLine2MCMin.Text = "Min: 0°C";
             // 
             // gaugeControl2
             // 
@@ -1286,7 +1286,7 @@
             this.lblRoll2Line2MCMax.Name = "lblRoll2Line2MCMax";
             this.lblRoll2Line2MCMax.Size = new System.Drawing.Size(86, 23);
             this.lblRoll2Line2MCMax.TabIndex = 8;
-            this.lblRoll2Line2MCMax.Text = "Max: 100";
+            this.lblRoll2Line2MCMax.Text = "Max: 0°C";
             // 
             // roundLabel46
             // 
@@ -1390,7 +1390,7 @@
             this.lblRoll2Line2MC.Name = "lblRoll2Line2MC";
             this.lblRoll2Line2MC.Size = new System.Drawing.Size(177, 23);
             this.lblRoll2Line2MC.TabIndex = 8;
-            this.lblRoll2Line2MC.Text = "PV: 55";
+            this.lblRoll2Line2MC.Text = "Temp: 0°C";
             // 
             // lblRoll2Line2MCMin
             // 
@@ -1400,7 +1400,7 @@
             this.lblRoll2Line2MCMin.Name = "lblRoll2Line2MCMin";
             this.lblRoll2Line2MCMin.Size = new System.Drawing.Size(83, 23);
             this.lblRoll2Line2MCMin.TabIndex = 8;
-            this.lblRoll2Line2MCMin.Text = "Min: 50";
+            this.lblRoll2Line2MCMin.Text = "Min: 0°C";
             // 
             // a1Panel4
             // 
@@ -1512,7 +1512,7 @@
             this.lblBanburyLine2MatMax.Name = "lblBanburyLine2MatMax";
             this.lblBanburyLine2MatMax.Size = new System.Drawing.Size(100, 23);
             this.lblBanburyLine2MatMax.TabIndex = 8;
-            this.lblBanburyLine2MatMax.Text = "Max: 100";
+            this.lblBanburyLine2MatMax.Text = "Max: 0°C";
             // 
             // roundLabel14
             // 
@@ -1532,7 +1532,7 @@
             this.lblBanburyLine2Mat.Name = "lblBanburyLine2Mat";
             this.lblBanburyLine2Mat.Size = new System.Drawing.Size(100, 23);
             this.lblBanburyLine2Mat.TabIndex = 8;
-            this.lblBanburyLine2Mat.Text = "PV: 55";
+            this.lblBanburyLine2Mat.Text = "Temp: 0°C";
             // 
             // lblBanburyLine2MatMin
             // 
@@ -1542,7 +1542,7 @@
             this.lblBanburyLine2MatMin.Name = "lblBanburyLine2MatMin";
             this.lblBanburyLine2MatMin.Size = new System.Drawing.Size(100, 23);
             this.lblBanburyLine2MatMin.TabIndex = 8;
-            this.lblBanburyLine2MatMin.Text = "Min: 50";
+            this.lblBanburyLine2MatMin.Text = "Min: 0°C";
             // 
             // a1Panel11
             // 
@@ -1571,7 +1571,7 @@
             this.lblRoll2Line1MCMax.Name = "lblRoll2Line1MCMax";
             this.lblRoll2Line1MCMax.Size = new System.Drawing.Size(86, 23);
             this.lblRoll2Line1MCMax.TabIndex = 8;
-            this.lblRoll2Line1MCMax.Text = "Max: 100";
+            this.lblRoll2Line1MCMax.Text = "Max: 0°C";
             // 
             // roundLabel42
             // 
@@ -1675,7 +1675,7 @@
             this.lblRoll2Line1MC.Name = "lblRoll2Line1MC";
             this.lblRoll2Line1MC.Size = new System.Drawing.Size(177, 23);
             this.lblRoll2Line1MC.TabIndex = 8;
-            this.lblRoll2Line1MC.Text = "PV: 55";
+            this.lblRoll2Line1MC.Text = "Temp: 0°C";
             // 
             // lblRoll2Line1MCMin
             // 
@@ -1685,7 +1685,7 @@
             this.lblRoll2Line1MCMin.Name = "lblRoll2Line1MCMin";
             this.lblRoll2Line1MCMin.Size = new System.Drawing.Size(83, 23);
             this.lblRoll2Line1MCMin.TabIndex = 8;
-            this.lblRoll2Line1MCMin.Text = "Min: 50";
+            this.lblRoll2Line1MCMin.Text = "Min: 0°C";
             // 
             // a1Panel6
             // 
@@ -1714,7 +1714,7 @@
             this.lblRoll1Line2MCMax.Name = "lblRoll1Line2MCMax";
             this.lblRoll1Line2MCMax.Size = new System.Drawing.Size(86, 23);
             this.lblRoll1Line2MCMax.TabIndex = 8;
-            this.lblRoll1Line2MCMax.Text = "Max: 100";
+            this.lblRoll1Line2MCMax.Text = "Max: 0°C";
             // 
             // roundLabel22
             // 
@@ -1818,7 +1818,7 @@
             this.lblRoll1Line2MC.Name = "lblRoll1Line2MC";
             this.lblRoll1Line2MC.Size = new System.Drawing.Size(177, 23);
             this.lblRoll1Line2MC.TabIndex = 8;
-            this.lblRoll1Line2MC.Text = "PV: 55";
+            this.lblRoll1Line2MC.Text = "Temp: 0°C";
             // 
             // lblRoll1Line2MCMin
             // 
@@ -1828,7 +1828,7 @@
             this.lblRoll1Line2MCMin.Name = "lblRoll1Line2MCMin";
             this.lblRoll1Line2MCMin.Size = new System.Drawing.Size(83, 23);
             this.lblRoll1Line2MCMin.TabIndex = 8;
-            this.lblRoll1Line2MCMin.Text = "Min: 50";
+            this.lblRoll1Line2MCMin.Text = "Min: 0°C";
             // 
             // a1Panel5
             // 
@@ -1857,7 +1857,7 @@
             this.lblRoll1Line1MCMax.Name = "lblRoll1Line1MCMax";
             this.lblRoll1Line1MCMax.Size = new System.Drawing.Size(86, 23);
             this.lblRoll1Line1MCMax.TabIndex = 8;
-            this.lblRoll1Line1MCMax.Text = "Max: 100";
+            this.lblRoll1Line1MCMax.Text = "Max: 0°C";
             // 
             // roundLabel18
             // 
@@ -1961,7 +1961,7 @@
             this.lblRoll1Line1MC.Name = "lblRoll1Line1MC";
             this.lblRoll1Line1MC.Size = new System.Drawing.Size(177, 23);
             this.lblRoll1Line1MC.TabIndex = 8;
-            this.lblRoll1Line1MC.Text = "PV: 55";
+            this.lblRoll1Line1MC.Text = "Temp: 0°C";
             // 
             // lblRoll1Line1MCMin
             // 
@@ -1971,7 +1971,7 @@
             this.lblRoll1Line1MCMin.Name = "lblRoll1Line1MCMin";
             this.lblRoll1Line1MCMin.Size = new System.Drawing.Size(83, 23);
             this.lblRoll1Line1MCMin.TabIndex = 8;
-            this.lblRoll1Line1MCMin.Text = "Min: 50";
+            this.lblRoll1Line1MCMin.Text = "Min: 0°C";
             // 
             // a1Panel3
             // 
@@ -2083,7 +2083,7 @@
             this.lblBanburyLine1MatMax.Name = "lblBanburyLine1MatMax";
             this.lblBanburyLine1MatMax.Size = new System.Drawing.Size(100, 23);
             this.lblBanburyLine1MatMax.TabIndex = 8;
-            this.lblBanburyLine1MatMax.Text = "Max: 100";
+            this.lblBanburyLine1MatMax.Text = "Max: 0°C";
             // 
             // roundLabel10
             // 
@@ -2103,7 +2103,7 @@
             this.lblBanburyLine1Mat.Name = "lblBanburyLine1Mat";
             this.lblBanburyLine1Mat.Size = new System.Drawing.Size(100, 23);
             this.lblBanburyLine1Mat.TabIndex = 8;
-            this.lblBanburyLine1Mat.Text = "PV: 55";
+            this.lblBanburyLine1Mat.Text = "Temp: 0°C";
             // 
             // lblBanburyLine1MatMin
             // 
@@ -2113,7 +2113,7 @@
             this.lblBanburyLine1MatMin.Name = "lblBanburyLine1MatMin";
             this.lblBanburyLine1MatMin.Size = new System.Drawing.Size(100, 23);
             this.lblBanburyLine1MatMin.TabIndex = 8;
-            this.lblBanburyLine1MatMin.Text = "Min: 50";
+            this.lblBanburyLine1MatMin.Text = "Min: 0°C";
             // 
             // a1Panel1
             // 
@@ -2142,7 +2142,7 @@
             this.lblBanburyLine1MCMax.Name = "lblBanburyLine1MCMax";
             this.lblBanburyLine1MCMax.Size = new System.Drawing.Size(100, 23);
             this.lblBanburyLine1MCMax.TabIndex = 8;
-            this.lblBanburyLine1MCMax.Text = "Max: 100";
+            this.lblBanburyLine1MCMax.Text = "Max: 0°C";
             // 
             // roundLabel4
             // 
@@ -2172,7 +2172,7 @@
             this.lblBanburyLine1MCMin.Name = "lblBanburyLine1MCMin";
             this.lblBanburyLine1MCMin.Size = new System.Drawing.Size(100, 23);
             this.lblBanburyLine1MCMin.TabIndex = 8;
-            this.lblBanburyLine1MCMin.Text = "Min: 50";
+            this.lblBanburyLine1MCMin.Text = "Min: 0°C";
             // 
             // gaugeControl1
             // 
@@ -2303,22 +2303,22 @@
             this.a1Panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartCalendar)).EndInit();
             this.a1Panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.linearGauge4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnCalendarMC2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleBackgroundLayerComponent5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleComponent5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleLevelComponent5)).EndInit();
             this.a1Panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.circularGauge3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cirCalendarMat2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent3)).EndInit();
             this.a1Panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.circularGauge4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cirCalendarMat1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleBackgroundLayerComponent4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleComponent4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arcScaleNeedleComponent4)).EndInit();
             this.a1Panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.linearGauge5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnCalendarMC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleBackgroundLayerComponent6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleComponent6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleLevelComponent6)).EndInit();
@@ -2438,42 +2438,42 @@
         private RoundLabel lblRoll1Line2MCMin;
         private DevExpress.XtraEditors.SeparatorControl separatorControl2;
         private OS_DSF.A1Panel a1Panel7;
-        private RoundLabel roundLabel25;
+        private RoundLabel lblCalendarLine2MCMax;
         private RoundLabel roundLabel26;
-        private RoundLabel roundLabel27;
-        private RoundLabel roundLabel28;
+        private RoundLabel lblCalendarLine2MC;
+        private RoundLabel lblCalendarLine2MCMin;
         private DevExpress.XtraGauges.Win.GaugeControl gaugeControl7;
-        private DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge linearGauge4;
+        private DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge lnCalendarMC2;
         private DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleBackgroundLayerComponent linearScaleBackgroundLayerComponent5;
         private DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent linearScaleComponent5;
         private DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent linearScaleLevelComponent5;
         private OS_DSF.A1Panel a1Panel8;
         private DevExpress.XtraGauges.Win.GaugeControl gaugeControl8;
-        private DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge circularGauge3;
+        private DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge cirCalendarMat2;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent arcScaleBackgroundLayerComponent3;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent arcScaleComponent3;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent arcScaleNeedleComponent3;
-        private RoundLabel roundLabel29;
+        private RoundLabel lblCalendarLine2MatMax;
         private RoundLabel roundLabel30;
-        private RoundLabel roundLabel31;
-        private RoundLabel roundLabel32;
+        private RoundLabel lblCalendarLine2Mat;
+        private RoundLabel lblCalendarLine2MatMin;
         private OS_DSF.A1Panel a1Panel9;
         private DevExpress.XtraGauges.Win.GaugeControl gaugeControl9;
-        private DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge circularGauge4;
+        private DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge cirCalendarMat1;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleBackgroundLayerComponent arcScaleBackgroundLayerComponent4;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent arcScaleComponent4;
         private DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleNeedleComponent arcScaleNeedleComponent4;
-        private RoundLabel roundLabel33;
+        private RoundLabel lblCalendarLine1MatMax;
         private RoundLabel roundLabel34;
-        private RoundLabel roundLabel35;
-        private RoundLabel roundLabel36;
+        private RoundLabel lblCalendarLine1Mat;
+        private RoundLabel lblCalendarLine1MatMin;
         private OS_DSF.A1Panel a1Panel10;
-        private RoundLabel roundLabel37;
+        private RoundLabel lblCalendarLine1MCMax;
         private RoundLabel roundLabel38;
-        private RoundLabel roundLabel39;
-        private RoundLabel roundLabel40;
+        private RoundLabel lblCalendarLine1MC;
+        private RoundLabel lblCalendarLine1MCMin;
         private DevExpress.XtraGauges.Win.GaugeControl gaugeControl10;
-        private DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge linearGauge5;
+        private DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge lnCalendarMC1;
         private DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleBackgroundLayerComponent linearScaleBackgroundLayerComponent6;
         private DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent linearScaleComponent6;
         private DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent linearScaleLevelComponent6;

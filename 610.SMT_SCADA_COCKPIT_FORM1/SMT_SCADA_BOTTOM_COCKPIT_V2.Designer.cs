@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
-            this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.tmrTime = new System.Windows.Forms.Timer();
+            this.cmdBack = new System.Windows.Forms.Button();
             this.a1Panel11 = new OS_DSF.A1Panel();
             this.roundLabel199 = new RoundLabel();
             this.lbl_PU_SPRAY_10 = new System.Windows.Forms.Label();
@@ -192,9 +192,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.roundLabel163 = new RoundLabel();
-            this.roundLabel155 = new RoundLabel();
-            this.roundLabel160 = new RoundLabel();
-            this.roundLabel162 = new RoundLabel();
             this.a1Panel5 = new OS_DSF.A1Panel();
             this.lbl_IPA_4_Pall = new System.Windows.Forms.Label();
             this.lbl_IPA_4_Extruder = new System.Windows.Forms.Label();
@@ -254,6 +251,10 @@
             this.roundLabel42 = new RoundLabel();
             this.roundLabel22 = new RoundLabel();
             this.roundLabel1 = new RoundLabel();
+            this.roundLabel155 = new RoundLabel();
+            this.roundLabel162 = new RoundLabel();
+            this.roundLabel160 = new RoundLabel();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
             this.a1Panel10.SuspendLayout();
@@ -290,24 +291,6 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
-            // cmdBack
-            // 
-            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
-            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
-            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdBack.FlatAppearance.BorderSize = 0;
-            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdBack.ForeColor = System.Drawing.Color.Navy;
-            this.cmdBack.Location = new System.Drawing.Point(3, 3);
-            this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(77, 70);
-            this.cmdBack.TabIndex = 88;
-            this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdBack.UseVisualStyleBackColor = false;
-            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
-            // 
             // lblDate
             // 
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
@@ -337,6 +320,24 @@
             this.tmrTime.Enabled = true;
             this.tmrTime.Interval = 1000;
             this.tmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
+            // 
+            // cmdBack
+            // 
+            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
+            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdBack.FlatAppearance.BorderSize = 0;
+            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdBack.ForeColor = System.Drawing.Color.Navy;
+            this.cmdBack.Location = new System.Drawing.Point(3, 3);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(77, 70);
+            this.cmdBack.TabIndex = 88;
+            this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
             // a1Panel11
             // 
@@ -2180,42 +2181,6 @@
             this.roundLabel163.TabIndex = 5;
             this.roundLabel163.Text = "PU";
             // 
-            // roundLabel155
-            // 
-            this.roundLabel155._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel155.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel155.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel155.ForeColor = System.Drawing.Color.Black;
-            this.roundLabel155.Location = new System.Drawing.Point(693, 796);
-            this.roundLabel155.Name = "roundLabel155";
-            this.roundLabel155.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel155.TabIndex = 5;
-            this.roundLabel155.Text = "Hose";
-            // 
-            // roundLabel160
-            // 
-            this.roundLabel160._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel160.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel160.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel160.ForeColor = System.Drawing.Color.Black;
-            this.roundLabel160.Location = new System.Drawing.Point(593, 796);
-            this.roundLabel160.Name = "roundLabel160";
-            this.roundLabel160.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel160.TabIndex = 5;
-            this.roundLabel160.Text = "Oil";
-            // 
-            // roundLabel162
-            // 
-            this.roundLabel162._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel162.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel162.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel162.ForeColor = System.Drawing.Color.Black;
-            this.roundLabel162.Location = new System.Drawing.Point(493, 796);
-            this.roundLabel162.Name = "roundLabel162";
-            this.roundLabel162.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel162.TabIndex = 5;
-            this.roundLabel162.Text = "Material";
-            // 
             // a1Panel5
             // 
             this.a1Panel5.BorderColor = System.Drawing.SystemColors.GrayText;
@@ -2914,6 +2879,46 @@
             this.roundLabel1.TabIndex = 5;
             this.roundLabel1.Text = "OS";
             // 
+            // roundLabel155
+            // 
+            this.roundLabel155._BackColor = System.Drawing.Color.Silver;
+            this.roundLabel155.BackColor = System.Drawing.Color.Transparent;
+            this.roundLabel155.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel155.ForeColor = System.Drawing.Color.Black;
+            this.roundLabel155.Location = new System.Drawing.Point(693, 796);
+            this.roundLabel155.Name = "roundLabel155";
+            this.roundLabel155.Size = new System.Drawing.Size(94, 22);
+            this.roundLabel155.TabIndex = 5;
+            this.roundLabel155.Text = "Hose";
+            // 
+            // roundLabel162
+            // 
+            this.roundLabel162._BackColor = System.Drawing.Color.Silver;
+            this.roundLabel162.BackColor = System.Drawing.Color.Transparent;
+            this.roundLabel162.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel162.ForeColor = System.Drawing.Color.Black;
+            this.roundLabel162.Location = new System.Drawing.Point(493, 796);
+            this.roundLabel162.Name = "roundLabel162";
+            this.roundLabel162.Size = new System.Drawing.Size(94, 22);
+            this.roundLabel162.TabIndex = 5;
+            this.roundLabel162.Text = "Material";
+            // 
+            // roundLabel160
+            // 
+            this.roundLabel160._BackColor = System.Drawing.Color.Silver;
+            this.roundLabel160.BackColor = System.Drawing.Color.Transparent;
+            this.roundLabel160.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel160.ForeColor = System.Drawing.Color.Black;
+            this.roundLabel160.Location = new System.Drawing.Point(593, 796);
+            this.roundLabel160.Name = "roundLabel160";
+            this.roundLabel160.Size = new System.Drawing.Size(94, 22);
+            this.roundLabel160.TabIndex = 5;
+            this.roundLabel160.Text = "Oil";
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // SMT_SCADA_BOTTOM_COCKPIT_V2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3187,5 +3192,6 @@
         private System.Windows.Forms.Label lbl_PU_UV_4;
         private System.Windows.Forms.Label label114;
         private System.Windows.Forms.Label lbl_PU_UV_5;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

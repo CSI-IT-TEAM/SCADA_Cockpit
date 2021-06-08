@@ -12,14 +12,15 @@ using System.Windows.Forms;
 
 namespace FORM
 {
-    public partial class SMT_SCADA_BOTTOM_OS_TEMPER_V2 : Form
+    public partial class SMT_SCADA_B1RUBBER_TEMPER : Form
     {
-        public SMT_SCADA_BOTTOM_OS_TEMPER_V2()
+        public SMT_SCADA_B1RUBBER_TEMPER()
         {
             InitializeComponent();
             tmrDate.Stop();
         }
         #region Variable
+        const int ReloadTime = 60; //Seconds
         int cCount = 0;
         DataTable _dt, _dtBanb1, _dtBanb2, _dtRoll11, _dtRoll12, _dtRoll21, _dtRoll22, _dtCald1, _dtCald2;
         double iBanburyMC1 = 0, iBanburyMC2 = 0, iBanburyMat1 = 0, iBanburyMat2 = 0;
@@ -36,7 +37,7 @@ namespace FORM
         {
             if (this.Visible)
             {
-                cCount = 180;
+                cCount = ReloadTime;
                 tmrDate.Start();
             }
             else
@@ -360,37 +361,32 @@ namespace FORM
             lblRoll2Line1MCMin.Text = "Min: " + dRoll2MC1Min.ToString() + " °C";
             lblRoll2Line1MCMax.Text = "Max: " + dRoll2MC1Max.ToString() + " °C";
 
-            //BindingGauges(lnRollMC22, iRoll2MC2, dRoll2MC2Min - 10, dRoll2MC2Max + 10, dRoll2MC2Min, dRoll2MC2Max);
-
-            //lblRoll2Line2MC.Text = "Temp: " + iRoll2MC2.ToString() + " °C";
-            //lblRoll2Line2MCMin.Text = "Min: " + dRoll2MC2Min.ToString() + " °C";
-            //lblRoll2Line2MCMax.Text = "Max: " + dRoll2MC2Max.ToString() + " °C";
-
-
-            //BindingGauges(lnCalendarMC1, iCalendarMC1, dCalendarMC1Min - 10, dCalendarMC1Max + 10, dCalendarMC1Min, dCalendarMC1Max);
-
-            //lblCalendarLine1MC.Text = "Temp: " + iCalendarMC1.ToString() + " °C";
-            //lblCalendarLine1MCMin.Text = "Min: " + dCalendarMC1Min.ToString() + " °C";
-            //lblCalendarLine1MCMax.Text = "Max: " + dCalendarMC1Max.ToString() + " °C";
-
-            //BindingGauges(lnCalendarMC2, iCalendarMC2, dCalendarMC2Min - 10, dCalendarMC2Max + 10, dCalendarMC2Min, dCalendarMC2Max);
-
-            //lblCalendarLine2MC.Text = "Temp: " + iCalendarMC2.ToString() + " °C";
-            //lblCalendarLine2MCMin.Text = "Min: " + dCalendarMC2Min.ToString() + " °C";
-            //lblCalendarLine2MCMax.Text = "Max: " + dCalendarMC2Max.ToString() + " °C";
-
-            //BindingGauges(cirCalendarMat1, iCalendarMat1, dCalendarMat1Min - 10, dCalendarMat1Max + 10, dCalendarMat1Min, dCalendarMat1Max);
+            BindingGauges(lnRollMC22, iRoll2MC2, dRoll2MC2Min - 10, dRoll2MC2Max + 10, dRoll2MC2Min, dRoll2MC2Max);
+            lblRoll2Line2MC.Text = "Temp: " + iRoll2MC2.ToString() + " °C";
+            lblRoll2Line2MCMin.Text = "Min: " + dRoll2MC2Min.ToString() + " °C";
+            lblRoll2Line2MCMax.Text = "Max: " + dRoll2MC2Max.ToString() + " °C";
 
 
-            //lblCalendarLine1Mat.Text = "Temp: " + iCalendarMat1.ToString() + " °C";
-            //lblCalendarLine1MatMin.Text = "Min: " + dCalendarMat1Min.ToString() + " °C";
-            //lblCalendarLine1MatMax.Text = "Max: " + dCalendarMat1Max.ToString() + " °C";
+            BindingGauges(lnCalendarMC1, iCalendarMC1, dCalendarMC1Min - 10, dCalendarMC1Max + 10, dCalendarMC1Min, dCalendarMC1Max);
+            lblCalendarLine1MC.Text = "Temp: " + iCalendarMC1.ToString() + " °C";
+            lblCalendarLine1MCMin.Text = "Min: " + dCalendarMC1Min.ToString() + " °C";
+            lblCalendarLine1MCMax.Text = "Max: " + dCalendarMC1Max.ToString() + " °C";
+
+            BindingGauges(lnCalendarMC2, iCalendarMC2, dCalendarMC2Min - 10, dCalendarMC2Max + 10, dCalendarMC2Min, dCalendarMC2Max);
+            lblCalendarLine2MC.Text = "Temp: " + iCalendarMC2.ToString() + " °C";
+            lblCalendarLine2MCMin.Text = "Min: " + dCalendarMC2Min.ToString() + " °C";
+            lblCalendarLine2MCMax.Text = "Max: " + dCalendarMC2Max.ToString() + " °C";
+
+            BindingGauges(cirCalendarMat1, iCalendarMat1, dCalendarMat1Min - 10, dCalendarMat1Max + 10, dCalendarMat1Min, dCalendarMat1Max);
+            lblCalendarLine1Mat.Text = "Temp: " + iCalendarMat1.ToString() + " °C";
+            lblCalendarLine1MatMin.Text = "Min: " + dCalendarMat1Min.ToString() + " °C";
+            lblCalendarLine1MatMax.Text = "Max: " + dCalendarMat1Max.ToString() + " °C";
 
 
-            //BindingGauges(cirCalendarMat2, iCalendarMat2, dCalendarMat2Min - 10, dCalendarMat2Max + 10, dCalendarMat2Min, dCalendarMat2Max);
-            //lblCalendarLine2Mat.Text = "Temp: " + iCalendarMat2.ToString() + " °C";
-            //lblCalendarLine2MatMin.Text = "Min: " + dCalendarMat2Min.ToString() + " °C";
-            //lblCalendarLine2MatMax.Text = "Max: " + dCalendarMat2Max.ToString() + " °C";
+            BindingGauges(cirCalendarMat2, iCalendarMat2, dCalendarMat2Min - 10, dCalendarMat2Max + 10, dCalendarMat2Min, dCalendarMat2Max);
+            lblCalendarLine2Mat.Text = "Temp: " + iCalendarMat2.ToString() + " °C";
+            lblCalendarLine2MatMin.Text = "Min: " + dCalendarMat2Min.ToString() + " °C";
+            lblCalendarLine2MatMax.Text = "Max: " + dCalendarMat2Max.ToString() + " °C";
 
 
         }
@@ -499,7 +495,7 @@ namespace FORM
                 //title
                 DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
                 chartTitle2.Alignment = System.Drawing.StringAlignment.Near;
-                chartTitle2.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+                chartTitle2.Font = new System.Drawing.Font("Times New Roman", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 chartTitle2.Text = arg_name1;
                 chartTitle2.TextColor = System.Drawing.Color.Yellow;
                 arg_chart.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] { chartTitle2 });
@@ -723,7 +719,7 @@ namespace FORM
         {
             cCount++;
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
-            if (cCount >= 180)
+            if (cCount >= ReloadTime)
             {
                 cCount = 0;
                 BindingDataGauges();

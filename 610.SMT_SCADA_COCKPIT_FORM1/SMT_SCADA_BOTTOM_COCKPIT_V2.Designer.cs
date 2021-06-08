@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer();
             this.a1Panel11 = new OS_DSF.A1Panel();
             this.roundLabel199 = new RoundLabel();
             this.lbl_PU_SPRAY_10 = new System.Windows.Forms.Label();
@@ -238,7 +237,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lbl_OS_EVA_Kneader = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.roundLabel19 = new RoundLabel();
+            this.lbl_OS_GRP_EVA = new RoundLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.a1Panel1 = new OS_DSF.A1Panel();
             this.lbl_OS_Rub_Calendar = new System.Windows.Forms.Label();
@@ -2599,7 +2598,7 @@
             this.a1Panel2.Controls.Add(this.label11);
             this.a1Panel2.Controls.Add(this.lbl_OS_EVA_Kneader);
             this.a1Panel2.Controls.Add(this.label10);
-            this.a1Panel2.Controls.Add(this.roundLabel19);
+            this.a1Panel2.Controls.Add(this.lbl_OS_GRP_EVA);
             this.a1Panel2.Controls.Add(this.label9);
             this.a1Panel2.GradientEndColor = System.Drawing.Color.White;
             this.a1Panel2.GradientStartColor = System.Drawing.Color.White;
@@ -2710,17 +2709,17 @@
             this.label10.Text = "Roll";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // roundLabel19
+            // lbl_OS_GRP_EVA
             // 
-            this.roundLabel19._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.roundLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel19.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel19.ForeColor = System.Drawing.Color.White;
-            this.roundLabel19.Location = new System.Drawing.Point(0, 0);
-            this.roundLabel19.Name = "roundLabel19";
-            this.roundLabel19.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel19.TabIndex = 5;
-            this.roundLabel19.Text = "Eva";
+            this.lbl_OS_GRP_EVA._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_OS_GRP_EVA.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_OS_GRP_EVA.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_OS_GRP_EVA.ForeColor = System.Drawing.Color.White;
+            this.lbl_OS_GRP_EVA.Location = new System.Drawing.Point(0, 0);
+            this.lbl_OS_GRP_EVA.Name = "lbl_OS_GRP_EVA";
+            this.lbl_OS_GRP_EVA.Size = new System.Drawing.Size(94, 22);
+            this.lbl_OS_GRP_EVA.TabIndex = 5;
+            this.lbl_OS_GRP_EVA.Text = "Eva";
             // 
             // label9
             // 
@@ -2971,7 +2970,7 @@
         private OS_DSF.A1Panel a1Panel1;
         private RoundLabel lbl_OS_GRP_RUBBER;
         private OS_DSF.A1Panel a1Panel2;
-        private RoundLabel roundLabel19;
+        private RoundLabel lbl_OS_GRP_EVA;
         private RoundLabel roundLabel22;
         private OS_DSF.A1Panel a1Panel3;
         private RoundLabel roundLabel33;

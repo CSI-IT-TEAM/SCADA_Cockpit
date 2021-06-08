@@ -299,7 +299,7 @@ namespace FORM
         {
             Label lbl = ((Label)sender);
             MessageBox.Show(lbl.Name.ToString());
-            //ComVar.Var.callForm = SEL_F_CALL("Q","1", lbl.Name.ToString()).Rows[0]["FORM_CALL_SEQ"].ToString();
+            ComVar.Var.callForm = SEL_F_CALL("Q","1", lbl.Name.ToString()).Rows[0]["FORM_CALL_SEQ"].ToString();
         }
         #endregion
 

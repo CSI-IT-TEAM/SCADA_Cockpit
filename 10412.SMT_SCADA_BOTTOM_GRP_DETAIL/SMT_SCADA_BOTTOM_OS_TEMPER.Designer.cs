@@ -40,8 +40,6 @@ namespace FORM
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.tblMainRub = new System.Windows.Forms.TableLayoutPanel();
-            this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.tblMainEVA = new System.Windows.Forms.TableLayoutPanel();
             this.a1Panel4 = new OS_DSF.A1Panel();
             this.chartCalendar = new DevExpress.XtraCharts.ChartControl();
             this.a1Panel2 = new OS_DSF.A1Panel();
@@ -50,6 +48,8 @@ namespace FORM
             this.chartBanbury = new DevExpress.XtraCharts.ChartControl();
             this.a1Panel3 = new OS_DSF.A1Panel();
             this.chartRoll2 = new DevExpress.XtraCharts.ChartControl();
+            this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.tblMainEVA = new System.Windows.Forms.TableLayoutPanel();
             this.a1Panel6 = new OS_DSF.A1Panel();
             this.chartEXTR = new DevExpress.XtraCharts.ChartControl();
             this.a1Panel5 = new OS_DSF.A1Panel();
@@ -69,8 +69,6 @@ namespace FORM
             this.navigationFrame1.SuspendLayout();
             this.navigationPage1.SuspendLayout();
             this.tblMainRub.SuspendLayout();
-            this.navigationPage2.SuspendLayout();
-            this.tblMainEVA.SuspendLayout();
             this.a1Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartCalendar)).BeginInit();
             this.a1Panel2.SuspendLayout();
@@ -79,6 +77,8 @@ namespace FORM
             ((System.ComponentModel.ISupportInitialize)(this.chartBanbury)).BeginInit();
             this.a1Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRoll2)).BeginInit();
+            this.navigationPage2.SuspendLayout();
+            this.tblMainEVA.SuspendLayout();
             this.a1Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartEXTR)).BeginInit();
             this.a1Panel5.SuspendLayout();
@@ -222,34 +222,6 @@ namespace FORM
             this.tblMainRub.Size = new System.Drawing.Size(1904, 914);
             this.tblMainRub.TabIndex = 0;
             // 
-            // navigationPage2
-            // 
-            this.navigationPage2.Caption = "navigationPage2";
-            this.navigationPage2.Controls.Add(this.tblMainEVA);
-            this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(1904, 914);
-            // 
-            // tblMainEVA
-            // 
-            this.tblMainEVA.ColumnCount = 3;
-            this.tblMainEVA.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblMainEVA.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblMainEVA.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblMainEVA.Controls.Add(this.a1Panel6, 0, 1);
-            this.tblMainEVA.Controls.Add(this.a1Panel5, 0, 0);
-            this.tblMainEVA.Controls.Add(this.a1Panel7, 1, 0);
-            this.tblMainEVA.Controls.Add(this.a1Panel8, 2, 0);
-            this.tblMainEVA.Controls.Add(this.a1Panel9, 1, 1);
-            this.tblMainEVA.Controls.Add(this.a1Panel10, 2, 1);
-            this.tblMainEVA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblMainEVA.Location = new System.Drawing.Point(0, 0);
-            this.tblMainEVA.Name = "tblMainEVA";
-            this.tblMainEVA.RowCount = 2;
-            this.tblMainEVA.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblMainEVA.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblMainEVA.Size = new System.Drawing.Size(1904, 914);
-            this.tblMainEVA.TabIndex = 0;
-            // 
             // a1Panel4
             // 
             this.a1Panel4.BorderColor = System.Drawing.Color.Gray;
@@ -353,6 +325,34 @@ namespace FORM
             this.chartRoll2.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartRoll2.Size = new System.Drawing.Size(925, 433);
             this.chartRoll2.TabIndex = 0;
+            // 
+            // navigationPage2
+            // 
+            this.navigationPage2.Caption = "navigationPage2";
+            this.navigationPage2.Controls.Add(this.tblMainEVA);
+            this.navigationPage2.Name = "navigationPage2";
+            this.navigationPage2.Size = new System.Drawing.Size(1904, 914);
+            // 
+            // tblMainEVA
+            // 
+            this.tblMainEVA.ColumnCount = 3;
+            this.tblMainEVA.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblMainEVA.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblMainEVA.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblMainEVA.Controls.Add(this.a1Panel6, 0, 1);
+            this.tblMainEVA.Controls.Add(this.a1Panel5, 0, 0);
+            this.tblMainEVA.Controls.Add(this.a1Panel7, 1, 0);
+            this.tblMainEVA.Controls.Add(this.a1Panel8, 2, 0);
+            this.tblMainEVA.Controls.Add(this.a1Panel9, 1, 1);
+            this.tblMainEVA.Controls.Add(this.a1Panel10, 2, 1);
+            this.tblMainEVA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblMainEVA.Location = new System.Drawing.Point(0, 0);
+            this.tblMainEVA.Name = "tblMainEVA";
+            this.tblMainEVA.RowCount = 2;
+            this.tblMainEVA.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblMainEVA.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblMainEVA.Size = new System.Drawing.Size(1904, 914);
+            this.tblMainEVA.TabIndex = 0;
             // 
             // a1Panel6
             // 
@@ -533,8 +533,6 @@ namespace FORM
             this.navigationFrame1.ResumeLayout(false);
             this.navigationPage1.ResumeLayout(false);
             this.tblMainRub.ResumeLayout(false);
-            this.navigationPage2.ResumeLayout(false);
-            this.tblMainEVA.ResumeLayout(false);
             this.a1Panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartCalendar)).EndInit();
             this.a1Panel2.ResumeLayout(false);
@@ -543,6 +541,8 @@ namespace FORM
             ((System.ComponentModel.ISupportInitialize)(this.chartBanbury)).EndInit();
             this.a1Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartRoll2)).EndInit();
+            this.navigationPage2.ResumeLayout(false);
+            this.tblMainEVA.ResumeLayout(false);
             this.a1Panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartEXTR)).EndInit();
             this.a1Panel5.ResumeLayout(false);

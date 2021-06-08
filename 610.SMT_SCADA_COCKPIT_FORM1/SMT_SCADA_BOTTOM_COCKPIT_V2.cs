@@ -284,6 +284,7 @@ namespace FORM
 
                 //GROUP
                 lblGrpList.Add(lbl_OS_GRP_RUBBER);
+                lblGrpList.Add(lbl_OS_GRP_EVA);
 
                 foreach (var item in lblList)
                 {
@@ -310,7 +311,12 @@ namespace FORM
 
             ComVar.Var._IsBack = true;
             Label lbl = ((Label)sender);
-            ComVar.Var.callForm = SEL_F_CALL("Q", "2", lbl.Name.ToString()).Rows[0]["FORM_CALL_SEQ"].ToString();
+            //Using Flag
+          //  ComVar.Var._strValue4 = lbl.Name.ToString(); //Lưu giá trị để kiểm tra selected page
+            DataTable dt = SEL_F_CALL("Q", "2", lbl.Name.ToString());
+            if (dt == null) return;
+            ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
+            ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
         }
         
         private void Item_Click(object sender, EventArgs e)
@@ -318,8 +324,9 @@ namespace FORM
             ComVar.Var._IsBack = true;
             Label lbl = ((Label)sender);
             MessageBox.Show(lbl.Name.ToString());
-
-            ComVar.Var.callForm = SEL_F_CALL("Q","1", lbl.Name.ToString()).Rows[0]["FORM_CALL_SEQ"].ToString();
+            DataTable dt = SEL_F_CALL("Q", "1", lbl.Name.ToString());
+            ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
+            ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
         }
         #endregion
 

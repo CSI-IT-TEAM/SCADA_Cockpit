@@ -21,8 +21,8 @@ namespace FORM
             tmrDate.Stop();
         }
         #region var
-
-        int cCount = 0, iPage = 1;
+        bool isFirstTime = true;
+        int cCount = 0, iPage = 1, iPageTmp = 1;
         DataTable _dt, _dtBanb1, _dtBanb2, _dtRoll11, _dtRoll12, _dtRoll21, _dtRoll22, _dtCald1, _dtCald2;
         DataTable _dtData, _dtKned1, _dtKned2, _dtRoll, _dtExtr, _dtPell, _dtCald;
 
@@ -30,9 +30,11 @@ namespace FORM
         {
             if (this.Visible)
             {
+
                 cCount = 180;
                 tmrDate.Start();
-            }else
+            }
+            else
             {
                 tmrDate.Stop();
             }
@@ -44,6 +46,12 @@ namespace FORM
             if (cCount >= 180)
             {
                 cCount = 0;
+                if (iPageTmp != ComVar.Var._iValue1)
+                {
+                    iPage = ComVar.Var._iValue1;
+                    iPageTmp = ComVar.Var._iValue1;
+                }
+
                 switch (iPage)
                 {
                     case 1:
@@ -144,12 +152,12 @@ namespace FORM
                 switch (sbtn.Tag.ToString())
                 {
                     case "Rubber":
-                        iPage = 1;
+                        iPage = ComVar.Var._iValue1 = 1;
                         navigationFrame1.SelectedPage = navigationPage1;
                         BindingPage1Data();
                         break;
                     case "EVA":
-                        iPage = 2;
+                        iPage = ComVar.Var._iValue1 = 2;
                         navigationFrame1.SelectedPage = navigationPage2;
                         BindingPage2Data();
                         break;

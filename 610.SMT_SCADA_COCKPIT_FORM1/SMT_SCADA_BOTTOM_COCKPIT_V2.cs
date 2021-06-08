@@ -297,6 +297,7 @@ namespace FORM
 
         private void Item_Click(object sender, EventArgs e)
         {
+            ComVar.Var._IsBack = true;
             Label lbl = ((Label)sender);
             MessageBox.Show(lbl.Name.ToString());
             ComVar.Var.callForm = SEL_F_CALL("Q","1", lbl.Name.ToString()).Rows[0]["FORM_CALL_SEQ"].ToString();

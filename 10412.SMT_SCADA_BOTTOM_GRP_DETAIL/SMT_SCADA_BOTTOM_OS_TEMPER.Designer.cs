@@ -63,6 +63,7 @@ namespace FORM
             this.a1Panel10 = new OS_DSF.A1Panel();
             this.chartCal = new DevExpress.XtraCharts.ChartControl();
             this.tmrDate = new System.Windows.Forms.Timer();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.pnTop.SuspendLayout();
             this.pnCondition.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).BeginInit();
@@ -196,6 +197,8 @@ namespace FORM
             this.navigationFrame1.Size = new System.Drawing.Size(1904, 914);
             this.navigationFrame1.TabIndex = 7;
             this.navigationFrame1.Text = "navigationFrame1";
+            this.navigationFrame1.TransitionAnimationProperties.FrameCount = 600;
+            this.navigationFrame1.TransitionAnimationProperties.FrameInterval = 8000;
             // 
             // navigationPage1
             // 
@@ -516,6 +519,10 @@ namespace FORM
             this.tmrDate.Interval = 1000;
             this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // SMT_SCADA_BOTTOM_OS_TEMPER
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -594,5 +601,6 @@ namespace FORM
         private OS_DSF.A1Panel a1Panel10;
         private DevExpress.XtraCharts.ChartControl chartCal;
         private System.Windows.Forms.Timer tmrDate;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

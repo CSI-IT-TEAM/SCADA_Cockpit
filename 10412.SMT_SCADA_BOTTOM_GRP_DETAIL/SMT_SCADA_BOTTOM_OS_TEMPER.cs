@@ -46,6 +46,8 @@ namespace FORM
             if (cCount >= 180)
             {
                 cCount = 0;
+                sbtnRub.Enabled = true;
+                sBtnEVA.Enabled = true;
                 if (iPageTmp != ComVar.Var._iValue1)
                 {
                     iPage = ComVar.Var._iValue1;
@@ -187,6 +189,7 @@ namespace FORM
         {
             try
             {
+                splashScreenManager1.ShowWaitForm();
                 DataTable dt1 = LOAD_DATA_HISTORY("BB101", "001", "BANB");
                 DataTable dt2 = LOAD_DATA_HISTORY("BB102", "001", "BANB");
 
@@ -249,8 +252,9 @@ namespace FORM
                 // dt2 = checkDt(_dtCald2, LOAD_DATA_HISTORY("BB102", "008", "CALD"));
 
                 CreateChartLine(chartCalendar, dt1, "Calendar", "M/C 1", dt2, "M/C 2");
+                splashScreenManager1.CloseWaitForm();
             }
-            catch { }
+            catch { splashScreenManager1.CloseWaitForm(); }
         }
         #endregion
         #region PAGE 2
@@ -258,6 +262,7 @@ namespace FORM
         {
             try
             {
+                splashScreenManager1.ShowWaitForm();
                 DataTable dt = new DataTable();
                 if (_dtKned1 == null || _dtKned1.Rows.Count == 0)
                     dt = SELECT_TEMP_SUM("KNED", "001");
@@ -298,8 +303,9 @@ namespace FORM
                 else
                     dt = _dtCald.Copy();
                 CreateChartLine(chartCal, dt, "Calender");
+                splashScreenManager1.CloseWaitForm ();
             }
-            catch { }
+            catch { splashScreenManager1.CloseWaitForm(); }
         }
         #endregion
 

@@ -89,8 +89,14 @@ namespace FORM
             if (cCount >= 60)
             {
                 cCount = 0;
-                DataTable dt = SEL_BOTTOM_COCKPIT_DATA("Q");
-                BindingData(dt);
+                try
+                {
+                    splashScreenManager1.ShowWaitForm();
+                    DataTable dt = SEL_BOTTOM_COCKPIT_DATA("Q");
+                    BindingData(dt);
+                    splashScreenManager1.CloseWaitForm();
+                }
+                catch { splashScreenManager1.CloseWaitForm(); }
             }
         }
 

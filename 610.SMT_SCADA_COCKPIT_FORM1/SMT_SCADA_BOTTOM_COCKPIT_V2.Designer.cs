@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.a1Panel11 = new OS_DSF.A1Panel();
             this.roundLabel199 = new RoundLabel();
             this.lbl_PU_SPRAY_10 = new System.Windows.Forms.Label();
@@ -254,6 +255,7 @@
             this.roundLabel155 = new RoundLabel();
             this.roundLabel162 = new RoundLabel();
             this.roundLabel160 = new RoundLabel();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
             this.a1Panel10.SuspendLayout();
@@ -2915,6 +2917,10 @@
             this.roundLabel160.TabIndex = 5;
             this.roundLabel160.Text = "Oil";
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // SMT_SCADA_BOTTOM_COCKPIT_V2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3188,5 +3194,6 @@
         private System.Windows.Forms.Label lbl_PU_UV_4;
         private System.Windows.Forms.Label label114;
         private System.Windows.Forms.Label lbl_PU_UV_5;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

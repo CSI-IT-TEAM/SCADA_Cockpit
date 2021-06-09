@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
+            this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.tmrTime = new System.Windows.Forms.Timer();
-            this.cmdBack = new System.Windows.Forms.Button();
             this.a1Panel11 = new OS_DSF.A1Panel();
             this.roundLabel199 = new RoundLabel();
             this.lbl_PU_SPRAY_10 = new System.Windows.Forms.Label();
@@ -254,7 +254,6 @@
             this.roundLabel155 = new RoundLabel();
             this.roundLabel162 = new RoundLabel();
             this.roundLabel160 = new RoundLabel();
-            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
             this.a1Panel10.SuspendLayout();
@@ -291,6 +290,24 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
+            // cmdBack
+            // 
+            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
+            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdBack.FlatAppearance.BorderSize = 0;
+            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdBack.ForeColor = System.Drawing.Color.Navy;
+            this.cmdBack.Location = new System.Drawing.Point(3, 3);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(77, 70);
+            this.cmdBack.TabIndex = 88;
+            this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
+            // 
             // lblDate
             // 
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
@@ -320,24 +337,6 @@
             this.tmrTime.Enabled = true;
             this.tmrTime.Interval = 1000;
             this.tmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
-            // 
-            // cmdBack
-            // 
-            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
-            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
-            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdBack.FlatAppearance.BorderSize = 0;
-            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdBack.ForeColor = System.Drawing.Color.Navy;
-            this.cmdBack.Location = new System.Drawing.Point(3, 3);
-            this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(77, 70);
-            this.cmdBack.TabIndex = 88;
-            this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdBack.UseVisualStyleBackColor = false;
-            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
             // a1Panel11
             // 
@@ -2762,6 +2761,7 @@
             this.lbl_OS_Rub_Banbury.TabIndex = 6;
             this.lbl_OS_Rub_Banbury.Tag = "lbl_OS_Rub_Banbury";
             this.lbl_OS_Rub_Banbury.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_OS_Rub_Banbury.Click += new System.EventHandler(this.Item_Click);
             // 
             // label5
             // 
@@ -2914,10 +2914,6 @@
             this.roundLabel160.Size = new System.Drawing.Size(94, 22);
             this.roundLabel160.TabIndex = 5;
             this.roundLabel160.Text = "Oil";
-            // 
-            // splashScreenManager1
-            // 
-            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // SMT_SCADA_BOTTOM_COCKPIT_V2
             // 
@@ -3192,6 +3188,5 @@
         private System.Windows.Forms.Label lbl_PU_UV_4;
         private System.Windows.Forms.Label label114;
         private System.Windows.Forms.Label lbl_PU_UV_5;
-        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

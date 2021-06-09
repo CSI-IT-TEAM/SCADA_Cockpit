@@ -192,9 +192,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.roundLabel163 = new RoundLabel();
-            this.roundLabel155 = new RoundLabel();
-            this.roundLabel160 = new RoundLabel();
-            this.roundLabel162 = new RoundLabel();
             this.a1Panel5 = new OS_DSF.A1Panel();
             this.lbl_IPA_4_Pall = new System.Windows.Forms.Label();
             this.lbl_IPA_4_Extruder = new System.Windows.Forms.Label();
@@ -254,6 +251,9 @@
             this.roundLabel42 = new RoundLabel();
             this.roundLabel22 = new RoundLabel();
             this.roundLabel1 = new RoundLabel();
+            this.roundLabel155 = new RoundLabel();
+            this.roundLabel162 = new RoundLabel();
+            this.roundLabel160 = new RoundLabel();
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
             this.a1Panel10.SuspendLayout();
@@ -2180,42 +2180,6 @@
             this.roundLabel163.TabIndex = 5;
             this.roundLabel163.Text = "PU";
             // 
-            // roundLabel155
-            // 
-            this.roundLabel155._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel155.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel155.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel155.ForeColor = System.Drawing.Color.Black;
-            this.roundLabel155.Location = new System.Drawing.Point(693, 796);
-            this.roundLabel155.Name = "roundLabel155";
-            this.roundLabel155.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel155.TabIndex = 5;
-            this.roundLabel155.Text = "Hose";
-            // 
-            // roundLabel160
-            // 
-            this.roundLabel160._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel160.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel160.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel160.ForeColor = System.Drawing.Color.Black;
-            this.roundLabel160.Location = new System.Drawing.Point(593, 796);
-            this.roundLabel160.Name = "roundLabel160";
-            this.roundLabel160.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel160.TabIndex = 5;
-            this.roundLabel160.Text = "Oil";
-            // 
-            // roundLabel162
-            // 
-            this.roundLabel162._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel162.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel162.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel162.ForeColor = System.Drawing.Color.Black;
-            this.roundLabel162.Location = new System.Drawing.Point(493, 796);
-            this.roundLabel162.Name = "roundLabel162";
-            this.roundLabel162.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel162.TabIndex = 5;
-            this.roundLabel162.Text = "Material";
-            // 
             // a1Panel5
             // 
             this.a1Panel5.BorderColor = System.Drawing.SystemColors.GrayText;
@@ -2797,6 +2761,7 @@
             this.lbl_OS_Rub_Banbury.TabIndex = 6;
             this.lbl_OS_Rub_Banbury.Tag = "lbl_OS_Rub_Banbury";
             this.lbl_OS_Rub_Banbury.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_OS_Rub_Banbury.Click += new System.EventHandler(this.Item_Click);
             // 
             // label5
             // 
@@ -2913,6 +2878,42 @@
             this.roundLabel1.Size = new System.Drawing.Size(98, 63);
             this.roundLabel1.TabIndex = 5;
             this.roundLabel1.Text = "OS";
+            // 
+            // roundLabel155
+            // 
+            this.roundLabel155._BackColor = System.Drawing.Color.Silver;
+            this.roundLabel155.BackColor = System.Drawing.Color.Transparent;
+            this.roundLabel155.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel155.ForeColor = System.Drawing.Color.Black;
+            this.roundLabel155.Location = new System.Drawing.Point(693, 796);
+            this.roundLabel155.Name = "roundLabel155";
+            this.roundLabel155.Size = new System.Drawing.Size(94, 22);
+            this.roundLabel155.TabIndex = 5;
+            this.roundLabel155.Text = "Hose";
+            // 
+            // roundLabel162
+            // 
+            this.roundLabel162._BackColor = System.Drawing.Color.Silver;
+            this.roundLabel162.BackColor = System.Drawing.Color.Transparent;
+            this.roundLabel162.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel162.ForeColor = System.Drawing.Color.Black;
+            this.roundLabel162.Location = new System.Drawing.Point(493, 796);
+            this.roundLabel162.Name = "roundLabel162";
+            this.roundLabel162.Size = new System.Drawing.Size(94, 22);
+            this.roundLabel162.TabIndex = 5;
+            this.roundLabel162.Text = "Material";
+            // 
+            // roundLabel160
+            // 
+            this.roundLabel160._BackColor = System.Drawing.Color.Silver;
+            this.roundLabel160.BackColor = System.Drawing.Color.Transparent;
+            this.roundLabel160.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel160.ForeColor = System.Drawing.Color.Black;
+            this.roundLabel160.Location = new System.Drawing.Point(593, 796);
+            this.roundLabel160.Name = "roundLabel160";
+            this.roundLabel160.Size = new System.Drawing.Size(94, 22);
+            this.roundLabel160.TabIndex = 5;
+            this.roundLabel160.Text = "Oil";
             // 
             // SMT_SCADA_BOTTOM_COCKPIT_V2
             // 

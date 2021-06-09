@@ -188,7 +188,7 @@ namespace FORM
         {
             try
             {
-                splashScreenManager1.ShowWaitForm();
+               
                 //DataTable dt1 = LOAD_DATA_HISTORY("KD101", "001", "KNED");
                 //DataTable dt2 = LOAD_DATA_HISTORY("KD102", "001", "KNED");
                 DataTable dt1 = new DataTable();
@@ -247,9 +247,9 @@ namespace FORM
                     dt1 = _dtCald.Copy();
                 CreateChartLine(chartCal, dt1, "Calender");
 
-                splashScreenManager1.CloseWaitForm();
+                
             }
-            catch { splashScreenManager1.CloseWaitForm(); }
+            catch { }
         }
 
 
@@ -920,12 +920,12 @@ namespace FORM
                 _iMin = iMin;
                 _iMax = iMax;
             }
-            circularGauge.Scales[0].EnableAnimation = false;
+           // circularGauge.Scales[0].EnableAnimation = false;
             //arcScaleGauges.EasingFunction = new BackEase();
             circularGauge.Scales[0].MinValue = (float)_iMin;
             circularGauge.Scales[0].MaxValue = (float)_iMax;
 
-            circularGauge.Scales[0].Value = 0;
+           // circularGauge.Scales[0].Value = 0;
 
             //circularGauge.Labels[0].Text = "0";
             if (circularGauge.Scales[0].Ranges.Count >= 3 && num > 0)
@@ -972,14 +972,14 @@ namespace FORM
                 _iMin = iMin;
                 _iMax = iMax;
             }
-            circularGauge.Scales[0].EnableAnimation = false;
+            //circularGauge.Scales[0].EnableAnimation = false;
             //arcScaleGauges.EasingFunction = new BackEase();
             circularGauge.Scales[0].MinValue = (float)_iMin;
             circularGauge.Scales[0].MaxValue = (float)_iMax;
             //arcScaleGauges.Ranges[0].EndValue = arcScaleGauges.Ranges[1].StartValue = Convert.ToSingle(10);
             //arcScaleGauges.Ranges[1].EndValue = arcScaleGauges.Ranges[2].StartValue = Convert.ToSingle(15);
             //arcScaleGauges.Ranges[2].EndValue = Convert.ToSingle(20);
-            circularGauge.Scales[0].Value = 0;
+           // circularGauge.Scales[0].Value = 0;
 
             if (circularGauge.Scales[0].Ranges.Count >= 3 && num > 0)
             {
@@ -1019,7 +1019,7 @@ namespace FORM
         #endregion
 
 
-        private void tmrDate_Tick(object sender, EventArgs e)
+        private  void tmrDate_Tick(object sender, EventArgs e)
         {
             cCount++;
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
@@ -1027,8 +1027,9 @@ namespace FORM
             {
                 cCount = 0;
                 BindingDataGauges();
-                //LoadData();
                 BindingData();
+                //LoadData();
+
             }
         }
 

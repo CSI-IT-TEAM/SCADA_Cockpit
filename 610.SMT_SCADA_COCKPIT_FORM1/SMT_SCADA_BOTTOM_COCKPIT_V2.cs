@@ -129,7 +129,6 @@ namespace FORM
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -329,7 +328,7 @@ namespace FORM
         {
             ComVar.Var._IsBack = true;
             Label lbl = ((Label)sender);
-            MessageBox.Show(lbl.Name.ToString());
+           // MessageBox.Show(lbl.Name.ToString());
             DataTable dt = SEL_F_CALL("Q", "1", lbl.Name.ToString());
             ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
             ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();

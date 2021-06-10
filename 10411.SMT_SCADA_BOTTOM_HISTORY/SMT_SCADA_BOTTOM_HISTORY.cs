@@ -45,8 +45,11 @@ namespace FORM
                 DataTable dt = SP_MENU_SELECT("Q", "SCADA_B_COCKPIT");
                 BindingTree(dt);
                 dtData = GetData("Q", "ALL", "ALL"); //Get All data temperature once time.
-
-
+                if (isFirstTime)
+                {
+                    isFirstTime = !isFirstTime;
+                    chkAll.Checked = true;
+                }
                 // LoadingDataChart();
             }
         }
@@ -83,19 +86,20 @@ namespace FORM
             treeList.ParentFieldName = "PARENTID";
             Skin skin = GridSkins.GetSkin(treeList.LookAndFeel);
             skin.Properties[GridSkins.OptShowTreeLine] = true;
-            // chkAll.Checked = true;
+
             foreach (TreeListNode node in treeList.Nodes)
             {
                 var dataRow = treeList.GetDataRecordByNode(node);
                 node.Tag = dataRow;
                 //node.Checked = true;
                 node.Expanded = true;
-                foreach (TreeListNode node1 in node.RootNode.Nodes)
-                {
-                    if (node.Checked)
-                        node1.Checked = true;
-                }
+                //foreach (TreeListNode node1 in node.RootNode.Nodes)
+                //{
+                //    if (node.Checked)
+                //        node1.Checked = true;
+                //}
             }
+
         }
 
         #endregion
@@ -119,6 +123,7 @@ namespace FORM
                             lstData.Add(dtTmp);
                         }
                     }
+
                 }
             }
 
@@ -694,7 +699,8 @@ namespace FORM
                         }
                     }
                 }
-                LoadingDataChart();
+                GetDataTable();
+
             }
             catch (Exception ex)
             {

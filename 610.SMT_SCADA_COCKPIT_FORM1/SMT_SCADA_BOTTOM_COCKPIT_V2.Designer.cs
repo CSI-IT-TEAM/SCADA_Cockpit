@@ -254,6 +254,7 @@
             this.roundLabel155 = new RoundLabel();
             this.roundLabel162 = new RoundLabel();
             this.roundLabel160 = new RoundLabel();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
             this.a1Panel10.SuspendLayout();
@@ -288,6 +289,7 @@
             this.btnTest.TabIndex = 89;
             this.btnTest.Text = "Test Me";
             this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Visible = false;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // cmdBack
@@ -2684,6 +2686,8 @@
             this.lbl_OS_GRP_EVA.Size = new System.Drawing.Size(94, 22);
             this.lbl_OS_GRP_EVA.TabIndex = 5;
             this.lbl_OS_GRP_EVA.Text = "Eva";
+            this.lbl_OS_GRP_EVA.MouseEnter += new System.EventHandler(this.lbl_GRP_MouseEnter);
+            this.lbl_OS_GRP_EVA.MouseLeave += new System.EventHandler(this.lbl_GRP_MouseLeave);
             // 
             // label9
             // 
@@ -2818,6 +2822,8 @@
             this.lbl_OS_GRP_RUBBER.Size = new System.Drawing.Size(94, 22);
             this.lbl_OS_GRP_RUBBER.TabIndex = 5;
             this.lbl_OS_GRP_RUBBER.Text = "Rubber";
+            this.lbl_OS_GRP_RUBBER.MouseEnter += new System.EventHandler(this.lbl_GRP_MouseEnter);
+            this.lbl_OS_GRP_RUBBER.MouseLeave += new System.EventHandler(this.lbl_GRP_MouseLeave);
             // 
             // roundLabel133
             // 
@@ -2914,6 +2920,10 @@
             this.roundLabel160.Size = new System.Drawing.Size(94, 22);
             this.roundLabel160.TabIndex = 5;
             this.roundLabel160.Text = "Oil";
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // SMT_SCADA_BOTTOM_COCKPIT_V2
             // 
@@ -3188,5 +3198,6 @@
         private System.Windows.Forms.Label lbl_PU_UV_4;
         private System.Windows.Forms.Label label114;
         private System.Windows.Forms.Label lbl_PU_UV_5;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

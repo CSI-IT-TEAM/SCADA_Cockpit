@@ -121,7 +121,6 @@ namespace FORM
                                 case "Y":
                                     item.BackColor = Color.Yellow;
                                     break;
-                               
                             }
                         }
                     }
@@ -129,7 +128,6 @@ namespace FORM
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -321,7 +319,7 @@ namespace FORM
           //  ComVar.Var._strValue4 = lbl.Name.ToString(); //Lưu giá trị để kiểm tra selected page
             DataTable dt = SEL_F_CALL("Q", "2", lbl.Name.ToString());
             if (dt == null) return;
-            ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
+            //ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
             ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
         }
         
@@ -329,7 +327,7 @@ namespace FORM
         {
             ComVar.Var._IsBack = true;
             Label lbl = ((Label)sender);
-            MessageBox.Show(lbl.Name.ToString());
+           // MessageBox.Show(lbl.Name.ToString());
             DataTable dt = SEL_F_CALL("Q", "1", lbl.Name.ToString());
             ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
             ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
@@ -340,6 +338,20 @@ namespace FORM
         {
             //InitLayout
             InitLayout();
+        }
+
+        private void lbl_GRP_MouseEnter(object sender, EventArgs e)
+        {
+            RoundLabel lbl = ((RoundLabel)sender);
+            lbl.ForeColor = Color.Blue;
+            lbl.Font = new Font("Times New Roman", 14, FontStyle.Bold | FontStyle.Italic);
+        }
+
+        private void lbl_GRP_MouseLeave(object sender, EventArgs e)
+        {
+            RoundLabel lbl = ((RoundLabel)sender);
+            lbl.ForeColor = Color.White;
+            lbl.Font = new Font("Times New Roman", 12, FontStyle.Bold | FontStyle.Italic);
         }
     }
 }

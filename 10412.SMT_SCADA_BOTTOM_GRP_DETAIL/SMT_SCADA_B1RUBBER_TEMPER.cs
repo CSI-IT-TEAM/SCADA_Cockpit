@@ -220,8 +220,6 @@ namespace FORM
             }
             catch { splashScreenManager1.CloseWaitForm(); }
         }
-
-
         private void BindingDataGauges()
         {
             DataTable dt;
@@ -423,8 +421,6 @@ namespace FORM
 
                 DevExpress.XtraCharts.SineEasingFunction sineEasingFunction1 = new DevExpress.XtraCharts.SineEasingFunction();
 
-
-
                 //--------- Add data Point------------
                 if (arg_dt1 != null && arg_dt1.Rows.Count > 0)
                 {
@@ -445,8 +441,6 @@ namespace FORM
                                     series1.Points.Add(new SeriesPoint(arg_dt1.Rows[i]["T_HMS"].ToString(), ""));
                                 else
                                     series1.Points.Add(new SeriesPoint(arg_dt1.Rows[i]["T_HMS"].ToString(), arg_dt1.Rows[i]["VALUE"]));
-
-
                             }
 
                         }
@@ -479,8 +473,6 @@ namespace FORM
                     }
                     catch
                     { }
-
-
                 }
                 series2.ArgumentScaleType = ScaleType.Qualitative;
 
@@ -535,8 +527,6 @@ namespace FORM
 
 
                 // format Series 
-
-
                 splineSeriesView1.LineStyle.Thickness = 3;
                 splineSeriesView2.LineStyle.Thickness = 3;
                 splineSeriesView2.Color = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -576,7 +566,6 @@ namespace FORM
                 else
                     ((XYDiagram)arg_chart.Diagram).AxisY.WholeRange.SetMinMaxValues(Convert.ToInt32(arg_dt1.Rows[0]["MINVAL"].ToString()) - 5, Convert.ToInt32(arg_dt1.Rows[0]["MAXVAL"].ToString()) + 5);
 
-
                 //Phuoc Continues Format
                 ((XYDiagram)arg_chart.Diagram).AxisY.GridLines.Visible = false;
 
@@ -593,16 +582,11 @@ namespace FORM
                 // ((XYDiagram)arg_chart.Diagram).AxisX.Title.Text = "HMS";
                 //  ((XYDiagram)arg_chart.Diagram).AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
                 // ((XYDiagram)arg_chart.Diagram).AxisX.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(240)))));
-
-
-
             }
             catch (Exception ex)
             {
 
             }
-
-
         }
         private void BindingGauges(DevExpress.XtraGauges.Win.Gauges.Linear.LinearGauge circularGauge, double num, double iMin, double iMax, double iRangeMin, double iRangeMax)
         {
@@ -617,12 +601,12 @@ namespace FORM
                 _iMin = iMin;
                 _iMax = iMax;
             }
-            circularGauge.Scales[0].EnableAnimation = false;
+           // circularGauge.Scales[0].EnableAnimation = false;
             //arcScaleGauges.EasingFunction = new BackEase();
             circularGauge.Scales[0].MinValue = (float)_iMin;
             circularGauge.Scales[0].MaxValue = (float)_iMax;
 
-            circularGauge.Scales[0].Value = 0;
+            //circularGauge.Scales[0].Value = 0;
 
             //circularGauge.Labels[0].Text = "0";
             if (circularGauge.Scales[0].Ranges.Count >= 3 && num > 0)
@@ -669,14 +653,14 @@ namespace FORM
                 _iMin = iMin;
                 _iMax = iMax;
             }
-            circularGauge.Scales[0].EnableAnimation = false;
+           // circularGauge.Scales[0].EnableAnimation = false;
             //arcScaleGauges.EasingFunction = new BackEase();
             circularGauge.Scales[0].MinValue = (float)_iMin;
             circularGauge.Scales[0].MaxValue = (float)_iMax;
             //arcScaleGauges.Ranges[0].EndValue = arcScaleGauges.Ranges[1].StartValue = Convert.ToSingle(10);
             //arcScaleGauges.Ranges[1].EndValue = arcScaleGauges.Ranges[2].StartValue = Convert.ToSingle(15);
             //arcScaleGauges.Ranges[2].EndValue = Convert.ToSingle(20);
-            circularGauge.Scales[0].Value = 0;
+           // circularGauge.Scales[0].Value = 0;
 
             if (circularGauge.Scales[0].Ranges.Count >= 3 && num > 0)
             {

@@ -138,7 +138,6 @@ namespace FORM
 
 
 
-
             MyOraDB.Add_Select_Parameter(true);
 
             retDS = MyOraDB.Exe_Select_Procedure();

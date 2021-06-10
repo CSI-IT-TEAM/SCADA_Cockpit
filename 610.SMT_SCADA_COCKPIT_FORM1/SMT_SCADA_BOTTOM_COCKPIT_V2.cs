@@ -339,5 +339,19 @@ namespace FORM
             //InitLayout
             InitLayout();
         }
+
+        private void lbl_GRP_MouseEnter(object sender, EventArgs e)
+        {
+            RoundLabel lbl = ((RoundLabel)sender);
+            lbl.ForeColor = Color.Blue;
+            lbl.Font = new Font("Times New Roman", 14, FontStyle.Bold | FontStyle.Italic);
+        }
+
+        private void lbl_GRP_MouseLeave(object sender, EventArgs e)
+        {
+            RoundLabel lbl = ((RoundLabel)sender);
+            lbl.ForeColor = Color.White;
+            lbl.Font = new Font("Times New Roman", 12, FontStyle.Bold | FontStyle.Italic);
+        }
     }
 }

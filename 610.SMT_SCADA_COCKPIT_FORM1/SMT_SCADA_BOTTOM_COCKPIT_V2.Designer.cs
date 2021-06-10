@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer();
             this.a1Panel11 = new OS_DSF.A1Panel();
             this.roundLabel199 = new RoundLabel();
             this.lbl_PU_SPRAY_10 = new System.Windows.Forms.Label();
@@ -2687,6 +2686,8 @@
             this.lbl_OS_GRP_EVA.Size = new System.Drawing.Size(94, 22);
             this.lbl_OS_GRP_EVA.TabIndex = 5;
             this.lbl_OS_GRP_EVA.Text = "Eva";
+            this.lbl_OS_GRP_EVA.MouseEnter += new System.EventHandler(this.lbl_GRP_MouseEnter);
+            this.lbl_OS_GRP_EVA.MouseLeave += new System.EventHandler(this.lbl_GRP_MouseLeave);
             // 
             // label9
             // 
@@ -2821,6 +2822,8 @@
             this.lbl_OS_GRP_RUBBER.Size = new System.Drawing.Size(94, 22);
             this.lbl_OS_GRP_RUBBER.TabIndex = 5;
             this.lbl_OS_GRP_RUBBER.Text = "Rubber";
+            this.lbl_OS_GRP_RUBBER.MouseEnter += new System.EventHandler(this.lbl_GRP_MouseEnter);
+            this.lbl_OS_GRP_RUBBER.MouseLeave += new System.EventHandler(this.lbl_GRP_MouseLeave);
             // 
             // roundLabel133
             // 

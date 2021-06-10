@@ -73,6 +73,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraGrid.v17.1.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 17.1\Components\Bin\Framework\DevExpress.XtraTreeList.v17.1.dll</HintPath>
+    </Reference>
     <Reference Include="msdatasrc, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -260,6 +264,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\610.SMT_SCADA_COCKPIT_FORM1\610.SMT_SCADA_COCKPIT_FORM1.csproj">
+      <Project>{D57E420E-FAF5-4778-9F6B-F5B9E0868A3D}</Project>
+      <Name>610.SMT_SCADA_COCKPIT_FORM1</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ComVar\ComVar.csproj">
       <Project>{1fdd4c55-6914-47c9-89f0-682d023ac3a9}</Project>
       <Name>ComVar</Name>

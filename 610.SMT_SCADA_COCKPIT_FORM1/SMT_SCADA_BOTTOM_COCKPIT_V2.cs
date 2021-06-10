@@ -330,6 +330,7 @@ namespace FORM
            // MessageBox.Show(lbl.Name.ToString());
             DataTable dt = SEL_F_CALL("Q", "1", lbl.Name.ToString());
             ComVar.Var._strValue1 = dt.Rows[0]["MACHINE_CODE_MAPPING"].ToString();
+            ComVar.Var._strValue2 = dt.Rows[0]["ITEMS_MAPPING"].ToString();
             //ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
             ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
         }

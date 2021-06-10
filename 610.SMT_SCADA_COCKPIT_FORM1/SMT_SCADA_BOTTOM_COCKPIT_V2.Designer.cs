@@ -290,6 +290,7 @@
             this.btnTest.TabIndex = 89;
             this.btnTest.Text = "Test Me";
             this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Visible = false;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // cmdBack

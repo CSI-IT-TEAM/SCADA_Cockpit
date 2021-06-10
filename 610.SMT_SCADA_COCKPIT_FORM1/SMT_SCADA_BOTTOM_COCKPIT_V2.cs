@@ -121,7 +121,6 @@ namespace FORM
                                 case "Y":
                                     item.BackColor = Color.Yellow;
                                     break;
-                               
                             }
                         }
                     }
@@ -320,7 +319,7 @@ namespace FORM
           //  ComVar.Var._strValue4 = lbl.Name.ToString(); //Lưu giá trị để kiểm tra selected page
             DataTable dt = SEL_F_CALL("Q", "2", lbl.Name.ToString());
             if (dt == null) return;
-            ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
+            //ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
             ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
         }
         

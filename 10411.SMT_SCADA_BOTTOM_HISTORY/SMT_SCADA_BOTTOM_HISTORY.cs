@@ -22,7 +22,7 @@ namespace FORM
             InitializeComponent();
         }
         string MachineName = string.Empty;
-        bool isHasChild = false;
+        bool isHasChild = false, isCheckState = true;
         int _time = 0;
         bool isFirstTime = true;
         DataTable dtData = null;
@@ -115,7 +115,7 @@ namespace FORM
                 node.Tag = dataRow;
                 node.Expanded = true;
                 node.Checked = true;
-                
+
                 foreach (TreeListNode node1 in node.RootNode.Nodes)
                 {
                     if (node.Checked)
@@ -131,13 +131,16 @@ namespace FORM
         #region Loading Data
         private void GetDataTable()
         {
+
             List<DataTable> lstData = new List<DataTable>();
             List<string> lstSeriesName = new List<string>();
             DataTable dt = dtData.Copy();//Giu lai datatable goc, de su dung lai.
-
+            isCheckState = false;
             if (dt == null) return;
             foreach (TreeListNode node in treeList.Nodes)
             {
+
+
                 foreach (TreeListNode Childnode in node.RootNode.Nodes)
                 {
                     if (Childnode.Checked)
@@ -152,7 +155,7 @@ namespace FORM
                             lstSeriesName.Add(NodeName);
                         }
                     }
-                    
+
                 }
                 if (!isHasChild)
                 {
@@ -166,9 +169,19 @@ namespace FORM
                             lstData.Add(dtTmp);
                             lstSeriesName.Add(ParNodeName);
                         }
+
                     }
                 }
             }
+
+            chkAll.CheckedChanged -= chkAll_CheckedChanged;
+            chkAll.Checked = treeList.GetAllCheckedNodes().Count == treeList.AllNodesCount;
+            chkAll.CheckedChanged += chkAll_CheckedChanged;
+
+
+
+
+
 
             //Doing something with list datatable
             //  MessageBox.Show("Done!");
@@ -241,11 +254,11 @@ namespace FORM
 
         }
 
-        private void DrawChart(List<DataTable> lstData,List<string> listSeriesName,ChartControl _chart, bool isDrawSpec)
+        private void DrawChart(List<DataTable> lstData, List<string> listSeriesName, ChartControl _chart, bool isDrawSpec)
         {
             try
             {
-              
+
                 int minRow = 0, minRange = 0, maxRange = 0;
                 const int iThickness = 3;
                 //List Range Min, Range Max;
@@ -277,7 +290,7 @@ namespace FORM
                 minRange = GetMinValue(lstRgMin);
                 maxRange = GetMaxValue(lstRgMax);
                 _chart.Series.Clear(); //Remove het series truoc khi add moi.
-              
+
                 for (int i = 0; i < lstData.Count; i++) //Khoi tao so luong series & add vao list Series
                 {
                     Series series = new Series(listSeriesName[i], ViewType.Spline);
@@ -753,7 +766,6 @@ namespace FORM
                 return null;
             }
         }
-
         #endregion
         private void treeList_AfterCheckNode(object sender, NodeEventArgs e)
         {
@@ -762,18 +774,7 @@ namespace FORM
             else
                 SetCheckedChildNodes(e.Node.Nodes);
             GetDataTable();
-            //int cnt = 0;
-            //foreach (TreeListNode node in treeList.Nodes)
-            //{
-            //    if (node.Checked)
-            //        cnt++;
-            //}
-            //if (cnt != treeList.Nodes.Count)
-            //    chkAll.Checked = false;
-            //else
-            //    chkAll.Checked = true;
         }
-
         private void chkAll_CheckedChanged(object sender, EventArgs e)
         {
             if (chkAll.Checked)
@@ -787,7 +788,7 @@ namespace FORM
                     }
                 }
             }
-            else
+            if (!chkAll.Checked)
             {
                 foreach (TreeListNode node in treeList.Nodes)
                 {
@@ -800,12 +801,12 @@ namespace FORM
             }
             GetDataTable();
         }
-
-
         private void SetCheckedChildNodes(TreeListNodes nodes)
         {
             foreach (TreeListNode node in nodes)
+            {
                 node.Checked = node.ParentNode.Checked;
+            }
         }
 
         private bool IsAllChecked(TreeListNodes nodes)

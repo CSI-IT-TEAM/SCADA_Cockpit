@@ -304,7 +304,7 @@
             this.dtp_Ym.Properties.Mask.EditMask = "yyyy/MM/dd";
             this.dtp_Ym.Properties.ShowNullValuePromptWhenFocused = true;
             this.dtp_Ym.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.MonthView;
-            this.dtp_Ym.Size = new System.Drawing.Size(202, 37);
+            this.dtp_Ym.Size = new System.Drawing.Size(202, 35);
             this.dtp_Ym.TabIndex = 710;
             this.dtp_Ym.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.dtp_Ym.ToolTipTitle = "Click vào để chọn ngày";

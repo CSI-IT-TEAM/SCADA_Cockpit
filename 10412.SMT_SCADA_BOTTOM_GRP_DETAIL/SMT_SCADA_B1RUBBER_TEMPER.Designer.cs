@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B1RUBBER_TEMPER));
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange1 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange2 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
@@ -67,6 +66,7 @@
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange23 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange24 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
@@ -87,7 +87,7 @@
             this.a1Panel16 = new OS_DSF.A1Panel();
             this.chartCalendar = new DevExpress.XtraCharts.ChartControl();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
             this.a1Panel7 = new OS_DSF.A1Panel();
             this.lblCalendarLine2MCMax = new RoundLabel();
             this.roundLabel26 = new RoundLabel();
@@ -285,6 +285,7 @@
             // 
             // pnTop
             // 
+            this.pnTop.Controls.Add(this.button1);
             this.pnTop.Controls.Add(this.cmdBack);
             this.pnTop.Controls.Add(this.lblDate);
             this.pnTop.Controls.Add(this.lblHeader);
@@ -293,6 +294,17 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1920, 76);
             this.pnTop.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1130, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 89;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmdBack
             // 
@@ -586,7 +598,7 @@
             // 
             // lblCalendarLine2MC
             // 
-            this.lblCalendarLine2MC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblCalendarLine2MC._BackColor = System.Drawing.Color.Silver;
             this.lblCalendarLine2MC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalendarLine2MC.Location = new System.Drawing.Point(157, 251);
             this.lblCalendarLine2MC.Name = "lblCalendarLine2MC";
@@ -813,7 +825,7 @@
             // 
             // lblCalendarLine2Mat
             // 
-            this.lblCalendarLine2Mat._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblCalendarLine2Mat._BackColor = System.Drawing.Color.Silver;
             this.lblCalendarLine2Mat.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalendarLine2Mat.Location = new System.Drawing.Point(157, 133);
             this.lblCalendarLine2Mat.Name = "lblCalendarLine2Mat";
@@ -956,7 +968,7 @@
             // 
             // lblCalendarLine1Mat
             // 
-            this.lblCalendarLine1Mat._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblCalendarLine1Mat._BackColor = System.Drawing.Color.Silver;
             this.lblCalendarLine1Mat.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalendarLine1Mat.Location = new System.Drawing.Point(157, 133);
             this.lblCalendarLine1Mat.Name = "lblCalendarLine1Mat";
@@ -1015,7 +1027,7 @@
             // 
             // lblCalendarLine1MC
             // 
-            this.lblCalendarLine1MC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblCalendarLine1MC._BackColor = System.Drawing.Color.Silver;
             this.lblCalendarLine1MC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalendarLine1MC.Location = new System.Drawing.Point(157, 251);
             this.lblCalendarLine1MC.Name = "lblCalendarLine1MC";
@@ -1158,7 +1170,7 @@
             // 
             // lblBanburyLine2MC
             // 
-            this.lblBanburyLine2MC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblBanburyLine2MC._BackColor = System.Drawing.Color.Silver;
             this.lblBanburyLine2MC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBanburyLine2MC.Location = new System.Drawing.Point(157, 251);
             this.lblBanburyLine2MC.Name = "lblBanburyLine2MC";
@@ -1385,7 +1397,7 @@
             // 
             // lblRoll2Line2MC
             // 
-            this.lblRoll2Line2MC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblRoll2Line2MC._BackColor = System.Drawing.Color.Silver;
             this.lblRoll2Line2MC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoll2Line2MC.Location = new System.Drawing.Point(8, 65);
             this.lblRoll2Line2MC.Name = "lblRoll2Line2MC";
@@ -1527,7 +1539,7 @@
             // 
             // lblBanburyLine2Mat
             // 
-            this.lblBanburyLine2Mat._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblBanburyLine2Mat._BackColor = System.Drawing.Color.Silver;
             this.lblBanburyLine2Mat.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBanburyLine2Mat.Location = new System.Drawing.Point(157, 133);
             this.lblBanburyLine2Mat.Name = "lblBanburyLine2Mat";
@@ -1670,7 +1682,7 @@
             // 
             // lblRoll2Line1MC
             // 
-            this.lblRoll2Line1MC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblRoll2Line1MC._BackColor = System.Drawing.Color.Silver;
             this.lblRoll2Line1MC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoll2Line1MC.Location = new System.Drawing.Point(8, 65);
             this.lblRoll2Line1MC.Name = "lblRoll2Line1MC";
@@ -1813,7 +1825,7 @@
             // 
             // lblRoll1Line2MC
             // 
-            this.lblRoll1Line2MC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblRoll1Line2MC._BackColor = System.Drawing.Color.Silver;
             this.lblRoll1Line2MC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoll1Line2MC.Location = new System.Drawing.Point(8, 65);
             this.lblRoll1Line2MC.Name = "lblRoll1Line2MC";
@@ -1956,7 +1968,7 @@
             // 
             // lblRoll1Line1MC
             // 
-            this.lblRoll1Line1MC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblRoll1Line1MC._BackColor = System.Drawing.Color.Silver;
             this.lblRoll1Line1MC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoll1Line1MC.Location = new System.Drawing.Point(8, 65);
             this.lblRoll1Line1MC.Name = "lblRoll1Line1MC";
@@ -2098,7 +2110,7 @@
             // 
             // lblBanburyLine1Mat
             // 
-            this.lblBanburyLine1Mat._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblBanburyLine1Mat._BackColor = System.Drawing.Color.Silver;
             this.lblBanburyLine1Mat.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBanburyLine1Mat.Location = new System.Drawing.Point(157, 133);
             this.lblBanburyLine1Mat.Name = "lblBanburyLine1Mat";
@@ -2157,7 +2169,7 @@
             // 
             // lblBanburyLine1MC
             // 
-            this.lblBanburyLine1MC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblBanburyLine1MC._BackColor = System.Drawing.Color.Silver;
             this.lblBanburyLine1MC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBanburyLine1MC.Location = new System.Drawing.Point(157, 251);
             this.lblBanburyLine1MC.Name = "lblBanburyLine1MC";
@@ -2512,5 +2524,6 @@
         private DevExpress.XtraCharts.ChartControl chartCalendar;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.Windows.Forms.Timer tmrDate;
+        private System.Windows.Forms.Button button1;
     }
 }

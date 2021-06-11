@@ -26,6 +26,11 @@ namespace FORM
         double iBanburyMC1 = 0, iBanburyMC2 = 0, iBanburyMat1 = 0, iBanburyMat2 = 0;
         double dBanburyMC1Min = 0, dBanburyMC1Max = 0, dBanburyMC2Min = 0, dBanburyMC2Max = 0, dBanburyMat1Min = 0, dBanburyMat1Max = 0, dBanburyMat2Min = 0, dBanburyMat2Max = 0;
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         double iRoll1MC1 = 0, iRoll1MC2 = 0, iRoll2MC1 = 0, iRoll2MC2 = 0;
         double dRoll1MC1Min = 0, dRoll1MC1Max = 0, dRoll1MC2Min = 0, dRoll1MC2Max = 0, dRoll2MC1Min = 0, dRoll2MC1Max = 0, dRoll2MC2Min = 0, dRoll2MC2Max = 0;
 
@@ -325,74 +330,94 @@ namespace FORM
             BindingGauges(lnBanburyMC1, iBanburyMC1, dBanburyMC1Min - 10, dBanburyMC1Max + 10, dBanburyMC1Min, dBanburyMC1Max);
 
             lblBanburyLine1MC.Text = "Temp: " + iBanburyMC1.ToString() + " °C";
+            lblBanburyLine1MC._BackColor = lblColor(iBanburyMC1, dBanburyMC1Min, dBanburyMC1Max);
             lblBanburyLine1MCMin.Text = "Min: " + dBanburyMC1Min.ToString() + " °C";
             lblBanburyLine1MCMax.Text = "Max: " + dBanburyMC1Max.ToString() + " °C";
 
             BindingGauges(lnBanburyMC2, iBanburyMC2, dBanburyMC2Min - 10, dBanburyMC2Max + 10, dBanburyMC2Min, dBanburyMC2Max);
             lblBanburyLine2MC.Text = "Temp: " + iBanburyMC2.ToString() + " °C";
+            lblBanburyLine2MC._BackColor = lblColor(iBanburyMC2, dBanburyMC2Min, dBanburyMC2Max);
             lblBanburyLine2MCMin.Text = "Min: " + dBanburyMC2Min.ToString() + " °C";
             lblBanburyLine2MCMax.Text = "Max: " + dBanburyMC2Max.ToString() + " °C";
 
             BindingGauges(cirBanburyMat1, iBanburyMat1, dBanburyMat1Min - 10, dBanburyMat1Max + 10, dBanburyMat1Min, dBanburyMat1Max);
             lblBanburyLine1Mat.Text = "Temp: " + iBanburyMat1.ToString() + " °C";
+            lblBanburyLine1Mat._BackColor = lblColor(iBanburyMat1, dBanburyMat1Min, dBanburyMat1Max);
             lblBanburyLine1MatMin.Text = "Min: " + dBanburyMat1Min.ToString() + " °C";
             lblBanburyLine1MatMax.Text = "Max: " + dBanburyMat1Max.ToString() + " °C";
 
             BindingGauges(cirBanburyMat2, iBanburyMat2, dBanburyMat2Min - 10, dBanburyMat2Max + 10, dBanburyMat2Min, dBanburyMat2Max);
             lblBanburyLine2Mat.Text = "Temp: " + iBanburyMat2.ToString() + " °C";
+            lblBanburyLine2Mat._BackColor = lblColor(iBanburyMat2, dBanburyMat2Min, dBanburyMat2Max);
             lblBanburyLine2MatMin.Text = "Min: " + dBanburyMat2Min.ToString() + " °C";
             lblBanburyLine2MatMax.Text = "Max: " + dBanburyMat2Max.ToString() + " °C";
 
 
             BindingGauges(lnRollMC11, iRoll1MC1, dRoll1MC1Min - 10, dRoll1MC1Max + 10, dRoll1MC1Min, dRoll1MC1Max);
             lblRoll1Line1MC.Text = "Temp: " + iRoll1MC1.ToString() + " °C";
+            lblRoll1Line1MC._BackColor = lblColor(iRoll1MC1, dRoll1MC1Min, dRoll1MC1Max);
             lblRoll1Line1MCMin.Text = "Min: " + dRoll1MC1Min.ToString() + " °C";
             lblRoll1Line1MCMax.Text = "Max: " + dRoll1MC1Max.ToString() + " °C";
 
             BindingGauges(lnRollMC12, iRoll1MC2, dRoll1MC2Min - 10, dRoll1MC2Max + 10, dRoll1MC2Min, dRoll1MC2Max);
             lblRoll1Line2MC.Text = "Temp: " + iRoll1MC2.ToString() + " °C";
+            lblRoll1Line2MC._BackColor = lblColor(iRoll1MC2, dRoll1MC2Min, dRoll1MC2Max);
             lblRoll1Line2MCMin.Text = "Min: " + dRoll1MC2Min.ToString() + " °C";
             lblRoll1Line2MCMax.Text = "Max: " + dRoll1MC2Max.ToString() + " °C";
 
             BindingGauges(lnRollMC21, iRoll2MC1, dRoll2MC1Min - 10, dRoll2MC1Max + 10, dRoll2MC1Min, dRoll2MC1Max);
             lblRoll2Line1MC.Text = "Temp: " + iRoll2MC1.ToString() + " °C";
+            lblRoll2Line1MC._BackColor = lblColor(iRoll2MC1, dRoll2MC1Min, dRoll2MC1Max);
             lblRoll2Line1MCMin.Text = "Min: " + dRoll2MC1Min.ToString() + " °C";
             lblRoll2Line1MCMax.Text = "Max: " + dRoll2MC1Max.ToString() + " °C";
 
             BindingGauges(lnRollMC22, iRoll2MC2, dRoll2MC2Min - 10, dRoll2MC2Max + 10, dRoll2MC2Min, dRoll2MC2Max);
             lblRoll2Line2MC.Text = "Temp: " + iRoll2MC2.ToString() + " °C";
+            lblRoll2Line2MC._BackColor = lblColor(iRoll2MC2, dRoll2MC2Min, dRoll2MC2Max);
             lblRoll2Line2MCMin.Text = "Min: " + dRoll2MC2Min.ToString() + " °C";
             lblRoll2Line2MCMax.Text = "Max: " + dRoll2MC2Max.ToString() + " °C";
 
 
             BindingGauges(lnCalendarMC1, iCalendarMC1, dCalendarMC1Min - 10, dCalendarMC1Max + 10, dCalendarMC1Min, dCalendarMC1Max);
             lblCalendarLine1MC.Text = "Temp: " + iCalendarMC1.ToString() + " °C";
+            lblCalendarLine1MC._BackColor = lblColor(iCalendarMC1, dCalendarMC1Min, dCalendarMC1Max);
             lblCalendarLine1MCMin.Text = "Min: " + dCalendarMC1Min.ToString() + " °C";
             lblCalendarLine1MCMax.Text = "Max: " + dCalendarMC1Max.ToString() + " °C";
 
             BindingGauges(lnCalendarMC2, iCalendarMC2, dCalendarMC2Min - 10, dCalendarMC2Max + 10, dCalendarMC2Min, dCalendarMC2Max);
             lblCalendarLine2MC.Text = "Temp: " + iCalendarMC2.ToString() + " °C";
+            lblCalendarLine2MC._BackColor = lblColor(iCalendarMC2, dCalendarMC2Min, dCalendarMC2Max);
             lblCalendarLine2MCMin.Text = "Min: " + dCalendarMC2Min.ToString() + " °C";
             lblCalendarLine2MCMax.Text = "Max: " + dCalendarMC2Max.ToString() + " °C";
 
             BindingGauges(cirCalendarMat1, iCalendarMat1, dCalendarMat1Min - 10, dCalendarMat1Max + 10, dCalendarMat1Min, dCalendarMat1Max);
             lblCalendarLine1Mat.Text = "Temp: " + iCalendarMat1.ToString() + " °C";
+            lblCalendarLine1Mat._BackColor = lblColor(iCalendarMat1, dCalendarMat1Min, dCalendarMat1Max);
             lblCalendarLine1MatMin.Text = "Min: " + dCalendarMat1Min.ToString() + " °C";
             lblCalendarLine1MatMax.Text = "Max: " + dCalendarMat1Max.ToString() + " °C";
 
 
             BindingGauges(cirCalendarMat2, iCalendarMat2, dCalendarMat2Min - 10, dCalendarMat2Max + 10, dCalendarMat2Min, dCalendarMat2Max);
             lblCalendarLine2Mat.Text = "Temp: " + iCalendarMat2.ToString() + " °C";
+            lblCalendarLine2Mat._BackColor = lblColor(iCalendarMat2, dCalendarMat2Min, dCalendarMat2Max);
             lblCalendarLine2MatMin.Text = "Min: " + dCalendarMat2Min.ToString() + " °C";
             lblCalendarLine2MatMax.Text = "Max: " + dCalendarMat2Max.ToString() + " °C";
 
-
+            button1_Click(null,null);
         }
 
 
         #endregion
 
         #region Method Create
+        private Color lblColor(double Val, double MinVal, double MaxVal)
+        {
+            if (Val == 0 && MinVal == 0 && MaxVal == 0) return Color.Silver;
+            if (Val < MinVal || Val > MaxVal)
+                return Color.Red;
+            else
+                return Color.LimeGreen;
+        }
         private void CreateChartLine(ChartControl arg_chart, DataTable arg_dt1, string arg_name1, string arg_serial_name1, DataTable arg_dt2, string arg_serial_name2)
         {
             try

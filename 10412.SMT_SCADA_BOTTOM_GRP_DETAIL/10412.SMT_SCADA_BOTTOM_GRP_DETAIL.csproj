@@ -121,6 +121,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SMT_SCADA_B1CTM_TEMPER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_B1CTM_TEMPER.Designer.cs">
+      <DependentUpon>SMT_SCADA_B1CTM_TEMPER.cs</DependentUpon>
+    </Compile>
     <Compile Include="SMT_SCADA_B1EVA_TEMPER.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     <Compile Include="SMT_SCADA_B1RUBBER_TEMPER.Designer.cs">
       <DependentUpon>SMT_SCADA_B1RUBBER_TEMPER.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UC_B1CTM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_B1CTM.Designer.cs">
+      <DependentUpon>UC_B1CTM.cs</DependentUpon>
+    </Compile>
     <Compile Include="WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +164,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SMT_SCADA_B1CTM_TEMPER.resx">
+      <DependentUpon>SMT_SCADA_B1CTM_TEMPER.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_B1EVA_TEMPER.resx">
       <DependentUpon>SMT_SCADA_B1EVA_TEMPER.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_B1RUBBER_TEMPER.resx">
       <DependentUpon>SMT_SCADA_B1RUBBER_TEMPER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_B1CTM.resx">
+      <DependentUpon>UC_B1CTM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
@@ -201,9 +219,7 @@
   <ItemGroup>
     <None Include="Resources\loading1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UC\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

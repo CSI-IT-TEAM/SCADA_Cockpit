@@ -17,6 +17,7 @@ namespace FORM
         {
             InitializeComponent();
         }
+        bool isFirstTime = true;
         int cCount = 0;
         Random r = new Random();
         Color[] ColorRange = new Color[3] { Color.Red, Color.Green, Color.Yellow };
@@ -136,7 +137,14 @@ namespace FORM
         {
             if (this.Visible)
             {
-                cCount = 60;
+                if (isFirstTime)
+                {
+                    isFirstTime = !isFirstTime;
+                    cCount = 60;
+                }else
+                {
+                    cCount = 30;
+                }
                 tmrTime.Start();
             }
         }

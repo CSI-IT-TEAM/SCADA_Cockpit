@@ -283,15 +283,19 @@ namespace FORM
                     Series series = new Series(listSeriesName[i], ViewType.Spline);
                     DevExpress.XtraCharts.SplineSeriesView splineSeriesView = new DevExpress.XtraCharts.SplineSeriesView();
                     splineSeriesView.LineStyle.Thickness = iThickness;
+                    //splineSeriesView.AxisX.Title.Text = "Temperature (°C)";
+                    //splineSeriesView.AxisY.Title.Text = "Time";
+
+
                     //if (i == 0 && lstData.Count == 1)
                     //{
-                    //    DevExpress.XtraCharts.XYMarkerSlideAnimation slideAnimation = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
-                    //    slideAnimation.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromRight;
-                    //    //slideAnimation.PointDelay = System.TimeSpan.Parse("00:00:00.01000000");
-                    //    splineSeriesView.LineMarkerOptions.BorderColor = Color.Yellow;
-                    //    splineSeriesView.LineMarkerOptions.Color = Color.Yellow;
-                    //    splineSeriesView.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-                    //    splineSeriesView.SeriesPointAnimation = slideAnimation;
+                    //    //    DevExpress.XtraCharts.XYMarkerSlideAnimation slideAnimation = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
+                    //    //    slideAnimation.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromRight;
+                    //    //    //slideAnimation.PointDelay = System.TimeSpan.Parse("00:00:00.01000000");
+                    //    //    splineSeriesView.LineMarkerOptions.BorderColor = Color.Yellow;
+                    //    //    splineSeriesView.LineMarkerOptions.Color = Color.Yellow;
+                    //    //    splineSeriesView.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+                    //    //    splineSeriesView.SeriesPointAnimation = slideAnimation;
                     //}
                     series.View = splineSeriesView;
                     series.ArgumentScaleType = ScaleType.Qualitative;
@@ -346,12 +350,16 @@ namespace FORM
                 ((XYDiagram)_chart.Diagram).AxisY.GridLines.Visible = false;
                 ((XYDiagram)_chart.Diagram).AxisX.Label.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
                 ((XYDiagram)_chart.Diagram).AxisX.Label.Visible = true;
+                ((XYDiagram)_chart.Diagram).AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+                ((XYDiagram)_chart.Diagram).AxisX.Title.Text = "Time";
+                ((XYDiagram)_chart.Diagram).AxisX.Title.TextColor = Color.Orange;
                 ((XYDiagram)_chart.Diagram).AxisX.Title.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
                 ((XYDiagram)_chart.Diagram).AxisY.Label.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
                 ((XYDiagram)_chart.Diagram).AxisY.Label.Visible = true;
+                ((XYDiagram)_chart.Diagram).AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+                ((XYDiagram)_chart.Diagram).AxisY.Title.Text = "Temperature  (°C)";
+                ((XYDiagram)_chart.Diagram).AxisY.Title.TextColor = Color.Yellow;
                 ((XYDiagram)_chart.Diagram).AxisY.Title.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
                 //DataTable dt1 = null;
                 //DataTable dt2 = null;
                 //int iRow = 0;

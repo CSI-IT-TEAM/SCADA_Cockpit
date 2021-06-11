@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.a1Panel11 = new OS_DSF.A1Panel();
             this.roundLabel199 = new RoundLabel();
             this.lbl_PU_SPRAY_10 = new System.Windows.Forms.Label();
@@ -120,7 +121,7 @@
             this.lbl_PH_CTM_2 = new System.Windows.Forms.Label();
             this.lbl_PH_CTM_8 = new System.Windows.Forms.Label();
             this.lbl_PH_CTM_1 = new System.Windows.Forms.Label();
-            this.roundLabel33 = new RoundLabel();
+            this.lbl_PH_GRP_CTM = new RoundLabel();
             this.label15 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -251,9 +252,6 @@
             this.roundLabel42 = new RoundLabel();
             this.roundLabel22 = new RoundLabel();
             this.roundLabel1 = new RoundLabel();
-            this.roundLabel155 = new RoundLabel();
-            this.roundLabel162 = new RoundLabel();
-            this.roundLabel160 = new RoundLabel();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
@@ -1181,7 +1179,7 @@
             this.a1Panel3.Controls.Add(this.lbl_PH_CTM_2);
             this.a1Panel3.Controls.Add(this.lbl_PH_CTM_8);
             this.a1Panel3.Controls.Add(this.lbl_PH_CTM_1);
-            this.a1Panel3.Controls.Add(this.roundLabel33);
+            this.a1Panel3.Controls.Add(this.lbl_PH_GRP_CTM);
             this.a1Panel3.Controls.Add(this.label15);
             this.a1Panel3.Controls.Add(this.label39);
             this.a1Panel3.Controls.Add(this.label14);
@@ -1360,17 +1358,17 @@
             this.lbl_PH_CTM_1.Tag = "lbl_PH_CTM_1";
             this.lbl_PH_CTM_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // roundLabel33
+            // lbl_PH_GRP_CTM
             // 
-            this.roundLabel33._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.roundLabel33.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel33.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel33.ForeColor = System.Drawing.Color.White;
-            this.roundLabel33.Location = new System.Drawing.Point(0, 0);
-            this.roundLabel33.Name = "roundLabel33";
-            this.roundLabel33.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel33.TabIndex = 5;
-            this.roundLabel33.Text = "CTM";
+            this.lbl_PH_GRP_CTM._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_PH_GRP_CTM.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_PH_GRP_CTM.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PH_GRP_CTM.ForeColor = System.Drawing.Color.White;
+            this.lbl_PH_GRP_CTM.Location = new System.Drawing.Point(0, 0);
+            this.lbl_PH_GRP_CTM.Name = "lbl_PH_GRP_CTM";
+            this.lbl_PH_GRP_CTM.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PH_GRP_CTM.TabIndex = 5;
+            this.lbl_PH_GRP_CTM.Text = "CTM";
             // 
             // label15
             // 
@@ -2885,42 +2883,6 @@
             this.roundLabel1.TabIndex = 5;
             this.roundLabel1.Text = "OS";
             // 
-            // roundLabel155
-            // 
-            this.roundLabel155._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel155.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel155.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel155.ForeColor = System.Drawing.Color.Black;
-            this.roundLabel155.Location = new System.Drawing.Point(693, 796);
-            this.roundLabel155.Name = "roundLabel155";
-            this.roundLabel155.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel155.TabIndex = 5;
-            this.roundLabel155.Text = "Hose";
-            // 
-            // roundLabel162
-            // 
-            this.roundLabel162._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel162.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel162.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel162.ForeColor = System.Drawing.Color.Black;
-            this.roundLabel162.Location = new System.Drawing.Point(493, 796);
-            this.roundLabel162.Name = "roundLabel162";
-            this.roundLabel162.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel162.TabIndex = 5;
-            this.roundLabel162.Text = "Material";
-            // 
-            // roundLabel160
-            // 
-            this.roundLabel160._BackColor = System.Drawing.Color.Silver;
-            this.roundLabel160.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel160.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel160.ForeColor = System.Drawing.Color.Black;
-            this.roundLabel160.Location = new System.Drawing.Point(593, 796);
-            this.roundLabel160.Name = "roundLabel160";
-            this.roundLabel160.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel160.TabIndex = 5;
-            this.roundLabel160.Text = "Oil";
-            // 
             // splashScreenManager1
             // 
             this.splashScreenManager1.ClosingDelay = 500;
@@ -2947,9 +2909,6 @@
             this.Controls.Add(this.roundLabel22);
             this.Controls.Add(this.roundLabel1);
             this.Controls.Add(this.pnTop);
-            this.Controls.Add(this.roundLabel155);
-            this.Controls.Add(this.roundLabel162);
-            this.Controls.Add(this.roundLabel160);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SMT_SCADA_BOTTOM_COCKPIT_V2";
             this.Text = "SMT_SCADA_BOTTOM_COCKPIT_V2";
@@ -2984,7 +2943,7 @@
         private RoundLabel lbl_OS_GRP_EVA;
         private RoundLabel roundLabel22;
         private OS_DSF.A1Panel a1Panel3;
-        private RoundLabel roundLabel33;
+        private RoundLabel lbl_PH_GRP_CTM;
         private OS_DSF.A1Panel a1Panel4;
         private RoundLabel roundLabel80;
         private RoundLabel roundLabel42;
@@ -2999,9 +2958,6 @@
         private OS_DSF.A1Panel a1Panel8;
         private RoundLabel roundLabel144;
         private OS_DSF.A1Panel a1Panel9;
-        private RoundLabel roundLabel155;
-        private RoundLabel roundLabel160;
-        private RoundLabel roundLabel162;
         private RoundLabel roundLabel163;
         private OS_DSF.A1Panel a1Panel10;
         private RoundLabel roundLabel184;

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B1EVA_TEMPER));
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange1 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange2 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
@@ -64,10 +63,11 @@
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange26 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange27 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.label1 = new System.Windows.Forms.Label();
             this.a1Panel2 = new OS_DSF.A1Panel();
@@ -255,6 +255,7 @@
             // 
             // pnTop
             // 
+            this.pnTop.Controls.Add(this.button1);
             this.pnTop.Controls.Add(this.cmdBack);
             this.pnTop.Controls.Add(this.lblDate);
             this.pnTop.Controls.Add(this.lblHeader);
@@ -263,6 +264,17 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1920, 76);
             this.pnTop.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1070, 36);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 89;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmdBack
             // 
@@ -373,7 +385,8 @@
             // 
             // lblKneaderMC2
             // 
-            this.lblKneaderMC2._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblKneaderMC2._BackColor = System.Drawing.Color.Silver;
+            this.lblKneaderMC2.BackColor = System.Drawing.Color.Transparent;
             this.lblKneaderMC2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKneaderMC2.Location = new System.Drawing.Point(157, 251);
             this.lblKneaderMC2.Name = "lblKneaderMC2";
@@ -599,7 +612,8 @@
             // 
             // lblKneaderMat2
             // 
-            this.lblKneaderMat2._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblKneaderMat2._BackColor = System.Drawing.Color.Silver;
+            this.lblKneaderMat2.BackColor = System.Drawing.Color.Transparent;
             this.lblKneaderMat2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKneaderMat2.Location = new System.Drawing.Point(157, 133);
             this.lblKneaderMat2.Name = "lblKneaderMat2";
@@ -741,7 +755,8 @@
             // 
             // lblKneaderMat1
             // 
-            this.lblKneaderMat1._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblKneaderMat1._BackColor = System.Drawing.Color.Silver;
+            this.lblKneaderMat1.BackColor = System.Drawing.Color.Transparent;
             this.lblKneaderMat1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKneaderMat1.Location = new System.Drawing.Point(157, 133);
             this.lblKneaderMat1.Name = "lblKneaderMat1";
@@ -800,7 +815,8 @@
             // 
             // lblKneaderMC1
             // 
-            this.lblKneaderMC1._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblKneaderMC1._BackColor = System.Drawing.Color.Silver;
+            this.lblKneaderMC1.BackColor = System.Drawing.Color.Transparent;
             this.lblKneaderMC1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKneaderMC1.Location = new System.Drawing.Point(157, 251);
             this.lblKneaderMC1.Name = "lblKneaderMC1";
@@ -1169,7 +1185,8 @@
             // 
             // lblRollMC2
             // 
-            this.lblRollMC2._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblRollMC2._BackColor = System.Drawing.Color.Silver;
+            this.lblRollMC2.BackColor = System.Drawing.Color.Transparent;
             this.lblRollMC2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRollMC2.Location = new System.Drawing.Point(8, 65);
             this.lblRollMC2.Name = "lblRollMC2";
@@ -1312,7 +1329,8 @@
             // 
             // lblRollMC1
             // 
-            this.lblRollMC1._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblRollMC1._BackColor = System.Drawing.Color.Silver;
+            this.lblRollMC1.BackColor = System.Drawing.Color.Transparent;
             this.lblRollMC1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRollMC1.Location = new System.Drawing.Point(8, 65);
             this.lblRollMC1.Name = "lblRollMC1";
@@ -1360,7 +1378,8 @@
             // 
             // lblExtrMC
             // 
-            this.lblExtrMC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblExtrMC._BackColor = System.Drawing.Color.Silver;
+            this.lblExtrMC.BackColor = System.Drawing.Color.Transparent;
             this.lblExtrMC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExtrMC.Location = new System.Drawing.Point(57, 33);
             this.lblExtrMC.Name = "lblExtrMC";
@@ -1553,7 +1572,8 @@
             // 
             // lblPallMC
             // 
-            this.lblPallMC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblPallMC._BackColor = System.Drawing.Color.Silver;
+            this.lblPallMC.BackColor = System.Drawing.Color.Transparent;
             this.lblPallMC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPallMC.Location = new System.Drawing.Point(57, 33);
             this.lblPallMC.Name = "lblPallMC";
@@ -1685,7 +1705,8 @@
             // 
             // lblCalMC
             // 
-            this.lblCalMC._BackColor = System.Drawing.Color.SkyBlue;
+            this.lblCalMC._BackColor = System.Drawing.Color.Silver;
+            this.lblCalMC.BackColor = System.Drawing.Color.Transparent;
             this.lblCalMC.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalMC.Location = new System.Drawing.Point(57, 33);
             this.lblCalMC.Name = "lblCalMC";
@@ -2163,5 +2184,6 @@
         private DevExpress.XtraCharts.ChartControl chartRoll;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraCharts.ChartControl chartKneader;
+        private System.Windows.Forms.Button button1;
     }
 }

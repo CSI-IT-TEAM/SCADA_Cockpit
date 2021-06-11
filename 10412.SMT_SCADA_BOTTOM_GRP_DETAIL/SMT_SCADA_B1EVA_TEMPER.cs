@@ -31,6 +31,11 @@ namespace FORM
                dPallMC = 0, dPallMCMin = 0, dPallMCMax = 0,
                dCalMC = 0, dCalMCMin = 0, dCalMCMax = 0;
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void SMT_SCADA_B1EVA_TEMPER_VisibleChanged(object sender, EventArgs e)
         {
             if (this.Visible)
@@ -252,7 +257,14 @@ namespace FORM
             catch { }
         }
 
-
+        private Color lblColor(double Val, double MinVal, double MaxVal)
+        {
+            if (Val == 0 && MinVal == 0 && MaxVal == 0) return Color.Silver;
+            if (Val < MinVal || Val > MaxVal)
+                return Color.Red;
+            else
+                return Color.LimeGreen;
+        }
 
         private void BindingDataGauges()
         {
@@ -336,48 +348,59 @@ namespace FORM
                 //Kneader================================
                 BindingGauges(lnKneaderMC1, dKneaderMC1, dKneaderMC1Min - 10, dKneaderMC1Max + 10, dKneaderMC1Min, dKneaderMC1Max);
                 lblKneaderMC1.Text = "Temp: " + dKneaderMC1.ToString() + " °C";
+                lblKneaderMC1._BackColor = lblColor(dKneaderMC1, dKneaderMC1Min, dKneaderMC1Max);
                 lblKneaderMC1Min.Text = "Min: " + dKneaderMC1Min.ToString() + " °C";
                 lblKneaderMC1Max.Text = "Max: " + dKneaderMC1Max.ToString() + " °C";
 
                 BindingGauges(cirKneaderMat1, dKneaderMat1, dKneaderMat1Min - 10, dKneaderMat1Max + 10, dKneaderMat1Min, dKneaderMat1Max);
-                lblKneaderMC1.Text = "Temp: " + dKneaderMC1.ToString() + " °C";
-                lblKneaderMC1Min.Text = "Min: " + dKneaderMC1Min.ToString() + " °C";
-                lblKneaderMC1Max.Text = "Max: " + dKneaderMC1Max.ToString() + " °C";
+                lblKneaderMat1.Text = "Temp: " + dKneaderMat1.ToString() + " °C";
+                lblKneaderMat1._BackColor = lblColor(dKneaderMat1, dKneaderMat1Min, dKneaderMat1Max);
+                lblKneaderMat1Min.Text = "Min: " + dKneaderMat1Min.ToString() + " °C";
+                lblKneaderMat1Max.Text = "Max: " + dKneaderMat1Max.ToString() + " °C";
 
                 BindingGauges(lnKneaderMC2, dKneaderMC2, dKneaderMC2Min - 10, dKneaderMC2Max + 10, dKneaderMC2Min, dKneaderMC2Max);
                 lblKneaderMC2.Text = "Temp: " + dKneaderMC2.ToString() + " °C";
+                lblKneaderMC2._BackColor = lblColor(dKneaderMC2, dKneaderMC2Min, dKneaderMC2Max);
                 lblKneaderMC2Min.Text = "Min: " + dKneaderMC2Min.ToString() + " °C";
                 lblKneaderMC2Max.Text = "Max: " + dKneaderMC2Max.ToString() + " °C";
 
                 BindingGauges(cirKneaderMat2, dKneaderMat2, dKneaderMat2Min - 10, dKneaderMat2Max + 10, dKneaderMat2Min, dKneaderMat2Max);
-                lblKneaderMC2.Text = "Temp: " + dKneaderMC2.ToString() + " °C";
-                lblKneaderMC2Min.Text = "Min: " + dKneaderMC2Min.ToString() + " °C";
-                lblKneaderMC2Max.Text = "Max: " + dKneaderMC2Max.ToString() + " °C";
+                lblKneaderMat2.Text = "Temp: " + dKneaderMat2.ToString() + " °C";
+                lblKneaderMat2._BackColor = lblColor(dKneaderMat2, dKneaderMat2Min, dKneaderMat2Max);
+                lblKneaderMat2Min.Text = "Min: " + dKneaderMat2Min.ToString() + " °C";
+                lblKneaderMat2Max.Text = "Max: " + dKneaderMat2Max.ToString() + " °C";
                 //Roll1================================
                 BindingGauges(lnRollMC1, dRollMC1, dRollMC1Min - 10, dRollMC1Max + 10, dRollMC1Min, dRollMC1Max);
                 lblRollMC1.Text = "Temp: " + dRollMC1.ToString() + " °C";
+                lblRollMC1._BackColor = lblColor(dRollMC1, dRollMC1Min, dRollMC1Max);
                 lblRollMC1Min.Text = "Min: " + dRollMC1Min.ToString() + " °C";
                 lblRollMC1Max.Text = "Max: " + dRollMC1Max.ToString() + " °C";
                 //Roll2================================
                 BindingGauges(lnRollMC2, dRollMC2, dRollMC2Min - 10, dRollMC2Max + 10, dRollMC2Min, dRollMC2Max);
                 lblRollMC2.Text = "Temp: " + dRollMC2.ToString() + " °C";
+                lblRollMC2._BackColor = lblColor(dRollMC2, dRollMC2Min, dRollMC2Max);
                 lblRollMC2Min.Text = "Min: " + dRollMC2Min.ToString() + " °C";
                 lblRollMC2Max.Text = "Max: " + dRollMC2Max.ToString() + " °C";
                 //Extr================================
                 BindingGauges(lnExtrMC, dExtrMC, dExtrMCMin - 10, dExtrMCMax + 10, dExtrMCMin, dExtrMCMax);
                 lblExtrMC.Text = "Temp: " + dExtrMC.ToString() + " °C";
+                lblExtrMC._BackColor = lblColor(dExtrMC, dExtrMCMin, dExtrMCMax);
                 lblExtrMCMin.Text = "Min: " + dExtrMCMin.ToString() + " °C";
                 lblExtrMCMax.Text = "Max: " + dExtrMCMax.ToString() + " °C";
                 //Pall================================
                 BindingGauges(lnPallMC, dPallMC, dPallMCMin - 10, dPallMCMax + 10, dPallMCMin, dPallMCMax);
                 lblPallMC.Text = "Temp: " + dPallMC.ToString() + " °C";
+                lblPallMC._BackColor = lblColor(dPallMC, dPallMCMin, dPallMCMax);
                 lblPallMCMin.Text = "Min: " + dPallMCMin.ToString() + " °C";
                 lblPallMCMax.Text = "Max: " + dPallMCMax.ToString() + " °C";
                 //Calender================================
                 BindingGauges(lnCalMC, dCalMC, dCalMCMin - 10, dCalMCMax + 10, dCalMCMin, dCalMCMax);
                 lblCalMC.Text = "Temp: " + dCalMC.ToString() + " °C";
+                lblCalMC._BackColor = lblColor(dCalMC, dCalMCMin, dCalMCMax);
                 lblCalMCMin.Text = "Min: " + dCalMCMin.ToString() + " °C";
                 lblCalMCMax.Text = "Max: " + dCalMCMax.ToString() + " °C";
+
+                button1_Click(null, null);
             }
             catch (Exception ex)
             {

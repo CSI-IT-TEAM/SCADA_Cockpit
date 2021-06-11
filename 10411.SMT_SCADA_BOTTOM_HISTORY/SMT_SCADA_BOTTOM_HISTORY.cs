@@ -87,15 +87,21 @@ namespace FORM
         {
             _opcd = ComVar.Var._strValue1;
             DataTable dt = SP_MENU_SELECT("Q", "SCADA_B_COCKPIT", _opcd);
-            dtData = GetData(ComVar.Var._strValue2, _opcd, "ALL", ""); //Get All data temperature once time.
-            BindingTree(dt);
+            if (dt == null) return;
+            else
+            {
+                dtData = GetData(ComVar.Var._strValue2, _opcd, "ALL", ""); //Get All data temperature once time.
+                BindingTree(dt);
+            }
         }
         #region TreeList
         public void BindingTree(DataTable dt)
         {
             isHasChild = false;
+            treeListColumn1.Caption = "_";
+            treeList.DataSource = null;
             if (dt == null) return;
-            MachineName = dt.Rows[0]["BUTTON_MAPPING_NAME"].ToString();
+            MachineName = dt.Rows.Count > 0 ? dt.Rows[0]["BUTTON_MAPPING_NAME"].ToString() : "Machine";
             treeListColumn1.Caption = MachineName;
             treeList.DataSource = dt;
             treeList.KeyFieldName = "ID";
@@ -128,6 +134,7 @@ namespace FORM
             List<DataTable> lstData = new List<DataTable>();
             List<string> lstSeriesName = new List<string>();
             DataTable dt = dtData.Copy();//Giu lai datatable goc, de su dung lai.
+
             if (dt == null) return;
             foreach (TreeListNode node in treeList.Nodes)
             {
@@ -153,9 +160,12 @@ namespace FORM
                     {
                         string ParNodeID = node.GetValue("ID").ToString().Substring(4);
                         string ParNodeName = node.GetValue("MENU_NM").ToString();
-                        DataTable dtTmp = dt.Select("MLINE_CD = '" + ParNodeID + "'").CopyToDataTable();
-                        lstData.Add(dtTmp);
-                        lstSeriesName.Add(ParNodeName);
+                        if (dt.Select("MLINE_CD = '" + ParNodeID + "'").Count() > 0)
+                        {
+                            DataTable dtTmp = dt.Select("MLINE_CD = '" + ParNodeID + "'").CopyToDataTable();
+                            lstData.Add(dtTmp);
+                            lstSeriesName.Add(ParNodeName);
+                        }
                     }
                 }
             }
@@ -744,6 +754,16 @@ namespace FORM
             else
                 SetCheckedChildNodes(e.Node.Nodes);
             GetDataTable();
+            //int cnt = 0;
+            //foreach (TreeListNode node in treeList.Nodes)
+            //{
+            //    if (node.Checked)
+            //        cnt++;
+            //}
+            //if (cnt != treeList.Nodes.Count)
+            //    chkAll.Checked = false;
+            //else
+            //    chkAll.Checked = true;
         }
 
         private void chkAll_CheckedChanged(object sender, EventArgs e)

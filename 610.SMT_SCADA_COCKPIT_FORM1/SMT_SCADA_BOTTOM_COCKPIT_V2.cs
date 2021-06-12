@@ -297,6 +297,7 @@ namespace FORM
                 //GROUP
                 lblGrpList.Add(lbl_OS_GRP_RUBBER);
                 lblGrpList.Add(lbl_OS_GRP_EVA);
+                lblGrpList.Add(lbl_PH_GRP_CTM);
 
                 foreach (var item in lblList)
                 {
@@ -308,7 +309,9 @@ namespace FORM
                 foreach (var item in lblGrpList)
                 {
                     item.Tag = item.Name;
-                    item.Click += Item_Click1; ;
+                    item.Click += Item_Click1;
+                    item.MouseEnter += lbl_GRP_MouseEnter;
+                    item.MouseLeave += lbl_GRP_MouseLeave;
                 }
             }
             catch (Exception)

@@ -16,5 +16,48 @@ namespace FORM.UC
         {
             InitializeComponent();
         }
+        public delegate void UCClickHandle(UC.UC_B1CTM uc);
+        public UCClickHandle OnUcClick = null;
+
+        public void BindingHeaderData(string MachineNo)
+        {
+            lblMC.Text = MachineNo;
+        } 
+
+        public void SetBackColor(Color color)
+        {
+            a1Panel1.BackColor = color;
+        }
+
+        public void SetBorder(int BorderWidth,Color color)
+        {
+            a1Panel1.BorderWidth = BorderWidth;
+            a1Panel1.BorderColor = color;
+        }
+
+        public void BindingData(DataRow dr)
+        {
+           
+            lblHeat.Text = string.Concat(dr["HEAT_VL"].ToString(), "°C");
+            lblHeat.BackColor = Color.FromName(dr["HEAT_COLOR"].ToString());
+
+            lblCool.Text = string.Concat(dr["COOL_VL"].ToString(), "°C");
+            lblCool.BackColor = Color.FromName(dr["COOL_COLOR"].ToString());
+        }
+        private void a1Panel1_Click(object sender, EventArgs e)
+        {
+            if (OnUcClick != null)
+            {
+                OnUcClick(this);
+            }
+        }
+
+        private void label_Click(object sender, EventArgs e)
+        {
+            if (OnUcClick != null)
+            {
+                OnUcClick(this);
+            }
+        }
     }
 }

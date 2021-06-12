@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B1RUBBER_TEMPER));
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange1 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange2 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
@@ -87,7 +88,7 @@
             this.a1Panel16 = new OS_DSF.A1Panel();
             this.chartCalendar = new DevExpress.XtraCharts.ChartControl();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
-            this.tmrDate = new System.Windows.Forms.Timer();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.a1Panel7 = new OS_DSF.A1Panel();
             this.lblCalendarLine2MCMax = new RoundLabel();
             this.roundLabel26 = new RoundLabel();

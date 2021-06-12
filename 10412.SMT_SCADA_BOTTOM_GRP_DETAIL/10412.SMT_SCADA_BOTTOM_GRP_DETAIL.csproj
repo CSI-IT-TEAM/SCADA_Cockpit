@@ -133,6 +133,12 @@
     <Compile Include="SMT_SCADA_B1EVA_TEMPER.Designer.cs">
       <DependentUpon>SMT_SCADA_B1EVA_TEMPER.cs</DependentUpon>
     </Compile>
+    <Compile Include="SMT_SCADA_B2COMPOUND_TEMPER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_B2COMPOUND_TEMPER.Designer.cs">
+      <DependentUpon>SMT_SCADA_B2COMPOUND_TEMPER.cs</DependentUpon>
+    </Compile>
     <Compile Include="SMT_SCADA_BOTTOM_OS_TEMPER.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_B1EVA_TEMPER.resx">
       <DependentUpon>SMT_SCADA_B1EVA_TEMPER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMT_SCADA_B2COMPOUND_TEMPER.resx">
+      <DependentUpon>SMT_SCADA_B2COMPOUND_TEMPER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_BOTTOM_OS_TEMPER.resx">
       <DependentUpon>SMT_SCADA_BOTTOM_OS_TEMPER.cs</DependentUpon>

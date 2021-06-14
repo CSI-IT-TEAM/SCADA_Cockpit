@@ -1732,7 +1732,7 @@
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(49, 22);
             this.label87.TabIndex = 6;
-            this.label87.Text = "4";
+            this.label87.Text = "7";
             this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label84
@@ -1754,7 +1754,7 @@
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(49, 22);
             this.label86.TabIndex = 6;
-            this.label86.Text = "3";
+            this.label86.Text = "6";
             this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label83
@@ -1776,7 +1776,7 @@
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(49, 22);
             this.label85.TabIndex = 6;
-            this.label85.Text = "2";
+            this.label85.Text = "5";
             this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // roundLabel117

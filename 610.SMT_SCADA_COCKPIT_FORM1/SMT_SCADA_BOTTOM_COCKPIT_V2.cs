@@ -361,7 +361,7 @@ namespace FORM
         {
             RoundLabel lbl = ((RoundLabel)sender);
             lbl.ForeColor = Color.Blue;
-            lbl.Font = new Font("Times New Roman", 14, FontStyle.Bold | FontStyle.Italic);
+            lbl.Font = new Font("Times New Roman", 12, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
         }
 
         private void lbl_GRP_MouseLeave(object sender, EventArgs e)

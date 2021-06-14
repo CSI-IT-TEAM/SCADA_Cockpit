@@ -45,6 +45,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MAIN\bin\Debug\References\DevExpress.Data.v17.1.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MAIN\bin\Debug\References\DevExpress.Utils.v17.1.dll</HintPath>
@@ -74,6 +75,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraGrid.v17.1.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="msdatasrc, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -139,6 +142,18 @@
     <Compile Include="SMT_SCADA_B2COMPOUND_TEMPER.Designer.cs">
       <DependentUpon>SMT_SCADA_B2COMPOUND_TEMPER.cs</DependentUpon>
     </Compile>
+    <Compile Include="SMT_SCADA_B2IPZONE_TEMPER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_B2IPZONE_TEMPER.Designer.cs">
+      <DependentUpon>SMT_SCADA_B2IPZONE_TEMPER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMT_SCADA_BOTTOM_HISTORY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_BOTTOM_HISTORY.Designer.cs">
+      <DependentUpon>SMT_SCADA_BOTTOM_HISTORY.cs</DependentUpon>
+    </Compile>
     <Compile Include="SMT_SCADA_BOTTOM_OS_TEMPER.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +193,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_B2COMPOUND_TEMPER.resx">
       <DependentUpon>SMT_SCADA_B2COMPOUND_TEMPER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMT_SCADA_B2IPZONE_TEMPER.resx">
+      <DependentUpon>SMT_SCADA_B2IPZONE_TEMPER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMT_SCADA_BOTTOM_HISTORY.resx">
+      <DependentUpon>SMT_SCADA_BOTTOM_HISTORY.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_BOTTOM_OS_TEMPER.resx">
       <DependentUpon>SMT_SCADA_BOTTOM_OS_TEMPER.cs</DependentUpon>

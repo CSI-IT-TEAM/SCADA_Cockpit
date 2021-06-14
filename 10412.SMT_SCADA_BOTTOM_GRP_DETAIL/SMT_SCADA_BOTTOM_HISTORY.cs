@@ -134,58 +134,105 @@ namespace FORM
 
             List<DataTable> lstData = new List<DataTable>();
             List<string> lstSeriesName = new List<string>();
-            DataTable dt = dtData.Copy();//Giu lai datatable goc, de su dung lai.
-            isCheckState = false;
-            if (dt == null) return;
-            foreach (TreeListNode node in treeList.Nodes)
+            DataTable dt1 = new DataTable();
+            DataTable dt2 = new DataTable();
+            if (ComVar.Var._strValue2.Equals("PH_CTM"))
             {
-
-
-                foreach (TreeListNode Childnode in node.RootNode.Nodes)
+                dt1 = dtData.Copy().Select("STATION_CD = '001'").CopyToDataTable();//Giu lai datatable goc, de su dung lai. HEAT
+                dt2 = dtData.Copy().Select("STATION_CD = '002'").CopyToDataTable();//Giu lai datatable goc, de su dung lai. COOL
+            }
+            else
+            {
+                dt1 = dtData.Copy();
+                dt2 = dtData.Copy();
+            }
+            isCheckState = false;
+            if (dt1 != null && dt1.Rows.Count > 1)
+            {
+                foreach (TreeListNode node in treeList.Nodes)
                 {
-                    if (Childnode.Checked)
+                    foreach (TreeListNode Childnode in node.RootNode.Nodes)
                     {
-                        isHasChild = true;
-                        string NodeID = Childnode.GetValue("ID").ToString().Substring(4);
-                        string NodeName = Childnode.GetValue("MENU_NM").ToString();
-                        if (dt.Select("ID = '" + NodeID + "'").Count() > 0)
+                        if (Childnode.Checked)
                         {
-                            DataTable dtTmp = dt.Select("ID = '" + NodeID + "'").CopyToDataTable();
-                            lstData.Add(dtTmp);
-                            lstSeriesName.Add(NodeName);
-                        }
-                    }
-
-                }
-                if (!isHasChild)
-                {
-                    if (node.Checked)
-                    {
-                        string ParNodeID = node.GetValue("ID").ToString().Substring(4);
-                        string ParNodeName = node.GetValue("MENU_NM").ToString();
-                        if (dt.Select("MLINE_CD = '" + ParNodeID + "'").Count() > 0)
-                        {
-                            DataTable dtTmp = dt.Select("MLINE_CD = '" + ParNodeID + "'").CopyToDataTable();
-                            lstData.Add(dtTmp);
-                            lstSeriesName.Add(ParNodeName);
+                            isHasChild = true;
+                            string NodeID = Childnode.GetValue("ID").ToString().Substring(4);
+                            string NodeName = Childnode.GetValue("MENU_NM").ToString();
+                            if (dt1.Select("ID = '" + NodeID + "'").Count() > 0)
+                            {
+                                DataTable dtTmp = dt1.Select("ID = '" + NodeID + "'").CopyToDataTable();
+                                lstData.Add(dtTmp);
+                                lstSeriesName.Add(NodeName);
+                            }
                         }
 
                     }
+                    if (!isHasChild)
+                    {
+                        if (node.Checked)
+                        {
+                            string ParNodeID = node.GetValue("ID").ToString().Substring(4);
+                            string ParNodeName = node.GetValue("MENU_NM").ToString();
+                            if (dt1.Select("MLINE_CD = '" + ParNodeID + "'").Count() > 0)
+                            {
+                                DataTable dtTmp = dt1.Select("MLINE_CD = '" + ParNodeID + "'").CopyToDataTable();
+                                lstData.Add(dtTmp);
+                                lstSeriesName.Add(ParNodeName);
+                            }
+
+                        }
+                    }
                 }
+
+                chkAll.CheckedChanged -= chkAll_CheckedChanged;
+                chkAll.Checked = treeList.GetAllCheckedNodes().Count == treeList.AllNodesCount;
+                chkAll.CheckedChanged += chkAll_CheckedChanged;
+                DrawChart(lstData, lstSeriesName, cht_Chart1, lstData.Count > 1 ? false : true);
             }
 
-            chkAll.CheckedChanged -= chkAll_CheckedChanged;
-            chkAll.Checked = treeList.GetAllCheckedNodes().Count == treeList.AllNodesCount;
-            chkAll.CheckedChanged += chkAll_CheckedChanged;
 
+            lstData.Clear();
+            lstSeriesName.Clear();
+            if (dt2 != null && dt2.Rows.Count > 1)
+            {
+                foreach (TreeListNode node in treeList.Nodes)
+                {
+                    foreach (TreeListNode Childnode in node.RootNode.Nodes)
+                    {
+                        if (Childnode.Checked)
+                        {
+                            isHasChild = true;
+                            string NodeID = Childnode.GetValue("ID").ToString().Substring(4);
+                            string NodeName = Childnode.GetValue("MENU_NM").ToString();
+                            if (dt2.Select("ID = '" + NodeID + "'").Count() > 0)
+                            {
+                                DataTable dtTmp = dt2.Select("ID = '" + NodeID + "'").CopyToDataTable();
+                                lstData.Add(dtTmp);
+                                lstSeriesName.Add(NodeName);
+                            }
+                        }
+                    }
+                    if (!isHasChild)
+                    {
+                        if (node.Checked)
+                        {
+                            string ParNodeID = node.GetValue("ID").ToString().Substring(4);
+                            string ParNodeName = node.GetValue("MENU_NM").ToString();
+                            if (dt2.Select("MLINE_CD = '" + ParNodeID + "'").Count() > 0)
+                            {
+                                DataTable dtTmp = dt2.Select("MLINE_CD = '" + ParNodeID + "'").CopyToDataTable();
+                                lstData.Add(dtTmp);
+                                lstSeriesName.Add(ParNodeName);
+                            }
+                        }
+                    }
+                }
 
-
-
-
-
-            //Doing something with list datatable
-            //  MessageBox.Show("Done!");
-            DrawChart(lstData, lstSeriesName, cht_Chart, lstData.Count > 1 ? false : true);
+                chkAll.CheckedChanged -= chkAll_CheckedChanged;
+                chkAll.Checked = treeList.GetAllCheckedNodes().Count == treeList.AllNodesCount;
+                chkAll.CheckedChanged += chkAll_CheckedChanged;
+                DrawChart(lstData, lstSeriesName, cht_Chart2, lstData.Count > 1 ? false : true);
+            }
         }
 
 
@@ -692,16 +739,16 @@ namespace FORM
             MyOraDB.ShowErr = true;
             try
             {
-                string process_name = "MES.PKG_SMT_SCADA_COCKPIT_01.SMT_SCADA_BOTTOM_HISTORY";
+                string process_name = "MES.PKG_SMT_SCADA_B_COCKPIT.SMT_SCADA_B_DETAIL_HISTORY";
 
                 MyOraDB.ReDim_Parameter(6);
                 MyOraDB.Process_Name = process_name;
 
-                MyOraDB.Parameter_Name[0] = "V_P_TYPE";
-                MyOraDB.Parameter_Name[1] = "V_P_YMD";
-                MyOraDB.Parameter_Name[2] = "V_P_ROLL_OP_CD";
-                MyOraDB.Parameter_Name[3] = "V_P_MC_ID";
-                MyOraDB.Parameter_Name[4] = "V_P_MLINE_CD";
+                MyOraDB.Parameter_Name[0] = "ARG_TYPE";
+                MyOraDB.Parameter_Name[1] = "ARG_YMD";
+                MyOraDB.Parameter_Name[2] = "ARG_OP_CD";
+                MyOraDB.Parameter_Name[3] = "ARG_MC_ID";
+                MyOraDB.Parameter_Name[4] = "ARG_MLINE_CD";
                 MyOraDB.Parameter_Name[5] = "OUT_CURSOR";
 
                 MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;

@@ -577,7 +577,7 @@ namespace FORM
                 ((XYDiagram)arg_chart.Diagram).AxisY.NumericScaleOptions.GridSpacing = 1;
                 //--------Text AxisX/ AxisY
                 ((XYDiagram)arg_chart.Diagram).AxisY.Title.Text = "TEMPERATURE";
-                ((XYDiagram)arg_chart.Diagram).AxisY.Title.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(240)))));
+                ((XYDiagram)arg_chart.Diagram).AxisY.Title.TextColor = Color.Yellow;
                 ((XYDiagram)arg_chart.Diagram).AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
 
                 //((XYDiagram)arg_chart.Diagram).AxisY.VisualRange.Auto = false;

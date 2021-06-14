@@ -297,7 +297,11 @@ namespace FORM
                 //GROUP
                 lblGrpList.Add(lbl_OS_GRP_RUBBER);
                 lblGrpList.Add(lbl_OS_GRP_EVA);
+
                 lblGrpList.Add(lbl_PH_GRP_CTM);
+
+                lblGrpList.Add(lbl_IP_GRP_COMP);
+
 
                 foreach (var item in lblList)
                 {

@@ -1379,7 +1379,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 22);
             this.label15.TabIndex = 6;
-            this.label15.Text = "17~21";
+            this.label15.Text = "17~20";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label39
@@ -1445,7 +1445,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 22);
             this.label7.TabIndex = 6;
-            this.label7.Text = "22~24";
+            this.label7.Text = "21~24";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6

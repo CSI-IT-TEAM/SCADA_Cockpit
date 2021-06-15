@@ -136,11 +136,9 @@ namespace FORM
             List<string> lstSeriesName = new List<string>();
             DataTable dt = dtData.Copy();//Giu lai datatable goc, de su dung lai.
             isCheckState = false;
-            if (dt == null) return;
+            if (dt.Rows.Count<2) return;
             foreach (TreeListNode node in treeList.Nodes)
             {
-
-
                 foreach (TreeListNode Childnode in node.RootNode.Nodes)
                 {
                     if (Childnode.Checked)

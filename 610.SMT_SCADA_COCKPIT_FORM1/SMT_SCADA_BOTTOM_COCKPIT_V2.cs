@@ -302,6 +302,8 @@ namespace FORM
 
                 lblGrpList.Add(lbl_IP_GRP_COMP);
 
+                lblGrpList.Add(lbl_IP_GRP_ZONE);
+
 
                 foreach (var item in lblList)
                 {

@@ -228,6 +228,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\610.SMT_SCADA_COCKPIT_FORM1\610.SMT_SCADA_COCKPIT_FORM1.csproj">
+      <Project>{D57E420E-FAF5-4778-9F6B-F5B9E0868A3D}</Project>
+      <Name>610.SMT_SCADA_COCKPIT_FORM1</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ComVar\ComVar.csproj">
       <Project>{1fdd4c55-6914-47c9-89f0-682d023ac3a9}</Project>
       <Name>ComVar</Name>

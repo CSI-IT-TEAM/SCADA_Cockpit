@@ -36,6 +36,13 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.lbl_IPA_1_Pall = new System.Windows.Forms.Label();
+            this.lbl_IPA_1_Extruder = new System.Windows.Forms.Label();
+            this.lbl_IPA_1_Roll = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.lbl_IPA_1_Kneader = new System.Windows.Forms.Label();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.a1Panel11 = new OS_DSF.A1Panel();
             this.roundLabel199 = new RoundLabel();
             this.lbl_PU_SPRAY_10 = new System.Windows.Forms.Label();
@@ -158,7 +165,7 @@
             this.label86 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
-            this.roundLabel117 = new RoundLabel();
+            this.lbl_IP_GRP_ZONE = new RoundLabel();
             this.label81 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.a1Panel9 = new OS_DSF.A1Panel();
@@ -214,11 +221,6 @@
             this.label60 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.lbl_IP_GRP_COMP = new RoundLabel();
-            this.lbl_IPA_1_Pall = new System.Windows.Forms.Label();
-            this.lbl_IPA_1_Extruder = new System.Windows.Forms.Label();
-            this.lbl_IPA_1_Roll = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.lbl_IPA_1_Kneader = new System.Windows.Forms.Label();
             this.a1Panel8 = new OS_DSF.A1Panel();
             this.roundLabel144 = new RoundLabel();
             this.label18 = new System.Windows.Forms.Label();
@@ -252,8 +254,6 @@
             this.roundLabel42 = new RoundLabel();
             this.roundLabel22 = new RoundLabel();
             this.roundLabel1 = new RoundLabel();
-            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
             this.a1Panel10.SuspendLayout();
@@ -338,6 +338,77 @@
             this.tmrTime.Enabled = true;
             this.tmrTime.Interval = 1000;
             this.tmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
+            // 
+            // lbl_IPA_1_Pall
+            // 
+            this.lbl_IPA_1_Pall.BackColor = System.Drawing.Color.Green;
+            this.lbl_IPA_1_Pall.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbl_IPA_1_Pall.Location = new System.Drawing.Point(475, 441);
+            this.lbl_IPA_1_Pall.Name = "lbl_IPA_1_Pall";
+            this.lbl_IPA_1_Pall.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_1_Pall.TabIndex = 6;
+            this.lbl_IPA_1_Pall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IPA_1_Pall.Visible = false;
+            // 
+            // lbl_IPA_1_Extruder
+            // 
+            this.lbl_IPA_1_Extruder.BackColor = System.Drawing.Color.Green;
+            this.lbl_IPA_1_Extruder.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbl_IPA_1_Extruder.Location = new System.Drawing.Point(376, 441);
+            this.lbl_IPA_1_Extruder.Name = "lbl_IPA_1_Extruder";
+            this.lbl_IPA_1_Extruder.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_1_Extruder.TabIndex = 6;
+            this.lbl_IPA_1_Extruder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IPA_1_Extruder.Visible = false;
+            // 
+            // lbl_IPA_1_Roll
+            // 
+            this.lbl_IPA_1_Roll.BackColor = System.Drawing.Color.Green;
+            this.lbl_IPA_1_Roll.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbl_IPA_1_Roll.Location = new System.Drawing.Point(277, 441);
+            this.lbl_IPA_1_Roll.Name = "lbl_IPA_1_Roll";
+            this.lbl_IPA_1_Roll.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_1_Roll.TabIndex = 6;
+            this.lbl_IPA_1_Roll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IPA_1_Roll.Visible = false;
+            // 
+            // label59
+            // 
+            this.label59.BackColor = System.Drawing.Color.Silver;
+            this.label59.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label59.Location = new System.Drawing.Point(123, 441);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(49, 22);
+            this.label59.TabIndex = 6;
+            this.label59.Text = "1";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label59.Visible = false;
+            // 
+            // lbl_IPA_1_Kneader
+            // 
+            this.lbl_IPA_1_Kneader.BackColor = System.Drawing.Color.Green;
+            this.lbl_IPA_1_Kneader.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbl_IPA_1_Kneader.Location = new System.Drawing.Point(177, 441);
+            this.lbl_IPA_1_Kneader.Name = "lbl_IPA_1_Kneader";
+            this.lbl_IPA_1_Kneader.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_1_Kneader.TabIndex = 6;
+            this.lbl_IPA_1_Kneader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_IPA_1_Kneader.Visible = false;
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(877, 107);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(573, 96);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "- Outsole Rubber OK\n- Outsole EVA OK\n- CTM đang chờ tâm làm form trend\n- Phylon U" +
+    "V chưa có hệ thống\n- IP Roll Còn làm Click trend\n- IP Zone Xong form Main (Còn l" +
+    "ại Form Detail + Trend Click)";
+            this.richTextBox1.Visible = false;
             // 
             // a1Panel11
             // 
@@ -1549,7 +1620,7 @@
             this.a1Panel6.Controls.Add(this.label86);
             this.a1Panel6.Controls.Add(this.label83);
             this.a1Panel6.Controls.Add(this.label85);
-            this.a1Panel6.Controls.Add(this.roundLabel117);
+            this.a1Panel6.Controls.Add(this.lbl_IP_GRP_ZONE);
             this.a1Panel6.Controls.Add(this.label81);
             this.a1Panel6.Controls.Add(this.label82);
             this.a1Panel6.GradientEndColor = System.Drawing.Color.White;
@@ -1779,17 +1850,17 @@
             this.label85.Text = "5";
             this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // roundLabel117
+            // lbl_IP_GRP_ZONE
             // 
-            this.roundLabel117._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.roundLabel117.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel117.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel117.ForeColor = System.Drawing.Color.White;
-            this.roundLabel117.Location = new System.Drawing.Point(0, 0);
-            this.roundLabel117.Name = "roundLabel117";
-            this.roundLabel117.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel117.TabIndex = 5;
-            this.roundLabel117.Text = "Zone";
+            this.lbl_IP_GRP_ZONE._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_IP_GRP_ZONE.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_IP_GRP_ZONE.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_IP_GRP_ZONE.ForeColor = System.Drawing.Color.White;
+            this.lbl_IP_GRP_ZONE.Location = new System.Drawing.Point(0, 0);
+            this.lbl_IP_GRP_ZONE.Name = "lbl_IP_GRP_ZONE";
+            this.lbl_IP_GRP_ZONE.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IP_GRP_ZONE.TabIndex = 5;
+            this.lbl_IP_GRP_ZONE.Text = "Zone";
             // 
             // label81
             // 
@@ -2423,62 +2494,6 @@
             this.lbl_IP_GRP_COMP.TabIndex = 5;
             this.lbl_IP_GRP_COMP.Text = "IP Compound";
             // 
-            // lbl_IPA_1_Pall
-            // 
-            this.lbl_IPA_1_Pall.BackColor = System.Drawing.Color.Green;
-            this.lbl_IPA_1_Pall.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_1_Pall.Location = new System.Drawing.Point(475, 441);
-            this.lbl_IPA_1_Pall.Name = "lbl_IPA_1_Pall";
-            this.lbl_IPA_1_Pall.Size = new System.Drawing.Size(94, 22);
-            this.lbl_IPA_1_Pall.TabIndex = 6;
-            this.lbl_IPA_1_Pall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_IPA_1_Pall.Visible = false;
-            // 
-            // lbl_IPA_1_Extruder
-            // 
-            this.lbl_IPA_1_Extruder.BackColor = System.Drawing.Color.Green;
-            this.lbl_IPA_1_Extruder.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_1_Extruder.Location = new System.Drawing.Point(376, 441);
-            this.lbl_IPA_1_Extruder.Name = "lbl_IPA_1_Extruder";
-            this.lbl_IPA_1_Extruder.Size = new System.Drawing.Size(94, 22);
-            this.lbl_IPA_1_Extruder.TabIndex = 6;
-            this.lbl_IPA_1_Extruder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_IPA_1_Extruder.Visible = false;
-            // 
-            // lbl_IPA_1_Roll
-            // 
-            this.lbl_IPA_1_Roll.BackColor = System.Drawing.Color.Green;
-            this.lbl_IPA_1_Roll.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_1_Roll.Location = new System.Drawing.Point(277, 441);
-            this.lbl_IPA_1_Roll.Name = "lbl_IPA_1_Roll";
-            this.lbl_IPA_1_Roll.Size = new System.Drawing.Size(94, 22);
-            this.lbl_IPA_1_Roll.TabIndex = 6;
-            this.lbl_IPA_1_Roll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_IPA_1_Roll.Visible = false;
-            // 
-            // label59
-            // 
-            this.label59.BackColor = System.Drawing.Color.Silver;
-            this.label59.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label59.Location = new System.Drawing.Point(123, 441);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(49, 22);
-            this.label59.TabIndex = 6;
-            this.label59.Text = "1";
-            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label59.Visible = false;
-            // 
-            // lbl_IPA_1_Kneader
-            // 
-            this.lbl_IPA_1_Kneader.BackColor = System.Drawing.Color.Green;
-            this.lbl_IPA_1_Kneader.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_1_Kneader.Location = new System.Drawing.Point(177, 441);
-            this.lbl_IPA_1_Kneader.Name = "lbl_IPA_1_Kneader";
-            this.lbl_IPA_1_Kneader.Size = new System.Drawing.Size(94, 22);
-            this.lbl_IPA_1_Kneader.TabIndex = 6;
-            this.lbl_IPA_1_Kneader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_IPA_1_Kneader.Visible = false;
-            // 
             // a1Panel8
             // 
             this.a1Panel8.BorderColor = System.Drawing.SystemColors.GrayText;
@@ -2880,21 +2895,6 @@
             this.roundLabel1.TabIndex = 5;
             this.roundLabel1.Text = "OS";
             // 
-            // splashScreenManager1
-            // 
-            this.splashScreenManager1.ClosingDelay = 500;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(877, 107);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(573, 96);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "- Outsole Rubber OK\n- Outsole EVA OK\n- CTM đang chờ tâm làm form trend\n- Phylon U" +
-    "V chưa có hệ thống\n- IP Roll Còn làm Click trend\n- IP Zone Xong form Main (Còn l" +
-    "ại Form Detail + Trend Click)";
-            this.richTextBox1.Visible = false;
-            // 
             // SMT_SCADA_BOTTOM_COCKPIT_V2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2964,7 +2964,7 @@
         private OS_DSF.A1Panel a1Panel5;
         private RoundLabel lbl_IP_GRP_COMP;
         private OS_DSF.A1Panel a1Panel6;
-        private RoundLabel roundLabel117;
+        private RoundLabel lbl_IP_GRP_ZONE;
         private OS_DSF.A1Panel a1Panel7;
         private RoundLabel roundLabel131;
         private RoundLabel roundLabel132;

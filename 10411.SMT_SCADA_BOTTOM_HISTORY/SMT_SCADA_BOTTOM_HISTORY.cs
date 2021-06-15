@@ -153,7 +153,6 @@ namespace FORM
                             lstSeriesName.Add(NodeName);
                         }
                     }
-
                 }
                 if (!isHasChild)
                 {
@@ -167,7 +166,6 @@ namespace FORM
                             lstData.Add(dtTmp);
                             lstSeriesName.Add(ParNodeName);
                         }
-
                     }
                 }
             }
@@ -175,17 +173,10 @@ namespace FORM
             chkAll.CheckedChanged -= chkAll_CheckedChanged;
             chkAll.Checked = treeList.GetAllCheckedNodes().Count == treeList.AllNodesCount;
             chkAll.CheckedChanged += chkAll_CheckedChanged;
-
-
-
-
-
-
             //Doing something with list datatable
             //  MessageBox.Show("Done!");
             DrawChart(lstData, lstSeriesName, cht_Chart, lstData.Count > 1 ? false : true);
         }
-
 
         //private void LoadingDataChart()
         //{

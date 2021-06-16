@@ -2898,7 +2898,7 @@
             // tmrBlinking
             // 
             this.tmrBlinking.Enabled = true;
-            this.tmrBlinking.Interval = 150;
+            this.tmrBlinking.Interval = 500;
             this.tmrBlinking.Tick += new System.EventHandler(this.tmrBlinking_Tick);
             // 
             // SMT_SCADA_BOTTOM_COCKPIT_V2

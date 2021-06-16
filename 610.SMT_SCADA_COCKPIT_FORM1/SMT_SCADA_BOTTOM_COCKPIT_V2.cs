@@ -151,7 +151,8 @@ namespace FORM
                     cCount = 30;
                 }
                 tmrTime.Start();
-                
+                tmrBlinking.Stop();
+
             }
         }
 
@@ -356,6 +357,8 @@ namespace FORM
             ComVar.Var._strValue2 = dt.Rows[0]["ITEMS_MAPPING"].ToString();
             //ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
             ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
+            tmrTime.Stop();
+            tmrBlinking.Stop();
         }
         #endregion
 

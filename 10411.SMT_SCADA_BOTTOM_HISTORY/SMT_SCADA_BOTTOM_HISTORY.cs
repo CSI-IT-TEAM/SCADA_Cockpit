@@ -36,6 +36,7 @@ namespace FORM
         {
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
             dtp_Ym.EditValue = DateTime.Now.ToString("yyyy-MM-dd");
+            dtp_Ym.EditValueChanged += new System.EventHandler(dtp_Ym_EditValueChanged);
         }
 
         private void tmrTime_Tick(object sender, EventArgs e)

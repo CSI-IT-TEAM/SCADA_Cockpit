@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer();
             this.lbl_IPA_1_Pall = new System.Windows.Forms.Label();
             this.lbl_IPA_1_Extruder = new System.Windows.Forms.Label();
             this.lbl_IPA_1_Roll = new System.Windows.Forms.Label();
@@ -254,6 +253,7 @@
             this.roundLabel42 = new RoundLabel();
             this.roundLabel22 = new RoundLabel();
             this.roundLabel1 = new RoundLabel();
+            this.tmrBlinking = new System.Windows.Forms.Timer();
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
             this.a1Panel10.SuspendLayout();
@@ -2895,6 +2895,12 @@
             this.roundLabel1.TabIndex = 5;
             this.roundLabel1.Text = "OS";
             // 
+            // tmrBlinking
+            // 
+            this.tmrBlinking.Enabled = true;
+            this.tmrBlinking.Interval = 150;
+            this.tmrBlinking.Tick += new System.EventHandler(this.tmrBlinking_Tick);
+            // 
             // SMT_SCADA_BOTTOM_COCKPIT_V2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -3170,5 +3176,6 @@
         private System.Windows.Forms.Label lbl_PU_UV_5;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Timer tmrBlinking;
     }
 }

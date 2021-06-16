@@ -34,6 +34,7 @@
             this.lblHeat = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMC = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.a1Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             this.a1Panel1.Controls.Add(this.label3);
             this.a1Panel1.Controls.Add(this.lblCool);
             this.a1Panel1.Controls.Add(this.lblHeat);
+            this.a1Panel1.Controls.Add(this.label1);
             this.a1Panel1.Controls.Add(this.label2);
             this.a1Panel1.Controls.Add(this.lblMC);
             this.a1Panel1.GradientEndColor = System.Drawing.Color.White;
@@ -63,7 +65,7 @@
             this.label3.BackColor = System.Drawing.Color.DodgerBlue;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(110, 5);
+            this.label3.Location = new System.Drawing.Point(113, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 22);
             this.label3.TabIndex = 0;
@@ -76,7 +78,7 @@
             this.lblCool.BackColor = System.Drawing.Color.Silver;
             this.lblCool.Font = new System.Drawing.Font("DS-Digital", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCool.ForeColor = System.Drawing.Color.White;
-            this.lblCool.Location = new System.Drawing.Point(110, 32);
+            this.lblCool.Location = new System.Drawing.Point(113, 32);
             this.lblCool.Name = "lblCool";
             this.lblCool.Size = new System.Drawing.Size(67, 38);
             this.lblCool.TabIndex = 0;
@@ -89,7 +91,7 @@
             this.lblHeat.BackColor = System.Drawing.Color.Silver;
             this.lblHeat.Font = new System.Drawing.Font("DS-Digital", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeat.ForeColor = System.Drawing.Color.White;
-            this.lblHeat.Location = new System.Drawing.Point(37, 32);
+            this.lblHeat.Location = new System.Drawing.Point(40, 32);
             this.lblHeat.Name = "lblHeat";
             this.lblHeat.Size = new System.Drawing.Size(67, 38);
             this.lblHeat.TabIndex = 0;
@@ -101,7 +103,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Orange;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 5);
+            this.label2.Location = new System.Drawing.Point(40, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 22);
             this.label2.TabIndex = 0;
@@ -111,15 +113,29 @@
             // 
             // lblMC
             // 
-            this.lblMC.BackColor = System.Drawing.Color.Silver;
+            this.lblMC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblMC.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMC.Location = new System.Drawing.Point(3, 5);
+            this.lblMC.ForeColor = System.Drawing.Color.White;
+            this.lblMC.Location = new System.Drawing.Point(3, 32);
             this.lblMC.Name = "lblMC";
-            this.lblMC.Size = new System.Drawing.Size(28, 65);
+            this.lblMC.Size = new System.Drawing.Size(32, 38);
             this.lblMC.TabIndex = 0;
             this.lblMC.Text = "-";
             this.lblMC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMC.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MC";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label_Click);
             // 
             // UC_B1CTM
             // 
@@ -142,5 +158,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCool;
         private System.Windows.Forms.Label lblHeat;
+        private System.Windows.Forms.Label label1;
     }
 }

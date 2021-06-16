@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B2IPZONE_TEMPER));
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.sbtnZone1 = new DevExpress.XtraEditors.SimpleButton();
@@ -51,6 +56,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MACHINE_CD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -98,14 +104,13 @@
             this.lblLine_002_012 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.chartKneader = new DevExpress.XtraCharts.ChartControl();
+            this.chartInject = new DevExpress.XtraCharts.ChartControl();
             this.pnInfo = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblMax = new System.Windows.Forms.Label();
             this.lblMin = new System.Windows.Forms.Label();
             this.lblMCNo = new System.Windows.Forms.Label();
-            this.MACHINE_CD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -115,7 +120,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartKneader)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartInject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
             this.pnInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -391,6 +399,7 @@
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
             this.gridView1.RowHeight = 50;
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
             // 
             // gridColumn1
             // 
@@ -447,6 +456,12 @@
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
             this.gridColumn3.Width = 157;
+            // 
+            // MACHINE_CD
+            // 
+            this.MACHINE_CD.Caption = "MACHINE_CD";
+            this.MACHINE_CD.FieldName = "MACHINE_CD";
+            this.MACHINE_CD.Name = "MACHINE_CD";
             // 
             // label1
             // 
@@ -782,9 +797,9 @@
             // 
             // lblLine_002_001
             // 
-            this.lblLine_002_001.BackColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_001.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lblLine_002_001.Font = new System.Drawing.Font("DS-Digital", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLine_002_001.ForeColor = System.Drawing.Color.Black;
+            this.lblLine_002_001.ForeColor = System.Drawing.Color.White;
             this.lblLine_002_001.Location = new System.Drawing.Point(897, 274);
             this.lblLine_002_001.Name = "lblLine_002_001";
             this.lblLine_002_001.Size = new System.Drawing.Size(105, 72);
@@ -990,7 +1005,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.chartControl1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.chartKneader, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.chartInject, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(1142, 274);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -1013,19 +1028,29 @@
             this.chartControl1.Size = new System.Drawing.Size(760, 350);
             this.chartControl1.TabIndex = 5;
             // 
-            // chartKneader
+            // chartInject
             // 
-            this.chartKneader.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartKneader.AppearanceNameSerializable = "Dark Flat";
-            this.chartKneader.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartKneader.DataBindings = null;
-            this.chartKneader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartKneader.Legend.Name = "Default Legend";
-            this.chartKneader.Location = new System.Drawing.Point(3, 3);
-            this.chartKneader.Name = "chartKneader";
-            this.chartKneader.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartKneader.Size = new System.Drawing.Size(760, 349);
-            this.chartKneader.TabIndex = 4;
+            this.chartInject.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.chartInject.AppearanceNameSerializable = "Dark Flat";
+            this.chartInject.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartInject.DataBindings = null;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartInject.Diagram = xyDiagram2;
+            this.chartInject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartInject.Legend.Name = "Default Legend";
+            this.chartInject.Location = new System.Drawing.Point(3, 3);
+            this.chartInject.Name = "chartInject";
+            series2.Name = "Series 1";
+            lineSeriesView2.LineStyle.Thickness = 3;
+            series2.View = lineSeriesView2;
+            this.chartInject.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series2};
+            this.chartInject.Size = new System.Drawing.Size(760, 349);
+            this.chartInject.TabIndex = 4;
+            chartTitle2.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartInject.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle2});
             // 
             // pnInfo
             // 
@@ -1100,12 +1125,6 @@
             this.lblMCNo.Text = "1";
             this.lblMCNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MACHINE_CD
-            // 
-            this.MACHINE_CD.Caption = "MACHINE_CD";
-            this.MACHINE_CD.FieldName = "MACHINE_CD";
-            this.MACHINE_CD.Name = "MACHINE_CD";
-            // 
             // SMT_SCADA_B2IPZONE_TEMPER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1177,7 +1196,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl2)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartKneader)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartInject)).EndInit();
             this.pnInfo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1254,7 +1276,7 @@
         private System.Windows.Forms.Label lblLine_002_012;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private DevExpress.XtraCharts.ChartControl chartControl1;
-        private DevExpress.XtraCharts.ChartControl chartKneader;
+        private DevExpress.XtraCharts.ChartControl chartInject;
         private System.Windows.Forms.Panel pnInfo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

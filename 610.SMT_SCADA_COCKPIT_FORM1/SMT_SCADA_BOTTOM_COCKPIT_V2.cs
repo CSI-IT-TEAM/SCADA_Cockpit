@@ -16,6 +16,7 @@ namespace FORM
         public SMT_SCADA_BOTTOM_COCKPIT_V2()
         {
             InitializeComponent();
+            tmrBlinking.Stop();
         }
         bool isFirstTime = true;
         int cCount = 0;
@@ -81,6 +82,7 @@ namespace FORM
         {
             ComVar.Var.callForm = "back";
             tmrTime.Stop();
+            tmrBlinking.Stop();
         }
 
         private void tmrTime_Tick(object sender, EventArgs e)
@@ -95,6 +97,7 @@ namespace FORM
                     splashScreenManager1.ShowWaitForm();
                     DataTable dt = SEL_BOTTOM_COCKPIT_DATA("Q");
                     BindingData(dt);
+                    tmrBlinking.Start();
                     splashScreenManager1.CloseWaitForm();
                 }
                 catch { splashScreenManager1.CloseWaitForm(); }
@@ -126,6 +129,8 @@ namespace FORM
                         }
                     }
                 }
+
+                tmrBlinking.Start();
             }
             catch (Exception)
             {
@@ -146,6 +151,7 @@ namespace FORM
                     cCount = 30;
                 }
                 tmrTime.Start();
+                
             }
         }
 
@@ -371,6 +377,26 @@ namespace FORM
             RoundLabel lbl = ((RoundLabel)sender);
             lbl.ForeColor = Color.White;
             lbl.Font = new Font("Times New Roman", 12, FontStyle.Bold | FontStyle.Italic);
+        }
+
+        private void tmrBlinking_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (var item in lblList)
+                {
+                    if (item.BackColor == Color.Red)
+                        item.BackColor = Color.FromArgb(191,191,191);
+                    else if (item.BackColor == Color.FromArgb(191, 191, 191))
+                        item.BackColor = Color.Red;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
     }
 }

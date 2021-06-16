@@ -308,7 +308,6 @@
             this.dtp_Ym.TabIndex = 710;
             this.dtp_Ym.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.dtp_Ym.ToolTipTitle = "Click vào để chọn ngày";
-            this.dtp_Ym.EditValueChanged += new System.EventHandler(this.dtp_Ym_EditValueChanged);
             // 
             // label6
             // 

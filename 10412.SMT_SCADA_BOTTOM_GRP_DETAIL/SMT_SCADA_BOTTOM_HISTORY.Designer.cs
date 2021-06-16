@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
+            DevExpress.XtraCharts.ChartTitle chartTitle2 = new DevExpress.XtraCharts.ChartTitle();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_HISTORY));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -46,6 +49,9 @@
             this.treeList = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.ID_NAME = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.cht_Chart1 = new DevExpress.XtraCharts.ChartControl();
+            this.cht_Chart2 = new DevExpress.XtraCharts.ChartControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -56,15 +62,18 @@
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.cht_Chart1 = new DevExpress.XtraCharts.ChartControl();
-            this.cht_Chart2 = new DevExpress.XtraCharts.ChartControl();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.pn_Main.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkAll.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cht_Chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cht_Chart2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -72,12 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtp_Ym.Properties)).BeginInit();
             this.pn_Top.SuspendLayout();
             this.pnTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cht_Chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cht_Chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_Main
@@ -202,6 +205,64 @@
             this.ID_NAME.FieldName = "ID_NAME";
             this.ID_NAME.Name = "ID_NAME";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(363, 3);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.cht_Chart1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.cht_Chart2);
+            this.splitContainer1.Size = new System.Drawing.Size(1538, 889);
+            this.splitContainer1.SplitterDistance = 433;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // cht_Chart1
+            // 
+            this.cht_Chart1.AppearanceNameSerializable = "Dark Flat";
+            this.cht_Chart1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.cht_Chart1.DataBindings = null;
+            this.cht_Chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cht_Chart1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
+            this.cht_Chart1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+            this.cht_Chart1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+            this.cht_Chart1.Legend.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cht_Chart1.Legend.Name = "Default Legend";
+            this.cht_Chart1.Location = new System.Drawing.Point(0, 0);
+            this.cht_Chart1.Name = "cht_Chart1";
+            this.cht_Chart1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.cht_Chart1.Size = new System.Drawing.Size(1538, 433);
+            this.cht_Chart1.TabIndex = 2;
+            chartTitle1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.cht_Chart1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle1});
+            // 
+            // cht_Chart2
+            // 
+            this.cht_Chart2.AppearanceNameSerializable = "Dark Flat";
+            this.cht_Chart2.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.cht_Chart2.DataBindings = null;
+            this.cht_Chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cht_Chart2.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
+            this.cht_Chart2.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
+            this.cht_Chart2.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+            this.cht_Chart2.Legend.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cht_Chart2.Legend.Name = "Default Legend";
+            this.cht_Chart2.Location = new System.Drawing.Point(0, 0);
+            this.cht_Chart2.Name = "cht_Chart2";
+            this.cht_Chart2.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.cht_Chart2.Size = new System.Drawing.Size(1538, 452);
+            this.cht_Chart2.TabIndex = 2;
+            chartTitle2.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cht_Chart2.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
+            chartTitle2});
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
@@ -297,7 +358,6 @@
             this.dtp_Ym.TabIndex = 710;
             this.dtp_Ym.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.dtp_Ym.ToolTipTitle = "Click vào để chọn ngày";
-            this.dtp_Ym.EditValueChanged += new System.EventHandler(this.dtp_Ym_EditValueChanged);
             // 
             // label6
             // 
@@ -382,58 +442,6 @@
             this.tmrTime.Interval = 1000;
             this.tmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(363, 3);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.cht_Chart1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.cht_Chart2);
-            this.splitContainer1.Size = new System.Drawing.Size(1538, 889);
-            this.splitContainer1.SplitterDistance = 433;
-            this.splitContainer1.TabIndex = 1;
-            // 
-            // cht_Chart1
-            // 
-            this.cht_Chart1.AppearanceNameSerializable = "Dark Flat";
-            this.cht_Chart1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.cht_Chart1.DataBindings = null;
-            this.cht_Chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cht_Chart1.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-            this.cht_Chart1.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-            this.cht_Chart1.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
-            this.cht_Chart1.Legend.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.cht_Chart1.Legend.Name = "Default Legend";
-            this.cht_Chart1.Location = new System.Drawing.Point(0, 0);
-            this.cht_Chart1.Name = "cht_Chart1";
-            this.cht_Chart1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.cht_Chart1.Size = new System.Drawing.Size(1538, 433);
-            this.cht_Chart1.TabIndex = 2;
-            // 
-            // cht_Chart2
-            // 
-            this.cht_Chart2.AppearanceNameSerializable = "Dark Flat";
-            this.cht_Chart2.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.cht_Chart2.DataBindings = null;
-            this.cht_Chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cht_Chart2.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center;
-            this.cht_Chart2.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.TopOutside;
-            this.cht_Chart2.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
-            this.cht_Chart2.Legend.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.cht_Chart2.Legend.Name = "Default Legend";
-            this.cht_Chart2.Location = new System.Drawing.Point(0, 0);
-            this.cht_Chart2.Name = "cht_Chart2";
-            this.cht_Chart2.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.cht_Chart2.Size = new System.Drawing.Size(1538, 452);
-            this.cht_Chart2.TabIndex = 2;
-            // 
             // SMT_SCADA_BOTTOM_HISTORY
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -453,6 +461,12 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chkAll.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cht_Chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cht_Chart2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -460,12 +474,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtp_Ym.Properties)).EndInit();
             this.pn_Top.ResumeLayout(false);
             this.pnTop.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cht_Chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cht_Chart2)).EndInit();
             this.ResumeLayout(false);
 
         }

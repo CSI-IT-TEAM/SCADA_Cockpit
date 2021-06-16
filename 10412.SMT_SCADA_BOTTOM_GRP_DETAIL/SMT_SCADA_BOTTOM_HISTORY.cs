@@ -35,7 +35,9 @@ namespace FORM
         private void SMT_SCADA_BOTTOM_COCKPIT_Load(object sender, EventArgs e)
         {
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
+           
             dtp_Ym.EditValue = DateTime.Now.ToString("yyyy-MM-dd");
+            dtp_Ym.EditValueChanged += new System.EventHandler(dtp_Ym_EditValueChanged);
         }
 
         private void tmrTime_Tick(object sender, EventArgs e)
@@ -165,7 +167,6 @@ namespace FORM
                                 lstSeriesName.Add(NodeName);
                             }
                         }
-
                     }
                     if (!isHasChild)
                     {
@@ -179,7 +180,6 @@ namespace FORM
                                 lstData.Add(dtTmp);
                                 lstSeriesName.Add(ParNodeName);
                             }
-
                         }
                     }
                 }
@@ -187,7 +187,7 @@ namespace FORM
                 chkAll.CheckedChanged -= chkAll_CheckedChanged;
                 chkAll.Checked = treeList.GetAllCheckedNodes().Count == treeList.AllNodesCount;
                 chkAll.CheckedChanged += chkAll_CheckedChanged;
-                DrawChart(lstData, lstSeriesName, cht_Chart1, lstData.Count > 1 ? false : true);
+                DrawChart("Heat" ,lstData, lstSeriesName, cht_Chart1, lstData.Count > 1 ? false : true);
             }
 
 
@@ -231,7 +231,7 @@ namespace FORM
                 chkAll.CheckedChanged -= chkAll_CheckedChanged;
                 chkAll.Checked = treeList.GetAllCheckedNodes().Count == treeList.AllNodesCount;
                 chkAll.CheckedChanged += chkAll_CheckedChanged;
-                DrawChart(lstData, lstSeriesName, cht_Chart2, lstData.Count > 1 ? false : true);
+                DrawChart("Cool",lstData, lstSeriesName, cht_Chart2, lstData.Count > 1 ? false : true);
             }
         }
 
@@ -301,7 +301,7 @@ namespace FORM
 
         }
 
-        private void DrawChart(List<DataTable> lstData, List<string> listSeriesName, ChartControl _chart, bool isDrawSpec)
+        private void DrawChart(string Ytitle,List<DataTable> lstData, List<string> listSeriesName, ChartControl _chart, bool isDrawSpec)
         {
             try
             {
@@ -420,6 +420,8 @@ namespace FORM
                 ((XYDiagram)_chart.Diagram).AxisY.Title.Text = "Temperature  (°C)";
                 ((XYDiagram)_chart.Diagram).AxisY.Title.TextColor = Color.Yellow;
                 ((XYDiagram)_chart.Diagram).AxisY.Title.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+                _chart.Titles[0].Text = Ytitle + " Temperature (°C)";
                 //DataTable dt1 = null;
                 //DataTable dt2 = null;
                 //int iRow = 0;

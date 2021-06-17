@@ -234,48 +234,6 @@ namespace FORM
                 DrawChart("Cool",lstData, lstSeriesName, cht_Chart2, lstData.Count > 1 ? false : true);
             }
         }
-
-
-        //private void LoadingDataChart()
-        //{
-        //    try
-        //    {
-        //        dtData = GetData("Q", "ALL", "ALL");        /*Get All Data*/
-        //        int cnt1 = 0, cnt2 = 0;
-        //        DataTable dtTmp = null;
-        //        dtTmp = dtData.Copy();
-        //        if (dtTmp != null && dtTmp.Rows.Count > 0)
-        //        {
-        //            foreach (TreeListNode node in treeList.Nodes)
-        //            {
-
-        //                foreach (TreeListNode node1 in node.RootNode.Nodes)
-        //                {
-        //                    cnt1++;
-        //                    if (!node1.Checked)
-        //                    {
-        //                        cnt2++;
-        //                        if (dtTmp.Select("ID <> '" + node1.GetValue("ID").ToString() + "'", "").Count() > 0)
-        //                        {
-        //                            dtTmp = dtTmp.Select("ID <> '" + node1.GetValue("ID").ToString() + "'", "").CopyToDataTable();
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //            if (cnt1 == cnt2)
-        //                while (dtTmp.Rows.Count > 0)
-        //                {
-        //                    dtTmp.Rows.RemoveAt(0);
-        //                }
-
-        //            DrawChart(dtTmp, cht_Chart);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
         private int GetMinValue(List<int> lst)
         {
             try
@@ -876,6 +834,7 @@ namespace FORM
         {
             BindingData();
             GetDataTable();
+            //GetDataTest();
         }
     }
 }

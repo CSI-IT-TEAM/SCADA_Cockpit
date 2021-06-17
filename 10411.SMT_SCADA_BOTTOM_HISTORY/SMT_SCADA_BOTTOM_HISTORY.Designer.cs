@@ -47,9 +47,11 @@
             this.treeList = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.ID_NAME = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.STATUS = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dtp_Ym = new DevExpress.XtraEditors.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.pn_Top = new System.Windows.Forms.Panel();
             this.pnTop = new System.Windows.Forms.Panel();
@@ -57,7 +59,6 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.tmrTime = new System.Windows.Forms.Timer();
-            this.dtp_Ym = new DevExpress.XtraEditors.DateEdit();
             this.pn_Main.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cht_Chart)).BeginInit();
@@ -67,10 +68,10 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.pn_Top.SuspendLayout();
-            this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_Ym.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_Ym.Properties)).BeginInit();
+            this.pn_Top.SuspendLayout();
+            this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_Main
@@ -160,7 +161,8 @@
             this.treeList.ColumnPanelRowHeight = 40;
             this.treeList.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.treeListColumn1,
-            this.ID_NAME});
+            this.ID_NAME,
+            this.STATUS});
             this.treeList.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeList.Location = new System.Drawing.Point(0, 0);
@@ -188,6 +190,7 @@
             this.treeList.Size = new System.Drawing.Size(354, 889);
             this.treeList.TabIndex = 21;
             this.treeList.TreeLineStyle = DevExpress.XtraTreeList.LineStyle.Large;
+            this.treeList.NodeCellStyle += new DevExpress.XtraTreeList.GetCustomNodeCellStyleEventHandler(this.treeList_NodeCellStyle);
             this.treeList.AfterCheckNode += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList_AfterCheckNode);
             // 
             // treeListColumn1
@@ -211,6 +214,12 @@
             this.ID_NAME.Caption = "ID_NAME";
             this.ID_NAME.FieldName = "ID_NAME";
             this.ID_NAME.Name = "ID_NAME";
+            // 
+            // STATUS
+            // 
+            this.STATUS.Caption = "STATUS";
+            this.STATUS.FieldName = "STATUS";
+            this.STATUS.Name = "STATUS";
             // 
             // panel1
             // 
@@ -239,6 +248,86 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1904, 68);
             this.panel4.TabIndex = 0;
+            // 
+            // dtp_Ym
+            // 
+            this.dtp_Ym.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dtp_Ym.EditValue = new System.DateTime(2017, 12, 15, 16, 0, 56, 917);
+            this.dtp_Ym.Location = new System.Drawing.Point(155, 14);
+            this.dtp_Ym.Name = "dtp_Ym";
+            this.dtp_Ym.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dtp_Ym.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_Ym.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.dtp_Ym.Properties.Appearance.Options.UseFont = true;
+            this.dtp_Ym.Properties.Appearance.Options.UseForeColor = true;
+            this.dtp_Ym.Properties.AppearanceCalendar.ButtonPressed.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceCalendar.ButtonPressed.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceCalendar.CalendarHeader.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceCalendar.CalendarHeader.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCell.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCell.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCellHighlighted.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCellHighlighted.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCellHoliday.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCellHoliday.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCellPressed.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCellPressed.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCellSelected.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCellSelected.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCellToday.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceCalendar.DayCellToday.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceCalendar.HeaderPressed.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceCalendar.HeaderPressed.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceDisabled.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceFocused.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceFocused.Options.UseFont = true;
+            this.dtp_Ym.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            this.dtp_Ym.Properties.AppearanceReadOnly.Options.UseFont = true;
+            this.dtp_Ym.Properties.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            serializableAppearanceObject1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject1.Options.UseFont = true;
+            serializableAppearanceObject2.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            serializableAppearanceObject2.Options.UseFont = true;
+            serializableAppearanceObject3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            serializableAppearanceObject3.Options.UseFont = true;
+            serializableAppearanceObject4.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            serializableAppearanceObject4.Options.UseFont = true;
+            this.dtp_Ym.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 50, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null)});
+            this.dtp_Ym.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            editorButtonImageOptions2.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            serializableAppearanceObject5.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject5.Options.UseFont = true;
+            serializableAppearanceObject6.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject6.Options.UseFont = true;
+            serializableAppearanceObject7.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject7.Options.UseFont = true;
+            serializableAppearanceObject8.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
+            serializableAppearanceObject8.Options.UseFont = true;
+            this.dtp_Ym.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close, "", 50, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null)});
+            this.dtp_Ym.Properties.CalendarTimeProperties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.dtp_Ym.Properties.CalendarTimeProperties.ReadOnly = true;
+            this.dtp_Ym.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.dtp_Ym.Properties.ContextImageOptions.SvgImageSize = new System.Drawing.Size(1, 10);
+            this.dtp_Ym.Properties.DisplayFormat.FormatString = "yyyy/MM/dd";
+            this.dtp_Ym.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtp_Ym.Properties.EditFormat.FormatString = "yyyy/MM/dd";
+            this.dtp_Ym.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtp_Ym.Properties.Mask.EditMask = "yyyy/MM/dd";
+            this.dtp_Ym.Properties.ShowNullValuePromptWhenFocused = true;
+            this.dtp_Ym.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.MonthView;
+            this.dtp_Ym.Size = new System.Drawing.Size(202, 35);
+            this.dtp_Ym.TabIndex = 711;
+            this.dtp_Ym.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.dtp_Ym.ToolTipTitle = "Click vào để chọn ngày";
             // 
             // label6
             // 
@@ -323,86 +412,6 @@
             this.tmrTime.Interval = 1000;
             this.tmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
             // 
-            // dtp_Ym
-            // 
-            this.dtp_Ym.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dtp_Ym.EditValue = new System.DateTime(2017, 12, 15, 16, 0, 56, 917);
-            this.dtp_Ym.Location = new System.Drawing.Point(155, 14);
-            this.dtp_Ym.Name = "dtp_Ym";
-            this.dtp_Ym.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.dtp_Ym.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_Ym.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.dtp_Ym.Properties.Appearance.Options.UseFont = true;
-            this.dtp_Ym.Properties.Appearance.Options.UseForeColor = true;
-            this.dtp_Ym.Properties.AppearanceCalendar.ButtonPressed.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceCalendar.ButtonPressed.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceCalendar.CalendarHeader.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceCalendar.CalendarHeader.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCell.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCell.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCellHighlighted.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCellHighlighted.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCellHoliday.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCellHoliday.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCellPressed.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCellPressed.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCellSelected.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCellSelected.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCellToday.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceCalendar.DayCellToday.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceCalendar.HeaderPressed.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceCalendar.HeaderPressed.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceDisabled.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceFocused.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceFocused.Options.UseFont = true;
-            this.dtp_Ym.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            this.dtp_Ym.Properties.AppearanceReadOnly.Options.UseFont = true;
-            this.dtp_Ym.Properties.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            serializableAppearanceObject1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject1.Options.UseFont = true;
-            serializableAppearanceObject2.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            serializableAppearanceObject2.Options.UseFont = true;
-            serializableAppearanceObject3.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            serializableAppearanceObject3.Options.UseFont = true;
-            serializableAppearanceObject4.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            serializableAppearanceObject4.Options.UseFont = true;
-            this.dtp_Ym.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 50, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null)});
-            this.dtp_Ym.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            editorButtonImageOptions2.Location = DevExpress.XtraEditors.ImageLocation.Default;
-            serializableAppearanceObject5.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject5.Options.UseFont = true;
-            serializableAppearanceObject6.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject6.Options.UseFont = true;
-            serializableAppearanceObject7.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject7.Options.UseFont = true;
-            serializableAppearanceObject8.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold);
-            serializableAppearanceObject8.Options.UseFont = true;
-            this.dtp_Ym.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close, "", 50, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null)});
-            this.dtp_Ym.Properties.CalendarTimeProperties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.dtp_Ym.Properties.CalendarTimeProperties.ReadOnly = true;
-            this.dtp_Ym.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.dtp_Ym.Properties.ContextImageOptions.SvgImageSize = new System.Drawing.Size(1, 10);
-            this.dtp_Ym.Properties.DisplayFormat.FormatString = "yyyy/MM/dd";
-            this.dtp_Ym.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dtp_Ym.Properties.EditFormat.FormatString = "yyyy/MM/dd";
-            this.dtp_Ym.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtp_Ym.Properties.Mask.EditMask = "yyyy/MM/dd";
-            this.dtp_Ym.Properties.ShowNullValuePromptWhenFocused = true;
-            this.dtp_Ym.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.MonthView;
-            this.dtp_Ym.Size = new System.Drawing.Size(202, 35);
-            this.dtp_Ym.TabIndex = 711;
-            this.dtp_Ym.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.dtp_Ym.ToolTipTitle = "Click vào để chọn ngày";
-            // 
             // SMT_SCADA_BOTTOM_HISTORY
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -426,10 +435,10 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.pn_Top.ResumeLayout(false);
-            this.pnTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtp_Ym.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_Ym.Properties)).EndInit();
+            this.pn_Top.ResumeLayout(false);
+            this.pnTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -455,5 +464,6 @@
         private DevExpress.XtraTreeList.Columns.TreeListColumn ID_NAME;
         private DevExpress.XtraCharts.ChartControl cht_Chart;
         private DevExpress.XtraEditors.DateEdit dtp_Ym;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn STATUS;
     }
 }

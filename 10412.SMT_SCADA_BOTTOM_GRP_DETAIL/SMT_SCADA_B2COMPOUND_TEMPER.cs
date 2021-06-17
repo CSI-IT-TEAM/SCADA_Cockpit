@@ -370,7 +370,7 @@ namespace FORM
             }
         }
 
-        private void BindingDataChart(ChartControl chart, string op_cd, DataTable dt)
+        private void BindingDataChart(string Title,ChartControl chart, string op_cd, DataTable dt)
         {
             try
             {
@@ -393,7 +393,7 @@ namespace FORM
                         }
                     }
                 }
-                CreateChart(lstData, lstSeriesName, chart);
+                CreateChart(Title,lstData, lstSeriesName, chart);
             }
             catch
             {
@@ -540,7 +540,7 @@ namespace FORM
             // }
         }
 
-        private void CreateChart(List<DataTable> lstData, List<string> listSeriesName, ChartControl _chart)
+        private void CreateChart(string Title,List<DataTable> lstData, List<string> listSeriesName, ChartControl _chart)
         {
             try
             {
@@ -656,7 +656,7 @@ namespace FORM
                 ((XYDiagram)_chart.Diagram).AxisY.Label.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular);
                 ((XYDiagram)_chart.Diagram).AxisY.Label.Visible = true;
                 ((XYDiagram)_chart.Diagram).AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-                ((XYDiagram)_chart.Diagram).AxisY.Title.Text = "Temperature  (°C)";
+                ((XYDiagram)_chart.Diagram).AxisY.Title.Text = Title+ " Temperature  (°C)";
                 ((XYDiagram)_chart.Diagram).AxisY.Title.TextColor = Color.Yellow;
                 ((XYDiagram)_chart.Diagram).AxisY.Title.Font = new System.Drawing.Font("Times New Roman", 11, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
@@ -683,10 +683,10 @@ namespace FORM
                 BindingDataGauges();
 
                 DataTable dt = LOAD_HISTORY_DATA("Q", "");
-                BindingDataChart(chartKneader, "KNED", dt);
-                BindingDataChart(chartRoll, "ROLL", dt);
-                BindingDataChart(chartEXTR, "EXTR", dt);
-                BindingDataChart(chartPall, "PELL", dt);
+                BindingDataChart("Kneader",chartKneader, "KNED", dt);
+                BindingDataChart("Roll",chartRoll, "ROLL", dt);
+                BindingDataChart("Extruder",chartEXTR, "EXTR", dt);
+                BindingDataChart("Palletizing",chartPall, "PELL", dt);
                 //  BindingData();
                 //LoadData();
 

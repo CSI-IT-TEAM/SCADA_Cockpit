@@ -181,6 +181,7 @@
             this.treeList.Size = new System.Drawing.Size(354, 889);
             this.treeList.TabIndex = 21;
             this.treeList.TreeLineStyle = DevExpress.XtraTreeList.LineStyle.Large;
+            this.treeList.NodeCellStyle += new DevExpress.XtraTreeList.GetCustomNodeCellStyleEventHandler(this.treeList_NodeCellStyle);
             this.treeList.AfterCheckNode += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList_AfterCheckNode);
             // 
             // treeListColumn1

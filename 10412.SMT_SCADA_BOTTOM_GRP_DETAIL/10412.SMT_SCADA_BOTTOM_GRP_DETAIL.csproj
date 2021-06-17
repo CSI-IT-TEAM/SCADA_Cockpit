@@ -154,6 +154,12 @@
     <Compile Include="SMT_SCADA_B2IPZONE_TEMPER.Designer.cs">
       <DependentUpon>SMT_SCADA_B2IPZONE_TEMPER.cs</DependentUpon>
     </Compile>
+    <Compile Include="SMT_SCADA_B_PU_HISTORY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_B_PU_HISTORY.Designer.cs">
+      <DependentUpon>SMT_SCADA_B_PU_HISTORY.cs</DependentUpon>
+    </Compile>
     <Compile Include="SMT_SCADA_BOTTOM_HISTORY.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_B2IPZONE_TEMPER.resx">
       <DependentUpon>SMT_SCADA_B2IPZONE_TEMPER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMT_SCADA_B_PU_HISTORY.resx">
+      <DependentUpon>SMT_SCADA_B_PU_HISTORY.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_BOTTOM_HISTORY.resx">
       <DependentUpon>SMT_SCADA_BOTTOM_HISTORY.cs</DependentUpon>

@@ -274,9 +274,9 @@
             this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1047, 76);
+            this.lblHeader.Size = new System.Drawing.Size(1332, 76);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "        -- Temperature Tracking";
+            this.lblHeader.Text = "        Injection/Stabilization Temperature Tracking";
             // 
             // tmrDate
             // 
@@ -1223,9 +1223,8 @@
             this.lblMC1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lblMC1.Location = new System.Drawing.Point(170, 212);
             this.lblMC1.Name = "lblMC1";
-            this.lblMC1.Size = new System.Drawing.Size(104, 24);
+            this.lblMC1.Size = new System.Drawing.Size(0, 24);
             this.lblMC1.TabIndex = 18;
-            this.lblMC1.Text = "Machine 1";
             // 
             // label44
             // 
@@ -1307,9 +1306,8 @@
             this.lblMC2.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lblMC2.Location = new System.Drawing.Point(478, 212);
             this.lblMC2.Name = "lblMC2";
-            this.lblMC2.Size = new System.Drawing.Size(104, 24);
+            this.lblMC2.Size = new System.Drawing.Size(0, 24);
             this.lblMC2.TabIndex = 18;
-            this.lblMC2.Text = "Machine 2";
             // 
             // label51
             // 
@@ -1631,9 +1629,8 @@
             this.lblMC3.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lblMC3.Location = new System.Drawing.Point(794, 212);
             this.lblMC3.Name = "lblMC3";
-            this.lblMC3.Size = new System.Drawing.Size(104, 24);
+            this.lblMC3.Size = new System.Drawing.Size(0, 24);
             this.lblMC3.TabIndex = 18;
-            this.lblMC3.Text = "Machine 3";
             // 
             // label78
             // 
@@ -1955,9 +1952,9 @@
             // 
             // label10
             // 
-            this.label10.BackColor = System.Drawing.Color.BlueViolet;
+            this.label10.BackColor = System.Drawing.Color.DarkCyan;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.ForeColor = System.Drawing.Color.Yellow;
             this.label10.Location = new System.Drawing.Point(637, 155);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(147, 23);
@@ -1967,9 +1964,9 @@
             // 
             // label11
             // 
-            this.label11.BackColor = System.Drawing.Color.BlueViolet;
+            this.label11.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.Color.Yellow;
             this.label11.Location = new System.Drawing.Point(792, 155);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(147, 23);
@@ -1979,7 +1976,7 @@
             // 
             // label14
             // 
-            this.label14.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label14.BackColor = System.Drawing.Color.DarkCyan;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Yellow;
             this.label14.Location = new System.Drawing.Point(1339, 242);
@@ -1991,7 +1988,7 @@
             // 
             // label16
             // 
-            this.label16.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label16.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Yellow;
             this.label16.Location = new System.Drawing.Point(1405, 242);
@@ -2003,7 +2000,7 @@
             // 
             // label20
             // 
-            this.label20.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label20.BackColor = System.Drawing.Color.DarkCyan;
             this.label20.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label20.ForeColor = System.Drawing.Color.Yellow;
             this.label20.Location = new System.Drawing.Point(1339, 274);
@@ -2015,7 +2012,7 @@
             // 
             // label22
             // 
-            this.label22.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label22.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label22.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label22.ForeColor = System.Drawing.Color.Yellow;
             this.label22.Location = new System.Drawing.Point(1405, 274);
@@ -2027,7 +2024,7 @@
             // 
             // label23
             // 
-            this.label23.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label23.BackColor = System.Drawing.Color.DarkCyan;
             this.label23.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label23.ForeColor = System.Drawing.Color.Yellow;
             this.label23.Location = new System.Drawing.Point(1339, 355);
@@ -2039,7 +2036,7 @@
             // 
             // label26
             // 
-            this.label26.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label26.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label26.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.Yellow;
             this.label26.Location = new System.Drawing.Point(1405, 355);
@@ -2051,7 +2048,7 @@
             // 
             // label28
             // 
-            this.label28.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label28.BackColor = System.Drawing.Color.DarkCyan;
             this.label28.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label28.ForeColor = System.Drawing.Color.Yellow;
             this.label28.Location = new System.Drawing.Point(1338, 436);
@@ -2063,7 +2060,7 @@
             // 
             // label31
             // 
-            this.label31.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label31.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label31.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label31.ForeColor = System.Drawing.Color.Yellow;
             this.label31.Location = new System.Drawing.Point(1404, 436);
@@ -2075,7 +2072,7 @@
             // 
             // label35
             // 
-            this.label35.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label35.BackColor = System.Drawing.Color.DarkCyan;
             this.label35.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label35.ForeColor = System.Drawing.Color.Yellow;
             this.label35.Location = new System.Drawing.Point(1338, 517);
@@ -2087,7 +2084,7 @@
             // 
             // label39
             // 
-            this.label39.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label39.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label39.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label39.ForeColor = System.Drawing.Color.Yellow;
             this.label39.Location = new System.Drawing.Point(1404, 517);
@@ -2099,7 +2096,7 @@
             // 
             // label46
             // 
-            this.label46.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label46.BackColor = System.Drawing.Color.DarkCyan;
             this.label46.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label46.ForeColor = System.Drawing.Color.Yellow;
             this.label46.Location = new System.Drawing.Point(1338, 598);
@@ -2111,7 +2108,7 @@
             // 
             // label47
             // 
-            this.label47.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label47.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label47.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label47.ForeColor = System.Drawing.Color.Yellow;
             this.label47.Location = new System.Drawing.Point(1404, 598);
@@ -2123,7 +2120,7 @@
             // 
             // label48
             // 
-            this.label48.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label48.BackColor = System.Drawing.Color.DarkCyan;
             this.label48.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label48.ForeColor = System.Drawing.Color.Yellow;
             this.label48.Location = new System.Drawing.Point(1338, 679);
@@ -2135,7 +2132,7 @@
             // 
             // label49
             // 
-            this.label49.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label49.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label49.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label49.ForeColor = System.Drawing.Color.Yellow;
             this.label49.Location = new System.Drawing.Point(1404, 679);
@@ -2147,7 +2144,7 @@
             // 
             // label17
             // 
-            this.label17.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label17.BackColor = System.Drawing.Color.DarkCyan;
             this.label17.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.Yellow;
             this.label17.Location = new System.Drawing.Point(1752, 274);
@@ -2159,7 +2156,7 @@
             // 
             // label19
             // 
-            this.label19.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label19.BackColor = System.Drawing.Color.DarkCyan;
             this.label19.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.Color.Yellow;
             this.label19.Location = new System.Drawing.Point(1752, 355);
@@ -2171,7 +2168,7 @@
             // 
             // label53
             // 
-            this.label53.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label53.BackColor = System.Drawing.Color.DarkCyan;
             this.label53.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label53.ForeColor = System.Drawing.Color.Yellow;
             this.label53.Location = new System.Drawing.Point(1751, 436);
@@ -2183,7 +2180,7 @@
             // 
             // label55
             // 
-            this.label55.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label55.BackColor = System.Drawing.Color.DarkCyan;
             this.label55.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label55.ForeColor = System.Drawing.Color.Yellow;
             this.label55.Location = new System.Drawing.Point(1751, 517);
@@ -2195,7 +2192,7 @@
             // 
             // label57
             // 
-            this.label57.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label57.BackColor = System.Drawing.Color.DarkCyan;
             this.label57.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label57.ForeColor = System.Drawing.Color.Yellow;
             this.label57.Location = new System.Drawing.Point(1751, 598);
@@ -2207,7 +2204,7 @@
             // 
             // label59
             // 
-            this.label59.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label59.BackColor = System.Drawing.Color.DarkCyan;
             this.label59.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label59.ForeColor = System.Drawing.Color.Yellow;
             this.label59.Location = new System.Drawing.Point(1751, 679);
@@ -2219,7 +2216,7 @@
             // 
             // label61
             // 
-            this.label61.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label61.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label61.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label61.ForeColor = System.Drawing.Color.Yellow;
             this.label61.Location = new System.Drawing.Point(1818, 274);
@@ -2231,7 +2228,7 @@
             // 
             // label64
             // 
-            this.label64.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label64.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label64.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label64.ForeColor = System.Drawing.Color.Yellow;
             this.label64.Location = new System.Drawing.Point(1818, 355);
@@ -2243,7 +2240,7 @@
             // 
             // label66
             // 
-            this.label66.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label66.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label66.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label66.ForeColor = System.Drawing.Color.Yellow;
             this.label66.Location = new System.Drawing.Point(1817, 436);
@@ -2255,7 +2252,7 @@
             // 
             // label67
             // 
-            this.label67.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label67.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label67.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label67.ForeColor = System.Drawing.Color.Yellow;
             this.label67.Location = new System.Drawing.Point(1817, 517);
@@ -2267,7 +2264,7 @@
             // 
             // label68
             // 
-            this.label68.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label68.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label68.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label68.ForeColor = System.Drawing.Color.Yellow;
             this.label68.Location = new System.Drawing.Point(1817, 598);
@@ -2279,7 +2276,7 @@
             // 
             // label69
             // 
-            this.label69.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label69.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label69.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
             this.label69.ForeColor = System.Drawing.Color.Yellow;
             this.label69.Location = new System.Drawing.Point(1817, 679);
@@ -2291,7 +2288,7 @@
             // 
             // label70
             // 
-            this.label70.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label70.BackColor = System.Drawing.Color.DarkCyan;
             this.label70.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.Color.Yellow;
             this.label70.Location = new System.Drawing.Point(1752, 242);
@@ -2303,7 +2300,7 @@
             // 
             // label71
             // 
-            this.label71.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label71.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label71.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.ForeColor = System.Drawing.Color.Yellow;
             this.label71.Location = new System.Drawing.Point(1818, 242);

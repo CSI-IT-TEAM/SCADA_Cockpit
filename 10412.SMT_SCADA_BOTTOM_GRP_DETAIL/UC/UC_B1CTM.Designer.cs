@@ -32,9 +32,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblCool = new System.Windows.Forms.Label();
             this.lblHeat = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMC = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.a1Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,13 +48,13 @@
             this.a1Panel1.Controls.Add(this.label1);
             this.a1Panel1.Controls.Add(this.label2);
             this.a1Panel1.Controls.Add(this.lblMC);
-            this.a1Panel1.GradientEndColor = System.Drawing.Color.White;
+            this.a1Panel1.GradientEndColor = System.Drawing.SystemColors.ActiveCaption;
             this.a1Panel1.GradientStartColor = System.Drawing.Color.White;
             this.a1Panel1.Image = null;
             this.a1Panel1.ImageLocation = new System.Drawing.Point(4, 4);
             this.a1Panel1.Location = new System.Drawing.Point(3, 4);
             this.a1Panel1.Name = "a1Panel1";
-            this.a1Panel1.RoundCornerRadius = 20;
+            this.a1Panel1.RoundCornerRadius = 10;
             this.a1Panel1.ShadowOffSet = 6;
             this.a1Panel1.Size = new System.Drawing.Size(194, 83);
             this.a1Panel1.TabIndex = 0;
@@ -99,6 +99,19 @@
             this.lblHeat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHeat.Click += new System.EventHandler(this.label_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MC";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label_Click);
+            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Orange;
@@ -123,19 +136,6 @@
             this.lblMC.Text = "-";
             this.lblMC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMC.Click += new System.EventHandler(this.label_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MC";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label_Click);
             // 
             // UC_B1CTM
             // 

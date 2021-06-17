@@ -134,6 +134,8 @@ namespace FORM
         {
           //  MessageBox.Show(uc.Tag.ToString());
             string LineNo = uc.Tag.ToString();
+            chartHeat.DataSource = null;
+            chartCool.DataSource = null;
             foreach (var item in lstUC)
             {
                 item.SetBorder(1,Color.FromArgb(20, 25, 54));
@@ -141,7 +143,7 @@ namespace FORM
             try
             {
                 this.Cursor = Cursors.WaitCursor;
-                uc.SetBorder(5,Color.HotPink);
+                uc.SetBorder(5,Color.OrangeRed);
                 if (dtHeat.Select("MACHINE_CD = '" + LineNo + "'").Count() > 0)
                 {
                     DataTable dt = dtHeat.Select("MACHINE_CD = '" + LineNo + "'").CopyToDataTable();

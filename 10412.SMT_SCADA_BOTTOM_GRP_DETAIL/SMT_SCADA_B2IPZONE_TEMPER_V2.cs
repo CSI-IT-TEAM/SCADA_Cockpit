@@ -204,9 +204,9 @@ namespace FORM
                 {
                     item.Text = "0";
                 }
-                lblMC1.Text = "Machine 1";
-                lblMC2.Text = "Machine 2";
-                lblMC3.Text = "Machine 3";
+                lblMC1.Text = string.Empty;
+                lblMC2.Text = string.Empty;
+                lblMC3.Text = string.Empty;
                 DataTable dt = SEL_INJECTION_DATA("Q", DateTime.Now.ToString("yyyyMMdd"), _argZone);
                 if (dt.Rows.Count < 2) return;
                 MaxPageSeq = Convert.ToInt32(dt.Compute("max([PAGE_IDX])", string.Empty));
@@ -340,6 +340,7 @@ namespace FORM
             }
             if (cAni >= TimeAniStop)
             {
+                cAni = 0;
                 tmrAnimation.Stop();
                 string _argZone = argZone;
                 BindingInjectionData(_argZone, PageIdx);

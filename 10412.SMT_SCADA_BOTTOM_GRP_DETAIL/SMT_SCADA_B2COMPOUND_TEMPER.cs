@@ -545,7 +545,7 @@ namespace FORM
             try
             {
                 int minRow = 0, minRange = 0, maxRange = 0;
-                const int iThickness = 2;
+                const int iThickness = 3;
                 //List Range Min, Range Max;
                 List<int> lstRgMin = new List<int>();
                 List<int> lstRgMax = new List<int>();

@@ -46,7 +46,8 @@ namespace FORM
             if (_time >= ReLoad)
             {
                 _time = 0;
-                GetDataTable();
+                //GetDataTable();
+                GetDataTableTest();
             }
         }
 
@@ -132,7 +133,6 @@ namespace FORM
         #region Loading Data
         private void GetDataTable()
         {
-
             List<DataTable> lstData = new List<DataTable>();
             List<string> lstSeriesName = new List<string>();
             DataTable dt = dtData.Copy();//Giu lai datatable goc, de su dung lai.
@@ -179,46 +179,66 @@ namespace FORM
             DrawChart(lstData, lstSeriesName, cht_Chart, lstData.Count > 1 ? false : true);
         }
 
-        //private void LoadingDataChart()
-        //{
-        //    try
-        //    {
-        //        dtData = GetData("Q", "ALL", "ALL");        /*Get All Data*/
-        //        int cnt1 = 0, cnt2 = 0;
-        //        DataTable dtTmp = null;
-        //        dtTmp = dtData.Copy();
-        //        if (dtTmp != null && dtTmp.Rows.Count > 0)
-        //        {
-        //            foreach (TreeListNode node in treeList.Nodes)
-        //            {
+        private void GetDataTableTest()
+        {
+            try
+            {
+                List<DataTable> lstData = new List<DataTable>();
+                List<string> lstSeriesName = new List<string>();
+                DataTable dt = new DataTable();
+                isCheckState = false;
+                dt = dtData.Copy();
 
-        //                foreach (TreeListNode node1 in node.RootNode.Nodes)
-        //                {
-        //                    cnt1++;
-        //                    if (!node1.Checked)
-        //                    {
-        //                        cnt2++;
-        //                        if (dtTmp.Select("ID <> '" + node1.GetValue("ID").ToString() + "'", "").Count() > 0)
-        //                        {
-        //                            dtTmp = dtTmp.Select("ID <> '" + node1.GetValue("ID").ToString() + "'", "").CopyToDataTable();
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //            if (cnt1 == cnt2)
-        //                while (dtTmp.Rows.Count > 0)
-        //                {
-        //                    dtTmp.Rows.RemoveAt(0);
-        //                }
+                var AllCheckNodes = treeList.GetAllCheckedNodes();
+                var TreeMaxLevel = GetDeepestNodeLevel(treeList);
 
-        //            DrawChart(dtTmp, cht_Chart);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
+                foreach (var item in AllCheckNodes)
+                {
+                    if (item.Level == TreeMaxLevel) //Lay Node trong cung
+                    {
+                        string NodeID = item.GetValue("ID").ToString().Substring(4);
+                        string NodeName = item.GetValue("MENU_NM").ToString();
+                        if (dt.Select("ID = '" + NodeID + "'").Count() > 0)
+                        {
+                            DataTable dtTemp = dt.Select("ID = '" + NodeID + "'").CopyToDataTable();
+                            lstData.Add(dtTemp);
+                            lstSeriesName.Add(NodeName);
+                        }
+                    }
+                }
+                chkAll.CheckedChanged -= chkAll_CheckedChanged;
+                chkAll.Checked = treeList.GetAllCheckedNodes().Count == treeList.AllNodesCount;
+                chkAll.CheckedChanged += chkAll_CheckedChanged;
+                DrawChart(lstData, lstSeriesName, cht_Chart, lstData.Count > 1 ? false : true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        //returns Level of the deepest node in that TreeList
+        public int GetDeepestNodeLevel(TreeList treeList)
+        {
+            int level = -1;
+            foreach (TreeListNode node in treeList.Nodes)
+            {
+                int deep = DigInNodes(node);
+                if (deep > level)
+                    level = deep;
+            }
+            return level;
+        }
+        private int DigInNodes(TreeListNode node)
+        {
+            int level = node.Level;
+            foreach (TreeListNode subnode in node.Nodes)
+            {
+                int deep = DigInNodes(subnode);
+                if (deep > level)
+                    level = deep;
+            }
+            return level;
+        }
         private int GetMinValue(List<int> lst)
         {
             try
@@ -763,7 +783,8 @@ namespace FORM
                 e.Node.ParentNode.Checked = IsAllChecked(e.Node.ParentNode.Nodes);
             else
                 SetCheckedChildNodes(e.Node.Nodes);
-            GetDataTable();
+            //GetDataTable();
+            GetDataTableTest();
         }
         private void chkAll_CheckedChanged(object sender, EventArgs e)
         {
@@ -789,7 +810,8 @@ namespace FORM
                     }
                 }
             }
-            GetDataTable();
+            //GetDataTable();
+            GetDataTableTest();
         }
         private void SetCheckedChildNodes(TreeListNodes nodes)
         {
@@ -816,7 +838,8 @@ namespace FORM
         private void dtp_Ym_EditValueChanged(object sender, EventArgs e)
         {
             BindingData();
-            GetDataTable();
+            //GetDataTable();
+            GetDataTableTest();
         }
     }
 }

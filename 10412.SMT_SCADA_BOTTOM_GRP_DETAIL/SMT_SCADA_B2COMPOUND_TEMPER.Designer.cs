@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B2COMPOUND_TEMPER));
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange1 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange2 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
@@ -85,16 +86,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.chartKneader = new DevExpress.XtraCharts.ChartControl();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.chartRoll = new DevExpress.XtraCharts.ChartControl();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.chartEXTR = new DevExpress.XtraCharts.ChartControl();
             this.panel4 = new System.Windows.Forms.Panel();
             this.chartPall = new DevExpress.XtraCharts.ChartControl();
-            this.tmrDate = new System.Windows.Forms.Timer();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.chartEXTR = new DevExpress.XtraCharts.ChartControl();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.chartRoll = new DevExpress.XtraCharts.ChartControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.chartKneader = new DevExpress.XtraCharts.ChartControl();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.a1Panel7 = new OS_DSF.A1Panel();
+            this.roundLabel5 = new RoundLabel();
             this.lblRollMC3Max = new RoundLabel();
             this.lblRollMC3 = new RoundLabel();
             this.lblRollMC3Min = new RoundLabel();
@@ -104,6 +106,7 @@
             this.linearScaleComponent9 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent();
             this.linearScaleLevelComponent9 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent();
             this.a1Panel8 = new OS_DSF.A1Panel();
+            this.roundLabel3 = new RoundLabel();
             this.lblRollMC2Max = new RoundLabel();
             this.lblRollMC2 = new RoundLabel();
             this.lblRollMC2Min = new RoundLabel();
@@ -113,6 +116,7 @@
             this.linearScaleComponent6 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent();
             this.linearScaleLevelComponent6 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent();
             this.a1Panel9 = new OS_DSF.A1Panel();
+            this.roundLabel1 = new RoundLabel();
             this.lblRollMC1Max = new RoundLabel();
             this.lblRollMC1 = new RoundLabel();
             this.lblRollMC1Min = new RoundLabel();
@@ -241,20 +245,17 @@
             this.linearScaleBackgroundLayerComponent1 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleBackgroundLayerComponent();
             this.linearScaleComponent1 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleComponent();
             this.linearScaleLevelComponent1 = new DevExpress.XtraGauges.Win.Gauges.Linear.LinearScaleLevelComponent();
-            this.roundLabel1 = new RoundLabel();
-            this.roundLabel3 = new RoundLabel();
-            this.roundLabel5 = new RoundLabel();
             this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartKneader)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartRoll)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartEXTR)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPall)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartEXTR)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRoll)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartKneader)).BeginInit();
             this.a1Panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lnRollMC3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleBackgroundLayerComponent9)).BeginInit();
@@ -477,51 +478,28 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(780, 964);
             this.tableLayoutPanel1.TabIndex = 33;
             // 
-            // panel1
+            // panel4
             // 
-            this.panel1.Controls.Add(this.chartKneader);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 235);
-            this.panel1.TabIndex = 0;
+            this.panel4.Controls.Add(this.chartPall);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 726);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(774, 235);
+            this.panel4.TabIndex = 3;
             // 
-            // chartKneader
+            // chartPall
             // 
-            this.chartKneader.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartKneader.AppearanceNameSerializable = "Dark Flat";
-            this.chartKneader.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartKneader.DataBindings = null;
-            this.chartKneader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartKneader.Legend.Name = "Default Legend";
-            this.chartKneader.Location = new System.Drawing.Point(0, 0);
-            this.chartKneader.Name = "chartKneader";
-            this.chartKneader.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartKneader.Size = new System.Drawing.Size(774, 235);
-            this.chartKneader.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.chartRoll);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 244);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(774, 235);
-            this.panel2.TabIndex = 1;
-            // 
-            // chartRoll
-            // 
-            this.chartRoll.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartRoll.AppearanceNameSerializable = "Dark Flat";
-            this.chartRoll.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartRoll.DataBindings = null;
-            this.chartRoll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartRoll.Legend.Name = "Default Legend";
-            this.chartRoll.Location = new System.Drawing.Point(0, 0);
-            this.chartRoll.Name = "chartRoll";
-            this.chartRoll.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartRoll.Size = new System.Drawing.Size(774, 235);
-            this.chartRoll.TabIndex = 5;
+            this.chartPall.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.chartPall.AppearanceNameSerializable = "Dark Flat";
+            this.chartPall.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartPall.DataBindings = null;
+            this.chartPall.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartPall.Legend.Name = "Default Legend";
+            this.chartPall.Location = new System.Drawing.Point(0, 0);
+            this.chartPall.Name = "chartPall";
+            this.chartPall.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartPall.Size = new System.Drawing.Size(774, 235);
+            this.chartPall.TabIndex = 5;
             // 
             // panel3
             // 
@@ -546,28 +524,51 @@
             this.chartEXTR.Size = new System.Drawing.Size(774, 235);
             this.chartEXTR.TabIndex = 5;
             // 
-            // panel4
+            // panel2
             // 
-            this.panel4.Controls.Add(this.chartPall);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 726);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(774, 235);
-            this.panel4.TabIndex = 3;
+            this.panel2.Controls.Add(this.chartRoll);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 244);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(774, 235);
+            this.panel2.TabIndex = 1;
             // 
-            // chartPall
+            // chartRoll
             // 
-            this.chartPall.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
-            this.chartPall.AppearanceNameSerializable = "Dark Flat";
-            this.chartPall.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartPall.DataBindings = null;
-            this.chartPall.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartPall.Legend.Name = "Default Legend";
-            this.chartPall.Location = new System.Drawing.Point(0, 0);
-            this.chartPall.Name = "chartPall";
-            this.chartPall.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartPall.Size = new System.Drawing.Size(774, 235);
-            this.chartPall.TabIndex = 5;
+            this.chartRoll.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.chartRoll.AppearanceNameSerializable = "Dark Flat";
+            this.chartRoll.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartRoll.DataBindings = null;
+            this.chartRoll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartRoll.Legend.Name = "Default Legend";
+            this.chartRoll.Location = new System.Drawing.Point(0, 0);
+            this.chartRoll.Name = "chartRoll";
+            this.chartRoll.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartRoll.Size = new System.Drawing.Size(774, 235);
+            this.chartRoll.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.chartKneader);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(774, 235);
+            this.panel1.TabIndex = 0;
+            // 
+            // chartKneader
+            // 
+            this.chartKneader.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
+            this.chartKneader.AppearanceNameSerializable = "Dark Flat";
+            this.chartKneader.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartKneader.DataBindings = null;
+            this.chartKneader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartKneader.Legend.Name = "Default Legend";
+            this.chartKneader.Location = new System.Drawing.Point(0, 0);
+            this.chartKneader.Name = "chartKneader";
+            this.chartKneader.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartKneader.Size = new System.Drawing.Size(774, 235);
+            this.chartKneader.TabIndex = 5;
             // 
             // tmrDate
             // 
@@ -593,6 +594,16 @@
             this.a1Panel7.RoundCornerRadius = 20;
             this.a1Panel7.Size = new System.Drawing.Size(267, 466);
             this.a1Panel7.TabIndex = 27;
+            // 
+            // roundLabel5
+            // 
+            this.roundLabel5._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.roundLabel5.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel5.Location = new System.Drawing.Point(2, 2);
+            this.roundLabel5.Name = "roundLabel5";
+            this.roundLabel5.Size = new System.Drawing.Size(39, 54);
+            this.roundLabel5.TabIndex = 12;
+            this.roundLabel5.Text = "Line 4";
             // 
             // lblRollMC3Max
             // 
@@ -728,6 +739,16 @@
             this.a1Panel8.Size = new System.Drawing.Size(267, 466);
             this.a1Panel8.TabIndex = 28;
             // 
+            // roundLabel3
+            // 
+            this.roundLabel3._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.roundLabel3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel3.Location = new System.Drawing.Point(3, 2);
+            this.roundLabel3.Name = "roundLabel3";
+            this.roundLabel3.Size = new System.Drawing.Size(39, 54);
+            this.roundLabel3.TabIndex = 12;
+            this.roundLabel3.Text = "Line 3";
+            // 
             // lblRollMC2Max
             // 
             this.lblRollMC2Max._BackColor = System.Drawing.Color.Silver;
@@ -861,6 +882,17 @@
             this.a1Panel9.RoundCornerRadius = 20;
             this.a1Panel9.Size = new System.Drawing.Size(273, 466);
             this.a1Panel9.TabIndex = 29;
+            // 
+            // roundLabel1
+            // 
+            this.roundLabel1._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.roundLabel1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel1.Location = new System.Drawing.Point(3, 2);
+            this.roundLabel1.Name = "roundLabel1";
+            this.roundLabel1.Size = new System.Drawing.Size(39, 54);
+            this.roundLabel1.TabIndex = 12;
+            this.roundLabel1.Text = "Line 2";
+            this.roundLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRollMC1Max
             // 
@@ -1097,7 +1129,7 @@
             this.roundLabel16.Name = "roundLabel16";
             this.roundLabel16.Size = new System.Drawing.Size(100, 23);
             this.roundLabel16.TabIndex = 8;
-            this.roundLabel16.Text = "3rd Material";
+            this.roundLabel16.Text = "Line 4 Material";
             // 
             // lblKneaderMat3
             // 
@@ -1239,7 +1271,7 @@
             this.roundLabel7.Name = "roundLabel7";
             this.roundLabel7.Size = new System.Drawing.Size(100, 23);
             this.roundLabel7.TabIndex = 8;
-            this.roundLabel7.Text = "2nd Material";
+            this.roundLabel7.Text = "Line 3 Material";
             // 
             // lblKneaderMat2
             // 
@@ -1381,7 +1413,7 @@
             this.roundLabel40.Name = "roundLabel40";
             this.roundLabel40.Size = new System.Drawing.Size(100, 23);
             this.roundLabel40.TabIndex = 8;
-            this.roundLabel40.Text = "3rd Seed";
+            this.roundLabel40.Text = "Line 4 Seed";
             // 
             // lblPELLSeed3
             // 
@@ -1523,7 +1555,7 @@
             this.roundLabel28.Name = "roundLabel28";
             this.roundLabel28.Size = new System.Drawing.Size(100, 23);
             this.roundLabel28.TabIndex = 8;
-            this.roundLabel28.Text = "3rd Material";
+            this.roundLabel28.Text = "Line 4 Material";
             // 
             // lblEXTRMat3
             // 
@@ -1665,7 +1697,7 @@
             this.roundLabel36.Name = "roundLabel36";
             this.roundLabel36.Size = new System.Drawing.Size(100, 23);
             this.roundLabel36.TabIndex = 8;
-            this.roundLabel36.Text = "2nd Seed";
+            this.roundLabel36.Text = "Line 3 Seed";
             // 
             // lblPELLSeed2
             // 
@@ -1807,7 +1839,7 @@
             this.roundLabel24.Name = "roundLabel24";
             this.roundLabel24.Size = new System.Drawing.Size(100, 23);
             this.roundLabel24.TabIndex = 8;
-            this.roundLabel24.Text = "2nd Material";
+            this.roundLabel24.Text = "Line 3 Material";
             // 
             // lblEXTRMat2
             // 
@@ -1949,7 +1981,7 @@
             this.roundLabel32.Name = "roundLabel32";
             this.roundLabel32.Size = new System.Drawing.Size(100, 23);
             this.roundLabel32.TabIndex = 8;
-            this.roundLabel32.Text = "1st Seed";
+            this.roundLabel32.Text = "Line 2 Seed";
             // 
             // lblPELLSeed1
             // 
@@ -2091,7 +2123,7 @@
             this.roundLabel20.Name = "roundLabel20";
             this.roundLabel20.Size = new System.Drawing.Size(100, 23);
             this.roundLabel20.TabIndex = 8;
-            this.roundLabel20.Text = "1st Material";
+            this.roundLabel20.Text = "Line 2 Material";
             // 
             // lblEXTRMat1
             // 
@@ -2233,7 +2265,7 @@
             this.roundLabel10.Name = "roundLabel10";
             this.roundLabel10.Size = new System.Drawing.Size(100, 23);
             this.roundLabel10.TabIndex = 8;
-            this.roundLabel10.Text = "1st Material";
+            this.roundLabel10.Text = "Line 2 Material";
             // 
             // lblKneaderMat1
             // 
@@ -2292,7 +2324,7 @@
             this.roundLabel12.Name = "roundLabel12";
             this.roundLabel12.Size = new System.Drawing.Size(100, 23);
             this.roundLabel12.TabIndex = 8;
-            this.roundLabel12.Text = "3rd Machine";
+            this.roundLabel12.Text = "Line 4 Machine";
             // 
             // lblKneaderMC3
             // 
@@ -2435,7 +2467,7 @@
             this.roundLabel2.Name = "roundLabel2";
             this.roundLabel2.Size = new System.Drawing.Size(100, 23);
             this.roundLabel2.TabIndex = 8;
-            this.roundLabel2.Text = "2nd Machine";
+            this.roundLabel2.Text = "Line 3 Machine";
             // 
             // lblKneaderMC2
             // 
@@ -2578,7 +2610,7 @@
             this.roundLabel4.Name = "roundLabel4";
             this.roundLabel4.Size = new System.Drawing.Size(100, 23);
             this.roundLabel4.TabIndex = 8;
-            this.roundLabel4.Text = "1st Machine";
+            this.roundLabel4.Text = "Line 2 Machine";
             // 
             // lblKneaderMC1
             // 
@@ -2684,36 +2716,6 @@
             this.linearScaleLevelComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.LevelShapeSetType.Style25;
             this.linearScaleLevelComponent1.ZOrder = -50;
             // 
-            // roundLabel1
-            // 
-            this.roundLabel1._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.roundLabel1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel1.Location = new System.Drawing.Point(3, 2);
-            this.roundLabel1.Name = "roundLabel1";
-            this.roundLabel1.Size = new System.Drawing.Size(39, 54);
-            this.roundLabel1.TabIndex = 12;
-            this.roundLabel1.Text = "1st";
-            // 
-            // roundLabel3
-            // 
-            this.roundLabel3._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.roundLabel3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel3.Location = new System.Drawing.Point(3, 2);
-            this.roundLabel3.Name = "roundLabel3";
-            this.roundLabel3.Size = new System.Drawing.Size(39, 54);
-            this.roundLabel3.TabIndex = 12;
-            this.roundLabel3.Text = "2nd";
-            // 
-            // roundLabel5
-            // 
-            this.roundLabel5._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.roundLabel5.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel5.Location = new System.Drawing.Point(2, 2);
-            this.roundLabel5.Name = "roundLabel5";
-            this.roundLabel5.Size = new System.Drawing.Size(39, 54);
-            this.roundLabel5.TabIndex = 12;
-            this.roundLabel5.Text = "3rd";
-            // 
             // SMT_SCADA_B2COMPOUND_TEMPER
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2748,14 +2750,14 @@
             this.pnTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartKneader)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartRoll)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartEXTR)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartPall)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartEXTR)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartRoll)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartKneader)).EndInit();
             this.a1Panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lnRollMC3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linearScaleBackgroundLayerComponent9)).EndInit();

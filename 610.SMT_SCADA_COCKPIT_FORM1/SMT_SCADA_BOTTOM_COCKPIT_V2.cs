@@ -151,7 +151,7 @@ namespace FORM
                     cCount = 30;
                 }
                 tmrTime.Start();
-                tmrBlinking.Stop();
+                tmrBlinking.Start();
 
             }
         }

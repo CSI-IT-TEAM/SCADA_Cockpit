@@ -87,7 +87,7 @@ namespace FORM
         private void BindingData()
         {
             _opcd = ComVar.Var._strValue1;
-            DataTable dt = SP_MENU_SELECT("Q", "SCADA_B_COCKPIT", _opcd);
+            DataTable dt = SP_MENU_SELECT("Q", ComVar.Var._strValue2,DateTime.Now.ToString("yyyyMMdd"), "SCADA_B_COCKPIT", _opcd);
             if (dt == null) return;
             else
             {
@@ -121,6 +121,8 @@ namespace FORM
                 {
                     if (node.Checked)
                         node1.Checked = true;
+
+                    
                 }
             }
             //chkAll.Checked = false;
@@ -722,29 +724,35 @@ namespace FORM
         }
 
         /*DataTable TreeList*/
-        private DataTable SP_MENU_SELECT(string argQtype, string argUserID, string argbutton)
+        private DataTable SP_MENU_SELECT(string argQtype,string argItems,string argDate, string argUserID, string argbutton)
         {
             COM.OraDB MyOraDB = new COM.OraDB();
             DataSet ds_ret;
             try
             {
-                string process_name = "MES.PKG_SMT_SCADA_COCKPIT_01.SELECT_MENU";
-                MyOraDB.ReDim_Parameter(4);
+                string process_name = "MES.PKG_SMT_SCADA_B_COCKPIT.SELECT_MENU";
+                MyOraDB.ReDim_Parameter(6);
                 MyOraDB.Process_Name = process_name;
                 MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
-                MyOraDB.Parameter_Name[1] = "ARG_USER_ID"; //ARG_BUTTON_CODE
-                MyOraDB.Parameter_Name[2] = "ARG_BUTTON_CODE";
-                MyOraDB.Parameter_Name[3] = "OUT_CURSOR";
+                MyOraDB.Parameter_Name[1] = "ARG_ITEMS";
+                MyOraDB.Parameter_Name[2] = "ARG_DATE";
+                MyOraDB.Parameter_Name[3] = "ARG_USER_ID"; //ARG_BUTTON_CODE
+                MyOraDB.Parameter_Name[4] = "ARG_BUTTON_CODE";
+                MyOraDB.Parameter_Name[5] = "OUT_CURSOR";
 
                 MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
                 MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
                 MyOraDB.Parameter_Type[2] = (int)OracleType.VarChar;
-                MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
+                MyOraDB.Parameter_Type[3] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[4] = (int)OracleType.VarChar;
+                MyOraDB.Parameter_Type[5] = (int)OracleType.Cursor;
 
                 MyOraDB.Parameter_Values[0] = argQtype;
-                MyOraDB.Parameter_Values[1] = argUserID;
-                MyOraDB.Parameter_Values[2] = argbutton;
-                MyOraDB.Parameter_Values[3] = "";
+                MyOraDB.Parameter_Values[1] = argItems;
+                MyOraDB.Parameter_Values[2] = argDate;
+                MyOraDB.Parameter_Values[3] = argUserID;
+                MyOraDB.Parameter_Values[4] = argbutton;
+                MyOraDB.Parameter_Values[5] = "";
                 MyOraDB.Add_Select_Parameter(true);
                 ds_ret = MyOraDB.Exe_Select_Procedure();
 
@@ -811,6 +819,24 @@ namespace FORM
                 }
             }
             return value;
+        }
+
+        private void treeList_NodeCellStyle(object sender, GetCustomNodeCellStyleEventArgs e)
+        {
+            try
+            {
+                var sColor =treeList.GetRowCellValue(e.Node,treeList.Columns["STATUS"]).ToString();
+                if (sColor.Equals("1"))
+                {
+                    e.Appearance.BackColor = Color.Red;
+                    e.Appearance.ForeColor = Color.White;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void dtp_Ym_EditValueChanged(object sender, EventArgs e)

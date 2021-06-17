@@ -796,30 +796,34 @@ namespace FORM
         }
         private void chkAll_CheckedChanged(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             if (chkAll.Checked)
             {
-                foreach (TreeListNode node in treeList.Nodes)
-                {
-                    node.Checked = true;
-                    foreach (TreeListNode node1 in node.RootNode.Nodes)
-                    {
-                        node1.Checked = true;
-                    }
-                }
+                treeList.CheckAll();
+                //foreach (TreeListNode node in treeList.Nodes)
+                //{
+                //    node.Checked = true;
+                //    foreach (TreeListNode node1 in node.RootNode.Nodes)
+                //    {
+                //        node1.Checked = true;
+                //    }
+                //}
             }
             if (!chkAll.Checked)
             {
-                foreach (TreeListNode node in treeList.Nodes)
-                {
-                    node.Checked = false;
-                    foreach (TreeListNode node1 in node.RootNode.Nodes)
-                    {
-                        node1.Checked = false;
-                    }
-                }
+                treeList.UncheckAll();
+                //foreach (TreeListNode node in treeList.Nodes)
+                //{
+                //    node.Checked = false;
+                //    foreach (TreeListNode node1 in node.RootNode.Nodes)
+                //    {
+                //        node1.Checked = false;
+                //    }
+                //}
             }
             //GetDataTable();
             GetDataTableTest();
+            this.Cursor = Cursors.Default;
         }
         private void SetCheckedChildNodes(TreeListNodes nodes)
         {

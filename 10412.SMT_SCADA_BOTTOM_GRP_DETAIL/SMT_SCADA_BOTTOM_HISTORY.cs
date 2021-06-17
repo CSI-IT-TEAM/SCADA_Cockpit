@@ -792,25 +792,27 @@ namespace FORM
         {
             if (chkAll.Checked)
             {
-                foreach (TreeListNode node in treeList.Nodes)
-                {
-                    node.Checked = true;
-                    foreach (TreeListNode node1 in node.RootNode.Nodes)
-                    {
-                        node1.Checked = true;
-                    }
-                }
+                treeList.CheckAll();
+                //foreach (TreeListNode node in treeList.Nodes)
+                //{
+                //    node.Checked = true;
+                //    foreach (TreeListNode node1 in node.RootNode.Nodes)
+                //    {
+                //        node1.Checked = true;
+                //    }
+                //}
             }
             if (!chkAll.Checked)
             {
-                foreach (TreeListNode node in treeList.Nodes)
-                {
-                    node.Checked = false;
-                    foreach (TreeListNode node1 in node.RootNode.Nodes)
-                    {
-                        node1.Checked = false;
-                    }
-                }
+                treeList.UncheckAll();
+                //foreach (TreeListNode node in treeList.Nodes)
+                //{
+                //    node.Checked = false;
+                //    foreach (TreeListNode node1 in node.RootNode.Nodes)
+                //    {
+                //        node1.Checked = false;
+                //    }
+                //}
             }
             GetDataTable();
         }
@@ -841,16 +843,15 @@ namespace FORM
             try
             {
                 var sColor = treeList.GetRowCellValue(e.Node, treeList.Columns["STATUS"]).ToString();
+
                 if (sColor.Equals("1"))
                 {
                     e.Appearance.BackColor = Color.Red;
                     e.Appearance.ForeColor = Color.White;
                 }
             }
-            catch (Exception)
+            catch
             {
-
-                throw;
             }
         }
 

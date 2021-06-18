@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.lbl_IPA_1_Pall = new System.Windows.Forms.Label();
             this.lbl_IPA_1_Extruder = new System.Windows.Forms.Label();
             this.lbl_IPA_1_Roll = new System.Windows.Forms.Label();
@@ -253,7 +254,7 @@
             this.roundLabel42 = new RoundLabel();
             this.roundLabel22 = new RoundLabel();
             this.roundLabel1 = new RoundLabel();
-            this.tmrBlinking = new System.Windows.Forms.Timer();
+            this.tmrBlinking = new System.Windows.Forms.Timer(this.components);
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
             this.a1Panel10.SuspendLayout();
@@ -403,11 +404,10 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(877, 107);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(573, 96);
+            this.richTextBox1.Size = new System.Drawing.Size(573, 135);
             this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "- Outsole Rubber OK\n- Outsole EVA OK\n- CTM đang chờ tâm làm form trend\n- Phylon U" +
-    "V chưa có hệ thống\n- IP Roll Còn làm Click trend\n- IP Zone Xong form Main (Còn l" +
-    "ại Form Detail + Trend Click)";
+            this.richTextBox1.Text = "- Outsole Rubber OK\n- Outsole EVA OK\n- CTM OK\n- Phylon UV chưa có hệ thống\n- IP R" +
+    "oll OK\n- IP Zone OK\n\n- Còn lại PU cho tuần sau.";
             this.richTextBox1.Visible = false;
             // 
             // a1Panel11

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B1RUBBER_TEMPER));
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange1 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
             DevExpress.XtraGauges.Core.Model.LinearScaleRange linearScaleRange2 = new DevExpress.XtraGauges.Core.Model.LinearScaleRange();
@@ -88,7 +87,7 @@
             this.a1Panel16 = new OS_DSF.A1Panel();
             this.chartCalendar = new DevExpress.XtraCharts.ChartControl();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
             this.a1Panel7 = new OS_DSF.A1Panel();
             this.lblCalendarLine2MCMax = new RoundLabel();
             this.roundLabel26 = new RoundLabel();
@@ -458,6 +457,7 @@
             // chartBanbury
             // 
             this.chartBanbury.AppearanceNameSerializable = "Dark Flat";
+            this.chartBanbury.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartBanbury.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartBanbury.DataBindings = null;
             this.chartBanbury.Legend.Name = "Default Legend";
@@ -485,6 +485,7 @@
             // chartRoll1
             // 
             this.chartRoll1.AppearanceNameSerializable = "Dark Flat";
+            this.chartRoll1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartRoll1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartRoll1.DataBindings = null;
             this.chartRoll1.Legend.Name = "Default Legend";
@@ -512,6 +513,7 @@
             // chartRoll2
             // 
             this.chartRoll2.AppearanceNameSerializable = "Dark Flat";
+            this.chartRoll2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartRoll2.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartRoll2.DataBindings = null;
             this.chartRoll2.Legend.Name = "Default Legend";
@@ -539,6 +541,7 @@
             // chartCalendar
             // 
             this.chartCalendar.AppearanceNameSerializable = "Dark Flat";
+            this.chartCalendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartCalendar.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartCalendar.DataBindings = null;
             this.chartCalendar.Legend.Name = "Default Legend";

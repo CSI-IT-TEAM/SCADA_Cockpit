@@ -222,7 +222,7 @@
             this.label55 = new System.Windows.Forms.Label();
             this.lbl_IP_GRP_COMP = new RoundLabel();
             this.a1Panel8 = new OS_DSF.A1Panel();
-            this.roundLabel144 = new RoundLabel();
+            this.lbl_PU_GRP_MAT = new RoundLabel();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.lbl_PU_Poly = new System.Windows.Forms.Label();
@@ -402,12 +402,11 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(877, 107);
+            this.richTextBox1.Location = new System.Drawing.Point(872, 82);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(573, 135);
+            this.richTextBox1.Size = new System.Drawing.Size(573, 165);
             this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "- Outsole Rubber OK\n- Outsole EVA OK\n- CTM OK\n- Phylon UV chưa có hệ thống\n- IP R" +
-    "oll OK\n- IP Zone OK\n\n- Còn lại PU cho tuần sau.";
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             this.richTextBox1.Visible = false;
             // 
             // a1Panel11
@@ -443,6 +442,7 @@
             this.a1Panel11.RoundCornerRadius = 10;
             this.a1Panel11.Size = new System.Drawing.Size(588, 89);
             this.a1Panel11.TabIndex = 6;
+            this.a1Panel11.Visible = false;
             // 
             // roundLabel199
             // 
@@ -693,6 +693,7 @@
             this.a1Panel10.RoundCornerRadius = 10;
             this.a1Panel10.Size = new System.Drawing.Size(417, 89);
             this.a1Panel10.TabIndex = 6;
+            this.a1Panel10.Visible = false;
             // 
             // roundLabel184
             // 
@@ -1067,6 +1068,7 @@
             this.a1Panel4.RoundCornerRadius = 10;
             this.a1Panel4.Size = new System.Drawing.Size(417, 89);
             this.a1Panel4.TabIndex = 6;
+            this.a1Panel4.Visible = false;
             // 
             // roundLabel80
             // 
@@ -2497,7 +2499,7 @@
             // a1Panel8
             // 
             this.a1Panel8.BorderColor = System.Drawing.SystemColors.GrayText;
-            this.a1Panel8.Controls.Add(this.roundLabel144);
+            this.a1Panel8.Controls.Add(this.lbl_PU_GRP_MAT);
             this.a1Panel8.Controls.Add(this.label18);
             this.a1Panel8.Controls.Add(this.label16);
             this.a1Panel8.Controls.Add(this.lbl_PU_Poly);
@@ -2512,17 +2514,17 @@
             this.a1Panel8.Size = new System.Drawing.Size(255, 90);
             this.a1Panel8.TabIndex = 6;
             // 
-            // roundLabel144
+            // lbl_PU_GRP_MAT
             // 
-            this.roundLabel144._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.roundLabel144.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel144.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel144.ForeColor = System.Drawing.Color.White;
-            this.roundLabel144.Location = new System.Drawing.Point(0, 0);
-            this.roundLabel144.Name = "roundLabel144";
-            this.roundLabel144.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel144.TabIndex = 5;
-            this.roundLabel144.Text = "--";
+            this.lbl_PU_GRP_MAT._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_PU_GRP_MAT.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_PU_GRP_MAT.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PU_GRP_MAT.ForeColor = System.Drawing.Color.White;
+            this.lbl_PU_GRP_MAT.Location = new System.Drawing.Point(0, 0);
+            this.lbl_PU_GRP_MAT.Name = "lbl_PU_GRP_MAT";
+            this.lbl_PU_GRP_MAT.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_GRP_MAT.TabIndex = 5;
+            this.lbl_PU_GRP_MAT.Text = "PU Material";
             // 
             // label18
             // 
@@ -2976,7 +2978,7 @@
         private RoundLabel roundLabel132;
         private RoundLabel roundLabel133;
         private OS_DSF.A1Panel a1Panel8;
-        private RoundLabel roundLabel144;
+        private RoundLabel lbl_PU_GRP_MAT;
         private OS_DSF.A1Panel a1Panel9;
         private RoundLabel roundLabel163;
         private OS_DSF.A1Panel a1Panel10;

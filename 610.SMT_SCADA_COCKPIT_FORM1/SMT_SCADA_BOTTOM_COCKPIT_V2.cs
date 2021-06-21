@@ -114,6 +114,7 @@ namespace FORM
                     {
                         if (dr["LABEL_CODE"].Equals(item.Tag.ToString()))
                         {
+                           
                             switch (dr["STATUS"].ToString())
                             {
                                 case "G":
@@ -127,7 +128,7 @@ namespace FORM
                                     break;
                             }
                         }
-                    }
+                    } 
                 }
 
                 tmrBlinking.Start();
@@ -311,6 +312,8 @@ namespace FORM
 
                 lblGrpList.Add(lbl_IP_GRP_ZONE);
 
+                lblGrpList.Add(lbl_PU_GRP_MAT);
+
 
                 foreach (var item in lblList)
                 {
@@ -357,8 +360,11 @@ namespace FORM
             ComVar.Var._strValue2 = dt.Rows[0]["ITEMS_MAPPING"].ToString();
             //ComVar.Var._iValue1 = int.Parse(dt.Rows[0]["PAGE_IDX"].ToString());
             ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
-            tmrTime.Stop();
-            tmrBlinking.Stop();
+            if (!string.IsNullOrEmpty(ComVar.Var.callForm))
+            {
+                tmrTime.Stop();
+                tmrBlinking.Stop();
+            }
         }
         #endregion
 

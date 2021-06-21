@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B_PU_HISTORY));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -40,7 +39,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer();
             this.pn_Top = new System.Windows.Forms.Panel();
             this.pnTop = new System.Windows.Forms.Panel();
             this.cmdBack = new System.Windows.Forms.Button();
@@ -59,6 +58,7 @@
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.ID_NAME = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.pn_Main = new System.Windows.Forms.Panel();
+            this.STATUS = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.pn_Top.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -341,7 +341,8 @@
             this.treeList.ColumnPanelRowHeight = 40;
             this.treeList.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.treeListColumn1,
-            this.ID_NAME});
+            this.ID_NAME,
+            this.STATUS});
             this.treeList.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeList.Location = new System.Drawing.Point(0, 0);
@@ -369,6 +370,7 @@
             this.treeList.Size = new System.Drawing.Size(354, 889);
             this.treeList.TabIndex = 21;
             this.treeList.TreeLineStyle = DevExpress.XtraTreeList.LineStyle.Large;
+            this.treeList.NodeCellStyle += new DevExpress.XtraTreeList.GetCustomNodeCellStyleEventHandler(this.treeList_NodeCellStyle);
             this.treeList.BeforeCheckNode += new DevExpress.XtraTreeList.CheckNodeEventHandler(this.treeList_BeforeCheckNode);
             this.treeList.AfterCheckNode += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList_AfterCheckNode);
             // 
@@ -404,6 +406,12 @@
             this.pn_Main.Name = "pn_Main";
             this.pn_Main.Size = new System.Drawing.Size(1904, 1041);
             this.pn_Main.TabIndex = 0;
+            // 
+            // STATUS
+            // 
+            this.STATUS.Caption = "STATUS";
+            this.STATUS.FieldName = "STATUS";
+            this.STATUS.Name = "STATUS";
             // 
             // SMT_SCADA_B_PU_HISTORY
             // 
@@ -456,5 +464,6 @@
         private DevExpress.XtraTreeList.Columns.TreeListColumn ID_NAME;
         private System.Windows.Forms.Panel pn_Main;
         private DevExpress.XtraCharts.ChartControl cht_Chart;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn STATUS;
     }
 }

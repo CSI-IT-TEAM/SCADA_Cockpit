@@ -325,6 +325,20 @@
   <metadata name="tmrTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>194, 17</value>
   </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>- Outsole Rubber OK
+- Outsole EVA OK
+- CTM OK
+- Phylon UV chưa có hệ thống
+- IP Roll OK
+- IP Zone OK
+
+---2021/06/21
+- IP UV, PU Binding xong form main.
+- IP UV chưa làm Menu, Form Detail + Form HIstory
+- PU Chưa làm form detail.
+==&gt; Tổng 3 form chưa làm.</value>
+  </data>
   <metadata name="tmrBlinking.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>291, 17</value>
   </metadata>

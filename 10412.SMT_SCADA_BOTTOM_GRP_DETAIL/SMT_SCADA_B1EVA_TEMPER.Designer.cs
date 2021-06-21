@@ -1857,6 +1857,7 @@
             // 
             this.chartCal.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartCal.AppearanceNameSerializable = "Dark Flat";
+            this.chartCal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartCal.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartCal.DataBindings = null;
             this.chartCal.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1880,6 +1881,7 @@
             // 
             this.chartPELL.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartPELL.AppearanceNameSerializable = "Dark Flat";
+            this.chartPELL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartPELL.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartPELL.DataBindings = null;
             this.chartPELL.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1903,6 +1905,7 @@
             // 
             this.chartEXTR.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartEXTR.AppearanceNameSerializable = "Dark Flat";
+            this.chartEXTR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartEXTR.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartEXTR.DataBindings = null;
             this.chartEXTR.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1926,6 +1929,7 @@
             // 
             this.chartRoll.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartRoll.AppearanceNameSerializable = "Dark Flat";
+            this.chartRoll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartRoll.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartRoll.DataBindings = null;
             this.chartRoll.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1949,6 +1953,7 @@
             // 
             this.chartKneader.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnDataChanged;
             this.chartKneader.AppearanceNameSerializable = "Dark Flat";
+            this.chartKneader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartKneader.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartKneader.DataBindings = null;
             this.chartKneader.Dock = System.Windows.Forms.DockStyle.Fill;

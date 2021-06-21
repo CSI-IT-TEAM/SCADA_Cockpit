@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B2IPZONE_TEMPER_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
-            this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.sbtnZone1 = new DevExpress.XtraEditors.SimpleButton();
@@ -171,7 +169,7 @@
             this.lblMC3_INJECT2_06 = new System.Windows.Forms.Label();
             this.lblMC3_INJECT2_08 = new System.Windows.Forms.Label();
             this.label103 = new System.Windows.Forms.Label();
-            this.tmrAnimation = new System.Windows.Forms.Timer(this.components);
+            this.tmrAnimation = new System.Windows.Forms.Timer();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -202,8 +200,9 @@
             this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
-            this.sbtnPrev = new DevExpress.XtraEditors.SimpleButton();
             this.sbtnNext = new DevExpress.XtraEditors.SimpleButton();
+            this.sbtnPrev = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdBack = new System.Windows.Forms.Button();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -231,26 +230,6 @@
             this.btnTest.Text = "button1";
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Visible = false;
-            // 
-            // cmdBack
-            // 
-            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
-            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
-            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
-            this.cmdBack.FlatAppearance.BorderSize = 0;
-            this.cmdBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
-            this.cmdBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
-            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdBack.ForeColor = System.Drawing.Color.Navy;
-            this.cmdBack.Location = new System.Drawing.Point(3, 3);
-            this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(72, 70);
-            this.cmdBack.TabIndex = 88;
-            this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdBack.UseVisualStyleBackColor = false;
-            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
             // lblDate
             // 
@@ -984,7 +963,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(105, 23);
             this.label13.TabIndex = 38;
-            this.label13.Text = "Down";
+            this.label13.Text = "Inject 2";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMC1_INJECT2_06
@@ -1212,7 +1191,7 @@
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(105, 23);
             this.label42.TabIndex = 27;
-            this.label42.Text = "Up";
+            this.label42.Text = "Inject 1";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMC1
@@ -1318,7 +1297,7 @@
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(105, 23);
             this.label51.TabIndex = 27;
-            this.label51.Text = "Up";
+            this.label51.Text = "Inject 1";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label52
@@ -1618,7 +1597,7 @@
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(105, 23);
             this.label76.TabIndex = 38;
-            this.label76.Text = "Down";
+            this.label76.Text = "Inject 2";
             this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMC3
@@ -1641,7 +1620,7 @@
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(105, 23);
             this.label78.TabIndex = 27;
-            this.label78.Text = "Up";
+            this.label78.Text = "Inject 1";
             this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label79
@@ -1941,7 +1920,7 @@
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(105, 23);
             this.label103.TabIndex = 38;
-            this.label103.Text = "Down";
+            this.label103.Text = "Inject 2";
             this.label103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tmrAnimation
@@ -2310,6 +2289,20 @@
             this.label71.Text = "Max";
             this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // sbtnNext
+            // 
+            this.sbtnNext.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbtnNext.Appearance.Options.UseFont = true;
+            this.sbtnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnNext.ImageOptions.Image")));
+            this.sbtnNext.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.sbtnNext.Location = new System.Drawing.Point(403, 155);
+            this.sbtnNext.Name = "sbtnNext";
+            this.sbtnNext.Size = new System.Drawing.Size(150, 40);
+            this.sbtnNext.TabIndex = 39;
+            this.sbtnNext.Tag = "NEXT";
+            this.sbtnNext.Text = "Next";
+            this.sbtnNext.Click += new System.EventHandler(this.sbtnNavPage_Click);
+            // 
             // sbtnPrev
             // 
             this.sbtnPrev.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2324,19 +2317,25 @@
             this.sbtnPrev.Text = "Previous";
             this.sbtnPrev.Click += new System.EventHandler(this.sbtnNavPage_Click);
             // 
-            // sbtnNext
+            // cmdBack
             // 
-            this.sbtnNext.Appearance.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbtnNext.Appearance.Options.UseFont = true;
-            this.sbtnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sbtnNext.ImageOptions.Image")));
-            this.sbtnNext.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.sbtnNext.Location = new System.Drawing.Point(403, 155);
-            this.sbtnNext.Name = "sbtnNext";
-            this.sbtnNext.Size = new System.Drawing.Size(150, 40);
-            this.sbtnNext.TabIndex = 39;
-            this.sbtnNext.Tag = "NEXT";
-            this.sbtnNext.Text = "Next";
-            this.sbtnNext.Click += new System.EventHandler(this.sbtnNavPage_Click);
+            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
+            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
+            this.cmdBack.FlatAppearance.BorderSize = 0;
+            this.cmdBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
+            this.cmdBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
+            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdBack.ForeColor = System.Drawing.Color.Navy;
+            this.cmdBack.Location = new System.Drawing.Point(3, 3);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(72, 70);
+            this.cmdBack.TabIndex = 88;
+            this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
             // SMT_SCADA_B2IPZONE_TEMPER_V2
             // 

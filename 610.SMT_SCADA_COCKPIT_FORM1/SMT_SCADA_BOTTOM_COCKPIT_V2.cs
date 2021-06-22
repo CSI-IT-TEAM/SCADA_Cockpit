@@ -314,6 +314,9 @@ namespace FORM
 
                 lblGrpList.Add(lbl_PU_GRP_MAT);
 
+                lblGrpList.Add(lbl_IP_UV_GRP_ZONE);
+
+                lblGrpList.Add(lbl_PU_GRP);
 
                 foreach (var item in lblList)
                 {
@@ -406,6 +409,11 @@ namespace FORM
                 throw;
             }
            
+        }
+
+        private void lbl_PU_Poly_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

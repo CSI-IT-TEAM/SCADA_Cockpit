@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer();
             this.lbl_IPA_1_Pall = new System.Windows.Forms.Label();
             this.lbl_IPA_1_Extruder = new System.Windows.Forms.Label();
             this.lbl_IPA_1_Roll = new System.Windows.Forms.Label();
@@ -82,7 +81,7 @@
             this.label114 = new System.Windows.Forms.Label();
             this.lbl_PU_UV_5 = new System.Windows.Forms.Label();
             this.a1Panel7 = new OS_DSF.A1Panel();
-            this.roundLabel131 = new RoundLabel();
+            this.lbl_IP_UV_GRP_ZONE = new RoundLabel();
             this.lbl_IPA_UV_7 = new System.Windows.Forms.Label();
             this.label105 = new System.Windows.Forms.Label();
             this.lbl_IPA_UV_6 = new System.Windows.Forms.Label();
@@ -199,7 +198,7 @@
             this.label50 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.roundLabel163 = new RoundLabel();
+            this.lbl_PU_GRP = new RoundLabel();
             this.a1Panel5 = new OS_DSF.A1Panel();
             this.lbl_IPA_4_Pall = new System.Windows.Forms.Label();
             this.lbl_IPA_4_Extruder = new System.Windows.Forms.Label();
@@ -254,7 +253,7 @@
             this.roundLabel42 = new RoundLabel();
             this.roundLabel22 = new RoundLabel();
             this.roundLabel1 = new RoundLabel();
-            this.tmrBlinking = new System.Windows.Forms.Timer(this.components);
+            this.tmrBlinking = new System.Windows.Forms.Timer();
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
             this.a1Panel10.SuspendLayout();
@@ -402,9 +401,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(872, 82);
+            this.richTextBox1.Location = new System.Drawing.Point(1541, 82);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(573, 165);
+            this.richTextBox1.Size = new System.Drawing.Size(353, 165);
             this.richTextBox1.TabIndex = 7;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             this.richTextBox1.Visible = false;
@@ -437,7 +436,7 @@
             this.a1Panel11.GradientStartColor = System.Drawing.Color.White;
             this.a1Panel11.Image = null;
             this.a1Panel11.ImageLocation = new System.Drawing.Point(4, 4);
-            this.a1Panel11.Location = new System.Drawing.Point(1189, 935);
+            this.a1Panel11.Location = new System.Drawing.Point(1019, 720);
             this.a1Panel11.Name = "a1Panel11";
             this.a1Panel11.RoundCornerRadius = 10;
             this.a1Panel11.Size = new System.Drawing.Size(588, 89);
@@ -688,7 +687,7 @@
             this.a1Panel10.GradientStartColor = System.Drawing.Color.White;
             this.a1Panel10.Image = null;
             this.a1Panel10.ImageLocation = new System.Drawing.Point(4, 4);
-            this.a1Panel10.Location = new System.Drawing.Point(1189, 840);
+            this.a1Panel10.Location = new System.Drawing.Point(584, 720);
             this.a1Panel10.Name = "a1Panel10";
             this.a1Panel10.RoundCornerRadius = 10;
             this.a1Panel10.Size = new System.Drawing.Size(417, 89);
@@ -857,7 +856,7 @@
             // a1Panel7
             // 
             this.a1Panel7.BorderColor = System.Drawing.SystemColors.GrayText;
-            this.a1Panel7.Controls.Add(this.roundLabel131);
+            this.a1Panel7.Controls.Add(this.lbl_IP_UV_GRP_ZONE);
             this.a1Panel7.Controls.Add(this.lbl_IPA_UV_7);
             this.a1Panel7.Controls.Add(this.label105);
             this.a1Panel7.Controls.Add(this.lbl_IPA_UV_6);
@@ -876,23 +875,23 @@
             this.a1Panel7.GradientStartColor = System.Drawing.Color.White;
             this.a1Panel7.Image = null;
             this.a1Panel7.ImageLocation = new System.Drawing.Point(4, 4);
-            this.a1Panel7.Location = new System.Drawing.Point(872, 503);
+            this.a1Panel7.Location = new System.Drawing.Point(1321, 518);
             this.a1Panel7.Name = "a1Panel7";
             this.a1Panel7.RoundCornerRadius = 10;
             this.a1Panel7.Size = new System.Drawing.Size(417, 89);
             this.a1Panel7.TabIndex = 6;
             // 
-            // roundLabel131
+            // lbl_IP_UV_GRP_ZONE
             // 
-            this.roundLabel131._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.roundLabel131.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel131.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel131.ForeColor = System.Drawing.Color.White;
-            this.roundLabel131.Location = new System.Drawing.Point(0, 0);
-            this.roundLabel131.Name = "roundLabel131";
-            this.roundLabel131.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel131.TabIndex = 5;
-            this.roundLabel131.Text = "IP UV";
+            this.lbl_IP_UV_GRP_ZONE._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_IP_UV_GRP_ZONE.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_IP_UV_GRP_ZONE.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_IP_UV_GRP_ZONE.ForeColor = System.Drawing.Color.White;
+            this.lbl_IP_UV_GRP_ZONE.Location = new System.Drawing.Point(0, 0);
+            this.lbl_IP_UV_GRP_ZONE.Name = "lbl_IP_UV_GRP_ZONE";
+            this.lbl_IP_UV_GRP_ZONE.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IP_UV_GRP_ZONE.TabIndex = 5;
+            this.lbl_IP_UV_GRP_ZONE.Text = "IP UV";
             // 
             // lbl_IPA_UV_7
             // 
@@ -1063,10 +1062,10 @@
             this.a1Panel4.GradientStartColor = System.Drawing.Color.White;
             this.a1Panel4.Image = null;
             this.a1Panel4.ImageLocation = new System.Drawing.Point(4, 4);
-            this.a1Panel4.Location = new System.Drawing.Point(1100, 274);
+            this.a1Panel4.Location = new System.Drawing.Point(1321, 276);
             this.a1Panel4.Name = "a1Panel4";
             this.a1Panel4.RoundCornerRadius = 10;
-            this.a1Panel4.Size = new System.Drawing.Size(417, 89);
+            this.a1Panel4.Size = new System.Drawing.Size(573, 89);
             this.a1Panel4.TabIndex = 6;
             this.a1Panel4.Visible = false;
             // 
@@ -1086,9 +1085,9 @@
             // 
             this.lbl_PH_UV_7.BackColor = System.Drawing.Color.Green;
             this.lbl_PH_UV_7.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PH_UV_7.Location = new System.Drawing.Point(345, 53);
+            this.lbl_PH_UV_7.Location = new System.Drawing.Point(465, 53);
             this.lbl_PH_UV_7.Name = "lbl_PH_UV_7";
-            this.lbl_PH_UV_7.Size = new System.Drawing.Size(49, 22);
+            this.lbl_PH_UV_7.Size = new System.Drawing.Size(69, 22);
             this.lbl_PH_UV_7.TabIndex = 6;
             this.lbl_PH_UV_7.Tag = "lbl_PH_UV_7";
             this.lbl_PH_UV_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1097,9 +1096,9 @@
             // 
             this.lbl_PH_UV_6.BackColor = System.Drawing.Color.Green;
             this.lbl_PH_UV_6.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PH_UV_6.Location = new System.Drawing.Point(290, 53);
+            this.lbl_PH_UV_6.Location = new System.Drawing.Point(390, 53);
             this.lbl_PH_UV_6.Name = "lbl_PH_UV_6";
-            this.lbl_PH_UV_6.Size = new System.Drawing.Size(49, 22);
+            this.lbl_PH_UV_6.Size = new System.Drawing.Size(69, 22);
             this.lbl_PH_UV_6.TabIndex = 6;
             this.lbl_PH_UV_6.Tag = "lbl_PH_UV_6";
             this.lbl_PH_UV_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1108,9 +1107,9 @@
             // 
             this.label47.BackColor = System.Drawing.Color.Silver;
             this.label47.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label47.Location = new System.Drawing.Point(345, 25);
+            this.label47.Location = new System.Drawing.Point(465, 25);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(49, 22);
+            this.label47.Size = new System.Drawing.Size(69, 22);
             this.label47.TabIndex = 6;
             this.label47.Text = "7";
             this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1119,9 +1118,9 @@
             // 
             this.lbl_PH_UV_4.BackColor = System.Drawing.Color.Green;
             this.lbl_PH_UV_4.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PH_UV_4.Location = new System.Drawing.Point(180, 53);
+            this.lbl_PH_UV_4.Location = new System.Drawing.Point(240, 53);
             this.lbl_PH_UV_4.Name = "lbl_PH_UV_4";
-            this.lbl_PH_UV_4.Size = new System.Drawing.Size(49, 22);
+            this.lbl_PH_UV_4.Size = new System.Drawing.Size(69, 22);
             this.lbl_PH_UV_4.TabIndex = 6;
             this.lbl_PH_UV_4.Tag = "lbl_PH_UV_4";
             this.lbl_PH_UV_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1130,9 +1129,9 @@
             // 
             this.label24.BackColor = System.Drawing.Color.Silver;
             this.label24.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label24.Location = new System.Drawing.Point(290, 25);
+            this.label24.Location = new System.Drawing.Point(390, 25);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(49, 22);
+            this.label24.Size = new System.Drawing.Size(69, 22);
             this.label24.TabIndex = 6;
             this.label24.Text = "6";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1141,9 +1140,9 @@
             // 
             this.lbl_PH_UV_3.BackColor = System.Drawing.Color.Green;
             this.lbl_PH_UV_3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PH_UV_3.Location = new System.Drawing.Point(125, 53);
+            this.lbl_PH_UV_3.Location = new System.Drawing.Point(165, 53);
             this.lbl_PH_UV_3.Name = "lbl_PH_UV_3";
-            this.lbl_PH_UV_3.Size = new System.Drawing.Size(49, 22);
+            this.lbl_PH_UV_3.Size = new System.Drawing.Size(69, 22);
             this.lbl_PH_UV_3.TabIndex = 6;
             this.lbl_PH_UV_3.Tag = "lbl_PH_UV_3";
             this.lbl_PH_UV_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1152,9 +1151,9 @@
             // 
             this.label22.BackColor = System.Drawing.Color.Silver;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label22.Location = new System.Drawing.Point(180, 25);
+            this.label22.Location = new System.Drawing.Point(240, 25);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(49, 22);
+            this.label22.Size = new System.Drawing.Size(69, 22);
             this.label22.TabIndex = 6;
             this.label22.Text = "4";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1165,7 +1164,7 @@
             this.lbl_PH_UV_1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_PH_UV_1.Location = new System.Drawing.Point(15, 53);
             this.lbl_PH_UV_1.Name = "lbl_PH_UV_1";
-            this.lbl_PH_UV_1.Size = new System.Drawing.Size(49, 22);
+            this.lbl_PH_UV_1.Size = new System.Drawing.Size(69, 22);
             this.lbl_PH_UV_1.TabIndex = 6;
             this.lbl_PH_UV_1.Tag = "lbl_PH_UV_1";
             this.lbl_PH_UV_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1174,9 +1173,9 @@
             // 
             this.label21.BackColor = System.Drawing.Color.Silver;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label21.Location = new System.Drawing.Point(125, 25);
+            this.label21.Location = new System.Drawing.Point(165, 25);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(49, 22);
+            this.label21.Size = new System.Drawing.Size(69, 22);
             this.label21.TabIndex = 6;
             this.label21.Text = "3";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1185,9 +1184,9 @@
             // 
             this.lbl_PH_UV_2.BackColor = System.Drawing.Color.Green;
             this.lbl_PH_UV_2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PH_UV_2.Location = new System.Drawing.Point(70, 53);
+            this.lbl_PH_UV_2.Location = new System.Drawing.Point(90, 53);
             this.lbl_PH_UV_2.Name = "lbl_PH_UV_2";
-            this.lbl_PH_UV_2.Size = new System.Drawing.Size(49, 22);
+            this.lbl_PH_UV_2.Size = new System.Drawing.Size(69, 22);
             this.lbl_PH_UV_2.TabIndex = 6;
             this.lbl_PH_UV_2.Tag = "lbl_PH_UV_2";
             this.lbl_PH_UV_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1198,7 +1197,7 @@
             this.label19.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label19.Location = new System.Drawing.Point(15, 25);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(49, 22);
+            this.label19.Size = new System.Drawing.Size(69, 22);
             this.label19.TabIndex = 6;
             this.label19.Text = "1";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1207,9 +1206,9 @@
             // 
             this.lbl_PH_UV_5.BackColor = System.Drawing.Color.Green;
             this.lbl_PH_UV_5.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PH_UV_5.Location = new System.Drawing.Point(235, 53);
+            this.lbl_PH_UV_5.Location = new System.Drawing.Point(315, 53);
             this.lbl_PH_UV_5.Name = "lbl_PH_UV_5";
-            this.lbl_PH_UV_5.Size = new System.Drawing.Size(49, 22);
+            this.lbl_PH_UV_5.Size = new System.Drawing.Size(69, 22);
             this.lbl_PH_UV_5.TabIndex = 6;
             this.lbl_PH_UV_5.Tag = "lbl_PH_UV_5";
             this.lbl_PH_UV_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1218,9 +1217,9 @@
             // 
             this.label20.BackColor = System.Drawing.Color.Silver;
             this.label20.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label20.Location = new System.Drawing.Point(70, 25);
+            this.label20.Location = new System.Drawing.Point(90, 25);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(49, 22);
+            this.label20.Size = new System.Drawing.Size(69, 22);
             this.label20.TabIndex = 6;
             this.label20.Text = "2";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1229,9 +1228,9 @@
             // 
             this.label25.BackColor = System.Drawing.Color.Silver;
             this.label25.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label25.Location = new System.Drawing.Point(235, 25);
+            this.label25.Location = new System.Drawing.Point(315, 25);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(49, 22);
+            this.label25.Size = new System.Drawing.Size(69, 22);
             this.label25.TabIndex = 6;
             this.label25.Text = "5";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1272,10 +1271,10 @@
             this.a1Panel3.GradientStartColor = System.Drawing.Color.White;
             this.a1Panel3.Image = null;
             this.a1Panel3.ImageLocation = new System.Drawing.Point(4, 4);
-            this.a1Panel3.Location = new System.Drawing.Point(677, 248);
+            this.a1Panel3.Location = new System.Drawing.Point(881, 250);
             this.a1Panel3.Name = "a1Panel3";
             this.a1Panel3.RoundCornerRadius = 10;
-            this.a1Panel3.Size = new System.Drawing.Size(417, 146);
+            this.a1Panel3.Size = new System.Drawing.Size(428, 146);
             this.a1Panel3.TabIndex = 6;
             // 
             // lbl_PH_CTM_14
@@ -1629,19 +1628,19 @@
             this.a1Panel6.GradientStartColor = System.Drawing.Color.White;
             this.a1Panel6.Image = null;
             this.a1Panel6.ImageLocation = new System.Drawing.Point(4, 4);
-            this.a1Panel6.Location = new System.Drawing.Point(593, 429);
+            this.a1Panel6.Location = new System.Drawing.Point(881, 441);
             this.a1Panel6.Name = "a1Panel6";
             this.a1Panel6.RoundCornerRadius = 10;
-            this.a1Panel6.Size = new System.Drawing.Size(273, 247);
+            this.a1Panel6.Size = new System.Drawing.Size(428, 247);
             this.a1Panel6.TabIndex = 6;
             // 
             // lbl_IPA_Zone_7_Stab
             // 
             this.lbl_IPA_Zone_7_Stab.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_7_Stab.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_7_Stab.Location = new System.Drawing.Point(164, 208);
+            this.lbl_IPA_Zone_7_Stab.Location = new System.Drawing.Point(252, 207);
             this.lbl_IPA_Zone_7_Stab.Name = "lbl_IPA_Zone_7_Stab";
-            this.lbl_IPA_Zone_7_Stab.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_7_Stab.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_7_Stab.TabIndex = 6;
             this.lbl_IPA_Zone_7_Stab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1649,9 +1648,9 @@
             // 
             this.lbl_IPA_Zone_7_Injection.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_7_Injection.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_7_Injection.Location = new System.Drawing.Point(64, 208);
+            this.lbl_IPA_Zone_7_Injection.Location = new System.Drawing.Point(116, 207);
             this.lbl_IPA_Zone_7_Injection.Name = "lbl_IPA_Zone_7_Injection";
-            this.lbl_IPA_Zone_7_Injection.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_7_Injection.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_7_Injection.TabIndex = 6;
             this.lbl_IPA_Zone_7_Injection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1659,9 +1658,9 @@
             // 
             this.lbl_IPA_Zone_6_Stab.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_6_Stab.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_6_Stab.Location = new System.Drawing.Point(165, 182);
+            this.lbl_IPA_Zone_6_Stab.Location = new System.Drawing.Point(253, 181);
             this.lbl_IPA_Zone_6_Stab.Name = "lbl_IPA_Zone_6_Stab";
-            this.lbl_IPA_Zone_6_Stab.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_6_Stab.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_6_Stab.TabIndex = 6;
             this.lbl_IPA_Zone_6_Stab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1669,9 +1668,9 @@
             // 
             this.lbl_IPA_Zone_6_Injection.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_6_Injection.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_6_Injection.Location = new System.Drawing.Point(65, 182);
+            this.lbl_IPA_Zone_6_Injection.Location = new System.Drawing.Point(117, 181);
             this.lbl_IPA_Zone_6_Injection.Name = "lbl_IPA_Zone_6_Injection";
-            this.lbl_IPA_Zone_6_Injection.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_6_Injection.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_6_Injection.TabIndex = 6;
             this.lbl_IPA_Zone_6_Injection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1679,9 +1678,9 @@
             // 
             this.lbl_IPA_Zone_5_Stab.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_5_Stab.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_5_Stab.Location = new System.Drawing.Point(165, 156);
+            this.lbl_IPA_Zone_5_Stab.Location = new System.Drawing.Point(253, 155);
             this.lbl_IPA_Zone_5_Stab.Name = "lbl_IPA_Zone_5_Stab";
-            this.lbl_IPA_Zone_5_Stab.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_5_Stab.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_5_Stab.TabIndex = 6;
             this.lbl_IPA_Zone_5_Stab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1689,9 +1688,9 @@
             // 
             this.lbl_IPA_Zone_5_Injection.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_5_Injection.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_5_Injection.Location = new System.Drawing.Point(65, 156);
+            this.lbl_IPA_Zone_5_Injection.Location = new System.Drawing.Point(117, 155);
             this.lbl_IPA_Zone_5_Injection.Name = "lbl_IPA_Zone_5_Injection";
-            this.lbl_IPA_Zone_5_Injection.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_5_Injection.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_5_Injection.TabIndex = 6;
             this.lbl_IPA_Zone_5_Injection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1699,9 +1698,9 @@
             // 
             this.lbl_IPA_Zone_4_Stab.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_4_Stab.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_4_Stab.Location = new System.Drawing.Point(165, 129);
+            this.lbl_IPA_Zone_4_Stab.Location = new System.Drawing.Point(253, 128);
             this.lbl_IPA_Zone_4_Stab.Name = "lbl_IPA_Zone_4_Stab";
-            this.lbl_IPA_Zone_4_Stab.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_4_Stab.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_4_Stab.TabIndex = 6;
             this.lbl_IPA_Zone_4_Stab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1709,9 +1708,9 @@
             // 
             this.lbl_IPA_Zone_4_Injection.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_4_Injection.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_4_Injection.Location = new System.Drawing.Point(65, 129);
+            this.lbl_IPA_Zone_4_Injection.Location = new System.Drawing.Point(117, 128);
             this.lbl_IPA_Zone_4_Injection.Name = "lbl_IPA_Zone_4_Injection";
-            this.lbl_IPA_Zone_4_Injection.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_4_Injection.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_4_Injection.TabIndex = 6;
             this.lbl_IPA_Zone_4_Injection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1719,9 +1718,9 @@
             // 
             this.lbl_IPA_Zone_3_Stab.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_3_Stab.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_3_Stab.Location = new System.Drawing.Point(164, 103);
+            this.lbl_IPA_Zone_3_Stab.Location = new System.Drawing.Point(252, 102);
             this.lbl_IPA_Zone_3_Stab.Name = "lbl_IPA_Zone_3_Stab";
-            this.lbl_IPA_Zone_3_Stab.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_3_Stab.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_3_Stab.TabIndex = 6;
             this.lbl_IPA_Zone_3_Stab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1729,9 +1728,9 @@
             // 
             this.lbl_IPA_Zone_3_Injection.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_3_Injection.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_3_Injection.Location = new System.Drawing.Point(64, 103);
+            this.lbl_IPA_Zone_3_Injection.Location = new System.Drawing.Point(116, 102);
             this.lbl_IPA_Zone_3_Injection.Name = "lbl_IPA_Zone_3_Injection";
-            this.lbl_IPA_Zone_3_Injection.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_3_Injection.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_3_Injection.TabIndex = 6;
             this.lbl_IPA_Zone_3_Injection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1739,9 +1738,9 @@
             // 
             this.lbl_IPA_Zone_2_Stab.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_2_Stab.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_2_Stab.Location = new System.Drawing.Point(164, 77);
+            this.lbl_IPA_Zone_2_Stab.Location = new System.Drawing.Point(252, 76);
             this.lbl_IPA_Zone_2_Stab.Name = "lbl_IPA_Zone_2_Stab";
-            this.lbl_IPA_Zone_2_Stab.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_2_Stab.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_2_Stab.TabIndex = 6;
             this.lbl_IPA_Zone_2_Stab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1749,9 +1748,9 @@
             // 
             this.lbl_IPA_Zone_2_Injection.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_2_Injection.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_2_Injection.Location = new System.Drawing.Point(64, 77);
+            this.lbl_IPA_Zone_2_Injection.Location = new System.Drawing.Point(116, 76);
             this.lbl_IPA_Zone_2_Injection.Name = "lbl_IPA_Zone_2_Injection";
-            this.lbl_IPA_Zone_2_Injection.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_2_Injection.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_2_Injection.TabIndex = 6;
             this.lbl_IPA_Zone_2_Injection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1759,9 +1758,9 @@
             // 
             this.lbl_IPA_Zone_1_Stab.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_1_Stab.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_1_Stab.Location = new System.Drawing.Point(164, 51);
+            this.lbl_IPA_Zone_1_Stab.Location = new System.Drawing.Point(252, 50);
             this.lbl_IPA_Zone_1_Stab.Name = "lbl_IPA_Zone_1_Stab";
-            this.lbl_IPA_Zone_1_Stab.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_1_Stab.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_1_Stab.TabIndex = 6;
             this.lbl_IPA_Zone_1_Stab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1769,9 +1768,9 @@
             // 
             this.lbl_IPA_Zone_1_Injection.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_Zone_1_Injection.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_Zone_1_Injection.Location = new System.Drawing.Point(64, 51);
+            this.lbl_IPA_Zone_1_Injection.Location = new System.Drawing.Point(116, 50);
             this.lbl_IPA_Zone_1_Injection.Name = "lbl_IPA_Zone_1_Injection";
-            this.lbl_IPA_Zone_1_Injection.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_Zone_1_Injection.Size = new System.Drawing.Size(130, 22);
             this.lbl_IPA_Zone_1_Injection.TabIndex = 6;
             this.lbl_IPA_Zone_1_Injection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1779,9 +1778,9 @@
             // 
             this.label80.BackColor = System.Drawing.Color.Silver;
             this.label80.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label80.Location = new System.Drawing.Point(164, 26);
+            this.label80.Location = new System.Drawing.Point(252, 25);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(94, 22);
+            this.label80.Size = new System.Drawing.Size(130, 22);
             this.label80.TabIndex = 6;
             this.label80.Text = "Stabilization";
             this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1790,9 +1789,9 @@
             // 
             this.label79.BackColor = System.Drawing.Color.Silver;
             this.label79.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label79.Location = new System.Drawing.Point(64, 26);
+            this.label79.Location = new System.Drawing.Point(116, 25);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(94, 22);
+            this.label79.Size = new System.Drawing.Size(130, 22);
             this.label79.TabIndex = 6;
             this.label79.Text = "Injection";
             this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1801,9 +1800,9 @@
             // 
             this.label87.BackColor = System.Drawing.Color.Silver;
             this.label87.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label87.Location = new System.Drawing.Point(10, 208);
+            this.label87.Location = new System.Drawing.Point(34, 207);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(49, 22);
+            this.label87.Size = new System.Drawing.Size(77, 22);
             this.label87.TabIndex = 6;
             this.label87.Text = "7";
             this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1812,9 +1811,9 @@
             // 
             this.label84.BackColor = System.Drawing.Color.Silver;
             this.label84.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label84.Location = new System.Drawing.Point(10, 129);
+            this.label84.Location = new System.Drawing.Point(34, 128);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(49, 22);
+            this.label84.Size = new System.Drawing.Size(77, 22);
             this.label84.TabIndex = 6;
             this.label84.Text = "4";
             this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1823,9 +1822,9 @@
             // 
             this.label86.BackColor = System.Drawing.Color.Silver;
             this.label86.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label86.Location = new System.Drawing.Point(10, 182);
+            this.label86.Location = new System.Drawing.Point(34, 181);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(49, 22);
+            this.label86.Size = new System.Drawing.Size(77, 22);
             this.label86.TabIndex = 6;
             this.label86.Text = "6";
             this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1834,9 +1833,9 @@
             // 
             this.label83.BackColor = System.Drawing.Color.Silver;
             this.label83.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label83.Location = new System.Drawing.Point(10, 103);
+            this.label83.Location = new System.Drawing.Point(34, 102);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(49, 22);
+            this.label83.Size = new System.Drawing.Size(77, 22);
             this.label83.TabIndex = 6;
             this.label83.Text = "3";
             this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1845,9 +1844,9 @@
             // 
             this.label85.BackColor = System.Drawing.Color.Silver;
             this.label85.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label85.Location = new System.Drawing.Point(10, 156);
+            this.label85.Location = new System.Drawing.Point(34, 155);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(49, 22);
+            this.label85.Size = new System.Drawing.Size(77, 22);
             this.label85.TabIndex = 6;
             this.label85.Text = "5";
             this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1868,9 +1867,9 @@
             // 
             this.label81.BackColor = System.Drawing.Color.Silver;
             this.label81.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label81.Location = new System.Drawing.Point(10, 77);
+            this.label81.Location = new System.Drawing.Point(34, 76);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(49, 22);
+            this.label81.Size = new System.Drawing.Size(77, 22);
             this.label81.TabIndex = 6;
             this.label81.Text = "2";
             this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1879,9 +1878,9 @@
             // 
             this.label82.BackColor = System.Drawing.Color.Silver;
             this.label82.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label82.Location = new System.Drawing.Point(10, 51);
+            this.label82.Location = new System.Drawing.Point(34, 50);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(49, 22);
+            this.label82.Size = new System.Drawing.Size(77, 22);
             this.label82.TabIndex = 6;
             this.label82.Text = "1";
             this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1919,24 +1918,24 @@
             this.a1Panel9.Controls.Add(this.label50);
             this.a1Panel9.Controls.Add(this.label30);
             this.a1Panel9.Controls.Add(this.label27);
-            this.a1Panel9.Controls.Add(this.roundLabel163);
+            this.a1Panel9.Controls.Add(this.lbl_PU_GRP);
             this.a1Panel9.GradientEndColor = System.Drawing.Color.White;
             this.a1Panel9.GradientStartColor = System.Drawing.Color.White;
             this.a1Panel9.Image = null;
             this.a1Panel9.ImageLocation = new System.Drawing.Point(4, 4);
-            this.a1Panel9.Location = new System.Drawing.Point(382, 840);
+            this.a1Panel9.Location = new System.Drawing.Point(506, 848);
             this.a1Panel9.Name = "a1Panel9";
             this.a1Panel9.RoundCornerRadius = 10;
-            this.a1Panel9.Size = new System.Drawing.Size(801, 140);
+            this.a1Panel9.Size = new System.Drawing.Size(1349, 140);
             this.a1Panel9.TabIndex = 6;
             // 
             // lbl_PU_Manual_Hose_3
             // 
             this.lbl_PU_Manual_Hose_3.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Manual_Hose_3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Manual_Hose_3.Location = new System.Drawing.Point(690, 105);
+            this.lbl_PU_Manual_Hose_3.Location = new System.Drawing.Point(1142, 105);
             this.lbl_PU_Manual_Hose_3.Name = "lbl_PU_Manual_Hose_3";
-            this.lbl_PU_Manual_Hose_3.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Manual_Hose_3.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Manual_Hose_3.TabIndex = 6;
             this.lbl_PU_Manual_Hose_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1944,9 +1943,9 @@
             // 
             this.lbl_PU_Auto_Hose_3.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Auto_Hose_3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Auto_Hose_3.Location = new System.Drawing.Point(291, 105);
+            this.lbl_PU_Auto_Hose_3.Location = new System.Drawing.Point(475, 105);
             this.lbl_PU_Auto_Hose_3.Name = "lbl_PU_Auto_Hose_3";
-            this.lbl_PU_Auto_Hose_3.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Auto_Hose_3.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Auto_Hose_3.TabIndex = 6;
             this.lbl_PU_Auto_Hose_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1954,9 +1953,9 @@
             // 
             this.lbl_PU_Manual_Oil_3.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Manual_Oil_3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Manual_Oil_3.Location = new System.Drawing.Point(591, 105);
+            this.lbl_PU_Manual_Oil_3.Location = new System.Drawing.Point(951, 105);
             this.lbl_PU_Manual_Oil_3.Name = "lbl_PU_Manual_Oil_3";
-            this.lbl_PU_Manual_Oil_3.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Manual_Oil_3.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Manual_Oil_3.TabIndex = 6;
             this.lbl_PU_Manual_Oil_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1964,9 +1963,9 @@
             // 
             this.lbl_PU_Auto_Oil_3.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Auto_Oil_3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Auto_Oil_3.Location = new System.Drawing.Point(192, 105);
+            this.lbl_PU_Auto_Oil_3.Location = new System.Drawing.Point(284, 105);
             this.lbl_PU_Auto_Oil_3.Name = "lbl_PU_Auto_Oil_3";
-            this.lbl_PU_Auto_Oil_3.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Auto_Oil_3.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Auto_Oil_3.TabIndex = 6;
             this.lbl_PU_Auto_Oil_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1974,9 +1973,9 @@
             // 
             this.lbl_PU_Manual_Hose_2.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Manual_Hose_2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Manual_Hose_2.Location = new System.Drawing.Point(690, 79);
+            this.lbl_PU_Manual_Hose_2.Location = new System.Drawing.Point(1142, 79);
             this.lbl_PU_Manual_Hose_2.Name = "lbl_PU_Manual_Hose_2";
-            this.lbl_PU_Manual_Hose_2.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Manual_Hose_2.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Manual_Hose_2.TabIndex = 6;
             this.lbl_PU_Manual_Hose_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1984,9 +1983,9 @@
             // 
             this.lbl_PU_Auto_Hose_2.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Auto_Hose_2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Auto_Hose_2.Location = new System.Drawing.Point(291, 79);
+            this.lbl_PU_Auto_Hose_2.Location = new System.Drawing.Point(475, 79);
             this.lbl_PU_Auto_Hose_2.Name = "lbl_PU_Auto_Hose_2";
-            this.lbl_PU_Auto_Hose_2.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Auto_Hose_2.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Auto_Hose_2.TabIndex = 6;
             this.lbl_PU_Auto_Hose_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1994,9 +1993,9 @@
             // 
             this.lbl_PU_Manual_Oil_2.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Manual_Oil_2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Manual_Oil_2.Location = new System.Drawing.Point(591, 79);
+            this.lbl_PU_Manual_Oil_2.Location = new System.Drawing.Point(951, 79);
             this.lbl_PU_Manual_Oil_2.Name = "lbl_PU_Manual_Oil_2";
-            this.lbl_PU_Manual_Oil_2.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Manual_Oil_2.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Manual_Oil_2.TabIndex = 6;
             this.lbl_PU_Manual_Oil_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2004,9 +2003,9 @@
             // 
             this.lbl_PU_Auto_Oil_2.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Auto_Oil_2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Auto_Oil_2.Location = new System.Drawing.Point(192, 79);
+            this.lbl_PU_Auto_Oil_2.Location = new System.Drawing.Point(284, 79);
             this.lbl_PU_Auto_Oil_2.Name = "lbl_PU_Auto_Oil_2";
-            this.lbl_PU_Auto_Oil_2.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Auto_Oil_2.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Auto_Oil_2.TabIndex = 6;
             this.lbl_PU_Auto_Oil_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2014,9 +2013,9 @@
             // 
             this.lbl_PU_Manual_Hose_1.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Manual_Hose_1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Manual_Hose_1.Location = new System.Drawing.Point(690, 52);
+            this.lbl_PU_Manual_Hose_1.Location = new System.Drawing.Point(1142, 52);
             this.lbl_PU_Manual_Hose_1.Name = "lbl_PU_Manual_Hose_1";
-            this.lbl_PU_Manual_Hose_1.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Manual_Hose_1.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Manual_Hose_1.TabIndex = 6;
             this.lbl_PU_Manual_Hose_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2024,9 +2023,9 @@
             // 
             this.lbl_PU_Auto_Hose_1.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Auto_Hose_1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Auto_Hose_1.Location = new System.Drawing.Point(291, 52);
+            this.lbl_PU_Auto_Hose_1.Location = new System.Drawing.Point(475, 52);
             this.lbl_PU_Auto_Hose_1.Name = "lbl_PU_Auto_Hose_1";
-            this.lbl_PU_Auto_Hose_1.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Auto_Hose_1.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Auto_Hose_1.TabIndex = 6;
             this.lbl_PU_Auto_Hose_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2034,9 +2033,9 @@
             // 
             this.lbl_PU_Manual_Oil_1.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Manual_Oil_1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Manual_Oil_1.Location = new System.Drawing.Point(591, 52);
+            this.lbl_PU_Manual_Oil_1.Location = new System.Drawing.Point(951, 52);
             this.lbl_PU_Manual_Oil_1.Name = "lbl_PU_Manual_Oil_1";
-            this.lbl_PU_Manual_Oil_1.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Manual_Oil_1.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Manual_Oil_1.TabIndex = 6;
             this.lbl_PU_Manual_Oil_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2044,9 +2043,9 @@
             // 
             this.lbl_PU_Auto_Oil_1.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Auto_Oil_1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Auto_Oil_1.Location = new System.Drawing.Point(192, 52);
+            this.lbl_PU_Auto_Oil_1.Location = new System.Drawing.Point(284, 52);
             this.lbl_PU_Auto_Oil_1.Name = "lbl_PU_Auto_Oil_1";
-            this.lbl_PU_Auto_Oil_1.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Auto_Oil_1.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Auto_Oil_1.TabIndex = 6;
             this.lbl_PU_Auto_Oil_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2054,9 +2053,9 @@
             // 
             this.label66.BackColor = System.Drawing.Color.Silver;
             this.label66.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label66.Location = new System.Drawing.Point(690, 25);
+            this.label66.Location = new System.Drawing.Point(1142, 25);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(94, 22);
+            this.label66.Size = new System.Drawing.Size(185, 22);
             this.label66.TabIndex = 6;
             this.label66.Text = "Hose";
             this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2065,9 +2064,9 @@
             // 
             this.label29.BackColor = System.Drawing.Color.Silver;
             this.label29.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label29.Location = new System.Drawing.Point(291, 25);
+            this.label29.Location = new System.Drawing.Point(475, 25);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(94, 22);
+            this.label29.Size = new System.Drawing.Size(185, 22);
             this.label29.TabIndex = 6;
             this.label29.Text = "Hose";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2076,9 +2075,9 @@
             // 
             this.label65.BackColor = System.Drawing.Color.Silver;
             this.label65.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label65.Location = new System.Drawing.Point(591, 25);
+            this.label65.Location = new System.Drawing.Point(951, 25);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(94, 22);
+            this.label65.Size = new System.Drawing.Size(185, 22);
             this.label65.TabIndex = 6;
             this.label65.Text = "Oil";
             this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2087,9 +2086,9 @@
             // 
             this.label28.BackColor = System.Drawing.Color.Silver;
             this.label28.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label28.Location = new System.Drawing.Point(192, 25);
+            this.label28.Location = new System.Drawing.Point(284, 25);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(94, 22);
+            this.label28.Size = new System.Drawing.Size(185, 22);
             this.label28.TabIndex = 6;
             this.label28.Text = "Oil";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2098,9 +2097,9 @@
             // 
             this.lbl_PU_Manual_Mat_3.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Manual_Mat_3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Manual_Mat_3.Location = new System.Drawing.Point(492, 105);
+            this.lbl_PU_Manual_Mat_3.Location = new System.Drawing.Point(760, 105);
             this.lbl_PU_Manual_Mat_3.Name = "lbl_PU_Manual_Mat_3";
-            this.lbl_PU_Manual_Mat_3.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Manual_Mat_3.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Manual_Mat_3.TabIndex = 6;
             this.lbl_PU_Manual_Mat_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2110,7 +2109,7 @@
             this.lbl_PU_Auto_Mat_3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_PU_Auto_Mat_3.Location = new System.Drawing.Point(93, 105);
             this.lbl_PU_Auto_Mat_3.Name = "lbl_PU_Auto_Mat_3";
-            this.lbl_PU_Auto_Mat_3.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Auto_Mat_3.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Auto_Mat_3.TabIndex = 6;
             this.lbl_PU_Auto_Mat_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2118,7 +2117,7 @@
             // 
             this.label63.BackColor = System.Drawing.Color.Silver;
             this.label63.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label63.Location = new System.Drawing.Point(408, 106);
+            this.label63.Location = new System.Drawing.Point(676, 106);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(76, 22);
             this.label63.TabIndex = 6;
@@ -2140,9 +2139,9 @@
             // 
             this.lbl_PU_Manual_Mat_2.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Manual_Mat_2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Manual_Mat_2.Location = new System.Drawing.Point(492, 79);
+            this.lbl_PU_Manual_Mat_2.Location = new System.Drawing.Point(760, 79);
             this.lbl_PU_Manual_Mat_2.Name = "lbl_PU_Manual_Mat_2";
-            this.lbl_PU_Manual_Mat_2.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Manual_Mat_2.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Manual_Mat_2.TabIndex = 6;
             this.lbl_PU_Manual_Mat_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2152,7 +2151,7 @@
             this.lbl_PU_Auto_Mat_2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_PU_Auto_Mat_2.Location = new System.Drawing.Point(93, 79);
             this.lbl_PU_Auto_Mat_2.Name = "lbl_PU_Auto_Mat_2";
-            this.lbl_PU_Auto_Mat_2.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Auto_Mat_2.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Auto_Mat_2.TabIndex = 6;
             this.lbl_PU_Auto_Mat_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2160,7 +2159,7 @@
             // 
             this.label53.BackColor = System.Drawing.Color.Silver;
             this.label53.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label53.Location = new System.Drawing.Point(408, 79);
+            this.label53.Location = new System.Drawing.Point(676, 79);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(76, 22);
             this.label53.TabIndex = 6;
@@ -2182,9 +2181,9 @@
             // 
             this.lbl_PU_Manual_Mat_1.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Manual_Mat_1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Manual_Mat_1.Location = new System.Drawing.Point(492, 52);
+            this.lbl_PU_Manual_Mat_1.Location = new System.Drawing.Point(760, 52);
             this.lbl_PU_Manual_Mat_1.Name = "lbl_PU_Manual_Mat_1";
-            this.lbl_PU_Manual_Mat_1.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Manual_Mat_1.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Manual_Mat_1.TabIndex = 6;
             this.lbl_PU_Manual_Mat_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2194,7 +2193,7 @@
             this.lbl_PU_Auto_Mat_1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_PU_Auto_Mat_1.Location = new System.Drawing.Point(93, 52);
             this.lbl_PU_Auto_Mat_1.Name = "lbl_PU_Auto_Mat_1";
-            this.lbl_PU_Auto_Mat_1.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Auto_Mat_1.Size = new System.Drawing.Size(185, 22);
             this.lbl_PU_Auto_Mat_1.TabIndex = 6;
             this.lbl_PU_Auto_Mat_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2202,7 +2201,7 @@
             // 
             this.label51.BackColor = System.Drawing.Color.Silver;
             this.label51.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label51.Location = new System.Drawing.Point(408, 52);
+            this.label51.Location = new System.Drawing.Point(676, 52);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(76, 22);
             this.label51.TabIndex = 6;
@@ -2213,9 +2212,9 @@
             // 
             this.label50.BackColor = System.Drawing.Color.Silver;
             this.label50.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label50.Location = new System.Drawing.Point(492, 25);
+            this.label50.Location = new System.Drawing.Point(760, 25);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(94, 22);
+            this.label50.Size = new System.Drawing.Size(185, 22);
             this.label50.TabIndex = 6;
             this.label50.Text = "Material";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2237,22 +2236,22 @@
             this.label27.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label27.Location = new System.Drawing.Point(93, 25);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(94, 22);
+            this.label27.Size = new System.Drawing.Size(185, 22);
             this.label27.TabIndex = 6;
             this.label27.Text = "Material";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // roundLabel163
+            // lbl_PU_GRP
             // 
-            this.roundLabel163._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.roundLabel163.BackColor = System.Drawing.Color.Transparent;
-            this.roundLabel163.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundLabel163.ForeColor = System.Drawing.Color.White;
-            this.roundLabel163.Location = new System.Drawing.Point(0, 0);
-            this.roundLabel163.Name = "roundLabel163";
-            this.roundLabel163.Size = new System.Drawing.Size(94, 22);
-            this.roundLabel163.TabIndex = 5;
-            this.roundLabel163.Text = "PU";
+            this.lbl_PU_GRP._BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lbl_PU_GRP.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_PU_GRP.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PU_GRP.ForeColor = System.Drawing.Color.White;
+            this.lbl_PU_GRP.Location = new System.Drawing.Point(0, 0);
+            this.lbl_PU_GRP.Name = "lbl_PU_GRP";
+            this.lbl_PU_GRP.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_GRP.TabIndex = 5;
+            this.lbl_PU_GRP.Text = "PU";
             // 
             // a1Panel5
             // 
@@ -2284,16 +2283,16 @@
             this.a1Panel5.Location = new System.Drawing.Point(116, 485);
             this.a1Panel5.Name = "a1Panel5";
             this.a1Panel5.RoundCornerRadius = 10;
-            this.a1Panel5.Size = new System.Drawing.Size(471, 141);
+            this.a1Panel5.Size = new System.Drawing.Size(759, 141);
             this.a1Panel5.TabIndex = 6;
             // 
             // lbl_IPA_4_Pall
             // 
             this.lbl_IPA_4_Pall.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_4_Pall.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_4_Pall.Location = new System.Drawing.Point(361, 103);
+            this.lbl_IPA_4_Pall.Location = new System.Drawing.Point(561, 103);
             this.lbl_IPA_4_Pall.Name = "lbl_IPA_4_Pall";
-            this.lbl_IPA_4_Pall.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_4_Pall.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_4_Pall.TabIndex = 6;
             this.lbl_IPA_4_Pall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2301,9 +2300,9 @@
             // 
             this.lbl_IPA_4_Extruder.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_4_Extruder.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_4_Extruder.Location = new System.Drawing.Point(262, 103);
+            this.lbl_IPA_4_Extruder.Location = new System.Drawing.Point(395, 103);
             this.lbl_IPA_4_Extruder.Name = "lbl_IPA_4_Extruder";
-            this.lbl_IPA_4_Extruder.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_4_Extruder.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_4_Extruder.TabIndex = 6;
             this.lbl_IPA_4_Extruder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2311,9 +2310,9 @@
             // 
             this.lbl_IPA_3_Pall.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_3_Pall.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_3_Pall.Location = new System.Drawing.Point(361, 77);
+            this.lbl_IPA_3_Pall.Location = new System.Drawing.Point(561, 77);
             this.lbl_IPA_3_Pall.Name = "lbl_IPA_3_Pall";
-            this.lbl_IPA_3_Pall.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_3_Pall.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_3_Pall.TabIndex = 6;
             this.lbl_IPA_3_Pall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2321,9 +2320,9 @@
             // 
             this.lbl_IPA_3_Extruder.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_3_Extruder.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_3_Extruder.Location = new System.Drawing.Point(262, 77);
+            this.lbl_IPA_3_Extruder.Location = new System.Drawing.Point(395, 77);
             this.lbl_IPA_3_Extruder.Name = "lbl_IPA_3_Extruder";
-            this.lbl_IPA_3_Extruder.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_3_Extruder.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_3_Extruder.TabIndex = 6;
             this.lbl_IPA_3_Extruder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2331,9 +2330,9 @@
             // 
             this.lbl_IPA_2_Pall.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_2_Pall.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_2_Pall.Location = new System.Drawing.Point(361, 51);
+            this.lbl_IPA_2_Pall.Location = new System.Drawing.Point(561, 51);
             this.lbl_IPA_2_Pall.Name = "lbl_IPA_2_Pall";
-            this.lbl_IPA_2_Pall.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_2_Pall.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_2_Pall.TabIndex = 6;
             this.lbl_IPA_2_Pall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2341,9 +2340,9 @@
             // 
             this.lbl_IPA_2_Extruder.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_2_Extruder.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_2_Extruder.Location = new System.Drawing.Point(262, 51);
+            this.lbl_IPA_2_Extruder.Location = new System.Drawing.Point(395, 51);
             this.lbl_IPA_2_Extruder.Name = "lbl_IPA_2_Extruder";
-            this.lbl_IPA_2_Extruder.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_2_Extruder.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_2_Extruder.TabIndex = 6;
             this.lbl_IPA_2_Extruder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2351,9 +2350,9 @@
             // 
             this.lbl_IPA_4_Roll.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_4_Roll.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_4_Roll.Location = new System.Drawing.Point(163, 103);
+            this.lbl_IPA_4_Roll.Location = new System.Drawing.Point(229, 103);
             this.lbl_IPA_4_Roll.Name = "lbl_IPA_4_Roll";
-            this.lbl_IPA_4_Roll.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_4_Roll.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_4_Roll.TabIndex = 6;
             this.lbl_IPA_4_Roll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2361,9 +2360,9 @@
             // 
             this.label58.BackColor = System.Drawing.Color.Silver;
             this.label58.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label58.Location = new System.Drawing.Point(361, 25);
+            this.label58.Location = new System.Drawing.Point(561, 25);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(94, 22);
+            this.label58.Size = new System.Drawing.Size(160, 22);
             this.label58.TabIndex = 6;
             this.label58.Text = "Palletizing";
             this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2372,9 +2371,9 @@
             // 
             this.lbl_IPA_3_Roll.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_3_Roll.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_3_Roll.Location = new System.Drawing.Point(163, 77);
+            this.lbl_IPA_3_Roll.Location = new System.Drawing.Point(229, 77);
             this.lbl_IPA_3_Roll.Name = "lbl_IPA_3_Roll";
-            this.lbl_IPA_3_Roll.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_3_Roll.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_3_Roll.TabIndex = 6;
             this.lbl_IPA_3_Roll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2382,9 +2381,9 @@
             // 
             this.label57.BackColor = System.Drawing.Color.Silver;
             this.label57.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label57.Location = new System.Drawing.Point(262, 25);
+            this.label57.Location = new System.Drawing.Point(395, 25);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(94, 22);
+            this.label57.Size = new System.Drawing.Size(160, 22);
             this.label57.TabIndex = 6;
             this.label57.Text = "Extruder";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2393,9 +2392,9 @@
             // 
             this.lbl_IPA_2_Roll.BackColor = System.Drawing.Color.Green;
             this.lbl_IPA_2_Roll.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_IPA_2_Roll.Location = new System.Drawing.Point(163, 51);
+            this.lbl_IPA_2_Roll.Location = new System.Drawing.Point(229, 51);
             this.lbl_IPA_2_Roll.Name = "lbl_IPA_2_Roll";
-            this.lbl_IPA_2_Roll.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_2_Roll.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_2_Roll.TabIndex = 6;
             this.lbl_IPA_2_Roll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2416,7 +2415,7 @@
             this.lbl_IPA_4_Kneader.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_IPA_4_Kneader.Location = new System.Drawing.Point(63, 103);
             this.lbl_IPA_4_Kneader.Name = "lbl_IPA_4_Kneader";
-            this.lbl_IPA_4_Kneader.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_4_Kneader.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_4_Kneader.TabIndex = 6;
             this.lbl_IPA_4_Kneader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2437,7 +2436,7 @@
             this.lbl_IPA_3_Kneader.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_IPA_3_Kneader.Location = new System.Drawing.Point(63, 77);
             this.lbl_IPA_3_Kneader.Name = "lbl_IPA_3_Kneader";
-            this.lbl_IPA_3_Kneader.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_3_Kneader.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_3_Kneader.TabIndex = 6;
             this.lbl_IPA_3_Kneader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2445,9 +2444,9 @@
             // 
             this.label56.BackColor = System.Drawing.Color.Silver;
             this.label56.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label56.Location = new System.Drawing.Point(163, 25);
+            this.label56.Location = new System.Drawing.Point(229, 25);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(94, 22);
+            this.label56.Size = new System.Drawing.Size(160, 22);
             this.label56.TabIndex = 6;
             this.label56.Text = "Roll";
             this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2458,7 +2457,7 @@
             this.lbl_IPA_2_Kneader.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_IPA_2_Kneader.Location = new System.Drawing.Point(63, 51);
             this.lbl_IPA_2_Kneader.Name = "lbl_IPA_2_Kneader";
-            this.lbl_IPA_2_Kneader.Size = new System.Drawing.Size(94, 22);
+            this.lbl_IPA_2_Kneader.Size = new System.Drawing.Size(160, 22);
             this.lbl_IPA_2_Kneader.TabIndex = 6;
             this.lbl_IPA_2_Kneader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2479,7 +2478,7 @@
             this.label55.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label55.Location = new System.Drawing.Point(63, 25);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(94, 22);
+            this.label55.Size = new System.Drawing.Size(160, 22);
             this.label55.TabIndex = 6;
             this.label55.Text = "Kneader";
             this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2511,7 +2510,7 @@
             this.a1Panel8.Location = new System.Drawing.Point(120, 877);
             this.a1Panel8.Name = "a1Panel8";
             this.a1Panel8.RoundCornerRadius = 10;
-            this.a1Panel8.Size = new System.Drawing.Size(255, 90);
+            this.a1Panel8.Size = new System.Drawing.Size(378, 90);
             this.a1Panel8.TabIndex = 6;
             // 
             // lbl_PU_GRP_MAT
@@ -2530,9 +2529,9 @@
             // 
             this.label18.BackColor = System.Drawing.Color.Silver;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label18.Location = new System.Drawing.Point(131, 27);
+            this.label18.Location = new System.Drawing.Point(189, 27);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(94, 22);
+            this.label18.Size = new System.Drawing.Size(152, 22);
             this.label18.TabIndex = 6;
             this.label18.Text = "Iso";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2543,7 +2542,7 @@
             this.label16.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label16.Location = new System.Drawing.Point(31, 27);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 22);
+            this.label16.Size = new System.Drawing.Size(152, 22);
             this.label16.TabIndex = 6;
             this.label16.Text = "Poly";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2554,17 +2553,18 @@
             this.lbl_PU_Poly.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbl_PU_Poly.Location = new System.Drawing.Point(31, 54);
             this.lbl_PU_Poly.Name = "lbl_PU_Poly";
-            this.lbl_PU_Poly.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Poly.Size = new System.Drawing.Size(152, 22);
             this.lbl_PU_Poly.TabIndex = 6;
             this.lbl_PU_Poly.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_PU_Poly.Click += new System.EventHandler(this.lbl_PU_Poly_Click);
             // 
             // lbl_PU_Iso
             // 
             this.lbl_PU_Iso.BackColor = System.Drawing.Color.Green;
             this.lbl_PU_Iso.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_PU_Iso.Location = new System.Drawing.Point(131, 54);
+            this.lbl_PU_Iso.Location = new System.Drawing.Point(189, 54);
             this.lbl_PU_Iso.Name = "lbl_PU_Iso";
-            this.lbl_PU_Iso.Size = new System.Drawing.Size(94, 22);
+            this.lbl_PU_Iso.Size = new System.Drawing.Size(152, 22);
             this.lbl_PU_Iso.TabIndex = 6;
             this.lbl_PU_Iso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2589,16 +2589,16 @@
             this.a1Panel2.Location = new System.Drawing.Point(130, 225);
             this.a1Panel2.Name = "a1Panel2";
             this.a1Panel2.RoundCornerRadius = 10;
-            this.a1Panel2.Size = new System.Drawing.Size(541, 90);
+            this.a1Panel2.Size = new System.Drawing.Size(745, 90);
             this.a1Panel2.TabIndex = 6;
             // 
             // lbl_OS_EVA_Calendar
             // 
             this.lbl_OS_EVA_Calendar.BackColor = System.Drawing.Color.Green;
             this.lbl_OS_EVA_Calendar.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_OS_EVA_Calendar.Location = new System.Drawing.Point(428, 51);
+            this.lbl_OS_EVA_Calendar.Location = new System.Drawing.Point(575, 51);
             this.lbl_OS_EVA_Calendar.Name = "lbl_OS_EVA_Calendar";
-            this.lbl_OS_EVA_Calendar.Size = new System.Drawing.Size(94, 22);
+            this.lbl_OS_EVA_Calendar.Size = new System.Drawing.Size(140, 22);
             this.lbl_OS_EVA_Calendar.TabIndex = 6;
             this.lbl_OS_EVA_Calendar.Tag = "lbl_OS_EVA_Calendar";
             this.lbl_OS_EVA_Calendar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2607,9 +2607,9 @@
             // 
             this.lbl_OS_EVA_Pall.BackColor = System.Drawing.Color.Green;
             this.lbl_OS_EVA_Pall.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_OS_EVA_Pall.Location = new System.Drawing.Point(330, 51);
+            this.lbl_OS_EVA_Pall.Location = new System.Drawing.Point(442, 51);
             this.lbl_OS_EVA_Pall.Name = "lbl_OS_EVA_Pall";
-            this.lbl_OS_EVA_Pall.Size = new System.Drawing.Size(94, 22);
+            this.lbl_OS_EVA_Pall.Size = new System.Drawing.Size(128, 22);
             this.lbl_OS_EVA_Pall.TabIndex = 6;
             this.lbl_OS_EVA_Pall.Tag = "lbl_OS_EVA_Pall";
             this.lbl_OS_EVA_Pall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2618,9 +2618,9 @@
             // 
             this.label12.BackColor = System.Drawing.Color.Silver;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label12.Location = new System.Drawing.Point(428, 25);
+            this.label12.Location = new System.Drawing.Point(575, 25);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 22);
+            this.label12.Size = new System.Drawing.Size(140, 22);
             this.label12.TabIndex = 6;
             this.label12.Text = "Calendar";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2629,9 +2629,9 @@
             // 
             this.lbl_OS_EVA_Extruder.BackColor = System.Drawing.Color.Green;
             this.lbl_OS_EVA_Extruder.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_OS_EVA_Extruder.Location = new System.Drawing.Point(231, 51);
+            this.lbl_OS_EVA_Extruder.Location = new System.Drawing.Point(294, 51);
             this.lbl_OS_EVA_Extruder.Name = "lbl_OS_EVA_Extruder";
-            this.lbl_OS_EVA_Extruder.Size = new System.Drawing.Size(94, 22);
+            this.lbl_OS_EVA_Extruder.Size = new System.Drawing.Size(142, 22);
             this.lbl_OS_EVA_Extruder.TabIndex = 6;
             this.lbl_OS_EVA_Extruder.Tag = "lbl_OS_EVA_Extruder";
             this.lbl_OS_EVA_Extruder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2640,9 +2640,9 @@
             // 
             this.label13.BackColor = System.Drawing.Color.Silver;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label13.Location = new System.Drawing.Point(329, 25);
+            this.label13.Location = new System.Drawing.Point(441, 25);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 22);
+            this.label13.Size = new System.Drawing.Size(128, 22);
             this.label13.TabIndex = 6;
             this.label13.Text = "Palletizing";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2651,9 +2651,9 @@
             // 
             this.lbl_OS_EVA_Roll.BackColor = System.Drawing.Color.Green;
             this.lbl_OS_EVA_Roll.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_OS_EVA_Roll.Location = new System.Drawing.Point(131, 51);
+            this.lbl_OS_EVA_Roll.Location = new System.Drawing.Point(149, 51);
             this.lbl_OS_EVA_Roll.Name = "lbl_OS_EVA_Roll";
-            this.lbl_OS_EVA_Roll.Size = new System.Drawing.Size(94, 22);
+            this.lbl_OS_EVA_Roll.Size = new System.Drawing.Size(138, 22);
             this.lbl_OS_EVA_Roll.TabIndex = 6;
             this.lbl_OS_EVA_Roll.Tag = "lbl_OS_EVA_Roll";
             this.lbl_OS_EVA_Roll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2662,9 +2662,9 @@
             // 
             this.label11.BackColor = System.Drawing.Color.Silver;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label11.Location = new System.Drawing.Point(230, 25);
+            this.label11.Location = new System.Drawing.Point(293, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 22);
+            this.label11.Size = new System.Drawing.Size(142, 22);
             this.label11.TabIndex = 6;
             this.label11.Text = "Extruder";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2673,9 +2673,9 @@
             // 
             this.lbl_OS_EVA_Kneader.BackColor = System.Drawing.Color.Green;
             this.lbl_OS_EVA_Kneader.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_OS_EVA_Kneader.Location = new System.Drawing.Point(31, 51);
+            this.lbl_OS_EVA_Kneader.Location = new System.Drawing.Point(16, 51);
             this.lbl_OS_EVA_Kneader.Name = "lbl_OS_EVA_Kneader";
-            this.lbl_OS_EVA_Kneader.Size = new System.Drawing.Size(94, 22);
+            this.lbl_OS_EVA_Kneader.Size = new System.Drawing.Size(128, 22);
             this.lbl_OS_EVA_Kneader.TabIndex = 6;
             this.lbl_OS_EVA_Kneader.Tag = "lbl_OS_EVA_Kneader";
             this.lbl_OS_EVA_Kneader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2684,9 +2684,9 @@
             // 
             this.label10.BackColor = System.Drawing.Color.Silver;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label10.Location = new System.Drawing.Point(131, 25);
+            this.label10.Location = new System.Drawing.Point(149, 25);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 22);
+            this.label10.Size = new System.Drawing.Size(138, 22);
             this.label10.TabIndex = 6;
             this.label10.Text = "Roll";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2707,9 +2707,9 @@
             // 
             this.label9.BackColor = System.Drawing.Color.Silver;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label9.Location = new System.Drawing.Point(31, 25);
+            this.label9.Location = new System.Drawing.Point(16, 25);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 22);
+            this.label9.Size = new System.Drawing.Size(128, 22);
             this.label9.TabIndex = 6;
             this.label9.Text = "Kneader";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2733,16 +2733,16 @@
             this.a1Panel1.Location = new System.Drawing.Point(130, 129);
             this.a1Panel1.Name = "a1Panel1";
             this.a1Panel1.RoundCornerRadius = 10;
-            this.a1Panel1.Size = new System.Drawing.Size(541, 90);
+            this.a1Panel1.Size = new System.Drawing.Size(745, 90);
             this.a1Panel1.TabIndex = 6;
             // 
             // lbl_OS_Rub_Calendar
             // 
             this.lbl_OS_Rub_Calendar.BackColor = System.Drawing.Color.Green;
             this.lbl_OS_Rub_Calendar.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_OS_Rub_Calendar.Location = new System.Drawing.Point(331, 52);
+            this.lbl_OS_Rub_Calendar.Location = new System.Drawing.Point(553, 55);
             this.lbl_OS_Rub_Calendar.Name = "lbl_OS_Rub_Calendar";
-            this.lbl_OS_Rub_Calendar.Size = new System.Drawing.Size(94, 22);
+            this.lbl_OS_Rub_Calendar.Size = new System.Drawing.Size(174, 22);
             this.lbl_OS_Rub_Calendar.TabIndex = 6;
             this.lbl_OS_Rub_Calendar.Tag = "lbl_OS_Rub_Calendar";
             this.lbl_OS_Rub_Calendar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2751,9 +2751,9 @@
             // 
             this.lbl_OS_Rub_2Roll.BackColor = System.Drawing.Color.Green;
             this.lbl_OS_Rub_2Roll.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_OS_Rub_2Roll.Location = new System.Drawing.Point(231, 52);
+            this.lbl_OS_Rub_2Roll.Location = new System.Drawing.Point(373, 55);
             this.lbl_OS_Rub_2Roll.Name = "lbl_OS_Rub_2Roll";
-            this.lbl_OS_Rub_2Roll.Size = new System.Drawing.Size(94, 22);
+            this.lbl_OS_Rub_2Roll.Size = new System.Drawing.Size(174, 22);
             this.lbl_OS_Rub_2Roll.TabIndex = 6;
             this.lbl_OS_Rub_2Roll.Tag = "lbl_OS_Rub_2Roll";
             this.lbl_OS_Rub_2Roll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2762,9 +2762,9 @@
             // 
             this.lbl_OS_Rub_1Roll.BackColor = System.Drawing.Color.Green;
             this.lbl_OS_Rub_1Roll.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_OS_Rub_1Roll.Location = new System.Drawing.Point(131, 52);
+            this.lbl_OS_Rub_1Roll.Location = new System.Drawing.Point(194, 55);
             this.lbl_OS_Rub_1Roll.Name = "lbl_OS_Rub_1Roll";
-            this.lbl_OS_Rub_1Roll.Size = new System.Drawing.Size(94, 22);
+            this.lbl_OS_Rub_1Roll.Size = new System.Drawing.Size(174, 22);
             this.lbl_OS_Rub_1Roll.TabIndex = 6;
             this.lbl_OS_Rub_1Roll.Tag = "lbl_OS_Rub_1Roll";
             this.lbl_OS_Rub_1Roll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2773,9 +2773,9 @@
             // 
             this.lbl_OS_Rub_Banbury.BackColor = System.Drawing.Color.Green;
             this.lbl_OS_Rub_Banbury.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_OS_Rub_Banbury.Location = new System.Drawing.Point(31, 52);
+            this.lbl_OS_Rub_Banbury.Location = new System.Drawing.Point(15, 55);
             this.lbl_OS_Rub_Banbury.Name = "lbl_OS_Rub_Banbury";
-            this.lbl_OS_Rub_Banbury.Size = new System.Drawing.Size(94, 22);
+            this.lbl_OS_Rub_Banbury.Size = new System.Drawing.Size(174, 22);
             this.lbl_OS_Rub_Banbury.TabIndex = 6;
             this.lbl_OS_Rub_Banbury.Tag = "lbl_OS_Rub_Banbury";
             this.lbl_OS_Rub_Banbury.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2785,9 +2785,9 @@
             // 
             this.label5.BackColor = System.Drawing.Color.Silver;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.Location = new System.Drawing.Point(331, 25);
+            this.label5.Location = new System.Drawing.Point(553, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 22);
+            this.label5.Size = new System.Drawing.Size(174, 22);
             this.label5.TabIndex = 6;
             this.label5.Text = "Calendar";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2796,9 +2796,9 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Silver;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.Location = new System.Drawing.Point(231, 25);
+            this.label4.Location = new System.Drawing.Point(373, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 22);
+            this.label4.Size = new System.Drawing.Size(174, 22);
             this.label4.TabIndex = 6;
             this.label4.Text = "2nd Roll";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2807,9 +2807,9 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Silver;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.Location = new System.Drawing.Point(131, 25);
+            this.label3.Location = new System.Drawing.Point(194, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 22);
+            this.label3.Size = new System.Drawing.Size(174, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "1st Roll";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2818,9 +2818,9 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Silver;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.Location = new System.Drawing.Point(31, 25);
+            this.label1.Location = new System.Drawing.Point(15, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 22);
+            this.label1.Size = new System.Drawing.Size(174, 22);
             this.label1.TabIndex = 6;
             this.label1.Text = "Banbury";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2974,13 +2974,13 @@
         private OS_DSF.A1Panel a1Panel6;
         private RoundLabel lbl_IP_GRP_ZONE;
         private OS_DSF.A1Panel a1Panel7;
-        private RoundLabel roundLabel131;
+        private RoundLabel lbl_IP_UV_GRP_ZONE;
         private RoundLabel roundLabel132;
         private RoundLabel roundLabel133;
         private OS_DSF.A1Panel a1Panel8;
         private RoundLabel lbl_PU_GRP_MAT;
         private OS_DSF.A1Panel a1Panel9;
-        private RoundLabel roundLabel163;
+        private RoundLabel lbl_PU_GRP;
         private OS_DSF.A1Panel a1Panel10;
         private RoundLabel roundLabel184;
         private OS_DSF.A1Panel a1Panel11;

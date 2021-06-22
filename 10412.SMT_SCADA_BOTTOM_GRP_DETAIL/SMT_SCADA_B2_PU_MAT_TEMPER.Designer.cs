@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B2_PU_MAT_TEMPER));
-            DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.btnTest = new System.Windows.Forms.Button();
             this.label84 = new System.Windows.Forms.Label();
@@ -168,23 +173,27 @@
             this.label127 = new System.Windows.Forms.Label();
             this.label128 = new System.Windows.Forms.Label();
             this.label129 = new System.Windows.Forms.Label();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrAnimation = new System.Windows.Forms.Timer(this.components);
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.a1Panel1 = new OS_DSF.A1Panel();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.pnTop.SuspendLayout();
             this.a1Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
             // 
+            this.pnTop.Controls.Add(this.label15);
+            this.pnTop.Controls.Add(this.label14);
             this.pnTop.Controls.Add(this.label10);
+            this.pnTop.Controls.Add(this.label13);
             this.pnTop.Controls.Add(this.label11);
             this.pnTop.Controls.Add(this.label8);
             this.pnTop.Controls.Add(this.label9);
@@ -200,14 +209,60 @@
             this.pnTop.Size = new System.Drawing.Size(1904, 76);
             this.pnTop.TabIndex = 9;
             // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Yellow;
+            this.label10.Location = new System.Drawing.Point(1458, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(147, 19);
+            this.label10.TabIndex = 93;
+            this.label10.Text = "Max: 42°C";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.DarkCyan;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Yellow;
+            this.label11.Location = new System.Drawing.Point(1303, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(147, 19);
+            this.label11.TabIndex = 94;
+            this.label11.Text = "Min: 38°C";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Cyan;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1233, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 19);
+            this.label8.TabIndex = 91;
+            this.label8.Text = "ISO";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(1233, 4);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 19);
+            this.label9.TabIndex = 92;
+            this.label9.Text = "POLY";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label83
             // 
             this.label83.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label83.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label83.ForeColor = System.Drawing.Color.Yellow;
-            this.label83.Location = new System.Drawing.Point(1458, 15);
+            this.label83.Location = new System.Drawing.Point(1458, 4);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(147, 23);
+            this.label83.Size = new System.Drawing.Size(147, 19);
             this.label83.TabIndex = 44;
             this.label83.Text = "Max: 44°C";
             this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,9 +282,9 @@
             this.label84.BackColor = System.Drawing.Color.DarkCyan;
             this.label84.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.ForeColor = System.Drawing.Color.Yellow;
-            this.label84.Location = new System.Drawing.Point(1303, 15);
+            this.label84.Location = new System.Drawing.Point(1303, 4);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(147, 23);
+            this.label84.Size = new System.Drawing.Size(147, 19);
             this.label84.TabIndex = 45;
             this.label84.Text = "Min: 40°C";
             this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -278,7 +333,7 @@
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(1047, 76);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "        -- Temperature Tracking";
+            this.lblHeader.Text = "        PU Temperature Tracking";
             // 
             // lbl_001POLY1OIL
             // 
@@ -1828,6 +1883,53 @@
             this.label129.Text = "ISO 1 - 1";
             this.label129.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tmrDate
+            // 
+            this.tmrDate.Enabled = true;
+            this.tmrDate.Interval = 1000;
+            this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
+            // 
+            // tmrAnimation
+            // 
+            this.tmrAnimation.Enabled = true;
+            this.tmrAnimation.Interval = 50;
+            this.tmrAnimation.Tick += new System.EventHandler(this.tmrAnimation_Tick);
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Gold;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(1233, 49);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(64, 19);
+            this.label13.TabIndex = 91;
+            this.label13.Text = "OIL";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.DarkCyan;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Yellow;
+            this.label14.Location = new System.Drawing.Point(1303, 50);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(147, 19);
+            this.label14.TabIndex = 94;
+            this.label14.Text = "Min: 46°C";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Yellow;
+            this.label15.Location = new System.Drawing.Point(1458, 50);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(147, 19);
+            this.label15.TabIndex = 93;
+            this.label15.Text = "Max: 50°C";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // a1Panel1
             // 
             this.a1Panel1.BorderColor = System.Drawing.Color.White;
@@ -1850,80 +1952,32 @@
             this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.DataBindings = null;
-            xyDiagram3.AxisX.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram3.AxisX.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram3.AxisX.Title.Text = "Time";
-            xyDiagram3.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisY.GridLines.Visible = false;
-            xyDiagram3.AxisY.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            xyDiagram3.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            xyDiagram3.AxisY.Title.Text = "Temperature °C";
-            xyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram3.DefaultPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
-            this.chartControl1.Diagram = xyDiagram3;
+            xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisX.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisX.Title.Text = "Time";
+            xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.GridLines.Visible = false;
+            xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            xyDiagram1.AxisY.Title.Text = "Temperature °C";
+            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.DefaultPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
+            this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Location = new System.Drawing.Point(14, 12);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.PaletteBaseColorNumber = 6;
-            series3.Name = "Series 1";
-            lineSeriesView3.Color = System.Drawing.Color.Yellow;
-            lineSeriesView3.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            lineSeriesView3.LineStyle.Thickness = 5;
-            lineSeriesView3.Shadow.Visible = true;
-            series3.View = lineSeriesView3;
+            series1.Name = "Series 1";
+            lineSeriesView1.Color = System.Drawing.Color.Yellow;
+            lineSeriesView1.Shadow.Visible = true;
+            series1.View = lineSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series3};
+        series1};
             this.chartControl1.Size = new System.Drawing.Size(1774, 318);
             this.chartControl1.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Cyan;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1233, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 23);
-            this.label8.TabIndex = 91;
-            this.label8.Text = "ISO";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1233, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 23);
-            this.label9.TabIndex = 92;
-            this.label9.Text = "POLY";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Yellow;
-            this.label10.Location = new System.Drawing.Point(1458, 42);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 23);
-            this.label10.TabIndex = 93;
-            this.label10.Text = "Max: 42°C";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.DarkCyan;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(1303, 42);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 23);
-            this.label11.TabIndex = 94;
-            this.label11.Text = "Min: 38°C";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SMT_SCADA_B2_PU_MAT_TEMPER
             // 
@@ -2064,11 +2118,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SMT_SCADA_B2_PU_MAT_TEMPER";
             this.Text = "SMT_SCADA_B2MAT_TEMPER";
+            this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_B2_PU_MAT_TEMPER_VisibleChanged);
             this.pnTop.ResumeLayout(false);
             this.a1Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 
@@ -2218,5 +2273,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Timer tmrDate;
+        private System.Windows.Forms.Timer tmrAnimation;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }

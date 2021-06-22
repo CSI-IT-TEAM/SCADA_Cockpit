@@ -233,11 +233,11 @@
     <EmbeddedResource Include="SMT_SCADA_B2MATISO_TEMPER.resx">
       <DependentUpon>SMT_SCADA_B2MATISO_TEMPER.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SMT_SCADA_B2MATPOLY_TEMPER.resx">
-      <DependentUpon>SMT_SCADA_B2_PU_MAT_TEMPER.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_B2_IP_UV_TEMPER.resx">
       <DependentUpon>SMT_SCADA_B2_IP_UV_TEMPER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMT_SCADA_B2_PU_MAT_TEMPER.resx">
+      <DependentUpon>SMT_SCADA_B2_PU_MAT_TEMPER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_B_PU_HISTORY.resx">
       <DependentUpon>SMT_SCADA_B_PU_HISTORY.cs</DependentUpon>

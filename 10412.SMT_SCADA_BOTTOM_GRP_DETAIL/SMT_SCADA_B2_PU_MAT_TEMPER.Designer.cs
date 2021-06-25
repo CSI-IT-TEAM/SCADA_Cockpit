@@ -34,7 +34,10 @@
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -175,11 +178,9 @@
             this.label129 = new System.Windows.Forms.Label();
             this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.tmrAnimation = new System.Windows.Forms.Timer(this.components);
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.a1Panel1 = new OS_DSF.A1Panel();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.tmrBlinking = new System.Windows.Forms.Timer(this.components);
             this.pnTop.SuspendLayout();
             this.a1Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
@@ -209,6 +210,30 @@
             this.pnTop.Size = new System.Drawing.Size(1904, 76);
             this.pnTop.TabIndex = 9;
             // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Yellow;
+            this.label15.Location = new System.Drawing.Point(1458, 50);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(147, 19);
+            this.label15.TabIndex = 93;
+            this.label15.Text = "Max: 50°C";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.DarkCyan;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Yellow;
+            this.label14.Location = new System.Drawing.Point(1303, 50);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(147, 19);
+            this.label14.TabIndex = 94;
+            this.label14.Text = "Min: 46°C";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.MediumVioletRed;
@@ -220,6 +245,17 @@
             this.label10.TabIndex = 93;
             this.label10.Text = "Max: 42°C";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Gold;
+            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(1233, 49);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(64, 19);
+            this.label13.TabIndex = 91;
+            this.label13.Text = "OIL";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -1895,41 +1931,6 @@
             this.tmrAnimation.Interval = 50;
             this.tmrAnimation.Tick += new System.EventHandler(this.tmrAnimation_Tick);
             // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.Gold;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1233, 49);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 19);
-            this.label13.TabIndex = 91;
-            this.label13.Text = "OIL";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.DarkCyan;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Yellow;
-            this.label14.Location = new System.Drawing.Point(1303, 50);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(147, 19);
-            this.label14.TabIndex = 94;
-            this.label14.Text = "Min: 46°C";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Yellow;
-            this.label15.Location = new System.Drawing.Point(1458, 50);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(147, 19);
-            this.label15.TabIndex = 93;
-            this.label15.Text = "Max: 50°C";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // a1Panel1
             // 
             this.a1Panel1.BorderColor = System.Drawing.Color.White;
@@ -1978,6 +1979,12 @@
         series1};
             this.chartControl1.Size = new System.Drawing.Size(1774, 318);
             this.chartControl1.TabIndex = 0;
+            // 
+            // tmrBlinking
+            // 
+            this.tmrBlinking.Enabled = true;
+            this.tmrBlinking.Interval = 500;
+            this.tmrBlinking.Tick += new System.EventHandler(this.tmrBlinking_Tick);
             // 
             // SMT_SCADA_B2_PU_MAT_TEMPER
             // 
@@ -2118,6 +2125,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SMT_SCADA_B2_PU_MAT_TEMPER";
             this.Text = "SMT_SCADA_B2MAT_TEMPER";
+            this.Load += new System.EventHandler(this.SMT_SCADA_B2_PU_MAT_TEMPER_Load);
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_B2_PU_MAT_TEMPER_VisibleChanged);
             this.pnTop.ResumeLayout(false);
             this.a1Panel1.ResumeLayout(false);
@@ -2278,5 +2286,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Timer tmrBlinking;
     }
 }

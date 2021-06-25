@@ -19,8 +19,10 @@ namespace FORM
             InitializeComponent();
             tmrDate.Stop();
             tmrAnimation.Stop();
+            tmrBlinking.Stop();
             InitLayout();
         }
+        bool isLoad = true;
         const int ReloadTime = 60;
         int cCount = 0;
         List<Label> lstLabel = new List<Label>();
@@ -196,13 +198,13 @@ namespace FORM
             {
                 foreach (var item in lstLabel)
                 {
-                    item.BackColor = Color.FromArgb(45, 55, 117);
+                   
                     item.ForeColor = Color.White;
                 }
 
                 Label lbl = ((Label)sender);
-                lbl.BackColor = Color.Yellow;
-                lbl.ForeColor = Color.Black;
+               // lbl.BackColor = Color.Yellow;
+                lbl.ForeColor = Color.Yellow;
                 int minvl = 0, maxvl = 0;
                 DataTable dt = SEL_TRACKING_DATA("C", DateTime.Now.ToString("yyyyMMdd"), lbl.Tag.ToString());
                 if (dt.Rows.Count > 2)
@@ -294,9 +296,65 @@ namespace FORM
                         if (item.Tag.ToString().Equals(dr["ID"]))
                         {
                             item.Text = dr["VALUE"].ToString();
+                            if (dr["DIV2"].ToString().Equals("OIL"))
+                            {
+                                if (dr["VALUE"] != null)
+                                {
+                                    if (int.Parse(dr["VALUE"].ToString()) < int.Parse(dr["OIL_MIN_VAL"].ToString()) || int.Parse(dr["VALUE"].ToString()) > int.Parse(dr["OIL_MAX_VAL"].ToString()))
+                                    {
+                                        item.BackColor = Color.Red;
+                                        item.ForeColor = Color.White;
+                                    }
+                                    else
+                                    {
+                                        item.BackColor = Color.Green;
+                                        item.ForeColor = Color.White;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (dr["VALUE"] != null)
+                                {
+                                    if (dr["DIV"].ToString().Equals("POLY"))
+                                    {
+                                        if (int.Parse(dr["VALUE"].ToString()) < int.Parse(dr["POLY_MIN_VAL"].ToString()) || int.Parse(dr["VALUE"].ToString()) > int.Parse(dr["POLY_MAX_VAL"].ToString()))
+                                        {
+                                            item.BackColor = Color.Red;
+                                            item.ForeColor = Color.White;
+                                        }
+                                        else
+                                        {
+                                            item.BackColor = Color.Green;
+                                            item.ForeColor = Color.White;
+                                        }
+                                    }else
+                                    {
+                                        if (int.Parse(dr["VALUE"].ToString()) < int.Parse(dr["ISO_MIN_VAL"].ToString()) || int.Parse(dr["VALUE"].ToString()) > int.Parse(dr["ISO_MIN_VAL"].ToString()))
+                                        {
+                                            item.BackColor = Color.Red;
+                                            item.ForeColor = Color.White;
+                                        }
+                                        else
+                                        {
+                                            item.BackColor = Color.Green;
+                                            item.ForeColor = Color.White;
+                                        }
+                                    }
+                                }
+
+                            }
                         }
                     }
                 }
+
+                if (isLoad)
+                {
+                    isLoad = false;
+                    Item_Click(lbl_001POLY1MAT, null);
+                }
+
+
             }
             catch (Exception ex)
             {
@@ -313,7 +371,6 @@ namespace FORM
                 cCount = 0;
                 tmrAnimation.Start();
             }
-
         }
 
         private void SMT_SCADA_B2_PU_MAT_TEMPER_VisibleChanged(object sender, EventArgs e)
@@ -324,6 +381,7 @@ namespace FORM
                 {
                     cCount = ReloadTime;
                     tmrDate.Start();
+                    
 
                 }
                 else
@@ -354,8 +412,33 @@ namespace FORM
                 cAni = 0;
                 tmrAnimation.Stop();
                 BindingData();
+                tmrBlinking.Start();
             }
 
+        }
+
+        private void tmrBlinking_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (var item in lstLabel)
+                {
+                    if (item.BackColor == Color.Red)
+                        item.BackColor = Color.FromArgb(45, 55, 118);
+                    else if (item.BackColor == Color.FromArgb(45, 55, 118))
+                        item.BackColor = Color.Red;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void SMT_SCADA_B2_PU_MAT_TEMPER_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -116,8 +116,7 @@ namespace FORM
             chkAll.Checked = true;
 
             treeList.ExpandAll();
-
-            treeList.CheckAll();
+           // treeList.CheckAll();
 
 
 

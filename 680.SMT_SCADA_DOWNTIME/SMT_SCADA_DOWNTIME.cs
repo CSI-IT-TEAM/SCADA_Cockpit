@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.OracleClient;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -62,6 +63,51 @@ namespace FORM
             return result;
         }
 
+        public static DataTable UnpivotDataTable(DataTable pivoted)
+        {
+            string[] columnNames = pivoted.Columns.Cast<DataColumn>()
+                .Select(x => x.ColumnName)
+                .ToArray();
+
+            var unpivoted = new DataTable("unpivot");
+            unpivoted.Columns.Add(pivoted.Columns[0].ColumnName, pivoted.Columns[0].DataType);
+            unpivoted.Columns.Add(pivoted.Columns[1].ColumnName, pivoted.Columns[1].DataType);
+            unpivoted.Columns.Add("DIV", typeof(string));
+            unpivoted.Columns.Add("VALUE", typeof(string));
+            //unpivoted.Columns.Add(pivoted.Columns[2].ColumnName, pivoted.Columns[2].DataType);
+            //unpivoted.Columns.Add(pivoted.Columns[3].ColumnName, pivoted.Columns[3].DataType);
+            //unpivoted.Columns.Add("YM", typeof(string));
+            //unpivoted.Columns.Add("YM_LABEL", typeof(string));
+            //unpivoted.Columns.Add("VALUE", typeof(double));
+
+            for (int r = 0; r < pivoted.Rows.Count; r++)
+            {
+                for (int c = 2; c < columnNames.Length; c++)
+                {
+                    var value = pivoted.Rows[r][c]?.ToString();
+                    if (!string.IsNullOrWhiteSpace(value))
+                    {
+                        string DIV = "";
+                        if (columnNames[c] == "DOWNTIME")
+                        {
+                            DIV = "Downtime";
+                        }
+                        else
+                        {
+                            DIV = "Calling Times";
+                        }    
+
+                        
+                        //= DateTimeFormatInfo.CurrentInfo.GetAbbreviatedMonthName(int.Parse(columnNames[c].Substring(columnNames[c].Length - 2)));
+                        //unpivoted.Rows.Add(pivoted.Rows[r][0], pivoted.Rows[r][1], pivoted.Rows[r][2], pivoted.Rows[r][3], columnNames[c], mon, value);
+                        unpivoted.Rows.Add(pivoted.Rows[r][0], pivoted.Rows[r][1], DIV, value);
+                    }
+                }
+            }
+
+            return unpivoted;
+        }
+
         private void SetData(string arg_type)
         {
             try
@@ -72,9 +118,10 @@ namespace FORM
                 DataSet ds = Data_Select(arg_type, dtpDate.DateTime.ToString("yyyyMMdd"));
                 if (ds == null || ds.Tables.Count == 0) return;
                 DataTable dtData = ds.Tables[0];
-                DataTable dtData2 = ds.Tables[1];
+                
+                 //DataTable dtData2 = ds.Tables[1];
 
-                dt_chart = dtData;
+                 dt_chart = dtData;
 
                 chartControl1.DataSource = dtData;
                 chartControl1.Series[0].ArgumentDataMember = "PLANT";
@@ -83,10 +130,23 @@ namespace FORM
                 // chartControl1.Series[0].Label.
                 chartControl1.Series[1].ArgumentDataMember = "PLANT";
                 chartControl1.Series[1].ValueDataMembers.AddRange(new string[] { "CALLING_TIMES" });
-               
 
-                //DataTable dt = null;
-               
+
+                DataTable dt_TMP = dtData.Copy();
+                for (int i = dt_TMP.Columns.Count - 1; i >=0; i--)
+                {
+                    if (dt_TMP.Columns[i].ColumnName != "RANKING" && dt_TMP.Columns[i].ColumnName != "PLANT"
+                        && dt_TMP.Columns[i].ColumnName != "DOWNTIME" && dt_TMP.Columns[i].ColumnName != "CAL_TIMES")
+                    {
+                        dt_TMP.Columns.RemoveAt(i);
+                    }
+                }
+
+                DataTable dt_unpivot = UnpivotDataTable(dt_TMP);
+                dt_unpivot.Columns.Remove("RANKING");
+                DataTable dtData2 = dt_unpivot;
+                //DataTable dtData2  = Pivot(dt_unpivot, dt_unpivot.Columns["PLANT"], dt_unpivot.Columns["VALUE"]);
+
                 if (dtData2.Rows.Count > 0)
                 {
                     gvwView.Bands.Clear();
@@ -184,23 +244,23 @@ namespace FORM
         {
             COM.OraDB MyOraDB = new COM.OraDB();
 
-            MyOraDB.ReDim_Parameter(4);
-            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.SELECT_SCADA_DOWNTIME";
+            MyOraDB.ReDim_Parameter(3);
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.SELECT_SCADA_DOWNTIME_V2";
 
             MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
             MyOraDB.Parameter_Name[1] = "ARG_DATE";
             MyOraDB.Parameter_Name[2] = "OUT_CURSOR";
-            MyOraDB.Parameter_Name[3] = "OUT_CURSOR2";
+            //MyOraDB.Parameter_Name[3] = "OUT_CURSOR2";
 
             MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
             MyOraDB.Parameter_Type[1] = (int)OracleType.VarChar;
             MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
-            MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
+            //MyOraDB.Parameter_Type[3] = (int)OracleType.Cursor;
 
             MyOraDB.Parameter_Values[0] = argType;
             MyOraDB.Parameter_Values[1] = argDate;
             MyOraDB.Parameter_Values[2] = "";
-            MyOraDB.Parameter_Values[3] = "";
+            //MyOraDB.Parameter_Values[3] = "";
 
             MyOraDB.Add_Select_Parameter(true);
             DataSet retDS = MyOraDB.Exe_Select_Procedure();

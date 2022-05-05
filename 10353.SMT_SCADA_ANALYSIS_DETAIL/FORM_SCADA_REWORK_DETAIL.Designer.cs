@@ -236,7 +236,7 @@
             areaSeriesView1.AxisYName = "Secondary AxisY 1";
             areaSeriesView1.MarkerOptions.BorderColor = System.Drawing.Color.Yellow;
             areaSeriesView1.MarkerOptions.Color = System.Drawing.Color.Yellow;
-            areaSeriesView1.MarkerOptions.Kind = DevExpress.XtraCharts.MarkerKind.Star;
+            areaSeriesView1.MarkerOptions.Kind = DevExpress.XtraCharts.MarkerKind.Hexagon;
             areaSeriesView1.MarkerOptions.Size = 15;
             areaSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
             xyMarkerSlideAnimation1.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
@@ -249,7 +249,7 @@
             sideBySideBarSeriesLabel1.TextPattern = "{V:#,#}";
             series2.Label = sideBySideBarSeriesLabel1;
             series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series2.Name = "Machine";
+            series2.Name = "Equipment Malfunction";
             barGrowUpAnimation1.PointDelay = System.TimeSpan.Parse("00:00:00.1000000");
             sideBySideBarSeriesView1.Animation = barGrowUpAnimation1;
             sideBySideBarSeriesView1.Shadow.Visible = true;
@@ -293,7 +293,7 @@
             pointSeriesLabel2.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.JustifyAroundPoint;
             series3.Label = pointSeriesLabel2;
             series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series3.Name = "Ratio Rework/Total";
+            series3.Name = "Rework Ratio";
             splineSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             splineSeriesView1.LineMarkerOptions.BorderColor = System.Drawing.Color.Fuchsia;
             splineSeriesView1.LineMarkerOptions.Color = System.Drawing.Color.Fuchsia;
@@ -309,9 +309,10 @@
             splineSeriesView1.Shadow.Visible = true;
             series3.View = splineSeriesView1;
             pointSeriesLabel3.ResolveOverlappingMode = DevExpress.XtraCharts.ResolveOverlappingMode.JustifyAroundPoint;
+            pointSeriesLabel3.TextPattern = "{V:0.00}";
             series4.Label = pointSeriesLabel3;
             series4.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series4.Name = "Ratio Occur/Total";
+            series4.Name = "Alert Time  Sumarry / Working Time";
             splineSeriesView2.Color = System.Drawing.Color.Blue;
             splineSeriesView2.LineMarkerOptions.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             splineSeriesView2.LineMarkerOptions.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));

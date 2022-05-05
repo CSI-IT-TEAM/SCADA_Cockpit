@@ -139,14 +139,14 @@ namespace FORM
         {
             try
             {
-                DataSet ds1 = Data_Select("D");
-                if (ds1 == null || ds1.Tables.Count == 0) return;
-                DataTable dtData = ds1.Tables[0].Select("", "OCR_TIME ASC").CopyToDataTable();
+                //DataSet ds1 = Data_Select("D");
+                //if (ds1 == null || ds1.Tables.Count == 0) return;
+                //DataTable dtData = ds1.Tables[0].Select("", "OCR_TIME ASC").CopyToDataTable();
 
-                chart3.DataSource = dtData;
+                chart3.DataSource = dt.Select("", "ALARM_TIME ASC").CopyToDataTable();
                 chart3.Series[0].ArgumentScaleType = ScaleType.Qualitative;
-                chart3.Series[0].ArgumentDataMember = "MACHINE_CD";
-                chart3.Series[0].ValueDataMembers.AddRange(new string[] { "OCR_TIME" });
+                chart3.Series[0].ArgumentDataMember = "MC_CODE";
+                chart3.Series[0].ValueDataMembers.AddRange(new string[] { "ALARM_TIME" });
             }
             catch (Exception)
             {
@@ -188,7 +188,8 @@ namespace FORM
                 DataSet ds = sbGetData("Q", DateTime.Now.ToString("yyyyMM"), null);
                 BindingChart1(ds.Tables[0]);
                 BindingChart2(ds.Tables[0]);
-                BindingChart3(ds.Tables[0]);
+                DataSet ds1 = sbGetData("TOP", DateTime.Now.ToString("yyyyMM"), null);
+                BindingChart3(ds1.Tables[0]);
             }
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
         }

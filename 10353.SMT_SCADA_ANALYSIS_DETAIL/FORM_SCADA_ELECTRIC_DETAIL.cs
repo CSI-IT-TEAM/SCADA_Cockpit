@@ -61,24 +61,24 @@ namespace FORM
         }
         private void chartControl1_MouseClick(object sender, MouseEventArgs e)
         {
-            ChartHitInfo hit = chart1.CalcHitInfo(e.X, e.Y);
-            SeriesPoint point = hit.SeriesPoint;
+            //ChartHitInfo hit = chart1.CalcHitInfo(e.X, e.Y);
+            //SeriesPoint point = hit.SeriesPoint;
 
-            // Check whether the series point was clicked or not.
-            if (point != null)
-            {
-                try
-                {
-                    this.Cursor = Cursors.WaitCursor;
-                    string sYM = string.Concat(ComVar.Var._strValue1, "-", point.Argument);
-                    DataSet ds = sbGetData("PLANT", sYM, null);
-                    BindingChart2(ds.Tables[0]);
-                    this.Cursor = Cursors.Default;
-                }
-                catch {
-                    this.Cursor = Cursors.Default;
-                }
-            }
+            //// Check whether the series point was clicked or not.
+            //if (point != null)
+            //{
+            //    try
+            //    {
+            //        this.Cursor = Cursors.WaitCursor;
+            //        string sYM = string.Concat(ComVar.Var._strValue1, "-", point.Argument);
+            //        DataSet ds = sbGetData("PLANT", sYM, null);
+            //        BindingChart2(ds.Tables[0]);
+            //        this.Cursor = Cursors.Default;
+            //    }
+            //    catch {
+            //        this.Cursor = Cursors.Default;
+            //    }
+            //}
         }
         private void BindingChart1(DataTable dt)
         {
@@ -104,13 +104,13 @@ namespace FORM
         {
             try
             {
-                chart2.DataSource = dt;
-                chart2.Series[0].ArgumentDataMember = "LINE_NM";
-                chart2.Series[0].ValueDataMembers.AddRange(new string[] { "KWH" });
+                //chart2.DataSource = dt;
+                //chart2.Series[0].ArgumentDataMember = "LINE_NM";
+                //chart2.Series[0].ValueDataMembers.AddRange(new string[] { "KWH" });
 
-                chart2.Series[1].ArgumentDataMember = "LINE_NM";
-                chart2.Series[1].ValueDataMembers.AddRange(new string[] { "MC_OCR" });
-                ((DevExpress.XtraCharts.XYDiagram)chart2.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
+                //chart2.Series[1].ArgumentDataMember = "LINE_NM";
+                //chart2.Series[1].ValueDataMembers.AddRange(new string[] { "MC_OCR" });
+                //((DevExpress.XtraCharts.XYDiagram)chart2.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
 
             }
             catch (Exception)
@@ -127,12 +127,10 @@ namespace FORM
                 chart3.Series[0].ArgumentScaleType = ScaleType.Qualitative;
                 chart3.Series[0].ArgumentDataMember = "LINE_NM";
                 chart3.Series[0].ValueDataMembers.AddRange(new string[] { "MC_OCR" });
-                ((DevExpress.XtraCharts.XYDiagram)chart2.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
-
+                ((DevExpress.XtraCharts.XYDiagram)chart3.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -160,11 +158,11 @@ namespace FORM
                     lblEquipment.Text = lblElec.Text = "0";
                     DataSet ds = sbGetData("Q", DateTime.Now.ToString("yyyyMM"), null);
                     BindingChart1(ds.Tables[0]);
-                    if (!isLoad)
-                    {
-                        DataSet ds2 = sbGetData("PLANT", string.Concat(ComVar.Var._strValue1, "-", ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1]["YM"].ToString()), null);
-                        BindingChart2(ds2.Tables[0]);
-                    }
+                    //if (!isLoad)
+                    //{
+                    //    DataSet ds2 = sbGetData("PLANT", string.Concat(ComVar.Var._strValue1, "-", ds.Tables[0].Rows[ds.Tables[0].Rows.Count - 1]["YM"].ToString()), null);
+                    //    BindingChart2(ds2.Tables[0]);
+                    //}
                     DataSet ds3 = sbGetData("TOP", DateTime.Now.ToString("yyyyMM"), null);
                     BindingChart3(ds3.Tables[0]);
                     DataSet ds4 = sbGetData("INF", DateTime.Now.ToString("yyyyMM"), null);

@@ -108,8 +108,23 @@
     <Compile Include="ClassLib\LabelGradient.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ClassLib\RoundLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ClassLib\TransparentPanel.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_BOTTOM_COCKPIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_BOTTOM_COCKPIT.Designer.cs">
+      <DependentUpon>SMT_SCADA_BOTTOM_COCKPIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SMT_SCADA_BOTTOM_COCKPIT_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_BOTTOM_COCKPIT_V2.Designer.cs">
+      <DependentUpon>SMT_SCADA_BOTTOM_COCKPIT_V2.cs</DependentUpon>
     </Compile>
     <Compile Include="SMT_SCADA_COCKPIT_FORM1.cs">
       <SubType>Form</SubType>
@@ -128,6 +143,36 @@
     </Compile>
     <Compile Include="SMT_SCADA_COCKPIT_POPUP.Designer.cs">
       <DependentUpon>SMT_SCADA_COCKPIT_POPUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_3COL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_3COL.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_3COL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_2COL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_2COL.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_2COL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_OTH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_OTH.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_OTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_4COL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_4COL.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_4COL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UC_Chart_Bar.cs">
       <SubType>UserControl</SubType>
@@ -165,8 +210,20 @@
     <Compile Include="UC\UC_YEAR_SELECTION.Designer.cs">
       <DependentUpon>UC_YEAR_SELECTION.cs</DependentUpon>
     </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SMT_SCADA_BOTTOM_COCKPIT.resx">
+      <DependentUpon>SMT_SCADA_BOTTOM_COCKPIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMT_SCADA_BOTTOM_COCKPIT_V2.resx">
+      <DependentUpon>SMT_SCADA_BOTTOM_COCKPIT_V2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_COCKPIT_FORM1.resx">
       <DependentUpon>SMT_SCADA_COCKPIT_FORM1.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +234,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SMT_SCADA_COCKPIT_POPUP.resx">
       <DependentUpon>SMT_SCADA_COCKPIT_POPUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_3COL.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_3COL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_2COL.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_2COL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_OTH.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_OTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_4COL.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_4COL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA.resx">
+      <DependentUpon>UC_BOTTOM_SCADA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_Chart_Bar.resx">
       <DependentUpon>UC_Chart_Bar.cs</DependentUpon>
@@ -195,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UC_YEAR_SELECTION.resx">
       <DependentUpon>UC_YEAR_SELECTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +304,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

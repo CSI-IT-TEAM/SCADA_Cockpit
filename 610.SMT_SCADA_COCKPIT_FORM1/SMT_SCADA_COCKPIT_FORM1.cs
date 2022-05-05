@@ -195,7 +195,7 @@ namespace FORM
                 
             }
         }
-
+        /*
         private void create_Line_F1(Panel pnControl, DataTable argDt, int locStartX, ref int locStartY, string area)
         {
             int locX = locStartX, locY = locStartY;
@@ -331,7 +331,8 @@ namespace FORM
                 locStartY = locY += 10;
             }
         }
-        /*
+        */
+        
         private void create_Line_F1(Panel pnControl, DataTable argDt, int locStartX,ref int locStartY, string area)
         {
             int locX = locStartX, locY = locStartY;
@@ -404,7 +405,7 @@ namespace FORM
 
             locStartY = locY += 10;
         }
-        */
+        
         private void create_Line(Panel pnControl, DataTable argDt, int locStartX, int locStartY)
         {
             int locX = locStartX, locY = locStartY;

@@ -141,6 +141,7 @@ namespace FORM
                 //create_Line_F1(dtFactory);
 
                 int x = 74, y = 35;
+                dtFactory = _dtMasterLine.Select("FACTORY = 'F1'").CopyToDataTable();
                 create_Line_F1(pnF1, dtFactory, x, ref y, "FGA");
                 y += 10;
                 create_Line_F1(pnF1, dtFactory, x, ref y, "FSS");
@@ -195,6 +196,142 @@ namespace FORM
             }
         }
 
+        private void create_Line_F1(Panel pnControl, DataTable argDt, int locStartX, ref int locStartY, string area)
+        {
+            int locX = locStartX, locY = locStartY;
+            Font lineTextButtonFont = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold);
+            Font buttonMlineFont = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold);
+            Font buttonLineFont = new System.Drawing.Font("Calibri", 40F, System.Drawing.FontStyle.Bold);
+            Font buttonLineFont2 = new System.Drawing.Font("Calibri", 32F, System.Drawing.FontStyle.Bold);
+            Point buttonLoc;
+            Size buttonSize;
+            Size lineTextButtonSize;
+            Size lineButtonSize = new System.Drawing.Size(60, 25);
+            Size buttonStatusSize = new System.Drawing.Size(70, 25);
+            Dictionary<string, string> dicValue = new Dictionary<string, string>();
+            string lineCd, factory = argDt.Rows[0]["FACTORY"].ToString();
+            int iNumLine;
+
+            dicValue.Add("NAME", "");
+            dicValue.Add("TEXT", "");
+            dicValue.Add("BACK_COLOR", "");
+            dicValue.Add("FORE_COLOR", "");
+            dicValue.Add("TAG", "");
+            Button cmdLine;
+
+            //head line name
+            buttonLoc = new Point(locStartX, 0);
+            lineTextButtonSize = new System.Drawing.Size(lineButtonSize.Width, 35);
+            dicValue["NAME"] = "cmd_LineNm" + factory + "_TXT";
+            dicValue["TEXT"] = "Line";
+            dicValue["BACK_COLOR"] = "WHITE";
+            dicValue["FORE_COLOR"] = "BLACK";
+            dicValue["TAG"] = "";
+
+            cmdLine = createButton(dicValue, buttonLoc, lineTextButtonSize, lineTextButtonFont);
+            pnControl.Controls.Add(cmdLine);
+
+            //
+            buttonLoc = new Point(buttonStatusSize.Width * 2, 0);
+            lineTextButtonSize = new System.Drawing.Size(buttonStatusSize.Width, 35);
+            dicValue["NAME"] = "cmd_UPN" + factory + "_TXT";
+            dicValue["TEXT"] = "Nosew";
+            dicValue["TAG"] = "";
+            cmdLine = createButton(dicValue, buttonLoc, lineTextButtonSize, lineTextButtonFont);
+            pnControl.Controls.Add(cmdLine);
+
+            buttonLoc = new Point(buttonStatusSize.Width * 3 + 5, 0);
+            lineTextButtonSize = new System.Drawing.Size(buttonStatusSize.Width, 35);
+            dicValue["NAME"] = "cmd_FSS" + factory + "_TXT";
+            dicValue["TEXT"] = "SF";
+            dicValue["TAG"] = "";
+            cmdLine = createButton(dicValue, buttonLoc, lineTextButtonSize, lineTextButtonFont);
+            pnControl.Controls.Add(cmdLine);
+
+            buttonLoc = new Point(buttonStatusSize.Width * 4 + 10, 0);
+            lineTextButtonSize = new System.Drawing.Size(buttonStatusSize.Width, 35);
+            dicValue["NAME"] = "cmd_FGA" + factory + "_TXT";
+            dicValue["TEXT"] = "Assy";
+            dicValue["TAG"] = "";
+            cmdLine = createButton(dicValue, buttonLoc, lineTextButtonSize, lineTextButtonFont);
+            pnControl.Controls.Add(cmdLine);
+
+            string line = "";
+
+            foreach (DataRow row in argDt.Rows)
+            {
+                int.TryParse(row["NUM_FGA"].ToString(), out iNumLine);
+                lineCd = row["LINE_CD"].ToString();
+                line = lineCd;
+                int iStart = lineCd == "018_1" ? 4 : 0;
+                lineCd = lineCd == "018_1" ? "018" : lineCd;
+                //lineCd = lineCd.Replace("_1", "");
+                for (int iLine = iStart + 1; iLine <= iStart + iNumLine; iLine++)
+                {
+                    buttonLoc = new Point(locX, locY);
+                    dicValue["NAME"] = "cmd_" + lineCd + "_" + iLine.ToString("000") + "_" + "MNM";
+                    dicValue["TEXT"] = iLine.ToString();
+                    dicValue["BACK_COLOR"] = "NAVY";
+                    dicValue["FORE_COLOR"] = "WHITE";
+                    dicValue["TAG"] = "";
+                    cmdLine = createButton(dicValue, buttonLoc, lineButtonSize, buttonMlineFont);
+                    pnControl.Controls.Add(cmdLine);
+
+                    locX += lineButtonSize.Width + 5;
+
+                    //UPN
+                    buttonLoc = new Point(locX, locY);
+                    dicValue["NAME"] = "cmd_" + lineCd + "_" + iLine.ToString("000") + "_" + "UPN" + "_" + "STA";
+                    dicValue["TAG"] = lineCd + "_" + iLine.ToString("000") + "_" + "UPN";
+                    dicValue["TEXT"] = "";
+                    if (lineCd == "099")
+                        dicValue["BACK_COLOR"] = "WHITE";
+                    else
+                        dicValue["BACK_COLOR"] = "GREEN";
+
+                    dicValue["FORE_COLOR"] = "WHITE";
+                    cmdLine = createButton(dicValue, buttonLoc, buttonStatusSize, buttonMlineFont);
+                    pnControl.Controls.Add(cmdLine);
+
+                    //FSS
+                    dicValue["NAME"] = "cmd_" + lineCd + "_" + iLine.ToString("000") + "_" + "FSS" + "_" + "STA";
+                    dicValue["TAG"] = lineCd + "_" + iLine.ToString("000") + "_" + "FSS";
+                    dicValue["BACK_COLOR"] = "GREEN";
+                    buttonLoc = new Point(locX += buttonStatusSize.Width + 5, locY);
+                    cmdLine = createButton(dicValue, buttonLoc, buttonStatusSize, buttonMlineFont);
+                    pnControl.Controls.Add(cmdLine);
+
+                    //FGA
+                    dicValue["NAME"] = "cmd_" + lineCd + "_" + iLine.ToString("000") + "_" + "FGA" + "_" + "STA";
+                    dicValue["TAG"] = lineCd + "_" + iLine.ToString("000") + "_" + "FGA";
+                    buttonLoc = new Point(locX += buttonStatusSize.Width + 5, locY);
+                    cmdLine = createButton(dicValue, buttonLoc, buttonStatusSize, buttonMlineFont);
+                    pnControl.Controls.Add(cmdLine);
+
+
+                    locX = locStartX;
+                    locY += buttonStatusSize.Height + 5;
+                }
+
+                buttonLoc = new Point(3, locStartY);
+                buttonSize = new System.Drawing.Size(65, locY - locStartY - 5);
+                dicValue["NAME"] = "cmd_" + line + "_" + "LNM"; ;
+                dicValue["TEXT"] = row["LINE_NM"].ToString();
+                dicValue["BACK_COLOR"] = "NAVY";
+                dicValue["FORE_COLOR"] = "WHITE";
+                dicValue["TAG"] = "";
+
+                if (dicValue["TEXT"].Count() > 1)
+                {
+                }
+
+                cmdLine = createButton(dicValue, buttonLoc, buttonSize, dicValue["TEXT"].Count() > 1 ? buttonLineFont2 : buttonLineFont);
+                pnControl.Controls.Add(cmdLine);
+
+                locStartY = locY += 10;
+            }
+        }
+        /*
         private void create_Line_F1(Panel pnControl, DataTable argDt, int locStartX,ref int locStartY, string area)
         {
             int locX = locStartX, locY = locStartY;
@@ -267,7 +404,7 @@ namespace FORM
 
             locStartY = locY += 10;
         }
-
+        */
         private void create_Line(Panel pnControl, DataTable argDt, int locStartX, int locStartY)
         {
             int locX = locStartX, locY = locStartY;
@@ -567,6 +704,10 @@ namespace FORM
                     path += strArr[1] + "_" + strArr[2] + ".vnc";
                 else if (strArr.Count() == 3 && strArr[2] == "LNM")
                     path += strArr[1] + ".vnc";
+                else if (strArr.Count() == 3 && strArr[2] == "LNM")
+                    path += strArr[1] + ".vnc";
+                else if (strArr.Count() == 3 && (strArr[2] == "FGA" || strArr[2] == "FSS"))
+                    path += "F1.vnc";
                 else
                     path = "";
                 if (strArr.Count() == 5)

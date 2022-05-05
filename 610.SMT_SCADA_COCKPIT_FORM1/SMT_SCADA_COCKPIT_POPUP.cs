@@ -322,9 +322,13 @@ namespace FORM
                 }
                 // timer1.Start();
                // chartControl1.AutoScrollOffset = new Point(12, 32);
-                this.Cursor = Cursors.Default;
+               // this.Cursor = Cursors.Default;
             }
             catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            finally
             {
                 this.Cursor = Cursors.Default;
             }
@@ -568,8 +572,8 @@ namespace FORM
         {
             try
             {
-                if (Visible)
-                {
+                if (!Visible)
+                
                     grdPm.Visible = false;
                     lblTxt1.Text = "";
                     lblTxt2.Text = "";
@@ -583,19 +587,10 @@ namespace FORM
 
                     setClick("");
 
+                   
                     setData();
-
-
-
-                    //  object aa = _dtDataPage.Compute("max([SV_MIN]), max([SV_MAX]), max([FINAL_PV]), min([SV_MIN]), min([SV_MAX]), min([FINAL_PV])", "");
-
                     BindingChartData2();
-                }
-                else
-                {
-
-                }
-
+                
             }
             catch (Exception ex)
             {}

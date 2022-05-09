@@ -415,5 +415,10 @@ namespace FORM
         {
 
         }
+
+        private void lbl_PH_UV_1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

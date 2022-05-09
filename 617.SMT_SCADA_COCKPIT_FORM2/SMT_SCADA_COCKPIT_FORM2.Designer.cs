@@ -42,6 +42,7 @@
             DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.pnControl = new System.Windows.Forms.Panel();
+            this.cmdDay = new System.Windows.Forms.Button();
             this.rdTop20 = new System.Windows.Forms.RadioButton();
             this.rdByDay = new System.Windows.Forms.RadioButton();
             this.chkCompare = new System.Windows.Forms.CheckBox();
@@ -92,7 +93,6 @@
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnC = new System.Windows.Forms.Panel();
             this.pnBody2 = new System.Windows.Forms.Panel();
-            this.cmdDay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
@@ -182,6 +182,18 @@
             this.pnControl.Name = "pnControl";
             this.pnControl.Size = new System.Drawing.Size(1888, 50);
             this.pnControl.TabIndex = 2;
+            // 
+            // cmdDay
+            // 
+            this.cmdDay.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cmdDay.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdDay.Location = new System.Drawing.Point(1477, 0);
+            this.cmdDay.Name = "cmdDay";
+            this.cmdDay.Size = new System.Drawing.Size(137, 50);
+            this.cmdDay.TabIndex = 19;
+            this.cmdDay.Text = "Daily";
+            this.cmdDay.UseVisualStyleBackColor = true;
+            this.cmdDay.Click += new System.EventHandler(this.cmdDay_Click);
             // 
             // rdTop20
             // 
@@ -902,17 +914,6 @@
             this.pnBody2.Size = new System.Drawing.Size(200, 100);
             this.pnBody2.TabIndex = 4;
             this.pnBody2.Visible = false;
-            // 
-            // cmdDay
-            // 
-            this.cmdDay.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cmdDay.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdDay.Location = new System.Drawing.Point(1477, 0);
-            this.cmdDay.Name = "cmdDay";
-            this.cmdDay.Size = new System.Drawing.Size(137, 50);
-            this.cmdDay.TabIndex = 19;
-            this.cmdDay.Text = "Daily";
-            this.cmdDay.UseVisualStyleBackColor = true;
             // 
             // SMT_SCADA_COCKPIT_FORM2
             // 

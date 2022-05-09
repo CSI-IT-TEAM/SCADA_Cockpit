@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.OracleClient;
 using System.Diagnostics;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FORM
@@ -19,7 +20,7 @@ namespace FORM
         string _strType = "D";
         int _time = 0;
 
-        private void SetData(string arg_type, bool arg_load = true)
+        private async void SetData(string arg_type, bool arg_load = true)
         {
             try
             {
@@ -33,7 +34,7 @@ namespace FORM
                 
 
                 chartControl1.DataSource = null;
-                DataSet ds = Data_Select(arg_type);
+                DataSet ds = await Task.Run(() => Data_Select(arg_type));
                 if (ds == null || ds.Tables.Count == 0) return;
                 DataTable dtData = ds.Tables[0];
                 DataTable dtDate = ds.Tables[1];
@@ -138,11 +139,23 @@ namespace FORM
 
         private void LoadForm()
         {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                SetButtonClick(_strType);
+                SetHeader(_strType);
+
+                SetData(_strType);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.WaitCursor;
+            }
             
-            SetButtonClick(_strType);
-            SetHeader(_strType);
-            
-            SetData(_strType);
 
             //if (rdTop20.Checked)
             //{
@@ -328,7 +341,7 @@ namespace FORM
             Application.Exit();
         }
 
-        private void cmDay_Click(object sender, EventArgs e)
+        private void cmdDay_Click(object sender, EventArgs e)
         {
             _strType = "D";
             LoadForm();
@@ -444,5 +457,7 @@ namespace FORM
             }
             
         }
+
+        
     }
 }

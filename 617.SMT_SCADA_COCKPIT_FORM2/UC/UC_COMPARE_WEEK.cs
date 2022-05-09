@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using DevExpress.XtraGauges.Core.Model;
 using DevExpress.XtraCharts;
 using System.Data.OracleClient;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace FORM.UC
 {
@@ -17,19 +19,20 @@ namespace FORM.UC
         public UC_COMPARE_WEEK()
         {
             InitializeComponent();
-
+            SetData();
         }
         int _iReload = 0;
         public string _strType = "D";
 
-        public void SetData()
+        public async void SetData()
         {
             try
             {
-                
+                Debug.WriteLine("load");
                 Cursor.Current = Cursors.WaitCursor;
                 InitUc();
-                DataSet ds = Data_Select_Compare(_strType);
+                
+                DataSet ds = await Task.Run(() => Data_Select_Compare(_strType));
                 if (ds == null) return;
                 DataTable dt = ds.Tables[0];
                 if (dt == null ) return;
@@ -48,7 +51,7 @@ namespace FORM.UC
             }
             finally
             {
-                Cursor.Current = Cursors.Arrow;
+                Cursor.Current = Cursors.Default;
             }
         }
 
@@ -138,7 +141,7 @@ namespace FORM.UC
         private void tmrLoad_Tick(object sender, EventArgs e)
         {
             _iReload++;
-            if (_iReload == 60)
+            if (_iReload >= 60)
             {
                 _iReload = 0;
                 SetData();
@@ -149,14 +152,13 @@ namespace FORM.UC
         {
             if(Visible)
             {
-                _iReload = 59;
-                InitUc();
+                _iReload = 60;
                 tmrLoad.Start();
+                InitUc();                
             }
             else
             {
-                tmrLoad.Stop();
-               
+                tmrLoad.Stop();             
             }
         }
     }

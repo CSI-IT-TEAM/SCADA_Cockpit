@@ -640,8 +640,13 @@ namespace FORM
             {
                 try
                 {
-                    dr = _dtMasterLine.Select("LINE_CD = '" + row["LINE_CD"].ToString()  + "'");
+                    string line_cd = row["LINE_CD"].ToString();
+                    if (line_cd == "F1")
+                        dr = _dtMasterLine.Select( $"FACTORY = '{line_cd}' AND LINE_CD = '{row["MLINE_CD"]}'");
+                    else
+                        dr = _dtMasterLine.Select($"LINE_CD = '{line_cd}'");
                     
+
                     location = dr[0][0] + "_" + row["OP_CD"];
 
                     //Set color Line
@@ -713,9 +718,10 @@ namespace FORM
                     if (!System.IO.File.Exists(Application.StartupPath + "\\" + path)) return;
                     try
                     {
-                        Process startVNC = new Process();
-                        startVNC.StartInfo.FileName = path;
-                        startVNC.Start();
+                        Process.Start(Application.StartupPath + @"\vnc\VNC-Viewer.exe", path);
+                        //Process startVNC = new Process();
+                        // startVNC.StartInfo.FileName = path;
+                        // startVNC.Start(path,"");
                     }
                     catch (Exception ex)
                     {

@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.lbl_IPA_1_Pall = new System.Windows.Forms.Label();
             this.lbl_IPA_1_Extruder = new System.Windows.Forms.Label();
             this.lbl_IPA_1_Roll = new System.Windows.Forms.Label();
@@ -253,7 +254,7 @@
             this.roundLabel42 = new RoundLabel();
             this.roundLabel22 = new RoundLabel();
             this.roundLabel1 = new RoundLabel();
-            this.tmrBlinking = new System.Windows.Forms.Timer();
+            this.tmrBlinking = new System.Windows.Forms.Timer(this.components);
             this.pnTop.SuspendLayout();
             this.a1Panel11.SuspendLayout();
             this.a1Panel10.SuspendLayout();
@@ -1168,6 +1169,7 @@
             this.lbl_PH_UV_1.TabIndex = 6;
             this.lbl_PH_UV_1.Tag = "lbl_PH_UV_1";
             this.lbl_PH_UV_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_PH_UV_1.Click += new System.EventHandler(this.lbl_PH_UV_1_Click);
             // 
             // label21
             // 
@@ -2556,7 +2558,6 @@
             this.lbl_PU_Poly.Size = new System.Drawing.Size(152, 22);
             this.lbl_PU_Poly.TabIndex = 6;
             this.lbl_PU_Poly.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_PU_Poly.Click += new System.EventHandler(this.lbl_PU_Poly_Click);
             // 
             // lbl_PU_Iso
             // 

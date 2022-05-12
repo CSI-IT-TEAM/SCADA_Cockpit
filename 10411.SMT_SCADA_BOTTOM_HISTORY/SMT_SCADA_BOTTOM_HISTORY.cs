@@ -88,7 +88,7 @@ namespace FORM
         private void BindingData()
         {
             _opcd = ComVar.Var._strValue1;
-            DataTable dt = SP_MENU_SELECT("Q", ComVar.Var._strValue2,DateTime.Now.ToString("yyyyMMdd"), "SCADA_B_COCKPIT", _opcd);
+            DataTable dt = SP_MENU_SELECT("Q", ComVar.Var._strValue2, DateTime.Now.ToString("yyyyMMdd"), "SCADA_B_COCKPIT", _opcd);
             if (dt == null) return;
             else
             {
@@ -123,7 +123,7 @@ namespace FORM
                     if (node.Checked)
                         node1.Checked = true;
 
-                    
+
                 }
             }
             //chkAll.Checked = false;
@@ -139,7 +139,7 @@ namespace FORM
             List<string> lstSeriesName = new List<string>();
             DataTable dt = dtData.Copy();//Giu lai datatable goc, de su dung lai.
             isCheckState = false;
-            if (dt.Rows.Count<2) return;
+            if (dt.Rows.Count < 2) return;
             foreach (TreeListNode node in treeList.Nodes)
             {
                 foreach (TreeListNode Childnode in node.RootNode.Nodes)
@@ -178,7 +178,7 @@ namespace FORM
             chkAll.CheckedChanged += chkAll_CheckedChanged;
             //Doing something with list datatable
             //  MessageBox.Show("Done!");
-            DrawChart(lstData, lstSeriesName, cht_Chart, lstData.Count > 1 ? false : true);
+            DrawChart(lstData, lstSeriesName, cht_Chart, lstData.Count == 1 ? true : false);
         }
 
         private void GetDataTableTest()
@@ -211,7 +211,7 @@ namespace FORM
                 chkAll.CheckedChanged -= chkAll_CheckedChanged;
                 chkAll.Checked = treeList.GetAllCheckedNodes().Count == treeList.AllNodesCount;
                 chkAll.CheckedChanged += chkAll_CheckedChanged;
-                DrawChart(lstData, lstSeriesName, cht_Chart, lstData.Count > 1 ? false : true);
+                DrawChart(lstData, lstSeriesName, cht_Chart, lstData.Count == 1 ? true : false);
             }
             catch (Exception ex)
             {
@@ -302,7 +302,7 @@ namespace FORM
                 minRange = GetMinValue(lstRgMin);
                 maxRange = GetMaxValue(lstRgMax);
                 _chart.Series.Clear(); //Remove het series truoc khi add moi.
-
+                if (lstData.Count == 0) return;
                 for (int i = 0; i < lstData.Count; i++) //Khoi tao so luong series & add vao list Series
                 {
                     Series series = new Series(listSeriesName[i], ViewType.Spline);
@@ -344,9 +344,13 @@ namespace FORM
                 {
                     _chart.Series.Add(lstSeries[h]);
                 }
-                ((XYDiagram)_chart.Diagram).AxisY.ConstantLines.Clear();
+                //if (lstData.Count != 1)
+                //    if (((XYDiagram)_chart.Diagram).AxisY.ConstantLines.Count > 0)
+                //        ((XYDiagram)_chart.Diagram).AxisY.ConstantLines.Clear();
+
                 if (isDrawSpec)
                 {
+                    ((XYDiagram)_chart.Diagram).AxisY.ConstantLines.Clear();
                     DevExpress.XtraCharts.ConstantLine constantLine1 = new DevExpress.XtraCharts.ConstantLine();
                     DevExpress.XtraCharts.ConstantLine constantLine2 = new DevExpress.XtraCharts.ConstantLine(); ////Constant line
                     //constantLine1.ShowInLegend = false;
@@ -370,8 +374,11 @@ namespace FORM
                 }
                 _chart.Legend.BackColor = Color.Black;
                 //Whole Range Truc Y
-                ((XYDiagram)_chart.Diagram).AxisY.WholeRange.Auto = true;
-                ((XYDiagram)_chart.Diagram).AxisY.WholeRange.SetMinMaxValues(minRange - 5, maxRange + 5);
+                //if (!ComVar.Var._strValue2.Equals("IP_UV_ZONE"))
+                //{
+                    ((XYDiagram)_chart.Diagram).AxisY.WholeRange.Auto = true;
+                    ((XYDiagram)_chart.Diagram).AxisY.WholeRange.SetMinMaxValues(minRange - 5, maxRange + 5);
+                //}
                 ((XYDiagram)_chart.Diagram).AxisY.GridLines.Visible = false;
                 ((XYDiagram)_chart.Diagram).AxisX.Label.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
                 ((XYDiagram)_chart.Diagram).AxisX.Label.Visible = true;
@@ -531,7 +538,7 @@ namespace FORM
 
                 //((XYDiagram)_chart.Diagram).AxisY.Title.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
-            catch
+            catch (Exception ex)
             {
 
             }
@@ -744,7 +751,7 @@ namespace FORM
         }
 
         /*DataTable TreeList*/
-        private DataTable SP_MENU_SELECT(string argQtype,string argItems,string argDate, string argUserID, string argbutton)
+        private DataTable SP_MENU_SELECT(string argQtype, string argItems, string argDate, string argUserID, string argbutton)
         {
             COM.OraDB MyOraDB = new COM.OraDB();
             DataSet ds_ret;
@@ -797,33 +804,41 @@ namespace FORM
         private void chkAll_CheckedChanged(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            if (chkAll.Checked)
+            try
             {
-                treeList.CheckAll();
-                //foreach (TreeListNode node in treeList.Nodes)
-                //{
-                //    node.Checked = true;
-                //    foreach (TreeListNode node1 in node.RootNode.Nodes)
-                //    {
-                //        node1.Checked = true;
-                //    }
-                //}
+                if (chkAll.Checked)
+                {
+                    treeList.CheckAll();
+                    //foreach (TreeListNode node in treeList.Nodes)
+                    //{
+                    //    node.Checked = true;
+                    //    foreach (TreeListNode node1 in node.RootNode.Nodes)
+                    //    {
+                    //        node1.Checked = true;
+                    //    }
+                    //}
+                }
+                if (!chkAll.Checked)
+                {
+                    treeList.UncheckAll();
+                    //foreach (TreeListNode node in treeList.Nodes)
+                    //{
+                    //    node.Checked = false;
+                    //    foreach (TreeListNode node1 in node.RootNode.Nodes)
+                    //    {
+                    //        node1.Checked = false;
+                    //    }
+                    //}
+                }
+                //GetDataTable();
+                GetDataTableTest();
+                this.Cursor = Cursors.Default;
             }
-            if (!chkAll.Checked)
+            catch (Exception ex)
             {
-                treeList.UncheckAll();
-                //foreach (TreeListNode node in treeList.Nodes)
-                //{
-                //    node.Checked = false;
-                //    foreach (TreeListNode node1 in node.RootNode.Nodes)
-                //    {
-                //        node1.Checked = false;
-                //    }
-                //}
+                this.Cursor = Cursors.Default;
             }
-            //GetDataTable();
-            GetDataTableTest();
-            this.Cursor = Cursors.Default;
+
         }
         private void SetCheckedChildNodes(TreeListNodes nodes)
         {
@@ -851,7 +866,7 @@ namespace FORM
         {
             try
             {
-                var sColor =treeList.GetRowCellValue(e.Node,treeList.Columns["STATUS"]).ToString();
+                var sColor = treeList.GetRowCellValue(e.Node, treeList.Columns["STATUS"]).ToString();
                 if (sColor.Equals("1"))
                 {
                     e.Appearance.BackColor = Color.Red;

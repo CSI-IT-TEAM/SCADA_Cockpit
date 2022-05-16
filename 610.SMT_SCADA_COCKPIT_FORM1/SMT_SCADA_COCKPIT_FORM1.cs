@@ -21,7 +21,9 @@ namespace FORM
         public SMT_SCADA_COCKPIT_FORM1()
         {            
             InitializeComponent();
+            
             initForm();
+            
         }
 
 
@@ -684,6 +686,12 @@ namespace FORM
         }
         #endregion Set Data
 
+        //chạy để oracle nhớ query để load nhanh khi click poup
+        private void getTempData()
+        {
+            SMT_SCADA_COCKPIT_POPUP.Data_Select_Machine("D", "BP_KD_BCM_4H4C_ST_0045", "2", "1600");
+        }
+
         #region Button Line Click
 
         private void Button_Line_Click(object sender, EventArgs e)
@@ -718,7 +726,11 @@ namespace FORM
                     if (!System.IO.File.Exists(Application.StartupPath + "\\" + path)) return;
                     try
                     {
-                        Process.Start(Application.StartupPath + @"\vnc\VNC-Viewer.exe", path);
+                        if (!Environment.Is64BitOperatingSystem)
+                            Process.Start(Application.StartupPath + @"\vnc\VNC-Viewer-32bit.exe", path);
+                        else
+                            Process.Start(Application.StartupPath + @"\vnc\VNC-Viewer.exe", path);
+                        
                         //Process startVNC = new Process();
                         // startVNC.StartInfo.FileName = path;
                         // startVNC.Start(path,"");
@@ -833,13 +845,14 @@ namespace FORM
 
 
 
-        private void tmrTime_Tick(object sender, EventArgs e)
+        private async void tmrTime_Tick(object sender, EventArgs e)
         {
             lblDate.Text= string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
             _iReload ++;
             if (_iReload >= 20)
             {
                 _iReload = 0;
+                await Task.Run(() => getTempData());
                 setData();
                 
                 //uC_Chart_Donut1.setColor("Red");

@@ -399,7 +399,7 @@ namespace FORM
             }
         }
 
-        private DataTable Data_Select_Machine(string argType, string argMachineCd, string argMachineId, string argHm)
+        public static DataTable Data_Select_Machine(string argType, string argMachineCd, string argMachineId, string argHm)
         {
             COM.OraDB MyOraDB = new COM.OraDB();
             //  MyOraDB.ShowErr = true;

@@ -39,14 +39,15 @@ namespace FORM
         {
             if (Visible)
             {
-                
-                cmdBack.Visible = isBack;
-                _iReload = 29;
+                SetButtonBack();
+                //cmdBack.Visible = isBack;
+                _iReload = 18;
                 tmrTime.Start();
                 tmrBlink.Start();
             }
             else
             {
+                this.Dispose(true);
                 tmrTime.Stop();
                 tmrBlink.Stop();
             }
@@ -607,7 +608,7 @@ namespace FORM
 
         private async void setData()
         {
-            DataSet ds = await Data_Select("");
+            DataSet ds = await Task.Run(() => Data_Select(""));
             if (ds == null) return;
             DataTable dt = ds.Tables[0];
             if (dt == null || dt.Rows.Count == 0) return;
@@ -780,32 +781,31 @@ namespace FORM
             return retDS.Tables[MyOraDB.Process_Name];
         }
 
-        private async Task<DataSet> Data_Select(string argType)
+        private DataSet Data_Select(string argType)
         {
-            return await Task.Run(() => {
-                COM.OraDB MyOraDB = new COM.OraDB();
-               // MyOraDB.ShowErr = true;
-                MyOraDB.ReDim_Parameter(3);
-                MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.MAIN_SELECT_V2";
+            COM.OraDB MyOraDB = new COM.OraDB();
+            // MyOraDB.ShowErr = true;
+            MyOraDB.ReDim_Parameter(3);
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.MAIN_SELECT_V2";
 
-                MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
-                MyOraDB.Parameter_Name[1] = "OUT_CURSOR";
-                MyOraDB.Parameter_Name[2] = "OUT_CURSOR2";
+            MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
+            MyOraDB.Parameter_Name[1] = "OUT_CURSOR";
+            MyOraDB.Parameter_Name[2] = "OUT_CURSOR2";
 
-                MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
-                MyOraDB.Parameter_Type[1] = (int)OracleType.Cursor;
-                MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
+            MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[1] = (int)OracleType.Cursor;
+            MyOraDB.Parameter_Type[2] = (int)OracleType.Cursor;
 
-                MyOraDB.Parameter_Values[0] = argType;
-                MyOraDB.Parameter_Values[1] = "";
-                MyOraDB.Parameter_Values[2] = "";
+            MyOraDB.Parameter_Values[0] = argType;
+            MyOraDB.Parameter_Values[1] = "";
+            MyOraDB.Parameter_Values[2] = "";
 
-                MyOraDB.Add_Select_Parameter(true);
-                DataSet retDS = MyOraDB.Exe_Select_Procedure();
-                if (retDS == null) return null;
+            MyOraDB.Add_Select_Parameter(true);
+            DataSet retDS = MyOraDB.Exe_Select_Procedure();
+            if (retDS == null) return null;
 
-                return retDS;
-            });
+            return retDS;
+         
             
         }
 
@@ -967,13 +967,31 @@ namespace FORM
 
         private void cmdScadaBottom_Click(object sender, EventArgs e)
         {
+            
             ComVar.Var._IsBack = true;
             // ComVar.Var.callForm = "684";
             ComVar.Var.callForm = "10389";
         }
+
+        private void SetButtonBack()
+        {
+            try
+            {
+                DataTable dtXML = ComVar.Func.ReadXML(Application.StartupPath + "\\Config.XML", "MAIN");
+                if (dtXML.Rows[0]["grpForm"].ToString() == "SCADA_COCKPIT")
+                {
+                    cmdBack.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            
+        }
     }
 
-
+    
 
     public class Button_Status
     {

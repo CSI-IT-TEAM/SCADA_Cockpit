@@ -27,85 +27,103 @@ namespace FORM
 
         DataTable Pivot(DataTable dt, DataColumn pivotColumn, DataColumn pivotValue)
         {
-            // find primary key columns 
-            //(i.e. everything but pivot column and pivot value)
-            DataTable temp = dt.Copy();
-            temp.Columns.Remove(pivotColumn.ColumnName);
-            temp.Columns.Remove(pivotValue.ColumnName);
-            string[] pkColumnNames = temp.Columns.Cast<DataColumn>()
-            .Select(c => c.ColumnName)
-            .ToArray();
-
-            // prep results table
-            DataTable result = temp.DefaultView.ToTable(true, pkColumnNames).Copy();
-            result.PrimaryKey = result.Columns.Cast<DataColumn>().ToArray();
-            dt.AsEnumerable()
-            .Select(r => r[pivotColumn.ColumnName].ToString())
-            .Distinct().ToList()
-            .ForEach(c => result.Columns.Add(c, pivotValue.DataType));
-            //.ForEach(c => result.Columns.Add(c, pivotColumn.DataType));
-
-            // load it
-            foreach (DataRow row in dt.Rows)
+            try
             {
-                // find row to update
-                DataRow aggRow = result.Rows.Find(
-                pkColumnNames
-                .Select(c => row[c])
-                .ToArray());
-                // the aggregate used here is LATEST 
-                // adjust the next line if you want (SUM, MAX, etc...)
-                aggRow[row[pivotColumn.ColumnName].ToString()] = row[pivotValue.ColumnName];
+                // find primary key columns 
+                //(i.e. everything but pivot column and pivot value)
+                DataTable temp = dt.Copy();
+                temp.Columns.Remove(pivotColumn.ColumnName);
+                temp.Columns.Remove(pivotValue.ColumnName);
+                string[] pkColumnNames = temp.Columns.Cast<DataColumn>()
+                .Select(c => c.ColumnName)
+                .ToArray();
+
+                // prep results table
+                DataTable result = temp.DefaultView.ToTable(true, pkColumnNames).Copy();
+                result.PrimaryKey = result.Columns.Cast<DataColumn>().ToArray();
+                dt.AsEnumerable()
+                .Select(r => r[pivotColumn.ColumnName].ToString())
+                .Distinct().ToList()
+                .ForEach(c => result.Columns.Add(c, pivotValue.DataType));
+                //.ForEach(c => result.Columns.Add(c, pivotColumn.DataType));
+
+                // load it
+                foreach (DataRow row in dt.Rows)
+                {
+                    // find row to update
+                    DataRow aggRow = result.Rows.Find(
+                    pkColumnNames
+                    .Select(c => row[c])
+                    .ToArray());
+                    // the aggregate used here is LATEST 
+                    // adjust the next line if you want (SUM, MAX, etc...)
+                    aggRow[row[pivotColumn.ColumnName].ToString()] = row[pivotValue.ColumnName];
 
 
+                }
+
+                return result;
             }
-
-            return result;
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return null;
+            }
+            
         }
 
         public static DataTable UnpivotDataTable(DataTable pivoted)
         {
-            string[] columnNames = pivoted.Columns.Cast<DataColumn>()
+            try
+            {
+                string[] columnNames = pivoted.Columns.Cast<DataColumn>()
                 .Select(x => x.ColumnName)
                 .ToArray();
 
-            var unpivoted = new DataTable("unpivot");
-            unpivoted.Columns.Add(pivoted.Columns[0].ColumnName, pivoted.Columns[0].DataType);
-            unpivoted.Columns.Add(pivoted.Columns[1].ColumnName, pivoted.Columns[1].DataType);
-            unpivoted.Columns.Add("DIV", typeof(string));
-            unpivoted.Columns.Add("VALUE", typeof(string));
-            //unpivoted.Columns.Add(pivoted.Columns[2].ColumnName, pivoted.Columns[2].DataType);
-            //unpivoted.Columns.Add(pivoted.Columns[3].ColumnName, pivoted.Columns[3].DataType);
-            //unpivoted.Columns.Add("YM", typeof(string));
-            //unpivoted.Columns.Add("YM_LABEL", typeof(string));
-            //unpivoted.Columns.Add("VALUE", typeof(double));
+                var unpivoted = new DataTable("unpivot");
+                unpivoted.Columns.Add(pivoted.Columns[0].ColumnName, pivoted.Columns[0].DataType);
+                unpivoted.Columns.Add(pivoted.Columns[1].ColumnName, pivoted.Columns[1].DataType);
+                unpivoted.Columns.Add("DIV", typeof(string));
+                unpivoted.Columns.Add("VALUE", typeof(string));
+                //unpivoted.Columns.Add(pivoted.Columns[2].ColumnName, pivoted.Columns[2].DataType);
+                //unpivoted.Columns.Add(pivoted.Columns[3].ColumnName, pivoted.Columns[3].DataType);
+                //unpivoted.Columns.Add("YM", typeof(string));
+                //unpivoted.Columns.Add("YM_LABEL", typeof(string));
+                //unpivoted.Columns.Add("VALUE", typeof(double));
 
-            for (int r = 0; r < pivoted.Rows.Count; r++)
-            {
-                for (int c = 2; c < columnNames.Length; c++)
+                for (int r = 0; r < pivoted.Rows.Count; r++)
                 {
-                    var value = pivoted.Rows[r][c]?.ToString();
-                    if (!string.IsNullOrWhiteSpace(value))
+                    for (int c = 2; c < columnNames.Length; c++)
                     {
-                        string DIV = "";
-                        if (columnNames[c] == "DOWNTIME")
+                        var value = pivoted.Rows[r][c]?.ToString();
+                        if (!string.IsNullOrWhiteSpace(value))
                         {
-                            DIV = "Downtime";
-                        }
-                        else
-                        {
-                            DIV = "Calling Times";
-                        }    
+                            string DIV = "";
+                            if (columnNames[c] == "DOWNTIME")
+                            {
+                                DIV = "Downtime";
+                            }
+                            else
+                            {
+                                DIV = "Calling Times";
+                            }
 
-                        
-                        //= DateTimeFormatInfo.CurrentInfo.GetAbbreviatedMonthName(int.Parse(columnNames[c].Substring(columnNames[c].Length - 2)));
-                        //unpivoted.Rows.Add(pivoted.Rows[r][0], pivoted.Rows[r][1], pivoted.Rows[r][2], pivoted.Rows[r][3], columnNames[c], mon, value);
-                        unpivoted.Rows.Add(pivoted.Rows[r][0], pivoted.Rows[r][1], DIV, value);
+
+                            //= DateTimeFormatInfo.CurrentInfo.GetAbbreviatedMonthName(int.Parse(columnNames[c].Substring(columnNames[c].Length - 2)));
+                            //unpivoted.Rows.Add(pivoted.Rows[r][0], pivoted.Rows[r][1], pivoted.Rows[r][2], pivoted.Rows[r][3], columnNames[c], mon, value);
+                            unpivoted.Rows.Add(pivoted.Rows[r][0], pivoted.Rows[r][1], DIV, value);
+                        }
                     }
                 }
-            }
 
-            return unpivoted;
+                return unpivoted;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return null;
+            }
+            
         }
 
         private void SetData(string arg_type)
@@ -216,8 +234,8 @@ namespace FORM
             catch (Exception ex)
             {
                 splashScreenManager1.CloseWaitForm();
-                Debug.WriteLine(ex.ToString());
-                throw;
+                Debug.WriteLine(ex.Message);
+                
             }
 
         }
@@ -326,6 +344,7 @@ namespace FORM
             else
             {
                 timer1.Stop();
+                Dispose();
             }
         }
 

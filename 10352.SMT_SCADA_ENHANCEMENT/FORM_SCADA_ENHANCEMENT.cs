@@ -410,7 +410,11 @@ namespace FORM
                 tmrLoad.Start();
             }
             else
+            {
                 tmrLoad.Stop();
+                Dispose();
+            }    
+                
         }
 
         private void tmrAnimationText_Tick(object sender, EventArgs e)

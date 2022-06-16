@@ -70,13 +70,13 @@ namespace FORM
                                  "B", "C", "D",
                                  "E", "F", "N",
                                  "G", "H", "I", "J", "K",
-                                 "L1", "L2"
+                                 "L1", "L2", "M1", "M2"
                                };
             string[] line_cd = { "001", "003", "002", "004", "005", "006",
                                  "007", "008", "010",
                                  "011", "012", "099", 
                                  "013", "014", "015", "016", "017", 
-                                 "018", "018_1"
+                                 "018", "018_1", "019", "019_1"
                                };
 
             string[] num_mline_upn = { "0", "0", "0", "0", "0", "0",
@@ -90,14 +90,14 @@ namespace FORM
                                  "4", "4", "4", 
                                  "4", "4", "8", 
                                  "4", "4", "4", "4", "4",
-                                 "4", "4"
+                                 "4", "4","4", "4"
                                };
 
             string[] num_mline_fga = { "1", "1", "1", "1", "1", "1",
                                  "4", "4", "4", 
                                  "4", "4", "8", 
                                  "4", "4", "4", "4", "4",
-                                 "4", "4"
+                                 "4", "4", "4", "4"
                                };
 
             dt.Columns.Add("FACTORY");
@@ -463,8 +463,9 @@ namespace FORM
                 int.TryParse(row["NUM_FGA"].ToString(), out iNumLine);
                 lineCd = row["LINE_CD"].ToString();
                 line = lineCd;
-                int iStart = lineCd == "018_1" ? 4 : 0;
-                lineCd = lineCd == "018_1" ? "018" : lineCd;
+                int iStart = 0;
+                int.TryParse(row["START_LINE"].ToString(), out iStart);
+                lineCd = lineCd.Substring(0,3);
                 //lineCd = lineCd.Replace("_1", "");
                 for (int iLine = iStart + 1; iLine <= iStart + iNumLine; iLine++)
                 {

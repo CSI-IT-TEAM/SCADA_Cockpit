@@ -715,7 +715,15 @@ namespace FORM
                     this.Cursor = Cursors.WaitCursor;
                     using (SMT_SCADA_COCKPIT_POPUP pop = new SMT_SCADA_COCKPIT_POPUP())
                     {
-                        DataTable dt = _dtAlert.Select($"LINE_CD = '{strArr[1]}' and MLINE_CD = '{strArr[2]}' and OP_CD = '{strArr[3]}'").CopyToDataTable(); //Data_Select_Machine("", strArr[1], strArr[2], strArr[3]);
+                        DataTable dt;
+                        if (strArr[1] == "F1")
+                        {
+                            dt = _dtAlert.Select($"LINE_CD = '{strArr[2]}' and OP_CD = '{strArr[3]}'").CopyToDataTable();
+                        }
+                        else
+                        {
+                            dt = _dtAlert.Select($"LINE_CD = '{strArr[1]}' and MLINE_CD = '{strArr[2]}' and OP_CD = '{strArr[3]}'").CopyToDataTable();
+                        }
 
                         pop._dtData = dt;
                         pop.ShowDialog();

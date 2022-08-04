@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORM_SCADA_REWORK_DETAIL));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
@@ -67,7 +68,7 @@
             this.chart1 = new DevExpress.XtraCharts.ChartControl();
             this.chart2 = new DevExpress.XtraCharts.ChartControl();
             this.chart3 = new DevExpress.XtraCharts.ChartControl();
-            this.tmrDate = new System.Windows.Forms.Timer();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
             this.splMain.Panel1.SuspendLayout();
@@ -125,7 +126,7 @@
             this.lblHeader.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.lblHeader.Size = new System.Drawing.Size(1622, 76);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "Rework && Equipment malfunction by plant";
+            this.lblHeader.Text = "Rework && Equipment malfunction (Weekly Average)";
             // 
             // btnBack
             // 

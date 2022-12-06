@@ -67,6 +67,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pnF4 = new System.Windows.Forms.Panel();
             this.pnF1 = new System.Windows.Forms.Panel();
+            this.gpExLT = new FORM.GroupBoxEx();
+            this.advancedPanel5 = new FORM.AdvancedPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pnLT = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pnVJ3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -98,6 +102,8 @@
             this.advancedPanel3.SuspendLayout();
             this.gpExF5.SuspendLayout();
             this.advancedPanel4.SuspendLayout();
+            this.gpExLT.SuspendLayout();
+            this.advancedPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.pnVJ3.SuspendLayout();
             this.pnVJ.SuspendLayout();
@@ -337,42 +343,40 @@
             // tblMenu
             // 
             this.tblMenu.BackColor = System.Drawing.Color.White;
-            this.tblMenu.ColumnCount = 9;
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tblMenu.Controls.Add(this.pnF2, 2, 1);
+            this.tblMenu.ColumnCount = 6;
+            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66702F));
+            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66702F));
+            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66702F));
+            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66702F));
+            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66702F));
+            this.tblMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66488F));
+            this.tblMenu.Controls.Add(this.pnF2, 1, 1);
             this.tblMenu.Controls.Add(this.gpExF1, 0, 0);
-            this.tblMenu.Controls.Add(this.pnF3, 4, 1);
-            this.tblMenu.Controls.Add(this.pnF5, 8, 1);
-            this.tblMenu.Controls.Add(this.gpExF2, 2, 0);
-            this.tblMenu.Controls.Add(this.gpExF3, 4, 0);
-            this.tblMenu.Controls.Add(this.gpExF4, 6, 0);
-            this.tblMenu.Controls.Add(this.gpExF5, 8, 0);
-            this.tblMenu.Controls.Add(this.pnF4, 6, 1);
+            this.tblMenu.Controls.Add(this.pnF3, 2, 1);
+            this.tblMenu.Controls.Add(this.pnF5, 4, 1);
+            this.tblMenu.Controls.Add(this.gpExF2, 1, 0);
+            this.tblMenu.Controls.Add(this.gpExF3, 2, 0);
+            this.tblMenu.Controls.Add(this.gpExF4, 3, 0);
+            this.tblMenu.Controls.Add(this.gpExF5, 4, 0);
+            this.tblMenu.Controls.Add(this.pnF4, 3, 1);
             this.tblMenu.Controls.Add(this.pnF1, 0, 1);
+            this.tblMenu.Controls.Add(this.gpExLT, 5, 0);
+            this.tblMenu.Controls.Add(this.pnLT, 5, 1);
             this.tblMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblMenu.Location = new System.Drawing.Point(3, 143);
             this.tblMenu.Name = "tblMenu";
             this.tblMenu.RowCount = 2;
             this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.35437F));
             this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.64563F));
-            this.tblMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblMenu.Size = new System.Drawing.Size(1914, 824);
             this.tblMenu.TabIndex = 23;
             // 
             // pnF2
             // 
             this.pnF2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF2.Location = new System.Drawing.Point(389, 146);
+            this.pnF2.Location = new System.Drawing.Point(322, 146);
             this.pnF2.Name = "pnF2";
-            this.pnF2.Size = new System.Drawing.Size(360, 675);
+            this.pnF2.Size = new System.Drawing.Size(313, 675);
             this.pnF2.TabIndex = 10;
             // 
             // gpExF1
@@ -389,7 +393,7 @@
             this.gpExF1.Location = new System.Drawing.Point(3, 3);
             this.gpExF1.Name = "gpExF1";
             this.gpExF1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.gpExF1.Size = new System.Drawing.Size(360, 137);
+            this.gpExF1.Size = new System.Drawing.Size(313, 137);
             this.gpExF1.TabIndex = 3;
             this.gpExF1.TabStop = false;
             this.gpExF1.TextBackColor = System.Drawing.Color.White;
@@ -403,14 +407,14 @@
             this.aPn1.EdgeWidth = 1;
             this.aPn1.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.aPn1.FlatBorderColor = System.Drawing.Color.Turquoise;
-            this.aPn1.Location = new System.Drawing.Point(24, 3);
+            this.aPn1.Location = new System.Drawing.Point(30, 3);
             this.aPn1.Name = "aPn1";
             this.aPn1.Padding = new System.Windows.Forms.Padding(2);
             this.aPn1.RectRadius = 0;
             this.aPn1.ShadowColor = System.Drawing.Color.DimGray;
             this.aPn1.ShadowShift = 5;
             this.aPn1.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
-            this.aPn1.Size = new System.Drawing.Size(316, 52);
+            this.aPn1.Size = new System.Drawing.Size(255, 52);
             this.aPn1.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.aPn1.Style = FORM.AdvancedPanel.BevelStyle.Flat;
             this.aPn1.TabIndex = 3;
@@ -422,7 +426,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(2, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(312, 48);
+            this.label2.Size = new System.Drawing.Size(251, 48);
             this.label2.TabIndex = 0;
             this.label2.Text = "Factory 1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -430,17 +434,17 @@
             // pnF3
             // 
             this.pnF3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF3.Location = new System.Drawing.Point(775, 146);
+            this.pnF3.Location = new System.Drawing.Point(641, 146);
             this.pnF3.Name = "pnF3";
-            this.pnF3.Size = new System.Drawing.Size(360, 675);
+            this.pnF3.Size = new System.Drawing.Size(313, 675);
             this.pnF3.TabIndex = 11;
             // 
             // pnF5
             // 
             this.pnF5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF5.Location = new System.Drawing.Point(1547, 146);
+            this.pnF5.Location = new System.Drawing.Point(1279, 146);
             this.pnF5.Name = "pnF5";
-            this.pnF5.Size = new System.Drawing.Size(364, 675);
+            this.pnF5.Size = new System.Drawing.Size(313, 675);
             this.pnF5.TabIndex = 13;
             // 
             // gpExF2
@@ -454,10 +458,10 @@
             this.gpExF2.GroupPanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(74)))));
             this.gpExF2.GroupPanelShape = FORM.GroupBoxEx.PanelType.Rounded;
             this.gpExF2.GroupPanelWith = 0F;
-            this.gpExF2.Location = new System.Drawing.Point(389, 3);
+            this.gpExF2.Location = new System.Drawing.Point(322, 3);
             this.gpExF2.Name = "gpExF2";
             this.gpExF2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.gpExF2.Size = new System.Drawing.Size(360, 137);
+            this.gpExF2.Size = new System.Drawing.Size(313, 137);
             this.gpExF2.TabIndex = 14;
             this.gpExF2.TabStop = false;
             this.gpExF2.TextBackColor = System.Drawing.Color.White;
@@ -471,14 +475,14 @@
             this.advancedPanel1.EdgeWidth = 1;
             this.advancedPanel1.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.advancedPanel1.FlatBorderColor = System.Drawing.Color.Turquoise;
-            this.advancedPanel1.Location = new System.Drawing.Point(24, 3);
+            this.advancedPanel1.Location = new System.Drawing.Point(30, 3);
             this.advancedPanel1.Name = "advancedPanel1";
             this.advancedPanel1.Padding = new System.Windows.Forms.Padding(2);
             this.advancedPanel1.RectRadius = 0;
             this.advancedPanel1.ShadowColor = System.Drawing.Color.DimGray;
             this.advancedPanel1.ShadowShift = 5;
             this.advancedPanel1.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
-            this.advancedPanel1.Size = new System.Drawing.Size(316, 52);
+            this.advancedPanel1.Size = new System.Drawing.Size(255, 52);
             this.advancedPanel1.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.advancedPanel1.Style = FORM.AdvancedPanel.BevelStyle.Flat;
             this.advancedPanel1.TabIndex = 3;
@@ -490,7 +494,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(2, 2);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(312, 48);
+            this.label5.Size = new System.Drawing.Size(251, 48);
             this.label5.TabIndex = 0;
             this.label5.Text = "Factory 2";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -506,10 +510,10 @@
             this.gpExF3.GroupPanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(74)))));
             this.gpExF3.GroupPanelShape = FORM.GroupBoxEx.PanelType.Rounded;
             this.gpExF3.GroupPanelWith = 0F;
-            this.gpExF3.Location = new System.Drawing.Point(775, 3);
+            this.gpExF3.Location = new System.Drawing.Point(641, 3);
             this.gpExF3.Name = "gpExF3";
             this.gpExF3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.gpExF3.Size = new System.Drawing.Size(360, 137);
+            this.gpExF3.Size = new System.Drawing.Size(313, 137);
             this.gpExF3.TabIndex = 15;
             this.gpExF3.TabStop = false;
             this.gpExF3.TextBackColor = System.Drawing.Color.White;
@@ -523,14 +527,14 @@
             this.advancedPanel2.EdgeWidth = 1;
             this.advancedPanel2.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.advancedPanel2.FlatBorderColor = System.Drawing.Color.Turquoise;
-            this.advancedPanel2.Location = new System.Drawing.Point(24, 3);
+            this.advancedPanel2.Location = new System.Drawing.Point(30, 3);
             this.advancedPanel2.Name = "advancedPanel2";
             this.advancedPanel2.Padding = new System.Windows.Forms.Padding(2);
             this.advancedPanel2.RectRadius = 0;
             this.advancedPanel2.ShadowColor = System.Drawing.Color.DimGray;
             this.advancedPanel2.ShadowShift = 5;
             this.advancedPanel2.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
-            this.advancedPanel2.Size = new System.Drawing.Size(316, 52);
+            this.advancedPanel2.Size = new System.Drawing.Size(255, 52);
             this.advancedPanel2.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.advancedPanel2.Style = FORM.AdvancedPanel.BevelStyle.Flat;
             this.advancedPanel2.TabIndex = 3;
@@ -542,7 +546,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(2, 2);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(312, 48);
+            this.label6.Size = new System.Drawing.Size(251, 48);
             this.label6.TabIndex = 0;
             this.label6.Text = "Factory 3";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -558,10 +562,10 @@
             this.gpExF4.GroupPanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(74)))));
             this.gpExF4.GroupPanelShape = FORM.GroupBoxEx.PanelType.Rounded;
             this.gpExF4.GroupPanelWith = 0F;
-            this.gpExF4.Location = new System.Drawing.Point(1161, 3);
+            this.gpExF4.Location = new System.Drawing.Point(960, 3);
             this.gpExF4.Name = "gpExF4";
             this.gpExF4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.gpExF4.Size = new System.Drawing.Size(360, 137);
+            this.gpExF4.Size = new System.Drawing.Size(313, 137);
             this.gpExF4.TabIndex = 16;
             this.gpExF4.TabStop = false;
             this.gpExF4.TextBackColor = System.Drawing.Color.White;
@@ -575,14 +579,14 @@
             this.advancedPanel3.EdgeWidth = 1;
             this.advancedPanel3.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.advancedPanel3.FlatBorderColor = System.Drawing.Color.Turquoise;
-            this.advancedPanel3.Location = new System.Drawing.Point(24, 3);
+            this.advancedPanel3.Location = new System.Drawing.Point(30, 3);
             this.advancedPanel3.Name = "advancedPanel3";
             this.advancedPanel3.Padding = new System.Windows.Forms.Padding(2);
             this.advancedPanel3.RectRadius = 0;
             this.advancedPanel3.ShadowColor = System.Drawing.Color.DimGray;
             this.advancedPanel3.ShadowShift = 5;
             this.advancedPanel3.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
-            this.advancedPanel3.Size = new System.Drawing.Size(316, 52);
+            this.advancedPanel3.Size = new System.Drawing.Size(255, 52);
             this.advancedPanel3.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.advancedPanel3.Style = FORM.AdvancedPanel.BevelStyle.Flat;
             this.advancedPanel3.TabIndex = 3;
@@ -594,7 +598,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(2, 2);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(312, 48);
+            this.label7.Size = new System.Drawing.Size(251, 48);
             this.label7.TabIndex = 0;
             this.label7.Text = "Factory 4";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -610,10 +614,10 @@
             this.gpExF5.GroupPanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(74)))));
             this.gpExF5.GroupPanelShape = FORM.GroupBoxEx.PanelType.Rounded;
             this.gpExF5.GroupPanelWith = 0F;
-            this.gpExF5.Location = new System.Drawing.Point(1547, 3);
+            this.gpExF5.Location = new System.Drawing.Point(1279, 3);
             this.gpExF5.Name = "gpExF5";
             this.gpExF5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.gpExF5.Size = new System.Drawing.Size(360, 137);
+            this.gpExF5.Size = new System.Drawing.Size(313, 137);
             this.gpExF5.TabIndex = 17;
             this.gpExF5.TabStop = false;
             this.gpExF5.TextBackColor = System.Drawing.Color.White;
@@ -627,14 +631,14 @@
             this.advancedPanel4.EdgeWidth = 1;
             this.advancedPanel4.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.advancedPanel4.FlatBorderColor = System.Drawing.Color.Turquoise;
-            this.advancedPanel4.Location = new System.Drawing.Point(24, 3);
+            this.advancedPanel4.Location = new System.Drawing.Point(30, 3);
             this.advancedPanel4.Name = "advancedPanel4";
             this.advancedPanel4.Padding = new System.Windows.Forms.Padding(2);
             this.advancedPanel4.RectRadius = 0;
             this.advancedPanel4.ShadowColor = System.Drawing.Color.DimGray;
             this.advancedPanel4.ShadowShift = 5;
             this.advancedPanel4.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
-            this.advancedPanel4.Size = new System.Drawing.Size(316, 52);
+            this.advancedPanel4.Size = new System.Drawing.Size(255, 52);
             this.advancedPanel4.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
             this.advancedPanel4.Style = FORM.AdvancedPanel.BevelStyle.Flat;
             this.advancedPanel4.TabIndex = 3;
@@ -646,7 +650,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(2, 2);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(312, 48);
+            this.label8.Size = new System.Drawing.Size(251, 48);
             this.label8.TabIndex = 0;
             this.label8.Text = "Factory 5";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -654,9 +658,9 @@
             // pnF4
             // 
             this.pnF4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF4.Location = new System.Drawing.Point(1161, 146);
+            this.pnF4.Location = new System.Drawing.Point(960, 146);
             this.pnF4.Name = "pnF4";
-            this.pnF4.Size = new System.Drawing.Size(360, 675);
+            this.pnF4.Size = new System.Drawing.Size(313, 675);
             this.pnF4.TabIndex = 12;
             // 
             // pnF1
@@ -664,8 +668,68 @@
             this.pnF1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnF1.Location = new System.Drawing.Point(3, 146);
             this.pnF1.Name = "pnF1";
-            this.pnF1.Size = new System.Drawing.Size(360, 675);
+            this.pnF1.Size = new System.Drawing.Size(313, 675);
             this.pnF1.TabIndex = 9;
+            // 
+            // gpExLT
+            // 
+            this.gpExLT.BackgroundPanelImage = null;
+            this.gpExLT.Controls.Add(this.advancedPanel5);
+            this.gpExLT.DrawGroupBorder = true;
+            this.gpExLT.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpExLT.ForeColor = System.Drawing.Color.DarkOrange;
+            this.gpExLT.GroupBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(74)))));
+            this.gpExLT.GroupPanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(32)))), ((int)(((byte)(74)))));
+            this.gpExLT.GroupPanelShape = FORM.GroupBoxEx.PanelType.Rounded;
+            this.gpExLT.GroupPanelWith = 0F;
+            this.gpExLT.Location = new System.Drawing.Point(1598, 3);
+            this.gpExLT.Name = "gpExLT";
+            this.gpExLT.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.gpExLT.Size = new System.Drawing.Size(313, 137);
+            this.gpExLT.TabIndex = 18;
+            this.gpExLT.TabStop = false;
+            this.gpExLT.TextBackColor = System.Drawing.Color.White;
+            this.gpExLT.TextBorderColor = System.Drawing.Color.Blue;
+            this.gpExLT.TextBorderWith = 2F;
+            // 
+            // advancedPanel5
+            // 
+            this.advancedPanel5.BackgroundGradientMode = FORM.AdvancedPanel.PanelGradientMode.Vertical;
+            this.advancedPanel5.Controls.Add(this.label10);
+            this.advancedPanel5.EdgeWidth = 1;
+            this.advancedPanel5.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
+            this.advancedPanel5.FlatBorderColor = System.Drawing.Color.Turquoise;
+            this.advancedPanel5.Location = new System.Drawing.Point(30, 3);
+            this.advancedPanel5.Name = "advancedPanel5";
+            this.advancedPanel5.Padding = new System.Windows.Forms.Padding(2);
+            this.advancedPanel5.RectRadius = 0;
+            this.advancedPanel5.ShadowColor = System.Drawing.Color.DimGray;
+            this.advancedPanel5.ShadowShift = 5;
+            this.advancedPanel5.ShadowStyle = FORM.AdvancedPanel.ShadowMode.Dropped;
+            this.advancedPanel5.Size = new System.Drawing.Size(255, 52);
+            this.advancedPanel5.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(228)))), ((int)(((byte)(234)))));
+            this.advancedPanel5.Style = FORM.AdvancedPanel.BevelStyle.Flat;
+            this.advancedPanel5.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Font = new System.Drawing.Font("Calibri", 25.25F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(2, 2);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(251, 48);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Long Thanh";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pnLT
+            // 
+            this.pnLT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnLT.Location = new System.Drawing.Point(1598, 146);
+            this.pnLT.Name = "pnLT";
+            this.pnLT.Size = new System.Drawing.Size(313, 675);
+            this.pnLT.TabIndex = 19;
             // 
             // tableLayoutPanel3
             // 
@@ -892,6 +956,8 @@
             this.advancedPanel3.ResumeLayout(false);
             this.gpExF5.ResumeLayout(false);
             this.advancedPanel4.ResumeLayout(false);
+            this.gpExLT.ResumeLayout(false);
+            this.advancedPanel5.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.pnVJ3.ResumeLayout(false);
             this.pnVJ.ResumeLayout(false);
@@ -954,5 +1020,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button cmdScadaBottom;
+        private GroupBoxEx gpExLT;
+        private AdvancedPanel advancedPanel5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel pnLT;
     }
 }

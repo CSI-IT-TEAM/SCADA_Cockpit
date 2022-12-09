@@ -30,6 +30,7 @@ namespace FORM
         int _iReload = 0;
         bool isBack = false;
         DataTable _dtMasterLine;
+        DataTable _dtLineProd;
         DataTable _dtAlert;
         DataTable _dtData;
        // Dictionary<string, UC.UC_Chart_Donut> _dicLocation = new Dictionary<string, UC.UC_Chart_Donut>();
@@ -615,6 +616,7 @@ namespace FORM
         private async void setData()
         {
             DataSet ds = await Task.Run(() => Data_Select(""));
+            _dtLineProd = Master_Select("LINE_PROD");
             if (ds == null) return;
             DataTable dt = ds.Tables[0];
             if (dt == null || dt.Rows.Count == 0) return;
@@ -624,6 +626,14 @@ namespace FORM
             //reset color line
             foreach (var item in _dicLine)
             {
+                string[] value = item.Key.Split('_');
+                if (item.Value.button.BackColor == Color.White) continue;
+                if (!IsProdLine(value[0] + "_" + value[1]))
+                {
+                    item.Value.status = "GRAY";
+                    item.Value.button.BackColor = Color.Silver;
+                    continue;
+                }
                 if (item.Value.status != "GREEN")
                 {
                     item.Value.status = "GREEN";
@@ -658,18 +668,21 @@ namespace FORM
                     if (dr.Count() == 0) continue;
                     location = dr[0][0] + "_" + row["OP_CD"];
 
+                    string nameButton = row["NAME_CONTROL"].ToString();
+                    string status = row["STATUS"].ToString();
                     //Set color Line
-                    if (_dicLine.ContainsKey(row["NAME_CONTROL"].ToString()))
+                    if (_dicLine.ContainsKey(nameButton))
                     {
-                        _dicLine[row["NAME_CONTROL"].ToString()].status = row["STATUS"].ToString();
-                        _dicLine[row["NAME_CONTROL"].ToString()].button.BackColor = Color.FromName(row["STATUS"].ToString());
+                        if (_dicLine[nameButton].status == "GRAY") continue;
+                        _dicLine[nameButton].status = status;
+                        _dicLine[nameButton].button.BackColor = Color.FromName(status);
                     }
 
                     //Set color Factory
                     if (_dicFac[location]._Color != "RED")
                     {
-                        _dicFac[location].setColor(row["STATUS"].ToString()); 
-                        _dicFac[location]._Color = row["STATUS"].ToString();                     
+                        _dicFac[location].setColor(status); 
+                        _dicFac[location]._Color = status;                     
                     }
 
 
@@ -690,6 +703,13 @@ namespace FORM
                     Debug.WriteLine(ex);
                 }
             }
+        }
+
+        private bool IsProdLine(string lineAndMline)
+        {
+            DataRow[] dr = _dtLineProd.Select($"LINE_MLINE = '{lineAndMline}'");
+            if (dr.Count() > 0) return true;
+            return false;
         }
         #endregion Set Data
 

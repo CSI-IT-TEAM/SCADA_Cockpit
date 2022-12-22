@@ -2340,7 +2340,7 @@
             // SMT_SCADA_B2IPZONE_TEMPER_V2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.sbtnNext);

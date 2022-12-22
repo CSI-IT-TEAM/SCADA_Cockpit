@@ -2184,7 +2184,7 @@
             // SMT_ANDON_ANALYSIS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.panel1);

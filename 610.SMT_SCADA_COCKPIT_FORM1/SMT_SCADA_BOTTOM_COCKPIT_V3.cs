@@ -170,178 +170,178 @@ namespace FORM
             isClick = !isClick;
         }
         #region Init layout
-        private void InitLayout()
-        {
-            try
-            {
-                // OS Rubber
-                lblList.Add(lbl_OS_Rub_Banbury);
-                lblList.Add(lbl_OS_Rub_1Roll);
-                lblList.Add(lbl_OS_Rub_2Roll);
-                lblList.Add(lbl_OS_Rub_Calendar);
+        //private void InitLayout()
+        //{
+        //    try
+        //    {
+        //        // OS Rubber
+        //        lblList.Add(lbl_OS_Rub_Banbury);
+        //        lblList.Add(lbl_OS_Rub_1Roll);
+        //        lblList.Add(lbl_OS_Rub_2Roll);
+        //        lblList.Add(lbl_OS_Rub_Calendar);
 
-                //OS Eva
-                lblList.Add(lbl_OS_EVA_Kneader);
-                lblList.Add(lbl_OS_EVA_Roll);
-                lblList.Add(lbl_OS_EVA_Extruder);
-                lblList.Add(lbl_OS_EVA_Pall);
-                lblList.Add(lbl_OS_EVA_Calendar);
+        //        //OS Eva
+        //        lblList.Add(lbl_OS_EVA_Kneader);
+        //        lblList.Add(lbl_OS_EVA_Roll);
+        //        lblList.Add(lbl_OS_EVA_Extruder);
+        //        lblList.Add(lbl_OS_EVA_Pall);
+        //        lblList.Add(lbl_OS_EVA_Calendar);
 
-                //Phylon CTM
-                lblList.Add(lbl_PH_CTM_1);
-                lblList.Add(lbl_PH_CTM_2);
-                lblList.Add(lbl_PH_CTM_3);
-                lblList.Add(lbl_PH_CTM_4);
-                lblList.Add(lbl_PH_CTM_5);
-                lblList.Add(lbl_PH_CTM_6);
-                lblList.Add(lbl_PH_CTM_7);
-                lblList.Add(lbl_PH_CTM_8);
-                lblList.Add(lbl_PH_CTM_9);
-                lblList.Add(lbl_PH_CTM_10);
-                lblList.Add(lbl_PH_CTM_11);
-                lblList.Add(lbl_PH_CTM_12);
-                lblList.Add(lbl_PH_CTM_13);
-                lblList.Add(lbl_PH_CTM_14);
+        //        //Phylon CTM
+        //        lblList.Add(lbl_PH_CTM_1);
+        //        lblList.Add(lbl_PH_CTM_2);
+        //        lblList.Add(lbl_PH_CTM_3);
+        //        lblList.Add(lbl_PH_CTM_4);
+        //        lblList.Add(lbl_PH_CTM_5);
+        //        lblList.Add(lbl_PH_CTM_6);
+        //        lblList.Add(lbl_PH_CTM_7);
+        //        lblList.Add(lbl_PH_CTM_8);
+        //        lblList.Add(lbl_PH_CTM_9);
+        //        lblList.Add(lbl_PH_CTM_10);
+        //        lblList.Add(lbl_PH_CTM_11);
+        //        lblList.Add(lbl_PH_CTM_12);
+        //        lblList.Add(lbl_PH_CTM_13);
+        //        lblList.Add(lbl_PH_CTM_14);
 
-                //Phylon UV
-                lblList.Add(lbl_PH_UV_1);
-                lblList.Add(lbl_PH_UV_2);
-                lblList.Add(lbl_PH_UV_3);
-                lblList.Add(lbl_PH_UV_4);
-                lblList.Add(lbl_PH_UV_5);
-                lblList.Add(lbl_PH_UV_6);
-                lblList.Add(lbl_PH_UV_7);
+        //        //Phylon UV
+        //        lblList.Add(lbl_PH_UV_1);
+        //        lblList.Add(lbl_PH_UV_2);
+        //        lblList.Add(lbl_PH_UV_3);
+        //        lblList.Add(lbl_PH_UV_4);
+        //        lblList.Add(lbl_PH_UV_5);
+        //        lblList.Add(lbl_PH_UV_6);
+        //        lblList.Add(lbl_PH_UV_7);
 
-                //IP-A Compound
-                lblList.Add(lbl_IPA_1_Kneader);
-                lblList.Add(lbl_IPA_2_Kneader);
-                lblList.Add(lbl_IPA_3_Kneader);
-                lblList.Add(lbl_IPA_4_Kneader);
+        //        //IP-A Compound
+        //        lblList.Add(lbl_IPA_1_Kneader);
+        //        lblList.Add(lbl_IPA_2_Kneader);
+        //        lblList.Add(lbl_IPA_3_Kneader);
+        //        lblList.Add(lbl_IPA_4_Kneader);
 
-                lblList.Add(lbl_IPA_1_Roll);
-                lblList.Add(lbl_IPA_2_Roll);
-                lblList.Add(lbl_IPA_3_Roll);
-                lblList.Add(lbl_IPA_4_Roll);
+        //        lblList.Add(lbl_IPA_1_Roll);
+        //        lblList.Add(lbl_IPA_2_Roll);
+        //        lblList.Add(lbl_IPA_3_Roll);
+        //        lblList.Add(lbl_IPA_4_Roll);
 
-                lblList.Add(lbl_IPA_1_Extruder);
-                lblList.Add(lbl_IPA_2_Extruder);
-                lblList.Add(lbl_IPA_3_Extruder);
-                lblList.Add(lbl_IPA_4_Extruder);
+        //        lblList.Add(lbl_IPA_1_Extruder);
+        //        lblList.Add(lbl_IPA_2_Extruder);
+        //        lblList.Add(lbl_IPA_3_Extruder);
+        //        lblList.Add(lbl_IPA_4_Extruder);
 
-                lblList.Add(lbl_IPA_1_Pall);
-                lblList.Add(lbl_IPA_2_Pall);
-                lblList.Add(lbl_IPA_3_Pall);
-                lblList.Add(lbl_IPA_4_Pall);
+        //        lblList.Add(lbl_IPA_1_Pall);
+        //        lblList.Add(lbl_IPA_2_Pall);
+        //        lblList.Add(lbl_IPA_3_Pall);
+        //        lblList.Add(lbl_IPA_4_Pall);
 
-                //IP-A Zone
-                lblList.Add(lbl_IPA_Zone_1_Injection);
-                lblList.Add(lbl_IPA_Zone_2_Injection);
-                lblList.Add(lbl_IPA_Zone_3_Injection);
-                lblList.Add(lbl_IPA_Zone_4_Injection);
-                lblList.Add(lbl_IPA_Zone_5_Injection);
-                lblList.Add(lbl_IPA_Zone_6_Injection);
-                lblList.Add(lbl_IPA_Zone_7_Injection);
+        //        //IP-A Zone
+        //        lblList.Add(lbl_IPA_Zone_1_Injection);
+        //        lblList.Add(lbl_IPA_Zone_2_Injection);
+        //        lblList.Add(lbl_IPA_Zone_3_Injection);
+        //        lblList.Add(lbl_IPA_Zone_4_Injection);
+        //        lblList.Add(lbl_IPA_Zone_5_Injection);
+        //        lblList.Add(lbl_IPA_Zone_6_Injection);
+        //        lblList.Add(lbl_IPA_Zone_7_Injection);
 
-                lblList.Add(lbl_IPA_Zone_1_Stab);
-                lblList.Add(lbl_IPA_Zone_2_Stab);
-                lblList.Add(lbl_IPA_Zone_3_Stab);
-                lblList.Add(lbl_IPA_Zone_4_Stab);
-                lblList.Add(lbl_IPA_Zone_5_Stab);
-                lblList.Add(lbl_IPA_Zone_6_Stab);
-                lblList.Add(lbl_IPA_Zone_7_Stab);
+        //        lblList.Add(lbl_IPA_Zone_1_Stab);
+        //        lblList.Add(lbl_IPA_Zone_2_Stab);
+        //        lblList.Add(lbl_IPA_Zone_3_Stab);
+        //        lblList.Add(lbl_IPA_Zone_4_Stab);
+        //        lblList.Add(lbl_IPA_Zone_5_Stab);
+        //        lblList.Add(lbl_IPA_Zone_6_Stab);
+        //        lblList.Add(lbl_IPA_Zone_7_Stab);
 
-                //IP-A UV
-                lblList.Add(lbl_IPA_UV_1);
-                lblList.Add(lbl_IPA_UV_2);
-                lblList.Add(lbl_IPA_UV_3);
-                lblList.Add(lbl_IPA_UV_4);
-                lblList.Add(lbl_IPA_UV_5);
-                lblList.Add(lbl_IPA_UV_6);
-                lblList.Add(lbl_IPA_UV_7);
+        //        //IP-A UV
+        //        lblList.Add(lbl_IPA_UV_1);
+        //        lblList.Add(lbl_IPA_UV_2);
+        //        lblList.Add(lbl_IPA_UV_3);
+        //        lblList.Add(lbl_IPA_UV_4);
+        //        lblList.Add(lbl_IPA_UV_5);
+        //        lblList.Add(lbl_IPA_UV_6);
+        //        lblList.Add(lbl_IPA_UV_7);
 
-                //PU
-                lblList.Add(lbl_PU_Poly);
-                lblList.Add(lbl_PU_Iso);
+        //        //PU
+        //        lblList.Add(lbl_PU_Poly);
+        //        lblList.Add(lbl_PU_Iso);
 
-                lblList.Add(lbl_PU_Auto_Mat_1);
-                lblList.Add(lbl_PU_Auto_Mat_2);
-                lblList.Add(lbl_PU_Auto_Mat_3);
+        //        lblList.Add(lbl_PU_Auto_Mat_1);
+        //        lblList.Add(lbl_PU_Auto_Mat_2);
+        //        lblList.Add(lbl_PU_Auto_Mat_3);
 
-                lblList.Add(lbl_PU_Auto_Oil_1);
-                lblList.Add(lbl_PU_Auto_Oil_2);
-                lblList.Add(lbl_PU_Auto_Oil_3);
+        //        lblList.Add(lbl_PU_Auto_Oil_1);
+        //        lblList.Add(lbl_PU_Auto_Oil_2);
+        //        lblList.Add(lbl_PU_Auto_Oil_3);
 
-                lblList.Add(lbl_PU_Auto_Hose_1);
-                lblList.Add(lbl_PU_Auto_Hose_2);
-                lblList.Add(lbl_PU_Auto_Hose_3);
+        //        lblList.Add(lbl_PU_Auto_Hose_1);
+        //        lblList.Add(lbl_PU_Auto_Hose_2);
+        //        lblList.Add(lbl_PU_Auto_Hose_3);
 
-                lblList.Add(lbl_PU_Manual_Mat_1);
-                lblList.Add(lbl_PU_Manual_Mat_2);
-                lblList.Add(lbl_PU_Manual_Mat_3);
+        //        lblList.Add(lbl_PU_Manual_Mat_1);
+        //        lblList.Add(lbl_PU_Manual_Mat_2);
+        //        lblList.Add(lbl_PU_Manual_Mat_3);
 
-                lblList.Add(lbl_PU_Manual_Oil_1);
-                lblList.Add(lbl_PU_Manual_Oil_2);
-                lblList.Add(lbl_PU_Manual_Oil_3);
+        //        lblList.Add(lbl_PU_Manual_Oil_1);
+        //        lblList.Add(lbl_PU_Manual_Oil_2);
+        //        lblList.Add(lbl_PU_Manual_Oil_3);
 
-                lblList.Add(lbl_PU_Manual_Hose_1);
-                lblList.Add(lbl_PU_Manual_Hose_2);
-                lblList.Add(lbl_PU_Manual_Hose_3);
+        //        lblList.Add(lbl_PU_Manual_Hose_1);
+        //        lblList.Add(lbl_PU_Manual_Hose_2);
+        //        lblList.Add(lbl_PU_Manual_Hose_3);
 
-                lblList.Add(lbl_PU_UV_1);
-                lblList.Add(lbl_PU_UV_2);
-                lblList.Add(lbl_PU_UV_3);
-                lblList.Add(lbl_PU_UV_4);
-                lblList.Add(lbl_PU_UV_5);
-                lblList.Add(lbl_PU_UV_6);
-                lblList.Add(lbl_PU_UV_7);
+        //        lblList.Add(lbl_PU_UV_1);
+        //        lblList.Add(lbl_PU_UV_2);
+        //        lblList.Add(lbl_PU_UV_3);
+        //        lblList.Add(lbl_PU_UV_4);
+        //        lblList.Add(lbl_PU_UV_5);
+        //        lblList.Add(lbl_PU_UV_6);
+        //        lblList.Add(lbl_PU_UV_7);
 
-                lblList.Add(lbl_PU_SPRAY_1);
-                lblList.Add(lbl_PU_SPRAY_2);
-                lblList.Add(lbl_PU_SPRAY_3);
-                lblList.Add(lbl_PU_SPRAY_4);
-                lblList.Add(lbl_PU_SPRAY_5);
-                lblList.Add(lbl_PU_SPRAY_6);
-                lblList.Add(lbl_PU_SPRAY_7);
-                lblList.Add(lbl_PU_SPRAY_8);
-                lblList.Add(lbl_PU_SPRAY_9);
-                lblList.Add(lbl_PU_SPRAY_10);
+        //        lblList.Add(lbl_PU_SPRAY_1);
+        //        lblList.Add(lbl_PU_SPRAY_2);
+        //        lblList.Add(lbl_PU_SPRAY_3);
+        //        lblList.Add(lbl_PU_SPRAY_4);
+        //        lblList.Add(lbl_PU_SPRAY_5);
+        //        lblList.Add(lbl_PU_SPRAY_6);
+        //        lblList.Add(lbl_PU_SPRAY_7);
+        //        lblList.Add(lbl_PU_SPRAY_8);
+        //        lblList.Add(lbl_PU_SPRAY_9);
+        //        lblList.Add(lbl_PU_SPRAY_10);
 
-                //GROUP
-                lblGrpList.Add(lbl_OS_GRP_RUBBER);
-                lblGrpList.Add(lbl_OS_GRP_EVA);
+        //        //GROUP
+        //        lblGrpList.Add(lbl_OS_GRP_RUBBER);
+        //        lblGrpList.Add(lbl_OS_GRP_EVA);
 
-                lblGrpList.Add(lbl_PH_GRP_CTM);
+        //        lblGrpList.Add(lbl_PH_GRP_CTM);
 
-                lblGrpList.Add(lbl_IP_GRP_COMP);
+        //        lblGrpList.Add(lbl_IP_GRP_COMP);
 
-                lblGrpList.Add(lbl_IP_GRP_ZONE);
+        //        lblGrpList.Add(lbl_IP_GRP_ZONE);
 
-                lblGrpList.Add(lbl_PU_GRP_MAT);
+        //        lblGrpList.Add(lbl_PU_GRP_MAT);
 
-                lblGrpList.Add(lbl_IP_UV_GRP_ZONE);
+        //        lblGrpList.Add(lbl_IP_UV_GRP_ZONE);
 
-                lblGrpList.Add(lbl_PU_GRP);
+        //        lblGrpList.Add(lbl_PU_GRP);
 
-                foreach (var item in lblList)
-                {
-                    item.Tag = item.Name;
-                    item.BackColor = Color.Silver;
-                    item.Click += Item_Click;
-                }
+        //        foreach (var item in lblList)
+        //        {
+        //            item.Tag = item.Name;
+        //            item.BackColor = Color.Silver;
+        //            item.Click += Item_Click;
+        //        }
 
-                foreach (var item in lblGrpList)
-                {
-                    item.Tag = item.Name;
-                    item.Click += Item_Click1;
-                    item.MouseEnter += lbl_GRP_MouseEnter;
-                    item.MouseLeave += lbl_GRP_MouseLeave;
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+        //        foreach (var item in lblGrpList)
+        //        {
+        //            item.Tag = item.Name;
+        //            item.Click += Item_Click1;
+        //            item.MouseEnter += lbl_GRP_MouseEnter;
+        //            item.MouseLeave += lbl_GRP_MouseLeave;
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+        //}
 
         private void Item_Click1(object sender, EventArgs e)
         {
@@ -378,7 +378,7 @@ namespace FORM
         private void SMT_SCADA_BOTTOM_COCKPIT_V3_Load(object sender, EventArgs e)
         {
             //InitLayout
-            InitLayout();
+            //InitLayout();
         }
 
         private void lbl_GRP_MouseEnter(object sender, EventArgs e)
@@ -428,6 +428,136 @@ namespace FORM
         private void lbl_OS_GRP_RUBBER_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmdScadaBottom_Click(object sender, EventArgs e)
+        {
+            call_from(1);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            call_from(1);
+            //ComVar.Var._IsBack = true;
+            ///*
+            //    1 - lbl_OS_GRP_RUBBER
+            //    2 - lbl_OS_GRP_EVA
+            //    3 - lbl_PH_GRP_CTM
+            //    4 - lbl_IP_GRP_COMP
+            //    5 - lbl_IP_GRP_ZONE
+            //    6 - lbl_IP_UV_GRP_ZONE
+            //    7 - lbl_PU_GRP_MAT
+            //    8 - lbl_PU_GRP
+
+            //*/
+            //DataTable dt = SEL_F_CALL("Q", "2", "lbl_OS_GRP_RUBBER");
+            //if (dt == null) return;
+            //ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
+        }
+
+        private void call_from(int from)
+        {
+            ComVar.Var._IsBack = true;
+            /*
+                1 - lbl_OS_GRP_RUBBER
+                2 - lbl_OS_GRP_EVA
+                3 - lbl_PH_GRP_CTM
+                4 - lbl_IP_GRP_COMP
+                5 - lbl_IP_GRP_ZONE
+                6 - lbl_IP_UV_GRP_ZONE
+                7 - lbl_PU_GRP_MAT
+                8 - lbl_PU_GRP
+                
+            */
+            string[] Name = new string[9];
+
+            Name[1] = "lbl_OS_GRP_RUBBER";
+            Name[2] = "lbl_OS_GRP_EVA";
+            Name[3] = "lbl_PH_GRP_CTM";
+            Name[4] = "lbl_IP_GRP_COMP";
+            Name[5] = "lbl_IP_GRP_ZONE";
+            Name[6] = "lbl_IP_UV_GRP_ZONE";
+            Name[7] = "lbl_PU_GRP_MAT";
+            Name[8] = "lbl_PU_GRP";
+
+            DataTable dt = SEL_F_CALL("Q", "2", Name[from]);
+            if (dt == null) return;
+            ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            call_from(2);
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            call_from(3);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            call_from(4);
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            call_from(5);
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            call_from(6);
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            call_from(7);
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            call_from(8);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            call_from(6);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            call_from(1);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            call_from(2);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            call_from(3);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            call_from(4);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            call_from(5);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            call_from(7);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            call_from(8);
         }
     }
 }

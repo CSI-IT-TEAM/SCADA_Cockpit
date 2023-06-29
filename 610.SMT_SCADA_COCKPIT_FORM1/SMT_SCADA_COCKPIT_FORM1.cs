@@ -1053,7 +1053,9 @@ namespace FORM
                 Button btn = (Button)sender;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 3;
-                btn.FlatAppearance.BorderColor = Color.Green;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
+
+                label9.BackColor = Color.HotPink;
             }
             catch (Exception ex)
             {
@@ -1074,6 +1076,8 @@ namespace FORM
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 0;
                 btn.FlatAppearance.BorderColor = Color.White;
+
+                label9.BackColor = Color.FromArgb(24, 33, 60);
             }
             catch (Exception ex)
             {
@@ -1192,7 +1196,7 @@ namespace FORM
                 Button btn = (Button)sender;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 3;
-                btn.FlatAppearance.BorderColor = Color.Green;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
             }
             catch (Exception ex)
             {
@@ -1208,7 +1212,7 @@ namespace FORM
                 Button btn = (Button)sender;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 3;
-                btn.FlatAppearance.BorderColor = Color.Green;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
             }
             catch (Exception ex)
             {
@@ -1224,7 +1228,7 @@ namespace FORM
                 Button btn = (Button)sender;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 3;
-                btn.FlatAppearance.BorderColor = Color.Green;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
             }
             catch (Exception ex)
             {
@@ -1240,7 +1244,7 @@ namespace FORM
                 Button btn = (Button)sender;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 3;
-                btn.FlatAppearance.BorderColor = Color.Green;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
             }
             catch (Exception ex)
             {
@@ -1256,7 +1260,7 @@ namespace FORM
                 Button btn = (Button)sender;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 3;
-                btn.FlatAppearance.BorderColor = Color.Green;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
             }
             catch (Exception ex)
             {
@@ -1272,7 +1276,7 @@ namespace FORM
                 Button btn = (Button)sender;
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 3;
-                btn.FlatAppearance.BorderColor = Color.Green;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
             }
             catch (Exception ex)
             {

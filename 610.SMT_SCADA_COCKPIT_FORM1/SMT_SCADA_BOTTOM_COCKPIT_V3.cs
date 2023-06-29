@@ -157,7 +157,8 @@ namespace FORM
             }
             else
             {
-                Dispose(true);
+                tmrTime.Stop();
+                tmrBlinking.Stop();
             }
         }
 
@@ -482,8 +483,11 @@ namespace FORM
 
             DataTable dt = SEL_F_CALL("Q", "2", Name[from]);
             if (dt == null) return;
-            ComVar.Var._IsBack = true;
-            ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
+            if (dt.Rows[0]["FORM_CALL_SEQ"].ToString().Length >= 1)
+            {
+                ComVar.Var._IsBack = true;
+                ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -563,72 +567,261 @@ namespace FORM
 
         private void button8_MouseEnter(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Hand;
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 7;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+               // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button5_MouseEnter(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Hand;
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 7;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button4_MouseEnter(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Hand;
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 7;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Hand;
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 7;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button2_MouseEnter(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Hand;
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 7;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button3_MouseEnter(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Hand;
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 7;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button6_MouseEnter(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Hand;
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 7;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button6_MouseLeave(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Default;
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button3_MouseLeave(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Default;
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Default;
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Default;
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button8_MouseLeave(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Default;
+          
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
+
+
         }
 
         private void button5_MouseLeave(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Default;
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
 
         private void button4_MouseLeave(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Default;
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void button7_MouseEnter(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 7;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void button7_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                // Debug.WriteLine(ex.Message);
+            }
         }
     }
 }

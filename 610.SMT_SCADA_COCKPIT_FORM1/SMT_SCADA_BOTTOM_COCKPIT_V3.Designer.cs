@@ -269,6 +269,8 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.MouseEnter += new System.EventHandler(this.button7_MouseEnter);
+            this.button7.MouseLeave += new System.EventHandler(this.button7_MouseLeave);
             // 
             // panel5
             // 
@@ -513,9 +515,9 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.Navy;
-            this.button8.Location = new System.Drawing.Point(74, 0);
+            this.button8.Location = new System.Drawing.Point(80, 8);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(501, 361);
+            this.button8.Size = new System.Drawing.Size(491, 348);
             this.button8.TabIndex = 97;
             this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button8.UseVisualStyleBackColor = false;

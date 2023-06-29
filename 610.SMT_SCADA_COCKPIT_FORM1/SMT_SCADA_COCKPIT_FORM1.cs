@@ -491,7 +491,7 @@ namespace FORM
                     dicValue["NAME"] = "cmd_" + lineCd + "_" + iLine.ToString("000") + "_" + "UPN" + "_" + "STA";
                     dicValue["TAG"] = lineCd + "_" + iLine.ToString("000") + "_" + "UPN";
                     dicValue["TEXT"] = "";
-                    if (lineCd =="099" || lineCd == "008" || lineCd == "201" || lineCd == "202")
+                    if (lineCd =="099" || lineCd == "008" )
                         dicValue["BACK_COLOR"] = "WHITE";
                     else
                         dicValue["BACK_COLOR"] = "GREEN";
@@ -617,12 +617,6 @@ namespace FORM
         {
             DataSet ds = await Task.Run(() => Data_Select(""));
             _dtLineProd = Master_Select("LINE_PROD");
-            if (ds == null) return;
-            DataTable dt = ds.Tables[0];
-            if (dt == null || dt.Rows.Count == 0) return;
-            _dtData = dt.Copy();
-            _dtAlert = ds.Tables[1];
-
             //reset color line
             foreach (var item in _dicLine)
             {
@@ -651,6 +645,12 @@ namespace FORM
                     item.Value.Visible = true;
                 }
             }
+
+            if (ds == null) return;
+            DataTable dt = ds.Tables[0];
+            if (dt == null || dt.Rows.Count == 0) return;
+            _dtData = dt.Copy();
+            _dtAlert = ds.Tables[1];
 
             DataRow[] dr;
             Dictionary<string, string> dicStatus = new Dictionary<string,string>();

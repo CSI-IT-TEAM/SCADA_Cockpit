@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B2MATISO_TEMPER));
-            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView2 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
             this.pnTop = new System.Windows.Forms.Panel();
             this.label83 = new System.Windows.Forms.Label();
             this.btnTest = new System.Windows.Forms.Button();
@@ -89,9 +89,9 @@
             this.pnTop.SuspendLayout();
             this.a1Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
@@ -160,6 +160,7 @@
             this.cmdBack.TabIndex = 88;
             this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
             // lblDate
             // 
@@ -749,32 +750,32 @@
             this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.DataBindings = null;
-            xyDiagram2.AxisX.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram2.AxisX.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram2.AxisX.Title.Text = "Time";
-            xyDiagram2.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisY.GridLines.Visible = false;
-            xyDiagram2.AxisY.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            xyDiagram2.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            xyDiagram2.AxisY.Title.Text = "Temperature °C";
-            xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram2.DefaultPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
-            this.chartControl1.Diagram = xyDiagram2;
+            xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisX.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisX.Title.Text = "Time";
+            xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.GridLines.Visible = false;
+            xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            xyDiagram1.AxisY.Title.Text = "Temperature °C";
+            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.DefaultPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
+            this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Location = new System.Drawing.Point(15, 12);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.PaletteBaseColorNumber = 6;
-            series2.Name = "Series 1";
-            lineSeriesView2.Color = System.Drawing.Color.Yellow;
-            lineSeriesView2.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            lineSeriesView2.LineStyle.Thickness = 5;
-            lineSeriesView2.Shadow.Visible = true;
-            series2.View = lineSeriesView2;
+            series1.Name = "Series 1";
+            lineSeriesView1.Color = System.Drawing.Color.Yellow;
+            lineSeriesView1.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
+            lineSeriesView1.LineStyle.Thickness = 5;
+            lineSeriesView1.Shadow.Visible = true;
+            series1.View = lineSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
+        series1};
             this.chartControl1.Size = new System.Drawing.Size(1774, 589);
             this.chartControl1.TabIndex = 0;
             // 
@@ -835,9 +836,9 @@
             this.Text = "SMT_SCADA_B2MAT_TEMPER";
             this.pnTop.ResumeLayout(false);
             this.a1Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 

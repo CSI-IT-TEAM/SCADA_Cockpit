@@ -150,8 +150,9 @@ namespace FORM
         #endregion
         private void cmdBack_Click(object sender, EventArgs e)
         {
-            ComVar.Var.callForm = "back";
+            //ComVar.Var.callForm = "back";
             tmrDate.Stop();
+            ComVar.Var.callForm = "back";
         }
 
         private void sbtnNav_Click(object sender, EventArgs e)

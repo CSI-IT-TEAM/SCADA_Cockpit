@@ -11,6 +11,7 @@ using DevExpress.XtraGrid.Views.BandedGrid.ViewInfo;
 using System.Data.OleDb;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using System.IO;
 //using JPlatform.Client.Controls;
 
 
@@ -36,6 +37,8 @@ namespace FORM
        // Dictionary<string, UC.UC_Chart_Donut> _dicLocation = new Dictionary<string, UC.UC_Chart_Donut>();
         Dictionary<string, Button_Status> _dicLine = new Dictionary<string, Button_Status>();
         Dictionary<string, UC.UC_Factory> _dicFac = new Dictionary<string, UC.UC_Factory>();
+
+
         private void SMT_SCADA_COCKPIT_MENU_VisibleChanged(object sender, EventArgs e)
         {
             if (Visible)
@@ -993,18 +996,29 @@ namespace FORM
             ComVar.Var.callForm = "back";
         }
 
+
+
+      
         private void SMT_SCADA_COCKPIT_FORM1_Load(object sender, EventArgs e)
         {
             isBack = ComVar.Var._IsBack;
-            
         }
+
+        private int glowOpacity;
+       
+
+
+     
+
+
 
         private void cmdScadaBottom_Click(object sender, EventArgs e)
         {
             
             ComVar.Var._IsBack = true;
+            ComVar.Var.callForm = "11822";
             // ComVar.Var.callForm = "684";
-            ComVar.Var.callForm = "10389";
+
         }
 
         private void SetButtonBack()
@@ -1022,6 +1036,257 @@ namespace FORM
                 Debug.WriteLine(ex.Message);
             }
             
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdScadaBottom_MouseEnter(object sender, EventArgs e)
+        {
+            //this.Cursor = Cursors.Hand;
+
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 3;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
+
+                label9.BackColor = Color.HotPink;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+
+        
+
+
+        private void cmdScadaBottom_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+
+                label9.BackColor = Color.FromArgb(24, 33, 60);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void glowTimer_Tick(object sender, EventArgs e)
+        {
+            // Update the glow effect by adjusting the opacity.
+            glowOpacity = (glowOpacity + 10) % 255; // Adjust the increment and modulo value to control the glow effect.
+
+        }
+
+        private void pnVJ3_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void pnVJ2_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void pnVJ_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void cmdPm1_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void cmdDowntime_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void btnEnergy_MouseLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Default;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.BorderColor = Color.White;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void pnVJ_MouseEnter(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 3;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void pnVJ2_MouseEnter(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 3;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void pnVJ3_MouseEnter(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 3;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void cmdPm1_MouseEnter(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 3;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void cmdDowntime_MouseEnter(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 3;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void btnEnergy_MouseEnter(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.Hand;
+                Button btn = (Button)sender;
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 3;
+                btn.FlatAppearance.BorderColor = Color.HotPink;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void pnVJ2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

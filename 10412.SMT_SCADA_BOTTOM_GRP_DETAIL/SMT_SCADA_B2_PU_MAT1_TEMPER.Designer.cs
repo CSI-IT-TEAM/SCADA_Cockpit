@@ -200,7 +200,7 @@
             this.lbl_iso2_war1.ForeColor = System.Drawing.Color.White;
             this.lbl_iso2_war1.Location = new System.Drawing.Point(871, 929);
             this.lbl_iso2_war1.Name = "lbl_iso2_war1";
-            this.lbl_iso2_war1.Size = new System.Drawing.Size(385, 122);
+            this.lbl_iso2_war1.Size = new System.Drawing.Size(391, 122);
             this.lbl_iso2_war1.TabIndex = 28;
             this.lbl_iso2_war1.Text = "40°C - 50°C";
             this.lbl_iso2_war1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

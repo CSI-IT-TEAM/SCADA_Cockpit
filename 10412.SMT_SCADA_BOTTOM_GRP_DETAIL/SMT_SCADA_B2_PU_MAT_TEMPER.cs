@@ -28,8 +28,11 @@ namespace FORM
         List<Label> lstLabel = new List<Label>();
         private void cmdBack_Click(object sender, EventArgs e)
         {
+            //ComVar.Var.callForm = "back";
+            tmrDate.Stop();
             ComVar.Var.callForm = "back";
         }
+
 
         #region DB
         private DataTable SEL_TRACKING_DATA(string argType, string argDate, string argMachine)

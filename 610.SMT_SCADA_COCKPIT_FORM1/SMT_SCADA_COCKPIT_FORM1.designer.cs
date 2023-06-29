@@ -33,24 +33,26 @@
             this.gridBand12 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmdF1 = new System.Windows.Forms.Button();
+            this.cmdF2 = new System.Windows.Forms.Button();
+            this.cmdF3 = new System.Windows.Forms.Button();
+            this.cmdF5 = new System.Windows.Forms.Button();
+            this.cmdF4 = new System.Windows.Forms.Button();
+            this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.circularGauge1 = new DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge();
+            this.labelComponent1 = new DevExpress.XtraGauges.Win.Base.LabelComponent();
+            this.arcScaleRangeBarComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent();
+            this.ascInv = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tblMenu = new System.Windows.Forms.TableLayoutPanel();
             this.pnF2 = new System.Windows.Forms.Panel();
-            this.pnF3 = new System.Windows.Forms.Panel();
-            this.pnF5 = new System.Windows.Forms.Panel();
-            this.pnF4 = new System.Windows.Forms.Panel();
-            this.pnF1 = new System.Windows.Forms.Panel();
-            this.pnLT = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tmrBlink = new System.Windows.Forms.Timer(this.components);
             this.gpExF1 = new FORM.GroupBoxEx();
             this.aPn1 = new FORM.AdvancedPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pnF3 = new System.Windows.Forms.Panel();
+            this.pnF5 = new System.Windows.Forms.Panel();
             this.gpExF2 = new FORM.GroupBoxEx();
             this.advancedPanel1 = new FORM.AdvancedPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,34 +65,34 @@
             this.gpExF5 = new FORM.GroupBoxEx();
             this.advancedPanel4 = new FORM.AdvancedPanel();
             this.label8 = new System.Windows.Forms.Label();
+            this.pnF4 = new System.Windows.Forms.Panel();
+            this.pnF1 = new System.Windows.Forms.Panel();
             this.gpExLT = new FORM.GroupBoxEx();
             this.advancedPanel5 = new FORM.AdvancedPanel();
             this.label10 = new System.Windows.Forms.Label();
-            this.pnVJ3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pnVJ = new System.Windows.Forms.Panel();
-            this.lblVinhCuu = new System.Windows.Forms.Label();
+            this.pnLT = new System.Windows.Forms.Panel();
+            this.tmrBlink = new System.Windows.Forms.Timer(this.components);
+            this.glowTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cmdScadaBottom = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnEnergy = new System.Windows.Forms.Button();
+            this.cmdDowntime = new System.Windows.Forms.Button();
+            this.cmdPm1 = new System.Windows.Forms.Button();
             this.pnVJ2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmdPm1 = new System.Windows.Forms.Button();
-            this.cmdDowntime = new System.Windows.Forms.Button();
-            this.btnEnergy = new System.Windows.Forms.Button();
-            this.cmdScadaBottom = new System.Windows.Forms.Button();
-            this.cmdF1 = new System.Windows.Forms.Button();
-            this.cmdF2 = new System.Windows.Forms.Button();
-            this.cmdF3 = new System.Windows.Forms.Button();
-            this.cmdF5 = new System.Windows.Forms.Button();
-            this.cmdF4 = new System.Windows.Forms.Button();
-            this.cmdBack = new System.Windows.Forms.Button();
-            this.labelComponent1 = new DevExpress.XtraGauges.Win.Base.LabelComponent();
-            this.arcScaleRangeBarComponent1 = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent();
-            this.ascInv = new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent();
+            this.pnVJ = new System.Windows.Forms.Panel();
+            this.lblVinhCuu = new System.Windows.Forms.Label();
+            this.pnVJ3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tblMenu.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.gpExF1.SuspendLayout();
             this.aPn1.SuspendLayout();
             this.gpExF2.SuspendLayout();
@@ -103,12 +105,11 @@
             this.advancedPanel4.SuspendLayout();
             this.gpExLT.SuspendLayout();
             this.advancedPanel5.SuspendLayout();
-            this.pnVJ3.SuspendLayout();
-            this.pnVJ.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pnVJ2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).BeginInit();
+            this.pnVJ.SuspendLayout();
+            this.pnVJ3.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridBand12
@@ -137,6 +138,116 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1920, 110);
             this.panel1.TabIndex = 21;
+            // 
+            // cmdF1
+            // 
+            this.cmdF1.BackColor = System.Drawing.Color.Transparent;
+            this.cmdF1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF1.BackgroundImage")));
+            this.cmdF1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdF1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdF1.FlatAppearance.BorderSize = 0;
+            this.cmdF1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdF1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdF1.ForeColor = System.Drawing.Color.Navy;
+            this.cmdF1.Location = new System.Drawing.Point(833, 8);
+            this.cmdF1.Name = "cmdF1";
+            this.cmdF1.Size = new System.Drawing.Size(111, 101);
+            this.cmdF1.TabIndex = 72;
+            this.cmdF1.Text = "F1";
+            this.cmdF1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdF1.UseVisualStyleBackColor = false;
+            this.cmdF1.Visible = false;
+            // 
+            // cmdF2
+            // 
+            this.cmdF2.BackColor = System.Drawing.Color.Transparent;
+            this.cmdF2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF2.BackgroundImage")));
+            this.cmdF2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdF2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdF2.FlatAppearance.BorderSize = 0;
+            this.cmdF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdF2.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdF2.ForeColor = System.Drawing.Color.Navy;
+            this.cmdF2.Location = new System.Drawing.Point(943, 6);
+            this.cmdF2.Name = "cmdF2";
+            this.cmdF2.Size = new System.Drawing.Size(111, 101);
+            this.cmdF2.TabIndex = 71;
+            this.cmdF2.Text = "F2";
+            this.cmdF2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdF2.UseVisualStyleBackColor = false;
+            this.cmdF2.Visible = false;
+            // 
+            // cmdF3
+            // 
+            this.cmdF3.BackColor = System.Drawing.Color.Transparent;
+            this.cmdF3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF3.BackgroundImage")));
+            this.cmdF3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdF3.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdF3.FlatAppearance.BorderSize = 0;
+            this.cmdF3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdF3.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdF3.ForeColor = System.Drawing.Color.Navy;
+            this.cmdF3.Location = new System.Drawing.Point(1052, 6);
+            this.cmdF3.Name = "cmdF3";
+            this.cmdF3.Size = new System.Drawing.Size(111, 101);
+            this.cmdF3.TabIndex = 70;
+            this.cmdF3.Text = "F3";
+            this.cmdF3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdF3.UseVisualStyleBackColor = false;
+            this.cmdF3.Visible = false;
+            // 
+            // cmdF5
+            // 
+            this.cmdF5.BackColor = System.Drawing.Color.Transparent;
+            this.cmdF5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF5.BackgroundImage")));
+            this.cmdF5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdF5.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdF5.FlatAppearance.BorderSize = 0;
+            this.cmdF5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdF5.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdF5.ForeColor = System.Drawing.Color.Navy;
+            this.cmdF5.Location = new System.Drawing.Point(1268, 3);
+            this.cmdF5.Name = "cmdF5";
+            this.cmdF5.Size = new System.Drawing.Size(111, 101);
+            this.cmdF5.TabIndex = 69;
+            this.cmdF5.Text = "F5";
+            this.cmdF5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdF5.UseVisualStyleBackColor = false;
+            this.cmdF5.Visible = false;
+            // 
+            // cmdF4
+            // 
+            this.cmdF4.BackColor = System.Drawing.Color.Transparent;
+            this.cmdF4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF4.BackgroundImage")));
+            this.cmdF4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdF4.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdF4.FlatAppearance.BorderSize = 0;
+            this.cmdF4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdF4.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdF4.ForeColor = System.Drawing.Color.Navy;
+            this.cmdF4.Location = new System.Drawing.Point(1160, 6);
+            this.cmdF4.Name = "cmdF4";
+            this.cmdF4.Size = new System.Drawing.Size(111, 101);
+            this.cmdF4.TabIndex = 68;
+            this.cmdF4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdF4.UseVisualStyleBackColor = false;
+            this.cmdF4.Visible = false;
+            this.cmdF4.Click += new System.EventHandler(this.cmdF4_Click);
+            // 
+            // cmdBack
+            // 
+            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
+            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdBack.FlatAppearance.BorderSize = 0;
+            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBack.Location = new System.Drawing.Point(1388, 5);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(108, 101);
+            this.cmdBack.TabIndex = 67;
+            this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
             // lblDate
             // 
@@ -174,6 +285,46 @@
             this.arcScaleRangeBarComponent1});
             this.circularGauge1.Scales.AddRange(new DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent[] {
             this.ascInv});
+            // 
+            // labelComponent1
+            // 
+            this.labelComponent1.AppearanceText.Font = new System.Drawing.Font("DS-Digital", 44F);
+            this.labelComponent1.AppearanceText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:DarkOrange");
+            this.labelComponent1.Name = "circularGauge1_Label1";
+            this.labelComponent1.Size = new System.Drawing.SizeF(140F, 60F);
+            this.labelComponent1.Text = "0";
+            this.labelComponent1.ZOrder = -1001;
+            // 
+            // arcScaleRangeBarComponent1
+            // 
+            this.arcScaleRangeBarComponent1.EndOffset = 4F;
+            this.arcScaleRangeBarComponent1.Name = "circularGauge1_RangeBar2";
+            this.arcScaleRangeBarComponent1.RoundedCaps = true;
+            this.arcScaleRangeBarComponent1.ShowBackground = true;
+            this.arcScaleRangeBarComponent1.StartOffset = 80F;
+            this.arcScaleRangeBarComponent1.ZOrder = -10;
+            // 
+            // ascInv
+            // 
+            this.ascInv.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
+            this.ascInv.AppearanceTickmarkText.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.ascInv.AppearanceTickmarkText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#484E5A");
+            this.ascInv.Center = new DevExpress.XtraGauges.Core.Base.PointF2D(125F, 125F);
+            this.ascInv.EndAngle = 90F;
+            this.ascInv.MajorTickCount = 0;
+            this.ascInv.MajorTickmark.FormatString = "{0:F0}";
+            this.ascInv.MajorTickmark.ShapeOffset = -14F;
+            this.ascInv.MajorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_1;
+            this.ascInv.MajorTickmark.TextOrientation = DevExpress.XtraGauges.Core.Model.LabelOrientation.LeftToRight;
+            this.ascInv.MaxValue = 2.5F;
+            this.ascInv.MinorTickCount = 0;
+            this.ascInv.MinorTickmark.ShapeOffset = -7F;
+            this.ascInv.MinorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_2;
+            this.ascInv.Name = "scale1";
+            this.ascInv.StartAngle = -270F;
             // 
             // tableLayoutPanel2
             // 
@@ -229,100 +380,6 @@
             this.pnF2.Size = new System.Drawing.Size(313, 675);
             this.pnF2.TabIndex = 10;
             // 
-            // pnF3
-            // 
-            this.pnF3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF3.Location = new System.Drawing.Point(641, 146);
-            this.pnF3.Name = "pnF3";
-            this.pnF3.Size = new System.Drawing.Size(313, 675);
-            this.pnF3.TabIndex = 11;
-            // 
-            // pnF5
-            // 
-            this.pnF5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF5.Location = new System.Drawing.Point(1279, 146);
-            this.pnF5.Name = "pnF5";
-            this.pnF5.Size = new System.Drawing.Size(313, 675);
-            this.pnF5.TabIndex = 13;
-            // 
-            // pnF4
-            // 
-            this.pnF4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF4.Location = new System.Drawing.Point(960, 146);
-            this.pnF4.Name = "pnF4";
-            this.pnF4.Size = new System.Drawing.Size(313, 675);
-            this.pnF4.TabIndex = 12;
-            // 
-            // pnF1
-            // 
-            this.pnF1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnF1.Location = new System.Drawing.Point(3, 146);
-            this.pnF1.Name = "pnF1";
-            this.pnF1.Size = new System.Drawing.Size(313, 675);
-            this.pnF1.TabIndex = 9;
-            // 
-            // pnLT
-            // 
-            this.pnLT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnLT.Location = new System.Drawing.Point(1598, 146);
-            this.pnLT.Name = "pnLT";
-            this.pnLT.Size = new System.Drawing.Size(313, 675);
-            this.pnLT.TabIndex = 19;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 8;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.Controls.Add(this.pnVJ3, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pnVJ, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pnVJ2, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cmdPm1, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cmdDowntime, 5, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnEnergy, 6, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panel2, 3, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1914, 134);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.cmdScadaBottom);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(720, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(233, 128);
-            this.panel2.TabIndex = 90;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.label9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(120, -1);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 26);
-            this.label9.TabIndex = 73;
-            this.label9.Text = "Bottom";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // tmrBlink
-            // 
-            this.tmrBlink.Interval = 500;
-            this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
-            // 
             // gpExF1
             // 
             this.gpExF1.BackgroundPanelImage = null;
@@ -374,6 +431,22 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Factory 1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pnF3
+            // 
+            this.pnF3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF3.Location = new System.Drawing.Point(641, 146);
+            this.pnF3.Name = "pnF3";
+            this.pnF3.Size = new System.Drawing.Size(313, 675);
+            this.pnF3.TabIndex = 11;
+            // 
+            // pnF5
+            // 
+            this.pnF5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF5.Location = new System.Drawing.Point(1279, 146);
+            this.pnF5.Name = "pnF5";
+            this.pnF5.Size = new System.Drawing.Size(313, 675);
+            this.pnF5.TabIndex = 13;
             // 
             // gpExF2
             // 
@@ -583,6 +656,22 @@
             this.label8.Text = "Factory 5";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pnF4
+            // 
+            this.pnF4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF4.Location = new System.Drawing.Point(960, 146);
+            this.pnF4.Name = "pnF4";
+            this.pnF4.Size = new System.Drawing.Size(313, 675);
+            this.pnF4.TabIndex = 12;
+            // 
+            // pnF1
+            // 
+            this.pnF1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnF1.Location = new System.Drawing.Point(3, 146);
+            this.pnF1.Name = "pnF1";
+            this.pnF1.Size = new System.Drawing.Size(313, 675);
+            this.pnF1.TabIndex = 9;
+            // 
             // gpExLT
             // 
             this.gpExLT.BackgroundPanelImage = null;
@@ -635,129 +724,34 @@
             this.label10.Text = "Long Thanh";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pnVJ3
+            // pnLT
             // 
-            this.pnVJ3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ3.BackgroundImage")));
-            this.pnVJ3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnVJ3.Controls.Add(this.label4);
-            this.pnVJ3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnVJ3.Location = new System.Drawing.Point(481, 3);
-            this.pnVJ3.Name = "pnVJ3";
-            this.pnVJ3.Size = new System.Drawing.Size(233, 128);
-            this.pnVJ3.TabIndex = 81;
+            this.pnLT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnLT.Location = new System.Drawing.Point(1598, 146);
+            this.pnLT.Name = "pnLT";
+            this.pnLT.Size = new System.Drawing.Size(313, 675);
+            this.pnLT.TabIndex = 19;
             // 
-            // label4
+            // tmrBlink
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(120, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 26);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Tan Phu";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tmrBlink.Interval = 500;
+            this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
             // 
-            // pnVJ
+            // glowTimer
             // 
-            this.pnVJ.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ.BackgroundImage")));
-            this.pnVJ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnVJ.Controls.Add(this.lblVinhCuu);
-            this.pnVJ.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnVJ.Location = new System.Drawing.Point(3, 3);
-            this.pnVJ.Name = "pnVJ";
-            this.pnVJ.Size = new System.Drawing.Size(233, 128);
-            this.pnVJ.TabIndex = 79;
+            this.glowTimer.Enabled = true;
+            this.glowTimer.Interval = 50;
+            this.glowTimer.Tick += new System.EventHandler(this.glowTimer_Tick);
             // 
-            // lblVinhCuu
+            // panel2
             // 
-            this.lblVinhCuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.lblVinhCuu.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVinhCuu.ForeColor = System.Drawing.Color.White;
-            this.lblVinhCuu.Location = new System.Drawing.Point(120, 0);
-            this.lblVinhCuu.Name = "lblVinhCuu";
-            this.lblVinhCuu.Size = new System.Drawing.Size(113, 26);
-            this.lblVinhCuu.TabIndex = 6;
-            this.lblVinhCuu.Text = "Vinh Cuu";
-            this.lblVinhCuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnVJ2
-            // 
-            this.pnVJ2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ2.BackgroundImage")));
-            this.pnVJ2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnVJ2.Controls.Add(this.label3);
-            this.pnVJ2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnVJ2.Location = new System.Drawing.Point(242, 3);
-            this.pnVJ2.Name = "pnVJ2";
-            this.pnVJ2.Size = new System.Drawing.Size(233, 128);
-            this.pnVJ2.TabIndex = 80;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
-            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(120, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 26);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Long Thanh";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmdPm1
-            // 
-            this.cmdPm1.BackColor = System.Drawing.Color.White;
-            this.cmdPm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdPm1.BackgroundImage")));
-            this.cmdPm1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdPm1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmdPm1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdPm1.FlatAppearance.BorderSize = 0;
-            this.cmdPm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdPm1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdPm1.ForeColor = System.Drawing.Color.Navy;
-            this.cmdPm1.Location = new System.Drawing.Point(959, 3);
-            this.cmdPm1.Name = "cmdPm1";
-            this.cmdPm1.Size = new System.Drawing.Size(233, 128);
-            this.cmdPm1.TabIndex = 87;
-            this.cmdPm1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdPm1.UseVisualStyleBackColor = false;
-            this.cmdPm1.Click += new System.EventHandler(this.cmdPm1_Click);
-            // 
-            // cmdDowntime
-            // 
-            this.cmdDowntime.BackColor = System.Drawing.Color.Transparent;
-            this.cmdDowntime.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdDowntime.BackgroundImage")));
-            this.cmdDowntime.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmdDowntime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmdDowntime.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.cmdDowntime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdDowntime.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdDowntime.ForeColor = System.Drawing.Color.Navy;
-            this.cmdDowntime.Location = new System.Drawing.Point(1198, 3);
-            this.cmdDowntime.Name = "cmdDowntime";
-            this.cmdDowntime.Size = new System.Drawing.Size(233, 128);
-            this.cmdDowntime.TabIndex = 88;
-            this.cmdDowntime.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdDowntime.UseVisualStyleBackColor = false;
-            this.cmdDowntime.Click += new System.EventHandler(this.cmdDowntime_Click);
-            // 
-            // btnEnergy
-            // 
-            this.btnEnergy.BackColor = System.Drawing.Color.Transparent;
-            this.btnEnergy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEnergy.BackgroundImage")));
-            this.btnEnergy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEnergy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEnergy.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEnergy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnergy.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.btnEnergy.ForeColor = System.Drawing.Color.Navy;
-            this.btnEnergy.Location = new System.Drawing.Point(1437, 3);
-            this.btnEnergy.Name = "btnEnergy";
-            this.btnEnergy.Size = new System.Drawing.Size(233, 128);
-            this.btnEnergy.TabIndex = 89;
-            this.btnEnergy.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEnergy.UseVisualStyleBackColor = false;
-            this.btnEnergy.Click += new System.EventHandler(this.btnEnergy_Click);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.cmdScadaBottom);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(720, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(233, 128);
+            this.panel2.TabIndex = 90;
             // 
             // cmdScadaBottom
             // 
@@ -777,156 +771,183 @@
             this.cmdScadaBottom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdScadaBottom.UseVisualStyleBackColor = false;
             this.cmdScadaBottom.Click += new System.EventHandler(this.cmdScadaBottom_Click);
+            this.cmdScadaBottom.MouseEnter += new System.EventHandler(this.cmdScadaBottom_MouseEnter);
+            this.cmdScadaBottom.MouseLeave += new System.EventHandler(this.cmdScadaBottom_MouseLeave);
             // 
-            // cmdF1
+            // label9
             // 
-            this.cmdF1.BackColor = System.Drawing.Color.Transparent;
-            this.cmdF1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF1.BackgroundImage")));
-            this.cmdF1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdF1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdF1.FlatAppearance.BorderSize = 0;
-            this.cmdF1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdF1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdF1.ForeColor = System.Drawing.Color.Navy;
-            this.cmdF1.Location = new System.Drawing.Point(833, 8);
-            this.cmdF1.Name = "cmdF1";
-            this.cmdF1.Size = new System.Drawing.Size(111, 101);
-            this.cmdF1.TabIndex = 72;
-            this.cmdF1.Text = "F1";
-            this.cmdF1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdF1.UseVisualStyleBackColor = false;
-            this.cmdF1.Visible = false;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.label9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(76, -1);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(157, 26);
+            this.label9.TabIndex = 73;
+            this.label9.Text = "Bottom SCADA";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // cmdF2
+            // btnEnergy
             // 
-            this.cmdF2.BackColor = System.Drawing.Color.Transparent;
-            this.cmdF2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF2.BackgroundImage")));
-            this.cmdF2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdF2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdF2.FlatAppearance.BorderSize = 0;
-            this.cmdF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdF2.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdF2.ForeColor = System.Drawing.Color.Navy;
-            this.cmdF2.Location = new System.Drawing.Point(943, 6);
-            this.cmdF2.Name = "cmdF2";
-            this.cmdF2.Size = new System.Drawing.Size(111, 101);
-            this.cmdF2.TabIndex = 71;
-            this.cmdF2.Text = "F2";
-            this.cmdF2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdF2.UseVisualStyleBackColor = false;
-            this.cmdF2.Visible = false;
+            this.btnEnergy.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnergy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEnergy.BackgroundImage")));
+            this.btnEnergy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEnergy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEnergy.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEnergy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnergy.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.btnEnergy.ForeColor = System.Drawing.Color.Navy;
+            this.btnEnergy.Location = new System.Drawing.Point(1437, 3);
+            this.btnEnergy.Name = "btnEnergy";
+            this.btnEnergy.Size = new System.Drawing.Size(233, 128);
+            this.btnEnergy.TabIndex = 89;
+            this.btnEnergy.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEnergy.UseVisualStyleBackColor = false;
+            this.btnEnergy.Click += new System.EventHandler(this.btnEnergy_Click);
+            this.btnEnergy.MouseEnter += new System.EventHandler(this.btnEnergy_MouseEnter);
+            this.btnEnergy.MouseLeave += new System.EventHandler(this.btnEnergy_MouseLeave);
             // 
-            // cmdF3
+            // cmdDowntime
             // 
-            this.cmdF3.BackColor = System.Drawing.Color.Transparent;
-            this.cmdF3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF3.BackgroundImage")));
-            this.cmdF3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdF3.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdF3.FlatAppearance.BorderSize = 0;
-            this.cmdF3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdF3.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdF3.ForeColor = System.Drawing.Color.Navy;
-            this.cmdF3.Location = new System.Drawing.Point(1052, 6);
-            this.cmdF3.Name = "cmdF3";
-            this.cmdF3.Size = new System.Drawing.Size(111, 101);
-            this.cmdF3.TabIndex = 70;
-            this.cmdF3.Text = "F3";
-            this.cmdF3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdF3.UseVisualStyleBackColor = false;
-            this.cmdF3.Visible = false;
+            this.cmdDowntime.BackColor = System.Drawing.Color.Transparent;
+            this.cmdDowntime.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdDowntime.BackgroundImage")));
+            this.cmdDowntime.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmdDowntime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmdDowntime.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.cmdDowntime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdDowntime.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdDowntime.ForeColor = System.Drawing.Color.Navy;
+            this.cmdDowntime.Location = new System.Drawing.Point(1198, 3);
+            this.cmdDowntime.Name = "cmdDowntime";
+            this.cmdDowntime.Size = new System.Drawing.Size(233, 128);
+            this.cmdDowntime.TabIndex = 88;
+            this.cmdDowntime.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdDowntime.UseVisualStyleBackColor = false;
+            this.cmdDowntime.Click += new System.EventHandler(this.cmdDowntime_Click);
+            this.cmdDowntime.MouseEnter += new System.EventHandler(this.cmdDowntime_MouseEnter);
+            this.cmdDowntime.MouseLeave += new System.EventHandler(this.cmdDowntime_MouseLeave);
             // 
-            // cmdF5
+            // cmdPm1
             // 
-            this.cmdF5.BackColor = System.Drawing.Color.Transparent;
-            this.cmdF5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF5.BackgroundImage")));
-            this.cmdF5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdF5.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdF5.FlatAppearance.BorderSize = 0;
-            this.cmdF5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdF5.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdF5.ForeColor = System.Drawing.Color.Navy;
-            this.cmdF5.Location = new System.Drawing.Point(1268, 3);
-            this.cmdF5.Name = "cmdF5";
-            this.cmdF5.Size = new System.Drawing.Size(111, 101);
-            this.cmdF5.TabIndex = 69;
-            this.cmdF5.Text = "F5";
-            this.cmdF5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdF5.UseVisualStyleBackColor = false;
-            this.cmdF5.Visible = false;
+            this.cmdPm1.BackColor = System.Drawing.Color.Black;
+            this.cmdPm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdPm1.BackgroundImage")));
+            this.cmdPm1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdPm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmdPm1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdPm1.FlatAppearance.BorderSize = 0;
+            this.cmdPm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdPm1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdPm1.ForeColor = System.Drawing.Color.Navy;
+            this.cmdPm1.Location = new System.Drawing.Point(959, 3);
+            this.cmdPm1.Name = "cmdPm1";
+            this.cmdPm1.Size = new System.Drawing.Size(233, 128);
+            this.cmdPm1.TabIndex = 87;
+            this.cmdPm1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdPm1.UseVisualStyleBackColor = false;
+            this.cmdPm1.Click += new System.EventHandler(this.cmdPm1_Click);
+            this.cmdPm1.MouseEnter += new System.EventHandler(this.cmdPm1_MouseEnter);
+            this.cmdPm1.MouseLeave += new System.EventHandler(this.cmdPm1_MouseLeave);
             // 
-            // cmdF4
+            // pnVJ2
             // 
-            this.cmdF4.BackColor = System.Drawing.Color.Transparent;
-            this.cmdF4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdF4.BackgroundImage")));
-            this.cmdF4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdF4.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdF4.FlatAppearance.BorderSize = 0;
-            this.cmdF4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdF4.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdF4.ForeColor = System.Drawing.Color.Navy;
-            this.cmdF4.Location = new System.Drawing.Point(1160, 6);
-            this.cmdF4.Name = "cmdF4";
-            this.cmdF4.Size = new System.Drawing.Size(111, 101);
-            this.cmdF4.TabIndex = 68;
-            this.cmdF4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdF4.UseVisualStyleBackColor = false;
-            this.cmdF4.Visible = false;
-            this.cmdF4.Click += new System.EventHandler(this.cmdF4_Click);
+            this.pnVJ2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ2.BackgroundImage")));
+            this.pnVJ2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnVJ2.Controls.Add(this.label3);
+            this.pnVJ2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnVJ2.Location = new System.Drawing.Point(242, 3);
+            this.pnVJ2.Name = "pnVJ2";
+            this.pnVJ2.Size = new System.Drawing.Size(233, 128);
+            this.pnVJ2.TabIndex = 80;
+            this.pnVJ2.MouseEnter += new System.EventHandler(this.pnVJ2_MouseEnter);
+            this.pnVJ2.MouseLeave += new System.EventHandler(this.pnVJ2_MouseLeave);
             // 
-            // cmdBack
+            // label3
             // 
-            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
-            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
-            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdBack.FlatAppearance.BorderSize = 0;
-            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBack.Location = new System.Drawing.Point(1388, 5);
-            this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(108, 101);
-            this.cmdBack.TabIndex = 67;
-            this.cmdBack.UseVisualStyleBackColor = false;
-            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(120, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 26);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Long Thanh";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelComponent1
+            // pnVJ
             // 
-            this.labelComponent1.AppearanceText.Font = new System.Drawing.Font("DS-Digital", 44F);
-            this.labelComponent1.AppearanceText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:DarkOrange");
-            this.labelComponent1.Name = "circularGauge1_Label1";
-            this.labelComponent1.Size = new System.Drawing.SizeF(140F, 60F);
-            this.labelComponent1.Text = "0";
-            this.labelComponent1.ZOrder = -1001;
+            this.pnVJ.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ.BackgroundImage")));
+            this.pnVJ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnVJ.Controls.Add(this.lblVinhCuu);
+            this.pnVJ.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnVJ.Location = new System.Drawing.Point(3, 3);
+            this.pnVJ.Name = "pnVJ";
+            this.pnVJ.Size = new System.Drawing.Size(233, 128);
+            this.pnVJ.TabIndex = 79;
+            this.pnVJ.MouseEnter += new System.EventHandler(this.pnVJ_MouseEnter);
+            this.pnVJ.MouseLeave += new System.EventHandler(this.pnVJ_MouseLeave);
             // 
-            // arcScaleRangeBarComponent1
+            // lblVinhCuu
             // 
-            this.arcScaleRangeBarComponent1.EndOffset = 4F;
-            this.arcScaleRangeBarComponent1.Name = "circularGauge1_RangeBar2";
-            this.arcScaleRangeBarComponent1.RoundedCaps = true;
-            this.arcScaleRangeBarComponent1.ShowBackground = true;
-            this.arcScaleRangeBarComponent1.StartOffset = 80F;
-            this.arcScaleRangeBarComponent1.ZOrder = -10;
+            this.lblVinhCuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.lblVinhCuu.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVinhCuu.ForeColor = System.Drawing.Color.White;
+            this.lblVinhCuu.Location = new System.Drawing.Point(120, 0);
+            this.lblVinhCuu.Name = "lblVinhCuu";
+            this.lblVinhCuu.Size = new System.Drawing.Size(113, 26);
+            this.lblVinhCuu.TabIndex = 6;
+            this.lblVinhCuu.Text = "Vinh Cuu";
+            this.lblVinhCuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ascInv
+            // pnVJ3
             // 
-            this.ascInv.AppearanceMajorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceMajorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceMinorTickmark.BorderBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceMinorTickmark.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:White");
-            this.ascInv.AppearanceTickmarkText.Font = new System.Drawing.Font("Tahoma", 8.5F);
-            this.ascInv.AppearanceTickmarkText.TextBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#484E5A");
-            this.ascInv.Center = new DevExpress.XtraGauges.Core.Base.PointF2D(125F, 125F);
-            this.ascInv.EndAngle = 90F;
-            this.ascInv.MajorTickCount = 0;
-            this.ascInv.MajorTickmark.FormatString = "{0:F0}";
-            this.ascInv.MajorTickmark.ShapeOffset = -14F;
-            this.ascInv.MajorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_1;
-            this.ascInv.MajorTickmark.TextOrientation = DevExpress.XtraGauges.Core.Model.LabelOrientation.LeftToRight;
-            this.ascInv.MaxValue = 2.5F;
-            this.ascInv.MinorTickCount = 0;
-            this.ascInv.MinorTickmark.ShapeOffset = -7F;
-            this.ascInv.MinorTickmark.ShapeType = DevExpress.XtraGauges.Core.Model.TickmarkShapeType.Circular_Style16_2;
-            this.ascInv.Name = "scale1";
-            this.ascInv.StartAngle = -270F;
+            this.pnVJ3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnVJ3.BackgroundImage")));
+            this.pnVJ3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnVJ3.Controls.Add(this.label4);
+            this.pnVJ3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnVJ3.Location = new System.Drawing.Point(481, 3);
+            this.pnVJ3.Name = "pnVJ3";
+            this.pnVJ3.Size = new System.Drawing.Size(233, 128);
+            this.pnVJ3.TabIndex = 81;
+            this.pnVJ3.MouseEnter += new System.EventHandler(this.pnVJ3_MouseEnter);
+            this.pnVJ3.MouseLeave += new System.EventHandler(this.pnVJ3_MouseLeave);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(60)))));
+            this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(120, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 26);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Tan Phu";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 8;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.Controls.Add(this.pnVJ3, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pnVJ, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pnVJ2, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cmdPm1, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cmdDowntime, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnEnergy, 6, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel2, 3, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1914, 134);
+            this.tableLayoutPanel3.TabIndex = 0;
             // 
             // SMT_SCADA_COCKPIT_FORM1
             // 
@@ -942,10 +963,11 @@
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_COCKPIT_MENU_VisibleChanged);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.circularGauge1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tblMenu.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.gpExF1.ResumeLayout(false);
             this.aPn1.ResumeLayout(false);
             this.gpExF2.ResumeLayout(false);
@@ -958,12 +980,11 @@
             this.advancedPanel4.ResumeLayout(false);
             this.gpExLT.ResumeLayout(false);
             this.advancedPanel5.ResumeLayout(false);
-            this.pnVJ3.ResumeLayout(false);
-            this.pnVJ.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.pnVJ2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.labelComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arcScaleRangeBarComponent1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ascInv)).EndInit();
+            this.pnVJ.ResumeLayout(false);
+            this.pnVJ3.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -990,18 +1011,11 @@
         private System.Windows.Forms.Panel pnF3;
         private System.Windows.Forms.Panel pnF4;
         private System.Windows.Forms.Panel pnF5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Panel pnVJ;
-        private System.Windows.Forms.Label lblVinhCuu;
         private System.Windows.Forms.Panel pnF1;
         private GroupBoxEx gpExF1;
         private AdvancedPanel aPn1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnF2;
-        private System.Windows.Forms.Panel pnVJ2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel pnVJ3;
-        private System.Windows.Forms.Label label4;
         private GroupBoxEx gpExF2;
         private AdvancedPanel advancedPanel1;
         private System.Windows.Forms.Label label5;
@@ -1015,15 +1029,23 @@
         private AdvancedPanel advancedPanel4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Timer tmrBlink;
+        private GroupBoxEx gpExLT;
+        private AdvancedPanel advancedPanel5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel pnLT;
+        private System.Windows.Forms.Timer glowTimer;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Panel pnVJ3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel pnVJ;
+        private System.Windows.Forms.Label lblVinhCuu;
+        private System.Windows.Forms.Panel pnVJ2;
+        private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button cmdPm1;
         public System.Windows.Forms.Button cmdDowntime;
         public System.Windows.Forms.Button btnEnergy;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button cmdScadaBottom;
-        private GroupBoxEx gpExLT;
-        private AdvancedPanel advancedPanel5;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel pnLT;
     }
 }

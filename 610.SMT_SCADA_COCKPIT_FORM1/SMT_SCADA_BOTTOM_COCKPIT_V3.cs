@@ -457,7 +457,7 @@ namespace FORM
 
         private void call_from(int from)
         {
-            ComVar.Var._IsBack = true;
+           
             /*
                 1 - lbl_OS_GRP_RUBBER
                 2 - lbl_OS_GRP_EVA
@@ -482,6 +482,7 @@ namespace FORM
 
             DataTable dt = SEL_F_CALL("Q", "2", Name[from]);
             if (dt == null) return;
+            ComVar.Var._IsBack = true;
             ComVar.Var.callForm = dt.Rows[0]["FORM_CALL_SEQ"].ToString();
         }
 
@@ -558,6 +559,76 @@ namespace FORM
         private void button7_Click(object sender, EventArgs e)
         {
             call_from(8);
+        }
+
+        private void button8_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button5_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button4_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button6_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button6_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void button8_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void button4_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
         }
     }
 }

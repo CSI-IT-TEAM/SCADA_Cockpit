@@ -670,6 +670,8 @@ namespace FORM
 
         private void cmdBack_Click(object sender, EventArgs e)
         {
+            //ComVar.Var.callForm = "back";
+            tmrDate.Stop();
             ComVar.Var.callForm = "back";
         }
 

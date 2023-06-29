@@ -43,6 +43,12 @@
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView2 = new DevExpress.XtraCharts.SplineSeriesView();
             DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation2 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
@@ -50,12 +56,6 @@
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.a1Panel2 = new OS_DSF.A1Panel();
             this.chartCool = new DevExpress.XtraCharts.ChartControl();
             this.label2 = new System.Windows.Forms.Label();
@@ -93,6 +93,72 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1904, 76);
             this.pnTop.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Silver;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(1495, 39);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 23);
+            this.label8.TabIndex = 90;
+            this.label8.Text = "Max: 20";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Silver;
+            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1407, 39);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 23);
+            this.label7.TabIndex = 90;
+            this.label7.Text = "Min: 10";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Silver;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1495, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 23);
+            this.label5.TabIndex = 90;
+            this.label5.Text = "Max: 158";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Cyan;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1337, 39);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 23);
+            this.label6.TabIndex = 90;
+            this.label6.Text = "Cool";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1407, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 23);
+            this.label4.TabIndex = 90;
+            this.label4.Text = "Min: 152";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1337, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 23);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "Heat";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnTest
             // 
@@ -149,7 +215,7 @@
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(1047, 76);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "        CTM Phylon Temperature Tracking";
+            this.lblHeader.Text = "        Phylon CTM Temperature Tracking";
             // 
             // tblMain
             // 
@@ -197,72 +263,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(650, 965);
             this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1337, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 23);
-            this.label3.TabIndex = 90;
-            this.label3.Text = "Heat";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Silver;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1407, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 23);
-            this.label4.TabIndex = 90;
-            this.label4.Text = "Min: 152";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Silver;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1495, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 23);
-            this.label5.TabIndex = 90;
-            this.label5.Text = "Max: 158";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Cyan;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1337, 39);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 23);
-            this.label6.TabIndex = 90;
-            this.label6.Text = "Cool";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Silver;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1407, 39);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 23);
-            this.label7.TabIndex = 90;
-            this.label7.Text = "Min: 10";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Silver;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1495, 39);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 23);
-            this.label8.TabIndex = 90;
-            this.label8.Text = "Max: 20";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // a1Panel2
             // 

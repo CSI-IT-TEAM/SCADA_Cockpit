@@ -30,6 +30,8 @@ namespace FORM
         string _opcd = "";
         private void cmdBack_Click(object sender, EventArgs e)
         {
+            //ComVar.Var.callForm = "back";
+           // tmrTime.Stop();
             ComVar.Var.callForm = "back";
         }
         private void SMT_SCADA_BOTTOM_COCKPIT_Load(object sender, EventArgs e)

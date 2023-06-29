@@ -52,8 +52,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -61,8 +61,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1000 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel1001 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -216,6 +216,8 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.MouseEnter += new System.EventHandler(this.button6_MouseEnter);
+            this.button6.MouseLeave += new System.EventHandler(this.button6_MouseLeave);
             // 
             // label15
             // 
@@ -243,11 +245,11 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(89, 336);
+            this.label17.Location = new System.Drawing.Point(61, 340);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(230, 46);
+            this.label17.Size = new System.Drawing.Size(267, 46);
             this.label17.TabIndex = 97;
-            this.label17.Text = "PU Machine";
+            this.label17.Text = "PU Equipment";
             this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // button7
@@ -307,6 +309,8 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
+            this.button3.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
             // panel4
             // 
@@ -336,6 +340,8 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // label8
             // 
@@ -359,6 +365,17 @@
             this.panel3.Size = new System.Drawing.Size(379, 397);
             this.panel3.TabIndex = 92;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(61, 336);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(253, 46);
+            this.label11.TabIndex = 97;
+            this.label11.Text = "IP Equipment";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
@@ -376,17 +393,8 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(79, 336);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(216, 46);
-            this.label11.TabIndex = 97;
-            this.label11.Text = "IP Machine";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
             // panel2
             // 
@@ -470,6 +478,8 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
+            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
             // 
             // panel1000
             // 
@@ -481,6 +491,17 @@
             this.panel1000.Name = "panel1000";
             this.panel1000.Size = new System.Drawing.Size(634, 402);
             this.panel1000.TabIndex = 91;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(257, 356);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(143, 46);
+            this.label3.TabIndex = 91;
+            this.label3.Text = "Rubber";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button8
             // 
@@ -499,17 +520,8 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(257, 356);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 46);
-            this.label3.TabIndex = 91;
-            this.label3.Text = "Rubber";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.button8.MouseEnter += new System.EventHandler(this.button8_MouseEnter);
+            this.button8.MouseLeave += new System.EventHandler(this.button8_MouseLeave);
             // 
             // panel1001
             // 
@@ -550,6 +562,8 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
             // 
             // tblMAINok
             // 

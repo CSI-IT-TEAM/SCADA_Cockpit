@@ -95,8 +95,9 @@ namespace FORM
 
         private void cmdBack_Click(object sender, EventArgs e)
         {
+            //ComVar.Var.callForm = "back";
+            //tmrTime.Stop();
             ComVar.Var.callForm = "back";
-            tmrTime.Stop();
         }
 
         private void InitLayout()

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Base>
+	<LINECD>014</LINECD>
 	<MAIN>
-		<grpForm>SCADA_COCKPIT</grpForm>
+		<grpForm>SMT_SCADA</grpForm>
 		<FlashScreen>true</FlashScreen>
 		<Auto_Download>false</Auto_Download>
 		<AREA>NOS</AREA>
@@ -11,7 +12,7 @@
 	</MAIN>
   
 	<Auto_Download>
-		<grpForm>SCADA_COCKPIT</grpForm>
+		<grpForm>SMT_SCADA</grpForm>
 	</Auto_Download>
 	
 </Base>

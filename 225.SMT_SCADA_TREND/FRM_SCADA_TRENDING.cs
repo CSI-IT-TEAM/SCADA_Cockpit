@@ -426,6 +426,7 @@ namespace FORM
         {
             try
             {
+                if (cboArea.SelectedValue ==null) return;
                 DataTable dt = db.SP_SCADA_SET_TREELIST("Q1", dtp_To.DateTime.ToString("yyyyMMdd"), _LINE, cboLine.SelectedValue.ToString(), cboArea.SelectedValue.ToString());
                 treeList.DataSource = dt;
                 treeList.KeyFieldName = "ID";
@@ -692,48 +693,113 @@ namespace FORM
 
         private void treeList_MouseUp(object sender, MouseEventArgs e)
         {
+            int cnt = 0;
             TreeList tree = sender as TreeList;
             Point pt = new Point(e.X, e.Y);
             TreeListHitInfo hit = tree.GetHitInfo(pt);
-            int cnt = 0;
-            if (hit.Column != null && hit.Column.Caption == "Machine  -  Controller")
-            {
-                foreach (TreeListNode node in treeList.Nodes)
-                {
-                    foreach (TreeListNode node1 in node.RootNode.Nodes)
-                    {                        
-                        if (node1.Checked)
-                        {
-                            cnt++;
-                        }
-                    }
-                }
 
-                if (cnt == 0)
+           
+
+
+        
+         
+            if (hit.Column != null )
+            {
+                switch (hit.HitInfoType.ToString().ToUpper())
                 {
-                    /*
-                    foreach (TreeListNode node in treeList.Nodes)
-                    {
-                        node.Checked = true;
-                        foreach (TreeListNode node1 in node.RootNode.Nodes)
+                    case "COLUMN": //Neu click vao column header
+                        foreach (TreeListNode node in treeList.Nodes)
                         {
-                            node1.Checked = true;
+                            foreach (TreeListNode node1 in node.RootNode.Nodes)
+                            {
+                                if (node1.Checked)
+                                {
+                                    cnt++;
+                                }
+                            }
                         }
-                    }*/
+
+                        if (cnt == 0)
+                        {
+
+                            foreach (TreeListNode node in treeList.Nodes)
+                            {
+                                node.Checked = true;
+                                chkAll.Checked = true;
+                                foreach (TreeListNode node1 in node.RootNode.Nodes)
+                                {
+                                    node1.Checked = true;
+                                }
+                            }
+                        }
+                        else
+                        {
+
+                            foreach (TreeListNode node in treeList.Nodes)
+                            {
+                                node.Checked = false;
+                                chkAll.Checked = false;
+                                foreach (TreeListNode node1 in node.RootNode.Nodes)
+                                {
+                                    node1.Checked = false;
+                                }
+                            }
+                        }
+                        break;
+                    case "CELL":
+                        DevExpress.XtraTreeList.Nodes.TreeListNode clickedNode;
+                        clickedNode = hit.Node;
+                        clickedNode.Checked = !clickedNode.Checked;
+                        
+                            // if a parent node is checked or unchecked, do the same for child nodes.  
+                            if (clickedNode.HasChildren)
+                            {
+                                for (int i = 0; i < clickedNode.Nodes.Count; i++)
+                                {
+                                    clickedNode.Nodes[i].Checked = clickedNode.Checked;
+                                }
+                            }
+                            else
+                            {
+                                // a child node was checked/unchecked so deselect the parent node if all of the nodes on  
+                                // the same level aren't checked.  
+                                bool bAllChecked = true;
+                          
+                                for (int i = 0; i < clickedNode.ParentNode.Nodes.Count; i++)
+                                {
+                                    if (!clickedNode.ParentNode.Nodes[i].Checked)
+                                    {
+                                        bAllChecked = false;
+                                        break;
+                                    }
+                                }
+
+
+                                clickedNode.ParentNode.Checked = bAllChecked;
+
+                            }
+
+                        //bool bAllCheckTop = true;
+                        ////Kiem tra tat ca node 0
+                        //for (int i = 0; i < clickedNode.Nodes.Count; i++)
+                        //{
+                        //    if (!clickedNode.Nodes[i].Checked)
+                        //    {
+                        //        bAllCheckTop = false;
+                        //        break;
+                        //    }
+                        //}
+                        //chkAll.Checked = bAllCheckTop;
+                        //else if (clickedNode.Level == 1) //Child node
+                        //{
+                        //    if (!clickedNode.Checked)
+                        //    {
+                        //        clickedNode.ParentNode.Checked = false;
+                        //    }
+                        //}
+                        break;
                 }
-                else
-                {
-                     
-                     //  foreach (TreeListNode node in treeList.Nodes)
-                     //{
-                     //    node.Checked = false;
-                     //    foreach (TreeListNode node1 in node.RootNode.Nodes)
-                     //    {                             
-                     //        node1.Checked = false;
-                     //    }
-                     //}
-                     
-                }
+                
 
                 BindingChart2();
                 set_Series();

@@ -633,14 +633,14 @@ namespace FORM
         //    }
         //}
 
-        //private void CheckChildren(TreeListNode rootNode, bool isChecked)
-        //{
-        //    foreach (TreeListNode node in rootNode.Nodes)
-        //    {
-        //        CheckChildren(node, isChecked);
-        //        node.Checked = isChecked;
-        //    }
-        //}
+        private void CheckChildren(TreeListNode rootNode, bool isChecked)
+        {
+            foreach (TreeListNode node in rootNode.Nodes)
+            {
+                CheckChildren(node, isChecked);
+                node.Checked = isChecked;
+            }
+        }
 
         private void treeList_NodeCellStyle(object sender, DevExpress.XtraTreeList.GetCustomNodeCellStyleEventArgs e)
         {
@@ -696,7 +696,7 @@ namespace FORM
             Point pt = new Point(e.X, e.Y);
             TreeListHitInfo hit = tree.GetHitInfo(pt);
             int cnt = 0;
-            if (hit.Column != null)
+            if (hit.Column != null && hit.Column.Caption == "Machine  -  Controller")
             {
                 foreach (TreeListNode node in treeList.Nodes)
                 {
@@ -711,6 +711,7 @@ namespace FORM
 
                 if (cnt == 0)
                 {
+                    /*
                     foreach (TreeListNode node in treeList.Nodes)
                     {
                         node.Checked = true;
@@ -718,18 +719,20 @@ namespace FORM
                         {
                             node1.Checked = true;
                         }
-                    }
+                    }*/
                 }
                 else
                 {
-                     foreach (TreeListNode node in treeList.Nodes)
-                     {
-                         node.Checked = false;
-                         foreach (TreeListNode node1 in node.RootNode.Nodes)
-                         {                             
-                             node1.Checked = false;
-                         }
-                     }
+                     
+                     //  foreach (TreeListNode node in treeList.Nodes)
+                     //{
+                     //    node.Checked = false;
+                     //    foreach (TreeListNode node1 in node.RootNode.Nodes)
+                     //    {                             
+                     //        node1.Checked = false;
+                     //    }
+                     //}
+                     
                 }
 
                 BindingChart2();

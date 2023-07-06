@@ -312,7 +312,7 @@ namespace FORM
                             }
                             ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.Auto = false;
                             ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.MaxValue = int.Parse(dtmin_max.Rows[0]["Max"].ToString()) + 5;
-                            ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.MinValue = int.Parse(dtmin_max.Rows[0]["Max"].ToString()) - 20;
+                            ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.MinValue = int.Parse(dtmin_max.Rows[0]["Min"].ToString()) - 5;
                             ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.SideMarginsValue = 1;
                             XYDiagram diagram = (XYDiagram)chartControl1.Diagram;
                             chartControl1.CrosshairOptions.CrosshairLabelMode = DevExpress.XtraCharts.CrosshairLabelMode.ShowCommonForAllSeries;

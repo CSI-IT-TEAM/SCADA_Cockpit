@@ -312,7 +312,7 @@ namespace FORM
                             }
                             ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.Auto = false;
                             ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.MaxValue = int.Parse(dtmin_max.Rows[0]["Max"].ToString()) + 5;
-                            ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.MinValue = int.Parse(dtmin_max.Rows[0]["Max"].ToString()) - 15;
+                            ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.MinValue = int.Parse(dtmin_max.Rows[0]["Max"].ToString()) - 20;
                             ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.SideMarginsValue = 1;
                             XYDiagram diagram = (XYDiagram)chartControl1.Diagram;
                             chartControl1.CrosshairOptions.CrosshairLabelMode = DevExpress.XtraCharts.CrosshairLabelMode.ShowCommonForAllSeries;
@@ -693,64 +693,69 @@ namespace FORM
 
         private void treeList_MouseUp(object sender, MouseEventArgs e)
         {
-            int cnt = 0;
-            TreeList tree = sender as TreeList;
-            Point pt = new Point(e.X, e.Y);
-            TreeListHitInfo hit = tree.GetHitInfo(pt);
-
-           
-
-
-        
-         
-            if (hit.Column != null )
+            try
             {
-                switch (hit.HitInfoType.ToString().ToUpper())
+                int cnt = 0;
+                TreeList tree = sender as TreeList;
+                Point pt = new Point(e.X, e.Y);
+                TreeListHitInfo hit = tree.GetHitInfo(pt);
+
+
+
+
+
+
+                if (hit.Column != null)
                 {
-                    case "COLUMN": //Neu click vao column header
-                        foreach (TreeListNode node in treeList.Nodes)
-                        {
-                            foreach (TreeListNode node1 in node.RootNode.Nodes)
-                            {
-                                if (node1.Checked)
-                                {
-                                    cnt++;
-                                }
-                            }
-                        }
-
-                        if (cnt == 0)
-                        {
-
+                    switch (hit.HitInfoType.ToString().ToUpper())
+                    {
+                        case "COLUMN": //Neu click vao column header
                             foreach (TreeListNode node in treeList.Nodes)
                             {
-                                node.Checked = true;
-                                chkAll.Checked = true;
                                 foreach (TreeListNode node1 in node.RootNode.Nodes)
                                 {
-                                    node1.Checked = true;
+                                    if (node1.Checked)
+                                    {
+                                        cnt++;
+                                    }
                                 }
                             }
-                        }
-                        else
-                        {
 
-                            foreach (TreeListNode node in treeList.Nodes)
+                            if (cnt == 0)
                             {
-                                node.Checked = false;
-                                chkAll.Checked = false;
-                                foreach (TreeListNode node1 in node.RootNode.Nodes)
+
+                                foreach (TreeListNode node in treeList.Nodes)
                                 {
-                                    node1.Checked = false;
+                                    node.Checked = true;
+                                    chkAll.Checked = true;
+                                    foreach (TreeListNode node1 in node.RootNode.Nodes)
+                                    {
+                                        node1.Checked = true;
+                                    }
                                 }
                             }
-                        }
-                        break;
-                    case "CELL":
-                        DevExpress.XtraTreeList.Nodes.TreeListNode clickedNode;
-                        clickedNode = hit.Node;
-                        clickedNode.Checked = !clickedNode.Checked;
-                        
+                            else
+                            {
+
+                                foreach (TreeListNode node in treeList.Nodes)
+                                {
+                                    node.Checked = false;
+                                    chkAll.Checked = false;
+                                    foreach (TreeListNode node1 in node.RootNode.Nodes)
+                                    {
+                                        node1.Checked = false;
+                                    }
+                                }
+                            }
+
+                            BindingChart2();
+                            set_Series();
+                            break;
+                        case "CELL":
+                            DevExpress.XtraTreeList.Nodes.TreeListNode clickedNode;
+                            clickedNode = hit.Node;
+                            clickedNode.Checked = !clickedNode.Checked;
+
                             // if a parent node is checked or unchecked, do the same for child nodes.  
                             if (clickedNode.HasChildren)
                             {
@@ -764,7 +769,7 @@ namespace FORM
                                 // a child node was checked/unchecked so deselect the parent node if all of the nodes on  
                                 // the same level aren't checked.  
                                 bool bAllChecked = true;
-                          
+
                                 for (int i = 0; i < clickedNode.ParentNode.Nodes.Count; i++)
                                 {
                                     if (!clickedNode.ParentNode.Nodes[i].Checked)
@@ -779,69 +784,76 @@ namespace FORM
 
                             }
 
-                        //bool bAllCheckTop = true;
-                        ////Kiem tra tat ca node 0
-                        //for (int i = 0; i < clickedNode.Nodes.Count; i++)
-                        //{
-                        //    if (!clickedNode.Nodes[i].Checked)
-                        //    {
-                        //        bAllCheckTop = false;
-                        //        break;
-                        //    }
-                        //}
-                        //chkAll.Checked = bAllCheckTop;
-                        //else if (clickedNode.Level == 1) //Child node
-                        //{
-                        //    if (!clickedNode.Checked)
-                        //    {
-                        //        clickedNode.ParentNode.Checked = false;
-                        //    }
-                        //}
-                        break;
+                            //bool bAllCheckTop = true;
+                            ////Kiem tra tat ca node 0
+                            //for (int i = 0; i < clickedNode.Nodes.Count; i++)
+                            //{
+                            //    if (!clickedNode.Nodes[i].Checked)
+                            //    {
+                            //        bAllCheckTop = false;
+                            //        break;
+                            //    }
+                            //}
+                            //chkAll.Checked = bAllCheckTop;
+                            //else if (clickedNode.Level == 1) //Child node
+                            //{
+                            //    if (!clickedNode.Checked)
+                            //    {
+                            //        clickedNode.ParentNode.Checked = false;
+                            //    }
+                            //}
+
+                            BindingChart();
+                            set_Series();
+
+                            break;
+                    }
+
+                   
+
+
+                    //    ColumnInfo info = tree.ViewInfo.ColumnsInfo[hit.Column];
+                    //    Rectangle checkRect = new Rectangle(info.Bounds.Left + 3, info.Bounds.Top + 5, 12, 12);
+                    //    if (checkRect.Contains(pt))
+                    //    {
+                    //        if (IsAllSelected(tree))
+                    //        {
+                    //            tree.Selection.Clear();
+                    //            foreach (TreeListNode node in treeList.Nodes)
+                    //            {
+                    //                node.Checked = false;
+                    //                foreach (TreeListNode node1 in node.RootNode.Nodes)
+                    //                {
+                    //                    if (node1.Checked)
+                    //                        node1.Checked = false;
+                    //                }
+                    //            }
+                    //            BindingChart2();
+                    //            set_Series();
+                    //        }
+                    //        else
+                    //        {
+                    //            SelectAll(tree);
+                    //            foreach (TreeListNode node in treeList.Nodes)
+                    //            {
+                    //                node.Checked = true;
+                    //                foreach (TreeListNode node1 in node.RootNode.Nodes)
+                    //                {
+                    //                    if (!node1.Checked)
+                    //                        node1.Checked = true;
+                    //                }
+                    //            }
+                    //            BindingChart2();
+                    //            set_Series();
+                    //        }
+                    //        //throw new DevExpress.Utils.HideException();
+                    //    }
                 }
-                
+            }
+            catch
+            {
 
-                BindingChart2();
-                set_Series();
-
-
-            //    ColumnInfo info = tree.ViewInfo.ColumnsInfo[hit.Column];
-            //    Rectangle checkRect = new Rectangle(info.Bounds.Left + 3, info.Bounds.Top + 5, 12, 12);
-            //    if (checkRect.Contains(pt))
-            //    {
-            //        if (IsAllSelected(tree))
-            //        {
-            //            tree.Selection.Clear();
-            //            foreach (TreeListNode node in treeList.Nodes)
-            //            {
-            //                node.Checked = false;
-            //                foreach (TreeListNode node1 in node.RootNode.Nodes)
-            //                {
-            //                    if (node1.Checked)
-            //                        node1.Checked = false;
-            //                }
-            //            }
-            //            BindingChart2();
-            //            set_Series();
-            //        }
-            //        else
-            //        {
-            //            SelectAll(tree);
-            //            foreach (TreeListNode node in treeList.Nodes)
-            //            {
-            //                node.Checked = true;
-            //                foreach (TreeListNode node1 in node.RootNode.Nodes)
-            //                {
-            //                    if (!node1.Checked)
-            //                        node1.Checked = true;
-            //                }
-            //            }
-            //            BindingChart2();
-            //            set_Series();
-            //        }
-            //        //throw new DevExpress.Utils.HideException();
-            //    }
-            } 
+            }
         }
 
         class SelectNodeOperation : TreeListOperation

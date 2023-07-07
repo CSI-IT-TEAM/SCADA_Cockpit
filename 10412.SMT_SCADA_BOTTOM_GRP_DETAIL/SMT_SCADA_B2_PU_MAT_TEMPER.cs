@@ -40,7 +40,7 @@ namespace FORM
             COM.OraDB MyOraDB = new COM.OraDB();
 
             MyOraDB.ReDim_Parameter(4);
-            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_B_COCKPIT.SP_B2PU_ISOPOLY_TRACKING";
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_B_COCKPIT.SP_B2PU_ISOPOLY_TRACKING_V2";
 
             MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
             MyOraDB.Parameter_Name[1] = "ARG_DATE";
@@ -214,19 +214,22 @@ namespace FORM
                 {
                     if (lbl.Tag.ToString().Contains("OIL"))
                     {
-                        minvl = int.Parse(dt.Rows[0]["OIL_MIN_VAL"].ToString());
-                        maxvl = int.Parse(dt.Rows[0]["OIL_MAX_VAL"].ToString());
+                        //minvl = int.Parse(dt.Rows[0]["MIN_VAL"].ToString());
+                        //maxvl = int.Parse(dt.Rows[0]["MAX_VAL"].ToString());
                     }
                     else if (lbl.Tag.ToString().Contains("POLY"))
                     {
-                        minvl = int.Parse(dt.Rows[0]["POLY_MIN_VAL"].ToString());
-                        maxvl = int.Parse(dt.Rows[0]["POLY_MAX_VAL"].ToString());
+                        //minvl = int.Parse(dt.Rows[0]["POLY_MIN_VAL"].ToString());
+                        //maxvl = int.Parse(dt.Rows[0]["POLY_MAX_VAL"].ToString());
                     }
                     else
                     {
-                        minvl = int.Parse(dt.Rows[0]["ISO_MIN_VAL"].ToString());
-                        maxvl = int.Parse(dt.Rows[0]["ISO_MAX_VAL"].ToString());
+                       // minvl = int.Parse(dt.Rows[0]["ISO_MIN_VAL"].ToString());
+                       // maxvl = int.Parse(dt.Rows[0]["ISO_MAX_VAL"].ToString());
                     }
+
+                    minvl = int.Parse(dt.Rows[0]["MIN_VAL"].ToString());
+                    maxvl = int.Parse(dt.Rows[0]["MAX_VAL"].ToString());
                 }
                 BindingChart(dt, minvl, maxvl);
                 //  MessageBox.Show(lbl.Tag.ToString());
@@ -299,6 +302,23 @@ namespace FORM
                         if (item.Tag.ToString().Equals(dr["ID"]))
                         {
                             item.Text = dr["VALUE"].ToString();
+
+                            if (dr["VALUE"] != null)
+                            {
+                                if (int.Parse(dr["STATUS"].ToString()) == 1)
+                                {
+                                    item.BackColor = Color.Red;
+                                    item.ForeColor = Color.White;
+                                }
+                                else
+                                {
+                                    item.BackColor = Color.Green;
+                                    item.ForeColor = Color.White;
+                                }
+                            }
+
+                            /*
+                            
                             if (dr["DIV2"].ToString().Equals("OIL"))
                             {
                                 if (dr["VALUE"] != null)
@@ -347,6 +367,7 @@ namespace FORM
                                 }
 
                             }
+                            */
                         }
                     }
                 }

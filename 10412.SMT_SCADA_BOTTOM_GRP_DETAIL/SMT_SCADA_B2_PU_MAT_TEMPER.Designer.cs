@@ -221,6 +221,7 @@
             this.label15.TabIndex = 93;
             this.label15.Text = "Max: 50°C";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label15.Visible = false;
             // 
             // label14
             // 
@@ -233,6 +234,7 @@
             this.label14.TabIndex = 94;
             this.label14.Text = "Min: 46°C";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label14.Visible = false;
             // 
             // label10
             // 
@@ -245,6 +247,7 @@
             this.label10.TabIndex = 93;
             this.label10.Text = "Max: 42°C";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Visible = false;
             // 
             // label13
             // 
@@ -256,6 +259,7 @@
             this.label13.TabIndex = 91;
             this.label13.Text = "OIL";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.Visible = false;
             // 
             // label11
             // 
@@ -268,6 +272,7 @@
             this.label11.TabIndex = 94;
             this.label11.Text = "Min: 38°C";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Visible = false;
             // 
             // label8
             // 
@@ -279,6 +284,7 @@
             this.label8.TabIndex = 91;
             this.label8.Text = "ISO";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Visible = false;
             // 
             // label9
             // 
@@ -290,6 +296,7 @@
             this.label9.TabIndex = 92;
             this.label9.Text = "POLY";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Visible = false;
             // 
             // label83
             // 
@@ -302,6 +309,7 @@
             this.label83.TabIndex = 44;
             this.label83.Text = "Max: 44°C";
             this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label83.Visible = false;
             // 
             // btnTest
             // 
@@ -324,6 +332,7 @@
             this.label84.TabIndex = 45;
             this.label84.Text = "Min: 40°C";
             this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label84.Visible = false;
             // 
             // cmdBack
             // 

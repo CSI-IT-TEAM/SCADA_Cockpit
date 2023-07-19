@@ -40,7 +40,7 @@ namespace FORM
             COM.OraDB MyOraDB = new COM.OraDB();
 
             MyOraDB.ReDim_Parameter(4);
-            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_B_COCKPIT.SP_B2PU_ISOPOLY_TRACKING_V2";
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_B_COCKPIT.SP_B2PU_ISOPOLY_TRACKING_V3";
 
             MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
             MyOraDB.Parameter_Name[1] = "ARG_DATE";
@@ -121,6 +121,10 @@ namespace FORM
                 lstLabel.Add(lbl_006POLY1_1OIL);
                 lstLabel.Add(lbl_006POLY1_1HOSE);
 
+                lstLabel.Add(lbl_007POLY1_1MAT);
+                lstLabel.Add(lbl_007POLY1_1OIL);
+                lstLabel.Add(lbl_007POLY1_1HOSE);
+
                 lstLabel.Add(lbl_004POLY1_2MAT);
                 lstLabel.Add(lbl_004POLY1_2OIL);
                 lstLabel.Add(lbl_004POLY1_2HOSE);
@@ -132,6 +136,10 @@ namespace FORM
                 lstLabel.Add(lbl_006POLY1_2MAT);
                 lstLabel.Add(lbl_006POLY1_2OIL);
                 lstLabel.Add(lbl_006POLY1_2HOSE);
+
+                lstLabel.Add(lbl_007POLY1_2MAT);
+                lstLabel.Add(lbl_007POLY1_2OIL);
+                lstLabel.Add(lbl_007POLY1_2HOSE);
 
                 lstLabel.Add(lbl_004POLY2_1MAT);
                 lstLabel.Add(lbl_004POLY2_1OIL);
@@ -145,6 +153,10 @@ namespace FORM
                 lstLabel.Add(lbl_006POLY2_1OIL);
                 lstLabel.Add(lbl_006POLY2_1HOSE);
 
+                lstLabel.Add(lbl_007POLY2_1MAT);
+                lstLabel.Add(lbl_007POLY2_1OIL);
+                lstLabel.Add(lbl_007POLY2_1HOSE);
+
                 lstLabel.Add(lbl_004POLY2_2MAT);
                 lstLabel.Add(lbl_004POLY2_2OIL);
                 lstLabel.Add(lbl_004POLY2_2HOSE);
@@ -156,6 +168,10 @@ namespace FORM
                 lstLabel.Add(lbl_006POLY2_2MAT);
                 lstLabel.Add(lbl_006POLY2_2OIL);
                 lstLabel.Add(lbl_006POLY2_2HOSE);
+
+                lstLabel.Add(lbl_007POLY2_2MAT);
+                lstLabel.Add(lbl_007POLY2_2OIL);
+                lstLabel.Add(lbl_007POLY2_2HOSE);
 
                 lstLabel.Add(lbl_004ISO1_1MAT);
                 lstLabel.Add(lbl_004ISO1_1OIL);
@@ -169,6 +185,10 @@ namespace FORM
                 lstLabel.Add(lbl_006ISO1_1OIL);
                 lstLabel.Add(lbl_006ISO1_1HOSE);
 
+                lstLabel.Add(lbl_007ISO1_1MAT);
+                lstLabel.Add(lbl_007ISO1_1OIL);
+                lstLabel.Add(lbl_007ISO1_1HOSE);
+
                 lstLabel.Add(lbl_004ISO1_2MAT);
                 lstLabel.Add(lbl_004ISO1_2OIL);
                 lstLabel.Add(lbl_004ISO1_2HOSE);
@@ -180,6 +200,65 @@ namespace FORM
                 lstLabel.Add(lbl_006ISO1_2MAT);
                 lstLabel.Add(lbl_006ISO1_2OIL);
                 lstLabel.Add(lbl_006ISO1_2HOSE);
+
+                lstLabel.Add(lbl_007ISO1_2MAT);
+                lstLabel.Add(lbl_007ISO1_2OIL);
+                lstLabel.Add(lbl_007ISO1_2HOSE);
+
+
+
+
+
+                lstLabel.Add(lbl_004ISO1_3MAT);
+                lstLabel.Add(lbl_005ISO1_3MAT);
+                lstLabel.Add(lbl_006ISO1_3MAT);
+                lstLabel.Add(lbl_007ISO1_3MAT);
+
+                lstLabel.Add(lbl_004ISO1_3OIL);
+                lstLabel.Add(lbl_005ISO1_3OIL);
+                lstLabel.Add(lbl_006ISO1_3OIL);
+                lstLabel.Add(lbl_007ISO1_3OIL);
+
+                lstLabel.Add(lbl_004ISO1_3HOSE);
+                lstLabel.Add(lbl_005ISO1_3HOSE);
+                lstLabel.Add(lbl_006ISO1_3HOSE);
+                lstLabel.Add(lbl_007ISO1_3HOSE);
+
+                lstLabel.Add(lbl_004POLY1_3MAT);
+                lstLabel.Add(lbl_005POLY1_3MAT);
+                lstLabel.Add(lbl_006POLY1_3MAT);
+                lstLabel.Add(lbl_007POLY1_3MAT);
+
+                lstLabel.Add(lbl_004POLY1_3OIL);
+                lstLabel.Add(lbl_005POLY1_3OIL);
+                lstLabel.Add(lbl_006POLY1_3OIL);
+                lstLabel.Add(lbl_007POLY1_3OIL);
+
+                lstLabel.Add(lbl_004POLY1_3HOSE);
+                lstLabel.Add(lbl_005POLY1_3HOSE);
+                lstLabel.Add(lbl_006POLY1_3HOSE);
+                lstLabel.Add(lbl_007POLY1_3HOSE);
+
+                lstLabel.Add(lbl_004POLY2_3MAT);
+                lstLabel.Add(lbl_005POLY2_3MAT);
+                lstLabel.Add(lbl_006POLY2_3MAT);
+                lstLabel.Add(lbl_007POLY2_3MAT);
+
+                lstLabel.Add(lbl_004POLY2_3OIL);
+                lstLabel.Add(lbl_005POLY2_3OIL);
+                lstLabel.Add(lbl_006POLY2_3OIL);
+                lstLabel.Add(lbl_007POLY2_3OIL);
+
+                lstLabel.Add(lbl_004POLY2_3HOSE);
+                lstLabel.Add(lbl_005POLY2_3HOSE);
+                lstLabel.Add(lbl_006POLY2_3HOSE);
+                lstLabel.Add(lbl_007POLY2_3HOSE);
+
+
+
+
+
+
 
                 foreach (var item in lstLabel)
                 {
@@ -315,6 +394,12 @@ namespace FORM
                                     item.BackColor = Color.Green;
                                     item.ForeColor = Color.White;
                                 }
+                            }
+                            if (dr["USE_YN"].ToString() == "N")
+                            {
+                                item.BackColor = Color.Gray;
+                                item.ForeColor = Color.White;
+                                // item.ForeColor = Color.Gray;
                             }
 
                             /*
@@ -463,6 +548,61 @@ namespace FORM
         private void SMT_SCADA_B2_PU_MAT_TEMPER_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void lbl_003POLY2HOSE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_003POLY2OIL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_003POLY2MAT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_003POLY1HOSE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_003POLY1OIL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_003POLY1MAT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_003ISO1HOSE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_003ISO1OIL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_003ISO1MAT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

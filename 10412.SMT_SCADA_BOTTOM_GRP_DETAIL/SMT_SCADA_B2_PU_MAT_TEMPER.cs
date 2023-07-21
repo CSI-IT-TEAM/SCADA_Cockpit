@@ -276,8 +276,10 @@ namespace FORM
 
         private void Item_Click(object sender, EventArgs e)
         {
+            
             try
             {
+               
                 foreach (var item in lstLabel)
                 {
                    
@@ -285,8 +287,12 @@ namespace FORM
                 }
 
                 Label lbl = ((Label)sender);
+                if (lbl.Text == "") { return; }
+
                // lbl.BackColor = Color.Yellow;
                 lbl.ForeColor = Color.Yellow;
+
+
                 int minvl = 0, maxvl = 0;
                 DataTable dt = SEL_TRACKING_DATA("C", DateTime.Now.ToString("yyyyMMdd"), lbl.Tag.ToString());
                 if (dt.Rows.Count > 2)
@@ -399,6 +405,7 @@ namespace FORM
                             {
                                 item.BackColor = Color.Gray;
                                 item.ForeColor = Color.White;
+                                item.Text = "";
                                 // item.ForeColor = Color.Gray;
                             }
 

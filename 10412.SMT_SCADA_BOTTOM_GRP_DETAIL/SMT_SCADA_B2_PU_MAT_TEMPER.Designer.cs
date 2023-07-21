@@ -263,10 +263,10 @@
             this.lbl_007POLY1_1OIL = new System.Windows.Forms.Label();
             this.lbl_007POLY2_1MAT = new System.Windows.Forms.Label();
             this.lbl_007POLY1_1MAT = new System.Windows.Forms.Label();
-            this.a1Panel1 = new OS_DSF.A1Panel();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.a1Panel1 = new OS_DSF.A1Panel();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.pnTop.SuspendLayout();
             this.a1Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
@@ -299,7 +299,7 @@
             // 
             // label19
             // 
-            this.label19.BackColor = System.Drawing.Color.Silver;
+            this.label19.BackColor = System.Drawing.Color.Gray;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(1490, 21);
@@ -3052,6 +3052,30 @@
             this.lbl_007POLY1_1MAT.Text = "100";
             this.lbl_007POLY1_1MAT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.LemonChiffon;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(717, 99);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(568, 31);
+            this.label16.TabIndex = 182;
+            this.label16.Text = "Auto 2";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.LemonChiffon;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(1308, 98);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(568, 31);
+            this.label17.TabIndex = 183;
+            this.label17.Text = "Auto 3";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // a1Panel1
             // 
             this.a1Panel1.BorderColor = System.Drawing.Color.White;
@@ -3100,30 +3124,6 @@
         series1};
             this.chartControl1.Size = new System.Drawing.Size(1774, 369);
             this.chartControl1.TabIndex = 0;
-            // 
-            // label16
-            // 
-            this.label16.BackColor = System.Drawing.Color.LemonChiffon;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(717, 99);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(568, 31);
-            this.label16.TabIndex = 182;
-            this.label16.Text = "Auto 2";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.Color.LemonChiffon;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(1308, 98);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(568, 31);
-            this.label17.TabIndex = 183;
-            this.label17.Text = "Auto 2";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SMT_SCADA_B2_PU_MAT_TEMPER
             // 

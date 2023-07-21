@@ -30,10 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B2_PU_MAT_TEMPER));
-            DevExpress.XtraCharts.XYDiagram xyDiagram3 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.LineSeriesView lineSeriesView3 = new DevExpress.XtraCharts.LineSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.LineSeriesView lineSeriesView1 = new DevExpress.XtraCharts.LineSeriesView();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -265,14 +267,12 @@
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.pnTop.SuspendLayout();
             this.a1Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
@@ -296,6 +296,30 @@
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1904, 76);
             this.pnTop.TabIndex = 9;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.Silver;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(1490, 21);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(180, 42);
+            this.label19.TabIndex = 96;
+            this.label19.Text = "Equipment Stop";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.Red;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(1308, 21);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(177, 42);
+            this.label18.TabIndex = 95;
+            this.label18.Text = "Equipment alarm";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
             // 
@@ -782,7 +806,7 @@
             this.label26.ForeColor = System.Drawing.Color.White;
             this.label26.Location = new System.Drawing.Point(315, 276);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(188, 23);
+            this.label26.Size = new System.Drawing.Size(186, 23);
             this.label26.TabIndex = 42;
             this.label26.Text = "Poly 1 - A";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -804,7 +828,7 @@
             this.label28.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label28.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(379, 304);
+            this.label28.Location = new System.Drawing.Point(378, 304);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(60, 23);
             this.label28.TabIndex = 42;
@@ -828,7 +852,7 @@
             this.label30.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label30.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(443, 304);
+            this.label30.Location = new System.Drawing.Point(441, 304);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(60, 23);
             this.label30.TabIndex = 42;
@@ -840,7 +864,7 @@
             this.label31.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label31.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(972, 304);
+            this.label31.Location = new System.Drawing.Point(970, 304);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(60, 23);
             this.label31.TabIndex = 42;
@@ -852,7 +876,7 @@
             this.label32.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label32.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(1035, 304);
+            this.label32.Location = new System.Drawing.Point(1032, 304);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(60, 23);
             this.label32.TabIndex = 42;
@@ -866,7 +890,7 @@
             this.label33.ForeColor = System.Drawing.Color.White;
             this.label33.Location = new System.Drawing.Point(907, 276);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(188, 23);
+            this.label33.Size = new System.Drawing.Size(185, 23);
             this.label33.TabIndex = 42;
             this.label33.Text = "Poly 1 - B";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -888,7 +912,7 @@
             this.lbl_004POLY1_1OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY1_1OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY1_1OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY1_1OIL.Location = new System.Drawing.Point(379, 332);
+            this.lbl_004POLY1_1OIL.Location = new System.Drawing.Point(378, 332);
             this.lbl_004POLY1_1OIL.Name = "lbl_004POLY1_1OIL";
             this.lbl_004POLY1_1OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY1_1OIL.TabIndex = 41;
@@ -912,7 +936,7 @@
             this.lbl_004POLY1_1HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY1_1HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY1_1HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY1_1HOSE.Location = new System.Drawing.Point(443, 332);
+            this.lbl_004POLY1_1HOSE.Location = new System.Drawing.Point(441, 332);
             this.lbl_004POLY1_1HOSE.Name = "lbl_004POLY1_1HOSE";
             this.lbl_004POLY1_1HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY1_1HOSE.TabIndex = 40;
@@ -936,7 +960,7 @@
             this.lbl_005POLY1_1OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY1_1OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY1_1OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY1_1OIL.Location = new System.Drawing.Point(379, 396);
+            this.lbl_005POLY1_1OIL.Location = new System.Drawing.Point(378, 396);
             this.lbl_005POLY1_1OIL.Name = "lbl_005POLY1_1OIL";
             this.lbl_005POLY1_1OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY1_1OIL.TabIndex = 41;
@@ -960,7 +984,7 @@
             this.lbl_006POLY1_1OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY1_1OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY1_1OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY1_1OIL.Location = new System.Drawing.Point(379, 459);
+            this.lbl_006POLY1_1OIL.Location = new System.Drawing.Point(378, 459);
             this.lbl_006POLY1_1OIL.Name = "lbl_006POLY1_1OIL";
             this.lbl_006POLY1_1OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY1_1OIL.TabIndex = 41;
@@ -972,7 +996,7 @@
             this.lbl_005POLY1_1HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY1_1HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY1_1HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY1_1HOSE.Location = new System.Drawing.Point(443, 396);
+            this.lbl_005POLY1_1HOSE.Location = new System.Drawing.Point(441, 396);
             this.lbl_005POLY1_1HOSE.Name = "lbl_005POLY1_1HOSE";
             this.lbl_005POLY1_1HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY1_1HOSE.TabIndex = 40;
@@ -984,7 +1008,7 @@
             this.lbl_004POLY1_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY1_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY1_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY1_2OIL.Location = new System.Drawing.Point(971, 332);
+            this.lbl_004POLY1_2OIL.Location = new System.Drawing.Point(969, 332);
             this.lbl_004POLY1_2OIL.Name = "lbl_004POLY1_2OIL";
             this.lbl_004POLY1_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY1_2OIL.TabIndex = 40;
@@ -996,7 +1020,7 @@
             this.lbl_006POLY1_1HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY1_1HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY1_1HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY1_1HOSE.Location = new System.Drawing.Point(443, 459);
+            this.lbl_006POLY1_1HOSE.Location = new System.Drawing.Point(441, 459);
             this.lbl_006POLY1_1HOSE.Name = "lbl_006POLY1_1HOSE";
             this.lbl_006POLY1_1HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY1_1HOSE.TabIndex = 40;
@@ -1020,7 +1044,7 @@
             this.lbl_004POLY1_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY1_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY1_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY1_2HOSE.Location = new System.Drawing.Point(1035, 332);
+            this.lbl_004POLY1_2HOSE.Location = new System.Drawing.Point(1032, 332);
             this.lbl_004POLY1_2HOSE.Name = "lbl_004POLY1_2HOSE";
             this.lbl_004POLY1_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY1_2HOSE.TabIndex = 41;
@@ -1044,7 +1068,7 @@
             this.lbl_005POLY1_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY1_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY1_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY1_2OIL.Location = new System.Drawing.Point(971, 396);
+            this.lbl_005POLY1_2OIL.Location = new System.Drawing.Point(969, 396);
             this.lbl_005POLY1_2OIL.Name = "lbl_005POLY1_2OIL";
             this.lbl_005POLY1_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY1_2OIL.TabIndex = 40;
@@ -1056,7 +1080,7 @@
             this.lbl_005POLY1_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY1_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY1_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY1_2HOSE.Location = new System.Drawing.Point(1035, 396);
+            this.lbl_005POLY1_2HOSE.Location = new System.Drawing.Point(1032, 396);
             this.lbl_005POLY1_2HOSE.Name = "lbl_005POLY1_2HOSE";
             this.lbl_005POLY1_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY1_2HOSE.TabIndex = 41;
@@ -1068,7 +1092,7 @@
             this.lbl_006POLY1_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY1_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY1_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY1_2OIL.Location = new System.Drawing.Point(971, 459);
+            this.lbl_006POLY1_2OIL.Location = new System.Drawing.Point(969, 459);
             this.lbl_006POLY1_2OIL.Name = "lbl_006POLY1_2OIL";
             this.lbl_006POLY1_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY1_2OIL.TabIndex = 40;
@@ -1080,7 +1104,7 @@
             this.lbl_006POLY1_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY1_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY1_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY1_2HOSE.Location = new System.Drawing.Point(1035, 459);
+            this.lbl_006POLY1_2HOSE.Location = new System.Drawing.Point(1032, 459);
             this.lbl_006POLY1_2HOSE.Name = "lbl_006POLY1_2HOSE";
             this.lbl_006POLY1_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY1_2HOSE.TabIndex = 41;
@@ -1092,9 +1116,9 @@
             this.label57.BackColor = System.Drawing.Color.DarkCyan;
             this.label57.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.White;
-            this.label57.Location = new System.Drawing.Point(506, 276);
+            this.label57.Location = new System.Drawing.Point(504, 276);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(188, 23);
+            this.label57.Size = new System.Drawing.Size(185, 23);
             this.label57.TabIndex = 42;
             this.label57.Text = "Poly 2- A";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1104,7 +1128,7 @@
             this.label58.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label58.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(506, 304);
+            this.label58.Location = new System.Drawing.Point(504, 304);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(60, 23);
             this.label58.TabIndex = 42;
@@ -1116,7 +1140,7 @@
             this.label59.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label59.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.White;
-            this.label59.Location = new System.Drawing.Point(570, 304);
+            this.label59.Location = new System.Drawing.Point(567, 304);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(60, 23);
             this.label59.TabIndex = 42;
@@ -1128,7 +1152,7 @@
             this.label60.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label60.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.ForeColor = System.Drawing.Color.White;
-            this.label60.Location = new System.Drawing.Point(1099, 304);
+            this.label60.Location = new System.Drawing.Point(1096, 304);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(60, 23);
             this.label60.TabIndex = 42;
@@ -1140,7 +1164,7 @@
             this.label61.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label61.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.White;
-            this.label61.Location = new System.Drawing.Point(634, 304);
+            this.label61.Location = new System.Drawing.Point(629, 304);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(60, 23);
             this.label61.TabIndex = 42;
@@ -1152,7 +1176,7 @@
             this.label62.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label62.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.Color.White;
-            this.label62.Location = new System.Drawing.Point(1162, 304);
+            this.label62.Location = new System.Drawing.Point(1158, 304);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(60, 23);
             this.label62.TabIndex = 42;
@@ -1164,7 +1188,7 @@
             this.label63.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label63.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.ForeColor = System.Drawing.Color.White;
-            this.label63.Location = new System.Drawing.Point(1225, 304);
+            this.label63.Location = new System.Drawing.Point(1221, 304);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(60, 23);
             this.label63.TabIndex = 42;
@@ -1176,7 +1200,7 @@
             this.label64.BackColor = System.Drawing.Color.DarkCyan;
             this.label64.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.ForeColor = System.Drawing.Color.White;
-            this.label64.Location = new System.Drawing.Point(1099, 276);
+            this.label64.Location = new System.Drawing.Point(1095, 276);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(187, 23);
             this.label64.TabIndex = 42;
@@ -1188,7 +1212,7 @@
             this.lbl_004POLY2_1MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY2_1MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY2_1MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY2_1MAT.Location = new System.Drawing.Point(506, 332);
+            this.lbl_004POLY2_1MAT.Location = new System.Drawing.Point(504, 332);
             this.lbl_004POLY2_1MAT.Name = "lbl_004POLY2_1MAT";
             this.lbl_004POLY2_1MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY2_1MAT.TabIndex = 40;
@@ -1200,9 +1224,9 @@
             this.lbl_004POLY2_1OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY2_1OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY2_1OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY2_1OIL.Location = new System.Drawing.Point(570, 332);
+            this.lbl_004POLY2_1OIL.Location = new System.Drawing.Point(567, 332);
             this.lbl_004POLY2_1OIL.Name = "lbl_004POLY2_1OIL";
-            this.lbl_004POLY2_1OIL.Size = new System.Drawing.Size(60, 60);
+            this.lbl_004POLY2_1OIL.Size = new System.Drawing.Size(59, 60);
             this.lbl_004POLY2_1OIL.TabIndex = 41;
             this.lbl_004POLY2_1OIL.Text = "100";
             this.lbl_004POLY2_1OIL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1212,7 +1236,7 @@
             this.lbl_005POLY2_1MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY2_1MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY2_1MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY2_1MAT.Location = new System.Drawing.Point(506, 396);
+            this.lbl_005POLY2_1MAT.Location = new System.Drawing.Point(504, 396);
             this.lbl_005POLY2_1MAT.Name = "lbl_005POLY2_1MAT";
             this.lbl_005POLY2_1MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY2_1MAT.TabIndex = 40;
@@ -1224,7 +1248,7 @@
             this.lbl_004POLY2_1HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY2_1HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY2_1HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY2_1HOSE.Location = new System.Drawing.Point(634, 332);
+            this.lbl_004POLY2_1HOSE.Location = new System.Drawing.Point(629, 332);
             this.lbl_004POLY2_1HOSE.Name = "lbl_004POLY2_1HOSE";
             this.lbl_004POLY2_1HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY2_1HOSE.TabIndex = 40;
@@ -1236,7 +1260,7 @@
             this.lbl_006POLY2_1MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY2_1MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY2_1MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY2_1MAT.Location = new System.Drawing.Point(506, 459);
+            this.lbl_006POLY2_1MAT.Location = new System.Drawing.Point(504, 459);
             this.lbl_006POLY2_1MAT.Name = "lbl_006POLY2_1MAT";
             this.lbl_006POLY2_1MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY2_1MAT.TabIndex = 40;
@@ -1248,9 +1272,9 @@
             this.lbl_005POLY2_1OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY2_1OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY2_1OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY2_1OIL.Location = new System.Drawing.Point(570, 396);
+            this.lbl_005POLY2_1OIL.Location = new System.Drawing.Point(567, 396);
             this.lbl_005POLY2_1OIL.Name = "lbl_005POLY2_1OIL";
-            this.lbl_005POLY2_1OIL.Size = new System.Drawing.Size(60, 60);
+            this.lbl_005POLY2_1OIL.Size = new System.Drawing.Size(59, 60);
             this.lbl_005POLY2_1OIL.TabIndex = 41;
             this.lbl_005POLY2_1OIL.Text = "100";
             this.lbl_005POLY2_1OIL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1260,7 +1284,7 @@
             this.lbl_004POLY2_2MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY2_2MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY2_2MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY2_2MAT.Location = new System.Drawing.Point(1098, 332);
+            this.lbl_004POLY2_2MAT.Location = new System.Drawing.Point(1095, 332);
             this.lbl_004POLY2_2MAT.Name = "lbl_004POLY2_2MAT";
             this.lbl_004POLY2_2MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY2_2MAT.TabIndex = 41;
@@ -1272,9 +1296,9 @@
             this.lbl_006POLY2_1OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY2_1OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY2_1OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY2_1OIL.Location = new System.Drawing.Point(570, 459);
+            this.lbl_006POLY2_1OIL.Location = new System.Drawing.Point(567, 459);
             this.lbl_006POLY2_1OIL.Name = "lbl_006POLY2_1OIL";
-            this.lbl_006POLY2_1OIL.Size = new System.Drawing.Size(60, 60);
+            this.lbl_006POLY2_1OIL.Size = new System.Drawing.Size(59, 60);
             this.lbl_006POLY2_1OIL.TabIndex = 41;
             this.lbl_006POLY2_1OIL.Text = "100";
             this.lbl_006POLY2_1OIL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1284,7 +1308,7 @@
             this.lbl_005POLY2_1HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY2_1HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY2_1HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY2_1HOSE.Location = new System.Drawing.Point(634, 396);
+            this.lbl_005POLY2_1HOSE.Location = new System.Drawing.Point(629, 396);
             this.lbl_005POLY2_1HOSE.Name = "lbl_005POLY2_1HOSE";
             this.lbl_005POLY2_1HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY2_1HOSE.TabIndex = 40;
@@ -1296,7 +1320,7 @@
             this.lbl_004POLY2_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY2_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY2_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY2_2OIL.Location = new System.Drawing.Point(1161, 332);
+            this.lbl_004POLY2_2OIL.Location = new System.Drawing.Point(1158, 332);
             this.lbl_004POLY2_2OIL.Name = "lbl_004POLY2_2OIL";
             this.lbl_004POLY2_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY2_2OIL.TabIndex = 40;
@@ -1308,7 +1332,7 @@
             this.lbl_006POLY2_1HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY2_1HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY2_1HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY2_1HOSE.Location = new System.Drawing.Point(634, 459);
+            this.lbl_006POLY2_1HOSE.Location = new System.Drawing.Point(629, 459);
             this.lbl_006POLY2_1HOSE.Name = "lbl_006POLY2_1HOSE";
             this.lbl_006POLY2_1HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY2_1HOSE.TabIndex = 40;
@@ -1320,7 +1344,7 @@
             this.lbl_005POLY2_2MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY2_2MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY2_2MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY2_2MAT.Location = new System.Drawing.Point(1098, 396);
+            this.lbl_005POLY2_2MAT.Location = new System.Drawing.Point(1095, 396);
             this.lbl_005POLY2_2MAT.Name = "lbl_005POLY2_2MAT";
             this.lbl_005POLY2_2MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY2_2MAT.TabIndex = 41;
@@ -1332,7 +1356,7 @@
             this.lbl_004POLY2_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY2_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY2_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY2_2HOSE.Location = new System.Drawing.Point(1225, 332);
+            this.lbl_004POLY2_2HOSE.Location = new System.Drawing.Point(1221, 332);
             this.lbl_004POLY2_2HOSE.Name = "lbl_004POLY2_2HOSE";
             this.lbl_004POLY2_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY2_2HOSE.TabIndex = 41;
@@ -1344,7 +1368,7 @@
             this.lbl_006POLY2_2MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY2_2MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY2_2MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY2_2MAT.Location = new System.Drawing.Point(1098, 459);
+            this.lbl_006POLY2_2MAT.Location = new System.Drawing.Point(1095, 459);
             this.lbl_006POLY2_2MAT.Name = "lbl_006POLY2_2MAT";
             this.lbl_006POLY2_2MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY2_2MAT.TabIndex = 41;
@@ -1356,7 +1380,7 @@
             this.lbl_005POLY2_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY2_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY2_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY2_2OIL.Location = new System.Drawing.Point(1161, 396);
+            this.lbl_005POLY2_2OIL.Location = new System.Drawing.Point(1158, 396);
             this.lbl_005POLY2_2OIL.Name = "lbl_005POLY2_2OIL";
             this.lbl_005POLY2_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY2_2OIL.TabIndex = 40;
@@ -1368,7 +1392,7 @@
             this.lbl_005POLY2_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY2_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY2_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY2_2HOSE.Location = new System.Drawing.Point(1225, 396);
+            this.lbl_005POLY2_2HOSE.Location = new System.Drawing.Point(1221, 396);
             this.lbl_005POLY2_2HOSE.Name = "lbl_005POLY2_2HOSE";
             this.lbl_005POLY2_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY2_2HOSE.TabIndex = 41;
@@ -1380,7 +1404,7 @@
             this.lbl_006POLY2_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY2_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY2_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY2_2OIL.Location = new System.Drawing.Point(1161, 459);
+            this.lbl_006POLY2_2OIL.Location = new System.Drawing.Point(1158, 459);
             this.lbl_006POLY2_2OIL.Name = "lbl_006POLY2_2OIL";
             this.lbl_006POLY2_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY2_2OIL.TabIndex = 40;
@@ -1392,7 +1416,7 @@
             this.lbl_006POLY2_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY2_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY2_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY2_2HOSE.Location = new System.Drawing.Point(1225, 459);
+            this.lbl_006POLY2_2HOSE.Location = new System.Drawing.Point(1221, 459);
             this.lbl_006POLY2_2HOSE.Name = "lbl_006POLY2_2HOSE";
             this.lbl_006POLY2_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY2_2HOSE.TabIndex = 41;
@@ -1563,7 +1587,7 @@
             this.lbl_006ISO1_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006ISO1_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006ISO1_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_006ISO1_2HOSE.Location = new System.Drawing.Point(844, 460);
+            this.lbl_006ISO1_2HOSE.Location = new System.Drawing.Point(844, 459);
             this.lbl_006ISO1_2HOSE.Name = "lbl_006ISO1_2HOSE";
             this.lbl_006ISO1_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_006ISO1_2HOSE.TabIndex = 73;
@@ -1575,7 +1599,7 @@
             this.lbl_006ISO1_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006ISO1_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006ISO1_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_006ISO1_2OIL.Location = new System.Drawing.Point(781, 460);
+            this.lbl_006ISO1_2OIL.Location = new System.Drawing.Point(781, 459);
             this.lbl_006ISO1_2OIL.Name = "lbl_006ISO1_2OIL";
             this.lbl_006ISO1_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_006ISO1_2OIL.TabIndex = 64;
@@ -1587,7 +1611,7 @@
             this.lbl_005ISO1_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005ISO1_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005ISO1_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_005ISO1_2HOSE.Location = new System.Drawing.Point(844, 397);
+            this.lbl_005ISO1_2HOSE.Location = new System.Drawing.Point(844, 396);
             this.lbl_005ISO1_2HOSE.Name = "lbl_005ISO1_2HOSE";
             this.lbl_005ISO1_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_005ISO1_2HOSE.TabIndex = 79;
@@ -1599,7 +1623,7 @@
             this.lbl_005ISO1_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005ISO1_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005ISO1_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_005ISO1_2OIL.Location = new System.Drawing.Point(781, 397);
+            this.lbl_005ISO1_2OIL.Location = new System.Drawing.Point(781, 396);
             this.lbl_005ISO1_2OIL.Name = "lbl_005ISO1_2OIL";
             this.lbl_005ISO1_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_005ISO1_2OIL.TabIndex = 65;
@@ -1611,7 +1635,7 @@
             this.lbl_006ISO1_2MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006ISO1_2MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006ISO1_2MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_006ISO1_2MAT.Location = new System.Drawing.Point(718, 460);
+            this.lbl_006ISO1_2MAT.Location = new System.Drawing.Point(718, 459);
             this.lbl_006ISO1_2MAT.Name = "lbl_006ISO1_2MAT";
             this.lbl_006ISO1_2MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_006ISO1_2MAT.TabIndex = 78;
@@ -1623,7 +1647,7 @@
             this.lbl_004ISO1_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004ISO1_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004ISO1_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_004ISO1_2HOSE.Location = new System.Drawing.Point(844, 333);
+            this.lbl_004ISO1_2HOSE.Location = new System.Drawing.Point(844, 332);
             this.lbl_004ISO1_2HOSE.Name = "lbl_004ISO1_2HOSE";
             this.lbl_004ISO1_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_004ISO1_2HOSE.TabIndex = 77;
@@ -1635,7 +1659,7 @@
             this.lbl_005ISO1_2MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005ISO1_2MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005ISO1_2MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_005ISO1_2MAT.Location = new System.Drawing.Point(718, 397);
+            this.lbl_005ISO1_2MAT.Location = new System.Drawing.Point(718, 396);
             this.lbl_005ISO1_2MAT.Name = "lbl_005ISO1_2MAT";
             this.lbl_005ISO1_2MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_005ISO1_2MAT.TabIndex = 76;
@@ -1659,7 +1683,7 @@
             this.lbl_004ISO1_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004ISO1_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004ISO1_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_004ISO1_2OIL.Location = new System.Drawing.Point(781, 333);
+            this.lbl_004ISO1_2OIL.Location = new System.Drawing.Point(781, 332);
             this.lbl_004ISO1_2OIL.Name = "lbl_004ISO1_2OIL";
             this.lbl_004ISO1_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_004ISO1_2OIL.TabIndex = 68;
@@ -1695,7 +1719,7 @@
             this.lbl_004ISO1_2MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004ISO1_2MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004ISO1_2MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_004ISO1_2MAT.Location = new System.Drawing.Point(718, 333);
+            this.lbl_004ISO1_2MAT.Location = new System.Drawing.Point(718, 332);
             this.lbl_004ISO1_2MAT.Name = "lbl_004ISO1_2MAT";
             this.lbl_004ISO1_2MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_004ISO1_2MAT.TabIndex = 74;
@@ -2049,7 +2073,7 @@
             this.lbl_006POLY1_3HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY1_3HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY1_3HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY1_3HOSE.Location = new System.Drawing.Point(1624, 460);
+            this.lbl_006POLY1_3HOSE.Location = new System.Drawing.Point(1622, 459);
             this.lbl_006POLY1_3HOSE.Name = "lbl_006POLY1_3HOSE";
             this.lbl_006POLY1_3HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY1_3HOSE.TabIndex = 105;
@@ -2061,7 +2085,7 @@
             this.lbl_006POLY1_3OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY1_3OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY1_3OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY1_3OIL.Location = new System.Drawing.Point(1560, 459);
+            this.lbl_006POLY1_3OIL.Location = new System.Drawing.Point(1559, 459);
             this.lbl_006POLY1_3OIL.Name = "lbl_006POLY1_3OIL";
             this.lbl_006POLY1_3OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY1_3OIL.TabIndex = 102;
@@ -2073,7 +2097,7 @@
             this.lbl_005POLY1_3HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY1_3HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY1_3HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY1_3HOSE.Location = new System.Drawing.Point(1624, 397);
+            this.lbl_005POLY1_3HOSE.Location = new System.Drawing.Point(1622, 396);
             this.lbl_005POLY1_3HOSE.Name = "lbl_005POLY1_3HOSE";
             this.lbl_005POLY1_3HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY1_3HOSE.TabIndex = 106;
@@ -2085,7 +2109,7 @@
             this.lbl_005POLY1_3OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY1_3OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY1_3OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY1_3OIL.Location = new System.Drawing.Point(1560, 396);
+            this.lbl_005POLY1_3OIL.Location = new System.Drawing.Point(1559, 396);
             this.lbl_005POLY1_3OIL.Name = "lbl_005POLY1_3OIL";
             this.lbl_005POLY1_3OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY1_3OIL.TabIndex = 103;
@@ -2109,7 +2133,7 @@
             this.lbl_004POLY1_3HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY1_3HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY1_3HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY1_3HOSE.Location = new System.Drawing.Point(1624, 333);
+            this.lbl_004POLY1_3HOSE.Location = new System.Drawing.Point(1622, 332);
             this.lbl_004POLY1_3HOSE.Name = "lbl_004POLY1_3HOSE";
             this.lbl_004POLY1_3HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY1_3HOSE.TabIndex = 108;
@@ -2133,7 +2157,7 @@
             this.lbl_004POLY1_3OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY1_3OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY1_3OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY1_3OIL.Location = new System.Drawing.Point(1560, 332);
+            this.lbl_004POLY1_3OIL.Location = new System.Drawing.Point(1559, 332);
             this.lbl_004POLY1_3OIL.Name = "lbl_004POLY1_3OIL";
             this.lbl_004POLY1_3OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY1_3OIL.TabIndex = 104;
@@ -2159,7 +2183,7 @@
             this.label52.ForeColor = System.Drawing.Color.White;
             this.label52.Location = new System.Drawing.Point(1497, 276);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(187, 23);
+            this.label52.Size = new System.Drawing.Size(185, 23);
             this.label52.TabIndex = 111;
             this.label52.Text = "Poly 1 - C";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2169,7 +2193,7 @@
             this.label53.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label53.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.White;
-            this.label53.Location = new System.Drawing.Point(1624, 304);
+            this.label53.Location = new System.Drawing.Point(1622, 304);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(60, 23);
             this.label53.TabIndex = 112;
@@ -2181,7 +2205,7 @@
             this.label54.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label54.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.White;
-            this.label54.Location = new System.Drawing.Point(1561, 304);
+            this.label54.Location = new System.Drawing.Point(1560, 304);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(60, 23);
             this.label54.TabIndex = 113;
@@ -2205,7 +2229,7 @@
             this.lbl_006POLY2_3HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY2_3HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY2_3HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY2_3HOSE.Location = new System.Drawing.Point(1813, 459);
+            this.lbl_006POLY2_3HOSE.Location = new System.Drawing.Point(1810, 459);
             this.lbl_006POLY2_3HOSE.Name = "lbl_006POLY2_3HOSE";
             this.lbl_006POLY2_3HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY2_3HOSE.TabIndex = 118;
@@ -2217,7 +2241,7 @@
             this.lbl_006POLY2_3OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY2_3OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY2_3OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY2_3OIL.Location = new System.Drawing.Point(1750, 459);
+            this.lbl_006POLY2_3OIL.Location = new System.Drawing.Point(1747, 459);
             this.lbl_006POLY2_3OIL.Name = "lbl_006POLY2_3OIL";
             this.lbl_006POLY2_3OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY2_3OIL.TabIndex = 115;
@@ -2229,7 +2253,7 @@
             this.lbl_005POLY2_3HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY2_3HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY2_3HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY2_3HOSE.Location = new System.Drawing.Point(1813, 396);
+            this.lbl_005POLY2_3HOSE.Location = new System.Drawing.Point(1810, 396);
             this.lbl_005POLY2_3HOSE.Name = "lbl_005POLY2_3HOSE";
             this.lbl_005POLY2_3HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY2_3HOSE.TabIndex = 119;
@@ -2241,7 +2265,7 @@
             this.lbl_005POLY2_3OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY2_3OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY2_3OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY2_3OIL.Location = new System.Drawing.Point(1750, 396);
+            this.lbl_005POLY2_3OIL.Location = new System.Drawing.Point(1747, 396);
             this.lbl_005POLY2_3OIL.Name = "lbl_005POLY2_3OIL";
             this.lbl_005POLY2_3OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY2_3OIL.TabIndex = 116;
@@ -2253,7 +2277,7 @@
             this.lbl_006POLY2_3MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_006POLY2_3MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_006POLY2_3MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_006POLY2_3MAT.Location = new System.Drawing.Point(1687, 459);
+            this.lbl_006POLY2_3MAT.Location = new System.Drawing.Point(1684, 459);
             this.lbl_006POLY2_3MAT.Name = "lbl_006POLY2_3MAT";
             this.lbl_006POLY2_3MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_006POLY2_3MAT.TabIndex = 120;
@@ -2265,7 +2289,7 @@
             this.lbl_004POLY2_3HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY2_3HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY2_3HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY2_3HOSE.Location = new System.Drawing.Point(1813, 332);
+            this.lbl_004POLY2_3HOSE.Location = new System.Drawing.Point(1810, 332);
             this.lbl_004POLY2_3HOSE.Name = "lbl_004POLY2_3HOSE";
             this.lbl_004POLY2_3HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY2_3HOSE.TabIndex = 121;
@@ -2277,7 +2301,7 @@
             this.lbl_005POLY2_3MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_005POLY2_3MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_005POLY2_3MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_005POLY2_3MAT.Location = new System.Drawing.Point(1687, 396);
+            this.lbl_005POLY2_3MAT.Location = new System.Drawing.Point(1684, 396);
             this.lbl_005POLY2_3MAT.Name = "lbl_005POLY2_3MAT";
             this.lbl_005POLY2_3MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_005POLY2_3MAT.TabIndex = 122;
@@ -2289,7 +2313,7 @@
             this.lbl_004POLY2_3OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY2_3OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY2_3OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY2_3OIL.Location = new System.Drawing.Point(1750, 332);
+            this.lbl_004POLY2_3OIL.Location = new System.Drawing.Point(1747, 332);
             this.lbl_004POLY2_3OIL.Name = "lbl_004POLY2_3OIL";
             this.lbl_004POLY2_3OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY2_3OIL.TabIndex = 117;
@@ -2301,7 +2325,7 @@
             this.lbl_004POLY2_3MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_004POLY2_3MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_004POLY2_3MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_004POLY2_3MAT.Location = new System.Drawing.Point(1687, 332);
+            this.lbl_004POLY2_3MAT.Location = new System.Drawing.Point(1684, 332);
             this.lbl_004POLY2_3MAT.Name = "lbl_004POLY2_3MAT";
             this.lbl_004POLY2_3MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_004POLY2_3MAT.TabIndex = 123;
@@ -2313,7 +2337,7 @@
             this.label73.BackColor = System.Drawing.Color.DarkCyan;
             this.label73.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.ForeColor = System.Drawing.Color.White;
-            this.label73.Location = new System.Drawing.Point(1688, 276);
+            this.label73.Location = new System.Drawing.Point(1684, 276);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(186, 23);
             this.label73.TabIndex = 124;
@@ -2325,7 +2349,7 @@
             this.label74.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label74.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.ForeColor = System.Drawing.Color.White;
-            this.label74.Location = new System.Drawing.Point(1813, 304);
+            this.label74.Location = new System.Drawing.Point(1810, 304);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(60, 23);
             this.label74.TabIndex = 125;
@@ -2337,7 +2361,7 @@
             this.label75.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label75.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label75.ForeColor = System.Drawing.Color.White;
-            this.label75.Location = new System.Drawing.Point(1750, 304);
+            this.label75.Location = new System.Drawing.Point(1747, 304);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(60, 23);
             this.label75.TabIndex = 126;
@@ -2349,7 +2373,7 @@
             this.label76.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.label76.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label76.ForeColor = System.Drawing.Color.White;
-            this.label76.Location = new System.Drawing.Point(1688, 304);
+            this.label76.Location = new System.Drawing.Point(1685, 304);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(60, 23);
             this.label76.TabIndex = 127;
@@ -2697,7 +2721,7 @@
             this.lbl_007POLY2_3HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY2_3HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY2_3HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY2_3HOSE.Location = new System.Drawing.Point(1813, 522);
+            this.lbl_007POLY2_3HOSE.Location = new System.Drawing.Point(1810, 522);
             this.lbl_007POLY2_3HOSE.Name = "lbl_007POLY2_3HOSE";
             this.lbl_007POLY2_3HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY2_3HOSE.TabIndex = 180;
@@ -2709,7 +2733,7 @@
             this.lbl_007POLY2_3OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY2_3OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY2_3OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY2_3OIL.Location = new System.Drawing.Point(1750, 522);
+            this.lbl_007POLY2_3OIL.Location = new System.Drawing.Point(1747, 522);
             this.lbl_007POLY2_3OIL.Name = "lbl_007POLY2_3OIL";
             this.lbl_007POLY2_3OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY2_3OIL.TabIndex = 179;
@@ -2721,7 +2745,7 @@
             this.lbl_007POLY2_3MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY2_3MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY2_3MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY2_3MAT.Location = new System.Drawing.Point(1687, 522);
+            this.lbl_007POLY2_3MAT.Location = new System.Drawing.Point(1684, 522);
             this.lbl_007POLY2_3MAT.Name = "lbl_007POLY2_3MAT";
             this.lbl_007POLY2_3MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY2_3MAT.TabIndex = 181;
@@ -2733,7 +2757,7 @@
             this.lbl_007POLY1_3HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY1_3HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY1_3HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY1_3HOSE.Location = new System.Drawing.Point(1624, 523);
+            this.lbl_007POLY1_3HOSE.Location = new System.Drawing.Point(1622, 522);
             this.lbl_007POLY1_3HOSE.Name = "lbl_007POLY1_3HOSE";
             this.lbl_007POLY1_3HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY1_3HOSE.TabIndex = 177;
@@ -2745,7 +2769,7 @@
             this.lbl_007POLY1_3OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY1_3OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY1_3OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY1_3OIL.Location = new System.Drawing.Point(1560, 522);
+            this.lbl_007POLY1_3OIL.Location = new System.Drawing.Point(1559, 522);
             this.lbl_007POLY1_3OIL.Name = "lbl_007POLY1_3OIL";
             this.lbl_007POLY1_3OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY1_3OIL.TabIndex = 176;
@@ -2805,7 +2829,7 @@
             this.lbl_007ISO1_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007ISO1_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007ISO1_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_007ISO1_2HOSE.Location = new System.Drawing.Point(844, 523);
+            this.lbl_007ISO1_2HOSE.Location = new System.Drawing.Point(844, 522);
             this.lbl_007ISO1_2HOSE.Name = "lbl_007ISO1_2HOSE";
             this.lbl_007ISO1_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_007ISO1_2HOSE.TabIndex = 170;
@@ -2817,7 +2841,7 @@
             this.lbl_007ISO1_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007ISO1_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007ISO1_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_007ISO1_2OIL.Location = new System.Drawing.Point(781, 523);
+            this.lbl_007ISO1_2OIL.Location = new System.Drawing.Point(781, 522);
             this.lbl_007ISO1_2OIL.Name = "lbl_007ISO1_2OIL";
             this.lbl_007ISO1_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_007ISO1_2OIL.TabIndex = 167;
@@ -2829,7 +2853,7 @@
             this.lbl_007ISO1_2MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007ISO1_2MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007ISO1_2MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_007ISO1_2MAT.Location = new System.Drawing.Point(718, 523);
+            this.lbl_007ISO1_2MAT.Location = new System.Drawing.Point(718, 522);
             this.lbl_007ISO1_2MAT.Name = "lbl_007ISO1_2MAT";
             this.lbl_007ISO1_2MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_007ISO1_2MAT.TabIndex = 172;
@@ -2889,7 +2913,7 @@
             this.lbl_007POLY2_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY2_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY2_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY2_2HOSE.Location = new System.Drawing.Point(1225, 522);
+            this.lbl_007POLY2_2HOSE.Location = new System.Drawing.Point(1221, 522);
             this.lbl_007POLY2_2HOSE.Name = "lbl_007POLY2_2HOSE";
             this.lbl_007POLY2_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY2_2HOSE.TabIndex = 165;
@@ -2901,7 +2925,7 @@
             this.lbl_007POLY1_2HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY1_2HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY1_2HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY1_2HOSE.Location = new System.Drawing.Point(1035, 522);
+            this.lbl_007POLY1_2HOSE.Location = new System.Drawing.Point(1032, 522);
             this.lbl_007POLY1_2HOSE.Name = "lbl_007POLY1_2HOSE";
             this.lbl_007POLY1_2HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY1_2HOSE.TabIndex = 163;
@@ -2913,7 +2937,7 @@
             this.lbl_007POLY2_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY2_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY2_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY2_2OIL.Location = new System.Drawing.Point(1161, 522);
+            this.lbl_007POLY2_2OIL.Location = new System.Drawing.Point(1158, 522);
             this.lbl_007POLY2_2OIL.Name = "lbl_007POLY2_2OIL";
             this.lbl_007POLY2_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY2_2OIL.TabIndex = 158;
@@ -2925,7 +2949,7 @@
             this.lbl_007POLY1_2OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY1_2OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY1_2OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY1_2OIL.Location = new System.Drawing.Point(971, 522);
+            this.lbl_007POLY1_2OIL.Location = new System.Drawing.Point(969, 522);
             this.lbl_007POLY1_2OIL.Name = "lbl_007POLY1_2OIL";
             this.lbl_007POLY1_2OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY1_2OIL.TabIndex = 156;
@@ -2937,7 +2961,7 @@
             this.lbl_007POLY2_2MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY2_2MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY2_2MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY2_2MAT.Location = new System.Drawing.Point(1098, 522);
+            this.lbl_007POLY2_2MAT.Location = new System.Drawing.Point(1095, 522);
             this.lbl_007POLY2_2MAT.Name = "lbl_007POLY2_2MAT";
             this.lbl_007POLY2_2MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY2_2MAT.TabIndex = 161;
@@ -2961,7 +2985,7 @@
             this.lbl_007POLY2_1HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY2_1HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY2_1HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY2_1HOSE.Location = new System.Drawing.Point(634, 522);
+            this.lbl_007POLY2_1HOSE.Location = new System.Drawing.Point(629, 522);
             this.lbl_007POLY2_1HOSE.Name = "lbl_007POLY2_1HOSE";
             this.lbl_007POLY2_1HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY2_1HOSE.TabIndex = 157;
@@ -2973,7 +2997,7 @@
             this.lbl_007POLY1_1HOSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY1_1HOSE.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY1_1HOSE.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY1_1HOSE.Location = new System.Drawing.Point(443, 522);
+            this.lbl_007POLY1_1HOSE.Location = new System.Drawing.Point(441, 522);
             this.lbl_007POLY1_1HOSE.Name = "lbl_007POLY1_1HOSE";
             this.lbl_007POLY1_1HOSE.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY1_1HOSE.TabIndex = 159;
@@ -2985,9 +3009,9 @@
             this.lbl_007POLY2_1OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY2_1OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY2_1OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY2_1OIL.Location = new System.Drawing.Point(570, 522);
+            this.lbl_007POLY2_1OIL.Location = new System.Drawing.Point(567, 522);
             this.lbl_007POLY2_1OIL.Name = "lbl_007POLY2_1OIL";
-            this.lbl_007POLY2_1OIL.Size = new System.Drawing.Size(60, 60);
+            this.lbl_007POLY2_1OIL.Size = new System.Drawing.Size(59, 60);
             this.lbl_007POLY2_1OIL.TabIndex = 162;
             this.lbl_007POLY2_1OIL.Text = "100";
             this.lbl_007POLY2_1OIL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2997,7 +3021,7 @@
             this.lbl_007POLY1_1OIL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY1_1OIL.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY1_1OIL.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY1_1OIL.Location = new System.Drawing.Point(379, 522);
+            this.lbl_007POLY1_1OIL.Location = new System.Drawing.Point(378, 522);
             this.lbl_007POLY1_1OIL.Name = "lbl_007POLY1_1OIL";
             this.lbl_007POLY1_1OIL.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY1_1OIL.TabIndex = 164;
@@ -3009,7 +3033,7 @@
             this.lbl_007POLY2_1MAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(117)))));
             this.lbl_007POLY2_1MAT.Font = new System.Drawing.Font("DS-Digital", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_007POLY2_1MAT.ForeColor = System.Drawing.Color.White;
-            this.lbl_007POLY2_1MAT.Location = new System.Drawing.Point(506, 522);
+            this.lbl_007POLY2_1MAT.Location = new System.Drawing.Point(504, 522);
             this.lbl_007POLY2_1MAT.Name = "lbl_007POLY2_1MAT";
             this.lbl_007POLY2_1MAT.Size = new System.Drawing.Size(60, 60);
             this.lbl_007POLY2_1MAT.TabIndex = 155;
@@ -3050,30 +3074,30 @@
             this.chartControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
             this.chartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.DataBindings = null;
-            xyDiagram3.AxisX.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram3.AxisX.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram3.AxisX.Title.Text = "Time";
-            xyDiagram3.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram3.AxisY.GridLines.Visible = false;
-            xyDiagram3.AxisY.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            xyDiagram3.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
-            xyDiagram3.AxisY.Title.Text = "Temperature °C";
-            xyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram3.DefaultPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
-            this.chartControl1.Diagram = xyDiagram3;
+            xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisX.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisX.Title.Text = "Time";
+            xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.GridLines.Visible = false;
+            xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
+            xyDiagram1.AxisY.Title.Text = "Temperature °C";
+            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.DefaultPane.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(51)))), ((int)(((byte)(92)))));
+            this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartControl1.Location = new System.Drawing.Point(14, 12);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.PaletteBaseColorNumber = 6;
-            series3.Name = "Series 1";
-            lineSeriesView3.Color = System.Drawing.Color.Yellow;
-            lineSeriesView3.Shadow.Visible = true;
-            series3.View = lineSeriesView3;
+            series1.Name = "Series 1";
+            lineSeriesView1.Color = System.Drawing.Color.Yellow;
+            lineSeriesView1.Shadow.Visible = true;
+            series1.View = lineSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series3};
+        series1};
             this.chartControl1.Size = new System.Drawing.Size(1774, 369);
             this.chartControl1.TabIndex = 0;
             // 
@@ -3100,30 +3124,6 @@
             this.label17.TabIndex = 183;
             this.label17.Text = "Auto 2";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.Color.Red;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(1308, 21);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(177, 42);
-            this.label18.TabIndex = 95;
-            this.label18.Text = "Temperature alarm";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label19
-            // 
-            this.label19.BackColor = System.Drawing.Color.Silver;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(1490, 21);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(180, 42);
-            this.label19.TabIndex = 96;
-            this.label19.Text = "Temperature not use";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SMT_SCADA_B2_PU_MAT_TEMPER
             // 
@@ -3353,9 +3353,9 @@
             this.VisibleChanged += new System.EventHandler(this.SMT_SCADA_B2_PU_MAT_TEMPER_VisibleChanged);
             this.pnTop.ResumeLayout(false);
             this.a1Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(lineSeriesView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(lineSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 

@@ -3122,7 +3122,7 @@
             series1.View = lineSeriesView1;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl1.Size = new System.Drawing.Size(1774, 369);
+            this.chartControl1.Size = new System.Drawing.Size(1803, 369);
             this.chartControl1.TabIndex = 0;
             // 
             // SMT_SCADA_B2_PU_MAT_TEMPER

@@ -318,7 +318,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(177, 42);
             this.label18.TabIndex = 95;
-            this.label18.Text = "Equipment alarm";
+            this.label18.Text = "Equipment Alarm";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15

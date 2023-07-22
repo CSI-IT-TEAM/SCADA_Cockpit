@@ -4,7 +4,7 @@
 	<MAIN>
 		<grpForm>SCADA_COCKPIT</grpForm>
 		<FlashScreen>true</FlashScreen>
-		<Auto_Download>true</Auto_Download>
+		<Auto_Download>false</Auto_Download>
 		<AREA>NOS</AREA>
 		<Type>2</Type>
 		<SCREEN>2</SCREEN>

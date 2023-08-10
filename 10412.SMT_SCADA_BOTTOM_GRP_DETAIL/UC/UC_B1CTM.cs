@@ -39,10 +39,29 @@ namespace FORM.UC
         {
            
             lblHeat.Text = string.Concat(dr["HEAT_VL"].ToString(), "°C");
-            lblHeat.BackColor = Color.FromName(dr["HEAT_COLOR"].ToString());
+            if (dr["HEAT_VL"].ToString() == "0")
+            {
+                lblHeat.BackColor = Color.Silver;
+            }
+            else
+            {
+                lblHeat.BackColor = Color.FromName(dr["HEAT_COLOR"].ToString());
+            }
+            
+
+
 
             lblCool.Text = string.Concat(dr["COOL_VL"].ToString(), "°C");
             lblCool.BackColor = Color.FromName(dr["COOL_COLOR"].ToString());
+
+            if (dr["COOL_VL"].ToString() == "0")
+            {
+                lblCool.BackColor = Color.Silver;
+            }
+            else
+            {
+                lblCool.BackColor = Color.FromName(dr["COOL_COLOR"].ToString());
+            }
         }
         private void a1Panel1_Click(object sender, EventArgs e)
         {

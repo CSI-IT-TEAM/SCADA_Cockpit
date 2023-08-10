@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B1CTM_TEMPER));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.ConstantLine constantLine1 = new DevExpress.XtraCharts.ConstantLine();
@@ -44,7 +43,6 @@
             DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation2 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             this.pnTop = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,7 +52,7 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.a1Panel2 = new OS_DSF.A1Panel();
             this.chartCool = new DevExpress.XtraCharts.ChartControl();
@@ -79,7 +77,6 @@
             // pnTop
             // 
             this.pnTop.Controls.Add(this.label8);
-            this.pnTop.Controls.Add(this.label7);
             this.pnTop.Controls.Add(this.label5);
             this.pnTop.Controls.Add(this.label6);
             this.pnTop.Controls.Add(this.label4);
@@ -98,23 +95,12 @@
             // 
             this.label8.BackColor = System.Drawing.Color.Silver;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1495, 39);
+            this.label8.Location = new System.Drawing.Point(1407, 39);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 23);
+            this.label8.Size = new System.Drawing.Size(170, 23);
             this.label8.TabIndex = 90;
-            this.label8.Text = "Max: 20";
+            this.label8.Text = "Max: 30";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Silver;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1407, 39);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 23);
-            this.label7.TabIndex = 90;
-            this.label7.Text = "Min: 10";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -124,7 +110,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 23);
             this.label5.TabIndex = 90;
-            this.label5.Text = "Max: 158";
+            this.label5.Text = "Max: 170";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -146,7 +132,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 90;
-            this.label4.Text = "Min: 152";
+            this.label4.Text = "Min: 150";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -471,7 +457,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
     }
 }

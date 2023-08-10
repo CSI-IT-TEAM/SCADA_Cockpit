@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B2IPZONE_TEMPER_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
+            this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.sbtnZone1 = new DevExpress.XtraEditors.SimpleButton();
@@ -169,7 +171,7 @@
             this.lblMC3_INJECT2_06 = new System.Windows.Forms.Label();
             this.lblMC3_INJECT2_08 = new System.Windows.Forms.Label();
             this.label103 = new System.Windows.Forms.Label();
-            this.tmrAnimation = new System.Windows.Forms.Timer();
+            this.tmrAnimation = new System.Windows.Forms.Timer(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -202,7 +204,6 @@
             this.label71 = new System.Windows.Forms.Label();
             this.sbtnNext = new DevExpress.XtraEditors.SimpleButton();
             this.sbtnPrev = new DevExpress.XtraEditors.SimpleButton();
-            this.cmdBack = new System.Windows.Forms.Button();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -230,6 +231,26 @@
             this.btnTest.Text = "button1";
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Visible = false;
+            // 
+            // cmdBack
+            // 
+            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
+            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
+            this.cmdBack.FlatAppearance.BorderSize = 0;
+            this.cmdBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
+            this.cmdBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
+            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
+            this.cmdBack.ForeColor = System.Drawing.Color.Navy;
+            this.cmdBack.Location = new System.Drawing.Point(3, 3);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(72, 70);
+            this.cmdBack.TabIndex = 88;
+            this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
             // lblDate
             // 
@@ -1936,9 +1957,9 @@
             this.label10.ForeColor = System.Drawing.Color.Yellow;
             this.label10.Location = new System.Drawing.Point(637, 155);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 23);
+            this.label10.Size = new System.Drawing.Size(147, 40);
             this.label10.TabIndex = 27;
-            this.label10.Text = "Min: 152°C";
+            this.label10.Text = "Min: 80°C";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -1948,9 +1969,9 @@
             this.label11.ForeColor = System.Drawing.Color.Yellow;
             this.label11.Location = new System.Drawing.Point(792, 155);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 23);
+            this.label11.Size = new System.Drawing.Size(147, 40);
             this.label11.TabIndex = 27;
-            this.label11.Text = "Max: 158°C";
+            this.label11.Text = "Max: 105°C";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
@@ -2317,29 +2338,8 @@
             this.sbtnPrev.Text = "Previous";
             this.sbtnPrev.Click += new System.EventHandler(this.sbtnNavPage_Click);
             // 
-            // cmdBack
-            // 
-            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
-            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
-            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
-            this.cmdBack.FlatAppearance.BorderSize = 0;
-            this.cmdBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
-            this.cmdBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
-            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdBack.ForeColor = System.Drawing.Color.Navy;
-            this.cmdBack.Location = new System.Drawing.Point(3, 3);
-            this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(72, 70);
-            this.cmdBack.TabIndex = 88;
-            this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdBack.UseVisualStyleBackColor = false;
-            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
-            // 
             // SMT_SCADA_B2IPZONE_TEMPER_V2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B2_IP_UV_TEMPER));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
@@ -143,7 +144,7 @@
             this.chartMC2 = new DevExpress.XtraCharts.ChartControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chartMC1 = new DevExpress.XtraCharts.ChartControl();
-            this.tmrDate = new System.Windows.Forms.Timer();
+            this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.a1Panel6 = new OS_DSF.A1Panel();
             this.roundLabel30 = new RoundLabel();
             this.lblZone6MC3 = new RoundLabel();
@@ -423,7 +424,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 23);
             this.label5.TabIndex = 90;
-            this.label5.Text = "Max: 65°C";
+            this.label5.Text = "Max: 55°C";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -434,7 +435,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 90;
-            this.label4.Text = "Min: 55°C";
+            this.label4.Text = "Min: 45°C";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnTest
@@ -775,9 +776,9 @@
             // 
             this.lblZone6MC3._BackColor = System.Drawing.Color.Silver;
             this.lblZone6MC3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone6MC3.Location = new System.Drawing.Point(432, 5);
+            this.lblZone6MC3.Location = new System.Drawing.Point(431, 5);
             this.lblZone6MC3.Name = "lblZone6MC3";
-            this.lblZone6MC3.Size = new System.Drawing.Size(50, 23);
+            this.lblZone6MC3.Size = new System.Drawing.Size(60, 23);
             this.lblZone6MC3.TabIndex = 8;
             this.lblZone6MC3.Text = "PV: 55";
             // 
@@ -795,9 +796,9 @@
             // 
             this.lblZone6MC2._BackColor = System.Drawing.Color.Silver;
             this.lblZone6MC2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone6MC2.Location = new System.Drawing.Point(265, 5);
+            this.lblZone6MC2.Location = new System.Drawing.Point(264, 5);
             this.lblZone6MC2.Name = "lblZone6MC2";
-            this.lblZone6MC2.Size = new System.Drawing.Size(50, 23);
+            this.lblZone6MC2.Size = new System.Drawing.Size(60, 23);
             this.lblZone6MC2.TabIndex = 8;
             this.lblZone6MC2.Text = "PV: 55";
             // 
@@ -815,9 +816,9 @@
             // 
             this.lblZone6MC1._BackColor = System.Drawing.Color.Silver;
             this.lblZone6MC1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone6MC1.Location = new System.Drawing.Point(99, 5);
+            this.lblZone6MC1.Location = new System.Drawing.Point(98, 5);
             this.lblZone6MC1.Name = "lblZone6MC1";
-            this.lblZone6MC1.Size = new System.Drawing.Size(50, 23);
+            this.lblZone6MC1.Size = new System.Drawing.Size(60, 23);
             this.lblZone6MC1.TabIndex = 8;
             this.lblZone6MC1.Text = "PV: 55";
             // 
@@ -1110,9 +1111,9 @@
             // 
             this.lblZone3MC3._BackColor = System.Drawing.Color.Silver;
             this.lblZone3MC3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone3MC3.Location = new System.Drawing.Point(432, 5);
+            this.lblZone3MC3.Location = new System.Drawing.Point(431, 5);
             this.lblZone3MC3.Name = "lblZone3MC3";
-            this.lblZone3MC3.Size = new System.Drawing.Size(50, 23);
+            this.lblZone3MC3.Size = new System.Drawing.Size(60, 23);
             this.lblZone3MC3.TabIndex = 8;
             this.lblZone3MC3.Text = "PV: 55";
             // 
@@ -1130,9 +1131,9 @@
             // 
             this.lblZone3MC2._BackColor = System.Drawing.Color.Silver;
             this.lblZone3MC2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone3MC2.Location = new System.Drawing.Point(265, 5);
+            this.lblZone3MC2.Location = new System.Drawing.Point(264, 5);
             this.lblZone3MC2.Name = "lblZone3MC2";
-            this.lblZone3MC2.Size = new System.Drawing.Size(50, 23);
+            this.lblZone3MC2.Size = new System.Drawing.Size(60, 23);
             this.lblZone3MC2.TabIndex = 8;
             this.lblZone3MC2.Text = "PV: 55";
             // 
@@ -1150,9 +1151,9 @@
             // 
             this.lblZone3MC1._BackColor = System.Drawing.Color.Silver;
             this.lblZone3MC1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone3MC1.Location = new System.Drawing.Point(99, 5);
+            this.lblZone3MC1.Location = new System.Drawing.Point(98, 5);
             this.lblZone3MC1.Name = "lblZone3MC1";
-            this.lblZone3MC1.Size = new System.Drawing.Size(50, 23);
+            this.lblZone3MC1.Size = new System.Drawing.Size(60, 23);
             this.lblZone3MC1.TabIndex = 8;
             this.lblZone3MC1.Text = "PV: 55";
             // 
@@ -1445,9 +1446,9 @@
             // 
             this.lblZone5MC3._BackColor = System.Drawing.Color.Silver;
             this.lblZone5MC3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone5MC3.Location = new System.Drawing.Point(432, 5);
+            this.lblZone5MC3.Location = new System.Drawing.Point(431, 5);
             this.lblZone5MC3.Name = "lblZone5MC3";
-            this.lblZone5MC3.Size = new System.Drawing.Size(50, 23);
+            this.lblZone5MC3.Size = new System.Drawing.Size(60, 23);
             this.lblZone5MC3.TabIndex = 8;
             this.lblZone5MC3.Text = "PV: 55";
             // 
@@ -1465,9 +1466,9 @@
             // 
             this.lblZone5MC2._BackColor = System.Drawing.Color.Silver;
             this.lblZone5MC2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone5MC2.Location = new System.Drawing.Point(265, 5);
+            this.lblZone5MC2.Location = new System.Drawing.Point(264, 5);
             this.lblZone5MC2.Name = "lblZone5MC2";
-            this.lblZone5MC2.Size = new System.Drawing.Size(50, 23);
+            this.lblZone5MC2.Size = new System.Drawing.Size(60, 23);
             this.lblZone5MC2.TabIndex = 8;
             this.lblZone5MC2.Text = "PV: 55";
             // 
@@ -1485,9 +1486,9 @@
             // 
             this.lblZone5MC1._BackColor = System.Drawing.Color.Silver;
             this.lblZone5MC1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone5MC1.Location = new System.Drawing.Point(99, 5);
+            this.lblZone5MC1.Location = new System.Drawing.Point(98, 5);
             this.lblZone5MC1.Name = "lblZone5MC1";
-            this.lblZone5MC1.Size = new System.Drawing.Size(50, 23);
+            this.lblZone5MC1.Size = new System.Drawing.Size(60, 23);
             this.lblZone5MC1.TabIndex = 8;
             this.lblZone5MC1.Text = "PV: 55";
             // 
@@ -1780,9 +1781,9 @@
             // 
             this.lblZone4MC3._BackColor = System.Drawing.Color.Silver;
             this.lblZone4MC3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone4MC3.Location = new System.Drawing.Point(432, 5);
+            this.lblZone4MC3.Location = new System.Drawing.Point(431, 5);
             this.lblZone4MC3.Name = "lblZone4MC3";
-            this.lblZone4MC3.Size = new System.Drawing.Size(50, 23);
+            this.lblZone4MC3.Size = new System.Drawing.Size(60, 23);
             this.lblZone4MC3.TabIndex = 8;
             this.lblZone4MC3.Text = "PV: 55";
             // 
@@ -1800,9 +1801,9 @@
             // 
             this.lblZone4MC2._BackColor = System.Drawing.Color.Silver;
             this.lblZone4MC2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone4MC2.Location = new System.Drawing.Point(265, 5);
+            this.lblZone4MC2.Location = new System.Drawing.Point(264, 5);
             this.lblZone4MC2.Name = "lblZone4MC2";
-            this.lblZone4MC2.Size = new System.Drawing.Size(50, 23);
+            this.lblZone4MC2.Size = new System.Drawing.Size(60, 23);
             this.lblZone4MC2.TabIndex = 8;
             this.lblZone4MC2.Text = "PV: 55";
             // 
@@ -1820,9 +1821,9 @@
             // 
             this.lblZone4MC1._BackColor = System.Drawing.Color.Silver;
             this.lblZone4MC1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone4MC1.Location = new System.Drawing.Point(99, 5);
+            this.lblZone4MC1.Location = new System.Drawing.Point(98, 5);
             this.lblZone4MC1.Name = "lblZone4MC1";
-            this.lblZone4MC1.Size = new System.Drawing.Size(50, 23);
+            this.lblZone4MC1.Size = new System.Drawing.Size(60, 23);
             this.lblZone4MC1.TabIndex = 8;
             this.lblZone4MC1.Text = "PV: 55";
             // 
@@ -2115,9 +2116,9 @@
             // 
             this.lblZone2MC3._BackColor = System.Drawing.Color.Silver;
             this.lblZone2MC3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone2MC3.Location = new System.Drawing.Point(432, 5);
+            this.lblZone2MC3.Location = new System.Drawing.Point(431, 5);
             this.lblZone2MC3.Name = "lblZone2MC3";
-            this.lblZone2MC3.Size = new System.Drawing.Size(50, 23);
+            this.lblZone2MC3.Size = new System.Drawing.Size(60, 23);
             this.lblZone2MC3.TabIndex = 8;
             this.lblZone2MC3.Text = "PV: 55";
             // 
@@ -2135,9 +2136,9 @@
             // 
             this.lblZone2MC2._BackColor = System.Drawing.Color.Silver;
             this.lblZone2MC2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone2MC2.Location = new System.Drawing.Point(265, 5);
+            this.lblZone2MC2.Location = new System.Drawing.Point(264, 5);
             this.lblZone2MC2.Name = "lblZone2MC2";
-            this.lblZone2MC2.Size = new System.Drawing.Size(50, 23);
+            this.lblZone2MC2.Size = new System.Drawing.Size(60, 23);
             this.lblZone2MC2.TabIndex = 8;
             this.lblZone2MC2.Text = "PV: 55";
             // 
@@ -2155,9 +2156,9 @@
             // 
             this.lblZone2MC1._BackColor = System.Drawing.Color.Silver;
             this.lblZone2MC1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone2MC1.Location = new System.Drawing.Point(99, 5);
+            this.lblZone2MC1.Location = new System.Drawing.Point(98, 5);
             this.lblZone2MC1.Name = "lblZone2MC1";
-            this.lblZone2MC1.Size = new System.Drawing.Size(50, 23);
+            this.lblZone2MC1.Size = new System.Drawing.Size(60, 23);
             this.lblZone2MC1.TabIndex = 8;
             this.lblZone2MC1.Text = "PV: 55";
             // 
@@ -2450,9 +2451,9 @@
             // 
             this.lblZone1MC3._BackColor = System.Drawing.Color.Silver;
             this.lblZone1MC3.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone1MC3.Location = new System.Drawing.Point(432, 5);
+            this.lblZone1MC3.Location = new System.Drawing.Point(431, 5);
             this.lblZone1MC3.Name = "lblZone1MC3";
-            this.lblZone1MC3.Size = new System.Drawing.Size(50, 23);
+            this.lblZone1MC3.Size = new System.Drawing.Size(60, 23);
             this.lblZone1MC3.TabIndex = 8;
             this.lblZone1MC3.Text = "PV: 55";
             // 
@@ -2470,9 +2471,9 @@
             // 
             this.lblZone1MC2._BackColor = System.Drawing.Color.Silver;
             this.lblZone1MC2.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone1MC2.Location = new System.Drawing.Point(265, 5);
+            this.lblZone1MC2.Location = new System.Drawing.Point(264, 5);
             this.lblZone1MC2.Name = "lblZone1MC2";
-            this.lblZone1MC2.Size = new System.Drawing.Size(50, 23);
+            this.lblZone1MC2.Size = new System.Drawing.Size(60, 23);
             this.lblZone1MC2.TabIndex = 8;
             this.lblZone1MC2.Text = "PV: 55";
             // 
@@ -2490,9 +2491,9 @@
             // 
             this.lblZone1MC1._BackColor = System.Drawing.Color.Silver;
             this.lblZone1MC1.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZone1MC1.Location = new System.Drawing.Point(99, 5);
+            this.lblZone1MC1.Location = new System.Drawing.Point(98, 5);
             this.lblZone1MC1.Name = "lblZone1MC1";
-            this.lblZone1MC1.Size = new System.Drawing.Size(50, 23);
+            this.lblZone1MC1.Size = new System.Drawing.Size(60, 23);
             this.lblZone1MC1.TabIndex = 8;
             this.lblZone1MC1.Text = "PV: 55";
             // 

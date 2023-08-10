@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2018574E-DCC6-487A-A9D9-D9AFFDD80ECE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FORM</RootNamespace>
+    <AssemblyName>SMT_SCADA_BOTTOM_COCKPIT_0</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\MAIN\bin\Debug\DLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\References\DevExpress.Charts.v17.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\References\DevExpress.Data.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\References\DevExpress.Utils.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 17.1\Components\Bin\Framework\DevExpress.XtraBars.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraCharts.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraCharts.v17.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraEditors.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraGauges.v17.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v17.1.Win, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraGauges.v17.1.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAIN\bin\Debug\References\DevExpress.XtraGrid.v17.1.dll</HintPath>
+    </Reference>
+    <Reference Include="msdatasrc, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC\MSDATASRC\7.0.3300.0__b03f5f7f11d50a3a\msdatasrc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassLib\A1Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\A1Panel.designer.cs">
+      <DependentUpon>A1Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassLib\A1PanelGraphics.cs" />
+    <Compile Include="ClassLib\AdvancedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\RoundedRectangle.cs" />
+    <Compile Include="ClassLib\Globals.cs" />
+    <Compile Include="ClassLib\GroupboxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\LabelGradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\RoundLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassLib\TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SMT_SCADA_BOTTOM_COCKPIT_V4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_BOTTOM_COCKPIT_V4.designer.cs">
+      <DependentUpon>SMT_SCADA_BOTTOM_COCKPIT_V4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMT_SCADA_BOTTOM_COCKPIT_V4_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMT_SCADA_BOTTOM_COCKPIT_V4_1.designer.cs">
+      <DependentUpon>SMT_SCADA_BOTTOM_COCKPIT_V4_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_3COL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_3COL.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_3COL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_2COL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_2COL.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_2COL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_OTH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_OTH.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_OTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_4COL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA_4COL.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA_4COL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_BOTTOM_SCADA.Designer.cs">
+      <DependentUpon>UC_BOTTOM_SCADA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Chart_Bar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Chart_Bar.designer.cs">
+      <DependentUpon>UC_Chart_Bar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Factory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Chart_Pie.designer.cs">
+      <DependentUpon>UC_Factory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_DWMY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_DWMY.designer.cs">
+      <DependentUpon>UC_DWMY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Chart_Donut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Chart_Donut.designer.cs">
+      <DependentUpon>UC_Chart_Donut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_MONTH_SELECTION.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_MONTH_SELECTION.designer.cs">
+      <DependentUpon>UC_MONTH_SELECTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_YEAR_SELECTION.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_YEAR_SELECTION.Designer.cs">
+      <DependentUpon>UC_YEAR_SELECTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SMT_SCADA_BOTTOM_COCKPIT_V4.resx">
+      <DependentUpon>SMT_SCADA_BOTTOM_COCKPIT_V4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMT_SCADA_BOTTOM_COCKPIT_V4_1.resx">
+      <DependentUpon>SMT_SCADA_BOTTOM_COCKPIT_V4_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_3COL.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_3COL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_2COL.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_2COL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_OTH.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_OTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA_4COL.resx">
+      <DependentUpon>UC_BOTTOM_SCADA_4COL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_BOTTOM_SCADA.resx">
+      <DependentUpon>UC_BOTTOM_SCADA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Chart_Bar.resx">
+      <DependentUpon>UC_Chart_Bar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Chart_Pie.resx">
+      <DependentUpon>UC_Factory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_DWMY.resx">
+      <DependentUpon>UC_DWMY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Chart_Donut.resx">
+      <DependentUpon>UC_Chart_Donut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_MONTH_SELECTION.resx">
+      <DependentUpon>UC_MONTH_SELECTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_YEAR_SELECTION.resx">
+      <DependentUpon>UC_YEAR_SELECTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComVar\ComVar.csproj">
+      <Project>{1fdd4c55-6914-47c9-89f0-682d023ac3a9}</Project>
+      <Name>ComVar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\COM\Com.csproj">
+      <Project>{992378c3-66a1-4e98-96f5-ce2b26e0cab2}</Project>
+      <Name>Com</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\energy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ANDON2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31599.jpg" />
+    <None Include="Resources\11527.jpg" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\9855.jpg" />
+    <None Include="Resources\1909.i039.018_glass production isometric.jpg" />
+    <None Include="Resources\23818.jpg" />
+    <None Include="Resources\ONTOV30.jpg" />
+    <None Include="Resources\mao-5-ci-mgp-gif-ci-472x293.gif" />
+    <None Include="Resources\factory.png" />
+    <None Include="Resources\imgbin_factory-industry-png.png" />
+    <None Include="Resources\vecteezy_industrial-factories-and-chimneys_4689111.jpg" />
+    <None Include="Resources\temperature.png" />
+    <None Include="Resources\conveyor.png" />
+    <None Include="Resources\breakdown.png" />
+    <None Include="Resources\heart-rate-monitor.png" />
+    <None Include="Resources\oil-price.png" />
+    <None Include="Resources\low-temperature.png" />
+    <None Include="Resources\gauge.png" />
+    <None Include="Resources\monitoring.png" />
+    <None Include="Resources\Batch-Weighing-System.png" />
+    <None Include="Resources\1522955047_main.jpg" />
+    <None Include="Resources\31596.jpg" />
+    <None Include="Resources\bottom_scada.png" />
+    <None Include="Resources\factory.gif" />
+    <None Include="Resources\factory1.gif" />
+    <None Include="Resources\factory2.gif" />
+    <None Include="Resources\factory3.gif" />
+    <None Include="Resources\factory4.gif" />
+    <None Include="Resources\factory5.gif" />
+    <None Include="Resources\factory6.gif" />
+    <None Include="Resources\factory7.gif" />
+    <None Include="Resources\factory8.gif" />
+    <None Include="Resources\factory10.gif" />
+    <None Include="Resources\factory11.gif" />
+    <None Include="Resources\factory12.gif" />
+    <None Include="Resources\factory13.gif" />
+    <None Include="Resources\factory14.gif" />
+    <None Include="Resources\factory15.gif" />
+    <Content Include="Resources\Pelletizing.gif" />
+    <None Include="Resources\product-transfer-equipment03.jpg" />
+    <None Include="Resources\PHP1.jpg" />
+    <None Include="Resources\PHP3.jpg" />
+    <Content Include="Resources\Roll1.jpg" />
+    <None Include="Resources\silo-system-01.jpg" />
+    <Content Include="Resources\temperature-control.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

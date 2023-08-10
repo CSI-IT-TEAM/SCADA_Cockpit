@@ -153,6 +153,20 @@ namespace FORM
                 cCount = 0;
                 tmrAnimation.Start();
             }
+
+
+            //foreach (var item in lstInjectLabel)
+            //{
+            //    if(item.BackColor == Color.Red)
+            //    {
+            //        item.BackColor = Color.Gray;
+            //    }
+            //    else if (item.BackColor == Color.Gray)
+            //    {
+            //        item.BackColor = Color.Red;
+            //    }
+
+            //}
         }
 
         int iL1_001 = 0;
@@ -204,6 +218,7 @@ namespace FORM
                 foreach (var item in lstInjectLabel)
                 {
                     item.Text = "0";
+                    item.BackColor = Color.FromArgb(45, 55, 117);
                 }
                 lblMC1.Text = string.Empty;
                 lblMC2.Text = string.Empty;
@@ -231,10 +246,26 @@ namespace FORM
                                 if (item.Name.ToString().Substring(0, 14).Equals("lblMC1_INJECT1") && item.Name.ToString().Substring(item.Name.ToString().Length - 2).Equals(dr["STATION_CD"]))
                                 {
                                     item.Text = string.Format("{0:n1}", dr["INJECT1"]);
+                                    if(dr["STATUS1"].ToString().Equals("1"))
+                                    {
+                                        item.BackColor = Color.Red;
+                                    }
+                                    else
+                                    {
+                                        item.BackColor = Color.FromArgb(45, 55, 117);
+                                    }
                                 }
                                 if (item.Name.ToString().Substring(0, 14).Equals("lblMC1_INJECT2") && item.Name.ToString().Substring(item.Name.ToString().Length - 2).Equals(dr["STATION_CD"]))
                                 {
                                     item.Text = string.Format("{0:n1}", dr["INJECT2"]);
+                                    if (dr["STATUS2"].ToString().Equals("1"))
+                                    {
+                                        item.BackColor = Color.Red;
+                                    }
+                                    else
+                                    {
+                                        item.BackColor = Color.FromArgb(45, 55, 117);
+                                    }
                                 }
                             }
                         }
@@ -248,10 +279,26 @@ namespace FORM
                                 if (item.Name.ToString().Substring(0, 14).Equals("lblMC2_INJECT1") && item.Name.ToString().Substring(item.Name.ToString().Length - 2).Equals(dr["STATION_CD"]))
                                 {
                                     item.Text = string.Format("{0:n1}", dr["INJECT1"]);
+                                    if (dr["STATUS1"].ToString().Equals("1"))
+                                    {
+                                        item.BackColor = Color.Red;
+                                    }
+                                    else
+                                    {
+                                        item.BackColor = Color.FromArgb(45, 55, 117);
+                                    }
                                 }
                                 if (item.Name.ToString().Substring(0, 14).Equals("lblMC2_INJECT2") && item.Name.ToString().Substring(item.Name.ToString().Length - 2).Equals(dr["STATION_CD"]))
                                 {
                                     item.Text = string.Format("{0:n1}", dr["INJECT2"]);
+                                    if (dr["STATUS2"].ToString().Equals("1"))
+                                    {
+                                        item.BackColor = Color.Red;
+                                    }
+                                    else
+                                    {
+                                        item.BackColor = Color.FromArgb(45, 55, 117);
+                                    }
                                 }
                             }
                         }
@@ -265,10 +312,27 @@ namespace FORM
                                 if (item.Name.ToString().Substring(0, 14).Equals("lblMC3_INJECT1") && item.Name.ToString().Substring(item.Name.ToString().Length - 2).Equals(dr["STATION_CD"]))
                                 {
                                     item.Text = string.Format("{0:n1}", dr["INJECT1"]);
+                                    if (dr["STATUS1"].ToString().Equals("1"))
+                                    {
+                                        item.BackColor = Color.Red;
+                                    }
+                                    else
+                                    {
+                                        item.BackColor = Color.FromArgb(45, 55, 117);
+                                        
+                                    }
                                 }
                                 if (item.Name.ToString().Substring(0, 14).Equals("lblMC3_INJECT2") && item.Name.ToString().Substring(item.Name.ToString().Length - 2).Equals(dr["STATION_CD"]))
                                 {
                                     item.Text = string.Format("{0:n1}", dr["INJECT2"]);
+                                    if (dr["STATUS2"].ToString().Equals("1"))
+                                    {
+                                        item.BackColor = Color.Red;
+                                    }
+                                    else
+                                    {
+                                        item.BackColor = Color.FromArgb(45, 55, 117);
+                                    }
                                 }
                             }
                         }
@@ -305,7 +369,7 @@ namespace FORM
             InitLabelControls();
 
             //Select data with default value
-
+            //lblMC1_INJECT1_01.BackColor = Color.Red;
         }
 
         private void SMT_SCADA_B2IPZONE_TEMPER_VisibleChanged(object sender, EventArgs e)

@@ -58,9 +58,9 @@ namespace FORM
             if (dt.Rows.Count > 0)
             {
 
-                if (dt.Rows[0]["TEMP5"].ToString() != "0°C")
-                {
-                    lbl_poly_hea.Text = dt.Rows[0]["TEMP5"].ToString().Replace("R", "");
+                //if (dt.Rows[0]["TEMP5"].ToString() != "0°C")
+               // {
+                    lbl_poly_hea.Text = dt.Rows[0]["TEMP5"].ToString().Replace("R", "").Replace("N", "");
 
                     lbl_poly_hea1.Text = string.Concat(dt.Rows[0]["MIN_TEMP5"], "°C - ", dt.Rows[0]["MAX_TEMP5"], "°C");
 
@@ -70,11 +70,15 @@ namespace FORM
                     }
                     else
                         lbl_poly_hea.Tag = "0";
+                //  }
+                if (dt.Rows[0]["TEMP5"].ToString() == "N0°C")
+                {
+                    lbl_poly_hea.BackColor = Color.Gray;
                 }
 
-                if (dt.Rows[0]["TEMP6"].ToString() != "0°C")
-                {
-                    lbl_poly_war.Text = dt.Rows[0]["TEMP6"].ToString().Replace("R", "");
+                // if (dt.Rows[0]["TEMP6"].ToString() != "0°C")
+                // {
+                lbl_poly_war.Text = dt.Rows[0]["TEMP6"].ToString().Replace("R", "").Replace("N", "");
                     lbl_poly_war1.Text = string.Concat(dt.Rows[0]["MIN_TEMP6"], "°C - ", dt.Rows[0]["MAX_TEMP6"], "°C");
 
                     if (dt.Rows[0]["TEMP6"].ToString().Substring(0, 1) == "R")
@@ -84,11 +88,15 @@ namespace FORM
                     else
                         lbl_poly_war.Tag = "0";
 
+                // }
+                if (dt.Rows[0]["TEMP6"].ToString() == "N0°C")
+                {
+                    lbl_poly_war.BackColor = Color.Gray;
                 }
 
-                if (dt.Rows[0]["TEMP2"].ToString() != "0°C")
-                {
-                    lbl_iso1_hea.Text = dt.Rows[0]["TEMP2"].ToString().Replace("R", "");
+                //   if (dt.Rows[0]["TEMP2"].ToString() != "0°C")
+                //  {
+                lbl_iso1_hea.Text = dt.Rows[0]["TEMP2"].ToString().Replace("R", "").Replace("N", "");
                     lbl_iso1_hea1.Text = string.Concat(dt.Rows[0]["MIN_TEMP2"], "°C - ", dt.Rows[0]["MAX_TEMP2"], "°C");
                     if (dt.Rows[0]["TEMP2"].ToString().Substring(0, 1) == "R")
                     {
@@ -96,11 +104,15 @@ namespace FORM
                     }
                     else
                         lbl_iso1_hea.Tag = "0";
+                // }
+                if (dt.Rows[0]["TEMP2"].ToString() == "N0°C")
+                {
+                    lbl_iso1_hea.BackColor = Color.Gray;
                 }
 
-                if (dt.Rows[0]["TEMP4"].ToString() != "0°C")
-                {
-                    lbl_iso1_war.Text = dt.Rows[0]["TEMP4"].ToString().Replace("R", "");
+                // if (dt.Rows[0]["TEMP4"].ToString() != "0°C")
+                // {
+                lbl_iso1_war.Text = dt.Rows[0]["TEMP4"].ToString().Replace("R", "").Replace("N", "");
                     lbl_iso1_war1.Text = string.Concat(dt.Rows[0]["MIN_TEMP4"], "°C - ", dt.Rows[0]["MAX_TEMP4"], "°C");
                     if (dt.Rows[0]["TEMP4"].ToString().Substring(0, 1) == "R")
                     {
@@ -108,11 +120,16 @@ namespace FORM
                     }
                     else
                         lbl_iso1_war.Tag = "0";
+                // }
+                if (dt.Rows[0]["TEMP4"].ToString() == "N0°C")
+                {
+                    lbl_iso1_war.BackColor = Color.Gray;
                 }
 
-                if (dt.Rows[0]["TEMP1"].ToString() != "0°C")
-                {
-                    lbl_iso2_hea.Text = dt.Rows[0]["TEMP1"].ToString().Replace("R", "");
+
+                // if (dt.Rows[0]["TEMP1"].ToString() != "0°C")
+                // {
+                lbl_iso2_hea.Text = dt.Rows[0]["TEMP1"].ToString().Replace("R", "").Replace("N", "");
                     lbl_iso2_hea1.Text = string.Concat(dt.Rows[0]["MIN_TEMP1"], "°C - ", dt.Rows[0]["MAX_TEMP1"], "°C");
                     if (dt.Rows[0]["TEMP1"].ToString().Substring(0, 1) == "R")
                     {
@@ -120,11 +137,15 @@ namespace FORM
                     }
                     else
                         lbl_iso2_hea.Tag = "0";
+
+                if (dt.Rows[0]["TEMP1"].ToString() == "N0°C")
+                {
+                    lbl_iso2_hea.BackColor = Color.Gray;
                 }
 
-                if (dt.Rows[0]["TEMP3"].ToString() != "0°C")
-                {
-                    lbl_iso2_war.Text = dt.Rows[0]["TEMP3"].ToString().Replace("R", "");
+                //if (dt.Rows[0]["TEMP3"].ToString() != "0°C")
+                //{
+                lbl_iso2_war.Text = dt.Rows[0]["TEMP3"].ToString().Replace("R", "").Replace("N", "");
                     lbl_iso2_war1.Text = string.Concat(dt.Rows[0]["MIN_TEMP3"], "°C - ", dt.Rows[0]["MAX_TEMP3"], "°C");
                     if (dt.Rows[0]["TEMP3"].ToString().Substring(0, 1) == "R")
                     {
@@ -132,6 +153,10 @@ namespace FORM
                     }
                     else
                         lbl_iso2_war.Tag = "0";
+                //}
+                if (dt.Rows[0]["TEMP3"].ToString() == "N0°C")
+                {
+                    lbl_iso2_war.BackColor = Color.Gray;
                 }
 
             }

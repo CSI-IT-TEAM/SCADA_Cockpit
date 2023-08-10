@@ -65,8 +65,10 @@ namespace FORM
                 if (dt.Rows.Count < 2) return;
                 if (dt.Select("MC_ID = '" + vMC_ID + "'").Count() > 0)
                 {
+                    ((XYDiagram)_chart.Diagram).AxisY.ConstantLines.Clear();
                     DataTable dtChart = dt.Select("MC_ID = '" + vMC_ID + "'").CopyToDataTable();
                     _chart.DataSource = dtChart;
+
                     _chart.Series[0].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
                     _chart.Series[0].ArgumentDataMember = "HMS";
                     _chart.Series[0].ValueDataMembers.AddRange(new string[] { "Z001" });
@@ -89,21 +91,26 @@ namespace FORM
 
                     DevExpress.XtraCharts.ConstantLine constantLine1 = new DevExpress.XtraCharts.ConstantLine();
                     DevExpress.XtraCharts.ConstantLine constantLine2 = new DevExpress.XtraCharts.ConstantLine(); ////Constant line
+                    
                     constantLine1.AxisValueSerializable = dtChart.Rows[0]["MINVAL"].ToString();
                     constantLine1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
                     constantLine1.Name = "Min";
                     constantLine2.AxisValueSerializable = dtChart.Rows[0]["MAXVAL"].ToString();
                     constantLine2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
                     constantLine2.Name = "Max";
+                    
                     // constantLine1.ShowBehind = false;
                     constantLine1.Title.Visible = false;
                     constantLine1.Title.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     //constantLine1.Title.Text = "Target";
                     constantLine1.LineStyle.Thickness = 3;
+
                     constantLine2.Title.Visible = false;
                     constantLine2.Title.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     //constantLine1.Title.Text = "Target";
                     constantLine2.LineStyle.Thickness = 3;
+
+
                     // constantLine1.Title.Alignment = DevExpress.XtraCharts.ConstantLineTitleAlignment.Far;
                     ((XYDiagram)_chart.Diagram).AxisY.ConstantLines.AddRange(new DevExpress.XtraCharts.ConstantLine[] { constantLine1, constantLine2 });
                     ((XYDiagram)_chart.Diagram).AxisY.WholeRange.Auto = true;
@@ -212,7 +219,7 @@ namespace FORM
         #region BindingData
         private Color lblColor(double Val, double MinVal, double MaxVal)
         {
-            if (Val == 0 && MinVal == 0 && MaxVal == 0) return Color.Silver;
+            if (Val == 0 || MinVal == 0 || MaxVal == 0) return Color.Silver;
             if (Val < MinVal || Val > MaxVal)
                 return Color.Red;
             else
@@ -296,6 +303,8 @@ namespace FORM
                         if (dt.Rows[iRow]["LINE_CD"].ToString() == "003" && dt.Rows[iRow]["MC_ID"].ToString() == "003") //Kneader Machine 1
                         {
                             dUVZone3MC3 = Convert.ToDouble(dt.Rows[iRow]["VALUE"].ToString());
+                            dUVZone3MC3Min = Convert.ToDouble(dt.Rows[iRow]["MINVAL"].ToString());
+                            dUVZone3MC3Max = Convert.ToDouble(dt.Rows[iRow]["MAXVAL"].ToString());
                         }
 
                         //Z4

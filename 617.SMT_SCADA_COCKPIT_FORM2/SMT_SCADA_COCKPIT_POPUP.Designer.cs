@@ -35,18 +35,18 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.RN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DATE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.OCCUR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.OCCUR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SV_MIN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SV_MAX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.FINAL_PV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnTop = new System.Windows.Forms.Panel();
-            this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -143,6 +143,24 @@
             this.DATE.VisibleIndex = 1;
             this.DATE.Width = 126;
             // 
+            // OCCUR
+            // 
+            this.OCCUR.AppearanceCell.Options.UseTextOptions = true;
+            this.OCCUR.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.OCCUR.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.OCCUR.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.OCCUR.AppearanceHeader.Options.UseFont = true;
+            this.OCCUR.AppearanceHeader.Options.UseTextOptions = true;
+            this.OCCUR.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.OCCUR.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.OCCUR.Caption = "Occur";
+            this.OCCUR.FieldName = "OCCUR";
+            this.OCCUR.FieldNameSortGroup = "OCCUR";
+            this.OCCUR.Name = "OCCUR";
+            this.OCCUR.Visible = true;
+            this.OCCUR.VisibleIndex = 2;
+            this.OCCUR.Width = 88;
+            // 
             // gridColumn1
             // 
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
@@ -213,24 +231,6 @@
             this.gridColumn5.VisibleIndex = 7;
             this.gridColumn5.Width = 322;
             // 
-            // OCCUR
-            // 
-            this.OCCUR.AppearanceCell.Options.UseTextOptions = true;
-            this.OCCUR.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.OCCUR.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.OCCUR.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
-            this.OCCUR.AppearanceHeader.Options.UseFont = true;
-            this.OCCUR.AppearanceHeader.Options.UseTextOptions = true;
-            this.OCCUR.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.OCCUR.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.OCCUR.Caption = "Occur";
-            this.OCCUR.FieldName = "OCCUR";
-            this.OCCUR.FieldNameSortGroup = "OCCUR";
-            this.OCCUR.Name = "OCCUR";
-            this.OCCUR.Visible = true;
-            this.OCCUR.VisibleIndex = 2;
-            this.OCCUR.Width = 88;
-            // 
             // SV_MIN
             // 
             this.SV_MIN.AppearanceCell.Options.UseTextOptions = true;
@@ -292,19 +292,6 @@
             this.pnTop.Size = new System.Drawing.Size(1422, 72);
             this.pnTop.TabIndex = 2;
             // 
-            // lblHeader
-            // 
-            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.Appearance.Options.UseFont = true;
-            this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblHeader.LineVisible = true;
-            this.lblHeader.Location = new System.Drawing.Point(0, 0);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1422, 72);
-            this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "Preventative Maintenance Detail ";
-            // 
             // button1
             // 
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -317,6 +304,22 @@
             this.button1.Text = "Export Excel";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(95)))));
+            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblHeader.Appearance.Options.UseBackColor = true;
+            this.lblHeader.Appearance.Options.UseFont = true;
+            this.lblHeader.Appearance.Options.UseForeColor = true;
+            this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblHeader.Location = new System.Drawing.Point(0, 0);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(1422, 72);
+            this.lblHeader.TabIndex = 3;
+            this.lblHeader.Text = " Preventative Maintenance Detail ";
             // 
             // SMT_SCADA_COCKPIT_POPUP
             // 

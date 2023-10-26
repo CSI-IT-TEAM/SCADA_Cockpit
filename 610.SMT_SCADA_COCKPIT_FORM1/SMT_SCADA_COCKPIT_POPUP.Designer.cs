@@ -107,12 +107,14 @@
             // 
             // pnTop
             // 
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(95)))));
             this.pnTop.Controls.Add(this.button1);
             this.pnTop.Controls.Add(this.lblHeader);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnTop.Location = new System.Drawing.Point(3, 3);
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Margin = new System.Windows.Forms.Padding(0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1422, 72);
+            this.pnTop.Size = new System.Drawing.Size(1428, 78);
             this.pnTop.TabIndex = 2;
             // 
             // button1
@@ -132,15 +134,17 @@
             // lblHeader
             // 
             this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
+            this.lblHeader.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblHeader.Appearance.Options.UseFont = true;
+            this.lblHeader.Appearance.Options.UseForeColor = true;
             this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblHeader.LineVisible = true;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1422, 72);
+            this.lblHeader.Size = new System.Drawing.Size(1428, 78);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "Equipment Malfunction Status";
+            this.lblHeader.Text = " Equipment Malfunction Status";
             // 
             // panel1
             // 
@@ -200,7 +204,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblTxt2);
             this.panel2.Controls.Add(this.lblTxt1);
@@ -213,7 +217,7 @@
             // lblTxt2
             // 
             this.lblTxt2.AutoSize = true;
-            this.lblTxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.lblTxt2.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTxt2.ForeColor = System.Drawing.Color.White;
             this.lblTxt2.Location = new System.Drawing.Point(3, 28);
@@ -225,7 +229,7 @@
             // lblTxt1
             // 
             this.lblTxt1.AutoSize = true;
-            this.lblTxt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.lblTxt1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTxt1.ForeColor = System.Drawing.Color.White;
             this.lblTxt1.Location = new System.Drawing.Point(3, 6);
@@ -237,7 +241,7 @@
             // lblTxt3
             // 
             this.lblTxt3.AutoSize = true;
-            this.lblTxt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.lblTxt3.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTxt3.ForeColor = System.Drawing.Color.White;
             this.lblTxt3.Location = new System.Drawing.Point(3, 51);

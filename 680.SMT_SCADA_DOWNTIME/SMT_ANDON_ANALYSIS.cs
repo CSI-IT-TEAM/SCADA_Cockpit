@@ -113,7 +113,11 @@ namespace FORM
             date_F.EditValue = DateTime.Now;
             date_T.EditValue = DateTime.Now;
 
-           // UC.UC_Factory _uc = this.Controls.Find("UC_Factory", true) as UC.UC_Factory;
+            uC_Factory1.setColor("GREEN");
+            uC_Factory2.setColor("RED");
+            uC_Factory3.setColor("YELLOW");
+
+            // UC.UC_Factory _uc = this.Controls.Find("UC_Factory", true) as UC.UC_Factory;
 
             for (int i = 0; i < _str_uc.Length; i++)
             {
@@ -462,6 +466,16 @@ namespace FORM
         private void cmdPm1_Click(object sender, EventArgs e)
         {
             ComVar.Var.callForm = "back";
+        }
+
+        private void lblDate_DoubleClick(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblHeader_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "minimized";
         }
 
         private void FRM_ANDON_GATHERING_Shown(object sender, EventArgs e)

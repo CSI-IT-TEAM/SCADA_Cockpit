@@ -398,8 +398,6 @@ namespace FORM
                 this.Cursor = Cursors.Default;
                 Label btn = (Label)sender;
                 btn.BackColor = Color.Transparent;
-
-               
             }
             catch
             {
@@ -421,19 +419,14 @@ namespace FORM
             }
         }
 
-        private void label59_Click(object sender, EventArgs e)
+        private void lblHeader_Click(object sender, EventArgs e)
         {
-
+            ComVar.Var.callForm = "minimized";
         }
 
-        private void label57_Click(object sender, EventArgs e)
+        private void lblDate_DoubleClick(object sender, EventArgs e)
         {
-
-        }
-
-        private void label55_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }

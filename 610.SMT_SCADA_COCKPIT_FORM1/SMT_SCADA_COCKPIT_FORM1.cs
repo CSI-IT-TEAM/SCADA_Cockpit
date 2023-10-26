@@ -1078,7 +1078,7 @@ namespace FORM
                 btn.FlatAppearance.BorderSize = 0;
                 btn.FlatAppearance.BorderColor = Color.White;
 
-                label9.BackColor = Color.FromArgb(24, 33, 60);
+                label9.BackColor = Color.FromArgb(0, 200, 245);
             }
             catch (Exception ex)
             {

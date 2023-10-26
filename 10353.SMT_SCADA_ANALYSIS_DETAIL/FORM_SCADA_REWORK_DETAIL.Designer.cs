@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORM_SCADA_REWORK_DETAIL));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
@@ -60,15 +59,16 @@
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView3 = new DevExpress.XtraCharts.SplineSeriesView();
             DevExpress.XtraCharts.ChartTitle chartTitle3 = new DevExpress.XtraCharts.ChartTitle();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.cmdBack = new System.Windows.Forms.Button();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.btnBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.splMain = new System.Windows.Forms.SplitContainer();
             this.splLeft = new System.Windows.Forms.SplitContainer();
             this.chart1 = new DevExpress.XtraCharts.ChartControl();
             this.chart2 = new DevExpress.XtraCharts.ChartControl();
             this.chart3 = new DevExpress.XtraCharts.ChartControl();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splMain)).BeginInit();
             this.splMain.Panel1.SuspendLayout();
@@ -106,63 +106,64 @@
             // 
             // pnTop
             // 
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(95)))));
+            this.pnTop.Controls.Add(this.cmdBack);
             this.pnTop.Controls.Add(this.lblHeader);
-            this.pnTop.Controls.Add(this.btnBack);
             this.pnTop.Controls.Add(this.lblDate);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1904, 76);
+            this.pnTop.Size = new System.Drawing.Size(1904, 110);
             this.pnTop.TabIndex = 3;
+            // 
+            // cmdBack
+            // 
+            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
+            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdBack.FlatAppearance.BorderSize = 0;
+            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBack.Location = new System.Drawing.Point(1542, 2);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(105, 105);
+            this.cmdBack.TabIndex = 95;
+            this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblHeader
             // 
             this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblHeader.Appearance.Options.UseFont = true;
+            this.lblHeader.Appearance.Options.UseForeColor = true;
             this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblHeader.Location = new System.Drawing.Point(77, 0);
+            this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lblHeader.Size = new System.Drawing.Size(1622, 76);
+            this.lblHeader.Size = new System.Drawing.Size(1512, 110);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "Rework && Equipment malfunction (Weekly Average)";
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.btnBack.ForeColor = System.Drawing.Color.Navy;
-            this.btnBack.Location = new System.Drawing.Point(0, 0);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(77, 76);
-            this.btnBack.TabIndex = 88;
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.lblHeader.Text = "Rework && Equipment Malfunction (Weekly Average)";
+            this.lblHeader.Click += new System.EventHandler(this.lblHeader_Click);
             // 
             // lblDate
             // 
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblDate.Font = new System.Drawing.Font("Calibri", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.Black;
+            this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Location = new System.Drawing.Point(1669, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(235, 76);
+            this.lblDate.Size = new System.Drawing.Size(235, 110);
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "2020-07-22\r\n10:00:00";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDate.DoubleClick += new System.EventHandler(this.lblDate_DoubleClick);
             // 
             // splMain
             // 
             this.splMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splMain.Location = new System.Drawing.Point(0, 76);
+            this.splMain.Location = new System.Drawing.Point(0, 110);
             this.splMain.Name = "splMain";
             // 
             // splMain.Panel1
@@ -172,7 +173,7 @@
             // splMain.Panel2
             // 
             this.splMain.Panel2.Controls.Add(this.chart3);
-            this.splMain.Size = new System.Drawing.Size(1904, 965);
+            this.splMain.Size = new System.Drawing.Size(1904, 931);
             this.splMain.SplitterDistance = 1350;
             this.splMain.TabIndex = 4;
             // 
@@ -190,8 +191,8 @@
             // splLeft.Panel2
             // 
             this.splLeft.Panel2.Controls.Add(this.chart2);
-            this.splLeft.Size = new System.Drawing.Size(1350, 965);
-            this.splLeft.SplitterDistance = 483;
+            this.splLeft.Size = new System.Drawing.Size(1350, 931);
+            this.splLeft.SplitterDistance = 465;
             this.splLeft.TabIndex = 0;
             // 
             // chart1
@@ -258,7 +259,7 @@
             this.chart1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2};
-            this.chart1.Size = new System.Drawing.Size(1350, 483);
+            this.chart1.Size = new System.Drawing.Size(1350, 465);
             this.chart1.TabIndex = 0;
             chartTitle1.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartTitle1.Text = "Rework & Equipment malfunction";
@@ -329,7 +330,7 @@
             this.chart2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series3,
         series4};
-            this.chart2.Size = new System.Drawing.Size(1350, 478);
+            this.chart2.Size = new System.Drawing.Size(1350, 462);
             this.chart2.TabIndex = 1;
             chartTitle2.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartTitle2.Text = "Ratio of Rework & Equipment malfunction";
@@ -379,7 +380,7 @@
             this.chart3.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series5,
         series6};
-            this.chart3.Size = new System.Drawing.Size(550, 965);
+            this.chart3.Size = new System.Drawing.Size(550, 931);
             this.chart3.TabIndex = 13;
             chartTitle3.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             chartTitle3.Text = "Equipment malfunction happened of top 20";
@@ -391,6 +392,10 @@
             this.tmrDate.Enabled = true;
             this.tmrDate.Interval = 1000;
             this.tmrDate.Tick += new System.EventHandler(this.tmrDate_Tick);
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // FORM_SCADA_REWORK_DETAIL
             // 
@@ -442,8 +447,8 @@
         #endregion
 
         private System.Windows.Forms.Panel pnTop;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private DevExpress.XtraEditors.LabelControl lblHeader;
-        public System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.SplitContainer splMain;
         private System.Windows.Forms.SplitContainer splLeft;
@@ -451,5 +456,6 @@
         private DevExpress.XtraCharts.ChartControl chart2;
         private DevExpress.XtraCharts.ChartControl chart3;
         private System.Windows.Forms.Timer tmrDate;
+        public System.Windows.Forms.Button cmdBack;
     }
 }

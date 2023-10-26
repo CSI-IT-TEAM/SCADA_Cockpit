@@ -184,14 +184,26 @@ namespace FORM
             cCount++;
             if (cCount >= 60)
             {
+                splashScreenManager1.ShowWaitForm();
                 cCount = 0;
                 DataSet ds = sbGetData("Q", DateTime.Now.ToString("yyyyMM"), null);
                 BindingChart1(ds.Tables[0]);
                 BindingChart2(ds.Tables[0]);
                 DataSet ds1 = sbGetData("TOP", DateTime.Now.ToString("yyyyMM"), null);
                 BindingChart3(ds1.Tables[0]);
+                splashScreenManager1.CloseWaitForm();
             }
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
+        }
+
+        private void lblDate_DoubleClick(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblHeader_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "minimized";
         }
     }
 }

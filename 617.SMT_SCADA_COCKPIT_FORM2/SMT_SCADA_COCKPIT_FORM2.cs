@@ -15,7 +15,7 @@ namespace FORM
             InitializeComponent();
             lblHeader.Text = _strHeader;
         }
-        private readonly string _strHeader = "       Preventative Maintenance";
+        private readonly string _strHeader = " Preventative Maintenance";
         private UC.UC_COMPARE_WEEK uc_compare_week = new UC.UC_COMPARE_WEEK();
         string _strType = "D";
         int _time = 0;

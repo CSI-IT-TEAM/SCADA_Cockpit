@@ -172,5 +172,15 @@ namespace FORM
             ComVar.Var.callForm = "back";
             tmrDate.Stop();
         }
+
+        private void lblHeader_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "minimized";
+        }
+
+        private void lblDate_DoubleClick(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

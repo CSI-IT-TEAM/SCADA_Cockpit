@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORM_SCADA_ENHANCEMENT));
             DevExpress.XtraCharts.SimpleDiagram simpleDiagram1 = new DevExpress.XtraCharts.SimpleDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.PieSeriesLabel pieSeriesLabel1 = new DevExpress.XtraCharts.PieSeriesLabel();
             DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             this.pnHeader = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
-            this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.cmdBack = new System.Windows.Forms.Button();
+            this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.lblDate = new System.Windows.Forms.Label();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -224,9 +224,10 @@
             this.roundLabel6 = new RoundLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
-            this.tmrLoad = new System.Windows.Forms.Timer(this.components);
-            this.tmrAnimationText = new System.Windows.Forms.Timer(this.components);
+            this.tmrLoad = new System.Windows.Forms.Timer();
+            this.tmrAnimationText = new System.Windows.Forms.Timer();
             this.pnHeader.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             this.tblMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -287,92 +288,103 @@
             // 
             // pnHeader
             // 
-            this.pnHeader.Controls.Add(this.label10);
-            this.pnHeader.Controls.Add(this.label9);
-            this.pnHeader.Controls.Add(this.separatorControl1);
-            this.pnHeader.Controls.Add(this.lblHeader);
+            this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(95)))));
+            this.pnHeader.Controls.Add(this.panel1);
             this.pnHeader.Controls.Add(this.cmdBack);
+            this.pnHeader.Controls.Add(this.lblHeader);
             this.pnHeader.Controls.Add(this.lblDate);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(1920, 84);
+            this.pnHeader.Size = new System.Drawing.Size(1920, 110);
             this.pnHeader.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.separatorControl1);
+            this.panel1.Location = new System.Drawing.Point(549, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(956, 110);
+            this.panel1.TabIndex = 96;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(565, 41);
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(26, 59);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(830, 22);
-            this.label10.TabIndex = 90;
+            this.label10.Size = new System.Drawing.Size(878, 23);
+            this.label10.TabIndex = 93;
             this.label10.Text = "so we’re trying to present new depth information through information communicatio" +
     "n technology (ICT)";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(565, 16);
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(26, 34);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(766, 22);
-            this.label9.TabIndex = 90;
+            this.label9.Size = new System.Drawing.Size(799, 23);
+            this.label9.TabIndex = 92;
             this.label9.Text = "SCADA basic notion is predictive and prescriptive maintenance and carbon emission" +
     " reduction";
             // 
             // separatorControl1
             // 
-            this.separatorControl1.LineColor = System.Drawing.Color.Gray;
+            this.separatorControl1.LineColor = System.Drawing.Color.DarkGray;
             this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
             this.separatorControl1.LineThickness = 3;
-            this.separatorControl1.Location = new System.Drawing.Point(523, 3);
+            this.separatorControl1.Location = new System.Drawing.Point(-16, 21);
             this.separatorControl1.Name = "separatorControl1";
             this.separatorControl1.Size = new System.Drawing.Size(62, 75);
-            this.separatorControl1.TabIndex = 89;
-            // 
-            // lblHeader
-            // 
-            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Appearance.Options.UseFont = true;
-            this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblHeader.Location = new System.Drawing.Point(88, 0);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(429, 84);
-            this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "  Analysis Data";
+            this.separatorControl1.TabIndex = 91;
             // 
             // cmdBack
             // 
             this.cmdBack.BackColor = System.Drawing.Color.Transparent;
             this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
-            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.cmdBack.FlatAppearance.BorderSize = 0;
             this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdBack.ForeColor = System.Drawing.Color.Navy;
-            this.cmdBack.Location = new System.Drawing.Point(0, 0);
+            this.cmdBack.Location = new System.Drawing.Point(1520, 3);
             this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(88, 84);
-            this.cmdBack.TabIndex = 88;
-            this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdBack.Size = new System.Drawing.Size(105, 105);
+            this.cmdBack.TabIndex = 95;
             this.cmdBack.UseVisualStyleBackColor = false;
             this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold);
+            this.lblHeader.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblHeader.Appearance.Options.UseFont = true;
+            this.lblHeader.Appearance.Options.UseForeColor = true;
+            this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblHeader.Location = new System.Drawing.Point(0, 0);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(543, 110);
+            this.lblHeader.TabIndex = 3;
+            this.lblHeader.Text = " Analysis Data";
+            this.lblHeader.Click += new System.EventHandler(this.lblHeader_Click);
             // 
             // lblDate
             // 
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblDate.Font = new System.Drawing.Font("Calibri", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.Black;
+            this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold);
+            this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Location = new System.Drawing.Point(1685, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(235, 84);
+            this.lblDate.Size = new System.Drawing.Size(235, 110);
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "2020-07-22\r\n10:00:00";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDate.DoubleClick += new System.EventHandler(this.lblDate_DoubleClick);
             // 
             // tblMain
             // 
@@ -391,13 +403,13 @@
             this.tblMain.Controls.Add(this.splitContainer7, 1, 1);
             this.tblMain.Controls.Add(this.splitContainer8, 0, 1);
             this.tblMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblMain.Location = new System.Drawing.Point(0, 84);
+            this.tblMain.Location = new System.Drawing.Point(0, 110);
             this.tblMain.Name = "tblMain";
             this.tblMain.RowCount = 2;
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblMain.Size = new System.Drawing.Size(1920, 996);
+            this.tblMain.Size = new System.Drawing.Size(1920, 970);
             this.tblMain.TabIndex = 5;
             // 
             // splitContainer1
@@ -412,8 +424,8 @@
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer1.Panel2.Controls.Add(this.pnCell1);
-            this.splitContainer1.Size = new System.Drawing.Size(474, 492);
-            this.splitContainer1.SplitterDistance = 58;
+            this.splitContainer1.Size = new System.Drawing.Size(474, 479);
+            this.splitContainer1.SplitterDistance = 56;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -430,7 +442,7 @@
             this.pnCell1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCell1.Location = new System.Drawing.Point(0, 0);
             this.pnCell1.Name = "pnCell1";
-            this.pnCell1.Size = new System.Drawing.Size(474, 433);
+            this.pnCell1.Size = new System.Drawing.Size(474, 422);
             this.pnCell1.TabIndex = 0;
             // 
             // label12
@@ -524,8 +536,8 @@
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer2.Panel2.Controls.Add(this.pnCell2);
-            this.splitContainer2.Size = new System.Drawing.Size(474, 492);
-            this.splitContainer2.SplitterDistance = 58;
+            this.splitContainer2.Size = new System.Drawing.Size(474, 479);
+            this.splitContainer2.SplitterDistance = 56;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 1;
             // 
@@ -556,7 +568,7 @@
             this.pnCell2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCell2.Location = new System.Drawing.Point(0, 0);
             this.pnCell2.Name = "pnCell2";
-            this.pnCell2.Size = new System.Drawing.Size(474, 433);
+            this.pnCell2.Size = new System.Drawing.Size(474, 422);
             this.pnCell2.TabIndex = 1;
             // 
             // gaugeControl2
@@ -992,7 +1004,6 @@
             this.label15.Size = new System.Drawing.Size(68, 28);
             this.label15.TabIndex = 1;
             this.label15.Text = "Worst";
-            this.label15.Click += new System.EventHandler(this.label8_Click);
             // 
             // label8
             // 
@@ -1004,7 +1015,6 @@
             this.label8.Size = new System.Drawing.Size(55, 28);
             this.label8.TabIndex = 1;
             this.label8.Text = "Best";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label20
             // 
@@ -1030,8 +1040,8 @@
             this.splitContainer3.Panel2.Controls.Add(this.pnCell3);
             this.splitContainer3.Panel2.Controls.Add(this.label22);
             this.splitContainer3.Panel2.Controls.Add(this.label3);
-            this.splitContainer3.Size = new System.Drawing.Size(474, 492);
-            this.splitContainer3.SplitterDistance = 58;
+            this.splitContainer3.Size = new System.Drawing.Size(474, 479);
+            this.splitContainer3.SplitterDistance = 56;
             this.splitContainer3.SplitterWidth = 1;
             this.splitContainer3.TabIndex = 1;
             // 
@@ -1058,7 +1068,7 @@
             this.pnCell3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCell3.Location = new System.Drawing.Point(0, 34);
             this.pnCell3.Name = "pnCell3";
-            this.pnCell3.Size = new System.Drawing.Size(474, 399);
+            this.pnCell3.Size = new System.Drawing.Size(474, 388);
             this.pnCell3.TabIndex = 23;
             // 
             // lblCell3_MA
@@ -1289,8 +1299,8 @@
             this.splitContainer4.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer4.Panel2.Controls.Add(this.pnCell4);
             this.splitContainer4.Panel2.Controls.Add(this.label4);
-            this.splitContainer4.Size = new System.Drawing.Size(474, 492);
-            this.splitContainer4.SplitterDistance = 58;
+            this.splitContainer4.Size = new System.Drawing.Size(474, 479);
+            this.splitContainer4.SplitterDistance = 56;
             this.splitContainer4.SplitterWidth = 1;
             this.splitContainer4.TabIndex = 1;
             this.splitContainer4.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer4_SplitterMoved);
@@ -1326,7 +1336,7 @@
             this.pnCell4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCell4.Location = new System.Drawing.Point(0, 0);
             this.pnCell4.Name = "pnCell4";
-            this.pnCell4.Size = new System.Drawing.Size(474, 433);
+            this.pnCell4.Size = new System.Drawing.Size(474, 422);
             this.pnCell4.TabIndex = 24;
             // 
             // label33
@@ -1632,7 +1642,7 @@
             // 
             this.splitContainer5.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(1443, 501);
+            this.splitContainer5.Location = new System.Drawing.Point(1443, 488);
             this.splitContainer5.Name = "splitContainer5";
             this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1640,8 +1650,8 @@
             // 
             this.splitContainer5.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer5.Panel2.Controls.Add(this.pnCell8);
-            this.splitContainer5.Size = new System.Drawing.Size(474, 492);
-            this.splitContainer5.SplitterDistance = 58;
+            this.splitContainer5.Size = new System.Drawing.Size(474, 479);
+            this.splitContainer5.SplitterDistance = 56;
             this.splitContainer5.SplitterWidth = 1;
             this.splitContainer5.TabIndex = 1;
             // 
@@ -1672,7 +1682,7 @@
             this.pnCell8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCell8.Location = new System.Drawing.Point(0, 0);
             this.pnCell8.Name = "pnCell8";
-            this.pnCell8.Size = new System.Drawing.Size(474, 433);
+            this.pnCell8.Size = new System.Drawing.Size(474, 422);
             this.pnCell8.TabIndex = 25;
             // 
             // label49
@@ -1924,7 +1934,7 @@
             // 
             this.splitContainer6.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.Location = new System.Drawing.Point(963, 501);
+            this.splitContainer6.Location = new System.Drawing.Point(963, 488);
             this.splitContainer6.Name = "splitContainer6";
             this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1932,8 +1942,8 @@
             // 
             this.splitContainer6.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer6.Panel2.Controls.Add(this.pnCell7);
-            this.splitContainer6.Size = new System.Drawing.Size(474, 492);
-            this.splitContainer6.SplitterDistance = 58;
+            this.splitContainer6.Size = new System.Drawing.Size(474, 479);
+            this.splitContainer6.SplitterDistance = 56;
             this.splitContainer6.SplitterWidth = 1;
             this.splitContainer6.TabIndex = 1;
             // 
@@ -1951,7 +1961,7 @@
             this.pnCell7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCell7.Location = new System.Drawing.Point(0, 0);
             this.pnCell7.Name = "pnCell7";
-            this.pnCell7.Size = new System.Drawing.Size(474, 433);
+            this.pnCell7.Size = new System.Drawing.Size(474, 422);
             this.pnCell7.TabIndex = 24;
             // 
             // lblCell7_Malfunction
@@ -2049,7 +2059,7 @@
             // 
             this.splitContainer7.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer7.Location = new System.Drawing.Point(483, 501);
+            this.splitContainer7.Location = new System.Drawing.Point(483, 488);
             this.splitContainer7.Name = "splitContainer7";
             this.splitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -2057,8 +2067,8 @@
             // 
             this.splitContainer7.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer7.Panel2.Controls.Add(this.pnCell6);
-            this.splitContainer7.Size = new System.Drawing.Size(474, 492);
-            this.splitContainer7.SplitterDistance = 58;
+            this.splitContainer7.Size = new System.Drawing.Size(474, 479);
+            this.splitContainer7.SplitterDistance = 56;
             this.splitContainer7.SplitterWidth = 1;
             this.splitContainer7.TabIndex = 1;
             // 
@@ -2091,7 +2101,7 @@
             this.pnCell6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCell6.Location = new System.Drawing.Point(0, 0);
             this.pnCell6.Name = "pnCell6";
-            this.pnCell6.Size = new System.Drawing.Size(474, 433);
+            this.pnCell6.Size = new System.Drawing.Size(474, 422);
             this.pnCell6.TabIndex = 25;
             // 
             // lblCell6_ProdWorstPlant3
@@ -2285,7 +2295,6 @@
             this.lblCell6_ProdBestPlant3.Size = new System.Drawing.Size(48, 49);
             this.lblCell6_ProdBestPlant3.TabIndex = 24;
             this.lblCell6_ProdBestPlant3.Text = "--";
-            this.lblCell6_ProdBestPlant3.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
             // 
             // lblCell6_ProdBestPlant2
             // 
@@ -2298,7 +2307,6 @@
             this.lblCell6_ProdBestPlant2.Size = new System.Drawing.Size(48, 49);
             this.lblCell6_ProdBestPlant2.TabIndex = 24;
             this.lblCell6_ProdBestPlant2.Text = "--";
-            this.lblCell6_ProdBestPlant2.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
             // 
             // lblCell6_ProdBestPlant1
             // 
@@ -2311,7 +2319,6 @@
             this.lblCell6_ProdBestPlant1.Size = new System.Drawing.Size(48, 49);
             this.lblCell6_ProdBestPlant1.TabIndex = 24;
             this.lblCell6_ProdBestPlant1.Text = "--";
-            this.lblCell6_ProdBestPlant1.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
             // 
             // label6
             // 
@@ -2376,7 +2383,7 @@
             // 
             this.splitContainer8.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer8.Location = new System.Drawing.Point(3, 501);
+            this.splitContainer8.Location = new System.Drawing.Point(3, 488);
             this.splitContainer8.Name = "splitContainer8";
             this.splitContainer8.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -2384,8 +2391,8 @@
             // 
             this.splitContainer8.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer8.Panel2.Controls.Add(this.pnCell5);
-            this.splitContainer8.Size = new System.Drawing.Size(474, 492);
-            this.splitContainer8.SplitterDistance = 58;
+            this.splitContainer8.Size = new System.Drawing.Size(474, 479);
+            this.splitContainer8.SplitterDistance = 56;
             this.splitContainer8.SplitterWidth = 1;
             this.splitContainer8.TabIndex = 1;
             // 
@@ -2419,7 +2426,7 @@
             this.pnCell5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCell5.Location = new System.Drawing.Point(0, 0);
             this.pnCell5.Name = "pnCell5";
-            this.pnCell5.Size = new System.Drawing.Size(474, 433);
+            this.pnCell5.Size = new System.Drawing.Size(474, 422);
             this.pnCell5.TabIndex = 1;
             // 
             // chartWOF
@@ -2651,7 +2658,6 @@
             this.roundLabel12.Size = new System.Drawing.Size(31, 30);
             this.roundLabel12.TabIndex = 24;
             this.roundLabel12.Text = "5";
-            this.roundLabel12.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
             // 
             // roundLabel11
             // 
@@ -2664,7 +2670,6 @@
             this.roundLabel11.Size = new System.Drawing.Size(31, 30);
             this.roundLabel11.TabIndex = 24;
             this.roundLabel11.Text = "4";
-            this.roundLabel11.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
             // 
             // roundLabel10
             // 
@@ -2677,7 +2682,6 @@
             this.roundLabel10.Size = new System.Drawing.Size(31, 30);
             this.roundLabel10.TabIndex = 24;
             this.roundLabel10.Text = "3";
-            this.roundLabel10.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
             // 
             // roundLabel9
             // 
@@ -2690,7 +2694,6 @@
             this.roundLabel9.Size = new System.Drawing.Size(31, 30);
             this.roundLabel9.TabIndex = 24;
             this.roundLabel9.Text = "2";
-            this.roundLabel9.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
             // 
             // label40
             // 
@@ -2715,7 +2718,6 @@
             this.roundLabel6.Size = new System.Drawing.Size(31, 30);
             this.roundLabel6.TabIndex = 24;
             this.roundLabel6.Text = "1";
-            this.roundLabel6.Click += new System.EventHandler(this.lblCell6_ProdBestPlant1_Click);
             // 
             // label5
             // 
@@ -2758,7 +2760,8 @@
             this.Load += new System.EventHandler(this.FORM_SCADA_ENHANCEMENT_Load);
             this.VisibleChanged += new System.EventHandler(this.FORM_SCADA_ENHANCEMENT_VisibleChanged);
             this.pnHeader.ResumeLayout(false);
-            this.pnHeader.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             this.tblMain.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -2830,7 +2833,6 @@
 
         private System.Windows.Forms.Panel pnHeader;
         private DevExpress.XtraEditors.LabelControl lblHeader;
-        public System.Windows.Forms.Button cmdBack;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.TableLayoutPanel tblMain;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
@@ -2844,9 +2846,6 @@
         private System.Windows.Forms.SplitContainer splitContainer8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer tmrLoad;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
         private System.Windows.Forms.Panel pnCell1;
         private System.Windows.Forms.Label label1;
         private RoundLabel lblCell1_RW;
@@ -3020,5 +3019,10 @@
         private System.Windows.Forms.Label label52;
         private RoundLabel lblCell7_Malfunction;
         private System.Windows.Forms.Label label53;
+        public System.Windows.Forms.Button cmdBack;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
     }
 }

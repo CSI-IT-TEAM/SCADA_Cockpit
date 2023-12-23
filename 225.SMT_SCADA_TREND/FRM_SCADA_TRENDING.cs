@@ -212,6 +212,12 @@ namespace FORM
                     //    }
                     //}
                 }
+                else
+                {
+                    dtchart = null;
+            
+
+                }
                 BindingChart2();
             }
             catch

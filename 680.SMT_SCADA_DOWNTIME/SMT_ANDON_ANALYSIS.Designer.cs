@@ -37,6 +37,10 @@
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.pnHeader = new System.Windows.Forms.Panel();
+            this.uC_Factory3 = new FORM.UC.UC_Factory();
+            this.uC_Factory2 = new FORM.UC.UC_Factory();
+            this.uC_Factory1 = new FORM.UC.UC_Factory();
+            this.cmdBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.shapeContainer10 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.ovalShape28 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
@@ -51,7 +55,6 @@
             this.ovalShape23 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.ovalShape22 = new Microsoft.VisualBasic.PowerPacks.OvalShape();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.cmdPm1 = new System.Windows.Forms.Button();
             this.tmrDate = new System.Windows.Forms.Timer(this.components);
             this.tmrCount = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -214,28 +217,71 @@
             // 
             // pnHeader
             // 
-            this.pnHeader.BackColor = System.Drawing.SystemColors.Control;
-            this.pnHeader.Controls.Add(this.panel2);
+            this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(95)))));
             this.pnHeader.Controls.Add(this.labelControl22);
             this.pnHeader.Controls.Add(this.labelControl23);
             this.pnHeader.Controls.Add(this.labelControl24);
+            this.pnHeader.Controls.Add(this.uC_Factory3);
+            this.pnHeader.Controls.Add(this.uC_Factory2);
+            this.pnHeader.Controls.Add(this.uC_Factory1);
+            this.pnHeader.Controls.Add(this.cmdBack);
+            this.pnHeader.Controls.Add(this.panel2);
             this.pnHeader.Controls.Add(this.lblDate);
             this.pnHeader.Controls.Add(this.shapeContainer8);
             this.pnHeader.Controls.Add(this.lblHeader);
-            this.pnHeader.Controls.Add(this.cmdPm1);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(1920, 82);
+            this.pnHeader.Size = new System.Drawing.Size(1920, 110);
             this.pnHeader.TabIndex = 13;
+            // 
+            // uC_Factory3
+            // 
+            this.uC_Factory3.BackColor = System.Drawing.Color.Transparent;
+            this.uC_Factory3.Location = new System.Drawing.Point(1202, 71);
+            this.uC_Factory3.Name = "uC_Factory3";
+            this.uC_Factory3.Size = new System.Drawing.Size(47, 39);
+            this.uC_Factory3.TabIndex = 97;
+            // 
+            // uC_Factory2
+            // 
+            this.uC_Factory2.BackColor = System.Drawing.Color.Transparent;
+            this.uC_Factory2.Location = new System.Drawing.Point(1202, 35);
+            this.uC_Factory2.Name = "uC_Factory2";
+            this.uC_Factory2.Size = new System.Drawing.Size(47, 39);
+            this.uC_Factory2.TabIndex = 96;
+            // 
+            // uC_Factory1
+            // 
+            this.uC_Factory1.BackColor = System.Drawing.Color.Transparent;
+            this.uC_Factory1.Location = new System.Drawing.Point(1202, -2);
+            this.uC_Factory1.Name = "uC_Factory1";
+            this.uC_Factory1.Size = new System.Drawing.Size(47, 39);
+            this.uC_Factory1.TabIndex = 95;
+            // 
+            // cmdBack
+            // 
+            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
+            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdBack.FlatAppearance.BorderSize = 0;
+            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBack.Location = new System.Drawing.Point(1520, 3);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(105, 105);
+            this.cmdBack.TabIndex = 94;
+            this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Click += new System.EventHandler(this.cmdPm1_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.shapeContainer10);
-            this.panel2.Location = new System.Drawing.Point(1404, 3);
+            this.panel2.Location = new System.Drawing.Point(1125, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(31, 73);
+            this.panel2.Size = new System.Drawing.Size(31, 109);
             this.panel2.TabIndex = 93;
+            this.panel2.Visible = false;
             // 
             // shapeContainer10
             // 
@@ -246,7 +292,7 @@
             this.ovalShape28,
             this.ovalShape29,
             this.ovalShape30});
-            this.shapeContainer10.Size = new System.Drawing.Size(31, 73);
+            this.shapeContainer10.Size = new System.Drawing.Size(31, 109);
             this.shapeContainer10.TabIndex = 0;
             this.shapeContainer10.TabStop = false;
             // 
@@ -291,9 +337,9 @@
             this.labelControl22.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.labelControl22.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl22.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl22.Location = new System.Drawing.Point(1435, 53);
+            this.labelControl22.Location = new System.Drawing.Point(1249, 74);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(238, 24);
+            this.labelControl22.Size = new System.Drawing.Size(238, 37);
             this.labelControl22.TabIndex = 90;
             this.labelControl22.Text = " QUAN LY (Management)";
             // 
@@ -313,9 +359,9 @@
             this.labelControl23.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.labelControl23.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl23.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl23.Location = new System.Drawing.Point(1435, 28);
+            this.labelControl23.Location = new System.Drawing.Point(1249, 38);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(238, 24);
+            this.labelControl23.Size = new System.Drawing.Size(238, 37);
             this.labelControl23.TabIndex = 91;
             this.labelControl23.Text = " BAO TRI (M&&A Team)";
             // 
@@ -335,35 +381,37 @@
             this.labelControl24.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.labelControl24.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl24.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl24.Location = new System.Drawing.Point(1435, 3);
+            this.labelControl24.Location = new System.Drawing.Point(1249, 2);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(238, 24);
+            this.labelControl24.Size = new System.Drawing.Size(238, 37);
             this.labelControl24.TabIndex = 92;
             this.labelControl24.Text = " CHAY CHUYEN (MTL. Handler)";
             // 
             // lblDate
             // 
-            this.lblDate.BackColor = System.Drawing.SystemColors.Control;
+            this.lblDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(95)))));
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblDate.Font = new System.Drawing.Font("Calibri", 24.75F, System.Drawing.FontStyle.Bold);
-            this.lblDate.ForeColor = System.Drawing.Color.Black;
+            this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold);
+            this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblDate.Location = new System.Drawing.Point(1679, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(241, 82);
+            this.lblDate.Size = new System.Drawing.Size(241, 110);
             this.lblDate.TabIndex = 49;
+            this.lblDate.Text = "2020-07-22\r\n10:00:00";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDate.DoubleClick += new System.EventHandler(this.lblDate_DoubleClick);
             // 
             // shapeContainer8
             // 
-            this.shapeContainer8.Location = new System.Drawing.Point(882, 0);
+            this.shapeContainer8.Location = new System.Drawing.Point(849, 0);
             this.shapeContainer8.Margin = new System.Windows.Forms.Padding(0);
             this.shapeContainer8.Name = "shapeContainer8";
             this.shapeContainer8.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.ovalShape24,
             this.ovalShape23,
             this.ovalShape22});
-            this.shapeContainer8.Size = new System.Drawing.Size(1038, 82);
+            this.shapeContainer8.Size = new System.Drawing.Size(1071, 110);
             this.shapeContainer8.TabIndex = 51;
             this.shapeContainer8.TabStop = false;
             // 
@@ -396,35 +444,18 @@
             // 
             // lblHeader
             // 
-            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold);
+            this.lblHeader.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblHeader.Appearance.Options.UseFont = true;
+            this.lblHeader.Appearance.Options.UseForeColor = true;
             this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblHeader.LineVisible = true;
-            this.lblHeader.Location = new System.Drawing.Point(90, 0);
+            this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(792, 82);
+            this.lblHeader.Size = new System.Drawing.Size(849, 110);
             this.lblHeader.TabIndex = 53;
-            this.lblHeader.Text = "  Andon Data Analysis";
-            // 
-            // cmdPm1
-            // 
-            this.cmdPm1.BackColor = System.Drawing.Color.Transparent;
-            this.cmdPm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdPm1.BackgroundImage")));
-            this.cmdPm1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdPm1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cmdPm1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdPm1.FlatAppearance.BorderSize = 0;
-            this.cmdPm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdPm1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdPm1.ForeColor = System.Drawing.Color.Navy;
-            this.cmdPm1.Location = new System.Drawing.Point(0, 0);
-            this.cmdPm1.Name = "cmdPm1";
-            this.cmdPm1.Size = new System.Drawing.Size(90, 82);
-            this.cmdPm1.TabIndex = 89;
-            this.cmdPm1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdPm1.UseVisualStyleBackColor = false;
-            this.cmdPm1.Click += new System.EventHandler(this.cmdPm1_Click);
+            this.lblHeader.Text = " Andon Data Analysis";
+            this.lblHeader.Click += new System.EventHandler(this.lblHeader_Click);
             // 
             // tmrDate
             // 
@@ -457,7 +488,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 82);
+            this.panel1.Location = new System.Drawing.Point(0, 110);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1920, 186);
             this.panel1.TabIndex = 14;
@@ -1239,9 +1270,9 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(1190, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 36);
@@ -1251,9 +1282,9 @@
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.label5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(439, 10);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 36);
@@ -1263,9 +1294,9 @@
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.label4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(672, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 36);
@@ -1275,9 +1306,9 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(906, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 36);
@@ -1287,9 +1318,9 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(7, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 36);
@@ -1818,10 +1849,10 @@
             // gridControl
             // 
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 268);
+            this.gridControl.Location = new System.Drawing.Point(0, 296);
             this.gridControl.MainView = this.gridView;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(1920, 812);
+            this.gridControl.Size = new System.Drawing.Size(1920, 784);
             this.gridControl.TabIndex = 16;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -2183,7 +2214,6 @@
             // 
             // SMT_ANDON_ANALYSIS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.gridControl);
@@ -2376,7 +2406,6 @@
         private DevExpress.XtraEditors.LookUpEdit cboPlant;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.LabelControl lblHeader;
-        public System.Windows.Forms.Button cmdPm1;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.LabelControl labelControl24;
@@ -2386,5 +2415,9 @@
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape29;
         private Microsoft.VisualBasic.PowerPacks.OvalShape ovalShape30;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        public System.Windows.Forms.Button cmdBack;
+        private UC.UC_Factory uC_Factory3;
+        private UC.UC_Factory uC_Factory2;
+        private UC.UC_Factory uC_Factory1;
     }
 }

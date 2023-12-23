@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
@@ -60,18 +61,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnDetail = new System.Windows.Forms.Button();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.cmdBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTxt2 = new System.Windows.Forms.Label();
             this.lblTxt1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTxt3 = new System.Windows.Forms.Label();
-            this.cmdPm1 = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.panel3 = new System.Windows.Forms.Panel();
             this.grdView = new DevExpress.XtraGrid.GridControl();
             this.gvwView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
             this.tableLayoutPanel1.SuspendLayout();
             this.pnMid.SuspendLayout();
@@ -103,37 +104,38 @@
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.20834F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.20833F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.79167F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1888, 1042);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1904, 1041);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // pnMid
             // 
             this.pnMid.Controls.Add(this.tblChart);
             this.pnMid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMid.Location = new System.Drawing.Point(3, 90);
+            this.pnMid.Location = new System.Drawing.Point(0, 113);
+            this.pnMid.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.pnMid.Name = "pnMid";
-            this.pnMid.Size = new System.Drawing.Size(1882, 807);
+            this.pnMid.Size = new System.Drawing.Size(1904, 787);
             this.pnMid.TabIndex = 0;
             // 
             // tblChart
             // 
             this.tblChart.ColumnCount = 1;
             this.tblChart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblChart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblChart.Controls.Add(this.chartControl1, 0, 1);
             this.tblChart.Controls.Add(this.panel1, 0, 0);
             this.tblChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblChart.Location = new System.Drawing.Point(0, 0);
             this.tblChart.Name = "tblChart";
             this.tblChart.RowCount = 2;
-            this.tblChart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tblChart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tblChart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblChart.Size = new System.Drawing.Size(1882, 807);
+            this.tblChart.Size = new System.Drawing.Size(1904, 787);
             this.tblChart.TabIndex = 0;
             // 
             // chartControl1
@@ -173,7 +175,7 @@
             this.chartControl1.Legend.Font = new System.Drawing.Font("Tahoma", 18F);
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.Location = new System.Drawing.Point(3, 59);
+            this.chartControl1.Location = new System.Drawing.Point(3, 53);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.PaletteName = "Marquee";
             sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
@@ -200,7 +202,7 @@
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1,
         series2};
-            this.chartControl1.Size = new System.Drawing.Size(1876, 745);
+            this.chartControl1.Size = new System.Drawing.Size(1898, 731);
             this.chartControl1.TabIndex = 12;
             chartTitle1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartTitle1.Text = "Average Downtime & Calling Times by Line";
@@ -218,14 +220,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1876, 50);
+            this.panel1.Size = new System.Drawing.Size(1898, 44);
             this.panel1.TabIndex = 2;
             // 
             // dtpDate
             // 
             this.dtpDate.Cursor = System.Windows.Forms.Cursors.Default;
             this.dtpDate.EditValue = new System.DateTime(2017, 12, 15, 16, 0, 56, 917);
-            this.dtpDate.Location = new System.Drawing.Point(119, 5);
+            this.dtpDate.Location = new System.Drawing.Point(115, 1);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dtpDate.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 22F, System.Drawing.FontStyle.Bold);
@@ -345,10 +347,10 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.DimGray;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.label3.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 5);
+            this.label3.Location = new System.Drawing.Point(2, 1);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 42);
             this.label3.TabIndex = 300;
@@ -357,10 +359,11 @@
             // 
             // btnDetail
             // 
+            this.btnDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDetail.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetail.Location = new System.Drawing.Point(1697, 2);
+            this.btnDetail.Location = new System.Drawing.Point(1714, 0);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(176, 44);
+            this.btnDetail.Size = new System.Drawing.Size(176, 42);
             this.btnDetail.TabIndex = 6;
             this.btnDetail.Text = "DETAIL";
             this.btnDetail.UseVisualStyleBackColor = true;
@@ -368,37 +371,53 @@
             // 
             // pnTop
             // 
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(95)))));
+            this.pnTop.Controls.Add(this.cmdBack);
             this.pnTop.Controls.Add(this.panel2);
-            this.pnTop.Controls.Add(this.cmdPm1);
             this.pnTop.Controls.Add(this.lblDate);
             this.pnTop.Controls.Add(this.lblHeader);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnTop.Location = new System.Drawing.Point(3, 3);
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Margin = new System.Windows.Forms.Padding(0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1882, 81);
+            this.pnTop.Size = new System.Drawing.Size(1904, 110);
             this.pnTop.TabIndex = 2;
+            // 
+            // cmdBack
+            // 
+            this.cmdBack.BackColor = System.Drawing.Color.Transparent;
+            this.cmdBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdBack.BackgroundImage")));
+            this.cmdBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cmdBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.cmdBack.FlatAppearance.BorderSize = 0;
+            this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBack.Location = new System.Drawing.Point(1520, 3);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(105, 105);
+            this.cmdBack.TabIndex = 69;
+            this.cmdBack.UseVisualStyleBackColor = false;
+            this.cmdBack.Click += new System.EventHandler(this.cmdPm1_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblTxt2);
             this.panel2.Controls.Add(this.lblTxt1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblTxt3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1295, 0);
+            this.panel2.Location = new System.Drawing.Point(1118, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(327, 81);
+            this.panel2.Size = new System.Drawing.Size(327, 110);
             this.panel2.TabIndex = 15;
             // 
             // lblTxt2
             // 
             this.lblTxt2.AutoSize = true;
-            this.lblTxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.lblTxt2.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblTxt2.ForeColor = System.Drawing.Color.White;
-            this.lblTxt2.Location = new System.Drawing.Point(3, 17);
+            this.lblTxt2.Location = new System.Drawing.Point(3, 30);
             this.lblTxt2.Name = "lblTxt2";
             this.lblTxt2.Size = new System.Drawing.Size(247, 21);
             this.lblTxt2.TabIndex = 12;
@@ -407,10 +426,10 @@
             // lblTxt1
             // 
             this.lblTxt1.AutoSize = true;
-            this.lblTxt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.lblTxt1.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblTxt1.ForeColor = System.Drawing.Color.White;
-            this.lblTxt1.Location = new System.Drawing.Point(3, 0);
+            this.lblTxt1.Location = new System.Drawing.Point(3, 5);
             this.lblTxt1.Name = "lblTxt1";
             this.lblTxt1.Size = new System.Drawing.Size(187, 21);
             this.lblTxt1.TabIndex = 11;
@@ -419,10 +438,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 59);
+            this.label1.Location = new System.Drawing.Point(3, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(233, 21);
             this.label1.TabIndex = 13;
@@ -431,41 +450,23 @@
             // lblTxt3
             // 
             this.lblTxt3.AutoSize = true;
-            this.lblTxt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(156)))));
+            this.lblTxt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.lblTxt3.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblTxt3.ForeColor = System.Drawing.Color.White;
-            this.lblTxt3.Location = new System.Drawing.Point(3, 38);
+            this.lblTxt3.Location = new System.Drawing.Point(3, 56);
             this.lblTxt3.Name = "lblTxt3";
             this.lblTxt3.Size = new System.Drawing.Size(286, 21);
             this.lblTxt3.TabIndex = 13;
             this.lblTxt3.Text = "From 30 min to 59:59 min is orange";
             // 
-            // cmdPm1
-            // 
-            this.cmdPm1.BackColor = System.Drawing.Color.Transparent;
-            this.cmdPm1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmdPm1.BackgroundImage")));
-            this.cmdPm1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdPm1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.cmdPm1.FlatAppearance.BorderSize = 0;
-            this.cmdPm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdPm1.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
-            this.cmdPm1.ForeColor = System.Drawing.Color.Navy;
-            this.cmdPm1.Location = new System.Drawing.Point(3, 3);
-            this.cmdPm1.Name = "cmdPm1";
-            this.cmdPm1.Size = new System.Drawing.Size(77, 70);
-            this.cmdPm1.TabIndex = 88;
-            this.cmdPm1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmdPm1.UseVisualStyleBackColor = false;
-            this.cmdPm1.Click += new System.EventHandler(this.cmdPm1_Click);
-            // 
             // lblDate
             // 
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblDate.Font = new System.Drawing.Font("Calibri", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(1622, 0);
+            this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(1644, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(260, 81);
+            this.lblDate.Size = new System.Drawing.Size(260, 110);
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "2020-07-22\r\n10:00:00";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -473,24 +474,26 @@
             // 
             // lblHeader
             // 
-            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblHeader.Appearance.Options.UseFont = true;
+            this.lblHeader.Appearance.Options.UseForeColor = true;
             this.lblHeader.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblHeader.LineVisible = true;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1252, 81);
+            this.lblHeader.Size = new System.Drawing.Size(1058, 110);
             this.lblHeader.TabIndex = 3;
-            this.lblHeader.Text = "        Andon Information Downtime";
+            this.lblHeader.Text = " Andon Information Downtime";
+            this.lblHeader.Click += new System.EventHandler(this.lblHeader_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.grdView);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 903);
+            this.panel3.Location = new System.Drawing.Point(3, 906);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1882, 136);
+            this.panel3.Size = new System.Drawing.Size(1898, 132);
             this.panel3.TabIndex = 7;
             // 
             // grdView
@@ -503,7 +506,7 @@
             this.grdView.Location = new System.Drawing.Point(0, 0);
             this.grdView.MainView = this.gvwView;
             this.grdView.Name = "grdView";
-            this.grdView.Size = new System.Drawing.Size(1882, 136);
+            this.grdView.Size = new System.Drawing.Size(1898, 132);
             this.grdView.TabIndex = 4;
             this.grdView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwView});
@@ -548,8 +551,9 @@
             // SMT_SCADA_DOWNTIME
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1888, 1042);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SMT_SCADA_DOWNTIME";
             this.Text = "SMT_SCADA_COCKPIT_FORM2";
             this.Load += new System.EventHandler(this.SMT_SCADA_DOWNTIME_Load);
@@ -586,7 +590,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDetail;
         private System.Windows.Forms.Panel pnTop;
-        public System.Windows.Forms.Button cmdPm1;
         private System.Windows.Forms.Label lblDate;
         private DevExpress.XtraEditors.LabelControl lblHeader;
         private System.Windows.Forms.Timer timer1;
@@ -602,5 +605,6 @@
         private DevExpress.XtraEditors.DateEdit dtpDate;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        public System.Windows.Forms.Button cmdBack;
     }
 }

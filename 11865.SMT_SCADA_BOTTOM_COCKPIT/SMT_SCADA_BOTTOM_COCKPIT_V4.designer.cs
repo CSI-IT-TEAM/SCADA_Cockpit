@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V4));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.tmrTime = new System.Windows.Forms.Timer();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
-            this.tmrBlinking = new System.Windows.Forms.Timer(this.components);
+            this.tmrBlinking = new System.Windows.Forms.Timer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.customPanel2 = new FORM.ClassLib.CustomPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -199,7 +198,7 @@
             // 
             // pnTop
             // 
-            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pnTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(95)))));
             this.pnTop.Controls.Add(this.btnTest);
             this.pnTop.Controls.Add(this.cmdBack);
             this.pnTop.Controls.Add(this.lblDate);
@@ -207,7 +206,7 @@
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1940, 100);
+            this.pnTop.Size = new System.Drawing.Size(1940, 110);
             this.pnTop.TabIndex = 4;
             // 
             // btnTest
@@ -231,9 +230,9 @@
             this.cmdBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
             this.cmdBack.ForeColor = System.Drawing.Color.Navy;
-            this.cmdBack.Location = new System.Drawing.Point(1391, 3);
+            this.cmdBack.Location = new System.Drawing.Point(1388, 5);
             this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(101, 97);
+            this.cmdBack.Size = new System.Drawing.Size(100, 100);
             this.cmdBack.TabIndex = 88;
             this.cmdBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdBack.UseVisualStyleBackColor = false;
@@ -242,19 +241,20 @@
             // lblDate
             // 
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblDate.Font = new System.Drawing.Font("Calibri", 26F, System.Drawing.FontStyle.Bold);
+            this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold);
             this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Location = new System.Drawing.Point(1705, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(235, 100);
+            this.lblDate.Size = new System.Drawing.Size(235, 110);
             this.lblDate.TabIndex = 5;
             this.lblDate.Text = "2020-07-22\r\n10:00:00";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDate.DoubleClick += new System.EventHandler(this.lblDate_DoubleClick);
             // 
             // lblHeader
             // 
             this.lblHeader.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblHeader.Appearance.Options.UseBackColor = true;
             this.lblHeader.Appearance.Options.UseFont = true;
@@ -263,9 +263,10 @@
             this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(822, 100);
+            this.lblHeader.Size = new System.Drawing.Size(995, 110);
             this.lblHeader.TabIndex = 3;
             this.lblHeader.Text = "  Bottom SCADA Cockpit";
+            this.lblHeader.Click += new System.EventHandler(this.lblHeader_Click);
             // 
             // tmrTime
             // 
@@ -291,19 +292,19 @@
             this.tableLayoutPanel1.Controls.Add(this.customPanel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.customPanel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 100);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 110);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1940, 1000);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1940, 990);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // customPanel2
             // 
             this.customPanel2.BackColor = System.Drawing.Color.White;
-            this.customPanel2.BorderColor = System.Drawing.Color.SteelBlue;
-            this.customPanel2.BorderFocusColor = System.Drawing.Color.SteelBlue;
+            this.customPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
+            this.customPanel2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.customPanel2.BorderRadius = 10;
             this.customPanel2.BorderSize = 3;
             this.customPanel2.Controls.Add(this.label1);
@@ -391,7 +392,7 @@
             this.customPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customPanel2.Location = new System.Drawing.Point(729, 3);
             this.customPanel2.Name = "customPanel2";
-            this.customPanel2.Size = new System.Drawing.Size(1208, 994);
+            this.customPanel2.Size = new System.Drawing.Size(1208, 984);
             this.customPanel2.TabIndex = 1;
             this.customPanel2.UnderlinedStyle = false;
             // 
@@ -422,7 +423,7 @@
             // 
             this.labelControl1.Appearance.BackColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 32.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
@@ -1222,7 +1223,6 @@
             this.B2_COMPEXTR_KD204.TabIndex = 59;
             this.B2_COMPEXTR_KD204.Tag = "B2_COMPEXTR_KD204";
             this.B2_COMPEXTR_KD204.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.B2_COMPEXTR_KD204.Click += new System.EventHandler(this.label55_Click);
             // 
             // label56
             // 
@@ -1246,7 +1246,6 @@
             this.B2_COMPROLL_KD204.TabIndex = 57;
             this.B2_COMPROLL_KD204.Tag = "B2_COMPROLL_KD204";
             this.B2_COMPROLL_KD204.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.B2_COMPROLL_KD204.Click += new System.EventHandler(this.label57_Click);
             // 
             // label58
             // 
@@ -1270,7 +1269,6 @@
             this.B2_COMPKNED_KD204.TabIndex = 55;
             this.B2_COMPKNED_KD204.Tag = "B2_COMPKNED_KD204";
             this.B2_COMPKNED_KD204.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.B2_COMPKNED_KD204.Click += new System.EventHandler(this.label59_Click);
             // 
             // label60
             // 
@@ -1471,8 +1469,8 @@
             // customPanel1
             // 
             this.customPanel1.BackColor = System.Drawing.Color.White;
-            this.customPanel1.BorderColor = System.Drawing.Color.SteelBlue;
-            this.customPanel1.BorderFocusColor = System.Drawing.Color.SteelBlue;
+            this.customPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
+            this.customPanel1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.customPanel1.BorderRadius = 10;
             this.customPanel1.BorderSize = 3;
             this.customPanel1.Controls.Add(this.labelControl2);
@@ -1521,7 +1519,7 @@
             this.customPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customPanel1.Location = new System.Drawing.Point(3, 3);
             this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(720, 994);
+            this.customPanel1.Size = new System.Drawing.Size(720, 984);
             this.customPanel1.TabIndex = 0;
             this.customPanel1.UnderlinedStyle = false;
             // 
@@ -1529,7 +1527,7 @@
             // 
             this.labelControl2.Appearance.BackColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 32.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.labelControl2.Appearance.Options.UseBackColor = true;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY1 = new DevExpress.XtraCharts.SecondaryAxisY();
             DevExpress.XtraCharts.SecondaryAxisY secondaryAxisY2 = new DevExpress.XtraCharts.SecondaryAxisY();
@@ -82,8 +81,8 @@
             this.pnGrid = new System.Windows.Forms.Panel();
             this.grdView = new DevExpress.XtraGrid.GridControl();
             this.gvwView = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.tmr = new System.Windows.Forms.Timer(this.components);
-            this.toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(this.components);
+            this.tmr = new System.Windows.Forms.Timer();
+            this.toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager();
             this.tblMain.SuspendLayout();
             this.pnHeader.SuspendLayout();
             this.pnInfoTotal.SuspendLayout();
@@ -142,14 +141,15 @@
             // 
             // pnHeader
             // 
-            this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
+            this.pnHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(95)))));
             this.pnHeader.Controls.Add(this.btnBack);
             this.pnHeader.Controls.Add(this.lblDate);
             this.pnHeader.Controls.Add(this.lblHeader);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnHeader.Location = new System.Drawing.Point(3, 3);
+            this.pnHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(1898, 104);
+            this.pnHeader.Size = new System.Drawing.Size(1904, 110);
             this.pnHeader.TabIndex = 0;
             // 
             // btnBack
@@ -157,14 +157,15 @@
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.BackgroundImage = global::FORM.Properties.Resources.Back_Icon;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Calibri", 32.75F, System.Drawing.FontStyle.Bold);
             this.btnBack.ForeColor = System.Drawing.Color.Navy;
-            this.btnBack.Location = new System.Drawing.Point(1532, 6);
+            this.btnBack.Location = new System.Drawing.Point(1543, 3);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 95);
+            this.btnBack.Size = new System.Drawing.Size(105, 105);
             this.btnBack.TabIndex = 90;
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBack.UseVisualStyleBackColor = false;
@@ -173,18 +174,18 @@
             // lblDate
             // 
             this.lblDate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblDate.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold);
+            this.lblDate.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(1638, 0);
+            this.lblDate.Location = new System.Drawing.Point(1644, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(260, 104);
+            this.lblDate.Size = new System.Drawing.Size(260, 110);
             this.lblDate.TabIndex = 6;
             this.lblDate.Text = "2020-07-22\r\n10:00:00";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblHeader
             // 
-            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 50F, System.Drawing.FontStyle.Bold);
+            this.lblHeader.Appearance.Font = new System.Drawing.Font("Calibri", 51.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblHeader.Appearance.Options.UseFont = true;
             this.lblHeader.Appearance.Options.UseForeColor = true;
@@ -192,7 +193,8 @@
             this.lblHeader.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblHeader.Location = new System.Drawing.Point(0, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(1543, 104);
+            this.lblHeader.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.lblHeader.Size = new System.Drawing.Size(1488, 110);
             this.lblHeader.TabIndex = 4;
             this.lblHeader.Text = "Power Management Systems";
             // 
@@ -213,8 +215,9 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(80)))), ((int)(((byte)(240)))));
             this.label1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(10, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 40);
@@ -225,7 +228,7 @@
             // dptDate
             // 
             this.dptDate.EditValue = new System.DateTime(2020, 10, 29, 0, 0, 0, 0);
-            this.dptDate.Location = new System.Drawing.Point(116, 7);
+            this.dptDate.Location = new System.Drawing.Point(111, 7);
             this.dptDate.Name = "dptDate";
             this.dptDate.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 18F);
             this.dptDate.Properties.Appearance.Options.UseFont = true;

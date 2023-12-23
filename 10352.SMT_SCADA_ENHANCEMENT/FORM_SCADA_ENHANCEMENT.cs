@@ -419,7 +419,6 @@ namespace FORM
 
         private void tmrAnimationText_Tick(object sender, EventArgs e)
         {
-           
             cCountPnCell1++;
             BindingLabelRData(lblCell1_RW, 1, 101);
             BindingLabelRData(lblCell1_Occur, 1, 101);
@@ -523,6 +522,8 @@ namespace FORM
                 lblCell8_MalTop5.Text = "0";
 
                 tmrAnimationText.Stop();
+
+
                 try
                 {
                     lblCell1_RW.Text = string.Format("{0:n1}", dtCell1.Rows[0]["REW_RATE"]);
@@ -783,14 +784,14 @@ namespace FORM
             }
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void lblDate_DoubleClick(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void lblCell6_ProdBestPlant1_Click(object sender, EventArgs e)
+        private void lblHeader_Click(object sender, EventArgs e)
         {
-
+            ComVar.Var.callForm = "minimized";
         }
     }
 }

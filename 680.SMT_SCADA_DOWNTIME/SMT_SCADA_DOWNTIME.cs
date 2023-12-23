@@ -487,5 +487,10 @@ namespace FORM
         {
             SetData(_strType);
         }
+
+        private void lblHeader_Click(object sender, EventArgs e)
+        {
+            ComVar.Var.callForm = "minimized";
+        }
     }
 }

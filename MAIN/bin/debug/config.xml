@@ -2,7 +2,7 @@
 <Base>
 	<LINECD>014</LINECD>
 	<MAIN>
-		<grpForm>SMT_SCADA</grpForm>
+		<grpForm>SCADA_COCKPIT</grpForm>
 		<FlashScreen>true</FlashScreen>
 		<Auto_Download>false</Auto_Download>
 		<AREA>NOS</AREA>
@@ -12,7 +12,7 @@
 	</MAIN>
   
 	<Auto_Download>
-		<grpForm>SMT_SCADA</grpForm>
+		<grpForm>SCADA_COCKPIT</grpForm>
 	</Auto_Download>
 	
 </Base>

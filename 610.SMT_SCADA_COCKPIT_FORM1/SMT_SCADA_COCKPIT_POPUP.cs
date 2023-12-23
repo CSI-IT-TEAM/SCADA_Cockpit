@@ -640,7 +640,7 @@ namespace FORM
             _strType = "W";
            // SetHeader("W");
             SetButtonClick("W");
-           // SetData("W");
+           //SetData("W");
         }
 
         private void cmdMonth_Click(object sender, EventArgs e)
@@ -671,6 +671,12 @@ namespace FORM
                     cmdMonth.Enabled = false;
                     break;
             }
+
+            try
+            {
+                setData();
+            }
+            catch { }
         }
 
         private void cmdNext_Click(object sender, EventArgs e)

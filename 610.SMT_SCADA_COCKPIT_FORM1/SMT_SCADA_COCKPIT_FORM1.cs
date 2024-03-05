@@ -475,6 +475,8 @@ namespace FORM
                 int iStart = 0;
                 int.TryParse(row["START_LINE"].ToString(), out iStart);
                 lineCd = lineCd.Substring(0,3);
+                string numberNosew = row["NUM_UPN"].ToString();
+                string numberFga = row["NUM_FGA"].ToString();
                 //lineCd = lineCd.Replace("_1", "");
                 for (int iLine = iStart + 1; iLine <= iStart + iNumLine; iLine++)
                 {
@@ -494,7 +496,7 @@ namespace FORM
                     dicValue["NAME"] = "cmd_" + lineCd + "_" + iLine.ToString("000") + "_" + "UPN" + "_" + "STA";
                     dicValue["TAG"] = lineCd + "_" + iLine.ToString("000") + "_" + "UPN";
                     dicValue["TEXT"] = "";
-                    if (lineCd =="099" || lineCd == "008" )
+                    if (numberNosew == "0")
                         dicValue["BACK_COLOR"] = "WHITE";
                     else
                         dicValue["BACK_COLOR"] = "GREEN";
@@ -534,8 +536,8 @@ namespace FORM
                 if (dicValue["TEXT"].Count() > 1)
                 {
                 }
-
-                cmdLine = createButton(dicValue, buttonLoc, buttonSize, dicValue["TEXT"].Count() > 1 ? buttonLineFont2 : buttonLineFont);
+                Font font = numberFga == "1" ? buttonMlineFont : dicValue["TEXT"].Count() > 1 ? buttonLineFont2 : buttonLineFont;
+                cmdLine = createButton(dicValue, buttonLoc, buttonSize, font);
                 pnControl.Controls.Add(cmdLine);
 
                 locStartY = locY += 10;

@@ -768,22 +768,28 @@ namespace FORM
                 {
                     if (path == "") return;
                     this.Cursor = Cursors.WaitCursor;
-                    if (!System.IO.File.Exists(Application.StartupPath + "\\" + path)) return;
-                    try
+                    if (!System.IO.File.Exists(Application.StartupPath + "\\" + path))
                     {
-                        if (!Environment.Is64BitOperatingSystem)
-                            Process.Start(Application.StartupPath + @"\vnc\VNC-Viewer-32bit.exe", path);
-                        else
-                            Process.Start(Application.StartupPath + @"\vnc\VNC-Viewer.exe", path);
-                        
-                        //Process startVNC = new Process();
-                        // startVNC.StartInfo.FileName = path;
-                        // startVNC.Start(path,"");
+
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        ComVar.Var.writeToLog("Open VNC Error: " + ex.ToString());
-                    }
+                        try
+                        {
+                            if (!Environment.Is64BitOperatingSystem)
+                                Process.Start(Application.StartupPath + @"\vnc\VNC-Viewer-32bit.exe", path);
+                            else
+                                Process.Start(Application.StartupPath + @"\vnc\VNC-Viewer.exe", path);
+
+                            //Process startVNC = new Process();
+                            // startVNC.StartInfo.FileName = path;
+                            // startVNC.Start(path,"");
+                        }
+                        catch (Exception ex)
+                        {
+                            ComVar.Var.writeToLog("Open VNC Error: " + ex.ToString());
+                        }
+                    } 
                 }
             }
             catch (Exception ex)

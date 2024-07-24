@@ -26,6 +26,8 @@ namespace FORM
         DataTable _dtDataTrend = null;
         DataTable _dtMcId = null;
 
+        int iCount_Hide = 0;
+
         int _iCurPage, _iMaxPage;
         double _iMinChart = 0, _iMaxChart = 0;
 
@@ -176,7 +178,7 @@ namespace FORM
                 {
                     iCount = 59;
                     tabControl.SelectedTabPageIndex = 0;
-
+                    iCount_Hide = 0;
                     //timer1.Start();
                 }
                 else
@@ -194,6 +196,14 @@ namespace FORM
         {
             try
             {
+                iCount_Hide++;
+                if (iCount_Hide >= 300)
+                {
+                    iCount_Hide = 0;
+                    this.WindowState = FormWindowState.Minimized;
+                    this.Hide();
+                }
+
                 iCount++;
                 if (iCount == 60)
                 {

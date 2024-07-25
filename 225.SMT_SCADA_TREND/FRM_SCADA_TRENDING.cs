@@ -35,8 +35,10 @@ namespace FORM
         int _cnt = 0;
         DatabaseSCADA db = new DatabaseSCADA();
         DataTable dtRealChart = new DataTable();
+
+        public int iCount_Hide = 0;
         #endregion
-        
+
 
         RepositoryItemCheckEdit checkEdit; 
         private void FRM_SCADA_TRENDING_Load(object sender, EventArgs e)
@@ -219,6 +221,8 @@ namespace FORM
 
                 }
                 BindingChart2();
+
+                iCount_Hide = 0;
             }
             catch
             {
@@ -517,6 +521,8 @@ namespace FORM
                 set_Series();
                 this.Cursor = Cursors.Default;
                 splashScreenManager1.CloseWaitForm();
+
+               
             }
             catch
             {
@@ -559,14 +565,30 @@ namespace FORM
         }
         private void tmrDate_Tick(object sender, EventArgs e)
         {
-            lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
-            if (_cnt < 2)
-                _cnt++;
-            if (_cnt == 2)
+            try
             {
-                _cnt++;
-                if (!flag)
-                    load_combo();
+                lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss")); //Gán dữ liệu giờ cho label ngày giờ
+                if (_cnt < 2)
+                    _cnt++;
+                if (_cnt == 2)
+                {
+                    _cnt++;
+                    if (!flag)
+                        load_combo();
+                }
+
+
+                iCount_Hide++;
+                if (iCount_Hide >= 300)
+                {
+                    iCount_Hide = 0;
+                    this.WindowState = FormWindowState.Minimized;
+                    this.Hide();
+                }
+            }
+            catch
+            {
+               
             }
         }
 
@@ -884,6 +906,8 @@ namespace FORM
 
         private void chkAll_CheckedChanged(object sender, EventArgs e)
         {
+            iCount_Hide = 0;
+
             if (chkAll.Checked)
             {
                 foreach (TreeListNode node in treeList.Nodes)

@@ -202,6 +202,8 @@ namespace FORM
                     iCount_Hide = 0;
                     this.WindowState = FormWindowState.Minimized;
                     this.Hide();
+                    //ComVar.Var.callForm = "minimized";
+                   // Application.Exit();
                 }
 
                 iCount++;

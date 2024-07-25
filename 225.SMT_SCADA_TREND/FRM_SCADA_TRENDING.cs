@@ -582,8 +582,7 @@ namespace FORM
                 if (iCount_Hide >= 300)
                 {
                     iCount_Hide = 0;
-                    this.WindowState = FormWindowState.Minimized;
-                    this.Hide();
+                    ComVar.Var.callForm = "minimized";
                 }
             }
             catch

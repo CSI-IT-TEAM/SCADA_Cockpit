@@ -487,6 +487,7 @@
             this.Text = "FRM_SCADA_TRENDING";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FRM_SCADA_TRENDING_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FRM_SCADA_TRENDING_MouseMove);
             this.pnHeader.ResumeLayout(false);
             this.pnMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();

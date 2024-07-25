@@ -904,6 +904,18 @@ namespace FORM
             //treeList.InvalidateColumnPanel();  
         }
 
+        private void FRM_SCADA_TRENDING_MouseMove(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                if (iCount_Hide >= 200)
+                {
+                    iCount_Hide = 0;
+                }
+            }
+            catch { }
+        }
+
         private void chkAll_CheckedChanged(object sender, EventArgs e)
         {
             iCount_Hide = 0;

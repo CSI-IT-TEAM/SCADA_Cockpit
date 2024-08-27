@@ -355,7 +355,7 @@ namespace FORM
             COM.OraDB MyOraDB = new COM.OraDB();
 
             MyOraDB.ReDim_Parameter(2);
-            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.SEL_BOTTOM_COCKPIT_DATA_V1";
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.SEL_IP_ZONE_STATUS_LIST";
 
             MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
             MyOraDB.Parameter_Name[1] = "OUT_CURSOR";

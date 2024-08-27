@@ -259,6 +259,11 @@ namespace FORM
             }
             if(blink == 0)
             {
+                foreach (var item in lstUC)
+                {
+                    item.AnmationData("0", "0");
+                }
+
                 dtHeat = GET_MACHINE_TEMPER("HEAT", "", "");
                 dtCool = GET_MACHINE_TEMPER("COOL", "", "");
                 DataTable dtCur = GET_MACHINE_TEMPER("CURR", "", "");

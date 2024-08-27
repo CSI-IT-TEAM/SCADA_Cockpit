@@ -2342,6 +2342,7 @@
             // 
             this.tmrBlinking.Enabled = true;
             this.tmrBlinking.Interval = 500;
+            this.tmrBlinking.Tick += new System.EventHandler(this.tmrBlinking_Tick);
             // 
             // SMT_SCADA_B2IPZONE_TEMPER_V2
             // 

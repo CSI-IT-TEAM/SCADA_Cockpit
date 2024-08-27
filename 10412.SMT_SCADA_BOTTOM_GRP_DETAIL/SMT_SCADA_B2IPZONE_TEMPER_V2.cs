@@ -8,6 +8,7 @@ using System.Data.OracleClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace FORM
     {
         public SMT_SCADA_B2IPZONE_TEMPER_V2()
         {
+            CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
             tmrDate.Stop();
         }
@@ -397,7 +399,7 @@ namespace FORM
         private void SMT_SCADA_B2IPZONE_TEMPER_Load(object sender, EventArgs e)
         {
             InitLabelControls();
-
+            sBtnList = new SimpleButton[] { sbtnZone1, sbtnZone2, sbtnZone3, sbtnZone4, sbtnZone5, sbtnZone6, sbtnZone7 };
             //Select data with default value
             //lblMC1_INJECT1_01.BackColor = Color.Red;
             DataTable dt = SEL_BOTTOM_COCKPIT_DATA("Q");
@@ -414,7 +416,7 @@ namespace FORM
         {
             try
             {
-                sBtnList = new SimpleButton[] { sbtnZone1, sbtnZone2, sbtnZone3, sbtnZone4, sbtnZone5, sbtnZone6, sbtnZone7 };
+               
                 foreach (DataRow dr in dt.Rows)
                 {
                     foreach (var item in sBtnList)
@@ -440,6 +442,9 @@ namespace FORM
                         }
                     }
                 }
+
+
+                tmrBlinking.Enabled = true;
                 tmrBlinking.Start();
             }
             catch (Exception ex)
@@ -455,16 +460,18 @@ namespace FORM
                 {
                     if (item.Appearance.BackColor == Color.Red)
                     {
-                        item.Appearance.BackColor = Color.FromArgb(191, 191, 191);
-                        item.Appearance.BackColor2 = Color.FromArgb(191, 191, 191);
+                        item.Appearance.BackColor = Color.Black;
+                        item.Appearance.BackColor2 = Color.Black;
+                        item.Appearance.ForeColor = Color.White;
                     }
-                        
-                    else if (item.Appearance.BackColor == Color.FromArgb(191, 191, 191))
+                    else if (item.Appearance.BackColor == Color.Black)
                     {
                         item.Appearance.BackColor = Color.Red;
                         item.Appearance.BackColor2 = Color.Red;
+                        item.Appearance.ForeColor = Color.White;
                     }
-                        
+
+                   
                 }
             }
             catch (Exception)

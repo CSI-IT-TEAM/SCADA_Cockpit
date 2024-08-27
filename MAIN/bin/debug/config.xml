@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Base>  <LINECD>099</LINECD>
+<Base>
+	<LINECD>014</LINECD>
 	<MAIN>
-		<grpForm>SMT_SCADA</grpForm>
-		<FlashScreen>false</FlashScreen>
-		<Auto_Download>false</Auto_Download>
+		<grpForm>SCADA_COCKPIT</grpForm>
+		<FlashScreen>true</FlashScreen>
+		<Auto_Download>flase</Auto_Download>
 		<AREA>NOS</AREA>
-		<Type>1</Type>
-		<SCREEN>1</SCREEN>
+		<Type>2</Type>
+		<SCREEN>2</SCREEN>
+		<SLEEP_VNC>100</SLEEP_VNC>
 	</MAIN>
   
 	<Auto_Download>
-		<grpForm>SMT_SCADA</grpForm>
+		<grpForm>SCADA_COCKPIT</grpForm>
 	</Auto_Download>
-	<GMES>
-		<PROCESS_NAME>JBrowser6</PROCESS_NAME>
-		<PATH>C:\JihooSoft\JBrowser6_GMES\JBrowser6.exe</PATH>
-	</GMES>
-	<QMS>
-		<PROCESS_NAME>JBrowser6</PROCESS_NAME>
-		<PATH>C:\\Program Files\\CSI\\QCS\\FlexQuality.exe</PATH>
-	</QMS>
-
-  
-	<LANG>VN</LANG>
-	<MENU_BUTTON>T/T/T/T/T/T</MENU_BUTTON>
-	<LINE_CD>099</LINE_CD>	
-	<LINE_NAME>N</LINE_NAME>
-	<NUMBER_MLINE>4</NUMBER_MLINE>
-	<FRM_MAIN>
-		<frmMain>69</frmMain>
-	</FRM_MAIN>
+	
 </Base>

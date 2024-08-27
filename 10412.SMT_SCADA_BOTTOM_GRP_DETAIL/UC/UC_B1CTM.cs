@@ -35,6 +35,19 @@ namespace FORM.UC
             a1Panel1.BorderColor = color;
         }
 
+        public void AnmationData(string Value1, string Value2)
+        {
+            try
+            {
+                lblHeat.Text = string.Concat(Value1.ToString(), "°C");
+                lblHeat.BackColor = Color.LimeGreen;
+                lblCool.Text = string.Concat(Value2.ToString(), "°C");
+                lblCool.BackColor = Color.LimeGreen;
+                
+            }
+            catch { }
+        }
+
         public void BindingData(DataRow dr)
         {
            

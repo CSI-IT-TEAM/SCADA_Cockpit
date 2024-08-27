@@ -7,6 +7,7 @@ using System.Data.OracleClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -102,6 +103,8 @@ namespace FORM
 
         private void InitLayout()
         {
+            dtHeat = GET_MACHINE_TEMPER("HEAT", "", "");
+            dtCool = GET_MACHINE_TEMPER("COOL", "", "");
             //get number of CTM Machine
             DataTable dtMachineMaster = GET_MACHINE_MASTER("Q");
             if (dtMachineMaster != null && dtMachineMaster.Rows.Count > 0)
@@ -123,6 +126,14 @@ namespace FORM
                             tblMain.Controls.Add(UcBtCtm, j, i);
                             UcBtCtm.Dock = DockStyle.Fill;
                             lstUC.Add(UcBtCtm);
+
+                            if (iDx == 0) {
+                     
+                                UCOnClick(UcBtCtm);
+                                
+
+
+                            }
                             iDx++;
                         }
                     }
@@ -160,6 +171,9 @@ namespace FORM
             }
             catch { this.Cursor = Cursors.Default; }
         }
+
+
+        
 
         private void BindingChartData(string argQtype,DataTable dt)
         {
@@ -210,6 +224,7 @@ namespace FORM
         {
             if (this.Visible)
             {
+               
                 cCount = 299;
                 tmrTime.Start();
             }
@@ -221,21 +236,35 @@ namespace FORM
         {
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
             InitLayout();
+            //UCOnClick();
         }
-
-        private void tmrTime_Tick(object sender, EventArgs e)
+        int blink = -1;
+        private void timer_blink_Tick(object sender, EventArgs e)
         {
-            cCount++;
-            lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
-            if (cCount >= 300)
+            if (blink > 0)
             {
-                cCount = 0;
+                blink--;
+                try
+                {
+                    foreach (var item in lstUC)
+                    {
+                        item.AnmationData(r.Next(1, 101).ToString(), r.Next(1, 101).ToString());
+                    }
+                }
+                catch
+                {
+
+                }
+                
+            }
+            if(blink == 0)
+            {
                 dtHeat = GET_MACHINE_TEMPER("HEAT", "", "");
                 dtCool = GET_MACHINE_TEMPER("COOL", "", "");
                 DataTable dtCur = GET_MACHINE_TEMPER("CURR", "", "");
                 if (dtCur != null && dtCur.Rows.Count > 0)
                 {
-                  
+
                     foreach (DataRow dr in dtCur.Rows)
                     {
                         foreach (var item in lstUC)
@@ -247,7 +276,40 @@ namespace FORM
                             }
                         }
                     }
+
+
                 }
+                blink = -1;
+            }
+           
+
+        }
+
+        Random r = new Random();
+        private void tmrTime_Tick(object sender, EventArgs e)
+        {
+            cCount++;
+            lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
+            if (cCount >= 300)
+            {
+                blink = 15;
+                //Thread t = new Thread(() =>
+                //{
+                //    for (int i = 0; i <= 10; i++)
+                //    {
+                //        foreach (var item in lstUC)
+                //        {
+                //            item.AnmationData(r.Next(1, 101).ToString(), r.Next(1, 101).ToString());
+                //        }
+
+                //    }
+                //});
+                //t.Start();
+
+                //if(t.com)
+
+                cCount = 0;
+                
             }
         }
     }

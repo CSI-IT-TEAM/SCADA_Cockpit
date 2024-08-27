@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B1CTM_TEMPER));
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.ConstantLine constantLine1 = new DevExpress.XtraCharts.ConstantLine();
@@ -52,8 +53,9 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
             this.tblMain = new System.Windows.Forms.TableLayoutPanel();
-            this.tmrTime = new System.Windows.Forms.Timer();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.timer_blink = new System.Windows.Forms.Timer(this.components);
             this.a1Panel2 = new OS_DSF.A1Panel();
             this.chartCool = new DevExpress.XtraCharts.ChartControl();
             this.label2 = new System.Windows.Forms.Label();
@@ -249,6 +251,11 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(650, 965);
             this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // timer_blink
+            // 
+            this.timer_blink.Enabled = true;
+            this.timer_blink.Tick += new System.EventHandler(this.timer_blink_Tick);
             // 
             // a1Panel2
             // 
@@ -458,5 +465,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Timer timer_blink;
     }
 }

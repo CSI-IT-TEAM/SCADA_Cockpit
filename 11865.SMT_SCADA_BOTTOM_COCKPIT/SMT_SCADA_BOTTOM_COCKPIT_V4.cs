@@ -150,7 +150,7 @@ namespace FORM
                     cCount = 60;
                 }else
                 {
-                    cCount = 60;
+                    cCount = 50;
                 }
                 tmrTime.Start();
                 tmrBlinking.Start();

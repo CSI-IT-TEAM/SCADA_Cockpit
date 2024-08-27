@@ -170,7 +170,7 @@ namespace FORM
         }
 
         int iL1_001 = 0;
-        private void BindingStabilizationData(string _argZone)
+        private void BindingStabilizationData( string _argZone)
         {
             try
             {
@@ -210,7 +210,7 @@ namespace FORM
         }
 
 
-        private void BindingInjectionData(string _argZone, int PageIdx)
+        private void BindingInjectionData (string _argZone, int PageIdx)
         {
             try
             {
@@ -231,8 +231,8 @@ namespace FORM
                 else
                     MaxPageSeq = MaxPageSeq / 3;
                 DataTable dtP = new DataTable();
-                
-                if (dt.Select("PAGE_IDX >='" + ((PageIdx*3) - 2).ToString() + "' AND PAGE_IDX <= '"+ (PageIdx * 3) + "'").Count() > 0)
+
+                if (dt.Select("PAGE_IDX >='" + ((PageIdx * 3) - 2).ToString() + "' AND PAGE_IDX <= '" + (PageIdx * 3) + "'").Count() > 0)
                 {
                     DataTable dtTemp = dt.Select("PAGE_IDX >='" + ((PageIdx * 3) - 2).ToString() + "' AND PAGE_IDX <= '" + (PageIdx * 3) + "'").CopyToDataTable();
                     foreach (DataRow dr in dtTemp.Rows)
@@ -246,9 +246,10 @@ namespace FORM
                                 if (item.Name.ToString().Substring(0, 14).Equals("lblMC1_INJECT1") && item.Name.ToString().Substring(item.Name.ToString().Length - 2).Equals(dr["STATION_CD"]))
                                 {
                                     item.Text = string.Format("{0:n1}", dr["INJECT1"]);
-                                    if(dr["STATUS1"].ToString().Equals("1"))
+                                    if (dr["STATUS1"].ToString().Equals("1"))
                                     {
                                         item.BackColor = Color.Red;
+                                       
                                     }
                                     else
                                     {
@@ -261,6 +262,7 @@ namespace FORM
                                     if (dr["STATUS2"].ToString().Equals("1"))
                                     {
                                         item.BackColor = Color.Red;
+                                       
                                     }
                                     else
                                     {
@@ -281,7 +283,7 @@ namespace FORM
                                     item.Text = string.Format("{0:n1}", dr["INJECT1"]);
                                     if (dr["STATUS1"].ToString().Equals("1"))
                                     {
-                                        item.BackColor = Color.Red;
+                                        item.BackColor = Color.Red; 
                                     }
                                     else
                                     {
@@ -314,12 +316,12 @@ namespace FORM
                                     item.Text = string.Format("{0:n1}", dr["INJECT1"]);
                                     if (dr["STATUS1"].ToString().Equals("1"))
                                     {
-                                        item.BackColor = Color.Red;
+                                        item.BackColor = Color.Red; 
                                     }
                                     else
                                     {
                                         item.BackColor = Color.FromArgb(45, 55, 117);
-                                        
+
                                     }
                                 }
                                 if (item.Name.ToString().Substring(0, 14).Equals("lblMC3_INJECT2") && item.Name.ToString().Substring(item.Name.ToString().Length - 2).Equals(dr["STATION_CD"]))
@@ -327,7 +329,7 @@ namespace FORM
                                     item.Text = string.Format("{0:n1}", dr["INJECT2"]);
                                     if (dr["STATUS2"].ToString().Equals("1"))
                                     {
-                                        item.BackColor = Color.Red;
+                                        item.BackColor = Color.Red; 
                                     }
                                     else
                                     {
@@ -340,21 +342,49 @@ namespace FORM
                 }
 
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
             }
         }
+
+        #region Oracle
+        private DataTable SEL_BOTTOM_COCKPIT_DATA(string argType)
+        {
+            COM.OraDB MyOraDB = new COM.OraDB();
+
+            MyOraDB.ReDim_Parameter(2);
+            MyOraDB.Process_Name = "MES.PKG_SMT_SCADA_COCKPIT.SEL_BOTTOM_COCKPIT_DATA_V1";
+
+            MyOraDB.Parameter_Name[0] = "ARG_QTYPE";
+            MyOraDB.Parameter_Name[1] = "OUT_CURSOR";
+
+            MyOraDB.Parameter_Type[0] = (int)OracleType.VarChar;
+            MyOraDB.Parameter_Type[1] = (int)OracleType.Cursor;
+
+            MyOraDB.Parameter_Values[0] = argType;
+            MyOraDB.Parameter_Values[1] = "";
+
+            MyOraDB.Add_Select_Parameter(true);
+            DataSet retDS = MyOraDB.Exe_Select_Procedure();
+            if (retDS == null) return null;
+
+            return retDS.Tables[MyOraDB.Process_Name];
+        }
+        #endregion
 
         private void sbtnZone_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
             cCount = 0;
-            sbtnZone1.Appearance.BackColor = sbtnZone1.Appearance.BackColor2 = Color.Silver;
-            sbtnZone2.Appearance.BackColor = sbtnZone2.Appearance.BackColor2 = Color.Silver;
-            sbtnZone3.Appearance.BackColor = sbtnZone3.Appearance.BackColor2 = Color.Silver;
-            sbtnZone4.Appearance.BackColor = sbtnZone4.Appearance.BackColor2 = Color.Silver;
-            sbtnZone5.Appearance.BackColor = sbtnZone5.Appearance.BackColor2 = Color.Silver;
-            sbtnZone6.Appearance.BackColor = sbtnZone6.Appearance.BackColor2 = Color.Silver;
-            sbtnZone7.Appearance.BackColor = sbtnZone7.Appearance.BackColor2 = Color.Silver;
+            DataTable dt = SEL_BOTTOM_COCKPIT_DATA("Q");
+            BindingData(dt);
+            //sbtnZone1.Appearance.BackColor = sbtnZone1.Appearance.BackColor2 = Color.Silver;
+            //sbtnZone2.Appearance.BackColor = sbtnZone2.Appearance.BackColor2 = Color.Silver;
+            //sbtnZone3.Appearance.BackColor = sbtnZone3.Appearance.BackColor2 = Color.Silver;
+            //sbtnZone4.Appearance.BackColor = sbtnZone4.Appearance.BackColor2 = Color.Silver;
+            //sbtnZone5.Appearance.BackColor = sbtnZone5.Appearance.BackColor2 = Color.Silver;
+            //sbtnZone6.Appearance.BackColor = sbtnZone6.Appearance.BackColor2 = Color.Silver;
+            //sbtnZone7.Appearance.BackColor = sbtnZone7.Appearance.BackColor2 = Color.Silver;
 
             SimpleButton sbtn = ((SimpleButton)sender);
             sbtn.Appearance.BackColor = sbtn.Appearance.BackColor2 = Color.Yellow;
@@ -370,6 +400,106 @@ namespace FORM
 
             //Select data with default value
             //lblMC1_INJECT1_01.BackColor = Color.Red;
+            DataTable dt = SEL_BOTTOM_COCKPIT_DATA("Q");
+            BindingData(dt);
+
+
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 500; // Timer interval in milliseconds (1000 ms = 1 second)
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+        SimpleButton[] sBtnList = null;
+        private void BindingData(DataTable dt)
+        {
+            try
+            {
+                sBtnList = new SimpleButton[] { sbtnZone1, sbtnZone2, sbtnZone3, sbtnZone4, sbtnZone5, sbtnZone6, sbtnZone7 };
+                foreach (DataRow dr in dt.Rows)
+                {
+                    foreach (var item in sBtnList)
+                    {
+                        if (dr["MACHINE_CODE_MAPPING"].Equals(item.Tag.ToString()))
+                        {
+
+                            switch (dr["STATUS"].ToString())
+                            {
+                                case "G":
+                                    item.Appearance.BackColor = Color.Green;
+                                    item.Appearance.BackColor2 = Color.Green;
+                                    break;
+                                case "R":
+                                    item.Appearance.BackColor = Color.Red;
+                                    item.Appearance.BackColor2 = Color.Red;
+                                    break;
+                                case "Y":
+                                    item.Appearance.BackColor = Color.Yellow;
+                                    item.Appearance.BackColor2 = Color.Yellow;
+                                    break;
+                            }
+                        }
+                    }
+                }
+                tmrBlinking.Start();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        private void tmrBlinking_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (var item in sBtnList)
+                {
+                    if (item.Appearance.BackColor == Color.Red)
+                    {
+                        item.Appearance.BackColor = Color.FromArgb(191, 191, 191);
+                        item.Appearance.BackColor2 = Color.FromArgb(191, 191, 191);
+                    }
+                        
+                    else if (item.Appearance.BackColor == Color.FromArgb(191, 191, 191))
+                    {
+                        item.Appearance.BackColor = Color.Red;
+                        item.Appearance.BackColor2 = Color.Red;
+                    }
+                        
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            foreach (Label item in lstInjectLabel)
+            {
+                if (item.BackColor == Color.Red)
+                {
+                    item.BackColor = Color.FromArgb(45, 55, 118);
+                }
+                else if (item.BackColor == Color.FromArgb(45, 55, 118))
+                {
+                    item.BackColor = Color.Red;
+                }
+            }
+
+            foreach (Label item in lstLabel)
+            {
+                if (item.BackColor == Color.Red)
+                {
+                    item.BackColor = Color.FromArgb(45, 55, 118);
+                }
+                else if (item.BackColor == Color.FromArgb(45, 55, 118))
+                {
+                    item.BackColor = Color.Red;
+                }
+            }
         }
 
         private void SMT_SCADA_B2IPZONE_TEMPER_VisibleChanged(object sender, EventArgs e)
@@ -392,6 +522,7 @@ namespace FORM
         Random r = new Random();
         int cAni = 0;
         const int TimeAniStop = 30;
+       
         private void tmrAnimation_Tick(object sender, EventArgs e)
         {
             cAni++;
@@ -408,6 +539,7 @@ namespace FORM
                 cAni = 0;
                 tmrAnimation.Stop();
                 string _argZone = argZone;
+
                 BindingInjectionData(_argZone, PageIdx);
                 BindingStabilizationData(_argZone);
             }

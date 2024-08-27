@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B2IPZONE_TEMPER_V2));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrDate = new System.Windows.Forms.Timer(this.components);
+            this.tmrDate = new System.Windows.Forms.Timer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.sbtnZone1 = new DevExpress.XtraEditors.SimpleButton();
@@ -171,7 +170,7 @@
             this.lblMC3_INJECT2_06 = new System.Windows.Forms.Label();
             this.lblMC3_INJECT2_08 = new System.Windows.Forms.Label();
             this.label103 = new System.Windows.Forms.Label();
-            this.tmrAnimation = new System.Windows.Forms.Timer(this.components);
+            this.tmrAnimation = new System.Windows.Forms.Timer();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -204,6 +203,7 @@
             this.label71 = new System.Windows.Forms.Label();
             this.sbtnNext = new DevExpress.XtraEditors.SimpleButton();
             this.sbtnPrev = new DevExpress.XtraEditors.SimpleButton();
+            this.tmrBlinking = new System.Windows.Forms.Timer();
             this.pnTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -2338,6 +2338,11 @@
             this.sbtnPrev.Text = "Previous";
             this.sbtnPrev.Click += new System.EventHandler(this.sbtnNavPage_Click);
             // 
+            // tmrBlinking
+            // 
+            this.tmrBlinking.Enabled = true;
+            this.tmrBlinking.Interval = 500;
+            // 
             // SMT_SCADA_B2IPZONE_TEMPER_V2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2693,5 +2698,6 @@
         private System.Windows.Forms.Label label71;
         private DevExpress.XtraEditors.SimpleButton sbtnPrev;
         private DevExpress.XtraEditors.SimpleButton sbtnNext;
+        private System.Windows.Forms.Timer tmrBlinking;
     }
 }

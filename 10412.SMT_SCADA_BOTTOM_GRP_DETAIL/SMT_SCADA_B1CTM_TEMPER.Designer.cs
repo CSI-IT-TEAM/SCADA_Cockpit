@@ -112,7 +112,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 23);
             this.label5.TabIndex = 90;
-            this.label5.Text = "Max: 175";
+            this.label5.Text = "Max: 180";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -374,10 +374,10 @@
             xyDiagram2.AxisX.Title.TextColor = System.Drawing.Color.Yellow;
             xyDiagram2.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            constantLine3.AxisValueSerializable = "175";
+            constantLine3.AxisValueSerializable = "180";
             constantLine3.Color = System.Drawing.Color.Red;
             constantLine3.LineStyle.Thickness = 3;
-            constantLine3.Name = "Max : 175";
+            constantLine3.Name = "Max : 180";
             constantLine3.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             constantLine4.AxisValueSerializable = "145";
             constantLine4.Color = System.Drawing.Color.Red;

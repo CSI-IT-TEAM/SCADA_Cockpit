@@ -43,7 +43,16 @@ namespace FORM.UC
                 lblHeat.BackColor = Color.LimeGreen;
                 lblCool.Text = string.Concat(Value2.ToString(), "°C");
                 lblCool.BackColor = Color.LimeGreen;
-                
+
+                if(Value1 == "0")
+                {
+                    lblHeat.BackColor = Color.Silver;
+                }
+                if (Value2 == "0")
+                {
+                    lblCool.BackColor = Color.Silver;
+                }
+
             }
             catch { }
         }

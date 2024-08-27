@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_B1CTM_TEMPER));
-            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.ConstantLine constantLine1 = new DevExpress.XtraCharts.ConstantLine();
-            DevExpress.XtraCharts.ConstantLine constantLine2 = new DevExpress.XtraCharts.ConstantLine();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SplineSeriesView splineSeriesView1 = new DevExpress.XtraCharts.SplineSeriesView();
-            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation1 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
-            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.ConstantLine constantLine3 = new DevExpress.XtraCharts.ConstantLine();
-            DevExpress.XtraCharts.ConstantLine constantLine4 = new DevExpress.XtraCharts.ConstantLine();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SplineSeriesView splineSeriesView2 = new DevExpress.XtraCharts.SplineSeriesView();
-            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation2 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
+            DevExpress.XtraCharts.XYDiagram xyDiagram5 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.ConstantLine constantLine9 = new DevExpress.XtraCharts.ConstantLine();
+            DevExpress.XtraCharts.ConstantLine constantLine10 = new DevExpress.XtraCharts.ConstantLine();
+            DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SplineSeriesView splineSeriesView5 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation5 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
+            DevExpress.XtraCharts.XYDiagram xyDiagram6 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.ConstantLine constantLine11 = new DevExpress.XtraCharts.ConstantLine();
+            DevExpress.XtraCharts.ConstantLine constantLine12 = new DevExpress.XtraCharts.ConstantLine();
+            DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SplineSeriesView splineSeriesView6 = new DevExpress.XtraCharts.SplineSeriesView();
+            DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation6 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             this.pnTop = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,14 +66,14 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.a1Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartCool)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView5)).BeginInit();
             this.a1Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartHeat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView6)).BeginInit();
             this.SuspendLayout();
             // 
             // pnTop
@@ -112,7 +112,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 23);
             this.label5.TabIndex = 90;
-            this.label5.Text = "Max: 170";
+            this.label5.Text = "Max: 175";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -134,7 +134,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 90;
-            this.label4.Text = "Min: 150";
+            this.label4.Text = "Min: 145";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -279,47 +279,47 @@
             this.chartCool.AppearanceNameSerializable = "Dark Flat";
             this.chartCool.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartCool.DataBindings = null;
-            xyDiagram1.AxisX.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram1.AxisX.Title.Text = "Time";
-            xyDiagram1.AxisX.Title.TextColor = System.Drawing.Color.Yellow;
-            xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            constantLine1.AxisValueSerializable = "20";
-            constantLine1.Color = System.Drawing.Color.Red;
-            constantLine1.LineStyle.Thickness = 3;
-            constantLine1.Name = "Max: 20";
-            constantLine1.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            constantLine2.AxisValueSerializable = "10";
-            constantLine2.Color = System.Drawing.Color.Red;
-            constantLine2.LineStyle.Thickness = 3;
-            constantLine2.Name = "Min: 10";
-            constantLine2.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram1.AxisY.ConstantLines.AddRange(new DevExpress.XtraCharts.ConstantLine[] {
-            constantLine1,
-            constantLine2});
-            xyDiagram1.AxisY.GridLines.Visible = false;
-            xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram1.AxisY.Title.Text = "Temperature (°C)";
-            xyDiagram1.AxisY.Title.TextColor = System.Drawing.Color.Yellow;
-            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram1.DefaultPane.BorderVisible = false;
-            this.chartCool.Diagram = xyDiagram1;
+            xyDiagram5.AxisX.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram5.AxisX.Title.Text = "Time";
+            xyDiagram5.AxisX.Title.TextColor = System.Drawing.Color.Yellow;
+            xyDiagram5.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram5.AxisX.VisibleInPanesSerializable = "-1";
+            constantLine9.AxisValueSerializable = "20";
+            constantLine9.Color = System.Drawing.Color.Red;
+            constantLine9.LineStyle.Thickness = 3;
+            constantLine9.Name = "Max: 20";
+            constantLine9.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            constantLine10.AxisValueSerializable = "10";
+            constantLine10.Color = System.Drawing.Color.Red;
+            constantLine10.LineStyle.Thickness = 3;
+            constantLine10.Name = "Min: 10";
+            constantLine10.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram5.AxisY.ConstantLines.AddRange(new DevExpress.XtraCharts.ConstantLine[] {
+            constantLine9,
+            constantLine10});
+            xyDiagram5.AxisY.GridLines.Visible = false;
+            xyDiagram5.AxisY.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram5.AxisY.Title.Text = "Temperature (°C)";
+            xyDiagram5.AxisY.Title.TextColor = System.Drawing.Color.Yellow;
+            xyDiagram5.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram5.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram5.DefaultPane.BorderVisible = false;
+            this.chartCool.Diagram = xyDiagram5;
             this.chartCool.Legend.Name = "Default Legend";
             this.chartCool.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartCool.Location = new System.Drawing.Point(4, 59);
             this.chartCool.Name = "chartCool";
-            series1.Name = "Series 1";
-            splineSeriesView1.Color = System.Drawing.Color.Cyan;
-            splineSeriesView1.LineMarkerOptions.Size = 15;
-            splineSeriesView1.LineStyle.Thickness = 3;
-            splineSeriesView1.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            xyMarkerSlideAnimation1.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
-            splineSeriesView1.SeriesPointAnimation = xyMarkerSlideAnimation1;
-            splineSeriesView1.Shadow.Visible = true;
-            series1.View = splineSeriesView1;
+            series5.Name = "Series 1";
+            splineSeriesView5.Color = System.Drawing.Color.Cyan;
+            splineSeriesView5.LineMarkerOptions.Size = 15;
+            splineSeriesView5.LineStyle.Thickness = 3;
+            splineSeriesView5.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xyMarkerSlideAnimation5.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromBottomCenter;
+            splineSeriesView5.SeriesPointAnimation = xyMarkerSlideAnimation5;
+            splineSeriesView5.Shadow.Visible = true;
+            series5.View = splineSeriesView5;
             this.chartCool.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
+        series5};
             this.chartCool.Size = new System.Drawing.Size(627, 410);
             this.chartCool.TabIndex = 4;
             // 
@@ -369,47 +369,47 @@
             this.chartHeat.AppearanceNameSerializable = "Dark Flat";
             this.chartHeat.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartHeat.DataBindings = null;
-            xyDiagram2.AxisX.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram2.AxisX.Title.Text = "Time";
-            xyDiagram2.AxisX.Title.TextColor = System.Drawing.Color.Yellow;
-            xyDiagram2.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            constantLine3.AxisValueSerializable = "158";
-            constantLine3.Color = System.Drawing.Color.Red;
-            constantLine3.LineStyle.Thickness = 3;
-            constantLine3.Name = "Max : 158";
-            constantLine3.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            constantLine4.AxisValueSerializable = "152";
-            constantLine4.Color = System.Drawing.Color.Red;
-            constantLine4.LineStyle.Thickness = 3;
-            constantLine4.Name = "Min: 152";
-            constantLine4.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            xyDiagram2.AxisY.ConstantLines.AddRange(new DevExpress.XtraCharts.ConstantLine[] {
-            constantLine3,
-            constantLine4});
-            xyDiagram2.AxisY.GridLines.Visible = false;
-            xyDiagram2.AxisY.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            xyDiagram2.AxisY.Title.Text = "Temperature (°C)";
-            xyDiagram2.AxisY.Title.TextColor = System.Drawing.Color.Yellow;
-            xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram2.DefaultPane.BorderVisible = false;
-            this.chartHeat.Diagram = xyDiagram2;
+            xyDiagram6.AxisX.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram6.AxisX.Title.Text = "Time";
+            xyDiagram6.AxisX.Title.TextColor = System.Drawing.Color.Yellow;
+            xyDiagram6.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram6.AxisX.VisibleInPanesSerializable = "-1";
+            constantLine11.AxisValueSerializable = "158";
+            constantLine11.Color = System.Drawing.Color.Red;
+            constantLine11.LineStyle.Thickness = 3;
+            constantLine11.Name = "Max : 158";
+            constantLine11.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            constantLine12.AxisValueSerializable = "152";
+            constantLine12.Color = System.Drawing.Color.Red;
+            constantLine12.LineStyle.Thickness = 3;
+            constantLine12.Name = "Min: 152";
+            constantLine12.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            xyDiagram6.AxisY.ConstantLines.AddRange(new DevExpress.XtraCharts.ConstantLine[] {
+            constantLine11,
+            constantLine12});
+            xyDiagram6.AxisY.GridLines.Visible = false;
+            xyDiagram6.AxisY.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram6.AxisY.Title.Text = "Temperature (°C)";
+            xyDiagram6.AxisY.Title.TextColor = System.Drawing.Color.Yellow;
+            xyDiagram6.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram6.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram6.DefaultPane.BorderVisible = false;
+            this.chartHeat.Diagram = xyDiagram6;
             this.chartHeat.Legend.Name = "Default Legend";
             this.chartHeat.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
             this.chartHeat.Location = new System.Drawing.Point(5, 51);
             this.chartHeat.Name = "chartHeat";
-            series2.Name = "Series 1";
-            splineSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            splineSeriesView2.LineMarkerOptions.Size = 15;
-            splineSeriesView2.LineStyle.Thickness = 3;
-            splineSeriesView2.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
-            xyMarkerSlideAnimation2.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromTopCenter;
-            splineSeriesView2.SeriesPointAnimation = xyMarkerSlideAnimation2;
-            splineSeriesView2.Shadow.Visible = true;
-            series2.View = splineSeriesView2;
+            series6.Name = "Series 1";
+            splineSeriesView6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            splineSeriesView6.LineMarkerOptions.Size = 15;
+            splineSeriesView6.LineStyle.Thickness = 3;
+            splineSeriesView6.MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            xyMarkerSlideAnimation6.Direction = DevExpress.XtraCharts.XYMarkerSlideAnimationDirection.FromTopCenter;
+            splineSeriesView6.SeriesPointAnimation = xyMarkerSlideAnimation6;
+            splineSeriesView6.Shadow.Visible = true;
+            series6.View = splineSeriesView6;
             this.chartHeat.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
+        series6};
             this.chartHeat.Size = new System.Drawing.Size(627, 410);
             this.chartHeat.TabIndex = 0;
             // 
@@ -430,15 +430,15 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.a1Panel2.ResumeLayout(false);
             this.a1Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartCool)).EndInit();
             this.a1Panel1.ResumeLayout(false);
             this.a1Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(splineSeriesView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(splineSeriesView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartHeat)).EndInit();
             this.ResumeLayout(false);
 

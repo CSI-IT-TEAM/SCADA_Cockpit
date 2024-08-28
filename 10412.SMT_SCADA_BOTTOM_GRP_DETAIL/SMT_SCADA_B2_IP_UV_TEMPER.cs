@@ -238,8 +238,12 @@ namespace FORM
                 dt = _dt.Copy();
             try
             {
+
                 if (dt != null && dt.Rows.Count > 0)
                 {
+                    label4.Text = "Min: "+ Convert.ToDouble(dt.Rows[0]["MINVAL"].ToString()) + "°C";
+                    label5.Text = "Max: "+ Convert.ToDouble(dt.Rows[0]["MAXVAL"].ToString()) + "°C";
+
                     for (int iRow = 0; iRow < dt.Rows.Count; iRow++)
                     {
 

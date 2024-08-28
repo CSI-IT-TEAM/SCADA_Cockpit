@@ -222,7 +222,7 @@ namespace FORM
                 // dt1 = checkDt(_dtCald1, LOAD_DATA_HISTORY("BB101", "008", "CALD"));
                 // dt2 = checkDt(_dtCald2, LOAD_DATA_HISTORY("BB102", "008", "CALD"));
 
-                CreateChartLine(chartCalendar, dt1, "Calendar", "M/C 1", dt2, "M/C 2");
+                CreateChartLine(chartCalendar, dt1, "Calender", "M/C 1", dt2, "M/C 2");
                 splashScreenManager1.CloseWaitForm();
             }
             catch { splashScreenManager1.CloseWaitForm(); }
@@ -578,7 +578,7 @@ namespace FORM
                 ((XYDiagram)arg_chart.Diagram).AxisY.NumericScaleOptions.AutoGrid = false;
                 ((XYDiagram)arg_chart.Diagram).AxisY.NumericScaleOptions.GridSpacing = 1;
                 //--------Text AxisX/ AxisY
-                ((XYDiagram)arg_chart.Diagram).AxisY.Title.Text = "TEMPERATURE";
+                ((XYDiagram)arg_chart.Diagram).AxisY.Title.Text = "Temperature";
                 ((XYDiagram)arg_chart.Diagram).AxisY.Title.TextColor = Color.Yellow;
                 ((XYDiagram)arg_chart.Diagram).AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.Default;
 

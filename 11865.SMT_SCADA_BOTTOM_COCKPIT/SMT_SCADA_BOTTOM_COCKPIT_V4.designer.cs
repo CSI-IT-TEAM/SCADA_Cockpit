@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMT_SCADA_BOTTOM_COCKPIT_V4));
             this.pnTop = new System.Windows.Forms.Panel();
             this.btnTest = new System.Windows.Forms.Button();
             this.cmdBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblHeader = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTime = new System.Windows.Forms.Timer();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FORM.WaitForm1), true, true);
-            this.tmrBlinking = new System.Windows.Forms.Timer();
+            this.tmrBlinking = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.customPanel2 = new FORM.ClassLib.CustomPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -2005,7 +2006,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(128, 43);
             this.label14.TabIndex = 22;
-            this.label14.Text = "Calendar";
+            this.label14.Text = "Calender";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // B1_RUBBERROLL007

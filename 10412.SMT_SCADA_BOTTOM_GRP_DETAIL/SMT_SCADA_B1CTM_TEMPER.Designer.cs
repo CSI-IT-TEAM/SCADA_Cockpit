@@ -101,7 +101,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(170, 23);
             this.label8.TabIndex = 90;
-            this.label8.Text = "Max: 30";
+            this.label8.Text = "Max: 70";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -134,7 +134,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 90;
-            this.label4.Text = "Min: 145";
+            this.label4.Text = "Min: 80";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -284,16 +284,17 @@
             xyDiagram1.AxisX.Title.TextColor = System.Drawing.Color.Yellow;
             xyDiagram1.AxisX.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            constantLine1.AxisValueSerializable = "30";
+            constantLine1.AxisValueSerializable = "70";
             constantLine1.Color = System.Drawing.Color.Red;
             constantLine1.LineStyle.Thickness = 3;
-            constantLine1.Name = "Max: 30";
+            constantLine1.Name = "Max: 70";
             constantLine1.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             constantLine2.AxisValueSerializable = "0";
             constantLine2.Color = System.Drawing.Color.Red;
             constantLine2.LineStyle.Thickness = 3;
             constantLine2.Name = "";
             constantLine2.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            constantLine2.Visible = false;
             xyDiagram1.AxisY.ConstantLines.AddRange(new DevExpress.XtraCharts.ConstantLine[] {
             constantLine1,
             constantLine2});
@@ -379,10 +380,10 @@
             constantLine3.LineStyle.Thickness = 3;
             constantLine3.Name = "Max : 180";
             constantLine3.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            constantLine4.AxisValueSerializable = "145";
+            constantLine4.AxisValueSerializable = "80";
             constantLine4.Color = System.Drawing.Color.Red;
             constantLine4.LineStyle.Thickness = 3;
-            constantLine4.Name = "Min: 145";
+            constantLine4.Name = "Min: 80";
             constantLine4.Title.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             xyDiagram2.AxisY.ConstantLines.AddRange(new DevExpress.XtraCharts.ConstantLine[] {
             constantLine3,

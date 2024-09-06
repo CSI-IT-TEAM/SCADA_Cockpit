@@ -276,20 +276,20 @@ namespace FORM
 
         private void Item_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
-               
+
                 foreach (var item in lstLabel)
                 {
-                   
+
                     item.ForeColor = Color.White;
                 }
 
                 Label lbl = ((Label)sender);
                 if (lbl.Text == "") { return; }
 
-               // lbl.BackColor = Color.Yellow;
+                // lbl.BackColor = Color.Yellow;
                 lbl.ForeColor = Color.Yellow;
 
 
@@ -309,8 +309,8 @@ namespace FORM
                     }
                     else
                     {
-                       // minvl = int.Parse(dt.Rows[0]["ISO_MIN_VAL"].ToString());
-                       // maxvl = int.Parse(dt.Rows[0]["ISO_MAX_VAL"].ToString());
+                        // minvl = int.Parse(dt.Rows[0]["ISO_MIN_VAL"].ToString());
+                        // maxvl = int.Parse(dt.Rows[0]["ISO_MAX_VAL"].ToString());
                     }
 
                     minvl = int.Parse(dt.Rows[0]["MIN_VAL"].ToString());
@@ -377,7 +377,9 @@ namespace FORM
                 DataTable dt = SEL_TRACKING_DATA("Q", DateTime.Now.ToString("yyyyMMdd"), "");
                 foreach (var item in lstLabel)
                 {
-                    item.Text = "0";
+                    item.BackColor = Color.Gray;
+                    item.ForeColor = Color.White;
+                    item.Text = "";
                 }
                 if (dt.Rows.Count < 2) return;
                 foreach (DataRow dr in dt.Rows)
@@ -497,7 +499,7 @@ namespace FORM
                 {
                     cCount = ReloadTime;
                     tmrDate.Start();
-                    
+
 
                 }
                 else
@@ -554,7 +556,7 @@ namespace FORM
 
         private void SMT_SCADA_B2_PU_MAT_TEMPER_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void lbl_003POLY2HOSE_Click(object sender, EventArgs e)

@@ -171,34 +171,34 @@
             this.lblMC3_INJECT2_08 = new System.Windows.Forms.Label();
             this.label103 = new System.Windows.Forms.Label();
             this.tmrAnimation = new System.Windows.Forms.Timer();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbl_Inject_Min = new System.Windows.Forms.Label();
+            this.lbl_Inject_Max = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
+            this.lblLine_001_001_MIN = new System.Windows.Forms.Label();
+            this.lblLine_001_001_MAX = new System.Windows.Forms.Label();
+            this.lblLine_001_002_MIN = new System.Windows.Forms.Label();
+            this.lblLine_001_002_MAX = new System.Windows.Forms.Label();
+            this.lblLine_001_003_MIN = new System.Windows.Forms.Label();
+            this.lblLine_001_003_MAX = new System.Windows.Forms.Label();
+            this.lblLine_001_004_MIN = new System.Windows.Forms.Label();
+            this.lblLine_001_004_MAX = new System.Windows.Forms.Label();
+            this.lblLine_001_005_MIN = new System.Windows.Forms.Label();
+            this.lblLine_001_005_MAX = new System.Windows.Forms.Label();
+            this.lblLine_001_006_MIN = new System.Windows.Forms.Label();
+            this.lblLine_001_006_MAX = new System.Windows.Forms.Label();
+            this.lblLine_002_013_MIN = new System.Windows.Forms.Label();
+            this.lblLine_002_014_MIN = new System.Windows.Forms.Label();
+            this.lblLine_002_015_MIN = new System.Windows.Forms.Label();
+            this.lblLine_002_016_MIN = new System.Windows.Forms.Label();
+            this.lblLine_002_017_MIN = new System.Windows.Forms.Label();
+            this.lblLine_002_018_MIN = new System.Windows.Forms.Label();
+            this.lblLine_002_013_MAX = new System.Windows.Forms.Label();
+            this.lblLine_002_014_MAX = new System.Windows.Forms.Label();
+            this.lblLine_002_015_MAX = new System.Windows.Forms.Label();
+            this.lblLine_002_016_MAX = new System.Windows.Forms.Label();
+            this.lblLine_002_017_MAX = new System.Windows.Forms.Label();
+            this.lblLine_002_018_MAX = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.sbtnNext = new DevExpress.XtraEditors.SimpleButton();
@@ -1950,29 +1950,29 @@
             this.tmrAnimation.Interval = 50;
             this.tmrAnimation.Tick += new System.EventHandler(this.tmrAnimation_Tick);
             // 
-            // label10
+            // lbl_Inject_Min
             // 
-            this.label10.BackColor = System.Drawing.Color.DarkCyan;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Yellow;
-            this.label10.Location = new System.Drawing.Point(637, 155);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 40);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Min: 80°C";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Inject_Min.BackColor = System.Drawing.Color.DarkCyan;
+            this.lbl_Inject_Min.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Inject_Min.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_Inject_Min.Location = new System.Drawing.Point(637, 155);
+            this.lbl_Inject_Min.Name = "lbl_Inject_Min";
+            this.lbl_Inject_Min.Size = new System.Drawing.Size(147, 40);
+            this.lbl_Inject_Min.TabIndex = 27;
+            this.lbl_Inject_Min.Text = "Min: 70°C";
+            this.lbl_Inject_Min.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // lbl_Inject_Max
             // 
-            this.label11.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(792, 155);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 40);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Max: 105°C";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Inject_Max.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lbl_Inject_Max.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Inject_Max.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_Inject_Max.Location = new System.Drawing.Point(792, 155);
+            this.lbl_Inject_Max.Name = "lbl_Inject_Max";
+            this.lbl_Inject_Max.Size = new System.Drawing.Size(147, 40);
+            this.lbl_Inject_Max.TabIndex = 27;
+            this.lbl_Inject_Max.Text = "Max: 105°C";
+            this.lbl_Inject_Max.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
@@ -1998,293 +1998,293 @@
             this.label16.Text = "Max";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label20
+            // lblLine_001_001_MIN
             // 
-            this.label20.BackColor = System.Drawing.Color.DarkCyan;
-            this.label20.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label20.ForeColor = System.Drawing.Color.Yellow;
-            this.label20.Location = new System.Drawing.Point(1339, 274);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(60, 72);
-            this.label20.TabIndex = 15;
-            this.label20.Text = "70";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_001_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_001_001_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_001_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_001_MIN.Location = new System.Drawing.Point(1339, 274);
+            this.lblLine_001_001_MIN.Name = "lblLine_001_001_MIN";
+            this.lblLine_001_001_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_001_001_MIN.TabIndex = 15;
+            this.lblLine_001_001_MIN.Text = "70";
+            this.lblLine_001_001_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label22
+            // lblLine_001_001_MAX
             // 
-            this.label22.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label22.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label22.ForeColor = System.Drawing.Color.Yellow;
-            this.label22.Location = new System.Drawing.Point(1405, 274);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(57, 72);
-            this.label22.TabIndex = 15;
-            this.label22.Text = "90";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_001_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_001_001_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_001_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_001_MAX.Location = new System.Drawing.Point(1405, 274);
+            this.lblLine_001_001_MAX.Name = "lblLine_001_001_MAX";
+            this.lblLine_001_001_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_001_001_MAX.TabIndex = 15;
+            this.lblLine_001_001_MAX.Text = "90";
+            this.lblLine_001_001_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label23
+            // lblLine_001_002_MIN
             // 
-            this.label23.BackColor = System.Drawing.Color.DarkCyan;
-            this.label23.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label23.ForeColor = System.Drawing.Color.Yellow;
-            this.label23.Location = new System.Drawing.Point(1339, 355);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(60, 72);
-            this.label23.TabIndex = 15;
-            this.label23.Text = "60";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_002_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_001_002_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_002_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_002_MIN.Location = new System.Drawing.Point(1339, 355);
+            this.lblLine_001_002_MIN.Name = "lblLine_001_002_MIN";
+            this.lblLine_001_002_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_001_002_MIN.TabIndex = 15;
+            this.lblLine_001_002_MIN.Text = "60";
+            this.lblLine_001_002_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label26
+            // lblLine_001_002_MAX
             // 
-            this.label26.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label26.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label26.ForeColor = System.Drawing.Color.Yellow;
-            this.label26.Location = new System.Drawing.Point(1405, 355);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(57, 72);
-            this.label26.TabIndex = 15;
-            this.label26.Text = "80";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_002_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_001_002_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_002_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_002_MAX.Location = new System.Drawing.Point(1405, 355);
+            this.lblLine_001_002_MAX.Name = "lblLine_001_002_MAX";
+            this.lblLine_001_002_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_001_002_MAX.TabIndex = 15;
+            this.lblLine_001_002_MAX.Text = "80";
+            this.lblLine_001_002_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label28
+            // lblLine_001_003_MIN
             // 
-            this.label28.BackColor = System.Drawing.Color.DarkCyan;
-            this.label28.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label28.ForeColor = System.Drawing.Color.Yellow;
-            this.label28.Location = new System.Drawing.Point(1338, 436);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(60, 72);
-            this.label28.TabIndex = 15;
-            this.label28.Text = "55";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_003_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_001_003_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_003_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_003_MIN.Location = new System.Drawing.Point(1338, 436);
+            this.lblLine_001_003_MIN.Name = "lblLine_001_003_MIN";
+            this.lblLine_001_003_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_001_003_MIN.TabIndex = 15;
+            this.lblLine_001_003_MIN.Text = "55";
+            this.lblLine_001_003_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label31
+            // lblLine_001_003_MAX
             // 
-            this.label31.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label31.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label31.ForeColor = System.Drawing.Color.Yellow;
-            this.label31.Location = new System.Drawing.Point(1404, 436);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(57, 72);
-            this.label31.TabIndex = 15;
-            this.label31.Text = "75";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_003_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_001_003_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_003_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_003_MAX.Location = new System.Drawing.Point(1404, 436);
+            this.lblLine_001_003_MAX.Name = "lblLine_001_003_MAX";
+            this.lblLine_001_003_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_001_003_MAX.TabIndex = 15;
+            this.lblLine_001_003_MAX.Text = "75";
+            this.lblLine_001_003_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label35
+            // lblLine_001_004_MIN
             // 
-            this.label35.BackColor = System.Drawing.Color.DarkCyan;
-            this.label35.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label35.ForeColor = System.Drawing.Color.Yellow;
-            this.label35.Location = new System.Drawing.Point(1338, 517);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(60, 72);
-            this.label35.TabIndex = 15;
-            this.label35.Text = "50";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_004_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_001_004_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_004_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_004_MIN.Location = new System.Drawing.Point(1338, 517);
+            this.lblLine_001_004_MIN.Name = "lblLine_001_004_MIN";
+            this.lblLine_001_004_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_001_004_MIN.TabIndex = 15;
+            this.lblLine_001_004_MIN.Text = "50";
+            this.lblLine_001_004_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label39
+            // lblLine_001_004_MAX
             // 
-            this.label39.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label39.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label39.ForeColor = System.Drawing.Color.Yellow;
-            this.label39.Location = new System.Drawing.Point(1404, 517);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(57, 72);
-            this.label39.TabIndex = 15;
-            this.label39.Text = "70";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_004_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_001_004_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_004_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_004_MAX.Location = new System.Drawing.Point(1404, 517);
+            this.lblLine_001_004_MAX.Name = "lblLine_001_004_MAX";
+            this.lblLine_001_004_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_001_004_MAX.TabIndex = 15;
+            this.lblLine_001_004_MAX.Text = "70";
+            this.lblLine_001_004_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label46
+            // lblLine_001_005_MIN
             // 
-            this.label46.BackColor = System.Drawing.Color.DarkCyan;
-            this.label46.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label46.ForeColor = System.Drawing.Color.Yellow;
-            this.label46.Location = new System.Drawing.Point(1338, 598);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(60, 72);
-            this.label46.TabIndex = 15;
-            this.label46.Text = "50";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_005_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_001_005_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_005_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_005_MIN.Location = new System.Drawing.Point(1338, 598);
+            this.lblLine_001_005_MIN.Name = "lblLine_001_005_MIN";
+            this.lblLine_001_005_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_001_005_MIN.TabIndex = 15;
+            this.lblLine_001_005_MIN.Text = "50";
+            this.lblLine_001_005_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label47
+            // lblLine_001_005_MAX
             // 
-            this.label47.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label47.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label47.ForeColor = System.Drawing.Color.Yellow;
-            this.label47.Location = new System.Drawing.Point(1404, 598);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(57, 72);
-            this.label47.TabIndex = 15;
-            this.label47.Text = "65";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_005_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_001_005_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_005_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_005_MAX.Location = new System.Drawing.Point(1404, 598);
+            this.lblLine_001_005_MAX.Name = "lblLine_001_005_MAX";
+            this.lblLine_001_005_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_001_005_MAX.TabIndex = 15;
+            this.lblLine_001_005_MAX.Text = "65";
+            this.lblLine_001_005_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label48
+            // lblLine_001_006_MIN
             // 
-            this.label48.BackColor = System.Drawing.Color.DarkCyan;
-            this.label48.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label48.ForeColor = System.Drawing.Color.Yellow;
-            this.label48.Location = new System.Drawing.Point(1338, 679);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(60, 72);
-            this.label48.TabIndex = 15;
-            this.label48.Text = "45";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_006_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_001_006_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_006_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_006_MIN.Location = new System.Drawing.Point(1338, 679);
+            this.lblLine_001_006_MIN.Name = "lblLine_001_006_MIN";
+            this.lblLine_001_006_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_001_006_MIN.TabIndex = 15;
+            this.lblLine_001_006_MIN.Text = "45";
+            this.lblLine_001_006_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label49
+            // lblLine_001_006_MAX
             // 
-            this.label49.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label49.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label49.ForeColor = System.Drawing.Color.Yellow;
-            this.label49.Location = new System.Drawing.Point(1404, 679);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(57, 72);
-            this.label49.TabIndex = 15;
-            this.label49.Text = "55";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_001_006_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_001_006_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_001_006_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_001_006_MAX.Location = new System.Drawing.Point(1404, 679);
+            this.lblLine_001_006_MAX.Name = "lblLine_001_006_MAX";
+            this.lblLine_001_006_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_001_006_MAX.TabIndex = 15;
+            this.lblLine_001_006_MAX.Text = "55";
+            this.lblLine_001_006_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // lblLine_002_013_MIN
             // 
-            this.label17.BackColor = System.Drawing.Color.DarkCyan;
-            this.label17.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.Yellow;
-            this.label17.Location = new System.Drawing.Point(1752, 274);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 72);
-            this.label17.TabIndex = 15;
-            this.label17.Text = "70";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_013_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_002_013_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_013_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_013_MIN.Location = new System.Drawing.Point(1752, 274);
+            this.lblLine_002_013_MIN.Name = "lblLine_002_013_MIN";
+            this.lblLine_002_013_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_002_013_MIN.TabIndex = 15;
+            this.lblLine_002_013_MIN.Text = "70";
+            this.lblLine_002_013_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label19
+            // lblLine_002_014_MIN
             // 
-            this.label19.BackColor = System.Drawing.Color.DarkCyan;
-            this.label19.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label19.ForeColor = System.Drawing.Color.Yellow;
-            this.label19.Location = new System.Drawing.Point(1752, 355);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 72);
-            this.label19.TabIndex = 15;
-            this.label19.Text = "60";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_014_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_002_014_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_014_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_014_MIN.Location = new System.Drawing.Point(1752, 355);
+            this.lblLine_002_014_MIN.Name = "lblLine_002_014_MIN";
+            this.lblLine_002_014_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_002_014_MIN.TabIndex = 15;
+            this.lblLine_002_014_MIN.Text = "60";
+            this.lblLine_002_014_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label53
+            // lblLine_002_015_MIN
             // 
-            this.label53.BackColor = System.Drawing.Color.DarkCyan;
-            this.label53.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label53.ForeColor = System.Drawing.Color.Yellow;
-            this.label53.Location = new System.Drawing.Point(1751, 436);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(60, 72);
-            this.label53.TabIndex = 15;
-            this.label53.Text = "55";
-            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_015_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_002_015_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_015_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_015_MIN.Location = new System.Drawing.Point(1751, 436);
+            this.lblLine_002_015_MIN.Name = "lblLine_002_015_MIN";
+            this.lblLine_002_015_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_002_015_MIN.TabIndex = 15;
+            this.lblLine_002_015_MIN.Text = "55";
+            this.lblLine_002_015_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label55
+            // lblLine_002_016_MIN
             // 
-            this.label55.BackColor = System.Drawing.Color.DarkCyan;
-            this.label55.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label55.ForeColor = System.Drawing.Color.Yellow;
-            this.label55.Location = new System.Drawing.Point(1751, 517);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(60, 72);
-            this.label55.TabIndex = 15;
-            this.label55.Text = "50";
-            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_016_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_002_016_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_016_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_016_MIN.Location = new System.Drawing.Point(1751, 517);
+            this.lblLine_002_016_MIN.Name = "lblLine_002_016_MIN";
+            this.lblLine_002_016_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_002_016_MIN.TabIndex = 15;
+            this.lblLine_002_016_MIN.Text = "50";
+            this.lblLine_002_016_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label57
+            // lblLine_002_017_MIN
             // 
-            this.label57.BackColor = System.Drawing.Color.DarkCyan;
-            this.label57.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label57.ForeColor = System.Drawing.Color.Yellow;
-            this.label57.Location = new System.Drawing.Point(1751, 598);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(60, 72);
-            this.label57.TabIndex = 15;
-            this.label57.Text = "50";
-            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_017_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_002_017_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_017_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_017_MIN.Location = new System.Drawing.Point(1751, 598);
+            this.lblLine_002_017_MIN.Name = "lblLine_002_017_MIN";
+            this.lblLine_002_017_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_002_017_MIN.TabIndex = 15;
+            this.lblLine_002_017_MIN.Text = "50";
+            this.lblLine_002_017_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label59
+            // lblLine_002_018_MIN
             // 
-            this.label59.BackColor = System.Drawing.Color.DarkCyan;
-            this.label59.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label59.ForeColor = System.Drawing.Color.Yellow;
-            this.label59.Location = new System.Drawing.Point(1751, 679);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(60, 72);
-            this.label59.TabIndex = 15;
-            this.label59.Text = "45";
-            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_018_MIN.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblLine_002_018_MIN.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_018_MIN.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_018_MIN.Location = new System.Drawing.Point(1751, 679);
+            this.lblLine_002_018_MIN.Name = "lblLine_002_018_MIN";
+            this.lblLine_002_018_MIN.Size = new System.Drawing.Size(60, 72);
+            this.lblLine_002_018_MIN.TabIndex = 15;
+            this.lblLine_002_018_MIN.Text = "45";
+            this.lblLine_002_018_MIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label61
+            // lblLine_002_013_MAX
             // 
-            this.label61.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label61.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label61.ForeColor = System.Drawing.Color.Yellow;
-            this.label61.Location = new System.Drawing.Point(1818, 274);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(57, 72);
-            this.label61.TabIndex = 15;
-            this.label61.Text = "90";
-            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_013_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_002_013_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_013_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_013_MAX.Location = new System.Drawing.Point(1818, 274);
+            this.lblLine_002_013_MAX.Name = "lblLine_002_013_MAX";
+            this.lblLine_002_013_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_002_013_MAX.TabIndex = 15;
+            this.lblLine_002_013_MAX.Text = "90";
+            this.lblLine_002_013_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label64
+            // lblLine_002_014_MAX
             // 
-            this.label64.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label64.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label64.ForeColor = System.Drawing.Color.Yellow;
-            this.label64.Location = new System.Drawing.Point(1818, 355);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(57, 72);
-            this.label64.TabIndex = 15;
-            this.label64.Text = "80";
-            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_014_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_002_014_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_014_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_014_MAX.Location = new System.Drawing.Point(1818, 355);
+            this.lblLine_002_014_MAX.Name = "lblLine_002_014_MAX";
+            this.lblLine_002_014_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_002_014_MAX.TabIndex = 15;
+            this.lblLine_002_014_MAX.Text = "80";
+            this.lblLine_002_014_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label66
+            // lblLine_002_015_MAX
             // 
-            this.label66.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label66.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label66.ForeColor = System.Drawing.Color.Yellow;
-            this.label66.Location = new System.Drawing.Point(1817, 436);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(57, 72);
-            this.label66.TabIndex = 15;
-            this.label66.Text = "75";
-            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_015_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_002_015_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_015_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_015_MAX.Location = new System.Drawing.Point(1817, 436);
+            this.lblLine_002_015_MAX.Name = "lblLine_002_015_MAX";
+            this.lblLine_002_015_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_002_015_MAX.TabIndex = 15;
+            this.lblLine_002_015_MAX.Text = "75";
+            this.lblLine_002_015_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label67
+            // lblLine_002_016_MAX
             // 
-            this.label67.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label67.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label67.ForeColor = System.Drawing.Color.Yellow;
-            this.label67.Location = new System.Drawing.Point(1817, 517);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(57, 72);
-            this.label67.TabIndex = 15;
-            this.label67.Text = "70";
-            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_016_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_002_016_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_016_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_016_MAX.Location = new System.Drawing.Point(1817, 517);
+            this.lblLine_002_016_MAX.Name = "lblLine_002_016_MAX";
+            this.lblLine_002_016_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_002_016_MAX.TabIndex = 15;
+            this.lblLine_002_016_MAX.Text = "70";
+            this.lblLine_002_016_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label68
+            // lblLine_002_017_MAX
             // 
-            this.label68.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label68.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label68.ForeColor = System.Drawing.Color.Yellow;
-            this.label68.Location = new System.Drawing.Point(1817, 598);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(57, 72);
-            this.label68.TabIndex = 15;
-            this.label68.Text = "65";
-            this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_017_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_002_017_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_017_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_017_MAX.Location = new System.Drawing.Point(1817, 598);
+            this.lblLine_002_017_MAX.Name = "lblLine_002_017_MAX";
+            this.lblLine_002_017_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_002_017_MAX.TabIndex = 15;
+            this.lblLine_002_017_MAX.Text = "65";
+            this.lblLine_002_017_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label69
+            // lblLine_002_018_MAX
             // 
-            this.label69.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.label69.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
-            this.label69.ForeColor = System.Drawing.Color.Yellow;
-            this.label69.Location = new System.Drawing.Point(1817, 679);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(57, 72);
-            this.label69.TabIndex = 15;
-            this.label69.Text = "55";
-            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLine_002_018_MAX.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.lblLine_002_018_MAX.Font = new System.Drawing.Font("DS-Digital", 20F, System.Drawing.FontStyle.Bold);
+            this.lblLine_002_018_MAX.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLine_002_018_MAX.Location = new System.Drawing.Point(1817, 679);
+            this.lblLine_002_018_MAX.Name = "lblLine_002_018_MAX";
+            this.lblLine_002_018_MAX.Size = new System.Drawing.Size(57, 72);
+            this.lblLine_002_018_MAX.TabIndex = 15;
+            this.lblLine_002_018_MAX.Text = "55";
+            this.lblLine_002_018_MAX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label70
             // 
@@ -2434,8 +2434,8 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label70);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lbl_Inject_Max);
+            this.Controls.Add(this.lbl_Inject_Min);
             this.Controls.Add(this.label42);
             this.Controls.Add(this.lblMC1);
             this.Controls.Add(this.label8);
@@ -2470,31 +2470,31 @@
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.lblLine_002_019);
-            this.Controls.Add(this.label69);
+            this.Controls.Add(this.lblLine_002_018_MAX);
             this.Controls.Add(this.label32);
-            this.Controls.Add(this.label68);
-            this.Controls.Add(this.label49);
-            this.Controls.Add(this.label67);
-            this.Controls.Add(this.label47);
-            this.Controls.Add(this.label66);
-            this.Controls.Add(this.label39);
-            this.Controls.Add(this.label64);
-            this.Controls.Add(this.label31);
-            this.Controls.Add(this.label61);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.label59);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label57);
-            this.Controls.Add(this.label48);
-            this.Controls.Add(this.label55);
-            this.Controls.Add(this.label46);
-            this.Controls.Add(this.label53);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label20);
+            this.Controls.Add(this.lblLine_002_017_MAX);
+            this.Controls.Add(this.lblLine_001_006_MAX);
+            this.Controls.Add(this.lblLine_002_016_MAX);
+            this.Controls.Add(this.lblLine_001_005_MAX);
+            this.Controls.Add(this.lblLine_002_015_MAX);
+            this.Controls.Add(this.lblLine_001_004_MAX);
+            this.Controls.Add(this.lblLine_002_014_MAX);
+            this.Controls.Add(this.lblLine_001_003_MAX);
+            this.Controls.Add(this.lblLine_002_013_MAX);
+            this.Controls.Add(this.lblLine_001_002_MAX);
+            this.Controls.Add(this.lblLine_002_018_MIN);
+            this.Controls.Add(this.lblLine_001_001_MAX);
+            this.Controls.Add(this.lblLine_002_017_MIN);
+            this.Controls.Add(this.lblLine_001_006_MIN);
+            this.Controls.Add(this.lblLine_002_016_MIN);
+            this.Controls.Add(this.lblLine_001_005_MIN);
+            this.Controls.Add(this.lblLine_002_015_MIN);
+            this.Controls.Add(this.lblLine_001_004_MIN);
+            this.Controls.Add(this.lblLine_002_014_MIN);
+            this.Controls.Add(this.lblLine_001_003_MIN);
+            this.Controls.Add(this.lblLine_002_013_MIN);
+            this.Controls.Add(this.lblLine_001_002_MIN);
+            this.Controls.Add(this.lblLine_001_001_MIN);
             this.Controls.Add(this.lblLine_001_007);
             this.Controls.Add(this.lblLine_002_013);
             this.Controls.Add(this.label12);
@@ -2667,34 +2667,34 @@
         private System.Windows.Forms.Label lblMC3_INJECT2_08;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Timer tmrAnimation;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbl_Inject_Min;
+        private System.Windows.Forms.Label lbl_Inject_Max;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label lblLine_001_001_MIN;
+        private System.Windows.Forms.Label lblLine_001_001_MAX;
+        private System.Windows.Forms.Label lblLine_001_002_MIN;
+        private System.Windows.Forms.Label lblLine_001_002_MAX;
+        private System.Windows.Forms.Label lblLine_001_003_MIN;
+        private System.Windows.Forms.Label lblLine_001_003_MAX;
+        private System.Windows.Forms.Label lblLine_001_004_MIN;
+        private System.Windows.Forms.Label lblLine_001_004_MAX;
+        private System.Windows.Forms.Label lblLine_001_005_MIN;
+        private System.Windows.Forms.Label lblLine_001_005_MAX;
+        private System.Windows.Forms.Label lblLine_001_006_MIN;
+        private System.Windows.Forms.Label lblLine_001_006_MAX;
+        private System.Windows.Forms.Label lblLine_002_013_MIN;
+        private System.Windows.Forms.Label lblLine_002_014_MIN;
+        private System.Windows.Forms.Label lblLine_002_015_MIN;
+        private System.Windows.Forms.Label lblLine_002_016_MIN;
+        private System.Windows.Forms.Label lblLine_002_017_MIN;
+        private System.Windows.Forms.Label lblLine_002_018_MIN;
+        private System.Windows.Forms.Label lblLine_002_013_MAX;
+        private System.Windows.Forms.Label lblLine_002_014_MAX;
+        private System.Windows.Forms.Label lblLine_002_015_MAX;
+        private System.Windows.Forms.Label lblLine_002_016_MAX;
+        private System.Windows.Forms.Label lblLine_002_017_MAX;
+        private System.Windows.Forms.Label lblLine_002_018_MAX;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label71;
         private DevExpress.XtraEditors.SimpleButton sbtnPrev;

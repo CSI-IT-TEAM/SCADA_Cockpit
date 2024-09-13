@@ -27,6 +27,8 @@ namespace FORM
         int cCount = 0;
         const int ReloadTime = 60;
         List<Label> lstLabel = new List<Label>();
+        List<Label> ChamberStandMINlstLabel = new List<Label>();
+        List<Label> ChamberStandMAXlstLabel = new List<Label>();
         List<Label> lstInjectLabel = new List<Label>();
         string argZone = "Z001", argStabMC = "001", argStabLine = "001";
         int PageIdx = 1;
@@ -172,7 +174,7 @@ namespace FORM
         }
 
         int iL1_001 = 0;
-        private void BindingStabilizationData( string _argZone)
+        private void BindingStabilizationData(string _argZone)
         {
             try
             {
@@ -181,6 +183,17 @@ namespace FORM
                 {
                     item.Text = "0";
                 }
+
+                foreach (var item in ChamberStandMINlstLabel)
+                {
+
+                    item.Text = "0";
+                }
+                foreach (var item in ChamberStandMAXlstLabel)
+                {
+                    item.Text = "0";
+                }
+
                 if (dt.Rows.Count < 2) return;
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -195,6 +208,24 @@ namespace FORM
                             // t.Elapsed += new ElapsedEventHandler(OnTimedEvent);
                             //t.Elapsed += (sender, e) => { HandleTimerElapsed(_actual); };
                             // t.Start();
+                        }
+
+
+
+                    }
+
+                    foreach (var item in ChamberStandMINlstLabel)
+                    {
+                        if (item.Name.ToString().Replace("_MIN", "").Equals(dr["MAPPING_NAME"]))
+                        {
+                            item.Text = dr["MIN_VAL"].ToString();
+                        }
+                    }
+                    foreach (var item in ChamberStandMAXlstLabel)
+                    {
+                        if (item.Name.ToString().Replace("_MAX", "").Equals(dr["MAPPING_NAME"]))
+                        {
+                            item.Text = dr["MAX_VAL"].ToString();
                         }
                     }
                 }
@@ -212,7 +243,7 @@ namespace FORM
         }
 
 
-        private void BindingInjectionData (string _argZone, int PageIdx)
+        private void BindingInjectionData(string _argZone, int PageIdx)
         {
             try
             {
@@ -251,7 +282,7 @@ namespace FORM
                                     if (dr["STATUS1"].ToString().Equals("1"))
                                     {
                                         item.BackColor = Color.Red;
-                                       
+
                                     }
                                     else
                                     {
@@ -264,7 +295,7 @@ namespace FORM
                                     if (dr["STATUS2"].ToString().Equals("1"))
                                     {
                                         item.BackColor = Color.Red;
-                                       
+
                                     }
                                     else
                                     {
@@ -285,7 +316,7 @@ namespace FORM
                                     item.Text = string.Format("{0:n1}", dr["INJECT1"]);
                                     if (dr["STATUS1"].ToString().Equals("1"))
                                     {
-                                        item.BackColor = Color.Red; 
+                                        item.BackColor = Color.Red;
                                     }
                                     else
                                     {
@@ -318,7 +349,7 @@ namespace FORM
                                     item.Text = string.Format("{0:n1}", dr["INJECT1"]);
                                     if (dr["STATUS1"].ToString().Equals("1"))
                                     {
-                                        item.BackColor = Color.Red; 
+                                        item.BackColor = Color.Red;
                                     }
                                     else
                                     {
@@ -331,7 +362,7 @@ namespace FORM
                                     item.Text = string.Format("{0:n1}", dr["INJECT2"]);
                                     if (dr["STATUS2"].ToString().Equals("1"))
                                     {
-                                        item.BackColor = Color.Red; 
+                                        item.BackColor = Color.Red;
                                     }
                                     else
                                     {
@@ -390,7 +421,20 @@ namespace FORM
 
             SimpleButton sbtn = ((SimpleButton)sender);
             sbtn.Appearance.BackColor = sbtn.Appearance.BackColor2 = Color.Yellow;
+            sbtn.Appearance.ForeColor = Color.Black;
             argZone = sbtn.Tag.ToString();
+
+            if (dt != null)
+            {
+                if (dt.Select("MACHINE_CODE_MAPPING='" + argZone + "'") != null)
+                {
+                    DataTable dtTemp = dt.Select("MACHINE_CODE_MAPPING='" + argZone + "'").CopyToDataTable();
+                    lbl_Inject_Min.Text = string.Format("Min: {0} °C", dtTemp.Rows[0]["MIN_VAL"]);
+                    lbl_Inject_Max.Text = string.Format("Max: {0} °C", dtTemp.Rows[0]["MAX_VAL"]);
+                }
+            }
+
+
             BindingInjectionData(argZone, PageIdx);
             BindingStabilizationData(argZone);
             this.Cursor = Cursors.Default;
@@ -403,8 +447,23 @@ namespace FORM
             //Select data with default value
             //lblMC1_INJECT1_01.BackColor = Color.Red;
             DataTable dt = SEL_BOTTOM_COCKPIT_DATA("Q");
-            BindingData(dt);
 
+
+            
+
+            BindingData(dt);
+            if (dt != null)
+            {
+                if (dt.Select("MACHINE_CODE_MAPPING='Z001'") != null)
+                {
+                    DataTable dtTemp = dt.Select("MACHINE_CODE_MAPPING='Z001'").CopyToDataTable();
+                    lbl_Inject_Min.Text = string.Format("Min: {0} °C", dtTemp.Rows[0]["MIN_VAL"]);
+                    lbl_Inject_Max.Text = string.Format("Max: {0} °C", dtTemp.Rows[0]["MAX_VAL"]);
+                }
+            }
+
+            sbtnZone1.Appearance.BackColor = sbtnZone1.Appearance.BackColor2 = Color.Yellow;
+            sbtnZone1.Appearance.ForeColor = Color.Black;
 
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
             timer.Interval = 500; // Timer interval in milliseconds (1000 ms = 1 second)
@@ -416,7 +475,7 @@ namespace FORM
         {
             try
             {
-               
+
                 foreach (DataRow dr in dt.Rows)
                 {
                     foreach (var item in sBtnList)
@@ -471,7 +530,7 @@ namespace FORM
                         item.Appearance.ForeColor = Color.White;
                     }
 
-                   
+
                 }
             }
             catch (Exception)
@@ -529,7 +588,7 @@ namespace FORM
         Random r = new Random();
         int cAni = 0;
         const int TimeAniStop = 30;
-       
+
         private void tmrAnimation_Tick(object sender, EventArgs e)
         {
             cAni++;
@@ -604,6 +663,20 @@ namespace FORM
             lstLabel.Add(lblLine_001_011);
             lstLabel.Add(lblLine_001_012);
 
+            ChamberStandMINlstLabel.Add(lblLine_001_001_MIN);
+            ChamberStandMINlstLabel.Add(lblLine_001_002_MIN);
+            ChamberStandMINlstLabel.Add(lblLine_001_003_MIN);
+            ChamberStandMINlstLabel.Add(lblLine_001_004_MIN);
+            ChamberStandMINlstLabel.Add(lblLine_001_005_MIN);
+            ChamberStandMINlstLabel.Add(lblLine_001_006_MIN);
+            ChamberStandMAXlstLabel.Add(lblLine_001_001_MAX);
+            ChamberStandMAXlstLabel.Add(lblLine_001_002_MAX);
+            ChamberStandMAXlstLabel.Add(lblLine_001_003_MAX);
+            ChamberStandMAXlstLabel.Add(lblLine_001_004_MAX);
+            ChamberStandMAXlstLabel.Add(lblLine_001_005_MAX);
+            ChamberStandMAXlstLabel.Add(lblLine_001_006_MAX);
+
+
             lstLabel.Add(lblLine_002_013);
             lstLabel.Add(lblLine_002_014);
             lstLabel.Add(lblLine_002_015);
@@ -616,6 +689,19 @@ namespace FORM
             lstLabel.Add(lblLine_002_022);
             lstLabel.Add(lblLine_002_023);
             lstLabel.Add(lblLine_002_024);
+
+            ChamberStandMINlstLabel.Add(lblLine_002_013_MIN);
+            ChamberStandMINlstLabel.Add(lblLine_002_014_MIN);
+            ChamberStandMINlstLabel.Add(lblLine_002_015_MIN);
+            ChamberStandMINlstLabel.Add(lblLine_002_016_MIN);
+            ChamberStandMINlstLabel.Add(lblLine_002_017_MIN);
+            ChamberStandMINlstLabel.Add(lblLine_002_018_MIN);
+            ChamberStandMAXlstLabel.Add(lblLine_002_013_MAX);
+            ChamberStandMAXlstLabel.Add(lblLine_002_014_MAX);
+            ChamberStandMAXlstLabel.Add(lblLine_002_015_MAX);
+            ChamberStandMAXlstLabel.Add(lblLine_002_016_MAX);
+            ChamberStandMAXlstLabel.Add(lblLine_002_017_MAX);
+            ChamberStandMAXlstLabel.Add(lblLine_002_018_MAX);
 
 
             //foreach (var item in lstLabel)

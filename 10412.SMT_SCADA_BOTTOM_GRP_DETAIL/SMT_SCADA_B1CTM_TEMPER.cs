@@ -23,9 +23,11 @@ namespace FORM
 
         #region Variable
         int NumberOfCTMMachine = 0, cCount = 0;
+        string sVer = "2";
         DataTable dtHeat = new DataTable();
         DataTable dtCool = new DataTable();
         List<UC.UC_B1CTM> lstUC = new List<UC.UC_B1CTM>();
+        UC.UC_B1CTM ucMachineCurrent = new UC.UC_B1CTM();
         #endregion
 
         #region DB
@@ -56,14 +58,17 @@ namespace FORM
                 return null;
             }
         }
-        private DataTable GET_MACHINE_TEMPER(string argQtype,string LineNo,string argDate)
+        private DataTable GET_MACHINE_TEMPER(string argQtype, string LineNo, string argDate, string argVer)
         {
             try
             {
                 COM.OraDB MyOraDB = new COM.OraDB();
                 System.Data.DataSet ds_ret;
-
-                string process_name = "MES.PKG_SMT_SCADA_B_COCKPIT.CTM_MACHINE_TEMPER_SELECT";
+                string process_name = "";
+                if (argVer == "1")
+                    process_name = "MES.PKG_SMT_SCADA_B_COCKPIT.CTM_MACHINE_TEMPER_SELECT";
+                else
+                    process_name = "MES.PKG_SMT_SCADA_B_COCKPIT.CTM_MACHINE_TEMPER_SELECT_V2";
                 //ARGMODE
                 MyOraDB.ReDim_Parameter(4);
                 MyOraDB.Process_Name = process_name;
@@ -92,6 +97,8 @@ namespace FORM
                 return null;
             }
         }
+
+
         #endregion
 
         private void cmdBack_Click(object sender, EventArgs e)
@@ -103,8 +110,8 @@ namespace FORM
 
         private void InitLayout()
         {
-            dtHeat = GET_MACHINE_TEMPER("HEAT", "", "");
-            dtCool = GET_MACHINE_TEMPER("COOL", "", "");
+            dtHeat = GET_MACHINE_TEMPER("HEAT", "", "", sVer);
+            dtCool = GET_MACHINE_TEMPER("COOL", "", "", sVer);
             //get number of CTM Machine
             DataTable dtMachineMaster = GET_MACHINE_MASTER("Q");
             if (dtMachineMaster != null && dtMachineMaster.Rows.Count > 0)
@@ -128,8 +135,8 @@ namespace FORM
                             lstUC.Add(UcBtCtm);
 
                             if (iDx == 0) {
-                     
-                                UCOnClick(UcBtCtm);
+                                ucMachineCurrent = UcBtCtm;
+                                UCOnClick(ucMachineCurrent);
                                 
 
 
@@ -142,9 +149,22 @@ namespace FORM
             }
         }
 
+        private void ClearData()
+        {
+            //Clear Data of UC
+            foreach (var item in lstUC)
+            {
+                item.ClearData("0", "0");
+            }
+            chartHeat.DataSource = null;
+            chartCool.DataSource = null;
+        }
+
+
         private void UCOnClick(UC.UC_B1CTM uc)
         {
-          //  MessageBox.Show(uc.Tag.ToString());
+            //  MessageBox.Show(uc.Tag.ToString());
+            ucMachineCurrent = uc;
             string LineNo = uc.Tag.ToString();
             chartHeat.DataSource = null;
             chartCool.DataSource = null;
@@ -194,6 +214,23 @@ namespace FORM
                         ((DevExpress.XtraCharts.XYDiagram)chartHeat.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
                         ((XYDiagram)chartHeat.Diagram).AxisY.WholeRange.Auto = true;
                         ((XYDiagram)chartHeat.Diagram).AxisY.WholeRange.SetMinMaxValues(d_min-5, d_max + 5);
+
+                        XYDiagram diagram = (XYDiagram)chartHeat.Diagram;
+                        diagram.AxisX.Label.ResolveOverlappingOptions.AllowRotate = true;
+                        diagram.AxisX.Label.ResolveOverlappingOptions.AllowStagger = false;
+                        diagram.EnableAxisXScrolling = true;
+                        diagram.AxisX.VisualRange.Auto = false;
+                        diagram.AxisX.Label.Angle = -45;
+
+                        if (dt.Rows.Count > 14)
+                        {
+                            diagram.AxisX.VisualRange.SetMinMaxValues(dt.Rows[dt.Rows.Count - 15]["HMS"], dt.Rows[dt.Rows.Count - 1]["HMS"]);
+                        }
+                        else
+                        {
+                            diagram.AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["HMS"], dt.Rows[dt.Rows.Count - 1]["HMS"]);
+                        }
+
                         break;
                     case "C":
                         //Binding Chart Data
@@ -204,6 +241,23 @@ namespace FORM
                         ((DevExpress.XtraCharts.XYDiagram)chartCool.Diagram).AxisX.QualitativeScaleOptions.AutoGrid = false;
                         ((XYDiagram)chartCool.Diagram).AxisY.WholeRange.Auto = true;
                         ((XYDiagram)chartCool.Diagram).AxisY.WholeRange.SetMinMaxValues(d_min - 5, d_max + 5);
+
+                        XYDiagram diagramCool = (XYDiagram)chartCool.Diagram;
+                        diagramCool.AxisX.Label.ResolveOverlappingOptions.AllowRotate = true;
+                        diagramCool.AxisX.Label.ResolveOverlappingOptions.AllowStagger = false;
+                        diagramCool.EnableAxisXScrolling = true;
+                        diagramCool.AxisX.VisualRange.Auto = false;
+                        diagramCool.AxisX.Label.Angle = -45;
+
+                        if (dt.Rows.Count > 14)
+                        {
+                            diagramCool.AxisX.VisualRange.SetMinMaxValues(dt.Rows[dt.Rows.Count - 15]["HMS"], dt.Rows[dt.Rows.Count - 1]["HMS"]);
+                        }
+                        else
+                        {
+                            diagramCool.AxisX.VisualRange.SetMinMaxValues(dt.Rows[0]["HMS"], dt.Rows[dt.Rows.Count - 1]["HMS"]);
+                        }
+
                         break;
                 }
               
@@ -234,6 +288,7 @@ namespace FORM
 
         private void SMT_SCADA_B1CTM_TEMPER_Load(object sender, EventArgs e)
         {
+            sVer = "2";
             lblDate.Text = string.Format(DateTime.Now.ToString("yyyy-MM-dd\nHH:mm:ss"));
             InitLayout();
             //UCOnClick();
@@ -264,9 +319,9 @@ namespace FORM
                     item.AnmationData("0", "0");
                 }
 
-                dtHeat = GET_MACHINE_TEMPER("HEAT", "", "");
-                dtCool = GET_MACHINE_TEMPER("COOL", "", "");
-                DataTable dtCur = GET_MACHINE_TEMPER("CURR", "", "");
+                dtHeat = GET_MACHINE_TEMPER("HEAT", "", "", sVer);
+                dtCool = GET_MACHINE_TEMPER("COOL", "", "", sVer);
+                DataTable dtCur = GET_MACHINE_TEMPER("CURR", "", "", sVer);
                 if (dtCur != null && dtCur.Rows.Count > 0)
                 {
 
@@ -279,11 +334,16 @@ namespace FORM
                             {
                                 item.BindingData(dr);
                             }
+                            if (item == ucMachineCurrent)
+                                UCOnClick(ucMachineCurrent);
                         }
                     }
 
 
                 }
+
+                
+
                 blink = -1;
             }
            
@@ -291,6 +351,29 @@ namespace FORM
         }
 
         Random r = new Random();
+
+        private void btnVersion1_Click(object sender, EventArgs e)
+        {
+            cCount = 0;
+            sVer = "1";
+            ClearData();
+            cCount = 300;
+            btnVersion1.BackColor = Color.DodgerBlue;
+            btnVersion2.BackColor = Color.Silver;
+
+        }
+
+        private void btnVersion2_Click(object sender, EventArgs e)
+        {
+            cCount = 0;
+            sVer = "2";
+            ClearData();
+            cCount = 300;
+            btnVersion1.BackColor = Color.Silver;
+            btnVersion2.BackColor = Color.DodgerBlue;
+
+        }
+
         private void tmrTime_Tick(object sender, EventArgs e)
         {
             cCount++;

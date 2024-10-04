@@ -43,6 +43,8 @@
             DevExpress.XtraCharts.SplineSeriesView splineSeriesView2 = new DevExpress.XtraCharts.SplineSeriesView();
             DevExpress.XtraCharts.XYMarkerSlideAnimation xyMarkerSlideAnimation2 = new DevExpress.XtraCharts.XYMarkerSlideAnimation();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.btnVersion2 = new System.Windows.Forms.Button();
+            this.btnVersion1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -78,6 +80,8 @@
             // 
             // pnTop
             // 
+            this.pnTop.Controls.Add(this.btnVersion2);
+            this.pnTop.Controls.Add(this.btnVersion1);
             this.pnTop.Controls.Add(this.label8);
             this.pnTop.Controls.Add(this.label5);
             this.pnTop.Controls.Add(this.label6);
@@ -93,11 +97,45 @@
             this.pnTop.Size = new System.Drawing.Size(1904, 76);
             this.pnTop.TabIndex = 8;
             // 
+            // btnVersion2
+            // 
+            this.btnVersion2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnVersion2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVersion2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnVersion2.FlatAppearance.BorderSize = 0;
+            this.btnVersion2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVersion2.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.btnVersion2.ForeColor = System.Drawing.Color.White;
+            this.btnVersion2.Location = new System.Drawing.Point(1247, 19);
+            this.btnVersion2.Name = "btnVersion2";
+            this.btnVersion2.Size = new System.Drawing.Size(162, 43);
+            this.btnVersion2.TabIndex = 91;
+            this.btnVersion2.Text = "Cooling Pipe";
+            this.btnVersion2.UseVisualStyleBackColor = false;
+            this.btnVersion2.Click += new System.EventHandler(this.btnVersion2_Click);
+            // 
+            // btnVersion1
+            // 
+            this.btnVersion1.BackColor = System.Drawing.Color.Silver;
+            this.btnVersion1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVersion1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnVersion1.FlatAppearance.BorderSize = 0;
+            this.btnVersion1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVersion1.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
+            this.btnVersion1.ForeColor = System.Drawing.Color.White;
+            this.btnVersion1.Location = new System.Drawing.Point(1080, 19);
+            this.btnVersion1.Name = "btnVersion1";
+            this.btnVersion1.Size = new System.Drawing.Size(162, 43);
+            this.btnVersion1.TabIndex = 91;
+            this.btnVersion1.Text = "Cooling Station";
+            this.btnVersion1.UseVisualStyleBackColor = false;
+            this.btnVersion1.Click += new System.EventHandler(this.btnVersion1_Click);
+            // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Silver;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1407, 39);
+            this.label8.Location = new System.Drawing.Point(1485, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(170, 23);
             this.label8.TabIndex = 90;
@@ -108,7 +146,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.Silver;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1495, 9);
+            this.label5.Location = new System.Drawing.Point(1573, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 23);
             this.label5.TabIndex = 90;
@@ -119,7 +157,7 @@
             // 
             this.label6.BackColor = System.Drawing.Color.Cyan;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1337, 39);
+            this.label6.Location = new System.Drawing.Point(1415, 42);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 23);
             this.label6.TabIndex = 90;
@@ -130,7 +168,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Silver;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1407, 9);
+            this.label4.Location = new System.Drawing.Point(1485, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 90;
@@ -141,7 +179,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1337, 9);
+            this.label3.Location = new System.Drawing.Point(1415, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 23);
             this.label3.TabIndex = 90;
@@ -305,6 +343,7 @@
             xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram1.DefaultPane.BorderVisible = false;
+            xyDiagram1.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.True;
             this.chartCool.Diagram = xyDiagram1;
             this.chartCool.Legend.Name = "Default Legend";
             this.chartCool.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
@@ -467,5 +506,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer timer_blink;
+        public System.Windows.Forms.Button btnVersion2;
+        public System.Windows.Forms.Button btnVersion1;
     }
 }

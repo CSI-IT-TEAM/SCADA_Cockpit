@@ -57,6 +57,15 @@ namespace FORM.UC
             catch { }
         }
 
+        public void ClearData(string sValHeat, string sValCool)
+        {
+            lblHeat.Text = string.Concat(sValHeat, "°C");
+            lblHeat.BackColor = Color.Silver;
+            lblCool.Text = string.Concat(sValCool, "°C");
+            lblCool.BackColor = Color.Silver;
+        }
+
+
         public void BindingData(DataRow dr)
         {
            

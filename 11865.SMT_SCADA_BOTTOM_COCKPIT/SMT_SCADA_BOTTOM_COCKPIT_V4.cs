@@ -250,7 +250,7 @@ namespace FORM
 
                 lblList.Add(B2_COMPKNED_KD203);
                 lblList.Add(B2_COMPROLL_KD203);
-                lblList.Add(B2_COMPEXTR_KD203);
+                lblList.Add(B2_COMPEXTR_KD203);                   
                 lblList.Add(B2_COMPPELL_KD203);
 
                 lblList.Add(B2_COMPKNED_KD204);

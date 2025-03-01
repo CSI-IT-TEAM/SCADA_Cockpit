@@ -78,7 +78,7 @@ namespace FORM
 
                 // if (dt.Rows[0]["TEMP6"].ToString() != "0°C")
                 // {
-                lbl_poly_war.Text = dt.Rows[0]["TEMP6"].ToString().Replace("R", "").Replace("N", "");
+                    lbl_poly_war.Text = dt.Rows[0]["TEMP6"].ToString().Replace("R", "").Replace("N", "");
                     lbl_poly_war1.Text = string.Concat(dt.Rows[0]["MIN_TEMP6"], "°C - ", dt.Rows[0]["MAX_TEMP6"], "°C");
 
                     if (dt.Rows[0]["TEMP6"].ToString().Substring(0, 1) == "R")

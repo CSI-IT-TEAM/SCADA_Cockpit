@@ -475,7 +475,7 @@ namespace FORM
         {
             try
             {
-
+                if (dt == null) return;
                 foreach (DataRow dr in dt.Rows)
                 {
                     foreach (var item in sBtnList)
@@ -508,7 +508,7 @@ namespace FORM
             }
             catch (Exception ex)
             {
-                throw;
+                
             }
         }
         private void tmrBlinking_Tick(object sender, EventArgs e)

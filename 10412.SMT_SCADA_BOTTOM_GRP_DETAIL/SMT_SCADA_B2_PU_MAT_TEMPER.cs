@@ -360,7 +360,7 @@ namespace FORM
                     ((XYDiagram)chartControl1.Diagram).AxisY.ConstantLines.AddRange(new DevExpress.XtraCharts.ConstantLine[] { constantLine1, constantLine2 });
 
                     ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.Auto = true;
-                    ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.SetMinMaxValues(minvl - 5, maxvl + 5);
+                    ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.SetMinMaxValues(minvl - 15, maxvl + 5);
                 }
             }
             catch (Exception)

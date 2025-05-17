@@ -332,6 +332,21 @@ namespace FORM
                 chartControl1.DataSource = null;
                 if (dt.Rows.Count > 1)
                 {
+
+                    int maxValue = int.MinValue;
+                    int minValue = int.MaxValue;
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (int.TryParse(row["VALUE"].ToString(), out int val))
+                        {
+                            if (val > maxValue) maxValue = val;
+                            if (val < minValue) minValue = val;
+                        }
+                    }
+
+      
+
                     chartControl1.DataSource = dt;
                     chartControl1.Series[0].ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
                     chartControl1.Series[0].ArgumentDataMember = "HMS";
@@ -360,7 +375,7 @@ namespace FORM
                     ((XYDiagram)chartControl1.Diagram).AxisY.ConstantLines.AddRange(new DevExpress.XtraCharts.ConstantLine[] { constantLine1, constantLine2 });
 
                     ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.Auto = true;
-                    ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.SetMinMaxValues(minvl - 15, maxvl + 5);
+                    ((XYDiagram)chartControl1.Diagram).AxisY.WholeRange.SetMinMaxValues(minValue - 3, maxValue + 3);
                 }
             }
             catch (Exception)

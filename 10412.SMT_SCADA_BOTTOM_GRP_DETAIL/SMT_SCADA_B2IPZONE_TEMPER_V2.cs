@@ -407,37 +407,50 @@ namespace FORM
 
         private void sbtnZone_Click(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.WaitCursor;
-            cCount = 0;
-            DataTable dt = SEL_BOTTOM_COCKPIT_DATA("Q");
-            BindingData(dt);
-            //sbtnZone1.Appearance.BackColor = sbtnZone1.Appearance.BackColor2 = Color.Silver;
-            //sbtnZone2.Appearance.BackColor = sbtnZone2.Appearance.BackColor2 = Color.Silver;
-            //sbtnZone3.Appearance.BackColor = sbtnZone3.Appearance.BackColor2 = Color.Silver;
-            //sbtnZone4.Appearance.BackColor = sbtnZone4.Appearance.BackColor2 = Color.Silver;
-            //sbtnZone5.Appearance.BackColor = sbtnZone5.Appearance.BackColor2 = Color.Silver;
-            //sbtnZone6.Appearance.BackColor = sbtnZone6.Appearance.BackColor2 = Color.Silver;
-            //sbtnZone7.Appearance.BackColor = sbtnZone7.Appearance.BackColor2 = Color.Silver;
-
-            SimpleButton sbtn = ((SimpleButton)sender);
-            sbtn.Appearance.BackColor = sbtn.Appearance.BackColor2 = Color.Yellow;
-            sbtn.Appearance.ForeColor = Color.Black;
-            argZone = sbtn.Tag.ToString();
-
-            if (dt != null)
+            try
             {
-                if (dt.Select("MACHINE_CODE_MAPPING='" + argZone + "'") != null)
+                this.Cursor = Cursors.WaitCursor;
+                cCount = 0;
+                DataTable dt = SEL_BOTTOM_COCKPIT_DATA("Q");
+                BindingData(dt);
+                //sbtnZone1.Appearance.BackColor = sbtnZone1.Appearance.BackColor2 = Color.Silver;
+                //sbtnZone2.Appearance.BackColor = sbtnZone2.Appearance.BackColor2 = Color.Silver;
+                //sbtnZone3.Appearance.BackColor = sbtnZone3.Appearance.BackColor2 = Color.Silver;
+                //sbtnZone4.Appearance.BackColor = sbtnZone4.Appearance.BackColor2 = Color.Silver;
+                //sbtnZone5.Appearance.BackColor = sbtnZone5.Appearance.BackColor2 = Color.Silver;
+                //sbtnZone6.Appearance.BackColor = sbtnZone6.Appearance.BackColor2 = Color.Silver;
+                //sbtnZone7.Appearance.BackColor = sbtnZone7.Appearance.BackColor2 = Color.Silver;
+
+                SimpleButton sbtn = ((SimpleButton)sender);
+                sbtn.Appearance.BackColor = sbtn.Appearance.BackColor2 = Color.Yellow;
+                sbtn.Appearance.ForeColor = Color.Black;
+                argZone = sbtn.Tag.ToString();
+
+                if (dt != null)
                 {
-                    DataTable dtTemp = dt.Select("MACHINE_CODE_MAPPING='" + argZone + "'").CopyToDataTable();
-                    lbl_Inject_Min.Text = string.Format("Min: {0} °C", dtTemp.Rows[0]["MIN_VAL"]);
-                    lbl_Inject_Max.Text = string.Format("Max: {0} °C", dtTemp.Rows[0]["MAX_VAL"]);
+                    if (dt.Select("MACHINE_CODE_MAPPING='" + argZone + "'") != null)
+                    {
+                        DataTable dtTemp = dt.Select("MACHINE_CODE_MAPPING='" + argZone + "'").CopyToDataTable();
+                        lbl_Inject_Min.Text = string.Format("Min: {0} °C", dtTemp.Rows[0]["MIN_VAL"]);
+                        lbl_Inject_Max.Text = string.Format("Max: {0} °C", dtTemp.Rows[0]["MAX_VAL"]);
+                    }
                 }
+
+
+                BindingInjectionData(argZone, PageIdx);
+                BindingStabilizationData(argZone);
+                this.Cursor = Cursors.Default;
             }
+            catch
+            {
+                lbl_Inject_Min.Text = "Min: 0 °C";
+                lbl_Inject_Max.Text = "Max: 0 °C";
 
+                BindingInjectionData(argZone, PageIdx);
+                BindingStabilizationData(argZone);
 
-            BindingInjectionData(argZone, PageIdx);
-            BindingStabilizationData(argZone);
-            this.Cursor = Cursors.Default;
+                this.Cursor = Cursors.Default;
+            }
         }
 
         private void SMT_SCADA_B2IPZONE_TEMPER_Load(object sender, EventArgs e)
